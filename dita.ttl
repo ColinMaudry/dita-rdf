@@ -33,6 +33,7 @@
 		[ foaf:name "Colin Maudry" ] ;
 	dcterms:created "2013-01-04"^^xsd:date ;
 	dcterms:modified "2013-05-05"^^xsd:date ;
+	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data." ;
 	cc:license <http://creativecommons.org/licenses/by/3.0/> ;
 	foaf:depiction <http://bit.ly/DitaRdfLucidChart> ;
 	vann:preferredNamespaceUri "http://purl.org/dita/ns#";
@@ -44,7 +45,7 @@
 		#Doctypes
 		:Doctype rdfs:subClassOf nfo:PlainTextDocument ;
 			rdfs:label "Doctype" ;
-			rdfs:comment "All the DITA document types"@en-US.		
+			rdfs:comment "All the DITA document types."@en-US.		
 		:Topic 	rdfs:subClassOf :Doctype ;
 			rdfs:comment "DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html> ;
@@ -53,6 +54,10 @@
 			rdfs:comment "DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html> ;
 			rdfs:label	"Map" .
+		:Bookmap rdfs:subClassOf :Map ;
+			rdfs:comment "The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html> ;
+			rdfs:label "Bookmap" .
 		:Concept rdfs:subClassOf :Topic ;
 			rdfs:comment "The DITA concept document type uses the concept information type."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html> ;
@@ -68,23 +73,28 @@
 		
 		#Reference objects
 		:ReferenceObject rdfs:subClassOf nie:InformationElement ;
-			rdfs:label "DITA base reference object"@en-US .
+			rdfs:label "DITA base reference object"@en-US ;
+			rdfs:comment "The DITA reference object is used to link, fetch or push content in relation with another file or object."@en-US .
 		:Topicref rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html> ;
-			rdfs:comment "The <topicref> element identifies a topic (such as a concept, task, or reference) or other resource."@en-US ;
+			rdfs:comment "The topicref element identifies a topic (such as a concept, task, or reference) or other resource."@en-US ;
 			rdfs:label "Topiref" .
 		:Mapref rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
-			rdfs:comment "The <mapref> element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'."@en-US ;
+			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'."@en-US ;
 			rdfs:label "Mapref" .
 		:Keydef rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html> ;
-			rdfs:comment "The <keydef> element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US ;
+			rdfs:comment "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US ;
 			rdfs:label "Keydef" .
 		:Image rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html> ;
 			rdfs:comment "Include artwork or images in a DITA topic by using the <image> element."@en-US ;
 			rdfs:label "Image" .
+		:Conref rdfs:subClassOf :ReferenceObject ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html> ;
+			rdfs:comment "Include artwork or images in a DITA topic by using the <image> element."@en-US ;
+			rdfs:label "Image" .	
 		:Xref rdfs:subClassOf :ReferenceObject ;
 			rdfs:comment "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
@@ -92,9 +102,15 @@
 			
 		#Key
 		:Key a rdfs:Class ;
-		rdfs:comment "The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic."@en-US ;
-		rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html> ;
-		rdfs:label "Key" .
+			rdfs:comment "The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html> ;
+			rdfs:label "Key" .
+		
+		#Prodinfo
+	   :Key a rdfs:Class ;
+			rdfs:comment "he <prodinfo> metadata element contains information about the product or products that are the subject matter of the current topic."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html> ;
+			rdfs:label "Prodinfo" .
 		
 	
 	#Properties
@@ -105,39 +121,46 @@
 			nie:comment "Describes a reference object that is part of a DITA file."@en-US ;
 			rdfs:domain :Doctype ;
 			rdfs:range :ReferenceObject .
-		:title rdfs:subPropertyOf nie:title ;
-			rdfs:subPropertyOf :metadata ;
+		:title rdfs:subPropertyOf dcterms:title ;
 			rdfs:range xsd:string ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html> ;
 			rdfs:comment "The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables."@en-US ;
 			rdfs:label "title" .
-		:searchtitle rdfs:subPropertyOf nie:title ;
+		:searchtitle a rdf:Property ;
 			rdfs:range xsd:string ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html> ;		
 			rdfs:subPropertyOf :metadata ;
 			rdfs:comment "The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic."@en-US ;
 			rdfs:label "searchtitle" .
-		:shortdesc rdfs:subPropertyOf :metadata ;
+		:shortdesc a rdf:Property ;
 			rdfs:range xsd:string ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html> ;
 			rdfs:comment "The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element."@en-US ;
 			rdfs:label "shortdesc" .
-		:author rdfs:subPropertyOf :metadata ;
-			rdfs:subPropertyOf dcterms:author ;
+		:author rdfs:subPropertyOf dcterms:author ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html> ;
 			rdfs:range xsd:string ;
 			rdfs:comment "The author metadata element contains the name of the topic's author."@en-US ;
 			rdfs:label "author" .
-		:othermeta rdfs:subPropertyOf :metadata ;
+		:audience a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html> ;
+			rdfs:comment "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic."@en-US ;
+			rdfs:range xsd:string ;
+			rdfs:label "audience" .
+		:othermeta a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html> ;
-			rdfs:comment "The <othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties."@en-US ;
+			rdfs:comment "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties."@en-US ;
 			rdfs:label "othermeta" .
 		:keyword rdfs:subPropertyOf nie:keyword ;
-			rdfs:subPropertyOf :metadata ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:range xsd:string ;
-			rdfs:label "keyword" .			
+			rdfs:label "keyword" .
+		:prodinfo a rdf:Property ;
+			rdfs:domain :Doctype ;
+			rdfs:range :Prodinfo ;
+			rdfs:label "prodinfo" ;
+			rdfs:comment "Connects a DITA file with the product information that it is related to."@en-US .			
 	
 		#specific to maps
 		
@@ -168,12 +191,51 @@
 			rdfs:comment "The scope attribute identifies the closeness of the relationship between the current document and the target resource."@en-US ;
 			rdfs:domain :ReferenceObject ;
 			rdfs:range xsd:string .
+		:conref a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html> ;
+			rdfs:label "scope" ;
+			rdfs:comment "The scope attribute identifies the closeness of the relationship between the current document and the target resource."@en-US ;
+			rdfs:domain :ReferenceObject ;
+			rdfs:range xsd:anyURI .
 		:keys a rdf:Property ;
 			rdfs:domain :Keydef, :Topicref ;
 			rdfs:label "keys" ;
-			rdfs:comment "A keys attribute consists of one or more space-separated keys."@en-US ;
+			rdfs:comment "This attribute is used to reference content that can be reused."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html> ;
 			rdfs:range :Key .
+			
+		#specific to Prodinfo
+		:prodname a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:domain :Prodinfo ;
+			rdfs:label "prodname" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html> ;
+			rdfs:comment "The prodname metadata element contains the name of the product that is supported by the information in this topic."@en-US .
+		:platform a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:domain :Prodinfo ;
+			rdfs:label "platform" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html> ;
+			rdfs:comment "The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element."@en-US .
+		:vrmVersion a rdf:Property ;
+			rdfs:range xsd:integer ;
+			rdfs:domain :Prodinfo ;
+			rdfs:label "vrm Version" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html> ;
+			rdfs:comment "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies."@en-US .
+		:vrmRelease a rdf:Property ;
+			rdfs:range xsd:integer ;
+			rdfs:domain :Prodinfo ;
+			rdfs:label "vrm Release" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html> ;
+			rdfs:comment "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies."@en-US .
+		:vrmModification a rdf:Property ;
+			rdfs:range xsd:integer ;
+			rdfs:domain :Prodinfo ;
+			rdfs:label "vrm Modification" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html> ;
+			rdfs:comment "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies."@en-US .
+		
 			
 		
 	
