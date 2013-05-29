@@ -10,6 +10,7 @@ The objective of this project is to develop an ontology to describe DITA XML obj
 Useful links:
  - The online version of the DITA RDF ontology can be found at http://purl.org/dita/ns# (this is also the base URI of the ontology).
  - A graphical representation of the ontology can be viewed here: http://bit.ly/DitaRdfLucidChart
- - Some background information can be found there: http://bit.ly/AboutDitaRdfOnto (Google document)
 
 The DITA RDF ontology and the related tools are licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
+
+<iframe src="https://docs.google.com/document/d/1FCr81IoW7SKzyLH0cAnfqXJYExHUnOHcAuBhQagv9AU/pub?embedded=true"></iframe>
