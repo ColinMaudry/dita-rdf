@@ -59,4 +59,3 @@ The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https:
 
 * Twitter: [@ColinMaudry](https://www.twitter.com/ColinMaudry)
 * Email: colin@zebrana.net
-aa
