@@ -1,12 +1,12 @@
 # Objective
 
-This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data.
+This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the semantic Web of data.
 
 # Scope
 
 This ontology does not aim at completeness (the whole DITA 1.2 language specification) but at covering the metadata that describes DITA content.
 
-The scope of this ontology includes the meaningful elements and attributes of the DITA 1.2 vocabulary. I focused on the metadata elements that are derived from Dublin core (title, author, etc) and on the relationships between maps, topics and other documents. 
+The scope of this ontology includes the meaningful elements and attributes of the [DITA 1.2 vocabulary]. I focused on the metadata elements that are derived from [Dublin core](http://dublincore.org/documents/dcmi-terms/) (title, author, etc) and on the relationships between maps, topics and other documents. 
 
 The scope of this ontology does not include the elements and attributes that bear little semantics, such as (not exhaustive):
 
@@ -25,7 +25,7 @@ Also, it does not include (yet) the elements that bear semantics but that my com
 
 # Base ontologies
 
-I have chosen to use the Nepomuk ontologies NIE and NFO, and specialize the classes. The distinction they make between data objects (sequences of bytes) and information elements (interpretations) prevents the confusion between:
+I have chosen to use the Nepomuk ontologies [NIE](http://www.semanticdesktop.org/ontologies/2007/01/19/nie) and [NFO](http://www.semanticdesktop.org/ontologies/2007/03/22/nfo), and specialize the classes. The distinction they make between data objects (sequences of bytes) and information elements (interpretations) prevents the confusion between:
 
 * the file as data on a file system, that has a path and can be moved or renamed
 * the information contained in this file that results from its interpretation (by an XML editor or a PDF viewer).
