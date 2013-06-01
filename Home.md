@@ -34,7 +34,7 @@ For instance, let’s consider a DITA topic. If the topic is renamed, can we con
 
 # Background
 
-This idea came to me when we (NXP Customer Documentation Services) decided to publish the metadata of our documents as RDF to end the siloization of our various data types, define company-wide data models and so that external organizations can easily consume this data.
+This idea came to me when we (NXP Customer Documentation Services) decided to publish the metadata of our products and documents as RDF in order to end the siloization of our various data types, define company-wide data models and so that external organizations can easily consume this data.
 
 I have already set up the publication of the metadata about binary documents (data sheets, user manuals, etc.), but since our DITA content is built on complex relationships (topic reuse) and our primary format for translation, we need a proper ontology to describe it. The driver is to provide detailed metrics to authors and greatly facilitate certain internal processes such as the selection of the content to translate. Indeed, we consider that being able to formulate multidimensional queries across topics, maps, users, products and company divisions is a major step ahead.
 
