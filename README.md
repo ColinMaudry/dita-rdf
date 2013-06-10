@@ -14,5 +14,3 @@ Useful links:
  - A graphical representation of the ontology can be viewed here: http://bit.ly/DitaRdfLucidChart
 
 The DITA RDF ontology and the related tools are licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
-
-<iframe src="https://docs.google.com/document/d/1FCr81IoW7SKzyLH0cAnfqXJYExHUnOHcAuBhQagv9AU/pub?embedded=true"></iframe>
