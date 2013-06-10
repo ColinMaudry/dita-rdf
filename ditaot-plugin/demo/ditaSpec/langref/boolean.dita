@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="boolean" xml:lang="en-us">
+<title>boolean</title>
+<shortdesc id="1.1">The &lt;<keyword>boolean</keyword>&gt; element
+was deprecated in DITA version 1.1. It was originally intended to
+express one of two opposite values, such as yes / no or on / off. <!--
+If you need more than two values (for example, "yes," "no" and "don't care")
+use the <ph><xref href="state.dita"><<keyword>state</keyword>&gt;</xref></ph> element
+instead. This element is primarily for specialization, where it can be used
+to require a logical true or false designation in a particular part of the
+document.
+--><?Pub Caret?></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>boolean (logical yes/no)</indexterm><indexterm>Specialization
+elements<indexterm>boolean</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><note othertype="OASIS TC Note" type="other">This element
+is deprecated. It is functionally equivalent to &lt;state value="yes|no"/&gt;,
+which is recommended as its replacement in all cases.</note></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-boolean/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="boolean-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-boolean/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="boolean-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/boolean </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">She said "&lt;boolean state="yes"/&gt;" when I asked her to marry me!</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="boolean_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/state">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

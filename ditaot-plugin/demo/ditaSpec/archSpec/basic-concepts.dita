@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="conover" xml:lang="en-us">
+ <title>Basic concepts</title>
+ <shortdesc conref="basic-concepts-xhtml-output.dita#basic-concepts/shortdesc-basic-concepts">DITA
+  has been designed to satisfy requirements for information typing, semantic markup, modularity,
+  reuse, interchange, and production of different deliverable forms from a single source. These
+  topics provide an overview of the key DITA features and facilities that serve to satisfy these
+  requirements.</shortdesc>
+ <conbody>
+  <dl>
+   <dlentry>
+    <dt>DITA topics</dt>
+    <dd><ph conref="topicdefined.dita#topicdefined/shortdesc"/> See <xref href="topicdefined.dita"
+      format="dita">DITA topics</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>DITA maps</dt>
+    <dd><ph conref="definition-of-ditamaps.dita#definition-of-ditamaps/shortdesc"/> See <xref
+      href="definition-of-ditamaps.dita">DITA maps</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Information typing</dt>
+    <dd><ph conref="information-typing.dita#information-typing/shortdesc"/> See <xref
+      href="information-typing.dita">Information typing</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>DITA linking</dt>
+    <dd><ph conref="ditalinking.dita#ditalinking/shortdesc"/> See <xref href="ditalinking.dita">DITA
+      linking</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>DITA addressing</dt>
+    <dd><ph conref="ditaaddressing.dita#id/shortdesc"/> See <xref href="ditaaddressing.dita">DITA
+      addressing</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Content reuse</dt>
+    <dd><ph conref="conref.dita#conref/shortdesc"/> See <xref href="conref.dita">Content
+      reuse</xref> for more information</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Conditional processing</dt>
+    <dd><ph conref="condproc.dita#condproc/shortdesc"/> See <xref href="condproc.dita">Conditional
+      processing</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Configuration</dt>
+    <dd><ph conref="createCustomDocType.dita#createCustomDocType/shortdesc"/> See <xref
+      href="createCustomDocType.dita">Configuration</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Specialization</dt>
+    <dd><ph conref="specialize.dita#specialize/shortdesc"/> See <xref href="specialize.dita"
+      >Specialization</xref> for more information.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Constraints</dt>
+    <dd><ph conref="createConstraintsDomainSpec.dita#createConstraintsDomainSpec/shortdesc"/> See
+      <xref href="createConstraintsDomainSpec.dita">Constraints</xref> for more information.</dd>
+   </dlentry>
+  </dl>
+ </conbody>
+</concept>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="id" xml:lang="en-us">
+  <title>ID attribute</title>
+  <shortdesc>The DITA identity attribute provides a mechanism for identifying content for linking. </shortdesc>
+  <conbody>
+    <p>The id attribute assigns an identifier to DITA elements so the elements can be referenced.
+      The id attribute is available for most elements. The id attribute is required on some
+      elements. For a specific element to be referenced, it must have an id attribute with a valid
+      value, although entire maps and the first topic, only topic, or all direct-child topics
+      (depending on processing context) in a topic-containing document may be referenced without
+      using an ID. The requirements for the id attribute differ depending on whether it is used on a
+      topic element, a map element, or an element within a topic or map.</p>
+    <p>The id attributes for topic and map elements are true XML IDs and therefore must be unique
+      with respect to other XML IDs within the scope of the XML document that contains the topic or
+      map element. The id attribute for most other elements within topics and maps are not declared
+      to be XML IDs. This means that XML parsers do not require that the values of those attributes
+      be unique. All id attribute values must be XML name tokens.</p>
+    <p>Within documents containing multiple topics, the IDs for all non-topic elements that have the
+      same nearest ancestor topic element <keyword>should</keyword> be unique with respect to each
+      other. The IDs for non-topic elements <keyword>may</keyword> be the same as non-topic elements
+      with different nearest ancestor topic elements.</p>
+    <note othertype="non-normative">Thus, within a single XML document containing multiple peer or
+      nested topics, the IDs of the non-topic elements only need to be unique within each topic
+      without regard to the IDs of elements within any ancestor or descendant topics.</note>
+    <p>The IDs of all elements within a map <keyword>should</keyword> be unique within that map
+      document. When two elements within a map have the same ID value, the first element with a
+      given ID value, in document order, <keyword>must</keyword> be used as the target of any
+      reference to that ID. </p>
+    <fig>
+      <title>ID requirements summary table</title>
+      <simpletable frame="all">
+        <sthead>
+          <stentry>Element</stentry>
+          <stentry>Attribute type</stentry>
+          <stentry>Unique within</stentry>
+          <stentry>Required</stentry>
+          <stentry>Value type</stentry>
+        </sthead>
+        <strow>
+          <stentry>map</stentry>
+          <stentry>ID</stentry>
+          <stentry>document</stentry>
+          <stentry>No</stentry>
+          <stentry>XML non-colonized name token</stentry>
+        </strow>
+        <strow>
+          <stentry>topic</stentry>
+          <stentry>ID</stentry>
+          <stentry>document</stentry>
+          <stentry>Yes</stentry>
+          <stentry>XML non-colonized name token</stentry>
+        </strow>
+        <strow>
+          <stentry>sub-map</stentry>
+          <stentry>NMTOKEN</stentry>
+          <stentry>document</stentry>
+          <stentry>Usually no, with some exceptions</stentry>
+          <stentry>Any legal XML name token</stentry>
+        </strow>
+        <strow>
+          <stentry>sub-topic</stentry>
+          <stentry>NMTOKEN</stentry>
+          <stentry>individual topic</stentry>
+          <stentry>Usually no, with some exceptions</stentry>
+          <stentry>Any legal XML name token</stentry>
+        </strow>
+      </simpletable>
+    </fig>
+  </conbody>
+</concept>

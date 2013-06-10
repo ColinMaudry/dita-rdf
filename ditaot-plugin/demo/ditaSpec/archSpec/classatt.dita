@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept
+  id="classatt"
+  xml:lang="en-us">
+  <title>Element type specialization hierarchy declaration (the @class attribute)</title>
+  <shortdesc>Each DITA element declares its specialization hierarchy as the value of the @class
+    attribute. The @class attribute usually provides a mapping from the element's current name to
+    its more general equivalents, but it can also provide a mapping from the current name to more
+    general and more specialized equivalents. All specialization-aware processing can be defined in
+    terms of @class attribute values without reference to a given element's tagname.</shortdesc>
+  <conbody>
+    <section>
+      <title>Specialization hierarchy declaration requirements</title>
+      <p>Values for the @class attribute <keyword>must</keyword> conform to the following syntax
+          requirements:<ul id="ul_4df77451-53e8-4261-a212-5f1949d62a59">
+          <li>An initial "-" or "+" character followed by one or more spaces, "-" for element types
+            defined in structural vocabulary modules, "+" for element types defined in domain
+            modules.</li>
+          <li>A sequence of one or more module/type pair tokens of the form
+              "<varname>modulename</varname>/<varname>typename</varname>", with each pair of tokens
+            separated by one or more spaces, where <varname>modulename</varname> is the short name
+            of the vocabulary module and <varname>typename</varname> is the element type name.
+            Tokens are ordered left to right from most general to most specialized. </li>
+          <li>At least one trailing space character (" "). The trailing space ensures that string
+            matches on module/name pairs can always include a leading and trailing space in order to
+            reliably match full tokens. </li>
+        </ul></p>
+      <p>When the @class attribute is declared in a DTD or XSD, it <keyword>must</keyword> be
+        declared with a default value. In order to support generalization round-tripping
+        (generalizing specialized content into a generic form and then returning it to the
+        specialized form) the default value <keyword>must not</keyword> be fixed. This allows a
+        generalization process to overwrite the default values defined by a general document type
+        with specialized values taken from the document being generalized.</p>
+      <p>When a vocabulary module declares new element types, it <keyword>must</keyword> provide a
+        @class attribute for each element type that it declares. The @class attribute
+          <keyword>must</keyword> include a mapping for every structural type or domain in the
+        specialized type's ancestry, even those in which no element renaming occurred. The mapping
+          <keyword>must</keyword> start with the value for the base type (for example topic or map),
+        and finish with the current element type. </p>
+      <p>A vocabulary module <keyword>must not</keyword> change the @class attribute for elements
+        that it does not specialize, but simply reuses by reference from more generic levels. For
+        example, since task, bctask, and guitask use the &lt;p> element without specializing it,
+        they <keyword>must not</keyword> declare mappings for it. </p>
+      <p>The @class attribute <keyword>should not</keyword> be modified by authors. </p>
+    </section>
+    <section>
+      <title>Examples (non-normative)</title>
+      <p>The @class attribute for the task topic type's &lt;step> element
+        is:<codeblock>&lt;!ATTLIST step         class  CDATA "- topic/li task/step "></codeblock></p>
+      <p>This tells us that the &lt;step> element is equivalent to the &lt;li> element in a generic
+        topic. It also tells us that &lt;step> is equivalent to a &lt;step> in a task topic, which
+        we already knew, but it's worth noting this in the attribute because it enables round-trip
+        migration between upper level and lower level types without loss of information. </p>
+      <p>While a given element's tagname is normally the same as the typename of the last token in
+        the @class value, this is not required. Processors that perform <term>generalization</term>
+        may transform elements from specialized types to less-specialized types, leaving the values
+        of the @class attribute unchanged (thus preserving knowledge of the original
+        most-specialized form). For example, if a user runs a generalizing transformation that maps
+        all elements to their first @class value, but preserves their content and attribute values,
+        then the user can follow it up with a "specialize" transformation that maps all elements to
+        their last @class value (preserving content and attribute values), and provide a full round
+        trip for all content between the two document types, using nothing but two generic
+        transformations and the information in the @class attribute.</p>
+      <p><!-- MP: removed discussion of architectural forms, per TCmeeting
+        2007/01/02-->The
+        @class attribute tells a processor what general classes of elements the current element
+        belongs to. DITA scopes elements by module type (for example topic type, domain type, or map
+        type) instead of document type, which lets document type developers combine multiple topic
+        types in a single document without complicating transformation logic.</p>
+      <p>The sequence of values in the @class attribute is important because it tells processors
+        which value is the most general and which is most specific. This is especially important for
+        "specializing" transformations, where you can apply a general rule that says: if the element
+        doesn't have a mapping to the target topic type, simply use the last value of the @class
+        attribute (and assume that the specialized topic type is reusing some general element
+        declarations, which only have mappings for the level at which they were declared).</p>
+      <p>
+        <fig>
+          <title>Example of structural type element with @class attribute</title>
+          <codeblock>&lt;appstep class="- topic/li task/step bctask/appstep ">
+  &lt;cmd class="- topic/ph task/cmd ">A specialized step&lt;/cmd>
+&lt;/appstep></codeblock>
+        </fig>
+        <fig>
+          <title>Example of domain element with @class attribute</title>
+          <codeblock>&lt;wintitle class="+ topic/keyword ui-d/wintitle ">A specialized keyword&lt;/wintitle></codeblock>
+        </fig>
+      </p>
+      <p>While this example is trivial, more complicated hierarchies (say, five levels deep, with renaming occurring at levels two and four only) make explicit intermediate values essential.</p>
+      <p>The specialization hierarchy for a given element type must reflect any intermediate modules between the base type and the specialization type, as shown in this example:</p>
+      <fig>
+        <title>Example of @class attribute with intermediate value</title>
+        <codeblock>&lt;windowname class="- topic/keyword task/keyword guitask/windowname "></codeblock>
+      </fig>
+      <p>The intermediate values are necessary so that generalizing and specializing transformations
+        can map values simply and accurately. For example, if task/keyword was missing as a value,
+        and a user decided to generalize this guitask up to a task topic, then the transformation
+        would have to guess whether to map to keyword (appropriate if task is more general than
+        guitask, which it is) or leave it as windowname (appropriate if task were more specialized,
+        which it isn't). By always providing mappings for more general values, processors can then
+        apply the simple rule that missing mappings must by default be to more specialized values
+        than the one we are generalizing to, which means the last value in the list is appropriate.
+        For example, when generalizing &lt;guitask> to &lt;task>, if a &lt;p> element has no target
+        value for &lt;task>, we can safely assume that &lt;p> does not specialize from &lt;task> and
+        should not be generalized.</p>
+    </section>
+  </conbody>
+</concept>

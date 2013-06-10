@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference
+  id="lcTrueFalse" xml:lang="en-us">
+  <title>lcTrueFalse</title>
+  <shortdesc>A <keyword>lcTrueFalse</keyword> interaction presents the learner with two choices, one
+    correct, the other incorrect, often presented as true/false or yes/no responses.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>lcTrueFalse</indexterm><indexterm>learning and training elements<indexterm
+            >lcTrueFalse</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody><section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcTrueFalse/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="lcTrueFalse-contains"/>
+      </p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcTrueFalse/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="lcTrueFalse-contained-by"/>
+      </p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>+ topic/fig learningInteractionBase-d/lcInteractionBase learning-d/lcTrueFalse </p>
+    </section>
+    <example
+      id="example">
+      <title>Example</title>
+      <codeblock>
+   &lt;!--True - False Interaction                    -->
+   &lt;lcTrueFalse id="tf1">
+    &lt;title>True - False sun rising&lt;/title>
+    &lt;lcQuestion>On Earth, the sun rises in the West and sets in the East.&lt;/lcQuestion>
+    &lt;lcAnswerOptionGroup>
+     &lt;lcAnswerOption>
+      &lt;lcAnswerContent>True&lt;/lcAnswerContent>
+     &lt;/lcAnswerOption>
+     &lt;lcAnswerOption>
+      &lt;lcAnswerContent>False&lt;/lcAnswerContent>
+      &lt;lcCorrectResponse/>
+     &lt;/lcAnswerOption>
+    &lt;/lcAnswerOptionGroup>
+    &lt;lcFeedbackIncorrect>No, look to the East.&lt;/lcFeedbackIncorrect>
+    &lt;lcFeedbackCorrect>Yes, look to the East.&lt;/lcFeedbackCorrect>
+   &lt;/lcTrueFalse>
+  </codeblock>
+    </example>
+    <section
+      id="attributes">
+      <title>Attributes</title>
+      <simpletable
+        id="lcTrueFalse_attr"
+        relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/id-learning">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section></refbody>
+</reference>

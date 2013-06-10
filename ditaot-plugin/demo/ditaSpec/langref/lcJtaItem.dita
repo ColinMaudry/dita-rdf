@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcJtaItem" xml:lang="en-us">
+	<title>lcJtaItem</title><shortdesc>The &lt;<keyword>lcJtaItem</keyword>&gt; provides  description of job task analysis (JTA) as related to a particular learning objective.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcJtaItem</indexterm>
+<indexterm>learning and training elements<indexterm>lcJtaItem</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcJtaItem/contains" otherprops="contains">
+			<title>Contains</title>
+      <p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcJtaItem-contains"/>
+      </p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcJtaItem/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcJtaItem-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/p learningBase/p learningPlan/lcJtaItem </p>
+		</section>
+<example id="example" conref="lcGapAnalysis.dita#lcGapAnalysis/example"/>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcJtaItem_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+
+</refbody>
+</reference>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference id="topic_elements" xml:lang="en-us">
+<title>Topic elements</title>
+<shortdesc>The base topic elements include elements that make up the
+core building blocks of the DITA topic, such as topic, body, and related-links,
+as well as elements like &lt;p> and &lt;ph> that are used in many
+topic specializations. Some of these elements are also available inside
+the &lt;topicmeta> map element.</shortdesc>
+</reference><?Pub Caret -3?>
+<?Pub *0000000632?>

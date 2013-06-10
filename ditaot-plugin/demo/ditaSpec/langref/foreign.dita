@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="foreign" xml:lang="en-us">
+<title>foreign</title>
+<shortdesc>The &lt;foreign> element allows the introduction of non-DITA
+content, for example, MathML, SVG, or Rich Text Format (RTF). The &lt;foreign>
+element or a specialization may contain more than one type of non-DITA
+content or a mix of DITA and non-DITA content. Specialization of the &lt;foreign>
+element generally is implemented as a domain, but architects looking
+for more control over the content may implement foreign vocabularies
+as structural specializations.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Specialization elements<indexterm>foreign</indexterm></indexterm>
+<indexterm>foreign</indexterm><indexterm>Including foreign vocabularies</indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>       <p>Processors should attempt to display &lt;foreign>
+content unless otherwise instructed. If the processor cannot render
+the content, it <keyword>may</keyword> emit a warning.</p><p>The enabler
+of the foreign vocabulary must provide the processing and override
+the base processing for &lt;foreign&gt;. </p><ul>
+<li>If &lt;foreign&gt; contains more than one alternative content
+element, they should all be processed. In the case of &lt;desc&gt;
+they should be concatenated in a similar way to &lt;section&gt;, but
+with no title (analogous to &lt;div&gt; in HTML). </li><?Pub Caret -2?>
+<li>If alternate content is desired, specialize the &lt;desc&gt; element
+to contain it. This specialization of &lt;desc&gt; should be used
+within the element specialized from &lt;foreign&gt;. Such alternate
+content must of course be valid wherever the &lt;foreign&gt; specialization
+is valid.</li>
+<li> If no &lt;desc&gt;, &lt;object&gt;, or &lt;image&gt; element
+is found within an instance of the &lt;foreign&gt; element, the base
+processing mayemit a warning about the absence of processable content.</li>
+<li>The base processing for &lt;object&gt; may emit the content of &lt;foreign&gt;
+as a file at the location specified by the data attribute of the &lt;object&gt;
+element. The &lt;object&gt; element should have a data attribute or
+a &lt;foreign&gt; sub-element but not both. In the event that an &lt;object&gt;
+element contains both a data attribute and an &lt;foreign&gt; sub-element
+the processing system should ignore one of them.</li>
+</ul>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-foreign/contains"
+id="contains" otherprops="contains">       <title>Contains</title> 
+     <p>The content model of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="foreign-contains"></xref></p>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-foreign/containedby"
+id="containedby" otherprops="containedby">       <title>Contained
+By</title>       <p>The parents of this element may differ based on
+where it is used. Content model information is located here: <xref
+keyref="foreign-contained-by"></xref></p>     </section>
+<section id="inheritance" otherprops="inheritance">       <title>Inheritance</title> 
+     <p>- topic/foreign </p>     </section>
+<example id="example">       <title><b>SVG Example within a &lt;p&gt;
+element</b></title><codeblock>&lt;p&gt;... as in the formula 
+  &lt;svg&gt;
+    &lt;svg:svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg"&gt;
+
+&lt;ellipse cx="300" cy="150" rx="200" ry="80"
+style="fill:rgb(200,100,50);
+stroke:rgb(0,0,100);stroke-width:2"/&gt;
+
+    &lt;/svg:svg&gt;    
+  &lt;/svg&gt;.
+&lt;/p&gt; </codeblock>     </example>
+<example>       <title>MathML Example within an &lt;object&gt; element</title><codeblock>&lt;p&gt;... as in the formula 
+&lt;object&gt;
+  &lt;desc&gt;4 + x&lt;/desc&gt;
+  &lt;mathML&gt;
+    &lt;mml:math display="block"&gt;
+      &lt;mml:mrow&gt;
+        &lt;mml:mo&gt;&amp;sum;&lt;/mml:mo&gt;
+        &lt;mml:mn&gt;4&lt;/mml:mn&gt;
+        &lt;mml:mo&gt;+&lt;/mml:mo&gt;
+        &lt;mml:mi&gt;x&lt;/mml:mi&gt;
+      &lt;/mml:mrow&gt;
+    &lt;/mml:math&gt;    
+  &lt;/mathML&gt;
+ &lt;object&gt;.
+&lt;/p&gt; </codeblock>     </example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="foreign_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>
+<?Pub *0000005259?>

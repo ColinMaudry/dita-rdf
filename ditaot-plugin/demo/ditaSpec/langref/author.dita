@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="author" xml:lang="en-us">
+<title>author</title>
+<shortdesc>The &lt;<keyword>author</keyword>> metadata element contains
+the name of the topic's   author. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>author</indexterm><indexterm>topic author</indexterm>
+<indexterm>Prolog elements<indexterm>author</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>    <p>The author is usually the person, organization, or
+application that created the content. This     element is equivalent
+to the Creator element in Dublin Core.</p>   </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-author/contains"
+id="contains" otherprops="contains">    <title>Contains</title>  
+ <p>The content model of this element may differ based on where it
+is used. Content model     information is located here: <xref
+keyref="author-contains"></xref></p>   </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-author/containedby"
+id="containedby" otherprops="containedby">    <title>Contained By</title> 
+  <p>The parents of this element may differ based on where it is used.
+Content model information is     located here: <xref
+keyref="author-contained-by"></xref></p>   </section>
+<section id="inheritance" otherprops="inheritance">    <title>Inheritance</title> 
+  <p>- topic/author </p>   </section>
+<example id="example">    <title>Example</title>    <codeblock
+xml:space="preserve">&lt;prolog&gt;
+  <b>&lt;author type="creator"&gt;Jane&lt;/author&gt;</b>
+  <b>&lt;author type="contributor"&gt;John&lt;/author&gt;</b>
+&lt;/prolog&gt;</codeblock><?Pub Caret 94?>   </example>
+<section id="attributes">    <title>Attributes</title>    <simpletable
+id="author_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-author">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>   </section>
+</refbody>
+</reference>
+<?Pub *0000003616?>

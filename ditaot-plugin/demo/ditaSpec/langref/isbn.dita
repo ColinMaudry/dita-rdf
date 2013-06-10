@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="isbn" xml:lang="en-us">
+<title>isbn</title>
+<shortdesc>The &lt;isbn&gt; element contains the book's International
+Standard Book Number (ISBN).</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Bookmap elements<indexterm>isbn</indexterm></indexterm>
+<indexterm>isbn</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-isbn/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="isbn-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-isbn/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="isbn-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/data bookmap/isbn </p></section>
+<example id="example"><?Pub Caret?><title>Example</title><codeblock>&lt;bookmeta>
+  &lt;bookid>
+    &lt;isbn>978-0141000039&lt;/isbn>
+  &lt;/bookid>
+&lt;/bookmeta></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="isbn_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/name">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/datatype">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/value">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

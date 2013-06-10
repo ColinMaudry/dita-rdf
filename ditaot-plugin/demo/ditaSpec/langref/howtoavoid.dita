@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="howtoavoid" xml:lang="en-us">
+<title>howtoavoid</title>
+<shortdesc>The &lt;<keyword>howtoavoid</keyword>> element contains
+information about how a user can avoid a hazard, for example, "Do
+not use solvents to clean the drum surface."</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>howtoavoid</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-howtoavoid/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="howtoavoid-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-howtoavoid/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="howtoavoid-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/li hazard-d/howtoavoid</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;hazardstatement type="notice">
+  &lt;messagepanel>
+    &lt;typeofhazard>Machinery Damage&lt;/typeofhazard>
+    <b>&lt;howtoavoid></b>
+	     &lt;sl>
+	       &lt;sli>Do NOT use solvents to clean the drum surface&lt;/sli>
+	       &lt;sli>Read manual for proper drum cleaning procedure&lt;/sli>
+     	&lt;/sl>
+    <b>&lt;/howtoavoid></b>
+  &lt;/messagepanel>
+  &lt;hazardsymbol href="readmanual.png">&lt;/hazardsymbol>
+  &lt;hazardsymbol href="agressivesolvent.png">&lt;/hazardsymbol>
+&lt;/hazardstatement></codeblock><?Pub Caret 291?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002851?>

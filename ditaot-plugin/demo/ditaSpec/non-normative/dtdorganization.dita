@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="dtdorganization" xml:lang="en-us">
+<title>DTD organization</title>
+<shortdesc>(Non-normative) The OASIS DITA document types are implemented
+with a set of DTD     modules. Some of these modules are used by every
+DITA document type, others are only used by     topics or by maps,
+and some are only used in specific specializations.</shortdesc>
+<conbody>
+<section conref="../archSpec/dita_modules.dita#ditamods/modules"></section>
+<section><title>Public identifiers for DTDs</title><p>Each standard
+DTD has a public identifier that can be used to reference either the
+latest version or a specific version of the DTD. Each module component
+has a version-independent public ID as well as a version-specific
+public ID, one for each version of DITA.</p><p>The public IDs follow
+the pattern "-//OASIS//DTD DITA <varname>versionNumber</varname> 
+       <varname>topic-or-map-type</varname>//EN", where <varname>versionNumber</varname> is
+a DITA         version number (1.0, 1.1, etc.) or is omitted entirely
+and           <varname>topic-or-map-type</varname> is the name of
+the topic or map type in camel case,         e.g., "Concept", "Task",
+"BookMap", etc.</p><p>Note that "OASIS" is the "owner identifier"
+of the public IDs and indicates artifacts owned         by OASIS.</p><p>Public
+identifiers for shells not defined by the DITA Technical Committee
+          <keyword>should</keyword> use an owner identifier reflecting
+the owner of the shell, e.g.         "example.com" or "IBM" or a similarly
+unambiguous identifier. The keyword "DITA" is a         convention
+indicating that the artifact is DITA-related.</p><p>The full set of
+module components and their associated public identifiers is provided
+in         the XML entity resolution catalog that is part of the DITA
+DTD package.</p><p
+conref="schemaorganization.dita#schemaorganization/module-version-xpl"></p><?Pub
+Caret -1?><p><b>Topic and topic-based specializations</b></p><lines>PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Concept//EN" "concept.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Concept//EN" "concept.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Composite//EN" "ditabase.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Composite//EN" "ditabase.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Composite//EN" "ditabase.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossentry.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Glossary Entry//EN" "glossentry.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Glossary Entry//EN" "glossentry.dtd"
+
+(NOTE: the glossary.dtd file is provided for backward compatibility with
+DITA 1.1. Documents should use the glossentry.dtd in new documents.)
+
+PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Glossary//EN" "glossary.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Glossary//EN" "glossary.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Reference//EN" "reference.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Reference//EN" "reference.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Task//EN" "task.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Task//EN" "task.dtd"
+
+PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x General Task//EN" "generalTask.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 General Task//EN" "generalTask.dtd"
+    
+PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Topic//EN" "topic.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Topic//EN" "topic.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Base Topic//EN" "basetopic.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Base Topic//EN" "basetopic.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Base Topic//EN" "basetopic.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Machinery Task//EN" "machineryTask.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Machinery Task//EN" "machineryTask.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Machinery Task//EN" "machineryTask.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning Assessment//EN" "learningAssessment.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning Assessment//EN" "learningAssessment.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning Assessment//EN" "learningAssessment.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning Content//EN" "learningContent.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning Content//EN" "learningContent.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning Content//EN" "learningContent.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning Overview//EN" "learningOverview.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning Overview//EN" "learningOverview.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning Overview//EN" "learningOverview.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning Plan//EN" "learningPlan.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning Plan//EN" "learningPlan.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning Plan//EN" "learningPlan.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning Summary//EN" "learningSummary.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning Summary//EN" "learningSummary.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning Summary//EN" "learningSummary.dtd"</lines><p><b>Map
+and map-based specializations</b></p><lines>PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Map//EN" "map.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Map//EN" "map.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Base Map//EN" "basemap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Base Map//EN" "basemap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Base Map//EN" "basemap.dtd"
+
+PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 BookMap//EN" "bookmap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 BookMap//EN" "bookmap.dtd"        
+
+PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd"
+PUBLIC "-//OASIS//DTD DITA Subject Scheme 1.x Map//EN" "subjectScheme.dtd"
+PUBLIC "-//OASIS//DTD DITA Subject Scheme 1.2 Map//EN" "subjectScheme.dtd"
+
+PUBLIC "-//OASIS//DTD DITA Classification Map//EN" "classifyMap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Classification Map//EN" "classifyMap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 Classification Map//EN" "classifyMap.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning BookMap//EN" "learningBookmap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning BookMap//EN" "learningBookmap.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning BookMap//EN" "learningBookmap.dtd"
+
+PUBLIC "-//OASIS//DTD DITA 1.2 Learning Map//EN" "learningMap.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x Learning Map//EN" "learningMap.dtd"
+PUBLIC "-//OASIS//DTD DITA Learning Map//EN" "learningMap.dtd"</lines><p><b>DITAVal
+package for conditional processing</b></p><lines>PUBLIC "-//OASIS//DTD DITA DITAVAL//EN" "ditaval.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.x DITAVAL//EN" "ditaval.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.2 DITAVAL//EN" "ditaval.dtd"        </lines></section>
+</conbody>
+</concept>
+<?Pub *0000006947?>

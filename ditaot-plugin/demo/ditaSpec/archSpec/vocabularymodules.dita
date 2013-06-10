@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept
+  id="vocabularymodules" xml:lang="en-us">
+  <title>Vocabulary modules</title>
+  <shortdesc>Vocabulary modules are atomic units of XML vocabulary definition (element types and
+    attributes). A given DITA element type or attribute is declared in exactly one vocabulary
+    module.</shortdesc>
+  <conbody>
+    <p>Vocabulary modules <term>must</term> reflect the implementation requirements defined in this
+      specification for each recognized constraint mechanism. These requirements ensure that all
+      vocabulary modules of a given type follow the same basic coding patterns for how their
+      components are named and organized.</p>
+    <p>Vocabulary modules intended to be used outside of a narrowly-restricted context
+        <term>should</term> have one or more associated globally-unique names (public IDs, URNs, or
+      absolute URLs) by which modules can be referenced without regard to their local storage
+      location.</p>
+    <p>There are three types of vocabulary module:<dl>
+        <dlentry>
+          <dt>structural</dt>
+          <dd>A vocabulary module that defines exactly one top-level map or topic type. Structural
+            modules <term>may</term> also define specializations of elements from domain modules.
+            Structural modules are either <term>topic modules</term> or <term>map
+              modules</term>.<p>A topic vocabulary module <term>must</term> define exactly one
+              top-level topic type. It <term>may</term> define additional topic types that are then
+              allowed to occur as subordinate topics within the top-level topic. However, such
+              subordinate topic types <term>may not</term> be used as the root elements of
+              conforming DITA documents. For example, a given top-level topic type may require the
+              use of subordinate topic types that would only ever be meaningful in the context of
+              their containing type and thus would never be candidates for standalone authoring or
+              aggregation via maps. In that case, the subordinate topic type may be declared in the
+              module for the top-level topic type that uses it. However, in most cases, potential
+              subordinate topics <term>should</term> be defined in their own vocabulary
+              modules.</p><p>A map vocabulary module <term>must</term> define exactly one element
+              type that specializes map.</p></dd>
+        </dlentry>
+        <dlentry>
+          <dt>element domain</dt>
+          <dd>A vocabulary module that defines one or more element types that specialize element
+            types used within maps or topics. </dd>
+        </dlentry>
+        <dlentry>
+          <dt>attribute domain</dt>
+          <dd>A vocabulary module that defines exactly one specialization of either the @base or
+            @props attribute.</dd>
+        </dlentry>
+      </dl></p>
+    <p>A given vocabulary module exists in an exclusive hierarchy relative to its ancestor modules.
+      For example, the &lt;concept> topic type is defined in the concept topic module and is itself
+      derived from the topic topic module (that is, the topic-defining structural module that
+      defines the topic type &lt;topic>). Likewise, the &lt;task> topic type is defined in the task
+      topic module and is derived from the &lt;topic> topic type. Thus the concept and task topic
+      types are children of the &lt;topic> topic type in the module hierarchy rooted at the
+      &lt;topic> topic vocabulary module.</p>
+    <p>All topic types <term>must</term> ultimately be specialized from &lt;topic>. All map types
+        <term>must</term> ultimately be specialized from &lt;map>. Domain elements intended for use
+      in topics <term>must</term> ultimately be specialized from elements defined in the topic
+      module. Domain elements intended for use in maps <term>must</term> ultimately be specialized
+      from elements defined by or used in the map module (maps share some element types with topics
+      but no map-specific elements may be used within topics). Domain attributes <term>must</term>
+      ultimately be specialized from either the @base or @props attribute.</p>
+    <p>Each vocabulary module has an associated short name, which is used to identify the module in
+      @class and @domains attribute values. While module names need not be globally unique, module
+      names <term>must</term> be unique within the scope of a given specialization hierarchy. The
+      short name <term>must</term> be a valid XML name token. </p>
+    <p>For structural types, the module name <term>must</term> be the same as the root element. For
+      example, "task" is the name of the structural vocabulary module whose root element is
+      &lt;task>. For domains, the name is assigned by the developer of the vocabulary module. By
+      convention, domain names end with "-d" and are kept short; for example, "ui-d" for the user
+      interface domain and "pr-d" for the programming domain. </p>
+    <p>When integrated into concrete document types, vocabulary modules <term>may</term> be further
+      constrained through the use of constraint modules. See <xref
+        href="createConstraintsDomainSpec.dita"
+        format="dita"/>.</p>
+  </conbody>
+</concept>

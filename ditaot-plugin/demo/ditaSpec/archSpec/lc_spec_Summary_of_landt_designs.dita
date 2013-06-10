@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference id="lc_spec_summary_of_landt_designs" xml:lang="en-us">
+ <title>Summary of learning topic, map, and domain designs</title>
+ <shortdesc>The DITA 1.2 Learning and Training specialization provides a set of specialized DITA
+  topics, a learning interactions domain, a learning metadata domain, and a learning map domain to
+  support creating and delivering structured learning content.</shortdesc>
+ <refbody>
+  <section>
+   <title>Learning topic types</title>
+   <p>The following specialized DITA topic types provide support for creating learning and training
+    content.</p>
+   <dl id="lt_topic_types">
+    <dlentry>
+     <dt id="DtLearningPlanTopicType-020F4C49">Learning Plan topic type</dt>
+     <dd>Describes learning needs and goals, instructional design models, task analyses, learning
+      taxonomies, and other information necessary to the lesson planning process.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>Learning Overview topic type</dt>
+     <dd>Identifies the learning objectives and includes other information helpful to the learner,
+      such prerequisites, duration, and intended audience.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>Learning Content topic type</dt>
+     <dd>Provides the learning content itself and enables direct use of content from DITA task,
+      concept, and reference topics, as well as additional content of any topic type that supports
+      specific objectives declared in the Learning Overview topic type.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>Learning Summary topic type</dt>
+     <dd>Recaps and provides context for the learning objectives and provides guidance to reinforce
+      learning and long-term memory.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>Learning Assessment topic type</dt>
+     <dd>Presents instruments that measure progress, encourage retrieval, and stimulate
+      reinforcement of the learning content and can be presented before the content as a
+      pre-assessment or after the content as a post-assessment checkpoint or test.</dd>
+    </dlentry>
+   </dl>
+  </section>
+  <section>
+   <title>Learning map domain</title>
+   <p>Use the learning map domain to organize groups of topics as learning objects.</p>
+   <note>The learning map domain is part of the learningMap and the learningBookmap document types.
+    As these learning map structures are delivered as a domain specialization rather than as a
+    structural specialization, it is possible to extend any type of DITA map to include these
+    structures.</note>
+   <dl id="lt_map_domain">
+    <dlentry>
+     <dt>learningGroup</dt>
+     <dd>A map container and optional topic reference to introduce and group learning objects into
+      higher-level organizations, such as course-level, module-level, or lesson-level. A
+      learningGroup can contain other learningGroup elements, allowing you to organize learning
+      content at course, module, or other higher levels of hierarchy.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningObject</dt>
+     <dd>A map container and optional topic reference to introduce and group the topic references
+      for a learning object. </dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningPlanRef</dt>
+     <dd>A topic reference to a learning plan or other topic that provides the learning plan.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningOverviewRef</dt>
+     <dd>A topic reference to a learning overview or other topic that introduces the learning
+      object.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningContentRef</dt>
+     <dd>A topic reference to a learning content topic, or a topic, task, concept, reference or
+      other specialized topic.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningContentComponentRef</dt>
+     <dd>A topic reference to a learning content topic, or a topic, task, concept, reference or
+      other specialized topic.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningSummaryRef</dt>
+     <dd>A topic reference to a learning summary or other topic that provides the summary.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningPreAssessmentRef</dt>
+     <dd>A topic reference to a learning assessment or other topic that is used as a
+      pre-assessment.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>learningPostAssessmentRef</dt>
+     <dd>A topic reference to a learning assessment or other topic that is used as a
+      post-assessment.</dd>
+    </dlentry>
+   </dl>
+  </section>
+  <section>
+   <title>Learning interactions domain</title>
+   <p id="lt_interactions_domain">The learning interactions domain defines a set of basic learning
+    interaction elements as a DITA domain.<dl>
+     <dlentry>
+      <dt>lcOpenQuestion</dt>
+      <dd>Poses an open-ended question in an assessment interaction.</dd>
+     </dlentry>
+     <dlentry>
+      <dt>lcTrueFalse</dt>
+      <dd>Presents the learner with two choices, one correct, the other incorrect, often presented
+       as true/false or yes/no responses.</dd>
+     </dlentry>
+     <dlentry>
+      <dt>lcSingleSelect</dt>
+      <dd>Presents three or more choices, only one of which is correct.</dd>
+     </dlentry>
+     <dlentry>
+      <dt>lcMultipleSelect</dt>
+      <dd>Presents two or more choices, two or more of which are correct.</dd>
+     </dlentry>
+     <dlentry>
+      <dt>lcMatching</dt>
+      <dd>In a list of paired choices, the learner identifies the correct choice that matches
+       another choice.</dd>
+     </dlentry>
+     <dlentry>
+      <dt>lcHotspot</dt>
+      <dd>Presents an image, and the learner clicks on one or more regions to indicate a
+       choice.</dd>
+     </dlentry>
+     <dlentry>
+      <dt>lcSequencing</dt>
+      <dd>Presents choices in a list that the learner must arrange in a correct ordered
+       sequence.</dd>
+     </dlentry>
+    </dl></p>
+  </section>
+  <section>
+   <title>Learning metadata domain</title>
+   <p>The learning metadata domain defines a set of basic learning metadata elements as a DITA
+    domain and available for use in the learning topic types, as specialized prolog metadata and in
+    the learning map domain, as specialized topicmeta.</p>
+   <p id="lt_lcLom"><b>lcLom</b> makes the learning metadata elements available in the learning
+    topics and learning map domain.</p>
+   <p id="lt_metadata_domain">Elements in lcLom include:<ul>
+     <li>lomAggregationLevel </li>
+     <li>lomContext </li>
+     <li>lomCoverage </li>
+     <li>lomDifficulty </li>
+     <li>lomInstallationRemarks </li>
+     <li>lomIntendedUserRole </li>
+     <li>lomInteractivityLevel </li>
+     <li>lomInteractivityType </li>
+     <li>lomLearningResourceType </li>
+     <li>lomOtherPlatformRequirements </li>
+     <li>lomSemanticDensity </li>
+     <li>lomStructure </li>
+     <li>lomTechRequirement </li>
+     <li>lomTypicalAgeRange </li>
+     <li>lomTypicalLearningTime</li>
+    </ul></p>
+  </section>
+  <section>
+   <title>Instructor notes</title>
+   <p>The learning interactions domain also makes available an lcInstructornote element for
+    providing instructor-specific information.</p>
+   <?Pub Caret 26?>
+  </section>
+ </refbody>
+</reference>
+<?Pub *0000006875?>

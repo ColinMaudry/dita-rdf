@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "../../../dtd/reference.dtd">
+<reference id="lcTime" rev="1.2" xml:lang="en-us">
+	<title>lcTime</title>
+	<shortdesc>The &lt;<keyword>lcTime</keyword>&gt; specifies the time expected to complete an activity. You can specify the time both as text to display to the user and as an attribute value that follows a specific time format.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcTime</indexterm><indexterm>learning and training elements<indexterm>lcTime</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcTime/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcTime-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcTime/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcTime-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/data learningBase/lcTime </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningOverview id=&quot;overview&quot;&gt;
+  &lt;title&gt;Learning Overview topic&lt;/title&gt;
+  &lt;learningOverviewbody&gt;
+    &lt;lcDuration&gt;&lt;title&gt;Duration&lt;/title&gt;
+      &lt;lcTime name="lcTime" value="00:15"&gt;15 minutes&lt;/&gt;
+   &lt;/lcDuration&gt;  
+  &lt;/learningOverviewbody&gt;
+&lt;/learningOverview&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="learningBasebody_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow>
+<stentry>name</stentry>
+<stentry>The name used to indicate this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>lcTime</stentry>
+<stentry>Required</stentry>
+</strow>
+<strow>
+<stentry>datatype</stentry>
+<stentry>The datatype for this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>There is no assumed time-specific data format or type. If you use a specific datatype for the time value, specify it here.</stentry>
+<stentry>Required</stentry>
+</strow>
+<strow>
+<stentry>value</stentry>
+<stentry>There is no assumed time-specific data format or type for the time value. </stentry>
+<stentry>PCDATA</stentry>
+<stentry></stentry>
+<stentry>Required</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="localization-atts" xml:lang="en-us">
+<title>localization-atts attribute group</title>
+<shortdesc>The "localization-atts" attribute group defines a set of
+common attributes related to translation and localization. These attributes
+are available on most DITA elements.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>%localization-atts</indexterm><indexterm>Commonly
+referenced attribute descriptions<indexterm>localization-atts</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><!--Replaced this paragraph with the link below:
+<p>Detailed information on localization with DITA, including several
+best practices on the use of these attributes, is available in the
+DITA Architectural Specification.</p>--></section>
+<section>       <title>Attributes</title>       <simpletable
+id="loc_atts" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="commonLRdefs.dita#commonLRdefs/translate">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/xmllang">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/dir">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+<example>The translate, xml:lang, and dir attributes identify language-specific
+words or phrases for specific processing (or non-processing, in the
+case of translate=&quot;no&quot;).<codeblock>&lt;p&gt;The cordial response to the question is 
+&lt;q translate=&quot;no&quot; xml:lang=&quot;de-de&quot; dir=&quot;ltr&quot;&gt;nein.&lt;/q&gt;&lt;/p&gt;</codeblock></example>
+</refbody>
+<related-links>
+<link href="../archSpec/translation.dita"></link><?Pub Caret -1?>
+</related-links>
+</reference>
+<?Pub *0000002286?>

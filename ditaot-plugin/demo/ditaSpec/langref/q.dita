@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="q" xml:lang="en-us">
+<title>q</title>
+<shortdesc>A quotation element (&lt;q&gt;) indicates content quoted
+from another source. This element is used for short quotes which are
+displayed inline. Use the long quote element (&lt;lq&gt;) for quotations
+that should be set off from the surrounding text.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>q (short quote)</indexterm><indexterm>short quote
+(q)</indexterm><indexterm>quote, short (q)</indexterm><indexterm>Body
+elements<indexterm>q</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>Authors should not add quote punctuation manually
+when using the &lt;q> element. Processors that render the &lt;q> element
+should add appropriate styling, such as locale-specific quotation
+marks.</p><?Pub Caret -1?><draft-comment>Question added end of 2008:
+How much should we describe of the behavior? HTML says:<p>Visual user
+agents must ensure that the content of the Q element is rendered with
+delimiting quotation marks. Authors should not put quotation marks
+at the beginning and end of the content of a Q element.</p><p>User
+agents should render quotation marks in a language-sensitive manner
+(see the lang attribute). Many languages adopt different quotation
+styles for outer and inner (nested) quotations, which should be respected
+by user-agents.</p></draft-comment><draft-comment>For DITA 1.2, added
+the styling behavior based on the decision recorded here in March
+2009: http://lists.oasis-open.org/archives/dita/200903/msg00005.html</draft-comment></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-q/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="q-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-q/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="q-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/q </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">George said, &lt;q&gt;Disengage the power supply before servicing the unit.&lt;/q&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="q_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003559?>

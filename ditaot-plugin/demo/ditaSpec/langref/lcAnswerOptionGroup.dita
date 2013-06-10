@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcAnswerOptionGroup" xml:lang="en-us">
+  <title>lcAnswerOptionGroup</title>
+  <shortdesc>The &lt;<keyword>lcAnswerOptionGroup</keyword>&gt; element provides a container for the options for a true-false, single-select, or multiple-select assessment interaction.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>lcAnswerOptionGroup</indexterm>
+<indexterm>learning and training elements<indexterm>lcAnswerOptionGroup</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcAnswerOptionGroup/contains" otherprops="contains">
+      <title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcAnswerOptionGroup-contains"/>
+      </p>
+    </section>
+    <section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcAnswerOptionGroup/containedby" otherprops="containedby">
+      <title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcAnswerOptionGroup-contained-by"/>
+      </p>
+    </section>
+    <section id="inheritance" otherprops="inheritance">
+      <title>Inheritance</title><p>+ topic/ul learningInteractionBase-d/ul learning-d/lcAnswerOptionGroup </p>
+    </section>
+    <example id="example">
+      <title>Example</title>
+<codeblock>
+...
+&lt;lcAnswerOptionGroup>
+  &lt;lcAnswerOption>
+    &lt;lcAnswerContent>True&lt;/lcAnswerContent>
+    &lt;lcCorrectResponse/>
+  &lt;/lcAnswerOption>
+  &lt;lcAnswerOption>
+    &lt;lcAnswerContent>False&lt;/lcAnswerContent>
+  &lt;/lcAnswerOption>
+&lt;/lcAnswerOptionGroup>
+...</codeblock>
+    </example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInteractions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+  </refbody>
+</reference>

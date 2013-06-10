@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcNextSteps" xml:lang="en-us">
+	<title>lcNextSteps</title>
+	<shortdesc>The &lt;<keyword>lcNextSteps</keyword>&gt; suggests next steps to reinforce the knowledge learned.</shortdesc>
+
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcNextSteps</indexterm><indexterm>learning and training elements<indexterm>lcNextSteps</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcNextSteps/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcNextSteps-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcNextSteps/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcNextSteps-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section learningBase/lcNextSteps </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningSummary id=&quot;overview&quot;&gt;
+  &lt;title&gt;Learning Summary topic&lt;/title&gt;
+  &lt;learningSummarybody&gt;
+    &lt;lcNextSteps&gt;&lt;title&gt;Next steps&lt;/title&gt;
+	&lt;p&gt;To provide information about next steps, you would 
+        include it here.&lt;/p&gt;
+	&lt;note&gt;You can have notes, 
+	tables, all kinds of things like that here, 
+	if you desire.&lt;/note&gt;
+   &lt;/lcNextSteps&gt;  
+  &lt;/learningSummarybody&gt;
+&lt;/learningSummary&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcNextSteps_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

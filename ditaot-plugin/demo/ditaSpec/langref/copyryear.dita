@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="copyryear" xml:lang="en-us">
+<title>copyryear</title>
+<shortdesc>The &lt;<keyword>copyryear</keyword>&gt; element contains
+the copyright year as specified by the <i><keyword>year</keyword></i> attribute.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>copyryear</indexterm><indexterm>Prolog elements<indexterm>copyryear</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-copyryear/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="copyryear-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-copyryear/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="copyryear-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/copyryear </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;copyright&gt;
+  <b>&lt;copyryear year="2001"&gt;&lt;/copyryear&gt;</b>
+  &lt;copyrholder&gt;IBM&lt;/copyrholder&gt;
+&lt;/copyright&gt;
+</codeblock><?Pub Caret 51?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="copyryear_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/year">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002687?>

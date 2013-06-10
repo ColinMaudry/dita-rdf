@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topicsubject" xml:lang="en-us">
+<title>topicsubject</title>
+<shortdesc>The &lt;<keyword>topicsubject</keyword>> element identifies
+the subjects covered by a topic or map.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>topicsubject</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>In order to identify a primary subject, refer to the subject
+with the &lt;topicsubject> itself, using the keys or The subjects
+can be identified by keys (if defined in the scheme) or, if the subject
+definition topic exists, by href (as with ordinary topic references).</p><p>Additional
+secondary subjects can be specified by nested &lt;<keyword>subjectref</keyword>>
+elements.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicsubject/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="topicsubject-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicsubject/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="topicsubject-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/topicref classify-d/topicsubject </p></section>
+<example id="example"><title>Example</title><p>In the following example,
+the map is classified as covering Linux as the primary subject; the
+topic "Developing web applications" also covers the secondary web
+and development subjects.  These subjects (and their keys) are defined
+externally in a subject scheme map; in order to reference the subject
+directly without the subject scheme map, the href attribute would
+be used in place of keyref.</p><?Pub Caret 156?><codeblock>&lt;map>
+  &lt;title>Working with Linux&lt;/title>
+  <b>&lt;topicsubject keyref="linux"/></b>
+  &lt;!-- ... -->
+  &lt;topicref href="webapp.dita" navtitle="Developing web applications">
+    <b>&lt;topicsubject></b>
+      &lt;subjectref keyref="web"/>
+      &lt;subjectref keyref="development"/>
+    <b>&lt;/topicsubject></b>
+    &lt;!-- ... -->
+  &lt;/topicref>
+  &lt;!-- ... -->
+&lt;/map></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/processing-role-default-resource-only">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/toc-default-no">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000005276?>

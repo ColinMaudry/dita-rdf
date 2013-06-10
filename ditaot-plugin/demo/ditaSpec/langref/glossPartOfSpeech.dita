@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="glossPartOfSpeech" xml:lang="en-us">
+<title>glossPartOfSpeech</title>
+<shortdesc>The &lt;glossPartOfSpeech> element identifies the part
+of speech for the preferred and alternate terms. Alternate terms must
+have the same part of speech as the preferred term because all terms
+in the glossentry topic designate the same subject. If the part of
+speech isn't specified, the default is a noun for the standard enumeration.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>glossPartOfSpeech</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><note>The standard enumeration is extensible or replaceable.
+If validation is required, the enumeration should be validated by
+means of the DITA Controlled Values mechanism or through processing
+rather than validated as an XML enumeration.<draft-comment>This should
+this include a link to the controlled values information in the architectural
+spec.</draft-comment><?Pub Caret -2?></note></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-glossPartOfSpeech/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="glossPartOfSpeech-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-glossPartOfSpeech/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="glossPartOfSpeech-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/data concept/data glossentry/glossPartOfSpeech </p></section>
+<example conref="glossentry.dita#glossentry/example" id="example"></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="data_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/name">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/datatype">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/value-glossPartOfSpeech">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004203?>

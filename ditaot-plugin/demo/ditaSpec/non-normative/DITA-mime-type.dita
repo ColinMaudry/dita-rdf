@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="DITA-mime-type">
+  <title>DITA MIME type</title>
+  <shortdesc>(Non-normative) It is common for Web-based services to establish default actions for
+    content based on the MIME type value sent in HTTP headers. For example, the
+    &quot;text/html&quot; MIME type is what normally causes browsers to interpret the content of a
+    web page as presentation-oriented markup, verus &quot;text/plain&quot; which would cause the
+    markup to be displayed literally. A DITA MIME type enables applications to recognize content as
+    DITA to enable special services such as semantically-informed search indexing or on-the-fly
+    rendering in the browser.</shortdesc>
+  <conbody>
+    <p>The OASIS DITA Technical Committee has requested the registration of
+      &quot;application/dita+xml&quot; with the IANA organization as the formally recognized DITA
+      MIME type. This process is in progress, however the details are public so that implementors
+      can make early use of the proposed value.</p>
+    <p>More information about the proposal is documented in this note of transmittal to OASIS for
+      registration of the DITA MIME type: <xref
+        href="http://lists.oasis-open.org/archives/dita/200806/msg00008.html" scope="external" format="html"
+        >http://lists.oasis-open.org/archives/dita/200806/msg00008.html</xref></p>
+  </conbody>
+</concept>

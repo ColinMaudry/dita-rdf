@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcReview" xml:lang="en-us">
+	<title>lcReview</title>
+<shortdesc>The &lt;<keyword>lcReview</keyword>&gt; provides a review of the main points.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcReview</indexterm><indexterm>learning and training elements<indexterm>lcReview</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcReview/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcReview-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcReview/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcReview-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section learningBase/lcReview </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningSummary id=&quot;summary&quot;&gt;
+  &lt;title&gt;Learning Summary topic&lt;/title&gt;
+  &lt;learningSummarybody&gt;
+    &lt;lcReview&gt;&lt;title&gt;Review&lt;/title&gt;
+	&lt;p&gt;If you want to offer a review, 
+        include it here.&lt;/p&gt;
+	&lt;note&gt;You can have notes, 
+	tables, all kinds of things like that here, 
+	if you desire.&lt;/note&gt;
+   &lt;/lcReview&gt;  
+  &lt;/learningSummarybody&gt;
+&lt;/learningSummary&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcReview_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

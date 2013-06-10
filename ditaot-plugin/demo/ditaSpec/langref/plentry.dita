@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="plentry" xml:lang="en-us">
+<title>plentry</title>
+<shortdesc>The parameter list entry element (&lt;plentry&gt;) contains
+one or more parameter terms and definitions (pt and pd). <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret 108?>
+<prolog><metadata>
+<keywords><indexterm>plentry (parameter list entry)</indexterm>
+<indexterm>parameter list entry (plentry)</indexterm><indexterm>Programming
+elements<indexterm>plentry (parameter list entry)</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-plentry/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="plentry-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-plentry/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="plentry-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/dlentry pr-d/plentry </p></section>
+<example id="example"><title>Example</title>See <xref href="parml.dita"></xref>.</example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="plentry_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002505?>

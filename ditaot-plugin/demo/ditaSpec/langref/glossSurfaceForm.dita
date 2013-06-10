@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="glossSurfaceForm" xml:lang="en-us">
+<title>glossSurfaceForm</title>
+<shortdesc>The &lt;glossSurfaceForm> element specifies an unambiguous
+presentation of the &lt;glossterm> that may combine multiple forms.
+The surface form is suitable to introduce the term in new contexts.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>glossSurfaceForm</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The &lt;glossSurfaceForm> element is most often used for
+terms that also specify the &lt;glossAcronym> element. In that case
+it contains the term in a manner that introduces both the term and
+the acronym, so that later references to the term may be replaced
+with the acronym alone. See the <xref href="abbreviated-form.dita">&lt;abbreviated-form></xref> element
+for a full description of how the surface form is used together with
+acronyms.</p></section><?Pub Caret?>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-glossSurfaceForm/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="glossSurfaceForm-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-glossSurfaceForm/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="glossSurfaceForm-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/p concept/p glossentry/glossSurfaceForm </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;glossentry id="abs">
+  &lt;glossterm>Anti-lock Braking System&lt;/glossterm>
+  &lt;glossBody>
+    <b>&lt;glossSurfaceForm>Anti-lock Braking System (ABS)&lt;/glossSurfaceForm></b>
+    &lt;glossAlt>
+      &lt;glossAcronym>ABS&lt;/glossAcronym>
+    &lt;/glossAlt>
+  &lt;/glossBody>
+&lt;/glossentry></codeblock><p>This glossentry topic defines "Anti-lock
+Braking System (ABS)" provides an unambiguous way to render the primary
+term "Anti-lock Braking System". The <xref href="abbreviated-form.dita">&lt;abbreviated-form></xref> explains
+how the &lt;glossSurfaceForm> element affects references to this topic.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="p_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Arbortext, Inc., 1988-2005, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+ "topic.dtd">
+<topic
+  id="specialize" xml:lang="en-us">
+  <?Pub Caret?>
+  <title>Specialization</title>
+  <shortdesc>
+    <ph id="shortdesc">The specialization feature of DITA allows for the creation of new element
+      types and attributes that are explicitly and formally derived from existing types. The
+      resulting specialization allows for the blind interchange of all conforming DITA content and a
+      minimum level of common processing for all DITA content. It also allows specialization-aware
+      processors to add specialization-specific processing to existing base processing.
+    </ph></shortdesc>
+  <body>
+    <section>
+      <title>Specializations are explicitly declared in documents</title>
+      <p>The specialization feature of DITA defines both a specialization hierarchy declaration
+        syntax used in document instances and a set of document type implementation requirements.
+        The specialization declarations allow processors to determine what set of specializations
+        and associated local constraints a given DITA document uses. The specialization declarations
+        for individual elements and attributes allow processors to determine what the type
+        hierarchies of those elements and attributes are, from which processors can determine the
+        most appropriate (or available) processing to apply. </p>
+    </section>
+    <section>
+      <title>Specialization enables controlled extension</title>
+      <p>Specialization allows you to define new kinds of information (new structural types or new
+        domains of information), while reusing as much of existing design and code as possible, and
+        minimizing or eliminating the costs of interchange, migration, and maintenance. </p>
+      <p>In traditional XML applications, all semantics for a given element instance are bound to
+        the element type, such as &lt;para> for a paragraph or &lt;title> for a title. The XML
+        specification provides no built-in mechanism for relating two element types to say "element
+        type B is a subtype of element type A". However, in most documentation-focused XML
+        applications there is often a clear hierarchy of types. For example, in a technical manual,
+        there might be generic sections and more specialized sections, e.g. "Troubleshooting" or
+        "Assembly Procedures". The presentation of the generic and specialized sections might be
+        identical, but the more specialized sections might have more restrictive constraints or
+        include additional element types relevant only to those section types. While these
+        relationships might be understood by authors and system implementors, the XML standard
+        provides no direct way to express the relationship, to say explicitly "A Troubleshooting
+        section is a generic section and must conform to all requirements of generic sections".
+        Having created the element type &lt;section> and implemented presentation processing for it
+        and then having later created the element type &lt;troubleshooting>, there is no obvious
+        mechanism for having all &lt;troubleshooting> elements <i>automatically</i> get the
+        processing associated with &lt;section> elements<?oxy_insert_start author="sethpark" timestamp="20091002T102858-0500"?>.<?oxy_insert_end?>
+        <?oxy_insert_start author="sethpark" timestamp="20091002T102901-0500"?>T<?oxy_insert_end?>o
+        get that behavior someone has to
+        <?oxy_insert_start author="sethpark" timestamp="20091002T102914-0500"?>explicitly<?oxy_insert_end?>
+        update all processors involved to apply &lt;section> processing to &lt;troubleshooting>.</p>
+      <p>The DITA specialization feature provides a standard mechanism for saying explicitly, using
+        normal XML syntax, "A Troubleshooting section is a generic section and must conform to all
+        requirements of generic sections" and, having said that, makes it possible for generic
+        section processing to be applied to troubleshooting sections <i>with no further
+        effort</i>.</p>
+    </section>
+    <section>
+      <title>When to use or not use specialization</title>
+      <p>Specialization is used when new structural types or new domains are needed. DITA
+        specialization can be used when you want to make changes to your design for the sake of
+        increased consistency or descriptiveness or have specific needs for output that cannot be
+        addressed using the current data model. Specialization is not normally used for simply
+        creating different output
+        types<?oxy_insert_start author="sethpark" timestamp="20091002T103214-0500"?>,<?oxy_insert_end?>
+        as DITA documents may be transformed to different outputs.</p>
+      <p>Do not use specialization to simply eliminate unneeded or unwanted element types from
+        specific content models. The content models for element types defined in vocabulary modules
+        can be configured using separately-defined constraint modules without the need to create new
+        specializations. See <xref href="createConstraintsDomainSpec.dita" format="dita"/>.</p>
+      <p>Use specialization when you are dealing with new semantics (new, meaningful categories of
+        information, either in the form of new structural types or new domains). The new semantics
+        can be encoded as part of a specialization hierarchy, that allows them to be processed by
+        existing specialization-aware transforms or transformed back to more general equivalents
+        ("generalization") for processing by transforms that only understand the unspecialized base
+        types. Use constraints to configure content models and attribute lists without changing
+        semantics.</p>
+    </section>
+    <section>
+      <title>Types of specialization hierarchy</title>
+      <p>There are two kinds of specialization hierarchy: one for structural types (with topic or
+        map at the root) and one for domains (with elements in topic or map at their root, or the
+        @props or @base attributes). Structural types define topic or map structures, such as
+        concept or task or reference, which often apply across subject areas (for example, a user
+        interface task and a programming task may both consist of a series of steps). Domains define
+        markup for a particular information domain or subject area, such as programming, or
+        hardware. Each type of vocabulary module represents an “is a” hierarchy, in object-oriented
+        terms, with each structural type or domain being a subclass of its parent. For example, a
+        specialization of task is still a task and a specialization of the user interface domain is
+        still part of the user interface domain. A given domain can be used with any map or topic
+        type, as appropriate for the domain. In addition, specific structural types <term>may</term>
+        require the use of specific domains.</p>
+    </section>
+    <section
+      rev="public-review-1">
+      <title>Specialization of attributes</title>
+      <p>With structural specializations you can limit the allowed values of attributes defined on the base types of specialized types. You can also define new attributes through domain specializations based off of the @props attribute (for conditional processing) or the @base attribute (for other simple token attributes).</p>
+      <note
+        type="other"
+        othertype="non-normative">As a general practice, structural specializations should not limit the values of the built-in selection attributes. Use constraint modules to define specific value lists for built-in selection attributes.</note>
+      <p>Attribute specialization allows you to define new conditional processing attributes that can be used for filtering and flagging (specializations of @props) or new attributes with no existing equivalent that can be managed and generalized in the same way as conditional processing attributes (specializations of @base). </p>
+      <p>New attributes need to be specialized from either @props or @base:<ul
+        id="ul_30446824-c5c6-4d26-813d-0ce71667c3e8">
+        <li>Attributes specialized from @props are recognized as conditional processing attributes</li>
+        <li>Attributes specialized from @base have no existing behavior associated with them</li>
+        <li>Values in specialized attributes should be preserved during generalization and respecialization as for @props</li>
+        <li>While generalized, the attribute values should still be understandable by both general and specialized behaviors, and be treated as equivalent to their specialized form. <?Pub Caret?>For example, conditional filtering should work the same way on specialized attributes and on generalized attributes.</li>
+        </ul></p>
+    </section>
+  </body>
+</topic>
+<?Pub *0000002353?>

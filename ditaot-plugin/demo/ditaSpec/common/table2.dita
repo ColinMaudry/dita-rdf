@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="table2" xml:lang="en-us">
+<title>Table elements</title>
+<shortdesc>DITA topics support two types of tables. The &lt;<keyword>table</keyword>>
+element uses <!--the most common table format used in industry,-->the
+OASIS Exchange Table Model (formerly known as the CALS table model).
+The OASIS table supports the spanning of multiple rows or columns
+for special layout or organizational needs, and provides a wide variety
+of controls over the display properties of the data and even the table
+structure itself.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Table elements</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The other table structure in DITA is called &lt;<keyword>simpletable</keyword>&gt;.
+As the name implies, it is structurally less complex than the OASIS
+table, and can be used as a very simple, regular table for which close
+control of formatting is not as important. The main advantage of simpletable
+is for describing lists of data with regular headings, such as telephone
+directory listings, display adapter configuration data, or API properties. </p><?Pub
+Caret 113?></section>
+</refbody>
+</reference>
+<?Pub *0000001554?>

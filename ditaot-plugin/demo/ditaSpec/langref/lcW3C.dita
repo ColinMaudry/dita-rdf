@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcW3C" xml:lang="en-us">
+<title>lcW3C</title>
+<shortdesc>The &lt;<keyword>lcW3C</keyword>&gt; provides requirements
+for use of world wide web consortium standards. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lcW3C</indexterm><indexterm>learning and training
+elements<indexterm>lcW3C</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcW3C/contains"
+id="contains" otherprops="contains"> 			<title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcW3C-contains"></xref> 			</p> 		</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcW3C/containedby"
+id="containedby" otherprops="containedby"> 			<title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="lcW3C-contained-by"></xref> 			</p> 		</section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/fig learningBase/fig learningPlan/lcW3C </p></section>
+<example id="example"><title>Example</title><codeblock>
+...
+  &lt;lcW3C>&lt;p>Whenever possible, stand up and do a W3C.&lt;/p>&lt;/lcW3C>
+...
+</codeblock><?Pub Caret 70?> </example>
+<section id="attributes"> <title>Attributes</title>  <simpletable
+id="lcW3C_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>  </section>
+</refbody>
+</reference>
+<?Pub *0000002816?>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="ditamods" xml:lang="en-us">
+<title>DITA modules</title>
+<shortdesc></shortdesc>
+<conbody>
+<section id="modules">       <title>Description of DITA modules</title> 
+     <p>The tables below describe the modules that are defined by
+the DITA           standard.<draft-comment>MP: Stan Doherty comment
+for 1.2: consider providing table with           one column per using
+doctype to make doctype usage of modules easier to           scan</draft-comment></p> 
+     <table><title>Description of common modules</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="8*"/><colspec
+colname="col2" colwidth="26*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Common module files</entry>
+<entry colname="col2">Purpose</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Common elements (commonElements)</entry>
+<entry colname="col2">Defines all content elements that may appear
+in both maps and                 topics.</entry>
+</row>
+<row>
+<entry colname="col1">Metadata elements (metaDecl)</entry>
+<entry colname="col2">Defines meta elements that may appear in both
+maps and                 topics</entry>
+</row>
+<row>
+<entry colname="col1">Table elements (tblDecl)</entry>
+<entry colname="col2">Defines the complex tables used within DITA,
+based on the OASIS                 Exchange Table model.</entry>
+</row>
+<row>
+<entry>DITA Architecture attribute (ditaarch.xsd) </entry>
+<entry>XML Schema only - Defines the attribute that defines DITA&apos;s
+architectural                 version</entry>
+</row>
+<row>
+<entry>XML namespace attributes (xml.xsd)</entry>
+<entry>XML Schema only - Defines the attributes with the XML namespace</entry>
+</row>
+</tbody>
+</tgroup>
+</table>       <table><title>Description of domain modules</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="8*"/><colspec
+colname="col2" colwidth="22*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Domains</entry>
+<entry colname="col2">Purpose</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Indexing domain</entry>
+<entry colname="col2">The indexing domain provides several new elements
+for use with                 indexing. The new elements allow authors
+to define "See" and "See also" references,                 and to
+override the default sort order for a term. </entry>
+</row>
+<row>
+<entry colname="col1">Highlight domain</entry>
+<entry colname="col2">The typographic elements are used to highlight
+text with styles                 (such as bold, italic, and monospace).
+Never use these elements when a semantically                 specific
+element is available. These elements are not intended for use by 
+               specializers, and are intended solely for use by authors
+when no semantically                 appropriate element is available
+and a formatting effect is required.</entry>
+</row>
+<row>
+<entry colname="col1">Programming domain</entry>
+<entry colname="col2">The programming domain elements are used to
+define the syntax                 and to give examples of programming
+languages. </entry>
+</row>
+<row>
+<entry colname="col1">Software domain</entry>
+<entry colname="col2">The software domain elements are used to describe
+the operation                 of a software program. </entry>
+</row>
+<row>
+<entry colname="col1">UI domain</entry>
+<entry colname="col2">The user interface domain elements are used
+to describe the user                 interface of a software program. </entry>
+</row>
+<row>
+<entry colname="col1">Utilities domain</entry>
+<entry colname="col2">The utilities domain elements represent common
+features of a                 language that may not necessarily be
+semantic, such as image maps.</entry>
+</row>
+<row>
+<entry colname="col1">Map Group domain</entry>
+<entry colname="col2">The mapgroup domain elements define, group,
+or reference                 content. </entry>
+</row>
+<row>
+<entry colname="col1">xNAL domain</entry>
+<entry colname="col2">The xNAL domain elements represent a subset
+of the Extensible                 Name and Address Standard. The domain
+can be included in any topic type or map,                 although
+the implementations provided by OASIS only include it in the bookmap
+                specialization. It is used to encode information about
+the author or authors of DITA                 information. </entry>
+</row>
+<row>
+<entry>Hazard Statement domain </entry>
+<entry>The hazard statement domain elements represent labeling for
+product safety                 hazards that readers need to be aware
+of. The domain can be included in any topic                 type or
+map. Its elements are used to inform readers about potential hazards,
+                consequences, and avoidance strategies </entry>
+</row>
+<row>
+<entry>Machine Industry domain</entry>
+<entry>The machine-industry task domain contains elements for use
+describing tasks                 that involve machines or other pieces
+of hardware. </entry>
+</row>
+<row>
+<entry>Delay Resolution domain</entry>
+<entry>The delayed conref resolution domain provides several elements
+for use when                 using DITA in situations that enable
+delayed or run time resolution of conref. The                 elements
+allow users to resolve some conref values statically, while delaying
+others                 for later resolution. </entry>
+</row>
+<row>
+<entry>Abbreviate domain</entry>
+<entry>The abbreviate domain element is used to represent a reference
+to a term that                 may appear in an abbreviated form (often
+an acronym). </entry>
+</row>
+<row>
+<entry>Glossref domain</entry>
+<entry>The glossref domain elements are convenience elements that
+are used to                 reference glossary topics or to reference
+multiple topics in a single collection.               </entry>
+</row>
+<row>
+<entry>Classify domain</entry>
+<entry>The classification domain elements are used to identify subjects
+covered by the                 content </entry>
+</row>
+<row>
+<entry>Learning domain</entry>
+<entry>The learning domain elements represent the base elements that
+are used to                 create learning and training content.</entry>
+</row>
+<row>
+<entry>Learning Interaction Base domain</entry>
+<entry>The learning interaction base domain defines an "abstract"
+base type for all                 learning assessments. </entry>
+</row>
+<row>
+<entry>Learning Map domain</entry>
+<entry>The learning and training map domain organizes groups of topics
+as learning                 objects</entry>
+</row>
+<row>
+<entry>Learning Metadata domain</entry>
+<entry>The learning and training metadata domain describes specific
+characteristics of                 the learning content. </entry>
+</row>
+</tbody>
+</tgroup>
+</table>       <table><title>Description of topic and its specialization
+modules</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="5*"/><colspec
+colname="col2" colwidth="22*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Topic types</entry>
+<entry colname="col2">Purpose</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Topic</entry>
+<entry colname="col2">                 <lines>Topic modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry colname="col1">Base Topic</entry>
+<entry colname="col2">                 <lines>Topic modules
+
+Highlight domain
+Utilities domain
+Indexing domain
+Hazard Statement domain </lines>               </entry>
+</row>
+<row>
+<entry>DITABase</entry>
+<entry>                 <lines>Concept modules
+Topic modules
+Reference modules
+Task modules
+General Task modules
+Glossary Entry modules
+GlossGroup modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry colname="col1">Concept</entry>
+<entry colname="col2">                 <lines>Concept modules
+Topic modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry colname="col1">Glossary</entry>
+<entry colname="col2">                 <lines>Glossary Entry modules
+Concept modules
+Topic modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry>GlossGroup</entry>
+<entry>                 <lines>GlossGroup modules
+Concept modules
+Topic modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry colname="col1">Reference</entry>
+<entry colname="col2">                 <lines>Reference modules
+Topic modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry colname="col1">Task</entry>
+<entry colname="col2">                 <lines>Task modules
+Topic modules
+Strict Taskbody module
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry>General Task</entry>
+<entry>                 <lines>Task modules
+Topic modules
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry>Machinery Task</entry>
+<entry>                 <lines>Task modules
+Topic modules
+
+UI domain
+Highlight domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain
+Machine Industry domain</lines>               </entry>
+</row>
+<row>
+<entry>Learning Assessment</entry>
+<entry>                 <lines>Learning Assessment modules
+Topic modules
+
+Highlight domain
+Utilities domain
+Indexing domain
+Learning domain
+Learning Interaction Base domain
+Learning metadata domain</lines>               </entry>
+</row>
+<row>
+<entry>Learning Content</entry>
+<entry>                 <lines>Learning Content modules
+Learning Assessment modules
+Learning Summary modules
+Concept modules
+Topic modules
+Reference modules
+Task modules
+
+Highlight domain
+Utilities domain
+Indexing domain
+Learning domain
+Learning Interaction Base domain
+Learning metadata domain</lines>               </entry>
+</row>
+<row>
+<entry>Learning Overview</entry>
+<entry>                 <lines>Learning Overview modules
+Topic modules
+
+Highlight domain
+Utilities domain
+Indexing domain
+Learning domain
+Learning Interaction Base domain
+Learning metadata domain</lines>               </entry>
+</row>
+<row>
+<entry>Learning Plan</entry>
+<entry>                 <lines>Learning Plan modules
+Topic modules
+
+Highlight domain
+Utilities domain
+Indexing domain
+Learning domain
+Learning Interaction Base domain
+Learning metadata domain</lines>               </entry>
+</row>
+<row>
+<entry>Learning Summary</entry>
+<entry>                 <lines>Learning Summary modules
+Topic modules
+
+Highlight domain
+Utilities domain
+Indexing domain
+Learning domain
+Learning Interaction Base domain
+Learning metadata domain</lines>               </entry>
+</row>
+</tbody>
+</tgroup>
+</table>       <table><title>Description of map and its specialization
+modules</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="5*"/><colspec
+colname="col2" colwidth="22*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Map types</entry>
+<entry colname="col2">Purpose</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Map</entry>
+<entry colname="col2">                 <lines>Map modules
+
+Map Group domain
+Indexing domain
+Delay Resolution domain
+Glossref domain
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry>Base Map</entry>
+<entry>                 <lines>Map modules
+
+Map Group domain
+Indexing domain
+Delay Resolution domain
+
+Highlight domain
+Utilities domain
+Hazard Statement domain</lines>               </entry>
+</row>
+<row>
+<entry colname="col1">Bookmap</entry>
+<entry colname="col2">                 <lines>Bookmap modules
+Map modules
+
+Map Group domain
+Indexing domain
+Delay Resolution domain
+
+UI domain
+Software domain
+Highlight domain
+Programming domain
+Utilities domain
+Indexing domain
+Hazard Statement domain
+Abbreviate domain </lines>               </entry>
+</row>
+<row>
+<entry>Classification Map</entry>
+<entry>                 <lines>Map modules
+
+Map Group domain
+Indexing domain
+Delay Resolution domain
+Classification domain
+
+Highlight domain
+Utilities domain
+Hazard Statement domain</lines>               </entry>
+</row>
+<row>
+<entry>Subject Scheme</entry>
+<entry>                 <lines>Subject Scheme modules
+Map modules
+
+Map Group domain
+
+Highlight domain
+Utilities domain
+Hazard Statement domain</lines>               </entry>
+</row>
+<row>
+<entry>Learning Map</entry>
+<entry>                 <lines>Map modules
+
+Map Group domain
+Indexing domain
+Delay Resolution domain
+Learning Metadata domain
+Learning Map domain
+
+Highlight domain
+Utilities domain
+Hazard Statement domain              </lines>               </entry>
+</row>
+<row>
+<entry>Learning Bookmap</entry>
+<entry>                 <lines>Map modules
+Bookmap modules
+
+Map Group domain
+Indexing domain
+Delay Resolution domain
+xNAL Domain
+Learning Metadata domain
+Learning Map domain
+
+Highlight domain
+Utilities domain
+Hazard Statement domain                </lines><?Pub Caret 201?> 
+             </entry>
+</row>
+</tbody>
+</tgroup>
+</table>       <table id="table_6351c5ad-8b39-4a43-8fab-438ece181818">
+<title>Description of constraint modules</title>
+<tgroup cols="2"><colspec colname="col1" colwidth="5*"/><colspec
+colname="col2" colwidth="22*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Constraint types</entry>
+<entry colname="col2">Purpose</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>Strict Taskbody</entry>
+<entry>The strict task body has a constrained structure. </entry>
+</row>
+<row>
+<entry>Machinery Taskbody</entry>
+<entry>The machinery task body makes use of elements prelreqs and
+closereqs instead of                 prereq and postreq</entry>
+</row>
+</tbody>
+</tgroup>
+</table>     </section>
+</conbody>
+</concept>
+<?Pub *0000014623?>

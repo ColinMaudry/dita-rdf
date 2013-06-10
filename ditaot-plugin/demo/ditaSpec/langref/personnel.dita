@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="personnel" xml:lang="en-us">
+<title>personnel</title>
+<shortdesc>The &lt;<keyword>personnel</keyword>&gt; element specifies
+the minimum number of workers who are required to perform a task. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>personnel</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-personnel/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="personnel-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-personnel/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="personnel-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/li task/li mitask-d/personnel</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;reqpers&gt;
+ <b>&lt;personnel&gt;</b>2<b>&lt;/personnel&gt;</b>
+ &lt;perscat&gt;Mechanic&lt;/perscat&gt;
+ &lt;perskill&gt;Expert&lt;/perskill&gt;
+ &lt;esttime&gt;2 hours&lt;/esttime&gt;
+&lt;/reqpers&gt;
+</codeblock><?Pub Caret 39?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002510?>

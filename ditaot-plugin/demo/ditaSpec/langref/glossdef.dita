@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="glossdef" xml:lang="en-us">
+<title>glossdef</title>
+<shortdesc>The &lt;<keyword>glossdef</keyword>&gt; element specifies
+the definition of one sense of a term. If a term has multiple senses,
+create a separate &lt;<keyword>glossentry</keyword>&gt; topic to define
+each sense.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>glossdef</indexterm><indexterm>Glossentry elements<indexterm>glossdef</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-glossdef/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="glossdef-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-glossdef/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="glossdef-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/abstract concept/abstract glossentry/glossdef </p></section>
+<example conref="glossentry.dita#glossentry/example" id="example"></example><?Pub
+Caret?>
+<section id="attributes"><title>Attributes</title><simpletable
+id="glossdef_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

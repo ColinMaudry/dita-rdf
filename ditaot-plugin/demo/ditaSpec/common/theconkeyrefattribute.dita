@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="theconkeyrefattribute" xml:lang="en-us">
+<title>The conkeyref attribute</title>
+  <shortdesc>The conkeyref attribute provides an indirect content reference to topic elements, map
+    elements, or elements within maps or topics. When the DITA content is processed, the key
+    references are resolved using key definitions from DITA maps.</shortdesc>
+<refbody>
+    <section>
+      <p>For content references from map elements to map elements or topic elements to topic
+        elements, the value of the <keyword>conkeyref</keyword> attribute is a key name, where the
+        key must be bound to a map element (for references from map elements) or a topic element
+        (for references from topic elements). For all other elements, the value of the <keyword
+          >conkeyref</keyword> attribute is a key name, an optional solidus ("/"), and the ID of the
+        target element, where the key name must be bound to the map or topic that contains the topic
+        element.  </p>
+      <p>When the key name specified by the conkeyref attribute is not defined and the element also
+        specifies a <keyword>conref</keyword> attribute, the <keyword>conref</keyword> attribute is
+        used to determine the content reference relationship. If no <keyword>conref</keyword>
+        attribute is specified there is no content reference relationship. Processors <keyword
+          >should</keyword> issue a warning when a <keyword>conkeyref</keyword> reference cannot be
+        resolved and there is no <keyword>conref</keyword> attribute to use as a fallback.
+        Processors <keyword>may</keyword> issue a warning when a <keyword>conkeyref</keyword> cannot
+        be resolved to an element and a specified <keyword>conref</keyword> is used as a
+        fallback.</p>
+      <p>The conrefend attribute, which defines the end of a conref range, may not include a key.
+        Instead the map or topic element addressed by the key name component of the <keyword
+          >conkeyref</keyword> is used in place of whatever map or topic element is addressed by the
+        conrefend attribute. See <xref
+          href="theconrefendattribute.dita#theconrefendattribute/conkeyref"/> for more information
+        and for <?Pub Caret?>examples of this behavior.</p>
+    </section>
+</refbody>
+</reference>

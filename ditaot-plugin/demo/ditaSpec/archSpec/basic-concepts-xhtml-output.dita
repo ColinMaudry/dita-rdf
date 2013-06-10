@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="basic-concepts" xml:lang="en-us">
+<title>Basic concepts</title>
+<shortdesc id="shortdesc-basic-concepts">DITA has been designed to satisfy requirements for information
+typing, semantic markup, modularity, reuse, interchange, and production
+of  different deliverable forms from a single source. These topics
+provide an overview of the key DITA features and facilities that serve
+to satisfy these requirements.</shortdesc>
+</concept>
+

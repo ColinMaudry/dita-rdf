@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="itemgroup" xml:lang="en-us">
+<title>itemgroup</title>
+<shortdesc>The &lt;itemgroup> element can be used to sub-divide or
+organize elements that occur inside a list item, definition, or parameter
+definition.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>itemgroup</indexterm><indexterm>Specialization
+elements<indexterm>itemgroup</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>The &lt;itemgroup> element is particularly useful
+as a basis for specialization, where it can be used to group content
+within specialized list items or definitions. For example, in the
+OASIS task specialization, many elements within the &lt;step> element
+are specialized from &lt;itemgroup>.</section><?Pub Caret1?>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-itemgroup/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="itemgroup-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-itemgroup/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="itemgroup-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/itemgroup </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">&lt;li&gt;Second point of a list.
+ &lt;itemgroup&gt;related discourse&lt;/itemgroup&gt;
+&lt;/li&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="itemgroup_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

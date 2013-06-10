@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="codeblock" xml:lang="en-us">
+<title>codeblock</title>
+<shortdesc>The &lt;<keyword>codeblock</keyword>&gt; element represents
+lines of program code. Like the &lt;<keyword>pre</keyword>&gt; element,
+line endings and spaces inside the element must be preserved, and
+the content is typically rendered in a monospaced font. <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>codeblock</indexterm><indexterm>Programming elements<indexterm>codeblock</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-codeblock/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="codeblock-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-codeblock/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="codeblock-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/pre pr-d/codeblock </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;codeblock&gt;
+/* a long sample program */
+Do forever
+  Say "Hello, World"
+End
+&lt;/codeblock&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="codeblock_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutspace">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody><?Pub Caret -2?>
+</reference>
+<?Pub *0000003024?>

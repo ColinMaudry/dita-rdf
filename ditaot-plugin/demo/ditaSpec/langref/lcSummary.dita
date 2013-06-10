@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcSummary" xml:lang="en-us">
+	<title>lcSummary</title>
+	<shortdesc>The &lt;<keyword>lcSummary</keyword>&gt; provides a textual summary that describes the main learning goals and lessons learned.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcSummary</indexterm><indexterm>learning and training elements<indexterm>lcSummary</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcSummary/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcSummary-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcSummary/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcSummary-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section learningBase/lcSummary </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningSummary id=&quot;overview&quot;&gt;
+  &lt;title&gt;Learning Summary topic&lt;/title&gt;
+  &lt;learningSummarybody&gt;
+    &lt;lcSummary&gt;&lt;title&gt;Summary&lt;/title&gt;
+	&lt;p&gt;If you need a summary section, you would 
+        include it here.&lt;/p&gt;
+	&lt;note&gt;You can have notes, 
+	tables, all kinds of things like that here, 
+	if you desire.&lt;/note&gt;
+   &lt;/lcSummary&gt;  
+  &lt;/learningSummarybody&gt;
+&lt;/learningSummary&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcSummary_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

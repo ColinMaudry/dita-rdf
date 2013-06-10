@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="concept-1" xml:lang="en-us">
+ <title>The xNAL domain</title>
+ <shortdesc>The DITA xNAL domain specialization defines a number of metadata elements and attributes
+  that are useful in representing personal/organizational names and addresses. The metadata can be
+  used to identify authors and content owners. The OASIS xNAL Standard (extensible Name and Address
+  Langauge) was selected to represent close mappings from the DITA bookmap metadata content model to
+  an existing standard. xNAL is included in the Bookmap and the LearningBookmap document
+  types.</shortdesc>
+ <conbody>
+  <p>The OASIS Customer Information Quality (CIQ) standard for global-customer information
+   management contains the definition of the <xref format="html"
+    href="http://www.oasis-open.org/committees/ciq/ciq.html#4" scope="external">OASIS extensible
+    Name and Address Language (xNAL)</xref> metadata elements. Version 2 of the standard states:</p>
+  <lq>
+   <p>The objective of xNAL is to describe a common structure for Personal/Organization Names and
+    Addresses that would enable any applications that want to represent customer names and addresses
+    in a common standard format. The applications could be CRM/e-CRM, Customer Information Systems,
+    Data Quality (Parsing, Matching, Validation, Verification, etc.), Customer Data Warehouses,
+    Postal services, etc.</p>
+   <p>However, any party for its own purposes and applications may use xNAL grammar or parts of
+    it.</p>
+  </lq>
+  <p>The DITA xNAL specialization is based on the OASIS extensible Name and Address Language
+   metadata elements. Due to differences between the two processing architectures, the DITA xNAL
+   domain does not incorporate all of the definitions from the OASIS xNAL standard directly.
+   Instead, <?Pub Caret?>there is a transformational equivalence between the DITA and OASIS xNAL
+   definitions for names and addresses. This equivalence enables XML-aware tools in workflow systems
+   to capture and manipulate names and addresses in a standard manner.</p>
+  <p>The xNAL domain is available for use in the bookmap and learningBookmap document types, which
+   are distributed as part of the DITA 1.2 specification. It can be included in specialized DITA
+   document types that require metadata for names and addresses.</p>
+ </conbody>
+</concept>
+<?Pub *0000002550 0?>

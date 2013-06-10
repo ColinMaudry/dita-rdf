@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map xml:lang="en-us" title="DITA metadata">
+    <topicref href="dita-metadata.dita" navtitle="DITA metadata" collection-type="sequence">
+        <topicref href="metadata-elements.dita" navtitle="Metadata elements"/>
+        <topicref href="metadata-attributes.dita" navtitle="Metadata attributes"
+            collection-type="sequence">
+            <topicref href="conditional-processing-attributes.dita"
+                navtitle="Conditional processing attributes"/>
+            <topicref href="translation-and-localization-attributes.dita"
+                navtitle="Translation and localization attributes"/>
+            <topicref href="architectural-attributes.dita" navtitle="Architectural attributes"/>
+        </topicref>
+        <topicref href="metadata-in-maps-and-topics.dita" navtitle="Metadata in maps and topics"/>
+        <topicref href="cascading-in-a-ditamap.dita"
+            navtitle="Cascading of attributes and metadata in a DITA map"/>
+        <topicref href="map-to-map-cascading-of-metadata.dita"/>
+        <topicref href="reconciling-topic-and-map-metadata.dita"
+            navtitle="Reconciling topic and map metadata"/>
+    </topicref>
+    <reltable>
+        <relheader>
+            <relcolspec format="task"/>
+            <relcolspec format="concept"/>
+            <relcolspec format="reference"/>
+        </relheader>
+        <relrow>
+            <relcell/>
+            <relcell>
+                <topicref format="concept" href="metadata-elements.dita"
+                    navtitle="Metadata elements"/>
+            </relcell>
+            <relcell>
+                <topicref format="xhtml" href="http://dublincore.org/" scope="external">
+                    <topicmeta>
+                        <linktext>Dublin Core Metadata Initiative</linktext>
+                    </topicmeta>
+                </topicref>
+            </relcell>
+        </relrow>
+    </reltable>
+</map>

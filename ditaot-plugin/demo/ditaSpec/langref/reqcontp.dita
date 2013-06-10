@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="reqcontp" xml:lang="en-us">
+<title>reqcontp</title>
+<shortdesc>The &lt;<keyword>reqcontp</keyword>> element specifies
+a technical publication that can be used to fulfill a condition before
+performing a task. It may also specify a publication that is required
+in order to fulfill the condition, such as a list of local regulations.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>reqcontp</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-reqcontp/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="reqcontp-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-reqcontp/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="reqcontp-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/li task/li mitask-d/reqcontp</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;reqconds>
+  <b>&lt;reqcontp></b>USDOD-43109: Preparing your Patriot Missile Control Unit for Railroad Portage.<b>&lt;/reqcontp></b>
+  &lt;reqcond>The system placed on an accessible, flat surface.&lt;/reqcond>
+  &lt;reqcond>All anti-static discharge wrist-straps available.&lt;/reqcond>
+&lt;/reqconds></codeblock><?Pub Caret 117?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002742?>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="abbreviated-form" xml:lang="en-us">
+<title>abbreviated-form</title>
+<shortdesc>The &lt;<keyword>abbreviated-form</keyword>> element represents
+a reference to a term that may appear in an abbreviated form (often
+an acronym). The long and short forms of the term are generally defined
+in a &lt;<keyword>glossentry</keyword>> topic. Processors should display
+the referenced term when rendering an &lt;<keyword>abbreviated-form</keyword>>
+element.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>abbreviated-form</indexterm></keywords>
+</metadata></prolog><?Pub Caret?>
+<refbody>
+<section><title>Rendering &lt;abbreviated-form> references to glossentry</title><p>When
+the writer provides a keyref to a glossentry topic that contains a &lt;glossSurfaceForm>
+element, a process should emit the surface form in introductory contexts
+where the term might be unfamiliar to the reader or in other contexts
+where a precise term is appropriate. In other contexts a process should
+submit the abbreviated form of the term. Note that the definition
+of an introductory context will differ for every deliverable format.</p><p>For
+instance, a process composing a book deliverable may emit the surface
+form of a term on the first reference to the glossentry topic within
+the book or for every reference within a copyright or a warranty-related
+warning. A process generating an online page may emit the surface
+form as a hover tooltip on every instance of the term.</p><p>Renderers
+should follow these rules when displaying an &lt;abbreviated-form>
+element that refers to a glossentry topic:<ol>
+<li>In an introductory context, processors SHOULD render the surface
+form of the term by displaying the contents of the glossSurfaceForm
+element from the referenced glossentry topic.</li>
+<li>If the glossentry topic does not contain a glossSurfaceForm element
+or the glossSurfaceForm element is empty, processors SHOULD render
+the contents of the glossterm element in introductory contexts.</li>
+<li>In non-introductory contexts, processors SHOULD render the abbreviated
+form of the term by displaying the contents of the &lt;glossAcronym>
+element from the referenced glossentry topic.</li>
+<li>If the glossentry topic does not contain a glossAcronym element
+or the glossAcronym element is empty, processors SHOULD render the
+contents of the glossterm element in non-introductory contexts.</li>
+</ol></p><p>For instance, if the topic with the keyref to the "abs"
+key provided the first occurrence of the ABS term within a book, the
+sentence could be rendered as follows:  </p><lq>"The Anti-lock Brake
+System (ABS) will prevent the car from skidding in adverse weather
+conditions."</lq><p>If the ABS term had appeared previously within
+the book, the same sentence could instead be rendered as follows:
+ </p><lq>"The ABS will prevent the car from skidding in adverse weather
+conditions."</lq></section>
+<section><title>Rendering &lt;abbreviated-form> references to other
+topics</title><p>Typically the &lt;abbreviated-form> is used to refer
+to a glossentry topic. In situations where it refers to another topic
+type, renderers should display the content of the referenced topic's
+title.</p></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-abbreviated-form/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="abbreviated-form-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-abbreviated-form/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="abbreviated-form-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/term abbrev-d/abbreviated-form </p></section>
+<example id="example"><title>Example</title><p>The term and acronym
+may be defined as follows, in a glossentry topic. Note that the id
+of the topic does not need to match the term or acronym.</p><codeblock>&lt;glossentry id="abs-definition">
+  &lt;glossterm>Anti-lock Braking System&lt;/glossterm>
+  &lt;glossBody>
+    &lt;glossSurfaceForm>Anti-lock Braking System (ABS)&lt;/glossSurfaceForm>
+    &lt;glossAlt>
+      &lt;glossAcronym>ABS&lt;/glossAcronym>
+    &lt;/glossAlt>
+  &lt;/glossBody>
+&lt;/glossentry></codeblock><p>Note that there are three important
+elements for the purposes of rendering the &lt;abbreviated-form> element.</p><ul>
+<li>The glossSurfaceForm element defines the term as it should be
+displayed in an introductory context.</li>
+<li>The glossAcronym element defines the acronym associated with this
+term.</li>
+<li>The glossterm element provides a fallback version of the term,
+which will be displayed in situations where the preferred representation
+is unavailable. </li>
+</ul><p>The glossentry topic will be added to a map in the following
+manner. Again, the key (in this case "abs") does not need to match
+the term or acronym value.</p><codeblock>&lt;glossref keys="abs" href="antilock.dita"/></codeblock><p>An
+author that wishes to reference this topic may do so using the abbreviated-form
+element. The keyref attribute should reference the value defined on
+the keys attribute above.</p><codeblock>&lt;section>An &lt;abbreviated-form keyref="abs"/> helps a
+driver to stop. For this reason many find an
+&lt;abbreviated-form keyref="abs"/> useful.
+&lt;/section></codeblock><p>When rendered, the introductory usage
+of "abs" will display the surface form of the referenced term, while
+the later uses will display the acronym, as demonstrated here.<lq>An
+Anti-lock Braking System (ABS) helps a driver to stop. For this reason
+many find an ABS useful.</lq></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="term_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/keyref-abbreviated-form">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000007013?>

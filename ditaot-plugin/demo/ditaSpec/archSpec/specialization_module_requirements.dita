@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept
+  id="specialization_module_requirements"
+  xml:lang="en-us">
+  <title>Specialization module coding requirements</title>
+  <?Pub Caret?>
+  <shortdesc>The base DITA element and attribute types may be extended through the creation of new vocabulary modules that define specializations of more-general types.</shortdesc>
+</concept>

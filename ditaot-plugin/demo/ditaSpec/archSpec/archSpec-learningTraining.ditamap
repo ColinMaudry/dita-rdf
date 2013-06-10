@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Learning Map//EN"
+ "learningmap.dtd">
+<map xml:lang="en-us" collection-type="sequence">
+ <title>DITA 1.2 Architectural Specification: Learning &amp; Training Version</title>
+ <topicref href="lc_spec_Overview_problem.dita"/>
+ <topicref href="lc_spec_Overview_objectives.dita"/>
+ <topicref href="lc_spec_Overview_assumptions.dita"/>
+ <topicref href="lc_spec_Overview_usecases.dita"/>
+ <topicref href="lc_spec_Summary_of_landt_designs.dita"/>
+</map>

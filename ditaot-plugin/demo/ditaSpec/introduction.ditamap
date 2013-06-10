@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Introduction">
+    <topicref href="introduction/dita-1.2_complete_overview.dita" navtitle="Overview of the DITA 1.2 specification">
+        <topicref href="introduction/c-terminology.dita" navtitle="Terminology"/>
+        <topicref href="introduction/normative-references.dita" navtitle="Normative references"/>
+        <topicref href="introduction/non-normative-references.dita" navtitle="Non-normative references"/>
+        <topicref href="introduction/formatting-conventions-xhtml-output.dita" navtitle="Formatting conventions in the XHTML version of the specification"/>
+    </topicref>
+</map>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcArea" xml:lang="en-us">
+<title>lcArea</title>
+<shortdesc>A <keyword>lcArea</keyword> defines an area of a hotspot
+image that contains a correct or incorrect choice in a hotspot assessment
+interaction.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lcArea</indexterm><indexterm>learning and training
+elements<indexterm>lcArea</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcArea/contains"
+id="contains" otherprops="contains"> 			<title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcArea-contains"></xref> 			</p> 		</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcArea/containedby"
+id="containedby" otherprops="containedby"> 			<title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="lcArea-contained-by"></xref> 			</p> 		</section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/figgroup learningInteractionBase-d/figgroup learning-d/lcArea </p></section>
+<example id="example">   <title>Example</title>   <codeblock>
+...
+  &lt;lcArea id="cardinals">
+    &lt;lcAreaShape>rect&lt;/lcAreaShape>
+    &lt;lcAreaCoords>0,50,50,100&lt;/lcAreaCoords>
+    &lt;lcFeedback>No.&lt;/lcFeedback>
+  &lt;/lcArea>
+...
+  </codeblock><?Pub Caret 110?> </example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInteractions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+
+</refbody>
+</reference>
+<?Pub *0000002426?>

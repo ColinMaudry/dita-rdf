@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcInstructornote" xml:lang="en-us">
+	<title>lcInstructornote</title>
+	<shortdesc>Use the &lt;<keyword>lcInstructornote</keyword>&gt; element to provide information or notes you want to provide to the course instructor. These notes can be condionalized out of content you intend to deliver to the learner.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcInstructornote</indexterm>
+<indexterm>learning and training elements<indexterm>lcInstructornote</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcInstructornote/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcInstructornote-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcInstructornote/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcInstructornote-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/note learningInteractionBase-d/note learning-d/lcInstructornote </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;lcIntro>
+  &lt;title>Introduction&lt;/title>
+  &lt;p>If you need an introduction, you would
+    include it here.&lt;/p>
+  &lt;note>You can have notes, tables, all kinds of things
+    like that here, if you desire.&lt;/note>
+  &lt;lcInstructornote>You can provide tips for instructors in an 
+    instructor note, like this one.&lt;/lcInstructornote>
+&lt;/lcIntro>
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInstructornote_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>
+

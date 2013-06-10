@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="year" xml:lang="en-us">
+<title>year</title>
+<shortdesc>The &lt;year&gt; element denotes a year. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Bookmap elements<indexterm>year</indexterm></indexterm>
+<indexterm>year</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-year/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="year-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-year/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="year-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/ph bookmap/year </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;bookchangehistory>
+  &lt;edited>
+    &lt;person>Joe T. Editor&lt;/person>
+    &lt;completed><b>&lt;year>2008&lt;/year></b><?Pub Caret?>&lt;month>10&lt;/month>&lt;day>13&lt;/day>&lt;/completed>
+  &lt;/edited>
+&lt;/bookchangehistory></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="year_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?><!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="domainsatt" xml:lang="en-us">
+<title>Domain usage declaration (the @domains attribute)</title>
+<shortdesc>Structural types <term>must</term> declare the domain vocabulary modules and constraint modules they use. This is done with the @domains attribute, whose value is a sequence of parenthesized module ancestry specifications. The @domains attribute is declared on the root element for each topic or map type. Structural modules <term>should</term> declare their structural ancestry.</shortdesc>
+<conbody>
+<p
+      rev="public-review-1">Each structural, element, and attribute domain defines its module ancestry as a parenthesized sequence of space-separated module names from root module to provided module. </p>
+    <p
+      rev="public-review-1">For element domains, the group syntax is:<codeblock> '(', <varname>modulename</varname>, (' ', <varname>modulename</varname>)+, ')'</codeblock></p>
+    <p
+      rev="public-review-1">For attribute domains, the group syntax is:<codeblock> 'a(', <varname>attname</varname>, (' ', <varname>attname</varname>)+, ')'</codeblock>The module ancestry specifications are added to the effective value of the @domains attribute to form a set of specifications, one for each domain used by the topic or map type.</p>
+    <p
+      rev="public-review-1">The @domains values for the different module types are as follows:<dl>
+      <dlentry>
+        <dt>structural domains</dt>
+        <dd>The structural type ancestry. For example: <codeph>(topic concept glossentry)</codeph>. When a structural domain depends on one or more element or attribute domains, the structural domain's @domains specification <term>must</term> include the domain dependencies following the name of the specialize structural domain, e.g. <codeph>(topic reference cppApiRef cpp-d compilerTypeAtt-d)</codeph>, here reflecting a topic specialization that depends on two domains, "cpp-d" and "compilerTypeAtt-d".<note
+          type="other"
+          othertype="non-normative">The specification of domain dependencies serves in part as a signal to document type shell authors that the domain module must always be integrated along with the structural module.</note></dd>
+      </dlentry>
+      <dlentry>
+        <dt>constraint modules</dt>
+        <dd>The structural type ancestry followed by the name of the constraint domain. For example: <codeph>(topic task strictTaskbody-c)</codeph>. </dd>
+      </dlentry>
+      <dlentry>
+        <dt>element domains</dt>
+        <dd>The structural type ancestry and, if applicable, the domain module ancestry from which the domain is specialized. For example: <codeph>(topic hi-d)</codeph>
+          <codeph>(topic pr-d cpp-d)</codeph>.</dd>
+      </dlentry>
+      <dlentry>
+        <dt>attribute domains</dt>
+        <dd>The attribute specialization hierarchy. For example: <codeph>a(props mySelectAttribute)</codeph>. </dd>
+      </dlentry>
+      </dl></p>
+<p>The @domains attribute allows processors to determine whether or
+not two elements use       compatible domains. For example, when pasting
+content from one topic into another topic within       an editor,
+the editor can use the @domains attribute to determine if the paste
+target topic's       domains are compatible with the paste source
+topic's domains and therefore whether or not the       pasted content
+needs to be generalized before it can be pasted. Likewise, processors
+can use       the value of the @domains attribute to determine if
+they have whatever may be necessary to       support a particular
+domain.</p>
+<p>The effective value of the @domains attribute is constructed using
+integration mechanisms       specific to each XML document constraint
+language. Each domain and constraint module         <keyword>must</keyword> provide
+a @domains attribute value fragment that can be used by DITA     
+ document types to construct the effective @domains attribute value.
+Each structural vocabulary       module <keyword>should</keyword> provide
+a @domains attribute value fragment. See <xref format="dita"
+href="createCustomDocType.dita#createCustomDocType"></xref>.</p>
+<example>       <title>Example: task with multiple domains</title><codeblock>&lt;task id="mytask" class="- topic/topic task/task " 
+	domains="(topic ui-d) (topic sw-d) (topic pr-d)">
+...
+&lt;/task></codeblock><p>In this example, the task allows the use
+of elements for describing user interfaces (ui-d),         software
+(sw-d), and also programming (pr-d).</p><p>If the document used a
+specialization of the programming domain to describe C++ programming,
+the new domain would need a separate entry in the @domains attribute,
+e.g.:</p><codeblock>&lt;task id="mytask" class="- topic/topic task/task " 
+	domains="(topic ui-d) (topic sw-d) (topic pr-d) (topic pr-d cpp-d)">
+...
+&lt;/task></codeblock><?Pub Caret -1?></example>
+<example>       <title>Example: How editing tools and processors can
+use the @domains attribute</title><p>The @domains attribute enables
+processors to determine whether two elements use compatible      
+  domains. For example, when pasting content from one topic into another
+topic within an         editor, the editor can use the @domains attribute
+to determine if the paste target topic's         domains are compatible
+with the paste source topic's domains and therefore whether or not
+        the pasted content needs to be generalized before it can be
+pasted. Likewise, processors can         use the @domains value to
+determine if they have whatever may be necessary to support a    
+    particular domain.</p><p>Another example is when an element references
+an element that is a more specialized version         of the element,
+for example. a &lt;li> element of concept topic references a &lt;step>
+        element in a task topic. During processing, the &lt;step>
+element will be generalized back         to a &lt;li> element.</p></example>
+</conbody>
+</concept>
+<?Pub *0000004155?>

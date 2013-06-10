@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="relatedSubjects" xml:lang="en-us">
+<title>relatedSubjects</title>
+<shortdesc>The &lt;<keyword>relatedSubjects</keyword>> element establishes
+associative relationships between each child subject and every other
+child subject (unless the association is restricted by the linking
+attribute of the subjects).</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>relatedSubjects</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>For filtering and flagging, processors need only inspect
+the subordinate hierarchies under category subjects that are bound
+to attributes. Filtering and flagging processors do not have to understand
+specific types of relationships. Explicit relationships are useful
+primarily for information viewers with advanced capabilities.</p><p>The
+content provider can identify the relationship by specifying a keys
+attribute, label the relationship by specifying a navtitle element
+or attribute<?Pub Caret?>, and provide a consensus definition of the
+relationship including by referencing a topic. If the relationship
+has an identifying key, the content provider can use the keyref attribute
+to specify the same relationship for different subjects.</p></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-relatedSubjects/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="relatedSubjects-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-relatedSubjects/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="relatedSubjects-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref subjectScheme/relatedSubjects </p></section>
+<example id="example"><title>Example</title><p>The following scheme
+establishes that the Linux, the Apache Web Server, and the MySQL Database
+are related:<codeblock>&lt;subjectScheme>
+  &lt;!-- ... -->
+  &lt;relatedSubjects>
+    &lt;subjectdef keys="linux"     navtitle="Linux"/>
+    &lt;subjectdef keys="apacheweb" navtitle="Apache Web Server"/>
+    &lt;subjectdef keys="mysql"     navtitle="MySQL Database"/>
+  &lt;/relatedSubjects>
+  &lt;!-- ... -->
+&lt;/subjectScheme></codeblock></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/processing-role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/collection-type-relatedSubjects">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/linking-relatedSubjects">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

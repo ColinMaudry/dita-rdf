@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="ditalinking" xml:lang="en-us">
+      <title>DITA linking</title>
+      <shortdesc><ph id="shortdesc">DITA depends heavily on links. The purposes for which it
+                  provides links include defining the content and organization of publication
+                  structures (DITA maps), topic-to-topic navigation links and cross references, and
+                  reuse of content by reference. All DITA links use the same addressing facilities,
+                  either URI-based addresses or DITA-specific indirect addresses using keys and key
+                  references.</ph></shortdesc>
+      <conbody>
+            <p>At its most general, a link establishes a relationship among two or more objects. In
+                  DITA, relationships are among DITA elements and either other DITA elements or
+                  non-DITA resources, such as Web pages. Relationships may be explicitly typed in
+                  some cases (relationship tables and subject scheme maps for example) but are not
+                  always associated with a specific relationship type.<draft-comment>Anderson, March
+                        10 2010: changed "are generally not associated" to "are not always
+                        associated" - I think the wording was unclear, and in particular, navigation
+                        links are quote often created and typed by the role attribute as
+                        parent/child/next/previous/etc. I'm not sure if that is considered "typed"
+                        by this definition, but to me "are generally not" means most are not, while
+                        a large percentage of relationships I encounter are typed in this
+                        way.</draft-comment></p>
+            <?Pub Caret 27?>
+            <note othertype="non-normative">For example, a &lt;keyword> element that uses a key
+                  reference to link to the definition of the keyword can be considered to be
+                  establishing a "mention-of" relationship from the &lt;keyword> element to the
+                  definition and a "definition-of" relationship from the definition to the
+                  &lt;keyword> element. But those link types are not formally defined either in the
+                  DITA definition of &lt;keyword> or in the markup for the &lt;keyword> element
+                  itself. While DITA enables the formal definition of typed relationships for some
+                  types of link elements, it does not require that all links be formally typed and
+                  does not provide a general mechanism for associating explicit link types with
+                  links. </note>
+            <p>In the abstract, link relationships may be explicit, defined directly by some type of
+                  markup in the source data, or implicit, implied by properties of the content that
+                  a processor uses to infer relationships (for example, matching the content of a
+                  &lt;keyword> element to the title of a topic of a specific topic type). DITA
+                  formally defines only explicit links, although processors <keyword>may</keyword>
+                  implement implicit links.</p>
+            <p>A link may establish either a navigation relationship or a use-by-reference
+                  relationship (e.g., content references). Navigation relationships are used
+                  primarily to enable navigation from one element to another, although they may also
+                  be used for other purposes, such as classification, or association of metadata.
+                  Use-by-reference relationships establish the effective structure and content of
+                  the information set.</p>
+            <p>An element that establishes one or more such relationships is a "link-defining
+                  element". Some element types, such as &lt;link&gt; and &lt;xref&gt;, are always
+                  link-defining elements. Other element types become link-defining elements when
+                  they use specific link-defining attributes. </p>
+            <p>Almost any element may become a use-by-reference link by using the @conref or
+                  @conkeyref attribute to establish a content reference (conref) relationship to
+                  another element or set of elements (see <xref format="dita"
+                        href="conref.dita#conref">Use by reference</xref>). Elements such as
+                  &lt;term&gt; and &lt;keyword&gt; may become navigation links by using the @keyref
+                  attribute to establish a relationship to another DITA element or non-DITA
+                  resource. </p>
+            <p>In general, elements within topics that take both the @href and @keyref attributes
+                  always act as elements that define a navigation link, while elements that take
+                  @keyref but not @href act as elements that define a navigation link only when they
+                  specify @keyref.</p>
+            <p>A given link-defining element may establish more than one relationship. For example,
+                  an element may establish both a content reference link and a navigation link. A
+                  single row in a relationship table may establish a number of distinct
+                  relationships among the topics referenced in the different cells of the
+                  relationship table. A topic reference within a hierarchy of topic references
+                  establishes not only a use-by-reference relationship from the map to the topic,
+                  but also hierarchical relationships from the referenced topic to other topics in
+                  the navigation hierarchy (parents, siblings, and children). </p>
+            <p>DITA defines two forms of addresses for use in defining links, direct URI-based
+                  addresses and indirect key references. In all cases, the nature of the
+                  relationships established is independent of the form of address used. For example,
+                  a cross reference that uses a key reference to address the target of the cross
+                  reference is functionally equivalent to having addressed the same target by URI
+                  reference, in that the final processing result should be the same in both cases.
+                  However, the two forms of address have different practical and intermediate
+                  processing implications. See <xref format="dita" href="ditaaddressing.dita#id"
+                        >DITA addressing</xref>.</p>
+            <p>Links from maps to other maps, topics, or non-DITA resources establish explicit
+                  dependencies from the map containing the links to the associated resources. Links
+                  from maps to maps create a "map tree". The set of dependencies for a root map is
+                  the union of the dependencies of all the maps in the map tree.</p>
+            <p>Links from a topic to other topics, maps, or non-DITA resources establish explicit
+                  dependencies from the topic containing the links to the associated resources, and
+                  implicit dependencies from any maps that use that linking topic to its
+                  dependencies. </p>
+            <p>For the purposes of determining the set of dependencies for a given map tree,
+                  processors <keyword>may</keyword> ignore any implicit dependencies created by
+                  links within topics that are not also established by explicit dependencies in the
+                  map tree. In the case where a map includes a topic that includes a topic-to-topic
+                  link, where the linked topic is not explicitly included in the map, and the
+                  processor considers only dependencies that are explicitly defined in the map, the
+                  processor may fail to resolve the topic-to-topic link. This case can be avoided by
+                  using a resource-only topic reference in the map tree to establish the dependency
+                  explicitly. If the resource-only topicref also defines a key, the link within the
+                  topic can then be changed to use a key reference (@keyref or @conkeyref) instead
+                  of a URI reference (@href, @conref). See <xref href="key-based_addressing.dita"
+                        format="dita">Key-based addressing</xref>.</p>
+            <p>Navigation links have an associated "scope" indicating the closeness of the
+                  relationship of the linking element to associated resources. See <xref
+                        format="dita" href="../common/thescopeattribute.dita#thescopeattribute">The
+                        scope attribute</xref>.</p>
+            <p>Most navigation links have an associated "link text", which is the text used to
+                  render the link so that it can be used. For all elements that allow or require
+                  link text, the link text may be specified as part of the linking element or, if
+                  unspecified, should be taken from the referenced resource. The details for how the
+                  link text for a given element should or may be generated are defined for that
+                  element type and may also be determined entirely by a rendition processor. </p>
+            <p>In the specific case of cross references created using &lt;xref&gt; and related links
+                  using &lt;link>, the potential set of rules for constructing link text is
+                  essentially unbounded. Processors <keyword>may</keyword>, for example, define
+                  conventions for the value of @outputclass by which authors can indicate the
+                  details of how the link text should be constructed, or they may provide
+                  appropriate configuration options for controlling or customizing the construction
+                  of link text in cross references.</p>
+      </conbody>
+</concept>
+<?Pub *0000008524?>

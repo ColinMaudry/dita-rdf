@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcGeneralDescription" xml:lang="en-us">
+	<title>lcGeneralDescription</title>
+<shortdesc>The &lt;<keyword>lcGeneralDescription</keyword>&gt; provides a space to develop a general description about the organization's training needs.
+</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcGeneralDescription</indexterm>
+<indexterm>learning and training elements<indexterm>lcGeneralDescription</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcGeneralDescription/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcGeneralDescription-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcGeneralDescription/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcGeneralDescription-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/p learningBase/p learningPlan/lcGeneralDescription </p>
+		</section>
+<example id="example">
+<title>Example</title>
+<codeblock>
+...
+  &lt;lcGeneralDescription&gt;Generally speaking, this is what to expect.&lt;/lcGeneralDescription&gt;
+...
+</codeblock>
+
+</example>
+
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcGeneralDescription_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

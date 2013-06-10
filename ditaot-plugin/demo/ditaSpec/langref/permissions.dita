@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="permissions" xml:lang="en-us">
+<title>permissions</title>
+<shortdesc>The &lt;<keyword>permissions</keyword>> prolog element
+specifies the level of     entitlement needed to access the content.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>permissions</indexterm><indexterm>Prolog elements<indexterm>permissions</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>       <p>The &lt;<keyword>permissions</keyword>> element
+indicates any preferred controls for access         to content. Topics
+can be filtered based on the permissions element. This capability
+depends         on your output formatting process.</p>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-permissions/contains"
+id="contains" otherprops="contains">       <title>Contains</title> 
+     <p>The content model of this element may differ based on where
+it is used. Content model         information is located here: <xref
+keyref="permissions-contains"></xref></p>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-permissions/containedby"
+id="containedby" otherprops="containedby">       <title>Contained
+By</title>       <p>The parents of this element may differ based on
+where it is used. Content model information         is located here: <xref
+keyref="permissions-contained-by"></xref></p>     </section>
+<section id="inheritance" otherprops="inheritance">       <title>Inheritance</title> 
+     <p>- topic/permissions </p>     </section>
+<example id="example">       <title>Example</title>       <codeblock
+xml:space="preserve">&lt;prolog&gt;
+  <b>&lt;permissions view="entitled"/&gt;</b>
+&lt;/prolog></codeblock><?Pub Caret 9?>     </example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="permissions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/view">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>
+<?Pub *0000003010?>

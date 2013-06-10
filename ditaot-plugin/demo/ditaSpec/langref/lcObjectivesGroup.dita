@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcObjectivesGroup" xml:lang="en-us">
+	<title>lcObjectivesGroup</title>
+	<shortdesc>The &lt;<keyword>lcObjectivesGroup</keyword>&gt; contains a list of one or more learning objectives.
+</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcObjectivesGroup</indexterm><indexterm>learning and training elements<indexterm>lcObjectivesGroup</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcObjectivesGroup/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcObjectivesGroup-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcObjectivesGroup/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcObjectivesGroup-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/ul learningBase/lcObjectivesGroup </p>
+		</section>
+<example id="example">   
+<title>Example</title>   
+<codeblock>
+&lt;learningOverview id=&quot;overview&quot;&gt;
+  &lt;title&gt;Learning Overview topic&lt;/title&gt;
+  &lt;learningOverviewbody&gt;
+    &lt;lcObjectives>
+    &lt;title>Objectives&lt;/title>
+    &lt;lcObjectivesStem>When you complete this lesson, you'll know how to do the
+     following:&lt;/lcObjectivesGroup>
+      &lt;lcObjectivesGroup>
+        &lt;lcObjective>Creating a good learning overview topic.&lt;/lcObjective>
+        &lt;lcObjective>Identifying clear learning objectives.&lt;/lcObjective>
+        &lt;lcObjective>Adding good test items to assess knowledge gained.&lt;/lcObjective>
+      &lt;/lcObjectivesGroup>
+    &lt;/lcObjectives>
+  &lt;/learningOverviewbody&gt;
+&lt;/learningOverview&gt;
+</codeblock> 
+</example>
+<section id="attributes"> <title>Attributes</title>  <simpletable id="lcObjectivesList_attr"
+relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>  </section>
+</refbody>
+</reference>

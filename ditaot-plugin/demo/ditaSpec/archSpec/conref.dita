@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<!--RDA, March 17 2010: Based on several comments in the draft 3 review of the DITA 1.2 spec, I've
+commented out the sections here on topicref and keyref, and returned this topic to a focus
+solely on conref, as was done in DITA 1.0 and 1.1. The topicref and keyref mechanisms are
+already covered in other topics.-->
+<concept id="conref" xml:lang="en-us">
+ <title>Content inclusion (conref)</title>
+ <shortdesc><ph id="shortdesc">The DITA @conref, @conkeyref, @conrefend, and related attributes
+   provide a mechanism for reuse of content fragments within DITA topics or maps. </ph></shortdesc>
+ <!--<shortdesc>DITA supports content use by reference with several interrelated
+mechanisms. These mechanisms use the @conref, @conaction, @conrefend,
+@conkeyref, @keys, and @keyref attributes, and the &lt;topicref> element. </shortdesc>-->
+ <conbody>
+  <!--<p>DITA provides the following set of content inclusion mechanisms
+to establish a relationship between a referencing element and a referenced
+element.</p><section id="section_9FF4AB6373A9484CBB482D861E49693D"><title>Topic
+reference</title><p>The &lt;topicref> element is used to assemble
+DITA topics and maps in a map. </p></section>-->
+  <section>
+   <!--<title>Reference to content within a topic or map</title><p>The @conref,
+@conkeyref, and @conrefend attributes on a topic or map element can
+be used to reference content in the same or a different topic or map. </p>-->
+   <ul>
+    <li>
+     <p>The @conref or @conkeyref attribute can be used to pull the referenced content into the
+      location of the referencing element. The combination of either of these attributes with the
+      @conrefend attribute can be used to pull the content of a range of elements.</p>
+    </li>
+    <li>
+     <p>The @conref attribute can be used in combination with the @conaction attribute to push
+      content from the referencing element to the location of the referenced element. </p>
+    </li>
+   </ul>
+   <dl>
+    <dlentry>
+     <dt>Pulling content to the referencing element</dt>
+     <dd>
+      <p>When the @conref or @conkeyref attribute is used alone, the referencing element acts as a
+       placeholder for the referenced element, and the content of the referenced element is rendered
+       in place of the referencing element.</p>
+      <p>The combination of the @conrefend attribute with either @conref or @conkeyref specifies a
+       range of sibling elements that is rendered in place of the referencing element. See <xref
+        href="../common/theconrefendattribute.dita"/> for examples of how to combine @conrefend with
+       either @conref or @conkeyref.</p>
+     </dd>
+    </dlentry>
+    <dlentry>
+     <dt>Pushing content from the referencing element</dt>
+     <dd>
+      <p>The @conaction attribute reverses the direction of reuse from pull to push. When the
+       @conref or @conkeyref attribute is used in combination with the @conaction attribute, content
+       can be rendered before, after, or in place of the referenced element, depending on the value
+       of the @conaction attribute. See <xref href="../common/theconactionattribute.dita"/> for more
+       details.</p>
+      <note>The @conaction and @conrefend attributes cannot both be used within the same referencing
+       element, so it is not possible to push a range of elements.</note>
+     </dd>
+    </dlentry>
+   </dl>
+   <p>The identifier for the referenced element must be either absolute or resolvable in the context
+    of the referencing element.</p>
+   <p>More formally, the DITA @conref attribute can be considered a transclusion mechanism similar
+    to XInclude and to HyTime value references. DITA differs from these mechanisms, however, in that
+    conref validity does not apply simply to the current content at the time of replacement, but to
+    the ranges of possible content given the constraints of both the referencing document type and
+    the referenced document type. DITA compares the constraints of each context to ensure the
+    continued validity of the replacement content in its new context. A conref processor must not
+    permit resolution of a reuse relationship that could be rendered invalid under the rules of
+    either the reused or reusing content.</p>
+   <p>When pulling content with the conref mechanism – if the referenced element is the same type as
+    the referencing element, and the list of domains declared on the <keyword>domains</keyword>
+    attribute in the referenced topic or map instance is the same as or a subset of the list of
+    domains declared in the referencing document, the element set allowed in the referenced element
+    is guaranteed to be the same as, or a subset of, the element set allowed in the referencing
+    element. A processor resolving a conref should tolerate specializations of valid elements and
+    should generalize elements in the pulled content fragment as needed for the referencing
+    context.</p>
+   <p>When pushing content with the conref mechanism, the domain checking algorithm is reversed. In
+    this case, the domains attribute on the referenced document&apos;s topic or map must be the same
+    as or a superset of the domains declared on the referencing document. Once again, a processor
+    resolving a conref should tolerate specializations of valid elements and should generalize
+    elements in the pushed content fragment as needed for the referenced context.</p>
+   <p>All replacement of content based on @conref occurs after parsing of the document but prior to
+    any styling or other transformational or presentational operations on the full topic.</p>
+   <p>The referenced element may replace the referencing element based on build-time or runtime
+    conditions. For example, content such as product names or install paths may differ from one
+    product to another. It is advantageous to separate such content from topic content which is
+    reused for more than one product. When the content is reused in a different context, different
+    resources are substituted as reference elements.
+    <!--See <xref href="#conref/indirect_ref_with_keys"></xref>.--></p>
+   <p>A fragment of DITA content, such as an XML document containing only a single paragraph without
+    a topic or map ancestor, does not contain enough information for the conref processor to be able
+    to determine the validity of a reference to it. Consequently, the value of a conref must specify
+    a referenced element within a DITA topic or DITA map (or it may point to the entire topic or
+    map). </p>
+   <p>The attribute specifications on the resolved element can be drawn from both the referencing
+    element and the referenced element, according to the following priority:<ol>
+     <li>All attributes as specified on the referencing element, except for attributes which specify
+      the value "-dita-use-conref-target". (The term "target" here refers to the referenced
+      element.)</li>
+     <li>All attributes as specified on the referenced element except:<ol>
+       <li>The id attribute</li>
+       <li>Any attribute that is also specified on the referencing element, except when the value
+        specified on the referencing element is "-dita-use-conref-target"</li>
+      </ol></li>
+     <li>The xml:lang attribute has special treatment as described in <xref href="xmllang.dita"
+      />.<!--<draft-comment>MP: added per Jeff Ogden comment 2007/01/22 - assuming
+that treatment does not apply to dir or translate.</draft-comment>--></li>
+    </ol><!--<draft-comment>from JO 2007/01/22: This might be better as: 2. All
+attributes as specified on the target element: a. But the id attribute
+from the target is never used as an id in the context of the source
+element b. Any attribute also specified on the source element unless
+the value specified on the source element is "-dita-use-conref-target"</draft-comment>--><!--<draft-comment>MP: leaving as-is since existing wording has been approved.
+Can reconsider for future draft.</draft-comment>--></p>
+   <p>The only time the resolved element would include an attribute whose specified value is
+    "-dita-use-conref-target" is when the referenced element had that attribute specified with the
+    "-dita-use-conref-target" value and the referencing element either had no specification for that
+    attribute or had it also specified with the "-dita-use-conref-target" value. If the final
+    resolved element (after the complete resolution of any conref chain, as explained below) has an
+    attribute with the "-dita-use-conref-target" value, that should be treated as equivalent to
+    having that attribute unspecified.</p>
+   <p>A given attribute value on the resolved element comes in its entirety from either the
+    referencing element or the referenced element; the attribute values of the referencing and
+    referenced elements for a given attribute are never additive, even if the property (such as the
+    audience type) takes a list of values.</p>
+   <p>If the referenced element has a @conref attribute specified, the above rules should be applied
+    recursively with the resolved element from one referencing/referenced combination becoming one
+    of the two elements participating in the next referencing/referenced combination. The result
+    should preserve without generalization all elements that are valid in the originating context,
+    even if they are not valid in an intermediate context. For example, if topicA and topicC allow
+    highlighting, and topicB does not, then a content reference chain of
+    topicA-&gt;topicB-&gt;topicC should preserve any highlighting elements in the referenced
+    content. The result, however it is achieved, must be equivalent to the result of resolving the
+    conref pairs recursively starting from the original referencing element in topicA.</p>
+   <p>The @conrefend attribute is used when referencing a range of elements with the conref
+    mechanism. The @conref attribute references the first element in the range, while @conrefend
+    points to the last element in the range. Although the start and end referenced elements must
+    both be of the same type as the referencing element (or specialized from that element type), the
+    intermediary, contiguous nodes in the middle of the range do not have to be the same.</p>
+  </section>
+  <!--<section id="indirect_ref_with_keys"><title>Indirect addressing with
+keys</title><p>DITA provides an indirect addressing mechanism in which
+resources are bound to abstract names, called keys. The keys are defined
+in a map, and are used as values in referencing elements within the
+map and in content referenced by the map. The key space defined in
+a map is effective on all referencing elements that use those keys,
+throughout the DITA document that is aggregated using the map. </p><p>The
+same key can have different bindings in different use contexts. If
+an identical map is used, except with different key definitions, then
+a different key space is defined. In this way, alternative maps may
+be created with different values for the @keys attribute, with the
+result that references using those keys in DITA content are resolved
+in different ways, depending upon which map is used to aggregate that
+content. This greatly enhances the portability of DITA topics, simplifies
+update when references change, supports particularized variants of
+complex content, and supports methods of conditional processing that
+scale far better than those provided in prior releases of DITA. </p><p>When
+a key definition specifies a child element of &lt;<keyword>topicmeta</keyword>>
+as a resource, that element may be rendered as all or part of the
+content in the element that bears the key reference. By this means,
+the key reference can be used as a variable, and the content of the
+resource provides a way to set the variable's value wherever a key
+reference using that key name occurs within the document(s) aggregated
+by the map(s) containing that key definition. </p><p>Keys may also
+be used for values that are rendered as navigation links as well as
+for content inclusion.</p></section>-->
+  <!--<section><title>Footnote reuse by reference</title>
+  
+ <p>When the &lt;fn&gt; element has its <keyword>id</keyword> attribute set, it is not rendered. An &lt;xref&gt; element must be employed to use it by reference. In the &lt;xref&gt; element, the <keyword>type</keyword> attribute is set to "fn" and the <keyword>href</keyword> attribute is set to the <keyword>id</keyword>  value of the &lt;fn&gt; element. The content of the &lt;fn&gt; element is then rendered at the location of the &lt;xref&gt; element. By this means, the same footnote content may be rendered in more than one place.</p> </section>-->
+ </conbody>
+</concept>
+<?Pub *0000013178?>

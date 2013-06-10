@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<?Pub Sty _display FontColor="red"?>
+<map id="technicalContent_elements" xml:lang="en-us">
+ <title>DITA 1.2: Technical content elements</title>
+ <!--Concept elements -->
+ <topicref href="common/concept2.dita" navtitle="Concept elements" collection-type="sequence">
+  <?Pub Dtl?>
+  <topicref href="langref/concept.dita" keys="concept" navtitle="concept"/>
+  <topicref href="langref/conbody.dita" keys="conbody" navtitle="conbody"/>
+  <topicref href="langref/conbodydiv.dita" keys="conbodydiv" navtitle="conbodydiv"/>
+ </topicref>
+ <!-- Task elements -->
+ <topicref href="common/task2.dita" navtitle="Task elements" collection-type="sequence">
+  <?Pub Dtl?>
+  <topicref href="langref/task.dita" keys="task" navtitle="task"/>
+  <topicref href="langref/taskbody.dita" keys="taskbody" navtitle="taskbody"/>
+  <topicref href="langref/prereq.dita" keys="prereq" navtitle="prereq"/>
+  <topicref href="langref/context.dita" keys="context" navtitle="context"/>
+  <topicref href="langref/steps.dita" keys="steps" navtitle="steps"/>
+  <topicref href="langref/steps-informal.dita" keys="steps-informal" navtitle="steps-informal"/>
+  <topicref href="langref/steps-unordered.dita" keys="steps-unordered" navtitle="steps-unordered"/>
+  <topicref href="langref/step.dita" keys="step" navtitle="step"/>
+  <topicref href="langref/stepsection.dita" keys="stepsection" navtitle="stepsection"/>
+  <topicref href="langref/cmd.dita" keys="cmd" navtitle="cmd"/>
+  <topicref href="langref/info.dita" keys="info" navtitle="info"/>
+  <topicref href="langref/substeps.dita" keys="substeps" navtitle="substeps"/>
+  <topicref href="langref/substep.dita" keys="substep" navtitle="substep"/>
+  <topicref href="langref/stepxmp.dita" keys="stepxmp" navtitle="stepxmp"/>
+  <topicref href="langref/choicetable.dita" keys="choicetable" navtitle="choicetable"/>
+  <topicref href="langref/chhead.dita" keys="chhead" navtitle="chhead"/>
+  <topicref href="langref/choptionhd.dita" keys="choptionhd" navtitle="choptionhd"/>
+  <topicref href="langref/chdeschd.dita" keys="chdeschd" navtitle="chdeschd"/>
+  <topicref href="langref/chrow.dita" keys="chrow" navtitle="chrow"/>
+  <topicref href="langref/choption.dita" keys="choption" navtitle="choption"/>
+  <topicref href="langref/chdesc.dita" keys="chdesc" navtitle="chdesc"/>
+  <topicref href="langref/choices.dita" keys="choices" navtitle="choices"/>
+  <topicref href="langref/choice.dita" keys="choice" navtitle="choice"/>
+  <topicref href="langref/stepresult.dita" keys="stepresult" navtitle="stepresult"/>
+  <topicref href="langref/tutorialinfo.dita" keys="tutorialinfo" navtitle="tutorialinfo"/>
+  <topicref href="langref/result.dita" keys="result" navtitle="result"/>
+  <topicref href="langref/postreq.dita" keys="postreq" navtitle="postreq"/>
+ </topicref>
+ <!--Reference elements -->
+ <topicref href="common/reference2.dita" navtitle="Reference elements" collection-type="sequence">
+  <?Pub Dtl?>
+  <topicref href="langref/reference.dita" keys="reference" navtitle="reference"/>
+  <topicref href="langref/refbody.dita" keys="refbody" navtitle="refbody"/>
+  <topicref href="langref/refbodydiv.dita" keys="refbodydiv" navtitle="refbodydiv"/>
+  <topicref href="langref/refsyn.dita" keys="refsyn" navtitle="refsyn"/>
+  <topicref href="langref/properties.dita" keys="properties" navtitle="properties"/>
+  <topicref href="langref/prophead.dita" keys="prophead" navtitle="prophead"/>
+  <topicref href="langref/proptypehd.dita" keys="proptypehd" navtitle="proptypehd"/>
+  <topicref href="langref/propvaluehd.dita" keys="propvaluehd" navtitle="propvaluehd"/>
+  <topicref href="langref/propdeschd.dita" keys="propdeschd" navtitle="propdeschd"/>
+  <topicref href="langref/property.dita" keys="property" navtitle="property"/>
+  <topicref href="langref/proptype.dita" keys="proptype" navtitle="proptype"/>
+  <topicref href="langref/propvalue.dita" keys="propvalue" navtitle="propvalue"/>
+  <topicref href="langref/propdesc.dita" keys="propdesc" navtitle="propdesc"/>
+ </topicref>
+ <!--Glossary elements-->
+ <topicref href="common/glossary-elements.dita" navtitle="Glossary elements"
+  collection-type="sequence">
+  <?Pub Dtl?>
+  <!-- Glossary content elements-->
+  <topicref href="common/glossary2.dita" navtitle="Glossentry elements" collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/glossentry.dita" keys="glossentry" navtitle="glossentry"/>
+   <topicref href="langref/glossterm.dita" keys="glossterm" navtitle="glossterm"/>
+   <topicref href="langref/glossdef.dita" keys="glossdef" navtitle="glossdef"/>
+   <topicref href="langref/glossAbbreviation.dita" keys="glossAbbreviation"
+    navtitle="glossAbbreviation"/>
+   <topicref href="langref/glossAcronym.dita" keys="glossAcronym" navtitle="glossAcronym"/>
+   <topicref href="langref/glossAlt.dita" keys="glossAlt" navtitle="glossAlt"/>
+   <topicref href="langref/glossAlternateFor.dita" keys="glossAlternateFor"
+    navtitle="glossAlternateFor"/>
+   <topicref href="langref/glossBody.dita" keys="glossBody" navtitle="glossBody"/>
+   <topicref href="langref/glossPartOfSpeech.dita" keys="glossPartOfSpeech"
+    navtitle="glossPartOfSpeech"/>
+   <topicref href="langref/glossProperty.dita" keys="glossProperty" navtitle="glossProperty"/>
+   <topicref href="langref/glossScopeNote.dita" keys="glossScopeNote" navtitle="glossScopeNote"/>
+   <topicref href="langref/glossShortForm.dita" keys="glossShortForm" navtitle="glossShortForm"/>
+   <topicref href="langref/glossStatus.dita" keys="glossStatus" navtitle="glossStatus"/>
+   <topicref href="langref/glossSurfaceForm.dita" keys="glossSurfaceForm"
+    navtitle="glossSurfaceForm"/>
+   <topicref href="langref/glossSymbol.dita" keys="glossSymbol" navtitle="glossSymbol"/>
+   <topicref href="langref/glossSynonym.dita" keys="glossSynonym" navtitle="glossSynonym"/>
+   <topicref href="langref/glossUsage.dita" keys="glossUsage" navtitle="glossUsage"/>
+  </topicref>
+  <!--Glossary related elements-->
+  <topicref href="common/glossrelated.dita" navtitle="Glossary related elements"
+   collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/abbreviated-form.dita" keys="abbreviated-form"
+    navtitle="abbreviated-form"/>
+   <topicref href="langref/glossref.dita" keys="glossref" navtitle="glossref"/>
+   <topicref href="langref/glossgroup.dita" keys="glossgroup" navtitle="glossgroup"/>
+  </topicref>
+ </topicref>
+ <!--Bookmap elements-->
+ <topicref href="common/bookmap-elements.dita" navtitle="Bookmap elements"
+  collection-type="sequence">
+  <?Pub Dtl?>
+  <!--Bookmap content elements -->
+  <?Pub Caret -2?>
+  <topicref href="common/about-bookmap.dita" navtitle="Bookmap content elements"
+   collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/bookmap.dita" keys="bookmap" navtitle="bookmap"/>
+   <topicref href="langref/abbrevlist.dita" keys="abbrevlist" navtitle="abbrevlist"/>
+   <topicref href="langref/amendments.dita" keys="amendments" navtitle="amendments"/>
+   <topicref href="langref/appendices.dita" keys="appendices" navtitle="appendices"/>
+   <topicref href="langref/appendix.dita" keys="appendix" navtitle="appendix"/>
+   <topicref href="langref/backmatter.dita" keys="backmatter" navtitle="backmatter"/>
+   <topicref href="langref/bibliolist.dita" keys="bibliolist" navtitle="bibliolist"/>
+   <topicref href="langref/bookabstract.dita" keys="bookabstract" navtitle="bookabstract"/>
+   <topicref href="langref/booklibrary.dita" keys="booklibrary" navtitle="booklibrary"/>
+   <topicref href="langref/booklist.dita" keys="booklist" navtitle="booklist"/>
+   <topicref href="langref/booklists.dita" keys="booklists" navtitle="booklists"/>
+   <topicref href="langref/booktitle.dita" keys="booktitle" navtitle="booktitle"/>
+   <topicref href="langref/booktitlealt.dita" keys="booktitlealt" navtitle="booktitlealt"/>
+   <topicref href="langref/chapter.dita" keys="chapter" navtitle="chapter"/>
+   <topicref href="langref/colophon.dita" keys="colophon" navtitle="colophon"/>
+   <topicref href="langref/dedication.dita" keys="dedication" navtitle="dedication"/>
+   <topicref href="langref/draftintro.dita" keys="draftintro" navtitle="draftintro"/>
+   <topicref href="langref/figurelist.dita" keys="figurelist" navtitle="figurelist"/>
+   <topicref href="langref/frontmatter.dita" keys="frontmatter" navtitle="frontmatter"/>
+   <topicref href="langref/glossarylist.dita" keys="glossarylist" navtitle="glossarylist"/>
+   <topicref href="langref/indexlist.dita" keys="indexlist" navtitle="indexlist"/>
+   <topicref href="langref/mainbooktitle.dita" keys="mainbooktitle" navtitle="mainbooktitle"/>
+   <topicref href="langref/notices.dita" keys="notices" navtitle="notices"/>
+   <topicref href="langref/part.dita" keys="part" navtitle="part"/>
+   <topicref href="langref/preface.dita" keys="preface" navtitle="preface"/>
+   <topicref href="langref/tablelist.dita" keys="tablelist" navtitle="tablelist"/>
+   <topicref href="langref/toc.dita" keys="toc" navtitle="toc"/>
+   <topicref href="langref/trademarklist.dita" keys="trademarklist" navtitle="trademarklist"/>
+  </topicref>
+  <!--Bookmap metadata elements -->
+  <topicref href="common/bookmap-meta.dita" navtitle="Bookmap metadata elements"
+   collection-type="sequence">
+   <topicref href="langref/bookmeta.dita" keys="bookmeta" navtitle="bookmeta"/>
+   <topicref href="langref/approved.dita" keys="approved" navtitle="approved"/>
+   <topicref href="langref/bookchangehistory.dita" keys="bookchangehistory"
+    navtitle="bookchangehistory"/>
+   <topicref href="langref/bookevent.dita" keys="bookevent" navtitle="bookevent"/>
+   <topicref href="langref/bookeventtype.dita" keys="bookeventtype" navtitle="bookeventtype"/>
+   <topicref href="langref/bookid.dita" keys="bookid" navtitle="bookid"/>
+   <topicref href="langref/booknumber.dita" keys="booknumber" navtitle="booknumber"/>
+   <topicref href="langref/bookowner.dita" keys="bookowner" navtitle="bookowner"/>
+   <topicref href="langref/bookpartno.dita" keys="bookpartno" navtitle="bookpartno"/>
+   <topicref href="langref/bookrestriction.dita" keys="bookrestriction" navtitle="bookrestriction"/>
+   <topicref href="langref/bookrights.dita" keys="bookrights" navtitle="bookrights"/>
+   <topicref href="langref/completed.dita" keys="completed" navtitle="completed"/>
+   <topicref href="langref/copyrfirst.dita" keys="copyrfirst" navtitle="copyrfirst"/>
+   <topicref href="langref/copyrlast.dita" keys="copyrlast" navtitle="copyrlast"/>
+   <topicref href="langref/day.dita" keys="day" navtitle="day"/>
+   <topicref href="langref/edited.dita" keys="edited" navtitle="edited"/>
+   <topicref href="langref/edition.dita" keys="edition" navtitle="edition"/>
+   <topicref href="langref/isbn.dita" keys="isbn" navtitle="isbn"/>
+   <topicref href="langref/maintainer.dita" keys="maintainer" navtitle="maintainer"/>
+   <topicref href="langref/month.dita" keys="month" navtitle="month"/>
+   <topicref href="langref/organization.dita" keys="organization" navtitle="organization"/>
+   <topicref href="langref/person.dita" keys="person" navtitle="person"/>
+   <topicref href="langref/printlocation.dita" keys="printlocation" navtitle="printlocation"/>
+   <topicref href="langref/published.dita" keys="published" navtitle="published"/>
+   <topicref href="langref/publisherinformation.dita" keys="publisherinformation"
+    navtitle="publisherinformation"/>
+   <topicref href="langref/publishtype.dita" keys="publishtype" navtitle="publishtype"/>
+   <topicref href="langref/reviewed.dita" keys="reviewed" navtitle="reviewed"/>
+   <topicref href="langref/revisionid.dita" keys="revisionid" navtitle="revisionid"/>
+   <topicref href="langref/started.dita" keys="started" navtitle="started"/>
+   <topicref href="langref/summary.dita" keys="summary" navtitle="summary"/>
+   <topicref href="langref/tested.dita" keys="tested" navtitle="tested"/>
+   <topicref href="langref/volume.dita" keys="volume" navtitle="volume"/>
+   <topicref href="langref/year.dita" keys="year" navtitle="year"/>
+  </topicref>
+ </topicref>
+ <!--Domain elements-->
+ <topicref href="common/technicalContent-domain-elements.dita" locktitle="yes"
+  navtitle="Domain elements" collection-type="sequence">
+  <?Pub Dtl?>
+  <!--Machine-industry task domain-->
+  <topicref href="common/mitask-d.dita" collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/prelreqs.dita" keys="prelreqs" navtitle="prelreqs"/>
+   <topicref href="langref/closereqs.dita" keys="closereqs" navtitle="closereqs"/>
+   <topicref href="langref/reqconds.dita" keys="reqconds" navtitle="reqconds"/>
+   <topicref href="langref/reqcond.dita" keys="reqcond" navtitle="reqcond"/>
+   <topicref href="langref/noconds.dita" keys="noconds" navtitle="noconds"/>
+   <topicref href="langref/reqcontp.dita" keys="reqcontp" navtitle="reqcontp"/>
+   <topicref href="langref/reqpers.dita" keys="reqpers" navtitle="reqpers"/>
+   <topicref href="langref/personnel.dita" keys="personnel" navtitle="personnel"/>
+   <topicref href="langref/perscat.dita" keys="perscat" navtitle="perscat"/>
+   <topicref href="langref/perskill.dita" keys="perskill" navtitle="perskill"/>
+   <topicref href="langref/esttime.dita" keys="esttime" navtitle="esttime"/>
+   <topicref href="langref/supeqli.dita" keys="supeqli" navtitle="supeqli"/>
+   <topicref href="langref/supequi.dita" keys="supequi" navtitle="supequi"/>
+   <topicref href="langref/supequip.dita" keys="supequip" navtitle="supequip"/>
+   <topicref href="langref/nosupeq.dita" keys="nosupeq" navtitle="nosupeq"/>
+   <topicref href="langref/supplies.dita" keys="supplies" navtitle="supplies"/>
+   <topicref href="langref/supply.dita" keys="supply" navtitle="supply"/>
+   <topicref href="langref/supplyli.dita" keys="supplyli" navtitle="supplyli"/>
+   <topicref href="langref/nosupply.dita" keys="nosupply" navtitle="nosupply"/>
+   <topicref href="langref/spare.dita" keys="spare" navtitle="spare"/>
+   <topicref href="langref/spares.dita" keys="spares" navtitle="spares"/>
+   <topicref href="langref/sparesli.dita" keys="sparesli" navtitle="sparesli"/>
+   <topicref href="langref/nospares.dita" keys="nospares" navtitle="nospares"/>
+   <topicref href="langref/nosafety.dita" keys="nosafety" navtitle="nosafety"/>
+   <topicref href="langref/safecond.dita" keys="safecond" navtitle="safecond"/>
+   <topicref href="langref/safety.dita" keys="safety" navtitle="safety"/>
+  </topicref>
+  <!--Programming elements -->
+  <topicref href="common/pr-d.dita" navtitle="Programming elements" collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/apiname.dita" keys="apiname" navtitle="apiname"/>
+   <topicref href="langref/codeblock.dita" keys="codeblock" navtitle="codeblock"/>
+   <topicref href="langref/coderef.dita" keys="coderef" navtitle="coderef"/>
+   <topicref href="langref/codeph.dita" keys="codeph" navtitle="codeph"/>
+   <topicref href="langref/option.dita" keys="option" navtitle="option"/>
+   <topicref href="langref/parmname.dita" keys="parmname" navtitle="parmname"/>
+   <topicref href="langref/parml.dita" keys="parml" navtitle="parml"/>
+   <topicref href="langref/plentry.dita" keys="plentry" navtitle="plentry"/>
+   <topicref href="langref/pt.dita" keys="pt" navtitle="pt"/>
+   <topicref href="langref/pd.dita" keys="pd" navtitle="pd"/>
+   <topicref href="langref/synph.dita" keys="synph" navtitle="synph"/>
+   <topicref href="langref/syntaxdiagram.dita" keys="syntaxdiagram" navtitle="syntaxdiagram"/>
+   <topicref href="langref/groupseq.dita" keys="groupseq" navtitle="groupseq"/>
+   <topicref href="langref/groupchoice.dita" keys="groupchoice" navtitle="groupchoice"/>
+   <topicref href="langref/groupcomp.dita" keys="groupcomp" navtitle="groupcomp"/>
+   <topicref href="langref/fragment.dita" keys="fragment" navtitle="fragment"/>
+   <topicref href="langref/fragref.dita" keys="fragref" navtitle="fragref"/>
+   <topicref href="langref/synblk.dita" keys="synblk" navtitle="synblk"/>
+   <topicref href="langref/synnote.dita" keys="synnote" navtitle="synnote"/>
+   <topicref href="langref/synnoteref.dita" keys="synnoteref" navtitle="synnoteref"/>
+   <topicref href="langref/kwd.dita" keys="kwd" navtitle="kwd"/>
+   <topicref href="langref/var.dita" keys="var" navtitle="var"/>
+   <topicref href="langref/oper.dita" keys="oper" navtitle="oper"/>
+   <topicref href="langref/delim.dita" keys="delim" navtitle="delim"/>
+   <topicref href="langref/sep.dita" keys="sep" navtitle="sep"/>
+   <topicref href="langref/repsep.dita" keys="repsep" navtitle="repsep"/>
+  </topicref>
+  <!--Software elements -->
+  <topicref href="common/sw-d.dita" navtitle="Software elements" collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/msgph.dita" keys="msgph" navtitle="msgph"/>
+   <topicref href="langref/msgblock.dita" keys="msgblock" navtitle="msgblock"/>
+   <topicref href="langref/msgnum.dita" keys="msgnum" navtitle="msgnum"/>
+   <topicref href="langref/cmdname.dita" keys="cmdname" navtitle="cmdname"/>
+   <topicref href="langref/varname.dita" keys="varname" navtitle="varname"/>
+   <topicref href="langref/filepath.dita" keys="filepath" navtitle="filepath"/>
+   <topicref href="langref/userinput.dita" keys="userinput" navtitle="userinput"/>
+   <topicref href="langref/systemoutput.dita" keys="systemoutput" navtitle="systemoutput"/>
+  </topicref>
+  <!--User interface elements -->
+  <topicref href="common/ui-d.dita" navtitle="User interface elements" collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="langref/uicontrol.dita" keys="uicontrol" navtitle="uicontrol"/>
+   <topicref href="langref/wintitle.dita" keys="wintitle" navtitle="wintitle"/>
+   <topicref href="langref/menucascade.dita" keys="menucascade" navtitle="menucascade"/>
+   <topicref href="langref/shortcut.dita" keys="shortcut" navtitle="shortcut"/>
+   <topicref href="langref/screen.dita" keys="screen" navtitle="screen"/>
+  </topicref>
+  <!--xNAL structures -->
+  <topicref href="common/xnal-d.dita" navtitle="xNAL domain elements" collection-type="sequence">
+   <?Pub Dtl?>
+   <topicref href="common/xnaldetails.dita" navtitle="xNAL usage guidelines"/>
+   <topicref href="langref/authorinformation.dita" keys="authorinformation"
+    navtitle="authorinformation"/>
+   <topicref href="langref/addressdetails.dita" keys="addressdetails" navtitle="addressdetails"/>
+   <topicref href="langref/administrativearea.dita" keys="administrativearea"
+    navtitle="administrativearea"/>
+   <topicref href="langref/contactnumber.dita" keys="contactnumber" navtitle="contactnumber"/>
+   <topicref href="langref/contactnumbers.dita" keys="contactnumbers" navtitle="contactnumbers"/>
+   <topicref href="langref/country.dita" keys="country" navtitle="country"/>
+   <topicref href="langref/emailaddress.dita" keys="emailaddress" navtitle="emailaddress"/>
+   <topicref href="langref/emailaddresses.dita" keys="emailaddresses" navtitle="emailaddresses"/>
+   <topicref href="langref/firstname.dita" keys="firstname" navtitle="firstname"/>
+   <topicref href="langref/generationidentifier.dita" keys="generationidentifier"
+    navtitle="generationidentifier"/>
+   <topicref href="langref/honorific.dita" keys="honorific" navtitle="honorific"/>
+   <topicref href="langref/lastname.dita" keys="lastname" navtitle="lastname"/>
+   <topicref href="langref/locality.dita" keys="locality" navtitle="locality"/>
+   <topicref href="langref/localityname.dita" keys="localityname" navtitle="localityname"/>
+   <topicref href="langref/middlename.dita" keys="middlename" navtitle="middlename"/>
+   <topicref href="langref/namedetails.dita" keys="namedetails" navtitle="namedetails"/>
+   <topicref href="langref/organizationinfo.dita" keys="organizationinfo"
+    navtitle="organizationinfo"/>
+   <topicref href="langref/organizationname.dita" keys="organizationname"
+    navtitle="organizationname"/>
+   <topicref href="langref/organizationnamedetails.dita" keys="organizationnamedetails"
+    navtitle="organizationnamedetails"/>
+   <topicref href="langref/otherinfo.dita" keys="otherinfo" navtitle="otherinfo"/>
+   <topicref href="langref/personinfo.dita" keys="personinfo" navtitle="personinfo"/>
+   <topicref href="langref/personname.dita" keys="personname" navtitle="personname"/>
+   <topicref href="langref/postalcode.dita" keys="postalcode" navtitle="postalcode"/>
+   <topicref href="langref/thoroughfare.dita" keys="thoroughfare" navtitle="thoroughfare"/>
+   <topicref href="langref/url.dita" keys="url" navtitle="url"/>
+   <topicref href="langref/urls.dita" keys="urls" navtitle="urls"/>
+  </topicref>
+ </topicref>
+</map>
+<?Pub *0000021745?>

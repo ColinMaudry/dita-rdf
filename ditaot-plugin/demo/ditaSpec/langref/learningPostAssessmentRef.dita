@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="learningPostAssessmentRef" xml:lang="en-us">
+	<title>learningPostAssessmentRef</title>
+	<shortdesc>Use a &lt;<keyword>learningPostAssessmentRef</keyword>&gt; element to include a topic reference to a learning assessment topic as part of a DITA learningObject.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>learningPostAssessmentRef</indexterm><indexterm>learning and training elements<indexterm>learningPostAssessmentRef</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+    <section><p>By default, a learningAssessmentPostRef is expected to link to a learningAssessment topic. However, the href in a learningAssessmentPostRef can link to content of any type that you want to use as a learning assessment in a learning object. In this way, you can structure any existing DITA content as a learning object, and then take advantage of the learning-specific processing available for building and packaging that content for delivery in a learning system or learning context. </p>
+<p>When you include a reference to a DITA topic that is not learningAssessment, change the type attribute to match the type of topic being referenced. </p></section>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-learningPostAssessmentRef/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="learningPostAssessmentRef-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-learningPostAssessmentRef/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="learningPostAssessmentRef-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ map/topicref learningmap-d/learningPostAssessmentRef</p>
+</section>
+
+<example id="example"><title>Example</title>
+  <p>See <xref href="learningObject.dita#learningObject/example">learningObject</xref>.</p>
+</example>
+<section id="attributes"><title>Attributes</title><simpletable id="learningPostAssessmentRef_attr"
+relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow>
+<stentry>type</stentry>
+<stentry>The topic type of the map reference.</stentry>
+<stentry>CDATA</stentry>
+<stentry>learningPostAssessment</stentry>
+<stentry>IMPLIED</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry/><stentry/><stentry/><stentry/><stentry/></strow>
+</simpletable></section>
+</refbody>
+</reference>

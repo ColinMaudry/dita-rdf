@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="messagepanel" xml:lang="en-us">
+<title>messagepanel</title>
+<shortdesc>The &lt;<keyword>messagepanel</keyword>> element contains
+the textual information that is displayed on the hazard statement.
+This information identifies the hazard, specifies how to avoid the
+hazard, and states the probable consequences of failing to avoid the
+hazard.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>messagepanel</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-messagepanel/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="messagepanel-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-messagepanel/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="messagepanel-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/ul hazard-d/messagepanel</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;hazardstatement type="caution">
+  <b>&lt;messagepanel></b>
+    &lt;typeofhazard>Lifting Hazard.&lt;/typeofhazard>
+    &lt;consequence>May result in injury.&lt;/consequence>
+    &lt;howtoavoid>See safety manual for lifting instructions.&lt;/howtoavoid>
+  <b>&lt;/messagepanel></b>
+  &lt;hazardsymbol href="heavy.png">&lt;/hazardsymbol>
+&lt;/hazardstatement></codeblock><?Pub Caret 51?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/compact">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003174?>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcGapAnalysis" xml:lang="en-us">
+	<title>lcGapAnalysis</title>
+<shortdesc>The &lt;<keyword>lcGapAnalysis</keyword>&gt; compares existing learning objectives to current job task analysis. </shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcGapAnalysis</indexterm>
+				<indexterm>learning and training elements<indexterm>lcGapAnalysis</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcGapAnalysis/contains" otherprops="contains">
+			<title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="lcGapAnalysis-contains">
+				</xref>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcGapAnalysis/containedby" otherprops="containedby">
+			<title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="lcGapAnalysis-contained-by">
+				</xref>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>-
+topic/section learningBase/section learningPlan/lcGapAnalysis </p>
+		</section>
+		<example id="example">
+			<title>Example: lcGapAnalysis</title>
+			<codeblock>
+...
+    &lt;lcGapAnalysis>
+      &lt;title>Gap Analysis&lt;/title>
+      &lt;lcGapItem>
+        &lt;title>Gap item&lt;/title>
+        &lt;lcPlanObjective>Learn the basics before you go further.&lt;/lcPlanObjective>
+        &lt;lcJtaItem>Current learning objectives provide guidance to developing small modules with terminal learning objectives.&lt;/lcJtaItem>
+        &lt;lcGapItemDelta>Current learners do not have the capability to approach learning 
+         development in a modular strategy that saves time and costs across 
+         the enterprise.&lt;/lcGapItemDelta>
+      &lt;/lcGapItem>
+    &lt;/lcGapAnalysis>
+...
+			</codeblock>
+		</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcGapAnalysis_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+
+	</refbody>
+</reference>

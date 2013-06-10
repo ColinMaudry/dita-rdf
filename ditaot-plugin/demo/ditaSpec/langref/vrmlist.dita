@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="vrmlist" xml:lang="en-us">
+<title>vrmlist</title>
+<shortdesc>The &lt;<keyword>vrmlist</keyword>&gt; element contains
+a set of &lt;<keyword>vrm</keyword>&gt; elements for logging the version,
+release, and modification information for multiple products or versions
+of products to which the topic applies.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>vrmlist</indexterm><indexterm>Prolog elements<indexterm>vrmlist</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-vrmlist/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="vrmlist-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-vrmlist/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="vrmlist-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/vrmlist </p></section>
+<example id="example"><title>Example</title><p>The recent versions
+of a hypothetical product might be logged thus using the vrmlist markup:</p><codeblock>&lt;prolog&gt;
+ &lt;metadata&gt;
+  &lt;prodinfo&gt;
+   &lt;prodname&gt;Widge-o-matic&lt;/prodname&gt;
+   &lt;vrmlist&gt;
+     &lt;vrm version="1" release="2" modification="0"/&gt;
+     &lt;vrm version="1" release="2" modification="1"/&gt;
+   &lt;/vrmlist&gt;
+  &lt;/prodinfo&gt;
+ &lt;/metadata&gt;
+&lt;/prolog&gt;
+</codeblock><?Pub Caret 199?><p>This indicates that the topic covers
+Version 1, release 2, modification levels 0 and 1 (often expressed
+as version 1.2.0 and 1.2.1).</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="vrmlist_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002991?>

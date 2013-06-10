@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcDuration" xml:lang="en-us">
+	<title>lcDuration</title>
+<shortdesc>The &lt;<keyword>lcDuration</keyword>&gt; provides an estimated duration for the learning activity.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcDuration</indexterm>
+<indexterm>learning and training elements<indexterm>lcDuration</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcDuration/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcDuration-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcDuration/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcDuration-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section learningBase/lcDuration </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+...
+    &lt;lcDuration&gt;&lt;title&gt;Duration&lt;/title&gt;
+      &lt;lcTime name="lcTime" value="00:15"/&gt;
+   &lt;/lcDuration&gt;  
+...  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcSpecTitle_univ_global_classandout_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow id="spectitle">
+<stentry>spectitle</stentry>
+<stentry>The specialized title attribute allows architects of specialized
+types to define a fixed or default title for a specialized element.
+Not intended for direct use by authors.<indexterm id="att-spectitle">spectitle
+attribute</indexterm></stentry>
+<stentry>CDATA</stentry>
+<stentry>#IMPLIED</stentry>
+<stentry>No</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="supplies" xml:lang="en-us">
+<title>supplies</title>
+<shortdesc>The &lt;<keyword>supplies</keyword>> element contains information
+about the supplies or parts that are required to perform a task. These
+supplies or parts need to be available prior to beginning the task.
+This element either contains children elements that specify particular
+supplies or a &lt;nosupply> element that indicates that no supplies
+are needed.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>supplies</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-supplies/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="supplies-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-supplies/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="supplies-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/p task/p mitask-d/supplies</p></section>
+<example id="example"><title>Example</title><codeblock><b>&lt;supplies></b>
+ &lt;supplyli>
+   &lt;supply>gasket&lt;/supply>
+   &lt;supply>engine oil&lt;/supply>
+ &lt;/supplyli>
+<b>&lt;/supplies></b>
+</codeblock><?Pub Caret 97?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002667?>

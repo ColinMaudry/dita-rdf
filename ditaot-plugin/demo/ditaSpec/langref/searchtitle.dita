@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="searchtitle" xml:lang="en-us">
+<title>searchtitle</title>
+<shortdesc><ph>The &lt;searchtitle> element is used to
+specify a title that should be displayed by search tools that locate
+the topic. This is most useful when the topic has a title that makes
+sense in the context of a single information set, but may be too general
+in a list of search results; for example, a topic title of "Markup
+example" may make sense as part of a guide to DITA, but when found
+among thousands of unrelated topics, a search title of "DITA markup
+example" is more useful.</ph><!--RDA: Based on comments in Review 3 of DITA 1.2, 
+replaced the following shortdesc with the one above:
+When your DITA topic is transformed to XHTML, the &lt;<keyword>searchtitle</keyword>&gt;element
+is used to create a title element at the top of the resulting
+HTML file. This title is normally used in search result summaries
+by some search engines, such as that in Eclipse (<ph><xref format="html"
+href="http://eclipse.org" scope="external">http://eclipse.org</xref></ph>);
+if not set, the XHTML's title element defaults to the source topic's
+title content (which may not be as well optimized for search summaries)--></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>searchtitle</indexterm><indexterm>Topic elements<indexterm>searchtitle</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>When a topic is rendered as XHTML, the contents of the &lt;searchtitle&gt;
+will typically appear in the XHTML&apos;s title element, which used
+in the result summary for many search engines. This element may not
+be supported for output formats that do not support distinct search
+titles for topics.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-searchtitle/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="searchtitle-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-searchtitle/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="searchtitle-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>"-
+topic/searchtitle " when used in topics, and "- map/searchtitle "
+when used in maps.</p></section>
+<example id="example"><title>Example</title><p>In the
+following example, the general title "Programming Example" is likely
+very useful in a set of information about XSLT basics; however, the
+same title is not helpful among a set of search results from the entire
+internet. In that case, "Example of basic programming in XSLT" will
+be much more helpful.</p><codeblock>&lt;task id="progexample"&gt;
+ &lt;title&gt;Programming Example&lt;/title&gt;
+  &lt;titlealts&gt;&lt;searchtitle&gt;Example of basic
+             programming in XSLT&lt;/searchtitle&gt;&lt;/titlealts&gt;
+ &lt;taskbody&gt; . . . &lt;/taskbody&gt;
+&lt;/task&gt;</codeblock><p>When searchtitle is used in
+maps, the element provides a new search title for the topic when used
+in a specific context. For example, the if the following map includes
+information about programming in many languages, searches among that
+information set will be most useful when they return "Example of programming
+in XSLT":<codeblock>&lt;topicref href="progexample.dita">
+  &lt;topicmeta>
+    &lt;navtitle>Programming example&lt;/navtitle>
+    &lt;searchtitle>Example of programming in XSLT&lt;/searchtitle>
+  &lt;/topicmeta>
+&lt;/topicref></codeblock></p><?Pub Caret 9?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="searchtitle_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004895?>

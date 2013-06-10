@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="simpletable" xml:lang="en-us">
+<title>simpletable</title>
+<shortdesc>The &lt;<keyword>simpletable</keyword>&gt; element is used
+for tables that are regular in structure and do not need a caption.
+Choose the simple table element when you want to show information
+in regular rows and columns. For example, multi-column tabular data
+such as phone directory listings or parts lists are good candidates
+for simpletable. Another good use of simpletable is for information
+that seems to beg for a three-part definition list; the keycol attribute
+may be used to indicate which column represents the "key" or term-like
+column of your structure.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>simpletable</indexterm><indexterm>Table elements<indexterm>simpletable</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>This close match of simpletable to tabular, regular data
+makes simpletable suitable as the basis for specialized structures
+such as <xref keyref="properties">properties</xref> (for programming
+information) and <xref keyref="choicetable">choice tables</xref> (for
+tasks).</p></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-simpletable/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="simpletable-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-simpletable/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="simpletable-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/simpletable </p></section>
+<example id="example"><title>Example</title><dl><dlentry>
+<dt>Source: </dt>
+<dd><codeblock>&lt;simpletable&gt;
+ &lt;sthead&gt;
+  &lt;stentry&gt;Type style&lt;/stentry&gt;
+  &lt;stentry&gt;Elements used&lt;/stentry&gt;
+ &lt;/sthead&gt;
+ &lt;strow&gt;
+  &lt;stentry&gt;Bold&lt;/stentry&gt;
+  &lt;stentry&gt;b&lt;/stentry&gt;
+ &lt;/strow&gt;
+ &lt;strow&gt;
+  &lt;stentry&gt;Italic&lt;/stentry&gt;
+  &lt;stentry&gt;i&lt;/stentry&gt;
+ &lt;/strow&gt;
+ &lt;strow&gt;
+  &lt;stentry&gt;Underlined&lt;/stentry&gt;
+  &lt;stentry&gt;u&lt;/stentry&gt;
+ &lt;/strow&gt;
+&lt;/simpletable&gt;</codeblock></dd>
+</dlentry><dlentry>
+<dt>Formatted output:</dt>
+<dd><simpletable relcolwidth="2* 2*">
+<sthead>
+<stentry>Type style</stentry>
+<stentry>Elements used</stentry>
+</sthead>
+<strow>
+<stentry>Bold</stentry>
+<stentry>b</stentry>
+</strow>
+<strow>
+<stentry>Italic</stentry>
+<stentry>i</stentry>
+</strow>
+<strow>
+<stentry>Underlined</stentry>
+<stentry>u</stentry>
+</strow>
+</simpletable></dd>
+</dlentry></dl></example>
+<example id="example2"><title>Example using<?Pub Caret?> keycol</title><p>In
+this sample, the first column is identified as a header column through
+the use of keycol="1" on the &lt;simpletable> element. This indicates
+that items in the first column should be treated as headers for the
+row that follows. Rendering of the header column is left up to the
+implementation.</p><dl><dlentry>
+<dt>Source:</dt>
+<dd><codeblock>&lt;simpletable keycol="1">
+ &lt;sthead>
+  &lt;stentry>Term&lt;/stentry>
+  &lt;stentry>Categorization&lt;/stentry>
+  &lt;stentry>Definition&lt;/stentry>
+ &lt;/sthead>
+ &lt;strow>
+  &lt;stentry>Widget&lt;/stentry>
+  &lt;stentry>noun&lt;/stentry>
+  &lt;stentry>Thing that is used for something&lt;/stentry>
+ &lt;/strow>
+ &lt;strow>
+  &lt;stentry>Frustration&lt;/stentry>
+  &lt;stentry>noun&lt;/stentry>
+  &lt;stentry>What you feel when you drop the widget&lt;/stentry>
+ &lt;/strow>
+&lt;/simpletable></codeblock></dd>
+</dlentry><dlentry>
+<dt>Formatted output:</dt>
+<dd><simpletable keycol="1">
+<sthead>
+<stentry>Term</stentry>
+<stentry>Categorization</stentry>
+<stentry>Definition</stentry>
+</sthead>
+<strow>
+<stentry>Widget</stentry>
+<stentry>noun</stentry>
+<stentry>Thing that is used for something</stentry>
+</strow>
+<strow>
+<stentry>Frustration</stentry>
+<stentry>noun</stentry>
+<stentry>What you feel when you drop the widget</stentry>
+</strow>
+</simpletable></dd>
+</dlentry></dl></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="simpletable_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/relcolwidth">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keycol">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/refcols">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

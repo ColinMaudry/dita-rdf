@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<map title="DITA linking and addressing" xml:lang="en-us">
+ <topicref href="ditalinking.dita" collection-type="sequence">
+  <topicref href="dita-linking-links-within-maps.dita"/>
+  <topicref href="dita-linking-links-within-topics.dita"/>
+ </topicref>
+ <topicref href="ditaaddressing.dita" collection-type="sequence">
+  <topicref href="id.dita"/>
+  <topicref href="uri-based-addressing.dita"/>
+  <topicref href="key-based-addressing.ditamap" format="ditamap"/>
+  <topicref href="dita-linking-link-element-summary.dita"/>
+ </topicref>
+ <?Pub Caret -1?>
+</map>
+<?Pub *0000000711?>

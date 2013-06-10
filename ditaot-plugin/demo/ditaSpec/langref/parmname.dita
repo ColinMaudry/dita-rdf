@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="parmname" xml:lang="en-us">
+<title>parmname</title>
+<shortdesc>When referencing the name of an application programming
+interface parameter within the text flow of your topic, use the parameter
+name (&lt;<keyword>parmname</keyword>&gt;) element to mark up the
+parameter. <ph conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret 166?>
+<prolog><metadata>
+<keywords><indexterm>parmname</indexterm><indexterm>Programming elements<indexterm>parmname</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-parmname/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="parmname-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-parmname/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="parmname-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword pr-d/parmname </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">Use the &lt;parmname&gt;/env&lt;/parmname&gt; parameter of the &lt;cmdname&gt;config&lt;/cmdname&gt; 
+command to update the field value.</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="parmname_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002637?>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="text" xml:lang="en-us">
+<title>text</title>
+<shortdesc>The text element associates no semantics with its content.
+It exists to serve as a container for text where a container is needed
+(e.g., for conref, or for restricted content models in specializations).
+Unlike ph, text cannot contain images. Unlike keyword, text does not
+imply keyword-like semantics. The text element contains only text
+data, or nested text elements. All universal attributes are available
+on text.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>text element</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>For contexts where ph is available, authors should use that
+element. Where keyword is available, authors should use that element.
+Where neither ph nor keyword is available, text can be used to pull
+content by conref.</section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-text/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="text-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-text/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="text-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/text </p></section>
+<example id="example"><title>Example</title><pre>&lt;p>This an example of &lt;keyword>&lt;text id="reuse">Text
+   that is reusable&lt;/text>&lt;/keyword>, with no extra 
+   semantics attached to the text when it is reused.&lt;/p></pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*"><?Pub Caret?>
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

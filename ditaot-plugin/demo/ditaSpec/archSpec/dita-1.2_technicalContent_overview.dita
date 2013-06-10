@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Inc?>
+<concept id="dita-1.2_technicalContent_overview" xml:lang="en-us">
+ <title>Overview of the DITA 1.2 Specification: Technical Content</title>
+ <shortdesc>This section describes the DITA document types and specializations for technical
+  content.</shortdesc>
+ <conbody>
+  <p>Prior to the release of DITA 1.2, the document types and specializations for technical content
+   were included as an integral part of the base DITA specification. With the release of DITA 1.2,
+   the document types and specializations for technical content have a dedicated section in the DITA
+   specification. This change reflects the addition of an increasing number of specializations that
+   are part of the DITA standard. </p>
+  <p>The document types and specializations included in the technical content package and described
+   in this section were designed to meet the requirements of those authoring content for technically
+   oriented products in which the concept, task, and reference information types provide the basis
+   for the majority of the content. These information types are used by technical-communication and
+   information-development organizations that provide procedures-oriented content to support the
+   implementation and use of computer hardware, computer software, and machine-industry content.
+   However, many other organizations producing policies and procedures, multi-component reports, and
+   other business content also use the concept, task, and reference information types as essential
+   to their information models.</p>
+  <p>The DITA 1.2 technical content package includes the following document types and supporting
+   structural specializations and constraints:<ul>
+    <li>Concept document type and structural specialization</li>
+    <li>Reference document type and structural specialization</li>
+    <li>Task document type (general task with the Strict Taskbody Constraint)</li>
+    <li>General task document type and specialization</li>
+    <li>Machinery task document type (general task with the Machinery Taskbody Constraint)</li>
+    <li>Glossary entry (glossentry) document type and structural specialization</li>
+    <li>Glossary group (glossgroup) document type and structural specialization</li>
+    <li>Bookmap document type and structural specialization</li>
+   </ul></p>
+  <p>The DITA technical content package includes the following domain specializations:</p>
+  <ul>
+   <li>Programming elements</li>
+   <li>Software elements</li>
+   <li>User interface elements</li>
+   <li>Task requirements elements</li>
+   <li>Extensible Name and Address Language (xNAL) elements</li>
+   <li>Abbreviated form element</li>
+   <li>Glossary reference (glossref) element</li>
+  </ul>
+  <p>The DITA technical content package includes the following constraint modules:</p>
+  <ul>
+   <li>Strict Taskbody</li>
+   <li>Machinery Taskbody</li>
+  </ul>
+  <p>The technical content document <?Pub Caret?>type shells included in the DITA technical content
+   package use information types included in other packages, and other packages use the information
+   types from the technical content package.</p>
+  <p>The technical content package consists of the technicalContent, machineIndustry, and xnal
+   directories, as well as the map document type but not the base map information types.</p>
+ </conbody>
+</concept>
+<?Pub *0000003339 0?>

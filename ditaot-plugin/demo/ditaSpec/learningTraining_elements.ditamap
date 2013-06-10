@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<map xml:lang="en-us">
+ <title>DITA 1.2: Learning and training elements</title>
+ <!--<mapref href="keys-learningTraining.ditamap" processing-role="resource-only"/>-->
+ <topicref href="common/lc_spec_topics.dita" collection-type="sequence">
+  <topicref href="langref/learningOverview.dita" keys="learningOverview"/>
+  <topicref href="langref/learningOverviewbody.dita" keys="learningOverviewbody"/>
+  <topicref href="langref/learningContent.dita" keys="learningContent"/>
+  <topicref href="langref/learningContentbody.dita" keys="learningContentbody"/>
+  <topicref href="langref/learningSummary.dita" keys="learningSummary"/>
+  <topicref href="langref/learningSummarybody.dita" keys="learningSummarybody"/>
+  <topicref href="langref/learningAssessment.dita" keys="learningAssessment"/>
+  <topicref href="langref/learningAssessmentbody.dita" keys="learningAssessmentbody"/>
+  <topicref href="langref/learningPlan.dita" keys="learningPlan"/>
+  <topicref href="langref/learningPlanbody.dita" keys="learningPlanbody"/>
+  <topicref href="langref/learningBase.dita" keys="learningBase"/>
+  <topicref href="langref/learningBasebody.dita" keys="learningBasebody"/>
+ </topicref>
+ <topicref href="common/lc_spec_learning_map.dita" collection-type="sequence">
+  <topicref href="langref/learningGroup.dita" keys="learningGroup"/>
+  <topicref href="langref/learningObject.dita" keys="learningObject"/>
+  <topicref href="langref/learningPlanRef.dita" keys="learningPlanRef"/>
+  <topicref href="langref/learningPreAssessmentRef.dita" keys="learningPreAssessmentRef"/>
+  <topicref href="langref/learningOverviewRef.dita" keys="learningOverviewRef"/>
+  <topicref href="langref/learningContentRef.dita" keys="learningContentRef"/>
+  <topicref href="langref/learningContentComponentRef.dita" keys="learningContentComponentRef"/>
+  <topicref href="langref/learningSummaryRef.dita" keys="learningSummaryRef"/>
+  <topicref href="langref/learningPostAssessmentRef.dita" keys="learningPostAssessmentRef"/>
+ </topicref>
+ <topicref href="common/lc_spec_interactions_domain.dita" collection-type="sequence">
+  <topicref href="langref/lcInstructornote.dita" keys="lcInstructornote"/>
+  <topicref href="common/lc_spec_interactionBase_domain.dita" collection-type="sequence">
+   <topicref href="langref/lcInteractionBase.dita" keys="lcInteractionBase"/>
+   <topicref href="langref/lcQuestionBase.dita" keys="lcQuestionBase"/>
+   <topicref href="langref/lcOpenQuestion.dita" keys="lcOpenQuestion"/>
+   <topicref href="langref/lcTrueFalse.dita" keys="lcTrueFalse"/>
+   <topicref href="langref/lcSingleSelect.dita" keys="lcSingleSelect"/>
+   <topicref href="langref/lcMultipleSelect.dita" keys="lcMultipleSelect"/>
+   <topicref href="langref/lcSequencing.dita" keys="lcSequencing"/>
+   <topicref href="langref/lcMatching.dita" keys="lcMatching"/>
+   <topicref href="langref/lcHotspot.dita" keys="lcHotspot"/>
+  </topicref>
+ </topicref>
+ <topicref href="common/lc_spec_lom.dita" collection-type="sequence">
+  <topicref href="langref/lcLom.dita" keys="lcLom"/>
+  <topicref href="langref/lomAggregationLevel.dita" keys="lomAggregationLevel"/>
+  <topicref href="langref/lomContext.dita" keys="lomContext"/>
+  <topicref href="langref/lomCoverage.dita" keys="lomCoverage"/>
+  <topicref href="langref/lomDifficulty.dita" keys="lomDifficulty"/>
+  <topicref href="langref/lomInstallationRemarks.dita" keys="lomInstallationRemarks"/>
+  <topicref href="langref/lomIntendedUserRole.dita" keys="lomIntendedUserRole"/>
+  <topicref href="langref/lomInteractivityLevel.dita" keys="lomInteractivityLevel"/>
+  <topicref href="langref/lomInteractivityType.dita" keys="lomInteractivityType"/>
+  <topicref href="langref/lomLearningResourceType.dita" keys="lomLearningResourceType"/>
+  <topicref href="langref/lomOtherPlatformRequirements.dita" keys="lomOtherPlatformRequirements"/>
+  <topicref href="langref/lomSemanticDensity.dita" keys="lomSemanticDensity"/>
+  <topicref href="langref/lomStructure.dita" keys="lomStructure"/>
+  <topicref href="langref/lomTechRequirement.dita" keys="lomTechRequirement"/>
+  <topicref href="langref/lomTypicalAgeRange.dita" keys="lomTypicalAgeRange"/>
+  <topicref href="langref/lomTypicalLearningTime.dita" keys="lomTypicalLearningTime"/>
+ </topicref>
+ <topicref href="common/learning_training_elements_other.dita" collection-type="sequence">
+  <topicref href="common/learning_training_elements_interactions_other.dita"
+   collection-type="sequence">
+   <topicref href="langref/lcAnswerContent.dita" keys="lcAnswerContent"/>
+   <topicref href="langref/lcAnswerOption.dita" keys="lcAnswerOption"/>
+   <topicref href="langref/lcAnswerOptionGroup.dita" keys="lcAnswerOptionGroup"/>
+   <topicref href="langref/lcArea.dita" keys="lcArea"/>
+   <topicref href="langref/lcAreaCoords.dita" keys="lcAreaCoords"/>
+   <topicref href="langref/lcAreaShape.dita" keys="lcAreaShape"/>
+   <topicref href="langref/lcAsset.dita" keys="lcAsset"/>
+   <topicref href="langref/lcCorrectResponse.dita" keys="lcCorrectResponse"/>
+   <topicref href="langref/lcFeedback.dita" keys="lcFeedback"/>
+   <topicref href="langref/lcFeedbackCorrect.dita" keys="lcFeedbackCorrect"/>
+   <topicref href="langref/lcFeedbackIncorrect.dita" keys="lcFeedbackIncorrect"/>
+   <topicref href="langref/lcHotspotMap.dita" keys="lcHotspotMap"/>
+   <topicref href="langref/lcItem.dita" keys="lcItem"/>
+   <topicref href="langref/lcMatchingHeader.dita" keys="lcMatchingHeader"/>
+   <topicref href="langref/lcMatchingItem.dita" keys="lcMatchingItem"/>
+   <topicref href="langref/lcMatchingItemFeedback.dita" keys="lcMatchingItemFeedback"/>
+   <topicref href="langref/lcMatchingPair.dita" keys="lcMatchingPair"/>
+   <topicref href="langref/lcMatchTable.dita" keys="lcMatchTable"/>
+   <topicref href="langref/lcOpenAnswer.dita" keys="lcOpenAnswer"/>
+   <topicref href="langref/lcQuestion.dita" keys="lcQuestion"/>
+   <topicref href="langref/lcSequence.dita" keys="lcSequence"/>
+   <topicref href="langref/lcSequenceOption.dita" keys="lcSequenceOption"/>
+   <topicref href="langref/lcSequenceOptionGroup.dita" keys="lcSequenceOptionGroup"/>
+  </topicref>
+  <topicref href="common/learning_training_elements_topics_other.dita" collection-type="sequence">
+   <topicref href="langref/lcAge.dita" keys="lcAge"/>
+   <topicref href="langref/lcAssessment.dita" keys="lcAssessment"/>
+   <topicref href="langref/lcAttitude.dita" keys="lcAttitude"/>
+   <topicref href="langref/lcAudience.dita" keys="lcAudience"/>
+   <topicref href="langref/lcBackground.dita" keys="lcBackground"/>
+   <topicref href="langref/lcChallenge.dita" keys="lcChallenge"/>
+   <topicref href="langref/lcCIN.dita" keys="lcCIN"/>
+   <topicref href="langref/lcClassroom.dita" keys="lcClassroom"/>
+   <topicref href="langref/lcClient.dita" keys="lcClient"/>
+   <topicref href="langref/lcConstraints.dita" keys="lcConstraints"/>
+   <topicref href="langref/lcDelivDate.dita" keys="lcDelivDate"/>
+   <topicref href="langref/lcDelivery.dita" keys="lcDelivery"/>
+   <topicref href="langref/lcDownloadTime.dita" keys="lcDownloadTime"/>
+   <topicref href="langref/lcDuration.dita" keys="lcDuration"/>
+   <topicref href="langref/lcEdLevel.dita" keys="lcEdLevel"/>
+   <topicref href="langref/lcFileSizeLimitations.dita" keys="lcFileSizeLimitations"/>
+   <topicref href="langref/lcGapAnalysis.dita" keys="lcGapAnalysis"/>
+   <topicref href="langref/lcGapItem.dita" keys="lcGapItem"/>
+   <topicref href="langref/lcGapItemDelta.dita" keys="lcGapItemDelta"/>
+   <topicref href="langref/lcGeneralDescription.dita" keys="lcGeneralDescription"/>
+   <topicref href="langref/lcGoals.dita" keys="lcGoals"/>
+   <topicref href="langref/lcGraphics.dita" keys="lcGraphics"/>
+   <topicref href="langref/lcHandouts.dita" keys="lcHandouts"/>
+   <topicref href="langref/lcInstruction.dita" keys="lcInstruction"/>
+   <topicref href="langref/lcInteraction.dita" keys="lcInteraction"/>
+   <topicref href="langref/lcIntervention.dita" keys="lcIntervention"/>
+   <topicref href="langref/lcInterventionItem.dita" keys="lcInterventionItem"/>
+   <topicref href="langref/lcIntro.dita" keys="lcIntro"/>
+   <topicref href="langref/lcJtaItem.dita" keys="lcJtaItem"/>
+   <topicref href="langref/lcKnowledge.dita" keys="lcKnowledge"/>
+   <topicref href="langref/lcLearnStrat.dita" keys="lcLearnStrat"/>
+   <topicref href="langref/lcLMS.dita" keys="lcLMS"/>
+   <topicref href="langref/lcModDate.dita" keys="lcModDate"/>
+   <topicref href="langref/lcMotivation.dita" keys="lcMotivation"/>
+   <topicref href="langref/lcNeeds.dita" keys="lcNeeds"/>
+   <topicref href="langref/lcNeedsAnalysis.dita" keys="lcNeedsAnalysis"/>
+   <topicref href="langref/lcNextSteps.dita" keys="lcNextSteps"/>
+   <topicref href="langref/lcNoLMS.dita" keys="lcNoLMS"/>
+   <topicref href="langref/lcObjective.dita" keys="lcObjective"/>
+   <topicref href="langref/lcObjectives.dita" keys="lcObjectives"/>
+   <topicref href="langref/lcObjectivesGroup.dita" keys="lcObjectivesGroup"/>
+   <topicref href="langref/lcObjectivesStem.dita" keys="lcObjectivesStem"/>
+   <topicref href="langref/lcOJT.dita" keys="lcOJT"/>
+   <topicref href="langref/lcOrganizational.dita" keys="lcOrganizational"/>
+   <topicref href="langref/lcOrgConstraints.dita" keys="lcOrgConstraints"/>
+   <topicref href="langref/lcPlanAudience.dita" keys="lcPlanAudience"/>
+   <topicref href="langref/lcPlanDescrip.dita" keys="lcPlanDescrip"/>
+   <topicref href="langref/lcPlanObjective.dita" keys="lcPlanObjective"/>
+   <topicref href="langref/lcPlanPrereqs.dita" keys="lcPlanPrereqs"/>
+   <topicref href="langref/lcPlanResources.dita" keys="lcPlanResources"/>
+   <topicref href="langref/lcPlanSubject.dita" keys="lcPlanSubject"/>
+   <topicref href="langref/lcPlanTitle.dita" keys="lcPlanTitle"/>
+   <topicref href="langref/lcPlayers.dita" keys="lcPlayers"/>
+   <topicref href="langref/lcPrereqs.dita" keys="lcPrereqs"/>
+   <topicref href="langref/lcProcesses.dita" keys="lcProcesses"/>
+   <topicref href="langref/lcProject.dita" keys="lcProject"/>
+   <topicref href="langref/lcResolution.dita" keys="lcResolution"/>
+   <topicref href="langref/lcResources.dita" keys="lcResources"/>
+   <topicref href="langref/lcReview.dita" keys="lcReview"/>
+   <topicref href="langref/lcSecurity.dita" keys="lcSecurity"/>
+   <topicref href="langref/lcSkills.dita" keys="lcSkills"/>
+   <topicref href="langref/lcSpecChars.dita" keys="lcSpecChars"/>
+   <topicref href="langref/lcSummary.dita" keys="lcSummary"/>
+   <topicref href="langref/lcTask.dita" keys="lcTask"/>
+   <topicref href="langref/lcTaskItem.dita" keys="lcTaskItem"/>
+   <topicref href="langref/lcTechnical.dita" keys="lcTechnical"/>
+   <topicref href="langref/lcTime.dita" keys="lcTime"/>
+   <topicref href="langref/lcValues.dita" keys="lcValues"/>
+   <topicref href="langref/lcViewers.dita" keys="lcViewers"/>
+   <topicref href="langref/lcW3C.dita" keys="lcW3C"/>
+   <topicref href="langref/lcWorkEnv.dita" keys="lcWorkEnv"/>
+   <topicref href="langref/lcWorkEnvDescription.dita" keys="lcWorkEnvDescription"/>
+  </topicref>
+ </topicref>
+</map>
+<?Pub *0000009138?>

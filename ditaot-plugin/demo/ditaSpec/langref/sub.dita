@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="sub" xml:lang="en-us">
+<title>sub</title>
+<shortdesc>A subscript (&lt;<keyword>sub</keyword>&gt;) indicates
+that text should be subscripted, or placed lower in relationship to
+the surrounding text.  Subscripted text is often a smaller font than
+the surrounding text. Formatting may vary depending on your output
+process. <ph conref="b.dita#b/highlight-caution"></ph></shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>sub (subscript)</indexterm><indexterm>subscript
+(sub)</indexterm><indexterm>Typographic elements<indexterm>sub (subscript)</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-sub/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="sub-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-sub/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="sub-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/ph hi-d/sub </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">The power produced by the electrohydraulic dam was 10&lt;sup&gt;10&lt;/sup&gt; more than 
+the older electric plant.  The difference was H<b>&lt;sub&gt;</b>2<b>&lt;/sub&gt;</b>O.</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="sub_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002745?>

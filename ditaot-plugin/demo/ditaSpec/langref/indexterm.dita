@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="indexterm" xml:lang="en-us">
+<title>indexterm</title>
+<shortdesc>The content of an &lt;<keyword>indexterm</keyword>> element
+is used to produce an index entry in the generated index. You can
+nest indexterm elements to create multi-level indexes. The content
+is not output as part of the topic content, only as part of the index.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>indexterm</indexterm><indexterm>Miscellaneous
+elements<indexterm>indexterm</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>An &lt;indexterm&gt; element (with no start or end attribute
+specified) is interpreted as a point reference that will contribute
+the number of the current page to an index entry whose contents is
+the content of the indexterm. All indexterms with the same content
+are "merged" to form a single index entry in the resulting index,
+and all contributed page numbers are included in that index entry.</p><p>In
+the case of nested indexterms, the indexterms with no indexterm children
+(i.e., the "leaves") each contribute a page number to the generated
+index; the ancestral indexterm elements for each leaf indexterm provide
+the higher levels for the multilevel entry.</p><p>An indexterm that
+occurs in a topic prolog is interpreted as a point reference to the
+title of the topic. Likewise, an indexterm that occurs in &lt;topicmeta>
+inside of a &lt;topicref> is interpreted as a point reference to the
+title of the referenced topic.</p><p>It is an error if an indexterm
+containing no indexterm children contains both an index-see and an
+index-see-also.  (Note: index-see and index-see-also elements within
+indexterms that do contain indexterm children are ignored.)  In the
+case of this error condition, an implementation may (but need  not)
+give an error message, and may (but need not) recover by treating
+all such index-see elements as index-see-also  elements.</p><note>The
+index-see and index-see-also elements are domain specializations of
+the &lt;index-base> element, and are discussed in detail with the
+indexing domain.</note></section>
+<section><p>The start and end attribute on indexterm can
+be used in cases where one wants to index an extended discussion that
+may continue over a number of pages. The start of a range is indicated
+by an indexterm with a start attribute. The end of a range is indicated
+with an indexterm with an end attribute whose value matches that of
+the start attribute on the start-of-range indexterm. Such markup contributes
+to the generated index a page range covering all pages in the index
+range. </p><p>The end-of-range indexterm should have no content of
+its own; if it contains content, that content is ignored. There is
+no reason for the end-of-range indexterm to have any indexterm ancestors;
+however, an implementation should be able to handle an end-of-range
+indexterm that is nested within one or more indexterms.</p><p>The
+start and end attributes are defined as CDATA, though it is recommended
+that the values should not contain any whitespace characters (e.g.,
+space or tab) or control characters. Matching of start and end attributes
+is done as a character-by-character comparison with all characters
+significant and no case folding occurring. The start and end attributes
+are ignored if they occur on an indexterm element that has child indexterm
+elements.</p><p>Index range indications may occur in the topicmeta
+of a topicref at the map level, in the prolog of a topic, or in the
+body of a topic, and are interpreted as follows (see <xref
+href="#indexterm/ranges" type="fig"></xref> for samples):<ul>
+<li>In a map, the start range points to the start of the topic title
+of the topic being referenced by its containing topicref. The end
+range points to the end of the final child contained by the topic
+being referenced by its containing topicref, or to the end of the
+final topic referenced by the current map (whichever comes first).
+When a start and end range occur in the same topicmeta, the range
+applies to the containing topicref and its children.</li>
+<li>In the prolog of a topic, the start range points to the start
+of the containing topic's title. The range ends with a matching index
+range end in the same prolog, regardless of whether the end range
+is specified. The range applies to the containing topic and all its
+children including child relationships defined in a map.</li>
+<li>In the body of a topic, the range starts where the start indexterm
+occurs and ends at the matching index range end indication within
+the same body, or at the end of the body, whichever comes first. Such
+an index range does not span sub-topics of the topic.</li>
+</ul></p><p>When index ranges with the same identifier overlap, the
+widest range applies, and end ranges are matched with start ranges
+by last-in-first-out. In other words, the ranges are interpreted as
+nested rather than overlapping with the highest-level container taking
+precedence over narrower contained ranges.</p><p>As defined above,
+there is no such thing as an index range start that isn't terminated
+by either a matching end or some maximum scope. There can, however,
+be unmatched index range end indications; these should be ignored.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-indexterm/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="indexterm-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-indexterm/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="indexterm-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/indexterm </p></section>
+<example id="example"><title>Example</title><fig><title>Single
+point index terms</title>
+<ul>
+<li>The following index term is a point reference to a specific paragraph
+within a topic: <codeblock>&lt;p>&lt;indexterm>databases&lt;/indexterm>Databases are used to ...&lt;/p></codeblock></li>
+<li>The following index term is a point reference to the start of
+the title of the concept:<codeblock>&lt;concept id="db">
+  &lt;title>About databases&lt;/title>
+  &lt;prolog>
+    &lt;metadata>
+      &lt;keywords>&lt;indexterm>databases&lt;/indexterm>&lt;/keywords>
+    &lt;/metadata>
+  &lt;/prolog>
+  &lt;body>&lt;!-- content... -->&lt;/body>
+&lt;/concept></codeblock></li>
+<li>The following index term is a point reference to the start of
+the title of aboutdatabases.dita:<codeblock>&lt;topicref href="aboutdatabases.dita">
+  &lt;topicmeta>
+    &lt;keywords>&lt;indexterm>databases&lt;/indexterm>&lt;/keywords>
+  &lt;/topicmeta>
+  &lt;!-- other topicref elements -->
+&lt;/topicref></codeblock></li>
+</ul>
+</fig><fig><title>Nested index terms</title>
+<p>The following sample represents three levels of index markup:<codeblock>&lt;indexterm>cheese
+  &lt;indexterm>sheeps milk
+    &lt;indexterm>pecorino&lt;/indexterm>
+  &lt;/indexterm>
+  &lt;indexterm>goats milk
+    &lt;indexterm>chevre&lt;/indexterm>
+  &lt;/indexterm>
+&lt;/indexterm></codeblock></p>
+<p>The previous sample is equivalent to the following sample:<codeblock
+xml:space="preserve">&lt;indexterm>cheese
+  &lt;indexterm>sheeps milk
+    &lt;indexterm>pecorino&lt;/indexterm>
+  &lt;/indexterm>
+&lt;/indexterm>
+&lt;indexterm>cheese
+  &lt;indexterm>goats milk
+    &lt;indexterm>chevre&lt;/indexterm>
+  &lt;/indexterm>
+&lt;/indexterm></codeblock></p>
+<p>In each case, a generated index would include something like the
+this:<ul>
+<li>cheese<ul>
+<li>goats milk<ul>
+<li>chevre 14</li>
+</ul></li>
+</ul><ul>
+<li>sheeps milk<ul>
+<li>pecorino 14</li>
+</ul></li>
+</ul></li>
+</ul></p>
+</fig><fig id="ranges"><title>Index ranges</title>
+<p>A simple index range will look something like this:<codeblock>&lt;indexterm start="cheese">Cheese&lt;/indexterm>
+&lt;!-- ... additional content -->
+&lt;indexterm end="cheese"/></codeblock></p>
+<p>The previous combination of terms will generate a top-level index
+term for "Cheese" that covers a series of pages, such as:<ul>
+<li>Cheese 18-24</li>
+</ul></p>
+<p>Specifying a range for nested terms is similar. In this sample,
+the range is specified for the tertiary index entry "pecorino":<codeblock>&lt;indexterm>cheese
+  &lt;indexterm>sheeps milk
+    &lt;indexterm start="level-3-pecorino">pecorino&lt;/indexterm>
+  &lt;/indexterm>
+&lt;/indexterm>
+ &lt;!-- ... additional content ... -->
+&lt;indexterm end="level-3-pecorino"/></codeblock></p>
+<p>The generated index for that range would look something like this: <ul>
+<li>cheese<ul>
+<li>sheeps milk<ul>
+<li>pecorino 18-24</li>
+</ul></li>
+</ul></li>
+</ul></p><?Pub Caret 13?>
+<p>There are three locations that may declare a range - the body of
+a topic, the prolog of a topic, and a map.</p>
+<ul>
+<li>In the following example, the range begins at the start of the
+second paragraph, and continues to the last paragraph. If the matching
+end range was not included, the range would end at the end of the
+body element.<codeblock>&lt;topic id="accounting">
+  &lt;title>Accounting regulations&lt;/title>
+  &lt;body>
+    &lt;p>Be ethical in your accounting.&lt;/p>
+    &lt;p>&lt;indexterm start="acctrules">Rules&lt;/indexterm>Remember to do all of the following: ...&lt;/p>
+    &lt;!-- ...pages worth of rules... -->
+    &lt;p>&lt;indexterm end="acctrules"/>Failure to comply will get you audited.&lt;/p>
+  &lt;/body>
+  &lt;!-- Potential sub-topics -->
+&lt;/topic></codeblock></li>
+<li>In the following example, the range begins with the start of the
+topic&apos;s title, and covers the entire topic and any sub-topics.
+The range ends within the same prolog, regardless of whether <codeph>&lt;indexterm
+end="acct"/></codeph> is specified in the prolog.<codeblock>&lt;topic id="accounting">
+  &lt;title>Accounting rugulations&lt;/title>
+  &lt;prolog>
+    &lt;metadata>
+      &lt;keywords>&lt;indexterm start="acct">Accounting&lt;/indexterm>&lt;/keywords>
+    &lt;/metadata>
+  &lt;/prolog>
+  &lt;!-- Body and sub-topics -->
+&lt;/topic></codeblock></li>
+<li>Now assume that the topic in the previous sample is named acct.dita.
+Ranges defined in a prolog cover sub-topics, including those nested
+based on a map; in the following example, this means that the range
+covers all of acct.dita, as well as procedures.dita and forms.dita:<codeblock>&lt;topicref href="acct.dita">
+  &lt;topicref href="procedures.dita"/>
+  &lt;topicref href="forms.dita"/>
+&lt;/topicref></codeblock></li>
+<li>In the final example, the range is specified in a map. The index
+range for "Accounting" begins with the start of the first topic title
+in acct.dita, and covers that file as well as any sub-topics. The
+index range for "Government forms" begins with the start of the first
+topic title in acct.dita, and continues until the end of the last
+element in the file taxfiling.dita. If the end range for "govt" was
+not specified, the range would continue to the end of the map.<codeblock>&lt;topicref href="acct.dita">
+  &lt;topicmeta>
+    &lt;keywords>
+      &lt;indexterm start="acct">Accounting&lt;/indexterm>
+      &lt;indexterm end="acct"/>
+      &lt;indexterm start="govt">Government forms&lt;/indexterm>
+    &lt;/keywords>
+  &lt;/topicmeta>
+  &lt;!-- Nested topicref elements -->
+&lt;/topicref>
+&lt;topicref href="taxfiling.dita">
+  &lt;topicmeta>
+    &lt;keywords>
+      &lt;indexterm end="govt"/>
+    &lt;/keywords>
+  &lt;/topicmeta>
+&lt;/topicref></codeblock></li>
+</ul>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="indexterm_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/start">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/end">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000013301?>

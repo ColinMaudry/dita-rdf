@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="taskbody" xml:lang="en-us">
+<title>taskbody</title>
+<shortdesc>The &lt;<keyword>taskbody</keyword>&gt; element is the
+main body-level element inside a task topic. A task body is designed
+to contain information specific to completing a task, such as prerequisites,
+contextual information, and steps. <ph>DITA 1.2 introduces
+a much looser &lt;taskbody> content model in order to allow for more
+variations in the structure of a task. A constraint module is also
+provided in order to maintain compatibility with the previous strict
+model; this constraint is used in the default task distributed by
+OASIS.</ph><!--<ph>With DITA 1.2, the content model of taskbody is looser
+to accommodate additional task structures. OASIS provides a DITA constraint
+that mimics the previous tight content model so that users continue
+to have easy access to the strict model.</ph>--></shortdesc><?Pub
+Caret 508?>
+<prolog><metadata>
+<keywords><indexterm>taskbody</indexterm><indexterm>Task elements<indexterm>taskbody</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="constrained-task-note"><note
+id="constrained-taskbody-xpl">Beginning with DITA 1.2, there are two
+task models available in the DTD and Schema packages distributed by
+OASIS. One model, referred to as the general task, allows two additional
+elements inside the task body (&lt;section> and &lt;steps-informal>);
+it also allows multiple instances and orders for each element within &lt;taskbody>.
+The second model, referred to as the strict task, maintains the order
+and cardinality of the DITA 1.0 and 1.1 taskbody. This strict task
+is implemented in the DTD and Schema with a constraint module.</note><p>Authors
+that use the default task DTD or Schema provided by OASIS will continue
+to see the strict task model when upgrading to DITA 1.2. Authors wishing
+to use the general task model will need to migrate their DITA 1.1
+documents to reference the general task DTD or Schema.</p><p>DITA
+document type shells that include the task module as-is, or that specialize
+the &lt;task> element without specializing &lt;taskbody>, will also
+need to include the strict taskbody constraint module in order to
+maintain the order and cardinality of prior DITA versions.</p><p>Task
+specializations that specialize the &lt;taskbody> element will not
+be affected by the new model, although they may be updated as needed
+to take advantage of the new elements.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-taskbody/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="taskbody-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-taskbody/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="taskbody-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/body task/taskbody </p></section>
+<example id="example"><title>Example</title>See <xref href="task.dita"></xref>.</example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="taskbody_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004781?>

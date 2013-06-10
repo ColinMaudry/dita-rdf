@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="featnum" xml:lang="en-us"><title>featnum</title><shortdesc>The &lt;<keyword>featnum</keyword>&gt; element contains the feature
+number of a product in the metadata.</shortdesc><prolog><metadata><keywords><indexterm>featnum (product feature number)</indexterm><indexterm>feature
+number (featnum)</indexterm><indexterm>Prolog elements<indexterm>featnum</indexterm></indexterm></keywords></metadata></prolog><refbody><section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-featnum/contains" otherprops="contains"><title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="featnum-contains"/></p></section><section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-featnum/containedby" otherprops="containedby"><title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="featnum-contained-by"/></p></section><section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>- topic/featnum </p></section><example id="example"><title>Example</title><pre xml:space="preserve">&lt;prodinfo&gt;
+ &lt;prodname&gt;BatCom&lt;/prodname&gt;
+ &lt;vrmlist&gt;
+  &lt;vrm version="v5r2"/&gt;
+ &lt;/vrmlist&gt;
+ <b>&lt;featnum&gt;</b>135<b>&lt;/featnum&gt;</b>
+ &lt;component&gt;TCP/IP&lt;/component&gt;
+&lt;/prodinfo&gt;
+</pre></example><section id="attributes"><title>Attributes</title><simpletable id="featnum_attr" relcolwidth="2* 3* 1* 1* 1*"><sthead><stentry>Name</stentry><stentry>Description</stentry><stentry>Data Type</stentry><stentry>Default Value</stentry><stentry>Required?</stentry></sthead><strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts"><stentry/><stentry/><stentry/><stentry/><stentry/></strow><strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts"><stentry/><stentry/><stentry/><stentry/><stentry/></strow><strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly"><stentry/><stentry/><stentry/><stentry/><stentry/></strow></simpletable></section></refbody></reference>

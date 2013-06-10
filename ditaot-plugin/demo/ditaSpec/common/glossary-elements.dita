@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="glossary-elements" xml:lang="en-us">
+<title>Glossary elements</title>
+<shortdesc>Glossary elements include those elements designed to specify
+terms and their definitions, as well as elements that are designed
+to group, reference, or otherwise make use of information in the glossentry
+topic.</shortdesc><?Pub Caret -1?>
+</concept>
+<?Pub *0000000519?>

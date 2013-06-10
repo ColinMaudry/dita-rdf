@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="mitask-d" xml:lang="en-us">
+<title>Task requirements domain</title>
+<shortdesc>The task requirements domain contains elements for use
+in describing tasks that involve machines or other pieces of hardware.</shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>Machine industry task</indexterm></keywords>
+</metadata></prolog>
+<conbody></conbody>
+</concept>
+<?Pub *0000000558?>

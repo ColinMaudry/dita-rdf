@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="prelreqs" xml:lang="en-us">
+<title>prelreqs</title>
+<shortdesc> The &lt;<keyword>prelreqs</keyword>&gt; element contains
+information about preliminary requirements – the things the user needs
+to know or do before starting a task. This element contains information
+about personnel requirements, safety conditions, support equipment,
+supplies, and spare parts.</shortdesc><?Pub Caret 46?>
+<prolog><metadata>
+<keywords><indexterm>prelreqs</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-prelreqs/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="prelreqs-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-prelreqs/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="prelreqs-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/section task/prereq mitask-d/prelreqs </p></section>
+<example id="example"><title>Example</title> <codeblock>&lt;prelreqs&gt;
+ &lt;reqconds&gt;
+  &lt;reqcond&gt;Rear Oil Seal replacement&lt;/reqcond&gt;
+  &lt;reqcontp&gt;Motor Oil Guide&lt;/reqcontp&gt;
+ &lt;/reqconds&gt;
+ &lt;reqpers&gt;
+  &lt;personnel&gt;2&lt;/personnel&gt;
+  &lt;perscat&gt;Mechanic&lt;/perscat&gt;
+  &lt;perskill&gt;Expert&lt;/perskill&gt;
+  &lt;esttime&gt;2 hours&lt;/esttime&gt;
+ &lt;/reqpers&gt;
+ &lt;supequip&gt;
+  &lt;supeqli&gt;
+   &lt;supequi&gt;Driver handle&lt;/supequi&gt;
+   &lt;supequi&gt;Slide hammer&lt;/supequi&gt;
+   &lt;supequi&gt;Axle seal installer&lt;/supequi&gt;
+  &lt;/supeqli&gt;
+&lt;/supequip&gt;
+&lt;supplies&gt;
+ &lt;nosupply/&gt;
+&lt;/supplies&gt;
+&lt;spares&gt;
+ &lt;sparesli&gt;
+  &lt;spare&gt;dipstick&lt;/spare&gt;
+  &lt;spare&gt;engine oil&lt;/spare&gt;
+ &lt;/sparesli&gt;
+&lt;/spares&gt;
+&lt;safety&gt;
+ &lt;safecond&gt;All personnel shall wear safety shoes and protective 
+ clothing to reduce the chance of injury.&lt;/safecond&gt;
+&lt;/safety&gt;
+&lt;/prelreqs&gt;
+</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003617?>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="delayconref" xml:lang="en-us"><?Pub Caret1?>
+<title>Delayed conref resolution elements</title>
+<shortdesc>The delayed conref resolution domain provides several elements
+for use when using DITA in situations that enable delayed or run time
+resolution of conref. The elements allow users to resolve some conref
+values statically, while delaying others for later resolution.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Domains elements<indexterm>indexing domain</indexterm></indexterm>
+<indexterm>Indexing domain elements</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p
+conref="../langref/exportanchors.dita#exportanchors/disclaimer"></p></section>
+</refbody>
+</reference>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="mapgroup" xml:lang="en-us">
+<title>Map group elements</title>
+<shortdesc>The map group domain elements define, group,
+or reference content. Many of the map group elements are convenience
+elements, which means that they simply make it easier for an author
+to make use of existing functions.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Domains elements<indexterm>mapgroup domain</indexterm></indexterm>
+<indexterm>Mapgroup elements</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section> <p>For example, the &lt;topichead> element allows
+a map to specify a heading without allowing a reference to a topic.
+While a &lt;topicref> element may accomplish the same thing by creating
+a title and leaving off the href attribute, the &lt;topichead> element
+simply makes the intent clearer and prevents the accidental inclusion
+of an href attribute.</p> </section>
+</refbody><?Pub Caret -2?>
+</reference>
+<?Pub *0000001339?>

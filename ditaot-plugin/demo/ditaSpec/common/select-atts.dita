@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference
+  id="select-atts"
+  xml:lang="en-us">
+  <title>select-atts attribute group</title>
+  <shortdesc>The "select-atts" attribute group includes common metadata attributes, several of
+    which support conditional processing (filtering and flagging) or the creation of new attribute
+    domain specializations.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>%select-atts</indexterm><indexterm>Commonly referenced attribute
+            descriptions<indexterm>%select-atts</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <?Pub Caret -2?>
+  <refbody><section>
+      <title>Attributes</title>
+      <simpletable
+        id="selectatts"
+        relcolwidth="3* 6* 2* 2* 2*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/props">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/base">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/platform">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/product">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/audience">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/otherprops">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/importance">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/rev">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="commonLRdefs.dita#commonLRdefs/status">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section>
+    <example>
+      <title>Example</title>
+      <p>The "select-atts" attribute group is used within the DITA DTDs and Schemas as a common
+        definition for attributes available to most elements for you to enable the content for
+        improved retrievability or for selection. Some typical examples include:</p>
+      <codeblock>The &lt;keyword platform=&quot;Linux&quot;&gt;chmod&lt;/keyword&gt; command...
+
+&lt;ph product=&quot;WhiteknuckleHandsoap&quot;&gt;Amalgamated Cleansers get the grime!&lt;/ph&gt;
+
+&lt;msgph audience=&quot;programmer administrator&quot;&gt;Divide by -1 error.&lt;/msgph&gt;
+
+&lt;ph otherprops=&quot;java&quot;&gt;When using Java, use 
+  &lt;apiname&gt;com.example.obscureclass&lt;/apiname&gt; to calculate the value.&lt;/ph&gt;
+
+&lt;p importance=&quot;recommended&quot; rev=&quot;3.2&quot;&gt;Update anti-virus software often.&lt;/p&gt;</codeblock>
+      <p>Note that, aside from those with pre-defined values, these attributes allow multiple
+        values. For example, the audience attribute in the example indicates that the message is of
+        interest to both programmers and administrators.</p>
+    </example>
+  </refbody>
+  <related-links>
+    <link
+      href="../archSpec/condproc.dita"/>
+    <link
+      href="../archSpec/specialize.dita" rev="public-review-1"/>
+    <link
+      href="../archSpec/dtdAttributeDomainCodingReq.dita"/>
+  </related-links>
+</reference>
+<?Pub *0000003964?>

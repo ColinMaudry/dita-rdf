@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="bodydiv" xml:lang="en-us">
+<title>bodydiv</title>
+<shortdesc>The &lt;<keyword>bodydiv</keyword>> element is used to
+contain informal blocks of information within the body of a topic.
+The bodydiv element is specifically designed to be a grouping element,
+without any explicit semantics, other than to organize subsets of
+content into logical groups that are not intended or should not be
+contained as a topic. As such, it does not contain an explicit title
+to avoid enabling the creation of deeply nested content that would
+otherwise be written as separate topics. Content that requires a title
+should use a section element or a nested topic.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>bodydiv</indexterm><indexterm>Topic elements<indexterm>bodydiv</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The bodydiv element may nest itself, which means that it
+may be used by specializers to create structured information within
+a body. Another common use case for the bodydiv element is to group
+a sequence of related elements for reuse, so that another topic may
+reference the entire set with a single conref attribute.</section><?Pub
+Caret 33?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-bodydiv/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="bodydiv-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-bodydiv/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="bodydiv-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/bodydiv </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;topic id="sample" xml:lang="en">
+ &lt;title>Sample for bodydiv&lt;/title>
+ &lt;body>
+  &lt;bodydiv id="div">
+   &lt;p>This set of information is reusable as a group.&lt;/p>
+   &lt;p>Lists of three contain three items.&lt;/p>
+   &lt;ul>
+    &lt;li>This is one item.&lt;/li>
+    &lt;li>This is another item.&lt;/li>
+    &lt;li>This is the third item.&lt;/li>
+   &lt;/ul>
+  &lt;/bodydiv>
+  &lt;p>This concludes my topic.&lt;/p>
+ &lt;/body>
+&lt;/topic></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="bodydiv_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003577?>

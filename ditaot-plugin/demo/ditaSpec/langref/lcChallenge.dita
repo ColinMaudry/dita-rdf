@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcChallenge" xml:lang="en-us">
+	<title>lcChallenge</title>
+	<shortdesc>The &lt;<keyword>lcChallenge</keyword>&gt; refers to what it is that you want the student to practice. For example, if you're studying network diagrams, and challenge might be "see if you can put this network into its proper sequence" or "see if you understand this network flow".</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcChallenge</indexterm>
+<indexterm>learning and training elements<indexterm>lcChallenge</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcChallenge/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcChallenge-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcChallenge/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcChallenge-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section learningBase/lcChallenge </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningContent id=&quot;overview&quot;&gt;
+  &lt;title&gt;Learning Content topic&lt;/title&gt;
+  &lt;learningContentbody&gt;
+    &lt;lcChallenge&gt;&lt;title&gt;Challenge&lt;/title&gt;
+	&lt;p&gt;Describe the challenge.&lt;/p&gt;
+   &lt;/lcChallenge&gt;  
+  &lt;/learningContentbody&gt;
+&lt;/learningContent&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcSpecTitle_univ_global_classandout_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow id="spectitle">
+<stentry>spectitle</stentry>
+<stentry>The specialized title attribute allows architects of specialized
+types to define a fixed or default title for a specialized element.
+Not intended for direct use by authors.<indexterm id="att-spectitle">spectitle
+attribute</indexterm></stentry>
+<stentry>CDATA</stentry>
+<stentry>#IMPLIED</stentry>
+<stentry>No</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>	
+
+	</refbody>
+</reference>

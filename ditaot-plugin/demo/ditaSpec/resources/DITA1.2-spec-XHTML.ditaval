@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+    <prop att='otherprops' val='containedby' action='include' />
+    <prop att='otherprops' val='contains' action='include' />
+    <prop att='otherprops' val='inheritance' action='include' />
+    <prop att='otherprops' val='oasis-cover' action='include' />
+</val>

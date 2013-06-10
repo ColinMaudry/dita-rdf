@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="recognizedconstraintmechanisms" xml:lang="en-us">
+  <title>Recognized XML document constraint mechanisms</title>
+  <shortdesc>The DITA standard currently recognizes two XML document grammar mechanisms by which
+    conforming DITA vocabulary modules and document types may be constructed: document type
+    declarations (DTDs) and XML Schema declarations (XSDs).</shortdesc>
+  <?Pub Caret1?>
+  <conbody>
+    <p>This specification defines implementation requirements for both of these document constraint
+      mechanisms. The OASIS  DITA Technical Committee recognizes that other XML grammar languages
+      might provide similar modularity and extensibility mechanisms. However, the Technical
+      Committee has not yet defined implementation requirements for those languages so their
+      conformance cannot be determined.</p>
+  </conbody>
+</concept>
+<?Pub *0000001134?>

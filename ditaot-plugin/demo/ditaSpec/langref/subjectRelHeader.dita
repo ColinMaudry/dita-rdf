@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="subjectRelHeader" xml:lang="en-us">
+<title>subjectRelHeader</title>
+<shortdesc>The &lt;<keyword>subjectRelHeader</keyword>> element specifies
+the roles played by subjects in associations.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>subjectRelHeader</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>You use the <keyword>subjectRelHeader</keyword><?Pub Caret?> element
+to supply a header row for a subject relationship table when you want
+to identify the roles played by the subjects in each column. Each
+cell in the header row identifies a subject topic that defines a role.
+When specializing the <keyword>subjectRelTable</keyword> element,
+you can accomplish the same purpose by specializing the cells within
+the rows to enforce the roles.</section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-subjectRelHeader/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="subjectRelHeader-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-subjectRelHeader/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model       information is located here: <xref
+keyref="subjectRelHeader-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/relrow subjectScheme/subjectRelHeader </p></section>
+<example conref="subjectRelTable.dita#subjectRelTable/example"
+id="example"></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="relrow_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

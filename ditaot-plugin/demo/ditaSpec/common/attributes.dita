@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="attributes" xml:lang="en-us">
+<title>Attributes</title>
+<shortdesc>Many DITA attributes are reused in groups or are too complex
+to describe in the usual table cell format. Those attributes are collected
+in this section.</shortdesc><?Pub Caret -1?>
+<refbody></refbody>
+</reference>
+<?Pub *0000000690?>

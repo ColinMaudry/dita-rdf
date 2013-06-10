@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="critdates" xml:lang="en-us">
+  <title>critdates</title>
+  <shortdesc>The &lt;<keyword>critdates</keyword>> element contains the critical dates in a document
+    life cycle, such as the creation date and multiple revision dates.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>critdates (critical dates)</indexterm><indexterm>critical dates
+          (critdates)</indexterm><indexterm>Prolog elements<indexterm
+          >critdates</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody><section>
+      <p>This element is equivalent to the Date element in Dublin Core.</p>
+    </section><section id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-critdates/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref keyref="critdates-contains"/></p>
+    </section><section id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-critdates/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref keyref="critdates-contained-by"/></p>
+    </section><section id="inheritance" otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>- topic/critdates </p>
+    </section>
+    <example id="example">
+      <title>Example</title>
+      <codeblock xml:space="preserve">&lt;prolog&gt;
+  &lt;critdates&gt;
+    &lt;created date="2001-06-12"&gt;&lt;/created&gt;
+    &lt;revised modified="2001-08-20"&gt;&lt;/revised&gt;
+  &lt;/critdates&gt;
+&lt;/prolog&gt;</codeblock>
+    </example>
+    <section id="attributes">
+      <title>Attributes</title>
+      <simpletable id="critdates_attr" relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section></refbody>
+</reference>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="prolog" xml:lang="en-us">
+<title>prolog</title>
+<shortdesc>The &lt;<keyword>prolog</keyword>&gt; element contains
+information about the topic as an whole (for example, author information
+or subject category) that is either entered by the author or maintained
+by a software application. Much of the metadata inside the &lt;<keyword>prolog</keyword>&gt;
+will not be displayed with the topic when the topic is rendered, but
+may be used by processes that generate search indexes or customize
+navigation.</shortdesc><?Pub Caret 202?>
+<prolog><metadata>
+<keywords><indexterm>prolog</indexterm><indexterm>Prolog elements<indexterm>prolog</indexterm></indexterm>
+<indexterm>metadata</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-prolog/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="prolog-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-prolog/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="prolog-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/prolog </p></section>
+<example id="example"><codeblock xml:space="preserve"><b>&lt;prolog&gt;</b>
+  &lt;metadata&gt;
+    &lt;audience type="user" job="using" experiencelevel="novice"/&gt;
+  &lt;/metadata&gt;
+<b>&lt;/prolog&gt;</b></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="prolog_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002812?>

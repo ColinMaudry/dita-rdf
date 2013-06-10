@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="examples_of_keys">
+    <title>Examples of keys</title>
+    <conbody>
+        <section>
+            <title>A generic topicref element used to define a key bound to a topic:</title>
+            <p>
+                <codeblock>&lt;map&gt;
+  ...
+  &lt;topicref keys="apple-definition"
+    href="topics/glossary/apple-gloss-en-US.dita"
+  /&gt;
+  ...
+&lt;/map&gt;</codeblock>
+            </p>
+            <p>In this example, the topicref is acting as both a key definition and contributing to
+                the navigation structure of the map, meaning the topic <filepath
+                    >apple-gloss-en-US.dita</filepath> will be processed as it would be if the @keys
+                attribute were not present.</p>
+        </section>
+        <section>
+            <title>The same key definition using the &lt;keydef&gt; specialization of
+                &lt;topicref&gt;:</title>
+            <codeblock rev="public-review-1">&lt;map domains="(map mapgroup-d)"&gt;
+  ...
+  &lt;keydef keys="apple-definition"
+    href="topics/glossary/apple-gloss-en-US.dita"
+  /&gt;
+  ...
+&lt;/map&gt;</codeblock>
+            <p>Because the &lt;keydef&gt; element sets the default value of the @processing-role
+                attribute to "resource-only", the key definition does not contribute to the map's
+                navigation structure, but only serves to establish the key-to-resource binding for
+                the key "apple-definition".</p>
+        </section>
+        <section>
+            <title>Duplicate definition of the same key:</title>
+            <codeblock rev="public-review-1">&lt;map domains="(map mapgroup-d)"&gt;
+  ...
+  &lt;keydef keys="load-toner"
+    href="topics/tasks/model-1235-load-toner-proc.dita"
+  /&gt;
+  &lt;keydef keys="load-toner"
+    href="topics/tasks/model-4545-load-toner-proc.dita"
+  /&gt;
+  ...
+&lt;/map&gt;</codeblock>
+            <p>In this example, only the first definition in document order of the "load-toner" key
+                is effective, so all references to the key within the scope of the root map will
+                resolve to the topic <filepath>model-1235-load-toner-proc.dita</filepath>, not topic
+                    <filepath>model-4545-load-toner-proc.dita</filepath>.</p>
+        </section>
+        <section>
+            <title>Duplicate definitions with different conditions:</title>
+            <codeblock rev="public-review-1">&lt;map domains="(map mapgroup-d)"&gt;
+  ...
+  &lt;keydef keys="file-chooser-dialog"
+    href="topics/ref/file-chooser-osx.dita"
+    <b>platform="osx"</b>
+  /&gt;
+  &lt;keydef keys="file-chooser-dialog"
+    href="topics/tasks/file-chooser-win7.dita"
+    <b>platform="windows7"</b>
+  /&gt;
+  ...
+&lt;/map&gt;</codeblock>
+            <p>In this example, both key definitions use the @platform metadata attribute to
+                indicate that they apply to different operating system platforms. In this case, the
+                effective key definition is determined not just by the order in which the
+                definitions occur but whether the active value of @platform is "osx" or "windows7"
+                when the key space is determined or the key is resolved. In this case both key
+                definitions are <i>potentially</i> effective because they have distinct values for
+                conditional attributes. Note that if no active value is specified for the @platform
+                condition when determining the effective keys, then both of the definitions are
+                effective and thus the first one in document order is the effective definition. </p>
+            <p>If the DITA value configuration were defined such that the default behavior is
+                "exclude" rather than the normal default of "include", then neither definition would
+                be effective and the key would be undefined. That case can be avoided by specifying
+                an unconditional key definition after any conditional key definitions,
+                e.g.:<codeblock rev="public-review-1">&lt;map domains="(map mapgroup-d)"&gt;
+  ...
+  &lt;keydef keys="file-chooser-dialog"
+    href="topics/ref/file-chooser-osx.dita"
+    platform="osx"
+  /&gt;
+  &lt;keydef keys="file-chooser-dialog"
+    href="topics/tasks/file-chooser-win7.dita"
+    platform="windows7"
+  /&gt;
+  <b>&lt;keydef keys="file-chooser-dialog"
+    href="topics/tasks/file-chooser-generic.dita"
+  /&gt;</b>
+  ...
+&lt;/map&gt;</codeblock></p>
+            <p>In this case, with an explicitly-configured default behavior of "exclude", if no
+                active value for the platform condition is specified, the third definition will be
+                the effective definition, binding the key "file-chooser-dialog" to the topic
+                    <filepath>file-chooser-generic.dita</filepath>.</p>
+        </section>
+        <section>
+            <title>Duplicate key definitions using subordinate maps</title>
+            <codeblock rev="public-review-1">Root map:
+
+&lt;map domains="(map mapgroup-d)"&gt;
+  <b>&lt;keydef keys="toner-specs"
+   href="topics/reference/toner-type-a-specs.dita"
+  /&gt;</b>
+  &lt;mapref href="submap-01.ditamap"/&gt;
+  &lt;mapref href="submap-02.ditamap"/&gt;
+&lt;/map&gt;
+
+submap-01.ditamap:
+
+&lt;map domains="(map mapgroup-d)"&gt;
+  &lt;keydef keys="toner-specs"
+   href="topics/reference/toner-type-b-specs.dita"
+  /&gt;
+  <b>&lt;keydef keys="toner-handling"
+   href="topics/concepts/toner-type-b-handling.dita"
+  /&gt;</b>
+&lt;/map&gt;
+
+submap-02.ditamap:
+
+&lt;map domains="(map mapgroup-d)"&gt;
+  &lt;keydef keys="toner-specs"
+   href="topics/reference/toner-type-c-specs.dita"
+  /&gt;
+  &lt;keydef keys="toner-handling"
+   href="topics/concepts/toner-type-c-handling.dita"
+  /&gt;
+  <b>&lt;keydef keys="toner-disposal"
+   href="topics/tasks/toner-type-c-disposal.dita"
+  /&gt;</b>
+&lt;/map&gt;</codeblock>
+            <p>In this example the effective key space is:<simpletable frame="none"
+                    id="simpletable_a459d096-5695-474b-9e7f-3797b458437c">
+                    <sthead>
+                        <stentry>Key</stentry>
+                        <stentry>Bound resource</stentry>
+                    </sthead>
+                    <strow>
+                        <stentry>toner-specs</stentry>
+                        <stentry>toner-type-a-specs.dita</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>toner-handling</stentry>
+                        <stentry>toner-type-b-handling.dita</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>toner-disposal</stentry>
+                        <stentry>toner-type-c-disposal.dita</stentry>
+                    </strow>
+                </simpletable></p>
+            <p>The binding for the key "toner-specs" in the root map is effective because it is the
+                first encountered in a breadth-first traversal of the map tree. The binding for the
+                key "toner-handling" to the definition in submap-01.ditamap is effective because
+                submap-01 is included before submap-02 and therefore comes first in the map tree.
+                The binding for the key "toner-disposal" is effective because it is the only
+                definition of the key in the map tree.</p>
+        </section>
+        <section>
+            <title>A key definition that uses elements within the key definition rather than a
+                separately-addressed resource</title>
+            <codeblock rev="public-review-1">&lt;map domains="(map mapgroup-d)"&gt;
+  &lt;keydef keys="product-name"&gt;
+    &lt;topicmeta&gt;
+     &lt;keywords&gt;
+       <b>&lt;keyword&gt;Thing-O-Matic&lt;/keyword&gt;</b>
+     &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+&lt;/map&gt;</codeblock>
+            <p>This form of key definition would normally be used from a &lt;keyword&gt; element in
+                order to use the value defined in the key
+                definition:<codeblock>&lt;topic id="topicid"&gt;
+  &lt;title&gt;About the &lt;keyword keyref="product-name"/&gt; product&lt;/title&gt;
+&lt;/topic&gt;</codeblock></p>
+            <p>Normal processing results in the effective title text "About the Thing-O-Matic
+                product".</p>
+        </section>
+        <section>
+            <title>A key definition that uses both elements within the key definition and points to
+                a resource</title>
+            <codeblock rev="public-review-1">&lt;map domains="(map mapgroup-d)"&gt;
+  &lt;keydef keys="yaw-restrictor"
+    <b>href="parts/subassem/subassm-9414-C.dita"</b>
+  &gt;
+    &lt;topicmeta&gt;
+     &lt;keywords&gt;
+       <b>&lt;keyword&gt;yaw restrictor assembly&lt;/keyword&gt;</b>
+     &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+&lt;/map&gt;</codeblock>
+            <p>When referenced from a &lt;keyword&gt; element with no directly-specified content,
+                normal processing sets the effective content of the keyword to "yaw restrictor
+                assembly" and makes the keyword a navigation link to the topic <filepath
+                    >subassm-9414-C.dita</filepath>.</p>
+        </section>
+        <section>
+            <title>Redirect a link or xref</title>
+            <ol id="ol_0cf5778b-de2a-4d1e-8fad-e28030f8fc33">
+                <li id="li_CD65EA0F7712444EA4B87F68D332ECA8">Author 1 creates a map that associates
+                    keys with each topic, for example &lt;topicref keys="a" href="a1.dita"/&gt;</li>
+                <li id="li_22996FC5630D4AF4A5F6C20F35846E7E">Author 1 creates topic c.dita that
+                    contains a related link to a0.dita - but uses the keyref attribute: &lt;link
+                    keyref="a" href="a0.dita"/&gt;</li>
+                <li id="li_364530015F1E42CCAE34BACC4F6841B3">Author 2 reuses c.dita, but wants to
+                    redirect the link, so applies a different map with &lt;topicref keys="a"
+                    href="a2.dita"/&gt;. The link in c.dita now resolves to a2.dita when author 2
+                    builds it (it continues to resolve to a1.dita when author 1 builds it)</li>
+                <li id="li_D9B27F0085974B6287E8FB94654A3AD7">Author 3 also reuses c.dita, but wants
+                    the link to point to an external resource, so creates an external-pointing
+                    topicref to resolve the key:
+                        <codeblock>&lt;topicref  keys="a" href="http://www.a..." scope="external"&gt;
+  &lt;topicmeta&gt;
+    &lt;linktext&gt;This links to A2&lt;/linktext&gt;
+    &lt;shortdesc&gt;Because it does.&lt;/shortdesc&gt;
+  &lt;/topicmeta&gt;
+&lt;/topicref&gt;</codeblock><p
+                        >The link in c.dita now resolves to an external URI reference when author 3
+                        builds it (without affecting how it resolves for the other two
+                    reusers).</p></li>
+                <li id="li_F8397A4820B44FF2B5794B4A65108CBC">Author 4 wants to get rid of the link,
+                    so creates an explicitly empty topicref to get rid of it: &lt;topicref
+                    keys="a"/&gt;. This gets rid of the link for author 4 without affecting the
+                    other reusers.</li>
+                <li id="li_54889890328B49098272842DEA7307B3">Author 5 wants to turn the link into
+                    just plain text (not hypertext) - for example a citation of a print-only
+                    magazine article.
+                    <codeblock>&lt;topicref  keys="a"&gt;
+  &lt;topicmeta&gt;
+    &lt;linktext&gt;This is just text.&lt;/linktext&gt;
+  &lt;/topicmeta&gt;
+&lt;/topicref&gt;</codeblock></li>
+                <li id="li_9E2B98D24BFA4ECA91DD0531DB09274D">Author 6 reuses c.dita, but does not
+                    include a topicref that defines the key “a” in the map. Topic a0.dita is used as
+                    the “fallback” related link.</li>
+            </ol>
+        </section>
+        <section>
+            <title>Redirect conref</title>
+            <ol id="ol_54549da2-6d1e-4a31-91d2-78d982e8c388">
+                <li id="li_E1C961B636BE4783AD606A5313C5813F">Author 1 creates a map that associates
+                    a key with a topic that contains reusable elements, for example <codeph
+                        >&lt;topicref keys="reuse" href="prodA/reuse.dita"/&gt;</codeph></li>
+                <li id="li_8E9C6705D0984FDE8131798BC42AA48E">Author 1 uses the key instead of the
+                    full href whenever creating conrefs - for example <codeph>&lt;p
+                        conkeyref="reuse/para1"/&gt;</codeph></li>
+                <li id="li_21009D9CEDAA446CA15306C4517049E1">Author 2 wants to reuse author 1's
+                    content, but swap in a different set of reusable content. So Author 2 associates
+                    the key "reuse" with a different topic: <codeph>&lt;topicref keys="reuse"
+                        href="prodB/mytopic.dita"/&gt;</codeph>. So now <codeph>&lt;p
+                        conkeyref="reuse/para1"/&gt;</codeph> will resolve to a paragraph with the
+                    id “para1” in prodB/mytopic.dita when author 2 builds the content, while
+                    continuing to resolve to the para with the id “para1” in prodA/reuse.dita for
+                    author 1.</li>
+            </ol>
+        </section>
+        <section>
+            <title>Create links from keywords, terms, or other elements</title>
+            <ol id="ol_88f6412e-05b8-42b3-ad9a-85e3d2d47b47">
+                <li id="li_D85E414BB32041B0BDE4959DA83F1B39">Author 1 creates a map that contains
+                    glossary entries, and associates keys for each entry: <codeph>&lt;topicref
+                        keys="myterm" href="myterm.dita"/&gt;</codeph></li>
+                <li id="li_22BA7E9BD4884FF29FC5C7BA711C3258">Author 1 then uses the keys to create
+                    links to the appropriate glossary entry from occurrences of terms in content:
+                        <codeph>&lt;term keyref="myterm"&gt;my term&lt;/term&gt;</codeph>.</li>
+            </ol>
+            <note>The reusing author must create a parallel set of elements and IDs in the
+                replacement topic; the element IDs within the topic are not remapped, only the
+                pointer to the topic container.</note>
+        </section>
+        <section>
+            <title>Swap out variable content</title>
+            <ol id="ol_a5c390f3-e824-40ab-ae6d-7d7c25570378">
+                <li id="li_0EFC06E987504FC68597F9CDB3537F4A">Author 1 creates a map for key words
+                    and phrases that tend to change, such as UI labels and product names. The
+                    topicrefs do not in this case contain any actual hrefs, just the text that
+                    should be used:
+                    <codeblock>&lt;topicref keys="prodname"&gt;
+  &lt;topicmeta&gt;
+    &lt;linktext&gt;My Product&lt;/linktext&gt;
+  &lt;/topicmeta&gt;
+&lt;/topicref&gt;</codeblock></li>
+                <li id="li_52878FF1C99D47F4B16DE1B2E2BA7AE1">Author 1 then uses the keys to draw
+                    text into empty keywords: <codeph>&lt;keyword
+                    keyref="prodname"/&gt;</codeph></li>
+                <li id="li_DC0DD3D51FDF4FB69A4ECC52DB00765D">Author 2 reuses the content but wants
+                    to use a different product name, so associates prodname with a different string:
+                        <codeblock>&lt;topicref keys="prodname"&gt;
+  &lt;topicmeta&gt;
+    &lt;linktext&gt;Another Product&lt;/linktext&gt;
+  &lt;/topicmeta&gt;
+&lt;/topicref&gt;</codeblock><p
+                        >The keyword now resolves to "Another Product" for author 2, while
+                        continuing to resolve to "My Product" for author 1.</p></li>
+            </ol>
+            <note>A processor should generate a warning message when a key reference on an empty
+                element cannot be resolved, resulting in the element effectively being
+                removed.</note>
+        </section>
+        <section>
+            <title>Splitting or combining targets</title>
+            <ol>
+                <li>Author 1 creates a map in which most branches have the same structure: intro,
+                    example, reference. Two branches have only very little content in them, because
+                    the product support is only minimal. In anticipation of future elaboration,
+                    author 1 assigns 4 keys to the container under which more topics are expected in
+                    the future:
+                    <codeblock>&lt;topicref keys="blat-overview blat-intro blat-example blat-reference" 
+          href="blat-overview.dita"/&gt;</codeblock></li>
+                <li>Author 2 references blat-example, and in the future when Author 1 moves
+                    blat-example into a separate topic, author 2's link remains appropriate and
+                    valid and does not need to be reworked.</li>
+                <li>Author 3 is reusing a bunch of author 1's content, but in a context where blats
+                    are not available, and are instead replaced by foobars. So author 3 simply adds
+                    the blat keys to their own foobar topicref:
+                    <codeblock>&lt;topicref keys="blat-overview blat-intro blat-example blat-reference foobar" 
+          href="foobar.dita"/&gt;</codeblock></li>
+            </ol>
+        </section>
+        <section>
+            <title>Removing a link</title>
+            <ol>
+                <li>Author 1 creates a map which defines the key "overview":
+                    <codeblock>&lt;topicref keys="overview" 
+          href="blat-overview.dita"/></codeblock></li>
+                <li>Author 1 adds a link to the topic productInfo.dita using they keyref attribute,
+                    and using the href as a
+                    fallback:<codeblock>&lt;link keyref="overview" href="blat-overview.dita"/></codeblock></li>
+                <li>Author 2 wishes to reuse productInfo.dita, but does not want a link to overview
+                    information. So, author 2 creates a new definition for the key overview that
+                    does not have a target:<codeblock>&lt;topicref keys="overview"/></codeblock><p
+                        >The link element which uses keyref="overview" is now removed, because there
+                        is no target and no link text.</p></li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

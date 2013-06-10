@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="subjectscheme" xml:lang="en-us">
+<title>Subject scheme maps</title>
+<shortdesc>A subject scheme map is used to define sets of controlled
+values for use in classifying content.  Sets of controlled values
+can be bound to DITA attributes. This allows DITA users to share the
+controlled values for an information set without having to modify
+a DTD or XML schema. The list of available values can be modified
+quickly to adapt to new situations, without the need to manage updates
+to a document type. In addition, DITA users can define relationships
+between controlled values and extend a set of controlled values maintained
+by another team or organization. The list of defined values are not
+validated by basic XML parsers. Instead, the defined values should
+be validated by DITA processors.</shortdesc><?Pub Caret 573?>
+<prolog><metadata>
+<keywords><indexterm>Subject scheme maps</indexterm></keywords>
+</metadata></prolog>
+<conbody>
+<section><p>The same core elements in a subject scheme map may be
+used both to define controlled values and to define hierarchical taxonomies:<ul>
+<li>schemeref</li>
+<li>subjectdef</li>
+</ul></p><p>The following elements are used to bind taxonomies or
+controlled values to an attribute:<ul>
+<li>enumerationdef</li>
+<li>elementdef</li>
+<li>attributedef</li>
+<li>defaultSubject</li>
+</ul></p><p>The remaining elements in the subject scheme map are used
+to make more precise statements about how values in a taxonomy relate
+to one another.</p></section>
+</conbody>
+</concept>
+<?Pub *0000001691?>

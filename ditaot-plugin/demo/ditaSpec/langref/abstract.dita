@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="abstract" xml:lang="en-us">
+<title>abstract</title>
+<shortdesc>The abstract element occurs between the topic title and
+the topic body, as the initial content of a topic. It can contain
+paragraph-level content as well as one or more shortdesc elements
+which can be used for providing link previews or summaries. The &lt;abstract&gt;
+element cannot be overridden by maps, but its contained &lt;shortdesc&gt;
+elements can be, for the purpose of creating link summaries or previews.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>abstract</indexterm><indexterm>Topic elements<indexterm>abstract</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>Use the &lt;abstract&gt; element when the initial paragraph
+of a topic is unsuitable for use as a link preview or for summaries,
+because, for example, it contains lists or tables, or because only
+a portion of the paragraph is suitable. Note that when the initial
+paragraph is suitable as a summary, that content should be placed
+in a &lt;shortdesc&gt; element rather than in an &lt;abstract&gt;
+element. The &lt;abstract&gt; element allows for a wider range of
+content in your initial paragraph, such as lists and tables, and allows
+you to identify portions of the &lt;abstract&gt; content as useful
+for previews or summaries by embedding the &lt;shortdesc&gt; element
+within &lt;abstract&gt;.</p><p>When the contained &lt;shortdesc&gt;
+occurs within phrase-level content, it is treated as phrase-level
+content and should not create a separate paragraph on output of the
+topic. When the contained &lt;shortdesc&gt; occurs as a peer to paragraph-level
+content, it is treated as block-level content and should create a
+separate paragraph on output of the topic. When multiple &lt;shortdesc&gt;
+elements are included in an &lt;abstract&gt;, they are concatenated
+in output of link previews or summaries (separated by spaces).</p><p
+id="1.2.1">When a &lt;shortdesc> element occurs in a DITA map, it
+overrides the short description provided in the topic for the purpose
+of generating link previews, but does not replace the &lt;shortdesc>
+in the rendered topic itself. This means that generated links to this
+topic will use the short description from the map for purposes any
+link previews provided with the link, while the rendered topic continues
+to use the short description inside the topic. If the &lt;topicref>
+element in the DITA map also specifies the copy-to attribute, the
+content of the &lt;shortdesc> element in the DITA map also overrides
+the short description provided in the topic. In this case, the rendered
+topic itself will display the &lt;shortdesc> contents from the map
+in place of the &lt;shortdesc> originally specified in the topic. <note>Processors may or may not implement this behavior.</note><?Pub
+Caret -2?></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-abstract/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="abstract-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-abstract/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="abstract-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/abstract </p></section>
+<example id="example"><title>Example: abstract with phrase-level short
+description</title><codeblock id="example-code">&lt;abstract&gt;The abstract is being used to provide more complex content. 
+	&lt;shortdesc&gt;The shortdesc must be directly contained by the abstract.&lt;/shortdesc&gt;
+The abstract can put text around the shortdesc.
+&lt;/abstract&gt;</codeblock><dl><dlentry>
+<dt>Topic output</dt>
+<dd>The abstract is being used to provide more complex content.  	The
+shortdesc must be directly contained by the abstract. The abstract
+can put text around the shortdesc.</dd>
+</dlentry><dlentry>
+<dt>Preview/summary output</dt>
+<dd>The shortdesc must be directly contained by the abstract.</dd>
+</dlentry></dl></example>
+<example id="example2"><title>Example: abstract with block-level short
+description</title><pre xml:space="preserve">&lt;abstract&gt;&lt;p&gt;The abstract is being used to provide more complex content.&lt;/p&gt; 
+	&lt;shortdesc&gt;The shortdesc must be directly contained by the abstract.&lt;/shortdesc&gt;
+&lt;p&gt;The abstract can put text around the shortdesc.&lt;/p&gt;
+&lt;/abstract&gt;</pre><dl><dlentry>
+<dt>Topic output</dt>
+<dd><p>The abstract is being used to provide more complex content.</p><p>The
+shortdesc must be directly contained by the abstract. </p><p>The abstract
+can put text around the shortdesc.</p>  	</dd>
+</dlentry><dlentry>
+<dt>Preview/summary output</dt>
+<dd>The shortdesc must be directly contained by the abstract.</dd>
+</dlentry></dl></example>
+<example id="example3"><title>Example: abstract with multiple short
+descriptions</title><pre xml:space="preserve">&lt;abstract&gt;The abstract is being used to provide more complex content. 
+	&lt;shortdesc&gt;The shortdesc must be directly contained by the abstract.&lt;/shortdesc&gt;
+	&lt;p&gt;The abstract can put text around the shortdesc.&lt;/p&gt;
+	&lt;shortdesc&gt;There can be more than one shortdesc.&lt;/shortdesc&gt;
+&lt;/abstract&gt;</pre><dl><dlentry>
+<dt>Topic output</dt>
+<dd><p>The abstract is being used to provide more complex content.
+The shortdesc must be directly contained by the abstract.</p><p>The
+abstract can put text around the shortdesc.</p><p> There can be more
+than one shortdesc.</p> 	</dd>
+</dlentry><dlentry>
+<dt>Preview/summary output</dt>
+<dd>The shortdesc must be directly contained by the abstract. There
+can be more than one shortdesc.</dd>
+</dlentry></dl></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="abstract_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000007113?>

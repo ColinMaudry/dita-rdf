@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="typeofhazard" xml:lang="en-us">
+<title>typeofhazard</title>
+<shortdesc>The &lt;<keyword>typeofhazard</keyword>&gt; element contains
+a description of the type of hazard, for example, "Hot surfaces inside."</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>typeofhazard</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-typeofhazard/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="typeofhazard-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-typeofhazard/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="typeofhazard-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/li hazard-d/typeofhazard</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;hazardstatement type="caution">
+  &lt;messagepanel>
+    <b>&lt;typeofhazard>Lifting Hazard.&lt;/typeofhazard></b>
+    &lt;consequence>May result in injury.&lt;/consequence>
+    &lt;howtoavoid>See safety manual for lifting instructions.&lt;/howtoavoid>
+  &lt;/messagepanel>
+  &lt;hazardsymbol href="heavy.png">&lt;/hazardsymbol>
+&lt;/hazardstatement></codeblock><?Pub Caret 100?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002681?>

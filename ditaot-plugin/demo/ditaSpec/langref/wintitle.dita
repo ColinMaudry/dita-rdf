@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="wintitle" xml:lang="en-us"><?Pub Caret1?>
+<title>wintitle</title>
+<shortdesc>The window title &lt;<keyword>wintitle</keyword>&gt; element
+can be used to mark up names of windows or dialogs, or other user
+interface elements at the same level of grouping, including wizard
+titles, wizard page titles, and window pane titles. This element is
+part of the DITA user interface domain, a special set of DITA elements
+designed to document user interface tasks, concepts and reference
+information.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>wintitle (window title)</indexterm><indexterm>User
+interface elements<indexterm>wintitle</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-wintitle/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="wintitle-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-wintitle/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="wintitle-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword ui-d/wintitle </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">&lt;step&gt;
+  &lt;cmd&gt;Click &lt;uicontrol&gt;Configure&lt;/uicontrol&gt;.&lt;/cmd&gt;
+  &lt;stepresult&gt;The &lt;wintitle&gt;Configuration Options&lt;/wintitle&gt; window
+  opens with your last set of selections highlighted.&lt;/stepresult&gt;
+&lt;/step&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="wintitle_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

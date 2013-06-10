@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="learningContentComponentRef" xml:lang="en-us">
+<title>learningContentComponentRef</title>
+<shortdesc>Use a <keyword>learningContentComponentRef</keyword> element
+to include a topic     reference to a topic that acts as a subtopic
+of a learningContent topic.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>learningContentComponentRef</indexterm><indexterm>learning
+and training             elements<indexterm>learningContentComponentRef</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>       <p>The learning and training architecture defines
+the child topics of learningObject as being         atomic units of
+presentation. However, these topics may include subordinate topics.
+The         learningContentComponentRef topicref <keyword>may</keyword> be
+used to refer to any topic         type. The presentation intent is
+that such topics are presented as integral parts of their        
+parent topics. This intent is reflected in the default chunk attribute
+value of "to-content"         for the topicref types learningContentRef,
+learningOverviewRef, learningPlanRef,         learningPreAssessmentRef,
+and learningPostAssessmentRef.</p>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-learningContentComponentRef/contains"
+id="contains" otherprops="contains">       <title>Contains</title> 
+     <p>The content model of this element may differ based on where
+it is used. Content model         information is located here: <xref
+keyref="learningContentComponentRef-contains"></xref>       </p> 
+   </section><section
+conref="../common/commonNavLibraryTable.dita#contentmodel-learningContentComponentRef/containedby"
+id="containedby" otherprops="containedby">       <title>Contained
+By</title>       <p>The parents of this element may differ based on
+where it is used. Content model information         is located here: <xref
+keyref="learningContentComponentRef-contained-by"></xref>       </p> 
+   </section>
+<?Pub Caret?>
+<section id="inheritance" otherprops="inheritance">       <title>Inheritance</title> 
+     <p>+ map/topicref learningmap-d/learningContentRef </p>     </section>
+<example id="example">       <title>Example</title>       <p>See <xref
+  href="learningObject.dita#learningObject/example">learningObject</xref>.</p> 
+   </example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="learningContentComponentRef_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow>
+<stentry>type</stentry>
+<stentry>The topic type of the map reference.</stentry>
+<stentry>CDATA</stentry>
+<stentry>Any topic type</stentry>
+<stentry>IMPLIED</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>
+<?Pub *0000004729?>

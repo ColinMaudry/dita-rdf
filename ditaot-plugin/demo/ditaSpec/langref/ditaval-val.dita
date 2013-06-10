@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="ditaval-val" xml:lang="en-us">
+<title>val</title>
+<shortdesc>&lt;val> is the root element of a DITAVAL file.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>DITAVAL elements<indexterm>val (root element)</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>For information about processing DITAVAL files,
+including how to filter or flag elements with multiple property attributes
+or multiple properties within a single attribute, see <xref
+href="../archSpec/condproc.dita"></xref>. </p><?Pub Caret 80?></section>
+<section otherprops="contains"><title>Contains</title><p><xref
+href="ditaval-style-conflict.dita">style-conflict</xref> (<i>optional</i>)
+then (<xref href="ditaval-prop.dita">prop</xref> <i>or</i> <xref
+href="ditaval-revprop.dita">revprop</xref>) (<i>any number</i>)</p></section>
+<example id="example"><title>Example</title><fig><title>Sample
+DITAVAL file</title>
+<codeblock>&lt;val>
+   &lt;style-conflict backcolor="red"/>
+   &lt;prop action="include" att="audience" val="everybody"/>
+   &lt;prop action="flag" att="product" val="YourProd" backcolor="purple"/>
+   &lt;prop action="flag" att="product" backcolor="blue"
+         color="yellow" style="underline" val="MyProd">
+      &lt;startflag imageref="startflag.jpg">
+        &lt;alt-text>This is the start of my product info&lt;/alt-text>
+      &lt;/startflag>
+      &lt;endflag imageref="endflag.jpg">
+        &lt;alt-text>This is the end of my product info&lt;/alt-text>
+      &lt;/endflag>
+   &lt;/prop>
+   &lt;revprop action="flag" val="1.2"/>
+&lt;/val></codeblock>
+<p>This sample DITAVAL file performs the following actions:<ul>
+                  <li>Elements with audience="everybody" are included without change.</li>
+                  <li>Elements with product="YourProd" get a background color of purple.</li>
+                  <li>Elements with product="MyProd" get the following actions:<ul>
+                        <li>The image startflag.jpg is placed at the start of the element.</li>
+                        <li>The image endflag.jpg is placed at the end of the element.</li>
+                        <li>The element gets a background color of blue.</li>
+                        <li>The text in the element appears in yellow, and is underlined.</li>
+                     </ul></li>
+                  <li>Elements marked with are flagged with the default revision flags,
+                     which are implementation dependent.</li>
+                  <li>When there are conflicts - such as if an element is marked with
+                     product="MyProd YourProd" - it will be flagged with a background color of
+                     red.</li>
+               </ul></p>
+</fig><fig><title>DITAVAL file that overrides the default "include"
+action</title>
+<codeblock>&lt;val>
+   &lt;prop action="exclude"/>
+   &lt;prop action="include" att="audience" val="everybody"/>
+   &lt;prop action="include" att="audience" val="novice"/>
+   &lt;prop action="include" att="product" val="productA"/>
+   &lt;prop action="include" att="product" val="productB"/>
+&lt;/val></codeblock>
+<p>This simple DITAVAL file ditaval performs the following actions:<ul>
+<li>The first &lt;prop> element does not specify an attribute, which
+sets a default action of "exclude" for every prop value. This means
+that, by default, any property value not otherwise defined in this
+file evaluates to "exclude". Note that this same behavior can be limited
+to a single attribute; the following &lt;prop> element sets a default
+action of "exclude" for all properties specified on the platform attribute: <codeph>&lt;prop
+action="exclude" att="otherprops"/></codeph></li>
+<li>The second and third &lt;prop> elements set an action of "include"
+for two values on the audience attribute. All other values on the
+audience attribute still evaluate to "exclude".</li>
+<li>The fourth and fifth &lt;prop> elements set an action of "include"
+for two values on the product attribute. All other values on the product
+attribute still evaluate to "exclude".</li>
+</ul></p>
+</fig></example>
+</refbody>
+</reference>
+<?Pub *0000004055?>

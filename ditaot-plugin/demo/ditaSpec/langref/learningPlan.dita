@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "../../../dtd/reference.dtd">
+<reference id="learningPlan" rev="1.2" xml:lang="en-us">
+	<title>learningPlan</title>
+	<shortdesc>A <keyword>Learning Plan</keyword> topic describes learning needs and goals, 
+instructional design models, task analyses, learning taxonomies, and other information 
+necessary to the lesson planning process.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>learningPlan</indexterm><indexterm>learning and training elements<indexterm>learningPlan</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-learningPlan/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="learningPlan-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-learningPlan/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="learningPlan-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/topic learningBase/learningBase     learningPlan/learningPlan </p>
+		</section>
+<example id="example">
+<title>Example</title>
+<codeblock>
+&lt;learningPlan id="learningPlanTest"> 
+    &lt;title>Learning Plan&lt;/title> 
+    &lt;shortdesc>It's always good to provide a plan. 
+    &lt;/shortdesc>
+    &lt;learningPlanbody>
+        &lt;lcProject> 
+            &lt;title>lcProject&lt;/title>
+            &lt;lcClient> 
+                &lt;title>lcClient&lt;/title> 
+                &lt;p>Describe the client here.
+                &lt;/p>
+            &lt;/lcClient>
+            &lt;lcPlanTitle> 
+                &lt;title>lcPlanTitle&lt;/title> 
+                &lt;p>Describe the plan title here.
+                &lt;/p>
+            &lt;/lcPlanTitle>
+            &lt;lcCIN> 
+                &lt;title>lcCIN&lt;/title> 
+                &lt;p>Provide information about the course identification here. 
+                &lt;/p>
+            &lt;/lcCIN>
+            &lt;lcModDate> 
+                &lt;title>lcModDate&lt;/title> 
+                &lt;p>Provide the modification date and related information here. 
+                &lt;/p>
+            &lt;/lcModDate>
+            &lt;lcDelivDate> 
+                &lt;title>lcDelivDate&lt;/title> 
+                &lt;p>Provide the delivery date information. 
+                &lt;/p>
+            &lt;/lcDelivDate>
+            &lt;lcPlanSubject> 
+                &lt;title>lcPlanSubject&lt;/title> 
+                &lt;p>Provide information about the plan subject.
+                &lt;/p>
+            &lt;/lcPlanSubject>
+            &lt;lcPlanDescrip> 
+                &lt;title>lcPlanDescrip&lt;/title> 
+                &lt;p>Provide information about the plan description.
+                &lt;/p>
+            &lt;/lcPlanDescrip>
+            &lt;lcPlanPrereqs> 
+                &lt;title>lcPlanPrereqs&lt;/title> 
+                &lt;p>Provide information about the plan prerequisites.
+                &lt;/p>
+            &lt;/lcPlanPrereqs>
+        &lt;/lcProject>
+        &lt;lcNeedsAnalysis> 
+            &lt;title>lcNeedsAnalysis&lt;/title>
+            &lt;lcOrganizational> 
+                &lt;title>lcOrganizational&lt;/title>
+                &lt;lcGeneralDescription>Provide general description information.&lt;/lcGeneralDescription>
+                &lt;lcGoals>Provide information about organization goals related to this instruction.&lt;/lcGoals> 
+                &lt;lcNeeds>Describe organizational needs related to this instruction.&lt;/lcNeeds>
+                &lt;lcValues>Describe organizational values related to this instruction.&lt;/lcValues> 
+                &lt;lcOrgConstraints>Describe organizational constraints related to this instruction.&lt;/lcOrgConstraints>
+            &lt;/lcOrganizational>
+            &lt;lcPlanAudience> 
+                &lt;title>lcPlanAudience&lt;/title>
+                &lt;lcGeneralDescription>Provide general description information.&lt;/lcGeneralDescription>
+                &lt;lcEdLevel>Describe the education level for the learning audience.&lt;/lcEdLevel>
+                &lt;lcAge>Provide age information.&lt;/lcAge>
+                &lt;lcBackground>Provide background information.&lt;/lcBackground>
+                &lt;lcSkills>Describe the skills needed.&lt;/lcSkills> 
+                &lt;lcKnowledge>Describe the knowledge requirements.&lt;/lcKnowledge>
+                &lt;lcMotivation>Describe the reasons why the learners want and/or need to take the instruction.&lt;/lcMotivation>
+                &lt;lcSpecChars>Provide information about any special characteristics of the instruction.&lt;/lcSpecChars>
+            &lt;/lcPlanAudience>
+            &lt;lcWorkEnv> 
+                &lt;title>lcWorkEnv&lt;/title>
+                &lt;lcWorkEnvDescription>Describe the work environment.&lt;/lcWorkEnvDescription>
+                &lt;lcPlanResources>Provide information about resource planning.&lt;/lcPlanResources>
+                &lt;lcProcesses>Provide information about important processes.&lt;/lcProcesses>
+            &lt;/lcWorkEnv>
+            &lt;lcTask> 
+                &lt;title>lcTask&lt;/title>
+                &lt;lcTaskItem>Describe the specific task item.&lt;/lcTaskItem>
+                &lt;lcKnowledge>Detail the knowledge needed for this task.&lt;/lcKnowledge>
+                &lt;lcSkills>Describe the skills needed.&lt;/lcSkills> 
+                &lt;lcAttitude>Provide information about important attitudes.&lt;/lcAttitude>
+            &lt;/lcTask>
+            &lt;lcTask> 
+                &lt;title>another lcTask (as many more as you would like...)&lt;/title> 
+                &lt;lcTaskItem>Describe the specific task item.&lt;/lcTaskItem>
+                &lt;lcKnowledge>Detail the knowledge needed for this task.&lt;/lcKnowledge>
+                &lt;lcSkills>Describe the skills needed.&lt;/lcSkills> 
+                &lt;lcAttitude>Provide information about important attitudes.&lt;/lcAttitude>
+            &lt;/lcTask>
+        &lt;/lcNeedsAnalysis> 
+        &lt;lcGapAnalysis> 
+            &lt;title>lcGapAnalysis&lt;/title>
+            &lt;lcGapItem> 
+                &lt;title>an lcGapItem&lt;/title> 
+                &lt;lcPlanObjective>Describe the related plan objective for this gap.&lt;/lcPlanObjective> 
+                &lt;lcJtaItem>Provide job task analysis information about the gap.&lt;/lcJtaItem> 
+                &lt;lcGapItemDelta>Describe the gap item.&lt;/lcGapItemDelta>
+            &lt;/lcGapItem>
+            &lt;lcGapItem> 
+                &lt;title>and another GapItem for you to consider&lt;/title> 
+                &lt;lcPlanObjective>Describe the related plan objective for this gap.&lt;/lcPlanObjective> 
+                &lt;lcJtaItem>Provide job task analysis information about the gap.&lt;/lcJtaItem> 
+                &lt;lcGapItemDelta>Describe the gap item.&lt;/lcGapItemDelta>
+            &lt;/lcGapItem>
+        &lt;/lcGapAnalysis> 
+        &lt;lcIntervention> 
+            &lt;title>lcIntervention&lt;/title>
+            &lt;lcInterventionItem> 
+                &lt;title>lcInterventionItem&lt;/title>
+                &lt;lcLearnStrat>Describe the manner in which the learning content will be instructed. This should be a high level design that applies instructional-design theories and models.&lt;/lcLearnStrat> 
+                &lt;lcPlanObjective>Describe the objective to be addressed by a gap analysis or intervention.&lt;/lcPlanObjective> 
+                &lt;lcAssessment>Describe assessment plans.&lt;/lcAssessment>
+                &lt;lcDelivery>Describe the delivery method for this learning content.&lt;/lcDelivery>
+            &lt;/lcInterventionItem> 
+            &lt;lcInterventionItem> 
+                &lt;title>another lcInterventionItem (and more if you want 'em)&lt;/title> 
+                &lt;lcLearnStrat>Describe the manner in which the learning content will be instructed. This should be a high level design that applies instructional-design theories and models.&lt;/lcLearnStrat> 
+                &lt;lcPlanObjective>Describe the objective to be addressed by a gap analysis or intervention.&lt;/lcPlanObjective> 
+                &lt;lcAssessment>Describe assessment plans.&lt;/lcAssessment>
+                &lt;lcDelivery>Describe the delivery method for this learning content.&lt;/lcDelivery>
+            &lt;/lcInterventionItem>
+        &lt;/lcIntervention>
+        &lt;lcTechnical> 
+            &lt;title>lcTechnical&lt;/title>
+            &lt;lcLMS> 
+                &lt;title>lcLMS&lt;/title> 
+                &lt;p>Describe characteristics of the learning management system to be used. 
+                &lt;/p>
+            &lt;/lcLMS>
+            &lt;lcHandouts> 
+                &lt;title>lcHandouts&lt;/title> 
+                &lt;p>Describe any handouts. 
+                &lt;/p>
+            &lt;/lcHandouts>
+            &lt;lcClassroom> 
+                &lt;title>lcClassroom&lt;/title> 
+                &lt;p>Provide information about the classroom, if used. 
+                &lt;/p>
+            &lt;/lcClassroom>
+            &lt;lcOJT> 
+                &lt;title>lcOJT&lt;/title> 
+                &lt;p>Describe the on-the-job training. 
+                &lt;/p>
+            &lt;/lcOJT>
+            &lt;lcConstraints> 
+                &lt;title>lcConstraints&lt;/title> 
+                &lt;p>Describe any constraints.
+                &lt;/p>
+            &lt;/lcConstraints>
+            &lt;lcW3C> 
+                &lt;title>lcW3C&lt;/title> 
+                &lt;p>Provide information about any related web standards. 
+                &lt;/p>
+            &lt;/lcW3C>
+            &lt;lcPlayers> 
+                &lt;title>lcPlayers&lt;/title> 
+                &lt;p>Detail the tools and plugins used for time-sequenced display at runtime. 
+                &lt;/p>
+            &lt;/lcPlayers>
+            &lt;lcViewers> 
+                &lt;title>lcViewers&lt;/title> 
+                &lt;p>Detail the viewers used for time-sequenced display at runtime. 
+                &lt;/p>
+            &lt;/lcViewers>
+            &lt;lcResolution> 
+                &lt;title>lcResolution&lt;/title> 
+                &lt;p>Provide a list of related resources and information about them, such as related articles or samples on the web.
+                &lt;/p>
+            &lt;/lcResolution>
+            &lt;lcFileSizeLimitations> 
+                &lt;title>lcFileSizeLimitations&lt;/title> 
+                &lt;p>Describe any file size limitation in the download environment. 
+                &lt;/p>
+            &lt;/lcFileSizeLimitations>
+            &lt;lcDownloadTime> 
+                &lt;title>lcDownloadTime&lt;/title> 
+                &lt;p>Provide an estimate of the download time.
+                &lt;/p>
+            &lt;/lcDownloadTime>
+            &lt;lcSecurity> 
+                &lt;title>lcSecurity&lt;/title> 
+                &lt;p>Describe security concerns or restrictions.
+                &lt;/p>
+            &lt;/lcSecurity>
+        &lt;/lcTechnical>
+    &lt;/learningPlanbody>
+&lt;/learningPlan> 
+</codeblock>
+</example>
+<section>
+<title>Attributes</title>
+<simpletable id="learningPlan_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-topic">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmlnsditaarch">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/DITAArchVersion">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<!--<strow id="domains">
+<stentry>domains</stentry>
+<stentry>Indicates the specialized domains that are included in the DTD or
+Schema.<indexterm>domains attribute</indexterm></stentry>
+<stentry>CDATA</stentry>
+<stentry>(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d) (topic ut-d)
+(topic indexing-d) (learningBase learning-d)</stentry>
+<stentry>No</stentry>
+</strow>-->
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lomContext" xml:lang="en-us">
+	<title>lomContext</title>
+	<shortdesc>The &lt;<keyword>lomContext</keyword>&gt; describes the typical learning environment where use of the learning object is intended to take place.
+</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lomContext</indexterm><indexterm>learning and training elements<indexterm>lomContext</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lomContext/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lomContext-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lomContext/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lomContext-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/data learning-d/lomContext </p>
+</section>
+
+<example id="example"><title>Example</title>
+<p>See <xref href="lcLom.dita#lcLom/example">lcLom</xref>.</p>
+</example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*"><?Pub Caret?>
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow>
+<stentry>name</stentry>
+<stentry>Name of the metadata being specified.</stentry>
+<stentry>CDATA</stentry>
+<stentry>lomContext</stentry>
+<stentry></stentry>
+</strow>
+<strow>
+<stentry>datatype</stentry>
+<stentry>Datatype of the metadata being specified.</stentry>
+<stentry>CDATA</stentry>
+<stentry></stentry>
+<stentry>no</stentry>
+</strow>
+<strow>
+<stentry>value</stentry>
+<stentry>The learning context for this content. See <xref
+href="../common/ditauseconreftarget.dita">this topic</xref> for more information
+on the -dita-use-conref-target value.</stentry>
+<stentry>One of the following: (school | highereducation | training | other | -dita-use-conref-target)</stentry>
+<stentry></stentry>
+<stentry>yes</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+

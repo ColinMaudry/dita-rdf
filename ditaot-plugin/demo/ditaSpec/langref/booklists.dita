@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="booklists" xml:lang="en-us">
+<title>booklists</title>
+<shortdesc>The &lt;booklists&gt; element references lists of various
+kinds within the book. For example, it can be used within frontmatter
+to reference a &lt;toc&gt;, &lt;tablelist&gt;, and &lt;figurelist&gt;,
+or within backmatter to reference a &lt;glossarylist&gt;, &lt;indexlist&gt;,
+and &lt;abbrevlist&gt;. It indicates to the processing software that
+the author wants the lists generated at the &lt;booklists&gt; location. </shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>Bookmap elements<indexterm>booklists</indexterm></indexterm>
+<indexterm>booklists</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-booklists/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="booklists-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-booklists/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="booklists-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref bookmap/booklists </p></section>
+<example id="example"><title>Example</title><p>See the example
+in <xref href="bookmap.dita"></xref>.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="booklists_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003052?>

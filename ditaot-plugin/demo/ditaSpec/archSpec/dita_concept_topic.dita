@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="dita_concept_topic" xml:lang="en-Us">
+ <title>Concept topic</title>
+ <shortdesc>The DITA concept document type uses the concept information type. Concept topics are
+  specialized from the base topic information type. They include the standard topic elements,
+  including the short description, prolog, a <?Pub Caret?>body, and related links.</shortdesc>
+ <conbody>
+  <section>
+   <title>The purpose of the concept information type</title>
+   <p>Concepts provide background that helps readers understand essential information about a
+    product, a task, a process, or any other conceptual or descriptive information. A concept may be
+    an extended definition of a major abstraction such as a process or function. Conceptual
+    information may explain the nature and components of a product and describe how it fits into a
+    category of products. Conceptual information helps readers to map their knowledge and
+    understanding to the tasks they need to perform and to provide other essential information about
+    a product, process, or system.</p>
+  </section>
+  <section>
+   <title>The structure of the concept topic</title>
+   <p>The concept topic is specialized from the base topic information type. The top-level element
+    for a DITA concept topic is the &lt;concept> element. Every concept topic contains the standard
+    topic elements, including title, short descriptions or abstract, prolog, a body, and related
+    links.</p>
+   <p>The &lt;conbody> element holds the main body-level elements of the concept topic. Like the
+    body element of a base topic, the &lt;conbody> allows paragraphs, lists, tables, figures and
+    other general elements. It also provides two key elements that allow authors to subdivide the
+    topic into parts, with or without titles. These subdivisions are called sections and examples.
+    The &lt;conbody> also allows &lt;bodydiv> and &lt;sectiondiv> to facilitate grouping elements in
+    the &lt;conbody> for reuse.</p>
+  </section>
+  <section>
+   <title>Limitations within &lt;conbody></title>
+   <p>The &lt;conbody> provides for an unlimited number of subdivisions in the form of sections and
+    examples. However, once an author decides to incorporate a section or example in the
+    &lt;conbody>, only additional sections or examples are allowed. Sections and examples may not
+    nest, meaning that only one level of subdivision is permitted in the concept topic.</p>
+  </section>
+  <section>
+   <title>Concept body primary subdivisions</title>
+   <dl>
+    <dlentry>
+     <dt>&lt;section></dt>
+     <dd>Represents an organizational division in a concept topic. Sections organize subsets of
+      information within a larger topic. You can only include a simple list of peer sections in a
+      topic; sections cannot be nested. A section may have an optional title.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;example></dt>
+     <dd>Provides examples that illustrate or support the current topic. The &lt;example> element
+      has the same content model as &lt;section>. </dd>
+    </dlentry>
+   </dl>
+  </section>
+  <example>
+   <p>Following is an example of a simple concept topic. Note that once an example is used, it may
+    be followed only by another example or by a section.</p>
+   <codeblock>&lt;concept id="concept">
+ &lt;title>Bird Songs&lt;/title>
+
+&lt;shortdesc>Bird songs are complex vocalizations used to attract mates or defend territories. 
+&lt;conbody>
+  &lt;p>Bird songs vary widely among species, from simple songs that are genetically imprinted to complex songs that are learned over a lifetime.&lt;/p>
+  &lt;example>
+   &lt;p>Flycatchers know their songs from birth:&lt;/p>
+   &lt;ul>
+    &lt;li>Flycatcher songs are simple sequences of notes.&lt;/li>
+    &lt;li>Flycatcher songs never vary but are unique to each member of the Flycatcher family.&lt;/li>
+   &lt;/ul>
+  &lt;/example>
+ &lt;/conbody>
+&lt;/concept></codeblock>
+  </example>
+  <section>
+   <title>Modules</title>
+   <p>The following DITA modules are provided for the concept topic:</p>
+   <sl>
+    <sli>concept.mod, concept.ent (DTD)</sli>
+    <sli>conceptMod.xsd, conceptGrp.xsd (Schema)</sli>
+   </sl>
+  </section>
+ </conbody>
+</concept>
+<?Pub *0000004263 0?>

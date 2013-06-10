@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="linktext" xml:lang="en-us">
+<title>linktext</title>
+<shortdesc>The &lt;<keyword>linktext</keyword>&gt; element provides
+the literal label or line of text for a link. In most cases, the text
+of a link can be resolved during processing by cross reference with
+the target resource. Use the &lt;<keyword>linktext</keyword>&gt; element
+only when the target cannot be reached, such as when it is a peer
+or external link, or when <?Pub Caret?>the target is local but not
+in DITA format. <ph>When used inside a topic, it is used
+as the text for the specified link; when used within a map, it is
+used as the text for generated links that point to the specified topic.</ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>linktext</indexterm><indexterm>Related Links
+elements<indexterm>linktext</indexterm></indexterm><indexterm>Map
+elements<indexterm>linktext</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-linktext/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="linktext-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-linktext/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="linktext-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>"-
+topic/linktext " when used in topics, and "- map/linktext " when used
+in maps.</p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;link href="tzover.htm#accsqlj"&gt;
+ &lt;linktext&gt;Accessing relational data with SQLJ&lt;/linktext&gt;
+&lt;/link&gt;
+</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="linktext_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

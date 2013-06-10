@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="thehrefattribute" xml:lang="en-us">
+<title>The href attribute</title>
+<abstract><shortdesc>The href attribute is used by many elements to
+provide a reference to another DITA topic or map, to a specific element
+inside a DITA topic or map, or to an external Web page or other non-DITA
+resource.</shortdesc>The references may be to DITA topics or elements
+within DITA topics or maps in the same document or in another document.</abstract>
+<prolog><metadata>
+<keywords><indexterm>href attribute</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The value of a DITA href attribute must be a valid URI
+reference [<xref format="txt" href="http://www.ietf.org/rfc/rfc3986.txt"
+scope="external">RFC 3986</xref>]. It is an error if the value is
+not a valid URI reference. An implementation may (but need not) give
+an error message, and may (but need not) recover from this error condition
+by attempting to convert the value to a valid URI reference. Note
+that the path separator character in a URI is always the forward slash
+(“/”); the backward slash character (“\”) is not permitted unescaped
+within URIs.</p><p>In the case of a reference to a DITA resource,
+an href value consisting of a URI with no fragment identifier resolves
+to the document element in the referenced document. For the purposes
+of rendering, such as when a topicref reference to a DITA document
+is used to render the content as HTML, this means that all topics
+(and topic specializations) in the target document are included in
+the reference. For the purpose of linking, the reference resolves
+to the first (or only) topic (or topic specialization) in the document. <!--If the reference is from a topicref element or a topicref element
+specialization, all topics (and topic specializations) in the document
+are referenced. If the reference is not from a topicref element or
+a topicref element specialization, the reference resolves to the first
+(or only) topic (or topic specialization) in the document.--></p><p>An
+href value consisting of a URI with a fragment identifier must have
+a valid DITA local identifier as the portion after the hash. A DITA
+local identifier consists of topicID/elementID for a subelement of
+a topic and of elementID for topics, maps, and map subelements.</p><p>Note
+that certain characters (including, but not limited to, #, ?, \, and
+space) are not permitted unescaped within URIs. Such characters must
+be percent-encoding (per RFC 3986) if there is a need to represent
+them within a string that is a URI. Also note that the “&amp;” (ampersand)
+and “&lt;” (greater than) characters are not permitted in XML attribute
+values, so they must be represented by appropriate character or entity
+references if there is a need to represent them within such a string.
+(Some tools may do the required encoding on the user&apos;s behalf
+while others may require the user to avoid the special characters
+or perform the encoding manually.)</p></section>
+<example><p>Some examples of common href syntax in DITA
+include the following. Note that these examples represent only a few
+common scenarios, and are not all inclusive.<ul>
+<li>Target the first topic in a DITA document: <codeph>href="file.dita"</codeph></li><?Pub
+Caret -2?>
+<li>Target a specific topic in a DITA document: <codeph>href="file.dita#topicid"</codeph></li>
+<li>Target a non-topic element inside a DITA topic: <codeph>href="#topicid/elementid"</codeph></li>
+<li>Target an element in a DITA map: <codeph>href="myMap.ditamap#map-branch"</codeph></li>
+<li>Target an image: <codeph>href="exampleImage.jpg"</codeph></li>
+<li>Target an external resource: <codeph>href="http://www.example.org"</codeph></li>
+</ul></p></example>
+</refbody>
+</reference>
+<?Pub *0000003971?>

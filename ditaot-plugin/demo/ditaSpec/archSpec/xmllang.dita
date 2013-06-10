@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="xmllang" xml:lang="en-US"> 
+  <title>The @xml:lang attribute</title> 
+  <shortdesc rev="public-review-1"> The @xml:lang attribute specifies the
+	 language (and optionally the locale) of the element content. The @xml:lang
+	 attribute applies to all attributes and content of the element where it is
+	 specified, unless it is overridden with @xml:lang on another element within
+	 that content. If the @xml:lang attribute on the document (outermost) element of
+	 a map or of a top-level topic has no value, the processor should assume a
+	 default value. The default value of the processor may be either fixed,
+	 configurable, or derived from the content itself, such as the @xml:lang
+	 attribute on the primary map file. As the default value of a processor may be
+	 fixed, it is strongly recommended that the @xml:lang attribute be set on each
+	 map and top-level topic. 
+  </shortdesc> 
+  <refbody> 
+	 <section id="section_2D173063C192470C84EFFF72A56A54D7"> 
+		<p>The @xml:lang attribute is described in the XML Recommendation at 
+		  <xref href="http://www.w3.org/TR/REC-xml/#sec-lang-tag"
+			scope="external" format="html"/>. Note that the recommended style for the @xml:lang attribute
+		  is lower case language and uppercase locale (if used), separated by a hyphen,
+		  i.e., en-US or sp-SP. 
+		</p> 
+	 </section> 
+	 <section id="section_62864B54A3A24CA893BC577EDECFEF67"> 
+		<title>Recommended use in topics</title> 
+		<p rev="public-review-1">For a DITA document that contains a single
+		  language, the highest level element that contains content should set the
+		  @xml:lang attribute to the language (and optionally the locale) that applies to
+		  the document. 
+		</p> 
+		<p>When a DITA document contains more than one language, the highest
+		  level element should set the @xml:lang attribute to the primary language (and
+		  optionally the locale) that applies to the document. If part of a document is
+		  written in a different language, authors should ensure that the part is
+		  enclosed in an element with the @xml:lang attribute set appropriately.
+		  Processors should style each element in a way that is appropriate for its
+		  language as identified by the @xml:lang attribute. This method of overriding
+		  the default document language applies to both block and inline elements that
+		  use the alternate language. 
+		</p> 
+		<p rev="public-review-1">The @xml:lang attribute should be explicitly set
+		  on the root element of each map and topic. When the @xml:lang attribute is
+		  specified for a document, DITA processors must use the specified value to
+		  determine the language of the document. It is strongly recommended to author
+		  the @xml:lang value in the source language document, in order to facilitate the
+		  translation process, where translation tools (or translators) simply change the
+		  existing @xml:lang attribute value to the value of the target language. 
+		</p> 
+		<p rev="public-review-1"> Note: Some translation tools support changing
+		  the value of an existing @xml:lang attribute, but do not support adding new
+		  markup to the document being translated. Therefore, if the author of the source
+		  language content does not set the @xml:lang attribute, it may not be possible
+		  (or may be difficult) for the translator to add the @xml:lang attribute to the
+		  translated document. 
+		</p> 
+	 </section> 
+	 <section id="section_8580BE0C4D9A475E823E300EFE709BAA"> 
+		<title>Use in maps</title> 
+		<p>The @xml:lang attribute can be specified on the &lt;map&gt; element.
+		  The @xml:lang attribute cascades within the map the same way that it cascades
+		  within a topic. The @xml:lang value does not cascade from one map to another or
+		  from a map to a topic, and an @xml:lang value specified in a map does not
+		  override @xml:lang values specified in other maps or in topics. 
+		</p> 
+		<p rev="public-review-1">The primary language for the map should be set
+		  on the &lt;map&gt; element. The specified language should remain in effect for
+		  all child &lt;topicref&gt; elements, unless a child specifies a different value
+		  for the @xml:lang attribute. 
+		</p> 
+		<p>When no @xml:lang value is supplied locally or on an ancestor, a
+		  processor determined default value is assumed. 
+		</p> 
+	 </section> 
+	 <section id="section_1B41A0B49681492BB9FA0F98C88557D9"> 
+		<title>Use with the @conref or @conkeyref attribute</title> 
+		<p>When a @conref or @conkeyref attribute is used to include content from
+		  one element into another, the processor must use the effective value of the
+		  @xml:lang attribute from the referenced element, that is, the element that
+		  contains the content. If the reference element does not have an explicit value
+		  for the @xml:lang attribute, the effective value for its @xml:lang attribute is
+		  determined by using the standard @xml:lang inheritance from the referenced
+		  source.. If this action results in no effective value for @xml:lang, the
+		  processor should default to using the same value that is used for topics that
+		  do not set the @xml:lang attribute. 
+		</p> 
+		<p>This behavior is shown in the following example, where the value of
+		  the @xml:lang attribute of the included note is obtained from its parent
+		  &lt;section&gt; element (id="qqwwee") that sets the @xml:lang attribute. In
+		  this example, the @xml:lang value "fr" is applied to the note with the id
+		  attribute "mynote". 
+		</p> 
+		<codeblock>&lt;-- ****************installingAcme.dita********************* --&gt;
+                
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic <b>xml:lang="en"</b> id="install_acme"&gt;
+ &lt;title&gt;Installing Acme&lt;/title&gt;
+ &lt;shortdesc&gt;Step-by-step details about how to install Acme.&lt;/shortdesc&gt;
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;title&gt;Before you begin&lt;/title&gt;
+   &lt;p&gt;Special notes when installing Acme in France:&lt;/p&gt;
+   &lt;note conref="warningsAcme.dita#topic_warnings/frenchwarnings"&gt;&lt;/note&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;
+&lt;/dita&gt;
+*******************************************
+
+&lt;-- **************** warningsAcme.dita ********************* --&gt;
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="topic_warnings"&gt;
+ &lt;title&gt;Warnings&lt;/title&gt;
+ &lt;body&gt;
+  &lt;section id="qqwwee" <b>xml:lang="fr"</b>&gt;
+   &lt;title&gt;French warnings&lt;/title&gt;
+   &lt;p&gt;These are our French warnings.&lt;/p&gt;
+   &lt;note id="frenchwarnings"&gt;Note in French!&lt;/note&gt;
+  &lt;/section&gt;
+  &lt;section <b>xml:lang="en"</b>&gt;
+   &lt;title&gt;English warnings&lt;/title&gt;
+   &lt;p&gt;These are our English warnings.&lt;/p&gt;
+   &lt;note id="englishwarnings"&gt;Note in English!&lt;/note&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;
+*************************************
+</codeblock> <?Pub Caret 957?>
+	 </section> 
+  </refbody> 
+</reference> <?Pub *0000006382?>

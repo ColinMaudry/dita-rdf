@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="subjectHead" xml:lang="en-us">
+<title>subjectHead</title>
+<shortdesc>The &lt;subjectHead> element provides a heading for a group
+of subjects, for use if the scheme is displayed. For instance, a scheme
+may be displayed to let a user select subjects as part of faceted
+browsing. The subjectHead element itself does not reference a file
+and cannot be referenced as a key, so it does not define any controlled
+values.</shortdesc><?Pub Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>subjectHead</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-subjectHead/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="subjectHead-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-subjectHead/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="subjectHead-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref subjectScheme/subjectHead </p></section>
+<example id="example"><title>Example</title><p>In this example the
+“Server setup” label doesn't classify content but, when selected,
+is equivalent to the union of its child subjects. That is, the heading
+covers content about planning for any application, installing for
+any application, any task for web servers, or any task for database
+servers.</p><codeblock>&lt;subjectScheme toc="yes" search="no">
+  ...
+  &lt;subjectHead>
+    &lt;subjectHeadMeta>
+      &lt;navtitle>Server setup&lt;/navtitle>
+    &lt;/subjectHeadMeta>
+    &lt;subjectdef href="planningTaskType.dita"/>
+    &lt;subjectdef href="installingTaskType.dita"/>
+    &lt;subjectdef href="webServerApp.dita"/>
+    &lt;subjectdef href="databaseApp.dita"/>
+  &lt;/subjectHead>
+  ...
+&lt;/subjectScheme></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/collection-type-subjectHead">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/linking-subjectHead">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/processing-role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/toc">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004159?>

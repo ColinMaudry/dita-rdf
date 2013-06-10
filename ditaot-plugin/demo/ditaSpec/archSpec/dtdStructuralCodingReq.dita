@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="concept_1E272CD14D364D0AB4E8040C5D50545E" xml:lang="en-us">
+  <title>Structural module coding requirements<?Pub Caret?></title>
+  <shortdesc>A structural vocabulary module defines a new topic or map type as a specialization of a
+    base topic or map type. The purpose is usually to enhance the user's interaction by adapting the
+    topic or map type to its particular purposes.</shortdesc>
+  <conbody>
+    <p>A structural type module <term>must</term> conform to the following coding requirements in
+      addition to the general module coding requirements: </p>
+    <section id="section_1D21A852F62148C9B5935D0B90478D50">
+      <title>Default included domains entity</title>
+      <p>The module <term>must</term> define the <codeph>included-domains</codeph> entity with a
+        default value, as in the following
+        example:<codeblock><![CDATA[<!ENTITY included-domains "">]]></codeblock></p>
+      <p>A document type shell can predefine the <codeph>included-domains</codeph> entity to list
+        domains to be added to the document type.</p>
+      <p>Structural vocabulary modules may require the use of specific domains. In that case, the
+        default value of the <codeph>included-domains</codeph> entity must include the appropriate
+        domain use declaration, for
+        example:<codeblock>&lt;!ENTITY included-domains "(topic myDomain)"></codeblock></p>
+      <p>The list of included domains <term>must</term> declare the domains from most generic (on
+        the left) to most specialized, current domain (on the right). See <xref
+          href="domainsatt.dita#domainsatt" format="dita">Domain usage declaration (the @domains
+          attribute)</xref>.</p>
+    </section>
+    <section>
+      <title>Topic and map element attributes</title>
+      <p>The topic or map element type <term>must</term> set the @DITAArchVersion attribute to the
+        DITAArchVersion entity and the @domains attribute to the included-domains entity. These
+        attributes give processors a reliable way to check the architecture version and look up the
+        list of domains available in the document type.</p>
+      <codeblock>&lt;!ATTLIST concept    
+  %concept.attributes;
+  %arch-atts;
+  domains 
+    CDATA 
+       "&amp;included-domains;"
+></codeblock>
+    </section>
+  </conbody>
+</concept>
+<?Pub *0000002377?>

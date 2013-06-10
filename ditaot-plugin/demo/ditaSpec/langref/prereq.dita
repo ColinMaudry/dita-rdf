@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="prereq" xml:lang="en-us">
+<title>prereq</title>
+<shortdesc>The &lt;prereq&gt; element of a task contains prerequisites
+that the user needs to know or do before starting the current task.
+Implementations may, but need not, render prerequisite links from
+the related-links section together with the &lt;prereq> content.<!--Replaced the following sentence based on review comments:
+"Prerequisite links will be placed in a list after the related-links
+section; on output the &lt;prereq&gt; links from the related-links
+section are added to the &lt;prereq&gt; section."--><?Pub Caret -2?></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>prereq</indexterm><indexterm>Task elements<indexterm>prereq</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-prereq/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="prereq-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-prereq/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="prereq-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/section task/prereq </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;task id="sqlj"&gt;
+ &lt;title&gt;Creating an SQLJ file&lt;/title&gt;
+ &lt;taskbody&gt;
+  &lt;prereq&gt;Before creating a new SQLJ file, you must 
+  log in to the SQLJ server.&lt;/prereq&gt;
+ &lt;/taskbody&gt;
+&lt;/task&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="prereq_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002955?>

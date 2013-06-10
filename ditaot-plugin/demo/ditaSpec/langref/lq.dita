@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lq" xml:lang="en-us">
+<title>lq</title>
+<shortdesc> The long quote (&lt;<keyword>lq</keyword>&gt;) element
+indicates content quoted from another source. Use the quote element &lt;<keyword>q</keyword>&gt;
+for short, inline quotations, and long quote &lt;<keyword>lq</keyword>&gt;
+for quotations that are too long for inline use, following normal
+guidelines for quoting other sources. You can store a URL to the source
+of the quotation in the <i><keyword>href</keyword></i> attribute;
+the href value may point to a DITA topic. <ph>For more complex
+references to the source of a quote, you may use the &lt;longquoteref>
+element, which was added in DITA 1.2.</ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lq (long quote)</indexterm><indexterm>long quote
+(lq)</indexterm><indexterm>quote, long (lq)</indexterm><indexterm>Body
+elements<indexterm>lq</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><draft-comment>Most of the following comment was
+pulled from the HTML 4.01 specification&apos;s description of BLOCKQUOTE,
+after a review comment indicated that the spec should describe rendering
+expectations.</draft-comment>Although rendering is left up to implementations,
+processors generally render &lt;lq> as an indented block.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lq/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lq-contains"></xref></p></section><?Pub
+Caret -2?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lq/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="lq-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/lq </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;p&gt;This is the first line of the address that 
+Abraham Lincoln delivered on November 19, 1863 for the dedication 
+of the cemetery at Gettysburg, Pennsylvania.&lt;/p&gt;
+&lt;lq&gt;Four score and seven years ago our fathers brought forth on this continent a new
+nation, conceived in liberty, and dedicated to the proposition that all men
+are created equal.&lt;/lq&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="lq_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-lq">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope-lq">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format-lq">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/reftitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004463?>

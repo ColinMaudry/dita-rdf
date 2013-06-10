@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="spares" xml:lang="en-us">
+<title>spares</title>
+<shortdesc>The &lt;<keyword>spares</keyword>> element contains information
+about the spare parts that are needed for a task. This information
+might specify particular spare parts or it might state that no spare
+parts are required.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>spares</indexterm></keywords>
+</metadata></prolog><?Pub Caret?>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-spares/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="spares-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-spares/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="spares-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/p task/p <?Pub Caret?>mitask-d/spares</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;spares>
+ &lt;sparesli>
+  &lt;spare>dipstick&lt;/spare>
+  &lt;spare>engine oil&lt;/spare>
+ &lt;/sparesli>
+&lt;/spares>
+</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

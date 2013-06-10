@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="theconrefendattribute" xml:lang="en-us">
+<title>The conrefend attribute</title>
+  <shortdesc>The conrefend attribute is used when referencing a range of elements with the conref
+    mechanism. The conref or conkeyref attribute points to the first element in the range, while
+    conrefend points to the last element in the range. Although the start and end elements must be
+    of the same type as the referencing element (or specialized from that element), the
+    intermediary, contiguous nodes in the middle of the range do not have to be the
+    same.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords><indexterm
+          id="att-conref-topicref">conrefend attribute</indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><title>Using conref together with conrefend</title><p>Several
+items must be taken into account when using or implementing conrefend.</p><ul>
+<li>Processors will resolve the range by pulling in the start target
+and following sibling DOM nodes across to and including the end target.</li>
+<li>The start and end elements of a range must be of the same type
+as the referencing element, or they must be generalizable to the referencing
+element. For example, conref and conrefend may point from &lt;li>
+to other &lt;li> elements, or to specializations of &lt;li> such as &lt;step>.</li>
+<li>As with conref, if the conrefend points to a more specialized
+version of the referencing element, applications should generalize
+the target when resolving. </li>
+<li>It is not valid to use conrefend to point to a more general version
+of an element (such as using step to reference an li element).</li>
+<li>Other nodes (such as elements or text) between the start and end
+of a range do not have to match the referencing element.</li>
+<li>The start and end elements in a range must share the same parent.</li>
+<li>The parent of the referencing element must be the same as the
+parent of the target range, OR the parent of the target range may
+be a specialized version of the reference's parent. For example, it
+is possible to pull a range from conbody into body, because conbody
+is specialized from body. It is not possible to pull a range from
+body into conbody, because the result may not be valid in conbody.</li>
+<li>With single conref, an id attribute from the target will not be
+preserved on the resolved content. With a range, an id on both the
+start and the end will not be preserved. Id attributes on intermediate
+or child nodes should be preserved, although if this results in duplicate
+id values, an application may or may not recover by changing the id
+or by warning the user.</li>
+<li>With a single conref, attributes specified locally may be used
+to override attributes on the referenced content. With a conref range,
+the same is true, with the following clarifications: <ul>
+<li>When an id attribute is specified on the referencing element,
+it will only be preserved on the first element of the resolved range.</li>
+<li>When other attributes are specified, they will only apply to referenced
+elements of the same type. For example, if &lt;step> is used to pull
+in a range of sequential step elements, locally specified attributes
+apply to all steps in the range. If &lt;ol> is used to pull in a series
+of (ol, p, ol), locally specified attributes apply only to the &lt;ol>
+elements in that range.</li>
+</ul></li>
+</ul></section>
+<example><title>Example: reusing a set of list items</title><fig><title>List
+example: Source topic.dita with ids</title>
+<codeblock>&lt;topic id="x">
+ 	...
+ 	&lt;body>
+ 		&lt;ol>
+ 			&lt;li id="apple">A&lt;/li>
+ 			&lt;li id="bear">B&lt;/li>
+ 			&lt;li id="cat">C&lt;/li>
+ 			&lt;li id="dog">D&lt;/li>
+ 			&lt;li id="eel">E&lt;/li>
+ 		&lt;/ol>
+ 	&lt;/body>
+ &lt;/topic>
+ </codeblock>
+</fig><fig id="fig_C0AF6F23F1E74AF98540F736113DFFAB"><title>List example:
+Reusing topic with conrefs</title>
+<codeblock> &lt;topic id="y">
+ 	...
+ 	&lt;body>
+ 		&lt;ol>
+ 			&lt;li>My own first item&lt;/li>
+ 			&lt;li conref="topic.dita#x/bear" conrefend="topic.dita#x/dog"/>
+ 			&lt;li>And a different final item&lt;/li>
+ 		&lt;/ol>
+ 	&lt;/body>
+ &lt;/topic>
+ </codeblock>
+</fig><fig id="fig_A79BE8A6869B4DFDAAFA2F55BC113AA1"><title>List example:
+Processed result of reusing topic</title>
+<codeblock> &lt;topic id="y">
+ 	...
+ 	&lt;body>
+ 		&lt;ol>
+ 			&lt;li>My own first item&lt;/li>
+ 			&lt;li>B&lt;/li>
+ 			&lt;li id="cat">C&lt;/li>
+ 			&lt;li>D&lt;/li>
+ 			&lt;li>And a different final item<?Pub Caret?>&lt;/li>
+ 		&lt;/ol>
+ 	&lt;/body>
+&lt;/topic>
+</codeblock>
+</fig></example>
+<example><title>Example: Reusing a set of blocks</title><fig
+id="fig_7BB281DFE28F474BB9197BAE691B927C"><title>Block level example:
+Source topic.dita with ids</title>
+<codeblock>&lt;topic id="x">
+ 	...
+ 	&lt;body&gt;
+   &lt;p id="p1"&gt;First para&lt;/p&gt;
+ 	 &lt;ol id="mylist"&gt;
+     &lt;li id="apple"&gt;A&lt;/li&gt;
+     &lt;li id="bear"&gt;B&lt;/li&gt;
+     &lt;li id="cat"&gt;C&lt;/li&gt;
+     &lt;li id="dog"&gt;D&lt;/li&gt;
+     &lt;li id="eel"&gt;E&lt;/li&gt;
+   &lt;/ol&gt;
+   &lt;p id="p2"&gt;Second para&lt;/p&gt;
+ 	&lt;/body&gt;
+ &lt;/topic&gt;
+ </codeblock>
+</fig><fig id="fig_BF890E35527C41FBA93878660EFC1636"><title>Block
+level example: Reusing topic with conrefs</title>
+<codeblock> &lt;topic id="y"&gt;
+ 	...
+ 	&lt;body&gt;
+ 		&lt;p conref="topic.dita#x/p1" conrefend="topic.dita#x/p2"/&gt;
+ 	&lt;/body&gt;
+ &lt;/topic&gt;</codeblock>
+</fig><fig id="fig_D257C3B1EE2B49DA85457B1753A8C79D"><title>Block
+level example: Processed result of reusing topic</title>
+<codeblock> &lt;topic id="y"&gt;
+ 	...
+ 	&lt;body&gt;
+    &lt;p&gt;First para&lt;/p&gt;
+ 	  &lt;ol id="mylist"&gt;
+      &lt;li id="apple"&gt;A&lt;/li&gt;
+      &lt;li id="bear"&gt;B&lt;/li&gt;
+      &lt;li id="cat"&gt;C&lt;/li&gt;
+      &lt;li id="dog"&gt;D&lt;/li&gt;
+      &lt;li id="eel"&gt;E&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;Second para&lt;/p&gt;
+ 	&lt;/body&gt;
+&lt;/topic&gt;
+</codeblock>
+      </fig>
+    </example>
+    <section
+      id="conkeyref">
+      <title>Using conrefend together with conkeyref</title>
+      <p>When the conkeyref attribute is used in place of conref, a key is used to address the
+        target of the reference. The conrefend attribute, which indicates the end of a conref range,
+        may not use a key. Instead the the map or topic element addressed by the key name component
+        of the <keyword>conkeyref</keyword> is used in place of whatever map or topic element is
+        addressed by the conrefend attribute.</p>
+      <p>For example, if the value of the conkeyref attribute is "config/step1" and the value of the
+        conrefend is "defaultconfig.dita#config/laststep", the conref range will end with the step
+        that has id="laststep" in whatever topic is addressed by the key name  "config". If the key
+        name "config" is not defined, and the conref attribute itself is not present for fallback,
+        the conrefend attribute is ignored.</p>
+    </section>
+    <example>
+      <title>Example: Combining conrefend with conkeyref</title>
+      <fig>
+<title>Defining and referencing a key with conkeyref</title>
+<p>In this example the key "xmp" is defined as the first topic in
+the file examples.dita.</p>
+<codeblock>&lt;map>
+  &lt;!-- ... -->
+  &lt;keydef keys="xmp" href="examples.dita"/>
+  &lt;!-- ... -->
+&lt;/map>
+
+examples.dita:
+&lt;topic id="examples">
+  &lt;title>These are examples&lt;/title>
+  &lt;body>
+    &lt;ul>
+      &lt;li id="first">A first example&lt;/li>
+      &lt;li>Another trivial example&lt;/li>
+      &lt;li id="last">Final example&lt;/li>
+    &lt;/ul>
+  &lt;/body>
+&lt;/topic>
+</codeblock>
+<p>To reuse these list items by using the key, the conkeyref attribute
+combines the key itself with the sub-topic id (first) to define the
+start of the range. The conrefend attribute defines a default high-level
+object along with the sub-topic id (last) that ends the range:<codeblock>  &lt;li conkeyref="xmp/first" 
+      conrefend="default.dita#default/last"/></codeblock></p>
+<p>The conkeyref attribute uses a key to reference the first topic
+in examples.dita, so the range begins with the object examples.dita#examples/first.
+The high-level object in the conrefend attribute (<codeph>default.dita#default</codeph>)
+is replaced with the object represented by the key (the first topic
+in examples.dita), resulting in a range that ends with the object
+examples.dita#examples/last.</p>
+</fig><fig><title>Combining conref, conkeyref, and conrefend</title>
+<p>When conref, conkeyref, and conrefend are all specified, the key
+value takes priority.</p>
+<codeblock>  &lt;li conkeyref="thisconfig/start"
+      conref="standardconfig.dita#config/start"
+      conrefend="standardconfig.dita#config/end"/></codeblock>
+<ul>
+<li>If the key "thisconfig" is defined as <codeph>mySpecialConfig.dita#myconfig</codeph>,
+then the range will go from the list item with id="start" to the list
+item with id="end" in the topic <codeph>mySpecialConfig.dita#myconfig</codeph>.</li>
+<li>If the key "thisconfig" is defined as <codeph>myConfig.dita</codeph>,
+then the range will go from the list item with id="start" to the list
+item with id="end" within the first topic in <codeph>myConfig.dita</codeph>.</li>
+<li>If the key "thisconfig" is not defined, then the unchanged conref
+and conrefend attributes are used as fallback. In that case, the range
+will go from the list item with id="start" to the list item with id="end"
+within the topic <codeph>standardconfig.dita#config</codeph>.</li>
+</ul>
+</fig></example>
+<section><title>Error conditions</title><p>When encountering  an error
+condition, an implementation may but need not issue an error message.</p><table>
+<tgroup cols="2"><colspec colname="col1" colnum="1" colwidth="*"/>
+<colspec colname="col2" colnum="2" colwidth="*"/>
+<thead>
+<row>
+<entry colname="col1">Condition or Issue</entry>
+<entry colname="col2">Result</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">The conref attribute cannot be resolved in the
+target document (the target element may have been removed or its ids
+has  changed). 		   </entry>
+<entry colname="col2">The conref is ignored.</entry>
+</row>
+<row>
+<entry colname="col1">The conrefend attribute cannot be resolved in
+the target document (the target element may have been removed or its
+id has changed).</entry>
+<entry colname="col2">Range cannot be resolved, optional recovery
+processes the result as a simple conref.</entry>
+</row>
+<row>
+<entry colname="col1">Start and end elements are not siblings in the
+target document.</entry>
+<entry colname="col2">If the start element exists, optional recovery
+processes the result as a simple conref. </entry>
+</row>
+<row>
+<entry colname="col1">End element occurs before the start element
+in the target document.</entry>
+<entry colname="col2">If the start element exists, optional recovery
+processes the result as a simple conref.</entry>
+</row>
+<row>
+<entry colname="col1">An element has a conrefend attribute but is
+missing the conref</entry>
+<entry colname="col2">No result.</entry>
+</row>
+</tbody>
+</tgroup>
+</table></section>
+</refbody>
+</reference>

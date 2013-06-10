@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lomLearningResourceType" xml:lang="en-us">
+	<title>lomLearningResourceType</title>
+	<shortdesc>The &lt;<keyword>lomLearningResourceType</keyword>&gt; provides learning metadata about the specific kind of resource used, most dominant kind first.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lomLearningResourceType</indexterm><indexterm>learning and training elements<indexterm>lomLearningResourceType</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lomLearningResourceType/contains" otherprops="contains"><title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lomLearningResourceType-contains"/></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lomLearningResourceType/containedby" otherprops="containedby"><title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lomLearningResourceType-contained-by"/></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+ topic/data learning-d/lomLearningResourceType </p></section>
+<example id="example"><title>Example</title><p>See <xref href="lcLom.dita#lcLom/example">lcLom</xref>.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable id="lomLearningResourceType_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow>
+<stentry>name</stentry>
+<stentry>The name used to indicate this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>lomLearningResourceType</stentry>
+<stentry></stentry>
+</strow>
+<strow>
+<stentry>datatype</stentry>
+<stentry>The datatype for this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry></stentry>
+<stentry>no</stentry>
+</strow>
+<strow>
+<stentry>value</stentry>
+<stentry>The interactivity type for this content. See <xref
+href="../common/ditauseconreftarget.dita">this topic</xref> for more information
+on the -dita-use-conref-target value.</stentry>
+<stentry>(Exercise
+             | Simulation
+             | Questionnaire
+             | Diagram
+             | Figure
+             | Graph
+             | Index
+             | Slide
+             | Table
+             | Narrative Text
+             | Exam
+             | Experiment
+             | ProblemStatement
+             | SelfAssesment -dita-use-conref-target)</stentry>
+<stentry> </stentry>
+<stentry>yes</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>
+

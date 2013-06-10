@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference
+  id="dita_learning_specialization_elements"
+  xml:lang="en-us">
+  <title>DITA learning interaction base domain elements</title>
+  <shortdesc>The learning interaction base domain defines an "abstract" base type for all learning
+    assessments. This base type enables recognition of elements as interactions as distinct from
+    other topic/fig elements. The lcInteractionBase element is intended to be used only as a base
+    for specialization. It <keyword>should not</keyword> be used directly as an element type in DITA
+    documents.</shortdesc>
+  <refbody>
+  </refbody>
+</reference>

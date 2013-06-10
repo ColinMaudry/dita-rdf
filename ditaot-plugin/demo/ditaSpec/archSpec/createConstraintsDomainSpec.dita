@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+ "topic.dtd">
+<topic id="createConstraintsDomainSpec" xml:lang="en-us">
+<title>Constraints</title>
+<shortdesc><ph id="shortdesc">Constraint modules define additional
+constraints for corresponding       vocabulary modules in order to
+restrict content models or attribute lists for specific element  
+    types, remove extension elements from an integrated domain module,
+or replace base element       types with domain-provided extension
+element types. Constraint modules do not and cannot       change element
+semantics, only the details of how element types can be used in the
+context of       a specific concrete document type. Because constraints
+can make optional elements required,       documents that use the
+same vocabulary modules may still have incompatible constraints. Thus
+      the use of constraints can affect the ability for content from
+one topic or map to be used       directly in another topic or map.</ph></shortdesc>
+<body>
+<p>Each constraint integrated into a DITA document type <term>must</term> be
+declared in the       @domains attribute for each structural type
+integrated into the document type. </p>
+<p>A constraint module <term>may</term> define any of the following
+types of constraint:</p>
+<dl><dlentry>
+<dt>Restriction of content model or attributes for an element</dt>
+<dd>Constraint modules <term>may</term> modify base content models
+by removing optional           elements, making optional elements
+required, or requiring unordered elements to occur is a          
+specific sequence. Constraint modules <term>cannot</term> make required
+elements optional           or change the order of element occurrence
+for ordered elements.<p>For example, a             constraint for &lt;topic>
+could require &lt;shortdesc>, could remove &lt;abstract>         
+   altogether, and could require that the first child of &lt;body>
+be &lt;p>. A constraint             cannot allow &lt;shortdesc> to
+follow &lt;prolog>, because the base content model for           
+ &lt;topic> declares &lt;shortdec> to precede &lt;prolog>.</p></dd>
+</dlentry><dlentry>
+<dt>Restriction of extension elements from a domain</dt>
+<dd>Constraint modules for element domains <term>may</term> define
+a subset of the base set           of extension elements provided
+by the element domain.<p>For example, a constraint on the        
+    programming domain could reduce the list of included extension
+elements to &lt;codeph>             and &lt;codeblock>.</p></dd>
+</dlentry><dlentry>
+<dt>Replacement of base elements by domain extensions</dt>
+<dd>Constraint modules <term>may</term> replace base element types
+with domain-provided           extension elements.<p>For example,
+a constraint module could replace the &lt;ph> element            
+with the domain-provided elements, making &lt;ph> unavailable.</p><p>In
+a shell document             type, when integrating a domain, the
+base domain element may be omitted from the domain             extension
+group or parameter entity. While there is no separate content model
+constraint             declaration in this case (because the content
+model is configured directly in the shell             document type)
+the constraint should be declared in the @domains attribute and therefore
+            there must be a domains module file that provides the
+constraint's contribution to the             @domains attribute.</p></dd>
+</dlentry></dl>
+<p>There <term>may</term> be at most one constraint module that defines
+the content model for a       given element type included in a given
+concrete document type. This means that constraints for       the
+same element type defined in two different constraint modules cannot
+be aggregated       together. In that case, a new constraint module
+must be created that reflects the aggregation       of the two original
+constraints.</p>
+<section>       <title>Constraint rules</title>       <p>Constraint
+modules <term>must</term> conform to the following requirements:</p> 
+     <ul>
+<li>           <p>Designers <term>must</term> implement constrained
+content models for element types that             are more restrictive
+than the unconstrained content models for the same element       
+     types.</p>         </li>
+<li>           <p>The content model and attributes of one element
+type can be constrained only by one             constraint module
+included in a document type shell. </p>         </li>
+<li>           <p>The list of extension element types provided by
+a domain module can be constrained only             by one constraint
+module included in a document type shell. </p>         </li>
+<li>           <p>Each constraint module may constrain element types
+from only one vocabulary module.             This rule maintains granularity
+of reuse at the module level. </p>         </li>
+<li>           <p>Constraint modules that restrict different element
+types within the same vocabulary             module can be combined
+with one another or with a constraint module that selects a      
+      subset of the extension element types for the vocabulary. Such
+combinations of             constraints on a single vocabulary module
+have no meaningful order or precedence. </p>         </li>
+<li>           <p>Designers have the option to declare a constraint
+module or combination of constraint             modules to be more
+restrictive than another constraint module or combination of     
+       constraint modules on the same vocabulary module or a base
+vocabulary module. This             option is particularly useful
+when a designer wants to constrain base and specialized          
+  element types in a consistent way. The advantage of declaring the
+consistency is that             processors can take advantage of the
+consistency when converting document instances.</p><p>For example,
+a constraint module for &lt;topic> that requires both &lt;shortdesc>
+and &lt;body> is more restrictive than a similar constraint module
+that only requires &lt;body>. By declaring this relationship, a designer
+may indicate that documents which use the first constraint also comply
+with the looser constraint.</p></li>
+</ul>     </section>
+<section>       <title>Content processing</title>       <p>A document
+type with constraints allows a subset of the possible instances of
+a document         type for the same vocabularies without constraints.
+To put it another way, all instances of         the constrained document
+type are guaranteed to be valid instances of the unconstrained   
+     document type.</p>       <p>As a result, a constraint does not
+and cannot change basic or inherited element semantics.         The
+constrained instances remain valid instances of the unconstrained
+element type, and the         element type retains the same semantics
+and class attribute declaration. Thus, a constraint         never
+creates a new case to which content processing may need to react. </p> 
+     <p>For example, a document type constrained to require the &lt;shortdesc>
+element allows a         subset of the possible instances of the unconstrained
+document type with an optional         &lt;shortdesc> element. Thus,
+the content processing for topic still works when topic is       
+ constrained to require a short description.</p>     </section>
+<section>       <title>Content interoperability</title>       <p>DITA
+document instances declare (by means of the @domains attribute and
+the @class         attribute for the topic or map elements) the vocabularies
+available in its document type. A         processor <term>may</term> examine
+these declarations to determine whether or not a document        
+instance uses a subset of the vocabularies in another DITA document
+type and is thus         compatible with the other DITA document type.</p> 
+     <p>A constrained document type allows only a subset of the possible
+instances of the         unconstrained document type. Thus, for a
+processor to determine whether a document instance         is compatible
+with another document type, the document instance <term>must</term> declare
+        any constraints on the document type. </p>       <p>For instance,
+an unconstrained task is compatible with an unconstrained topic because
+the         task can be generalized to topic. If, however, the topic
+is constrained to require the         &lt;shortdesc> element, a document
+type with an unconstrained task is not compatible with         the
+constrained document type because some instances of the task might
+not have a         &lt;shortdesc> element. If, however, the task document
+type has also been constrained to         require the &lt;shortdesc>
+element, it is compatible with the constrained topic document    
+    type. </p>     </section>
+</body>
+</topic><?Pub Caret -3?>
+<?Pub *0000008931?>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="indexingdgroup" xml:lang="en-us">
+<title>Indexing group elements</title>
+<shortdesc>The indexing domain provides several new elements for use
+with indexing. The new elements allow authors to define "See" and
+"See also" references, and to override the default sort order for
+a term.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Domains elements<indexterm>indexing domain</indexterm></indexterm>
+<indexterm>Indexing domain elements</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>Indexing domain elements typically work with the indexterm
+and index-base elements; index-base is grouped with elements that
+are typically useful only in specialization contexts, and can be found
+using the link below.</section>
+</refbody>
+<related-links>
+<link href="../langref/index-base.dita"></link><?Pub Caret -2?>
+</related-links>
+</reference>
+<?Pub *0000001317?>

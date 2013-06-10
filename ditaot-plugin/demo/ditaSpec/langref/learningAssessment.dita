@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="learningAssessment" xml:lang="en-us">
+	<title>learningAssessment</title>
+	<shortdesc>A <keyword>Learning Assessment</keyword> presents questions or interactions that measure progress, encourage recollection, and stimulate reinforcement of the learning content, and can be presented before the content as a pre-assessment or as a post-assessment test. The interactions use a 
+sub-set of the Question-Test Interoperability (QTI) specification, implemented as a DITA domain 
+specialization.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>learningAssessment</indexterm>
+<indexterm>learning and training elements<indexterm>learningAssessment</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-learningAssessment/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="learningAssessment-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-learningAssessment/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="learningAssessment-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/topic learningBase/learningBase     learningAssessment/learningAssessment </p>
+		</section>
+<example id="example"> id="assessment_example">
+<title>Example</title>
+<codeblock>
+&lt;learningAssessment id="testAssess">
+  &lt;title>Certification Test&lt;/title>
+    &lt;shortdesc>Pass this test, and you are a certified genius.&lt;/shortdesc>
+    &lt;learningAssessmentbody>
+      &lt;lcIntro>Here's your test, folks. Good luck!&lt;/lcIntro>
+      &lt;lcInteraction>
+        &lt;lcSingleSelect id="asdf">
+        &lt;title>Multiple Choice - IEEE standards trivia&lt;/title>
+          &lt;lcQuestion>Which one of the listed standards committees 
+          is responsible for developing the token ring specification?&lt;/lcQuestion>
+          &lt;lcAnswerOptionGroup>
+            &lt;lcAnswerOption>
+              &lt;lcAnswerContent>IEEE 802.3&lt;/lcAnswerContent>
+            &lt;/lcAnswerOption>
+            &lt;lcAnswerOption>
+              &lt;lcAnswerContent>IEEE 802.5&lt;/lcAnswerContent>
+              &lt;lcCorrectResponse/>
+            &lt;/lcAnswerOption>
+            &lt;lcAnswerOption>
+              &lt;lcAnswerContent>IEEE 802.6&lt;/lcAnswerContent>
+            &lt;/lcAnswerOption>
+          &lt;/lcAnswerOptionGroup>
+        &lt;/lcSingleSelect>
+      &lt;/lcInteraction>
+      &lt;lcSummary>
+        &lt;title>Summary&lt;/title>
+        You are now certified.
+      &lt;/lcSummary>
+    &lt;/learningAssessmentbody>
+  &lt;/learningAssessment>
+</codeblock>
+</example>
+<section>
+<title>Attributes</title>
+<simpletable id="learningAssessment_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-topic">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/DITAArchVersion">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable><draft-comment>To be defined: Need to verify accuracy of attributes</draft-comment></section>
+
+</refbody>
+</reference>

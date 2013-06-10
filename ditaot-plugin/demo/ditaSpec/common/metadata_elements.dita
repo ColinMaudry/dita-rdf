@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference id="metadata_elements" xml:lang="en-us">
+<title>Metadata elements</title>
+<shortdesc>Metadata elements include information that is located within
+the &lt;topicmeta> element (in maps) or &lt;prolog> element (in topics),
+as well as indexing elements that can be placed in additional locations
+within topic content.</shortdesc><?Pub Caret 176?>
+</reference>
+<?Pub *0000000559?>

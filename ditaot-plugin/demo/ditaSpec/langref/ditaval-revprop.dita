@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="ditaval-revprop" xml:lang="en-us">
+<title>revprop</title>
+<shortdesc>Identifies a value in the rev attribute that should be
+flagged in some manner. Unlike the other conditional processing attributes,
+which may be used for both filtering and flagging, the rev attribute
+may only be used for flagging. <!--There may be at most one occurrence of a &lt;revprop> element for
+each attribute value specification (to avoid conflicting actions for
+the same attribute value).--></shortdesc><?Pub Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>DITAVAL elements<indexterm>revprop</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>It is an error to include more than one &lt;revprop>
+element with the same @val attribute setting. Recovery from this error
+is implementation dependent; in such cases processors may, but need
+not, provide an error or warning message.</section>
+<section><ph id="default-text">When no alternate text is specified
+for a revision flag, the default alternate text for revprop start
+of change is a localized translation of "Start of change", and the
+default alternate text for revprop end of change is a localized translation
+of "End of change". </ph></section>
+<section>The rev attribute identifies when a particular
+section of a document was added in the lifetime of that document.
+The attribute is not considered a filtering attribute because this
+is not sufficient to be used for full version control, such as single-sourcing
+multiple product variants based on version level – it only represents
+one aspect of the revision level. </section>
+<section otherprops="contains"><title>Contains</title><p><xref
+href="ditaval-startflag.dita">startflag</xref> (<i>optional</i>) then <xref
+href="ditaval-endflag.dita">endflag</xref> (<i>optional</i>)</p></section>
+<section otherprops="containedby"><title>Contained by</title><p><xref
+href="ditaval-val.dita">val</xref></p></section>
+<example id="example"><title>Example</title><p>See the example
+in the <xref href="ditaval-val.dita">&lt;val></xref> description.</p></example>
+<section id="attrs"><title>Attributes</title><simpletable
+id="abstract_attr" relcolwidth="1* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow>
+<stentry>val</stentry>
+<stentry>The value to be acted upon. If the val attribute is absent,
+then the revprop element declares a default behavior for any value
+in the rev attribute.</stentry>
+<stentry>CDATA</stentry>
+<stentry>#IMPLIED</stentry>
+<stentry>no</stentry>
+</strow>
+<strow>
+<stentry>action</stentry>
+<stentry>The action to be taken. The options are:<dl><dlentry>
+<dt><userinput>include</userinput></dt>
+<dd>Include the content in output without flags. This is the default
+behavior unless otherwise set.</dd>
+</dlentry><dlentry>
+<dt><userinput>passthrough</userinput></dt>
+<dd>Include the content in output, and preserve the attribute value
+as part of the output stream for further processing by a runtime engine,
+for example runtime filtering based on individual user settings. The
+value should be preserved in whatever syntax is required by the target
+runtime. Values that are not explicitly passed through should be removed
+from the output stream, even though the content is still included.</dd>
+</dlentry><dlentry>
+<dt><userinput>flag</userinput></dt>
+<dd>Include and flag the content on output (if the content has not
+been excluded).</dd>
+</dlentry></dl></stentry>
+<stentry>(include | passthrough | flag)</stentry>
+<stentry>#IMPLIED</stentry>
+<stentry>yes</stentry>
+</strow>
+<strow>
+<stentry>changebar</stentry>
+<stentry>When flag has been set, specify a changebar color, style,
+or character, according to the changebar support of the target output
+format. If flag has not been set, this attribute is ignored.</stentry>
+<stentry>CDATA</stentry>
+<stentry>#IMPLIED</stentry>
+<stentry>no</stentry>
+</strow>
+<strow conref="ditaval-prop.dita#ditaval-prop/color">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="ditaval-prop.dita#ditaval-prop/backcolor">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="ditaval-prop.dita#ditaval-prop/style">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004777?>

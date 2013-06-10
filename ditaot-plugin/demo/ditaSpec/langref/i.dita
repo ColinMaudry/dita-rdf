@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="i" xml:lang="en-us">
+<title>i</title>
+<shortdesc>The italic (&lt;i&gt;) element is used to apply italic
+highlighting to the content of the element. <ph
+conref="b.dita#b/highlight-caution"></ph> For example, for specific
+items such as variable names, use the &lt;<keyword>varname<?Pub Caret?></keyword>>
+element.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>i (italic)</indexterm><indexterm>italic (i)</indexterm>
+<indexterm>Typographic elements<indexterm>i (italic)</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-i/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="i-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-i/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="i-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/ph hi-d/i </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;p&gt;Unplug the unit &lt;i&gt;before&lt;/i&gt; placing the metal screwdriver
+against the terminal screw.&lt;/p&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="i_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

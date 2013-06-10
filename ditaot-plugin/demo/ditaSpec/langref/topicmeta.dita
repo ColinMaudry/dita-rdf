@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topicmeta" xml:lang="en-us">
+  <title>topicmeta</title>
+  <shortdesc>The &lt;<keyword>topicmeta</keyword>&gt; element defines the metadata that applies to a
+    topic when it appears in a map. When appropriate, that metadata also applies to the other topics
+    in the map that are contained by the same element that contains the &lt;topicmeta&gt; element.
+    When creating links, &lt;topicmeta> content can also be used to override the title and short
+    description that are used for the link. In addition, it can be used to add index entries to
+    referenced content using the &lt;<keyword>keywords</keyword>&gt; element.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>topicmeta</indexterm><indexterm>Map elements<indexterm
+            >topicmeta</indexterm></indexterm>
+        <indexterm>metadata</indexterm></keywords>
+    </metadata>
+  </prolog>
+  <refbody><section>The metadata given in a &lt;topicmeta> element is specific to a given
+      context within a map. If a reference to a single resource appears more than once in a map or
+      set of maps, unique metadata may be specified in each instance. For example, the two
+      references to a single resource may specify different navigation titles or search titles, each
+      of which is specific to a single context.<note>The topic <xref
+          href="../archSpec/cascading-in-a-ditamap.dita" format="dita">Cascading of attributes and
+          metadata in a DITA map</xref> in the DITA Architectural Specification provides more
+        information about which metadata elements inside &lt;topicmeta> cascade to other
+        &lt;topicref> elements. In addition, the topic <xref
+          href="../archSpec/reconciling-topic-and-map-metadata.dita" format="dita">Reconciling topic
+          and map metadata</xref> provides more information about how metadata specified in the map
+        interacts with metadata specified in each topic.</note></section><section
+      conref="../common/commonNavLibraryTable.dita#contentmodel-topicmeta/contains" id="contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref keyref="topicmeta-contains"/></p>
+    </section><section
+      conref="../common/commonNavLibraryTable.dita#contentmodel-topicmeta/containedby"
+      id="containedby" otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref keyref="topicmeta-contained-by"/></p>
+    </section><section id="inheritance" otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>- map/topicmeta </p>
+    </section>
+    <example id="example"><title>Example</title>In this example, the metadata defined by the
+      &lt;topicmeta> element applies to the associated &lt;<keyword>topicref</keyword>&gt;
+        (<filepath>bats.dita</filepath>) and all of its children. The &lt;<keyword
+        >topicmeta</keyword>&gt; element contains an audience definition which indicates that
+        <filepath>bats.dita</filepath> and its children are of interest to experienced programmers
+      who are troubleshooting.
+      <codeblock xml:space="preserve">&lt;map&gt;
+  &lt;topicref href="bats.dita"&gt;
+    <b>&lt;topicmeta&gt;</b>
+      &lt;audience type="programmer" job="troubleshooting" experiencelevel="expert"/&gt;
+    <b>&lt;/topicmeta&gt;</b>
+    &lt;topicref href="batcaring.dita"&gt;&lt;/topicref&gt;
+    &lt;topicref href="batfeeding.dita"&gt;&lt;/topciref&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</codeblock><?Pub Caret 0?></example>
+    <section id="attributes">
+      <title>Attributes</title>
+      <simpletable id="topicmeta_attr" relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/lockmeta">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section></refbody>
+</reference>
+<?Pub *0000004584?>

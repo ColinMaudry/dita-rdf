@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="steps-informal" xml:lang="en-us">
+<title>steps-informal</title>
+<shortdesc>The &lt;<keyword>steps-informal</keyword>> element allows
+authors to describe procedural task information without placing each
+step in an individual container element, which is a requirement of
+the related &lt;steps> and &lt;steps-unordered> elements. For example,
+&lt;steps-informal> may contain a paragraph that describes more than
+one step in a single sentence, or it may contain sentences that mix
+steps together with information about the steps.</shortdesc><?Pub
+Caret 226?>
+<prolog><metadata>
+<keywords><indexterm>steps-informal element</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-steps-informal/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="steps-informal-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-steps-informal/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="steps-informal-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/section task/steps-informal </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;steps-informal>
+ &lt;p>Put the soil in the container any old way. It doesn't really matter how
+you do it as long as it is at least 12 cm deep. Once the soil is in place,
+water appropriately and wait.&lt;/p>
+&lt;/steps-informal></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002902?>

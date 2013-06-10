@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="longdescref" xml:lang="en-us">
+<title>longdescref</title>
+<shortdesc>The &lt;longdescref> element supports a reference to a
+text description of the graphic or object. This element replaces the
+deprecated longdescref attribute on image and object elements.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>longdescref</indexterm></keywords>
+</metadata></prolog><?Pub Caret -2?>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-longdescref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="longdescref-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-longdescref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="longdescref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/longdescref </p></section>
+<example id="example"><title>Example</title><fig><title>Longdescref
+which references a local DITA description</title>
+<codeblock>&lt;image href="llama.jpg">
+  &lt;alt>Llama picture&lt;/alt>
+  &lt;longdescref href="my-pet-llama.dita"/>
+&lt;/image></codeblock>
+</fig><fig><title>Longdescref which references an external description</title>
+<codeblock>&lt;image href="puffin.jpg">
+  &lt;alt>Puffin pigure&lt;/alt>
+  &lt;longdescref href="http://www.example.org/birds/puffin.html"
+               scope="external"
+               format="html"/>
+&lt;/image></codeblock>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003555?>

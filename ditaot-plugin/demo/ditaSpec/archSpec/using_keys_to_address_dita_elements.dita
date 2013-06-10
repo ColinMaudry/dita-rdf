@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="using_keys_to_address_dita_elements">
+    <title>Using keys to address DITA elements</title>
+    <shortdesc>For topic references, image references, and navigation link relationships (&lt;link>,
+        &lt;xref>, and elements that take the @keyref but not the @href attribute), resources can be
+        addressed by key using the @keyref attribute. For content reference relationships, resources
+        can be addressed by key using the @conkeyref attribute.</shortdesc>
+    <conbody>
+        <section>
+            <title>Syntax</title>
+            <p>For references to topics, maps, and non-DITA resources, the value of the @keyref
+                attribute is simply a key name: <codeph>keyref="topic-key"</codeph>. </p>
+            <p>For references to non-topic elements within topics and non-topicref elements within
+                maps, the value of the @keyref attribute is a key name, a solidus ("/"), and the ID
+                of the target element: <codeph>keyref="topic-key/some-element-id"</codeph>.</p>
+            <p>If both @keyref and @href attributes are specified on an element, the @href value
+                    <keyword>must</keyword> be used as a fall-back address when the key name is
+                undefined, and <keyword>should</keyword> be used as a fall-back address when the key
+                name is defined but the key reference cannot be resolved to a resource. If both
+                @conkeyref and @conref attributes are specified on an element, the @conref value
+                    <keyword>must</keyword> be used as a fall-back address when the key name is
+                undefined, and <keyword>should</keyword> be used as a fall-back address when the key
+                name is defined but the key reference cannot be resolved to a resource.</p>
+        </section>
+        <section>
+            <title>Example</title>
+            <p>For example, consider this topic in the document "file.dita":
+                <codeblock>&lt;topic id="topicid"&gt;
+ &lt;title&gt;Example referenced topic&lt;/title&gt;
+ &lt;body&gt;
+  &lt;p id="para-01"&gt;Some content.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;</codeblock>and
+                this key
+                definition:<codeblock>&lt;map&gt;
+  &lt;topicref keys="myexample"
+    href="file.dita"
+  /&gt;
+&lt;/map&gt;</codeblock></p>
+            <p>A keyref of the form <codeph>"myexample/para-01</codeph> resolves to the &lt;p&gt;
+                element in the topic. The key reference would be equivalent, in the context of this
+                map, to the URI reference <codeph>file.dita#topicid/para-01</codeph>.</p>
+            <p>A key reference to a topicref element where the linking element specifies a format
+                value of "ditamap" addresses the topicref element itself as though the topicref
+                element had been addressed by ID. In particular, a topicref with a key reference to
+                another topicref and a format value of "ditamap" is a use of the map branch rooted
+                at the referenced topicref. </p>
+        </section>
+    </conbody>
+</concept>

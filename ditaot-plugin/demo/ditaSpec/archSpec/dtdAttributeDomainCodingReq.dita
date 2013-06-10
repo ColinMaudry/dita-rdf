@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="attdomain" xml:lang="en-us">
+  <title>Attribute domain module coding requirements</title>
+  <?Pub Caret1?>
+  <shortdesc>An attribute domain vocabulary module declares a new attribute specialized from either
+    the @props or @base attribute. An attribute domain module defines exactly one new attribute
+    type.</shortdesc>
+  <conbody>
+    <p>An attribute domain's name is the name of the attribute plus "Att" to distinguish the domain
+      attribute from any element domains with the same name. For example, for an attribute named
+      "new" the attribute domain name would be "newAtt". The attribute domain name is used to
+      construct filenames and entity names for the domain. </p>
+    <p>An attribute domain <term>must</term> consist of one file, whose name consists of the module
+      name plus <filepath>Domain</filepath> plus the <filepath>ent</filepath> extension. For
+      example: <filepath>newAttDomain.ent</filepath> for an attribute named "new". </p>
+    <p>The file <term>must</term> have two parts:<dl>
+        <dlentry>
+          <dt>Attribute extension entity</dt>
+          <dd>
+            <p>The attribute declaration is in an entity. This entity can then be used in document
+              type shells to add the new attribute. The attribute declaration entity name consists
+              of the attribute name plus "-d-attribute". For example: </p>
+            <codeblock>&lt;!ENTITY % newAtt-d-attribute "new   CDATA #IMPLIED"&gt;</codeblock>
+            <p>For an attribute named "new".</p>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Domain declaration entity</dt>
+          <dd>
+            <p
+            rev="public-review-1">The attribute domain is declared in @domains attribute values through a general text entity that contains the attribute domain's domain declaration fragment. The entity name consists of the module name plus "-d-att". For example, "newAtt-d-att" for an attribute named "new". See <xref
+            href="domainsatt.dita#domainsatt"
+            format="dita"/> for details on attribute domain @domains values.</p>
+            <p
+            rev="public-review-1">For example:</p>
+            <codeblock>&lt;!ENTITY newAtt-d-att       "a(props new)"  &gt;</codeblock>
+          </dd>
+        </dlentry>
+      </dl></p>
+    <p>Attribute domains do not have domain module declaration (.mod) files.</p>
+  </conbody>
+</concept>
+<?Pub *0000002334?>

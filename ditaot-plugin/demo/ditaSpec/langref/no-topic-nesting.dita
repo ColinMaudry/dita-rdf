@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="no-topic-nesting" xml:lang="en-us">
+<title>no-topic-nesting</title>
+<shortdesc>The &lt;<keyword>no-topic-nesting</keyword>&gt; element
+is a placeholder in the DITA architecture. It is not actually used
+by the default DITA document types; it is for use only when creating
+a validly customized document type where the information designer
+wants to eliminate the ability to nest topics. Not intended for use
+by authors, and has no associated output processing.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>no-topic-nesting</indexterm><indexterm>Specialization
+elements<indexterm>no-topic-nesting</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-no-topic-nesting/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="no-topic-nesting-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-no-topic-nesting/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="no-topic-nesting-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/no-topic-nesting </p></section>
+<example id="example"><title>Example</title><p><i><?Pub
+Caret?>This element is not intended to be used in source files.</i></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="no-topic-nesting_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

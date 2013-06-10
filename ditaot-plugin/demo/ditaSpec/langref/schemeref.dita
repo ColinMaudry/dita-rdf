@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="schemeref" xml:lang="en-us">
+<title>schemeref</title>
+<shortdesc>A &lt;<keyword>schemeref</keyword>> element provides a
+reference to another scheme. Typically, the referenced scheme defines
+a base set of controlled values extended by the current scheme. The
+values in the referenced scheme are merged with the current scheme;
+the result is equivalent to specifying all of the values in a single
+map.<?Pub Caret?></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>schemeref</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-schemeref/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="schemeref-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-schemeref/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="schemeref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref subjectScheme/schemeref </p></section>
+<example id="example"><title>Example: Extending a category with more
+specific values</title><fig><title>The map baseOS.ditamap</title>
+<codeblock>&lt;subjectScheme>
+  &lt;subjectdef keys="os" navtitle="Operating system">
+    &lt;subjectdef keys="linux" navtitle="Linux">
+      &lt;subjectdef keys="redhat" navtitle="RedHat Linux"/>
+      &lt;subjectdef keys="suse"   navtitle="SuSE Linux"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="mswin" navtitle="Windows"/>
+    &lt;subjectdef keys="zos"   navtitle="z/OS"/>
+  &lt;/subjectdef>
+  &lt;enumerationdef>
+    &lt;attributedef name="platform"/>
+    &lt;subjectdef keyref="os"/>
+  &lt;/enumerationdef>
+&lt;/subjectScheme></codeblock>
+</fig><fig><title>Second map that references baseOS.ditamap</title>
+<p>Because a scheme establishes relationships between subjects rather
+than a contextual navigation structure, new relationships can be added
+to existing subjects. In particular, the referencing scheme can extend
+an enumeration by adding new relationships to existing subjects that
+belong to the enumeration. For instance, a scheme could extend the
+baseOS.ditamap scheme shown above by adding Macintosh OS as a child
+of the existing os subject and adding special versions of Windows
+under the existing mswin subject:</p>
+<codeblock>&lt;subjectScheme>
+  <b>&lt;schemeref href="baseOS.ditamap"/></b>
+  &lt;subjectdef keyref="os">
+    &lt;subjectdef keys="macos" navtitle="Macintosh"/>
+    &lt;subjectdef keyref="mswin">
+      &lt;subjectdef keys="winxp"  navtitle="Windows XP"/>
+      &lt;subjectdef keys="winvis" navtitle="Windows Vista"/>
+    &lt;/subjectdef>
+  &lt;/subjectdef>
+&lt;/subjectScheme></codeblock>
+<p>The references to the subjects defined by the base scheme use the
+keyref attribute to avoid duplicate definitions of the keys.</p>
+</fig><fig><title>Resulting scheme</title>
+<p>The result of merging the extension scheme with the base scheme
+is exactly the same as the following single scheme.</p>
+<codeblock>&lt;subjectScheme>
+  &lt;subjectdef keys="os" navtitle="Operating system">
+    &lt;subjectdef keys="linux" navtitle="Linux">
+      &lt;subjectdef keys="redhat" navtitle="RedHat Linux"/>
+      &lt;subjectdef keys="suse"   navtitle="SuSE Linux"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="macos" navtitle="Macintosh"/>
+    &lt;subjectdef keys="mswin" navtitle="Windows">
+      &lt;subjectdef keys="winxp" navtitle="Windows XP"/>
+      &lt;subjectdef keys="win98" navtitle="Windows Vista"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="zos"   navtitle="z/OS"/>
+  &lt;/subjectdef>
+  &lt;enumerationdef>
+    &lt;attributedef name="platform"/>
+    &lt;subjectdef keyref="os"/>
+  &lt;/enumerationdef>
+&lt;/subjectScheme></codeblock>
+<p>Because the extended baseOS scheme bound the os subject to the
+platform attribute, the extension scheme doesn't provide that binding.
+The controlled values added by the extension to the hierarchy for
+the os subject become part of the enumeration bound to the platform
+attribute.</p>
+</fig></example>
+<example><title>Example: Extending a category upwards</title><p>A
+category can also be extended upward. For instance, an extension scheme
+could create a Software category that includes operating systems as
+well as applications.</p><codeblock>&lt;subjectScheme>
+  &lt;schemeref href="baseOS.ditamap"/>
+  &lt;subjectdef keys="sw" navtitle="Software">
+    &lt;subjectdef keyref="os"/>
+    &lt;subjectdef keys="app" navtitle="Applications">
+      &lt;subjectdef keys="apacheserv" navtitle="Apache Web Server"/>
+      &lt;subjectdef keys="mysql"      navtitle="MySQL Database"/>
+    &lt;/subjectdef>
+  &lt;/subjectdef>
+&lt;/subjectScheme></codeblock><p>If the extended baseOS scheme defines
+the binding of the os subject with the platform attribute, the app
+subjects provided by the extension scheme aren't subordinate to the
+os subject and thus don't become part of that enumeration. To leave
+open the possibility of upward extension of an enumeration, the content
+provider should define the controlled values in one scheme and define
+the binding to the attribute separately in a extension scheme. That
+way, the content provider can substitute a binding to a different
+extension without rework.</p><p>An adopter would identify the extension
+scheme as the scheme governing controlled values in the DITA environment.
+Any base schemes referenced by the extension scheme are, from a logical
+view, part of the extension scheme.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/processing-role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-schemeref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format-mapref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="data" xml:lang="en-us">
+<title>data</title>
+<shortdesc>The &lt;<keyword>data</keyword>> element represents a property
+within a DITA topic or map. While the &lt;<keyword>data</keyword>>
+element can be used directly to capture properties, it is particularly
+useful as a basis for specialization. Default processing should treat
+the content as an unknown kind of metadata and ignore it for rendering,
+but custom processing may match the <keyword>name</keyword> attribute
+or specialized element and use the element for automated manipulation
+or to format data associated with the body flow. For example, a specialized
+data element may be used to format properties as sidebars or other
+adornments or to harvest properties for automated processing.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>data element</indexterm><indexterm>property <indexterm>data</indexterm></indexterm>
+<indexterm>Miscellaneous elements<indexterm>data</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section> <p>The subject of the property is ordinarily the container
+of the &lt;<keyword>data</keyword>> element. In the content model
+for the &lt;<keyword>prolog</keyword>> and &lt;<keyword>metadata</keyword>>
+elements, the property applies to the topic as a whole. In the &lt;<keyword>topicmeta</keyword>>
+element, the property applies to the referenced topic. The &lt;<keyword>data-about</keyword>>
+element may be used to identify the subject of the property with an
+explicit reference.</p><p>The <keyword>name</keyword> attribute names
+the property for processes. A &lt;<keyword>title</keyword>> subelement
+may provide a label for the property. The <keyword>datatype</keyword> attribute
+may be used to identify the type for the value. The value of the property
+can be any of the following:</p><ul>
+<li>A simple text value expressed with the <keyword>value</keyword> attribute
+or textual content.</li>
+<li>A reference to either DITA content or a non-DITA resource expressed
+with the <keyword>href</keyword> attribute.</li>
+<li>An image or other non-textual object. </li>
+<li>A brief unit of descriptive text that is not part of the body
+text flow.</li>
+<li>A complex structure composed of nested &lt;<keyword>data</keyword>>
+elements.</li>
+</ul><note type="caution">Processors should ignore the content of
+the &lt;data> element by default, so the &lt;<keyword>data</keyword>>
+element should only be used for properties and not to embed text for
+formatting as part of the flow of the topic body. It might be tempting
+to specialize the &lt;data> element for text that is part of the body
+flow, so as to escape the constraints of the base content models.
+This abuse of the DITA architecture will cause problems. For example,
+if a particular kind of paragraph is specialized from &lt;data> rather
+than from &lt;p>, then when the content is exchanged with others that
+do not recognize the specialized element, their processors will skip
+the content.</note><p>The &lt;data> element may be nested to create
+structures for complex properties. The name attribute may be to distinguish
+different semantics associated with different instances of the &lt;data>
+element such as addresses, times, amounts, and so on. In many cases,
+however, it is preferable to specialize the &lt;data> element for
+more precise semantics and for constraints on structures and values.
+For instance, a specialization can specify an enumeration for the
+value attribute. </p><?Pub Caret 165?><p>A &lt;data> element containing
+properties of a topic as a whole should be located in the topic&apos;s &lt;prolog>
+or &lt;metadata> element, or in a &lt;topicmeta> element related to
+a &lt;topicref> that references the topic. The &lt;data> element generally
+goes at the beginning of the element to which the properties in it
+refer. Where this is unwieldy, the &lt;data> element can go in the &lt;prolog>,
+with the data-about attribute identifying which specific element in
+the topic is the reference.</p><!--RDA: Removed this paragraph in draft 1.2.3, it seems to duplicate info above:
+<p>A process can harvest the values of these properties for a machine-processable
+representation such as RDF. The default formatting ignores the &lt;data>
+element within the &lt;body> element. Customized or specialized processing
+can render property values, given an appropriate specification of
+which values should be displayed, in which outputs, and how and where
+they should appear in output.</p>--> </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-data/contains"
+id="contains" otherprops="contains"> <title>Contains</title> <p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="data-contains"></xref></p> </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-data/containedby"
+id="containedby" otherprops="containedby"> <title>Contained By</title> <p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="data-contained-by"></xref></p> </section>
+<section id="inheritance" otherprops="inheritance"> <title>Inheritance</title><p>-
+topic/data </p> </section>
+<example id="example"><title>Example</title><p>Uses of the &lt;data&gt;
+element may include the following:</p><ul>
+<li>Complex metadata properties such as bibliographic records corresponding
+to citations.</li>
+<li>Hybrid documents with data values as part of the content, such
+as word processor formats using form fields.</li>
+<li>Messages in which the payload includes human-readable content.
+Such applications can use the &lt;data&gt; element to define the addressing
+on the message envelope. For instance, a topic could model an email
+message by representing the address with specialized &lt;data&gt;
+elements in the &lt;prolog&gt; element and the content with the &lt;body&gt;
+element.</li>
+<li>Transactional documents in which the values are processed but
+also displayed with human-readable content. In particular, a library
+of building blocks for transaction documents can be implemented through
+a DITA domain as specialized &lt;data&gt; elements including those
+from the UN/CEFACT Core Components Technical Specification (<xref
+format="html" href="http://www.unece.org/cefact/" scope="external">http://www.unece.org/cefact/</xref>). </li>
+</ul><fig><title>Using the name attribute on unspecialized data elements</title>
+<p>This structure identifies the library and version demonstrated
+by a code sample. The name attribute is used to identify both the
+grouping data element and the nested data elements that provide specific
+properties. These properties will not appear in the output unless
+a processor is customized to recognize these name attribute values.</p>
+<codeblock>&lt;codeblock>
+  &lt;data name="exampleOf">
+    &lt;data name="library" href="ajaxLibrary.js"/>
+    &lt;data name="version" value="2006-6-19"/>
+  &lt;/data>
+  ...
+&lt;/codeblock></codeblock>
+</fig><fig><title>Specializing data to annotate a code sample</title>
+<p>The following example specifies the delimited source code for a
+code fragment so an automated process can refresh the code fragment.
+The &lt;fragmentSource>, &lt;sourceFile>, &lt;startDelimiter>, and &lt;endDelimiter>
+elements are specialized from &lt;data> but the &lt;codeFragment>
+is specialized from &lt;codeblock>. These properties wouldn't appear
+in the formatted output (except perhaps for debugging problems in
+the refresh): </p>
+<codeblock><![CDATA[<example>
+    <title>An important coding technique</title>
+    <codeFragment>
+        <fragmentSource>
+            <sourceFile     value="helloWorld.java"/>
+            <startDelimiter value="FRAGMENT_START_1"/>
+            <endDelimiter   value="FRAGMENT_END_1"/>
+        </fragmentSource>
+        ...
+    </codeFragment>
+</example>
+]]></codeblock>
+</fig><fig><title>Specializing data to annotate housing information</title>
+<p>The following example identifies a real estate property as part
+of a house description. The &lt;realEstateProperty&gt; element and
+its child elements are specialized from &lt;data&gt;. The &lt;houseDescription&gt;
+element is specialized from &lt;section&gt;. A specialized process
+can format the values as part of a brochure if they meet criteria
+for inclusion.</p>
+<codeblock><![CDATA[<houseDescription>
+  <title>A great home for sale</title>
+  <realEstateProperty>
+    <realEstateBlock value="B7"/>
+    <realEstateLot   value="4003"/>
+    ...
+  </realEstateProperty>
+  <p>This elegant....</p>
+  <object data="B7_4003_tour360Degrees.swf"/>
+</houseDescription>
+]]></codeblock>
+</fig></example>
+<section id="attributes"> <title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/name">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/datatype">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/value">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> </section>
+</refbody>
+</reference>
+<?Pub *0000010963?>

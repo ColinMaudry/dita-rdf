@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="component" xml:lang="en-us">
+<title>component</title>
+<shortdesc>The &lt;<keyword>component</keyword>&gt; element
+describes the component of the product that this topic is concerned
+with. For example, a product might be made up of many components,
+each of which is installable separately. Components might also be
+shared by several products so that the same component is available
+for installation with many products. An implementation may (but need
+not) use this identification to check cross-component dependencies
+when some components are installed, but not others. An implementation
+may also (but need not) use the identification to <?Pub Caret?>make
+sure that topics are hidden, removed, or flagged in some way when
+the component they describe isn't installed.<!--Such process-control
+logic is not currently supported in DITA processing.--></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>component</indexterm><indexterm>Prolog elements<indexterm>component</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-component/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="component-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-component/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="component-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/component </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">&lt;prodinfo&gt;
+ &lt;prodname&gt;BatCom&lt;/prodname&gt;
+ &lt;vrmlist&gt;
+  &lt;vrm version="v5r2"/&gt;
+ &lt;/vrmlist&gt;
+ <b>&lt;component&gt;</b>TCP/IP<b>&lt;/component&gt;</b>
+&lt;/prodinfo&gt;
+</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="component_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="dita-linking-links-within-topics" xml:lang="en-us">
+ <title>Links within topics</title>
+ <shortdesc>A topic may contain several types of links.</shortdesc>
+ <conbody>
+  <ul>
+   <li>Content reference links from any element in the topic that allows @conref or @conkeyref.</li>
+   <li>Related information links, within a &lt;related-links> element following the topic body. The
+    related links are usually rendered at the end of the topic.</li>
+   <li>Image links created using &lt;image>. Image elements may use &lt;longdescref> to link to the
+    long description for the image as a supplement to the &lt;alt> element.</li>
+   <li>Object links created using &lt;object>. Object elements may use &lt;longdescref> to link to
+    the long description for the object as a supplement to the &lt;alt> element.</li>
+   <li>Navigation links created using &lt;xref>. For output media that support hyperlinking, the
+    &lt;xref> should result in a hyperlink.</li>
+   <li>Navigation links created using @keyref on elements that allow @keyref but not @href (e.g.,
+    &lt;ph>, &lt;cite>, &lt;keyword>, and &lt;term>).</li>
+   <li>Metadata associations using &lt;data-about> in contexts where &lt;data> is allowed.</li>
+   <li>Navigation links from long quotes to the source of the quote using &lt;longquoteref>.</li>
+  </ul>
+  <?Pub Caret -2?>
+  <p>Links to resources outside a topic's containing XML document that use direct URI-based
+   addresses establish unconditional topic-to-resource dependencies. Such dependencies can impede
+   reuse in two ways:<ul>
+    <li>The linking topic cannot be used in a given map unless the dependent resource is also
+     used.</li>
+    <li>The linked resource cannot be dynamically changed based on the map context in which the
+     linking topic is used.</li>
+   </ul></p>
+  <p>These issues can be avoided by using key-based addressing. Because keys are defined in maps,
+   each map that uses the linking topic can bind the key to the most appropriate resource.</p>
+ </conbody>
+</concept>
+<?Pub *0000002050?>

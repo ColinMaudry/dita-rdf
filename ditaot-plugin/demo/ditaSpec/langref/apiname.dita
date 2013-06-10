@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="apiname" xml:lang="en-us">
+<title>apiname</title>
+<shortdesc>The &lt;<keyword>apiname</keyword>&gt; element provides
+the name of an application programming interface (API) such as a Java
+class name or method name. <ph id="progdomainelement">This element
+is part of the DITA programming domain, a special set of DITA elements
+designed to document programming tasks, concepts, and reference information.</ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>apiname</indexterm><indexterm>application programming
+interface name</indexterm><indexterm>Programming elements<indexterm>apiname</indexterm></indexterm>
+</keywords><?Pub Caret -2?>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-apiname/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="apiname-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-apiname/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="apiname-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword pr-d/apiname </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;p&gt;Use the &lt;apiname&gt;document.write&lt;/apiname&gt; method to create text 
+output in the dynamically constructed view.&lt;/p&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="apiname_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002957?>

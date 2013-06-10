@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="translation" xml:lang="en-us">
+ <title>Translation and localization</title>
+ <shortdesc>DITA has features that facilitate preparing content for translation and
+  working with multilingual content, including the @xml:lang attribute, the @dir attribute, and the
+  @translate attribute. In addition, the &lt;index-sort-as> element provides support for index
+  sorting in languages in which the index sort order must be modified by the author or
+  translator.</shortdesc>
+ <conbody><!--<draft-comment>jth:091709: removed excess att signs and the comment
+on collation algorithms. I have no idea what that was supposed to
+mean.</draft-comment>--><!--<p><draft-comment>2009/06/15 NH: will need to be updated at DITA 1.3
+            to include &lt;collate-as&gt; or other generic collation element </draft-comment></p>--></conbody>
+ <?Pub Caret -2?>
+</concept>
+<?Pub *0000001054?>

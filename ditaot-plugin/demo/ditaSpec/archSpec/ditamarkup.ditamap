@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="DITA markup" xml:lang="en-us">
+    <topicref href="ditamarkup.dita" navtitle="DITA markup" collection-type="sequence">
+        <topicref format="ditamap" href="Topics.ditamap" navtitle="DITA topics"/>
+        <topicref format="ditamap" href="maps.ditamap" navtitle="DITA maps"/>
+        <topicref format="ditamap" href="metadata.ditamap" navtitle="DITA metadata"/>
+    </topicref>
+</map>

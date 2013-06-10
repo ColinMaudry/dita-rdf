@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<map title="DITA topics map">
+    <topicref href="topicover.dita" navtitle="DITA topics" collection-type="sequence">
+        <topicref href="topicdefined.dita" navtitle="The topic as the basic unit of information"/>
+        <topicref href="topicbenefits.dita" navtitle="The benefits of a topic-based architecture"
+            collection-type="sequence">
+            <topicref href="topicorientation.dita" navtitle="Disciplined, topic-oriented writing"/>
+            <topicref href="transitionaltextsolutions.dita" navtitle="Transitional text solutions"/>
+        </topicref>
+        <topicref href="information-typing.dita" navtitle="Information typing"/>
+        <topicref href="generictopics.dita" navtitle="Generic topics"/>
+        <topicref href="topicstructure.dita" navtitle="Topic structure"/>
+        <topicref href="topiccontent.dita" navtitle="Topic content"/>
+        <topicref href="topicDomains_BasicDITA.dita" navtitle="Topics domains: Basic DITA"/>
+    </topicref>
+</map>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="parml" xml:lang="en-us">
+<title>parml</title>
+<shortdesc>The parameter list (&lt;<keyword>parml</keyword>&gt;) element
+contains a list of terms and definitions that describes the parameters
+in an application programming interface. This is a special kind of
+definition list that is designed for documenting programming parameters. <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>parml (parameter list)</indexterm><indexterm>parameter
+list (parml)</indexterm><indexterm>Programming elements<indexterm>parml</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-parml/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="parml-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-parml/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="parml-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/dl pr-d/parml </p></section>
+<example id="example"><title>Example</title><dl><dlentry>
+<dt>Example source:</dt>
+<dd><codeblock xml:space="preserve">This code example is a basic method signature:
+&lt;codeblock&gt;returnType methodName(pList1, pList2) {&lt;/codeblock&gt;
+where
+&lt;parml&gt;
+ &lt;plentry&gt;
+  &lt;pt&gt;pList1&lt;/pt&gt;
+  &lt;pd&gt;is the first variable declaration passed to methodName&lt;/pd&gt;
+ &lt;/plentry&gt;
+ &lt;plentry&gt;
+  &lt;pt&gt;pList2&lt;/pt&gt;
+  &lt;pd&gt;is the second variable declaration passed to methodName&lt;/pd&gt;
+ &lt;/plentry&gt;
+&lt;/parml&gt;</codeblock></dd>
+</dlentry><dlentry>
+<dt>Example output:</dt>
+<dd><p>This code example is a basic method signature:<codeblock
+xml:space="preserve">returnType methodName(pList1, pList2) {</codeblock>where<parml>
+<plentry>
+<pt>pList1</pt>
+<pd>is the first variable declaration passed to methodName</pd>
+</plentry><plentry>
+<pt>pList2</pt>
+<pd>is the second variable declaration passed to methodName</pd>
+</plentry></parml></p></dd>
+</dlentry></dl></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="parml_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/compact">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003877?>

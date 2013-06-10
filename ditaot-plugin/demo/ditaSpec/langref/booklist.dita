@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="booklist" xml:lang="en-us">
+<title>booklist</title>
+<shortdesc>The &lt;booklist&gt; element is a general purpose element,
+designed for use in specializations, that references a topic or map
+containing a list of items within the book. <!--It indicates to the processing software that the author wants that
+list of items to be generated at the particular location.-->For example,
+it could be used to reference a topic that contains a list of authors
+for the book. When a more specific element is already available, such
+as &lt;tablelist> for a list of tables, that element should be used
+instead.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>booklist</indexterm><indexterm>Bookmap elements<indexterm>booklist</indexterm></indexterm>
+</keywords>
+</metadata></prolog><?Pub Caret -2?>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-booklist/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="booklist-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-booklist/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="booklist-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref bookmap/booklist </p></section>
+<example id="example"><title>Example</title><p>In this case the &lt;booklist>
+element references a topic that contains a list of authors of topics
+in this document.</p><codeblock>&lt;booklists>
+  &lt;toc/>
+  &lt;tablelist/>
+  <b>&lt;booklist href="authors.dita" navtitle="List of authors"/></b>
+&lt;/booklists></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="booklist_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-booklist">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003724?>

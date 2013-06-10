@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="TopicDomains_TechnicalContent" xml:lang="en-us">
+ <title>Topic domains: Technical content</title>
+ <shortdesc>A DITA domain defines a set of elements associated with a particular subject area or
+  authoring requirement. DITA incorporates several domains into the Technical Content
+  specializations. Other domains are incorporated into basic DITA.</shortdesc>
+ <conbody>
+  <!-- from jeff ogden: should xnal be here? MP response:
+  recast this section more explicitly as "topic domains", xnal covered under map
+  domains-->
+  <p>The elements in a domain are defined in a domain module which can be integrated with a topic
+   type to make the domain elements available within the topic type structure. Currently the
+   following domains are provided as part of the Technical Content specializations:</p>
+  <table>
+   <title>Technical content domains</title>
+   <desc>DITA includes domain specializations that are especially useful for authoring technical
+    content. The typographic, utilities, and indexing domains associated with Base DITA are
+    described under DITA Markup. </desc>
+   <tgroup cols="4">
+    <colspec colname="col1" colwidth="1.26*"/>
+    <colspec colname="COLSPEC0" colwidth="3.16*"/>
+    <colspec colname="col2" colwidth="1.0*"/>
+    <colspec colname="col3" colwidth="3.14*"/>
+    <thead>
+     <row valign="bottom">
+      <entry colname="col1">Domain</entry>
+      <entry colname="COLSPEC0">Description</entry>
+      <entry colname="col2">Short name</entry>
+      <entry colname="col3">Module name</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry colname="col1">Programming</entry>
+      <entry colname="COLSPEC0">For describing programming and programming languages</entry>
+      <entry colname="col2">pr-d</entry>
+      <entry colname="col3">
+       <lines>programmingDomain.mod (DTD)
+programmingDomain.ent
+programmingDomain.xsd (Schema)</lines>
+      </entry>
+     </row>
+     <row>
+      <entry colname="col1">Software</entry>
+      <entry colname="COLSPEC0">For describing software</entry>
+      <entry colname="col2">sw-d</entry>
+      <entry colname="col3">
+       <lines>softwareDomain.mod (DTD)
+softwareDomain.ent
+softwareDomain.xsd (Schema)</lines>
+      </entry>
+     </row>
+     <row>
+      <entry colname="col1">User interface</entry>
+      <entry colname="COLSPEC0">For describing elements in a user interface </entry>
+      <entry colname="col2">ui-d</entry>
+      <entry colname="col3">
+       <lines>uiDomain.mod (DTD)
+uiDomain.ent
+uiDomain.xsd (Schema)</lines>
+      </entry>
+     </row>
+     <row>
+      <entry>Hazard statements</entry>
+      <entry>For providing detailed information about safety hazards</entry>
+      <entry>hazard-d</entry>
+      <entry>hazardstatementDomain.mod (DTD) hazardstatementDomain.ent hazardstatementDomain.xsd
+       (Schema)</entry>
+     </row>
+     <row>
+      <entry>Abbreviated form</entry>
+      <entry>For linking between a text reference to a glossentry topic. A specialization of
+       &lt;term> to provide an &lt;abbreviated-form> element</entry>
+      <entry>abbrev-d</entry>
+      <entry>
+       <lines>abbreviateDomain.mod (DTD)
+abbreviateDomain.ent
+abbreviateDomain.xsd (Schema)</lines>
+      </entry>
+     </row>
+     <row>
+      <entry>Glossary reference</entry>
+      <entry>For linking from a term to its glossary topic</entry>
+      <entry>glossref-d</entry>
+      <entry>glossrefDomain.mod (DTD) glossrefDomain.ent glossrefDomain.xsd (Schema)</entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
+  <p>The technical content domain specializations, like all domain specializations, may be included
+   in the DITA document types beyond those in the technical content section. The DITA document types
+   in the technical content section make use of other domain specializations in addition to those
+   listed in the table.</p>
+  <p>The elements and attributes included in specific domain specializations are described in the
+   domain elements of the DITA 1.2 Language Reference.</p>
+ </conbody>
+</concept>

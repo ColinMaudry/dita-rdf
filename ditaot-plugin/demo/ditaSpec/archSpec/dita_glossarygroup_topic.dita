@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Inc?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="GlossaryGroupTopic-0282E9F1">
+ <title>Glossary group topic</title>
+ <shortdesc>Glossary group &lt;glossgroup> topics may be used to contain multiple glossentry topics
+  in a single collection file.</shortdesc>
+ <conbody>
+  <p>The glossgroup topic allows authors to include one or more glossentry topics in a single
+   collection file rather than authoring each glossentry topic in a separate file. The glossgroup
+   topic is a specialization of concept.</p>
+  <section>
+   <title>Modules</title>
+   <p>The following DITA modules are provided for the glossgroup topic. </p>
+   <sl>
+    <sli>glossgroup.dtd, glossgroup.ent, glossgroup.mod (DTD) </sli>
+    <sli>glossgroup.xsd, (Schema)</sli>
+   </sl>
+  </section>
+ </conbody>
+</concept>

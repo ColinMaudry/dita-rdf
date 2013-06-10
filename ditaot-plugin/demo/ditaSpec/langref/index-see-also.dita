@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="index-see-also" xml:lang="en-us"><?Pub Caret1?>
+<title>index-see-also</title>
+<shortdesc>An &lt;index-see-also&gt; element within an &lt;indexterm&gt;
+redirects the reader to another index entry that the reader should
+reference in addition to the current one.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>index-see-also</indexterm><indexterm>Indexing
+domain elements<indexterm>index-see-also</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section conref="index-see.dita#index-see/index-redirection"></section>
+<section><p>In addition to its "see also" redirection, an index-see-also
+functions as a pointwise indexterm, thereby typically generating a
+page reference as well as the "see also" indication.</p><p>It is not
+an error for there to be multiple index-see-also elements for a single
+index entry.</p></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-index-see-also/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="index-see-also-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-index-see-also/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="index-see-also-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/index-base indexing-d/index-see-also </p></section>
+<example id="example"><p>The following example illustrates the use
+of an &lt;index-see-also&gt; redirection element within an &lt;indexterm&gt;:</p><codeblock
+xml:space="preserve">&lt;indexterm&gt;Carp
+   &lt;index-see-also&gt;Goldfish&lt;/index-see-also&gt;
+&lt;/indexterm&gt;</codeblock><p>This will typically generate a page
+reference to "Carp" and a redirection: <ul>
+<li id="WS31ee95e0b0c9e7e91643e4b10c8d987a95-7ff5">Carp, 56<ul>
+<li id="WS31ee95e0b0c9e7e91643e4b10c8d987a95-7ff4"><i>see also</i> Goldfish</li>
+</ul></li>
+</ul></p><p>The following example illustrates the use of an &lt;index-see-also&gt;
+redirection element to a more complex (multilevel) &lt;indexterm&gt;:</p><codeblock
+xml:space="preserve">&lt;indexterm&gt;Feeding
+   &lt;index-see-also&gt;Goldfish &lt;indexterm&gt;feeding&lt;/indexterm&gt;&lt;/index-see-also&gt;
+&lt;/indexterm&gt;</codeblock><p>This is part of the indexing markup
+that might generate index entries such as:</p><ul>
+<li>Feeding, 348<ul>
+<li><i>see also</i> Goldfish feeding</li>
+</ul></li>
+<li>Goldfish<ul>
+<li>feeding, 56</li>
+<li>flushing, 128, 345</li>
+</ul></li>
+</ul></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="index-see-also_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly"><stentry/><stentry/><stentry/><stentry/><stentry/></strow>
+</simpletable></section>
+</refbody>
+</reference>

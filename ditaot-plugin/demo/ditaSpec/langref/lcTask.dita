@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcTask" xml:lang="en-us">
+<title>lcTask</title>
+<shortdesc>The &lt;<keyword>lcTask</keyword>&gt; captures a work item
+to be performed, as part of the learning plan.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lcTask</indexterm><indexterm>learning and training
+elements<indexterm>lcTask</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcTask/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may
+differ based on where it is used.       Content model information
+is located here: <xref keyref="lcTask-contains"></xref>
+			</p>
+		</section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcTask/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ
+based on where it is used. Content model information is located
+here: <xref keyref="lcTask-contained-by"></xref>
+			</p>
+		</section>
+<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/fig learningBase/fig learningPlan/lcTask </p>
+</section>
+<example id="example">
+  <title>Example</title><codeblock>
+  &lt;learningPlan id="learningPlanTest"&gt;
+  &lt;title&gt;Learning Plan&lt;/title&gt;
+  &lt;shortdesc&gt;It's always good to provide a plan.&lt;/shortdesc&gt;
+  &lt;learningPlanbody&gt;
+    &lt;lcNeedsAnalysis&gt;
+      &lt;title&gt;Needs analysis&lt;/title&gt;
+      &lt;lcTask>
+        &lt;title>Tasks&lt;/title>
+        &lt;lcTaskItem>Explain the importance of content reuse, and provide examples of reuse strategy options.&lt;/lcTaskItem>
+        &lt;lcKnowledge>Learners understand acquisition procedures, program management, instructional systems design.&lt;/lcKnowledge>
+        &lt;lcSkills>The audience is skilled in program management.&lt;/lcSkills>
+        &lt;lcAttitude>Learners must be willing to be open and flexible.&lt;/lcAttitude>
+      &lt;/lcTask>
+    &lt;/lcNeedsAnalysis&gt;
+  &lt;/learningPlanbody&gt;
+&lt;/LearningPlan&gt;
+<?Pub Caret?></codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcTask_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

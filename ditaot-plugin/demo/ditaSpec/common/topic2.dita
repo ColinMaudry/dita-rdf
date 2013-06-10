@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<!-- (C) Copyright OASIS Open 2005. -->
+<!-- (C) Copyright IBM Corporation 2001, 2004. -->
+<!-- All Rights Reserved. -->
+<reference id="topic2" xml:lang="en-us">
+<title>Basic topic elements</title>
+<shortdesc>The generic topic structure is used for untyped
+topics. While much of the DITA architecture is built on generic topics,
+it is generally better to use more specific information types (such
+as concept, task, or reference) when they are available.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Topic elements</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>For an answer to the question "What are topics?" and more
+details on when to use different information types, please refer to <xref
+href="../archSpec/topicover.dita"></xref>.</p></section>
+</refbody>
+</reference><?Pub Caret -3?>
+<?Pub *0000001044?>

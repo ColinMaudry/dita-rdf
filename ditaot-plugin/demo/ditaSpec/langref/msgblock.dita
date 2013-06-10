@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="msgblock" xml:lang="en-us">
+<title>msgblock</title>
+<shortdesc>The message block (&lt;<keyword>msgblock</keyword>&gt;)
+element contains a multi-line message or set of messages. The message
+block can contain multiple message numbers and message descriptions,
+each enclosed in a &lt;<keyword>msgnum</keyword>&gt; and &lt;<keyword>msgph</keyword>&gt;
+element. It can also contain the message content directly. <ph>Line breaks and spaces are preserved when the element
+is rendered.</ph> This element is part of the DITA software domain,
+a special set of DITA elements designed to document software tasks,
+concepts and reference information.</shortdesc><?Pub Caret 344?>
+<prolog><metadata>
+<keywords><indexterm>msgblock</indexterm><indexterm>Software elements<indexterm>msgblock</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-msgblock/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="msgblock-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-msgblock/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="msgblock-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/pre sw-d/msgblock </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">&lt;p&gt;A sequence of failed password attempts generates the following
+characteristic message stream:&lt;/p&gt;
+&lt;msgblock&gt;
+I:0
+S:3
+I:1
+S:3
+I:1
+S:4
+S:99 (lockup)
+&lt;/msgblock&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="msgblock_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutspace">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003359?>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference
+  id="lcMatchingPair" xml:lang="en-us">
+  <title>lcMatchingPair</title>
+  <shortdesc>The &lt;<keyword>lcMatchingPair</keyword>&gt; element in an assessment interaction
+    provides a table row with the pair of items that comprise a correct match in a matching
+    interaction and, optionally, feedback on the pair or correct and incorrect matches.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>lcMatchingPair</indexterm><indexterm>learning and training elements<indexterm
+            >lcMatchingPair</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody><section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatchingPair/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="lcMatchingPair-contains"/>
+      </p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatchingPair/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="lcMatchingPair-contained-by"/>
+      </p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>+ topic/strow learningInteractionBase-d/strow learning-d/lcMatchingPair </p>
+    </section>
+    <example
+      id="example">
+      <title>Example</title>
+      <codeblock>
+...
+     &lt;lcMatchingPair>
+      &lt;lcItem>Boston&lt;/lcItem>
+      &lt;lcMatchingItem>Red Sox&lt;/lcMatchingItem>
+      &lt;lcMatchingItemFeedback>
+        &lt;lcFeedbackCorrect>The Red Sox play in Boston's Fenway Park&lt;/lcFeedbackCorrect>
+        &lt;lcFeedbackCorrect>That is not Boston's home team&lt;/lcFeedbackCorrect>
+      &lt;/lcMatchingItemFeedback>
+     &lt;/lcMatchingPair>
+...
+</codeblock>
+    </example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInteractions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

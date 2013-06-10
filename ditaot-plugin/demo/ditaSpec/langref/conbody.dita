@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="conbody" xml:lang="en-us">
+<title>conbody</title>
+<shortdesc>The &lt;<keyword>conbody</keyword><?Pub Caret1?>&gt; element
+is the main body-level element for a concept. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>conbody (concept body)</indexterm><indexterm>Concept
+elements<indexterm>conbody</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>Like the &lt;body> element of a general &lt;topic>, &lt;<keyword>conbody</keyword>>
+allows paragraphs, lists, and other elements as well as sections and
+examples. However, &lt;<keyword>conbody</keyword>> has a constraint
+that a section or an example can be followed only by other sections,
+examples, or &lt;conbodydiv> elements that group sections and examples.</section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-conbody/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="conbody-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-conbody/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="conbody-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/body  concept/conbody </p></section>
+<example id="example"><title>Example</title><p>See the example
+in <xref href="concept.dita"></xref>.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="conbody_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

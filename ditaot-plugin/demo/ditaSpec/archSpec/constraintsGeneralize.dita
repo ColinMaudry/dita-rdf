@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="constraintsGeneralize" xml:lang="en-us">
+       <title>Conref and generalization for constraint modules</title>
+       <shortdesc>When documents use different constraints, conref and generalization processors may
+              examine the @domains to verify compatibility between the document
+              instances.</shortdesc>
+       <conbody>
+              <section>
+                     <title>Conref compatibility with constraints</title>
+                     <?Pub Caret -1?>
+                     <p>To determine compatibility between two document instances, a conref
+                            processor can check the @domains attribute to confirm that </p>
+                     <ul>
+                            <li>The referencing document has a superset of the vocabulary modules in
+                                   the referenced document.</li>
+                            <li>For each vocabulary module in the referenced document, the
+                                   referencing document qualifies the common module with a subset of
+                                   the constraints in the referenced document.</li>
+                     </ul>
+                     <p>Some examples:</p>
+                     <simpletable>
+                            <sthead>
+                                   <stentry>Referencing</stentry>
+                                   <stentry>Referenced</stentry>
+                                   <stentry>Resolution</stentry>
+                            </sthead>
+                            <strow>
+                                   <stentry><codeph>(topic)</codeph></stentry>
+                                   <stentry><codeph>(topic shortdescReq-c)</codeph></stentry>
+                                   <stentry><b>Allowed</b> - content model of referenced topic is
+                                          more constrained</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic shortdescReq-c)</codeph></stentry>
+                                   <stentry><codeph>(topic)</codeph></stentry>
+                                   <stentry><b>Prevented</b> - content model of referenced topic is
+                                          less constrained</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic hi-d)</codeph></stentry>
+                                   <stentry><codeph>(topic hi-d basicHighlight-c)</codeph></stentry>
+                                   <stentry><b>Allowed</b> - domain extension list of referenced
+                                          document type shell is more constrained</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic hi-d basicHighlight-c)</codeph></stentry>
+                                   <stentry><codeph>(topic hi-d)</codeph></stentry>
+                                   <stentry><b>Prevented</b> - domain extension list of referenced
+                                          document type shell is less constrained.</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic hi-d)</codeph></stentry>
+                                   <stentry><codeph>(topic noBasePhrase-c) (topic
+                                          hi-d)</codeph></stentry>
+                                   <stentry><b>Allowed</b> - referencing document type shell doesn't
+                                          replace base element with domain extensions.</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic noBasePhrase-c) (topic
+                                          hi-d)</codeph></stentry>
+                                   <stentry><codeph>(topic hi-d)</codeph></stentry>
+                                   <stentry><b>Prevented</b> - referencing document type shell does
+                                          replace base element with domain extensions.</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic task) (topic hi-d
+                                                 basicHighlight-c)</codeph></stentry>
+                                   <stentry><codeph>(topic simpleSection-c task
+                                                 simpleTaskSection-c)</codeph></stentry>
+                                   <stentry><b>Allowed</b> - referencing shell has a subset of the
+                                          constraints of the referenced shell on the common
+                                          vocabulary modules.</stentry>
+                            </strow>
+                            <strow>
+                                   <stentry><codeph>(topic shortdescReq-c task shortdescTaskReq-c)
+                                                 (topic hi-d basicHighlight-c)</codeph></stentry>
+                                   <stentry><codeph>(topic simpleSection-c task
+                                                 simpleTaskSection-c)</codeph></stentry>
+                                   <stentry><b>Prevented</b> - referencing shell has constraints on
+                                          common vocabulary modules that aren't in the referenced
+                                          shell.</stentry>
+                            </strow>
+                     </simpletable>
+              </section>
+              <section>
+                     <title>Generalization and constraints</title>
+                     <p>Similarly, to determine compatibility between a document instance and a
+                            target document type, a generalization processor can use the @domains
+                            and @class attributes for the document instance and the @domains
+                            attribute for the target document type to determine how to rename
+                            elements in the document instance. For each element instance, the
+                            generalization processor:</p>
+                     <ul>
+                            <li>
+                                   <p>Iterates over the @class attribute on the element instance
+                                          from specific to general, inspecting the vocabulary
+                                          modules.</p>
+                            </li>
+                            <li>
+                                   <p>Looks for the first vocabulary module that is both present in
+                                          the target document type and that has a subset of the
+                                          constraints in the document instance.</p>
+                                   <p>If a module is found in the target document type, that module
+                                          becomes the minimum threshhold for the generalization of
+                                          contained element instances.</p>
+                                   <p>If a module is not found, the document instance cannot be
+                                          generalized to the target document type and, instead, can
+                                          only be generalized to a less constrained document
+                                          type.</p>
+                            </li>
+                     </ul>
+                     <p>Note that a document instance can always be converted from a constrained
+                            document type to an unconstrained document type merely by switching the
+                            binding of the document instance to the less restricted schema (which
+                            would also have a different @domains attribute declaration). No renaming
+                            of elements is needed to remove constraints.</p>
+              </section>
+       </conbody>
+</concept>
+<?Pub *0000005396?>

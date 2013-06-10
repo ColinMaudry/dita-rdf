@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="dita-linking-link-element-summary" xml:lang="en-us">
+ <title>Summary of addressing elements</title>
+ <shortdesc>This topic contains a table of DITA elements that may be used to link to or address
+  other items. The table describes how and why each element uses the addressing mechanism, rather
+  than defining the element itself.</shortdesc>
+ <conbody>
+  <table frame="all">
+   <title>DITA addressing elements</title>
+   <tgroup cols="2">
+    <colspec colname="c1" colnum="1"/>
+    <colspec colname="c2" colnum="2"/>
+    <thead>
+     <row>
+      <entry>Base element type</entry>
+      <entry>Description and notes</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>topicref</entry>
+      <entry>Establishes a relationship between the containing map and another map, DITA topic, or
+       non-DITA resource when @href or @keyref is specified. When @processing-role is
+       "resource-only", establishes a dependency on the target resource but does not contribute to
+       the navigation tree. May establish additional relationships between the referenced resource
+       and other resources in the navigation hierarchy as determined by the values of the
+       @collection-type attribute. By default, these additional relationships are bi-directional.
+       The directionality of additional relationships can be controlled using the @linking
+       attribute. </entry>
+     </row>
+     <row>
+      <entry>reltable</entry>
+      <entry>Establishes relations of a specific type (as defined by the relationship table) among
+       topicref-linked resources where each row in the table establishes a single set of
+       relationships among the topicref-linked resources in each cell of the row. Relationships
+       defined in relationship tables are outside of any navigation structure defined by the
+       map.</entry>
+     </row>
+     <row>
+      <entry>navref</entry>
+      <entry>Establishes a map-to-map relationship where the integration of the referenced map's
+       navigation structure is deferred. The referenced map is processed independently from the
+       referencing map and does not contribute to the referencing map's key space.</entry>
+     </row>
+     <row>
+      <entry>link</entry>
+      <entry>Establishes a link from its containing topic to another resource. Any &lt;link&gt;
+       element within a topic can be functionally replaced by the equivalent link defined in a
+       relationship table. Likewise, topic-to-topic links defined by relationship tables can be
+       replaced by the equivalent set of &lt;link&gt; elements in the topics involved.</entry>
+     </row>
+     <row>
+      <entry>xref</entry>
+      <entry>Establishes a navigation link from a topic's abstract or body to another DITA element
+       or non-DITA resource.</entry>
+     </row>
+     <row>
+      <entry>image</entry>
+      <entry>Links to an image for display at the point of reference.</entry>
+     </row>
+     <row>
+      <entry>object</entry>
+      <entry>Links to a media object for display at the point of reference.</entry>
+     </row>
+     <row>
+      <entry>longdescref</entry>
+      <entry>Links to a long description for an image or object. Can be used in place of the
+       @longdescref attribute on the parent image or object element.</entry>
+     </row>
+     <row>
+      <entry>longquoteref</entry>
+      <entry>Links to the source of a long quotation. Used in place of the @href or @keyref
+       attribute on &lt;lq&gt; and enables use of all the normal link-controlling
+       attributes.</entry>
+     </row>
+     <row>
+      <entry>data-about</entry>
+      <entry>Establishes an explicit relationship between one or more &lt;data&gt; elements and the
+       DITA element or non-DITA resource to which the data applies.</entry>
+     </row>
+     <row>
+      <entry>Elements that take @keyref but not @href</entry>
+      <entry>Elements that take @keyref but not @href establish navigation links to the referenced
+       DITA element or non-DITA resource when @keyref is specified and the key is bound to a topic,
+       map, or non-DITA resource. If the linking element has empty content and the key definition
+       has a matching subelement in its &lt;topicmeta&gt;, establishes a use-by-reference
+       relationship to the matchin element in the key definition. Includes &lt;ph&gt;, &lt;cite&gt;,
+       &lt;keyword&gt;, and &lt;term&gt;.</entry>
+     </row>
+     <row>
+      <entry>imagemap (utilities domain)</entry>
+      <entry>Enables linking from defined areas overlaid on a graphic. Modeled on the HTML image map
+       facility.</entry>
+     </row>
+     <row>
+      <entry>author</entry>
+      <entry>May link to a resource that represents the author in some way, such as a biographical
+       topic or image.</entry>
+     </row>
+     <row>
+      <entry>data</entry>
+      <entry>May link to a resource that represents the metadata value in some way.</entry>
+     </row>
+     <row>
+      <entry>fragref (programming domain)</entry>
+      <entry>Links to a syntax definition fragment.</entry>
+     </row>
+     <row>
+      <entry>lq</entry>
+      <entry>May link to the source of the quotation.</entry>
+     </row>
+     <row>
+      <entry>publisher</entry>
+      <entry>May link to a resource that represents the publisher in some way, such as the
+       Publisher's Web site or a publisher description topic.</entry>
+     </row>
+     <row>
+      <entry>source</entry>
+      <entry>May link to a description of the source for the topic to which the &lt;source> element
+       applies.</entry>
+     </row>
+     <row>
+      <entry>synnoteref (programming domain)</entry>
+      <entry>May link to a syntax note.</entry>
+     </row>
+     <row>
+      <entry>fn</entry>
+      <entry>Establishes a relationship between the content within which the footnote appears and
+       the note itself, such that the footnote is an annotation of the content.</entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
+ </conbody>
+ <?Pub Caret -2?>
+</concept>
+<?Pub *0000005980?>

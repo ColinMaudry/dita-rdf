@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept
+  id="mod_dtd" xml:lang="en-us">
+  <title>DTD syntax specialization module coding requirements</title>
+  <shortdesc>To be extensible and backward compatible, DITA requires that a DTD implementation of
+    structural and domain specialization modules conform to well-defined implementation (coding)
+    requirements.</shortdesc>
+  <conbody>
+    <p>These coding requirements implement the specialization architecture with the capabilities and
+      within the limitations of the DTD grammar. They are the coding requirements for structural
+      specializations, element domain specializations, and attribute domain specializations.</p>
+  </conbody>
+</concept>

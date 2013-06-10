@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="reltable" xml:lang="en-us">
+<title>reltable</title>
+<shortdesc>The &lt;<keyword>reltable</keyword>&gt; element is a relationship
+table that specifies relationships between topics, based on the familiar
+table model of rows (&lt;<keyword>relrow</keyword>&gt;), columns (&lt;<keyword>relheader</keyword>&gt;),
+and cells (&lt;<keyword>relcell</keyword>&gt;).</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>reltable</indexterm><indexterm>Map elements<indexterm>reltable</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>A frequently-used type of relationship table
+establishes relationships between task, concept, and reference topics.
+Each column in a relationship table typically represents a specific
+role in a set of relationships; for example, the first column often
+contains references to tasks, while the second and third columns often
+reference concept and reference topics. The relationship table rows
+define relationships between the resources referenced in different
+cells of the same row; in this example, each row establishes relationships
+between tasks and the concept and reference topics that support the
+tasks. When used in this manner, relationship tables make it easy
+to determine where related information is missing or undefined.</p><?Pub
+Caret 628?><p>By default, the contents of a &lt;<keyword>reltable</keyword>>
+element are not output for navigation or TOC purposes; they are used
+only to define relationships that can be expressed as topic-to-topic
+links. The &lt;<keyword>relcell</keyword>> elements can contain &lt;<keyword>topicref</keyword>>
+elements, which are then related to other &lt;<keyword>topicref</keyword>>
+elements in the same row (although not necessarily in the same cell).</p><p>Relationship
+tables can be used in conjunction with hierarchies and groups to manage
+all the related links in an information set.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-reltable/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="reltable-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-reltable/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="reltable-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/reltable </p></section>
+<example id="example"><title>Example</title><p>In this example, a
+relationship table is defined with three columns; one for "concept",
+one for "task", and one for "reference". Three cells are defined within
+one row. The first cell contains one concept topic: batsonar.dita.
+The second cell contains two task topics: batcaring.dita and batfeeding.dita.
+The third cell contains two reference topics: batguano.dita and bathistory.dita.</p><codeblock>&lt;map&gt;
+  &lt;reltable&gt;
+    &lt;relheader&gt;
+      &lt;relcolspec type="concept"/&gt;
+      &lt;relcolspec type="task"/&gt;
+      &lt;relcolspec type="reference"/&gt;
+    &lt;/relheader&gt;
+    &lt;relrow&gt;
+      &lt;relcell&gt;
+        &lt;topicref href="batsonar.dita"/&gt;
+      &lt;/relcell&gt;
+      &lt;relcell&gt;
+        &lt;topicref href="batcaring.dita"/&gt;
+        &lt;topicref href="batfeeding.dita"/&gt;
+      &lt;/relcell&gt;
+      &lt;relcell&gt;
+        &lt;topicref href="batguano.dita"/&gt;
+        &lt;topicref href="bathistory.dita"/&gt;
+      &lt;/relcell&gt;
+    &lt;/relrow&gt;
+  &lt;/reltable&gt;
+&lt;/map&gt;</codeblock><p>A DITA-aware tool may represent the &lt;reltable>
+element graphically:</p><simpletable>
+<sthead>
+<stentry>type="concept"</stentry>
+<stentry>type="task"</stentry>
+<stentry>type="reference"</stentry>
+</sthead>
+<strow>
+<stentry>batsonar.dita</stentry>
+<stentry><lines>batcaring.dita
+batfeeding.dita</lines></stentry>
+<stentry><lines>batguano.dita
+bathistory.dita</lines></stentry>
+</strow>
+</simpletable><p>On output, links should be added to topics that are
+in the same row, but not in the same cell. This allows simple maintenance
+of parallel relationships: for example, in this case, batcaring.dita
+and batfeeding.dita are two tasks that require the same supporting
+information (concept and reference topics) but might otherwise be
+unrelated. When topics in the same cell are in fact related, the cell's
+collection-type attribute can be set to family. If some cells or columns
+are intended solely as supporting information and should not link
+back to topics in other cells, you can set the linking attribute on
+the cell or relcolspec to targetonly.</p><p>In this example, the related
+links would be as follows:<dl><dlentry>
+<dt>batsonar.dita</dt>
+<dd>batcaring.dita, batfeeding.dita, batguano.dita, bathistory.dita</dd>
+</dlentry><dlentry>
+<dt>batcaring.dita</dt>
+<dd>batsonar.dita, batguano.dita, bathistory.dita</dd>
+</dlentry><dlentry>
+<dt>batfeeding.dita</dt>
+<dd>batsonar.dita, batguano.dita, bathistory.dita</dd>
+</dlentry><dlentry>
+<dt>batguano.dita</dt>
+<dd>batsonar.dita, batcaring.dita, batfeeding.dita</dd>
+</dlentry><dlentry>
+<dt> bathistory.dita</dt>
+<dd>batsonar.dita, batcaring.dita, batfeeding.dita</dd>
+</dlentry></dl></p><p>Although such tables may initially take some
+time to learn and manipulate, they are inherently an efficient way
+to manage these links. In particular, they increase the prospect for
+reuse among topics, because those topics do not contain context-specific
+links. A relationship table also makes it easy to see and manage patterns;
+for example, the fact that batfeeding.dita and batcaring.dita have
+the same relationships to supporting information is clear from the
+table, but would require some comparison and counting to determine
+from the list summary just before this paragraph.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="reltable_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/title">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts-no-toc">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000007475?>

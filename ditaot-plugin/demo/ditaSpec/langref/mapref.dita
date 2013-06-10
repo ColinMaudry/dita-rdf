@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="mapref" xml:lang="en-us">
+<title>mapref</title>
+<shortdesc>The &lt;mapref> element is a convenience element that is
+equivalent to a &lt;topicref> element with the format attribute set
+to "ditamap". The hierarchy of the referenced map is merged into the
+container map at the position of the reference, and the relationship
+tables of the child map are added to the parent map.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>mapref</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-mapref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="mapref-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-mapref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="mapref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/topicref mapgroup-d/mapref </p></section>
+<example id="example"><title>Example</title><fig><title>Sample document
+"lib.ditamap" that is reusable in other locations</title>
+<codeblock>&lt;map id="lib">
+  &lt;topicref href="netlib.dita"/>
+  &lt;topicref href="dblib.dita"/>
+  &lt;!-- ... -->
+&lt;/map></codeblock>
+</fig><?Pub Caret 17?><fig><title>Map that reuses lib.ditamap</title>
+<codeblock>&lt;map id="standardlib">
+  &lt;topichead navtitle="Developing with standard libraries">
+    &lt;mapref href="lib.ditamap"/>
+  &lt;/topichead>
+  &lt;!-- ... -->
+&lt;/map></codeblock>
+</fig><fig><title>Rendered result</title>
+<codeblock>&lt;map id="standardlib">
+  &lt;topichead navtitle="Developing with standard libraries">
+    &lt;topicref href="netlib.dita"/>
+    &lt;topicref href="dblib.dita"/>
+    &lt;!-- ... -->
+  &lt;/topichead>
+  &lt;!-- ... -->
+&lt;/map></codeblock>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format-mapref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts-without-format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004302?>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="langref-technicalContent" xml:lang="en-us">
+<title>Technical content elements</title>
+<shortdesc>Elements in the technical content section include the original
+Concept, Task, and Reference specializations, as well as the Bookmap
+and Glossary specializations added with DITA 1.1. It also includes
+domains designed primarily for technical content, such as the task
+requirements and software domains.</shortdesc>
+</concept><?Pub Caret -1?>
+<?Pub *0000000625?>

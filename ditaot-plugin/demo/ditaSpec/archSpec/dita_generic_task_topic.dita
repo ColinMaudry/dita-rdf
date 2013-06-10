@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="dita_generic_task_topic" xml:lang="en-US">
+ <title>General task topic</title>
+ <shortdesc>The general task document and information types are new to DITA 1.2. They
+  provide a less strict content model for task-oriented information than was available in DITA 1.0
+  and 1.1. The general task content model may be preferred over the strict task model by some
+  organizations. It can facilitate the migration of legacy content that does not follow the strict
+  task topic model. The general task information type serves as the base for the strict task and
+  machine-industry task document types, can be used to create new document types, and serves as a
+  base for new structural specializations.</shortdesc>
+ <conbody>
+  <section>
+   <title>The purpose of the general task information type</title>
+   <p>Like the DITA strict task document type, the general task document and information types
+    contain the essential building blocks to provide procedural information. Both task information
+    types answer the "How do I?" question by providing step-by-step instructions detailing the
+    requirements that must be fulfilled, the actions that must be performed, and the order in which
+    the actions must be performed. Both task topics include sections for describing the context,
+    prerequisites, expected results, and other aspects of a task.</p>
+   <p>The general task information type is specifically designed to accommodate task specializations
+    that differ from the DITA task information type. It may also be used for the conversion of
+    loosely structured tasks from other sources into DITA before they are restructured to follow the
+    more restrictive DITA task model.</p>
+  </section>
+  <section>
+   <title>The structure of the general task topic</title>
+   <p>The &lt;task> element is the top-level element for the general task topic. The general task
+    topic contains a title and a taskbody with optional alternative titles (titlealts), a short
+    description or abstract, a prolog,and related-links.</p>
+   <p>The following elements are described here because they are introduced as part of the general
+    task model. All other elements are described in the strict task topic.</p>
+   <dl>
+    <dlentry>
+     <dt>&lt;section></dt>
+     <dd>Represents an organizational division in a task topic. Sections organize subsets of
+      information within the larger topic. Sections may not be nested. A section may have an
+      optional title.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;steps-informal></dt>
+     <dd>Describes procedural task information that would not normally be ordered as steps, such as
+      a group of general procedures that may all be applied in a particular situation. Instead of
+      &lt;step>, the &lt;steps-informal> element uses &lt;ol> and &lt;ul> elements, which are less
+      strictly defined than the &lt;step> element. When converting legacy content, it may be simpler
+      to convert numbered lists to &lt;ol> elements than to &lt;step> elements.</dd>
+    </dlentry>
+   </dl>
+  </section>
+  <section>
+   <title>Comparison of general and strict task </title>
+   <p>The following table compares the structures of general and strict task:</p>
+   <table>
+    <tgroup cols="2">
+     <colspec colname="col1"/>
+     <colspec colname="col2"/>
+     <thead>
+      <row>
+       <entry valign="top">General taskbody</entry>
+       <entry valign="top">Strict taskbody constraint</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>prerequisite (optional, in any order, any number)</entry>
+       <entry>prerequisite (optional, one only, must precede context)</entry>
+      </row>
+      <row>
+       <entry>context (optional, in any order, any number)</entry>
+       <entry>context (optional, one only, must follow prerequisite)</entry>
+      </row>
+      <row>
+       <entry>section (optional, in any order, any number)</entry>
+       <entry>(not defined for strict taskbody)</entry>
+      </row>
+      <row>
+       <entry>steps</entry>
+       <entry>steps</entry>
+      </row>
+      <row>
+       <entry>steps-unordered</entry>
+       <entry>steps-unordered</entry>
+      </row>
+      <row>
+       <entry>steps-informal</entry>
+       <entry>(not defined for strict taskbody))</entry>
+      </row>
+      <row>
+       <entry>result (optional, one only, precedes example)</entry>
+       <entry>result (optional, one only, precedes example)</entry>
+      </row>
+      <row>
+       <entry>example (optional, any number, precedes post-req)</entry>
+       <entry>example (optional, one only, precedes post-req)</entry>
+      </row>
+      <row>
+       <entry>post-requisite (optional, any number)</entry>
+       <entry>post-requisite (optional, one only)</entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+  </section>
+  <section>
+   <title>Modules</title>
+   <p>The following DITA modules are provided for the task topic.</p>
+   <sl>
+    <sli>task.mod, task.ent(DTD)</sli>
+    <sli>taskMod.xsd, taskGrp.xsd (Schema)</sli>
+   </sl>
+  </section>
+ </conbody>
+</concept>
+<?Pub *0000004847 0?>

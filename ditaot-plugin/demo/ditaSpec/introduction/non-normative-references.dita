@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="non-normative-references">
+    <title>Non-normative references</title>
+    <shortdesc>Non-normative references are references to external documents or resources that
+        implementers of DITA might find useful.</shortdesc>
+    <conbody>
+        <draft-comment author="Kristen James Eberlein" time="3 June ">Contents of this topic based
+            on suggestions made on the e-mail list by Eliot Kimber, Seth Park, and Bruce Nevin. This
+            topic must be reviewed. Here also are suggestions that I did not include:<ul>
+                <li>IMS-QTI (Kimber)</li>
+                <li>Information mapping (Nevin)</li>
+                <li>SGML (Nevin) -- no ISO spec available without charge</li>
+                <li>Standards reflected in Machine Industry specializations (Kimber)</li>
+                <li>XNAL (Kimber)</li>
+            </ul></draft-comment>
+        <dl>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[CSS 2.1]</dt>
+                <dd>B. Bos, T. Çelik, I. Hickson, and H.W. Lie, editors, <cite>Cascading Style
+                        Sheets Level 2 Revision 1 (CSS 2.1) Specification</cite>, <xref
+                        href="http://www.w3.org/TR/CSS2/" format="html"
+                        >http://www.w3.org/TR/CSS2/</xref>, W3C Candidate Recommendation, 08
+                    September 2009.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XHTML 1.0]</dt>
+                <dd>W3C HTML Working Group, <cite>XHTML 1.0 The Extensible HyperText Markup Language
+                        (Second Edition): A Reformulation of HTML 4 in XML 1.0</cite>, <xref
+                        href="http://www.w3.org/TR/xhtml1/" format="html"
+                        >http://www.w3.org/TR/xhtml1/</xref>, W3C Recommendation, 26 January 2000,
+                    revised 1 August 2002.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XHTML 1.1]</dt>
+                <dd>M. Altheim and S. McCarron, editors, <cite>XHTML 1.1 - Module-based
+                    XHTML</cite>, <xref href="http://www.w3.org/TR/xhtml11/" format="html"
+                        >http://www.w3.org/TR/xhtml11/</xref>, W3C Recommendation, 31 May 2001.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XPointer 1.0]</dt>
+                <dd>S. DeRose, E. Maler, and R. Daniel Jr., editors, <cite>XML Pointer Language
+                        (XPointer) Version 1.0</cite>, <xref href="http://www.w3.org/TR/WD-xptr"
+                        format="html">http://www.w3.org/TR/WD-xptr</xref>, W3C Last Call Working
+                    Draft, 8 January 2001.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XLIFF 1.2]</dt>
+                <dd>OASIS Standard, <cite>XLIFF Version 1.2</cite>, 1 February 2008, <xref
+                        href="http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html"
+                        format="html"
+                        >http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html</xref>.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[xml:tm 1.0]</dt>
+                <dd>A. Zydro&#324;, R. Raya, and B. Bogacki, editors, <cite>XML Text Memory (xml:tm)
+                        1.0 Specification</cite>, <xref
+                        href="http://www.lisa.org/fileadmin/standards/xml-tm.html" format="html"
+                        >http://www.lisa.org/fileadmin/standards/xml-tm.html</xref>, The
+                    Localization Industry Standards Association (LISA) xml:tm 1.0, 26 February
+                    2007.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XQuery 1.0]</dt>
+                <dd>S. Boag, D. Chamberlin, M. F. Fernández, D. Florescu, J. Robie, and J. Siméon,
+                    editors, <cite>XQuery 1.0: An XML Query Language</cite>, <xref
+                        href="http://www.w3.org/TR/xquery/" format="html"
+                        >http://www.w3.org/TR/xquery/</xref>, W3C Recommendation, 23 January
+                    2007.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XSL 1.0]</dt>
+                <dd>S. Adler, A. Berglund, J. Caruso, S. Deach, T. Graham, P. Grosso, E. Gutentag,
+                    A. Milowski, S. Parnell, J. Richman, and S. Zilles, <cite>Extensible Stylesheet
+                        Language (XSL) Version 1.0</cite>, <xref
+                        href="http://www.w3.org/TR/2001/REC-xsl-20011015/" format="html"
+                        >http://www.w3.org/TR/2001/REC-xsl-20011015/</xref>, W3C Recommendation, 15
+                    October 2001.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XSL 1.1]</dt>
+                <dd>A. Berglund, editor, <cite>Extensible Stylesheet Language (XSL) Version
+                        1.1</cite>, <xref href="http://www.w3.org/TR/xsl11/" format="html"
+                        >http://www.w3.org/TR/xsl11/</xref>, W3C Recommendation, 05 December
+                    2006</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XSLT 1.0]</dt>
+                <dd>J. Clark, editor, <cite>XSL Transformations (XSLT) Version 1.0</cite>, <xref
+                        href="http://www.w3.org/TR/xslt" format="html"
+                        >http://www.w3.org/TR/xslt</xref>, W3C Recommendation, 16 November 1999</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XSLT 2.0]</dt>
+                <dd>M. Kay, editor, <cite>XSL Transformations (XSLT) Version 2.0</cite>, <xref
+                        href="http://www.w3.org/TR/xslt20/" format="html"
+                        >http://www.w3.org/TR/xslt20/</xref>, W3C Recommendation, 23 January
+                    2007</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XTM 1.0]</dt>
+                <dd>S. Pepper and G. Moore, editors, <cite>XML Topic Maps (XTM) 1.0</cite>, <xref
+                        href="http://www.topicmaps.org/xtm/index.html" format="html"
+                        >http://www.topicmaps.org/xtm/index.html</xref>, TopicMaps.Org XTM 1.0,
+                    2001.</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

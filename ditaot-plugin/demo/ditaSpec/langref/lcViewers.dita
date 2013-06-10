@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcViewers" xml:lang="en-us">
+	<title>lcViewers</title>
+	<shortdesc>The &lt;<keyword>lcViewers</keyword>&gt; describes viewers used for time-sequenced display at runtime.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcViewers</indexterm><indexterm>learning and training elements<indexterm>lcViewers</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcViewers/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcViewers-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcViewers/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcViewers-contained-by"/>
+			</p>
+		</section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/fig learningBase/fig learningPlan/lcViewers </p></section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningPlan id="learningPlan"&gt;
+  &lt;title&gt;Learning Plan&lt;/title&gt;
+  &lt;shortdesc&gt;It's always good to provide a plan.&lt;/shortdesc&gt;
+  &lt;learningPlanbody&gt;
+    &lt;lcTechnical>
+      &lt;title>lcTechnical&lt;/title>
+      &lt;lcViewers>
+        &lt;title>Viewers&lt;/title>
+        &lt;p>The module uses standard viewers, model 1.0 or 1.1.&lt;/p>
+      &lt;/lcViewers>
+    &lt;/lcTechnical>
+  &lt;/learningPlanbody&gt;
+&lt;/LearningPlan&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcViewers_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section></refbody>
+</reference>

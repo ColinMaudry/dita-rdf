@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="indextermref" xml:lang="en-us">
+<title>indextermref</title>
+<shortdesc><!--
+An <<keyword>indextermref</keyword>&gt; is a reference to an index entry
+in a lookup table used by the indexing process. If you want to create index
+markers pointing to referenced items, but only want page numbers instead of
+separate index entries to be generated, use the index term reference <indextermref&gt;
+element. This adds the page number of the reference to the index without creating
+a separate index entry.
+-->This element is not completely defined; it i<?Pub Caret?>s reserved
+for future use.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>indextermref</indexterm><indexterm>Miscellaneous
+elements<indexterm>indextermref</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><!--
+<note>Not currently supported in DITA processing. Since the equivalent processing
+can be provided by simply duplicating the target indexterm (or by creating
+an indexterm element with a conref attribute pointing to the target), this
+element might be deprecated in the future.</note>
+--></section>
+<!--
+<example id="example"><title>Example</title><codeblock><p&gt;Use <indextermref keyref="yellow"/&gt; lemon zest to add a tangy citrus 
+flavor to the cake icing.</p&gt;</codeblock></example>
+-->
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-indextermref/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="indextermref-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-indextermref/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="indextermref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/indextermref </p></section>
+<example id="example"><title>Example</title><p><i>Examples
+will be added when this element is fully defined.</i></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="indextermref_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

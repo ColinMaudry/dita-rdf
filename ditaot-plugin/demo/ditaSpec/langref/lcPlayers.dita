@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcPlayers" xml:lang="en-us">
+	<title>lcPlayers</title>
+<shortdesc>The &lt;<keyword>lcPlayers</keyword>&gt; describes tools and plugins used for time-sequenced display at runtime.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcPlayers</indexterm><indexterm>learning and training elements<indexterm>lcPlayers</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcPlayers/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcPlayers-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcPlayers/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcPlayers-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/fig learningBase/fig learningPlan/lcPlayers </p>
+</section>
+
+<example id="example">
+  <title>Example: lcTechnical</title>
+  <codeblock>
+&lt;learningPlan id="learningPlan"&gt;
+  &lt;title&gt;Learning Plan&lt;/title&gt;
+  &lt;shortdesc&gt;It's always good to provide a plan.&lt;/shortdesc&gt;
+  &lt;learningPlanbody&gt;
+    &lt;lcTechnical>
+      &lt;title>lcTechnical&lt;/title>
+      &lt;lcPlayers>
+        &lt;title>Players&lt;/title>
+        &lt;p>The learning content requires no additional plugins or players.&lt;/p>
+      &lt;/lcPlayers>
+    &lt;/lcTechnical>
+  &lt;/learningPlanbody&gt;
+&lt;/LearningPlan&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcPlayers_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

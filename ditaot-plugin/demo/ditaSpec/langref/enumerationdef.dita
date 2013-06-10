@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="enumerationdef" xml:lang="en-us">
+<title>enumerationdef</title>
+<shortdesc>The &lt;<keyword>enumerationdef</keyword>> element identifies
+one attribute and one or more categories that contain the controlled
+values for the enumeration. The type attribute has a default value
+of keys. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>enumerationdef</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>When the &lt;enumerationdef> element contains an &lt;elementdef>
+element, the defined enumeration applies to that attribute only on
+the element specified by &lt;elementdef>. The enumeration does not
+apply to the same attribute on other elements. For example, when the
+element contains both <codeph>&lt;elementdef name="lomDifficulty"/></codeph> and <codeph>&lt;attributedef
+name="value"/></codeph>, this means that the only the value attribute
+on the &lt;lomDifficulty> element is limited to the specified enumeration.
+The value attribute on other elements is not affected.</p><p>When
+the &lt;enumerationdef> element does not contain an &lt;elementdef>
+element, the attribute specified is limited to the enumeration on
+all elements. For example, when &lt;enumerationdef> contains <codeph>&lt;attributedef
+name="value"/></codeph> but does not contain &lt;elementdef>, the
+value attribute is limited to the specified enumeration for all elements.</p><note>An
+enumeration can specify an empty category without children. In this
+case, no value is valid for the attribute.</note><note>Whether an
+attribute takes a single value or multiple values from the enumeration
+is part of the structural definition of the element controlled by
+the DTD or XML Schema. That is, an attribute which is defined as CDATA
+may take multiple values, while an attribute defined as NMTOKEN may
+take only one.</note></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-enumerationdef/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="enumerationdef-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-enumerationdef/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="enumerationdef-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref subjectScheme/enumerationdef </p></section>
+<example id="example"><title>Example</title><?Pub Caret 6?><p
+id="enumeration-xpl">In this example, enumerations are specified for
+the platform and otherprops attributes. Note that the enumeration
+identifies a category of values; the values within the category are
+valid, while the category itself is not a valid value. For example,
+in the code sample here, the platform attribute is associated with
+the enumeration for the category "os"; all values within the "os"
+category are thus valid on the platform attribute, while the value
+"os" itself is not.</p><codeblock
+conref="subjectScheme.dita#subjectScheme/codesample"></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/status">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004731?>

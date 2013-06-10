@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configuration-specialization-and-constraints" xml:lang="en-US">
+  <title>Configuration, specialization, and constraints </title>
+  <shortdesc>The extension facilities of DITA allow existing vocabulary and constraint modules to be
+    combined to create specific DITA document types. Additionally, vocabulary modules can be
+    extended to create more-specialized markup to meet new requirements not satisfied by existing
+    markup. </shortdesc>
+</topic>

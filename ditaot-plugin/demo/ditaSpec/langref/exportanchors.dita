@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="exportanchors" xml:lang="en-us">
+<title>exportanchors</title>
+<shortdesc>The &lt;<keyword>exportanchors</keyword>> element is used
+to delay conref resolution within DITA documents. This allows you
+to process or display DITA content in a way that will resolve only
+some of the conref values in that content, while remaining values
+are left for later resolution. The element contains a list of IDs
+or keys that should not be resolved during the initial preparation
+of the content for display; those IDs and keys will be preserved after
+that preparation, as will the conref relationship itself.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>exportanchors</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The exportanchors element may be used within a topic prolog,
+in which case the defined IDs apply to IDs within that topic (excluding
+sub-topics). Alternatively it may be defined in the topicmeta in a
+map. In the second case the IDs apply to the single topic referenced
+by the current topicref element. If the topicref points to a file
+without referencing a specific topic, it is treated as a reference
+to the first or root topic. In order to define anchor ids for a topic
+that is not the first or root topic, a topicref must directly reference
+the desired sub-topic.</p><?Pub Caret?><note>When an element&apos;s
+ID is defined for delayed resolution, it must contain only the element
+ID, not the usual "topicid/elementid" syntax that is required for
+most other DITA references. The <xref href="anchorid.dita">&lt;anchorid></xref> topic
+explains the format in detail.</note><p>One possible way to use this
+is with a system that renders DITA dynamically. A user may process
+information locally in a way that resolves conref for all static information,
+while delaying resolution for information that is subject to change.
+The exportanchors element is used to define conref values that are
+delayed.</p><p>Another potential use is when DITA is used as the source
+format for a publishing system that is able to render information
+dynamically. In this case some conref values may be resolved, while
+leaving pre-selected values to be resolved live in that publishing
+system.</p><p id="disclaimer">Many publishing systems for which DITA
+is used as a source format do not have a way to dynamically resolve
+content references; those systems will not see any benefit from this
+element. When DITA is used for those systems, behaviors related to
+this element should be ignored.</p></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-exportanchors/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="exportanchors-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-exportanchors/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="exportanchors-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keywords delay-d/exportanchors </p></section>
+<!--Pull in examples for both anchorid and anchorkey-->
+<example conref="anchorid.dita#anchorid/example" id="example"></example>
+<example conref="anchorkey.dita#anchorkey/example"></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="keywords_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

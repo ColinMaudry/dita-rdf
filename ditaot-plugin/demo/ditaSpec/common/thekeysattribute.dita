@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference id="thekeysattribute" xml:lang="en-us">
+ <title>The keys attribute</title>
+ <shortdesc>A keys attribute consists of one or more space-separated keys. Map authors define keys
+  using a topicref or topicref specialization that contains the “keys” attribute. Each key
+  definition introduces a global identifier for a resource referenced from a map. Keys resolve to
+  the resources given as the href value on the key definition topicref element, to content contained
+  within the key definition topicref element, or both.</shortdesc>
+ <?Pub Caret 47?>
+ <prolog>
+  <metadata>
+   <keywords>
+    <indexterm>keys attribute</indexterm>
+   </keywords>
+  </metadata>
+ </prolog>
+ <refbody>
+  <section>
+   <p conref="../archSpec/overview_of_keys.dita#overview_of_keys/syntax"/>
+   <p>A key may not resolve to sub-topic elements, although a keyref attribute may do so by
+    combining a key with a sub-topic element id.</p>
+  </section>
+ </refbody>
+ <related-links>
+  <link href="../archSpec/key-based_addressing.dita"/>
+ </related-links>
+</reference>
+<?Pub *0000001213?>

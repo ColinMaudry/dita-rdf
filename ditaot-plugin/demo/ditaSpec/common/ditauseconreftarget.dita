@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="usingthe-dita-use-conref-targetvalue" xml:lang="en-us">
+<title>Using the -dita-use-conref-target value</title>
+<shortdesc>The value -dita-use-conref-target is available on enumerated
+attributes and may also be specified on other attributes. When an
+element uses conref to pull in content, for any of its attributes
+assigned a value of "-dita-use-conref-target", the resulting value
+for those attributes should also be pulled in from the referenced
+element.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>-dita-use-conref-target attribute value</indexterm>
+</keywords>
+</metadata></prolog><?Pub Caret -2?>
+<refbody>
+<section><p>Ordinarily, when an element uses conref, any other attributes
+specified locally will be preserved when the reference is resolved. <!--This feature can be used to override attributes on the referenced
+element that may not be appropriate in the referencing context. -->This
+causes problems when attributes are required, because required attributes
+must be specified regardless of whether the conref attribute is present. <ph>The purpose of the -dita-use-conref-target value is to allow
+the author to specify a value for a required attribute while still
+allowing the conref resolution process to use the matching attribute
+from the referenced element. The value has the same result when the
+attribute is not required.</ph></p></section>
+<example><!--RDA: Removed the following paragraph with DITA 1.2, 
+because navtitle is no longer required on topichead.
+<p>For example, the topichead element requires the navtitle attribute.
+Because the attribute is required, any topichead that uses conref
+must also specify a navtitle attribute. Standard DITA processing rules
+would cause this locally specified value to override the navtitle
+attribute on the referenced element, even though the referenced element&apos;s
+navtitle attribute is probably desired. </p>--><p>This example shows
+a map where the topichead element uses conref. It specifies the navtitle
+attribute as well as the toc attribute. In the resolved element, navtitle
+is not preserved because it uses -dita-use-conref-target; the toc
+attribute overrides the toc attribute on the referenced element using
+normal conref resolution rules.</p><fig><title>Pre-resolution</title>
+<pre>&lt;map>&lt;title>Conref demonstration&lt;/title>
+  &lt;topichead id="heading"
+             navtitle="This is a heading"
+             toc="yes"
+             print="yes">
+    &lt;topicref href="topic.dita" navtitle="content"/>
+  &lt;/topichead>
+
+  &lt;topichead conref="#heading"
+             navtitle="-dita-use-conref-target"
+             toc="no">
+  &lt;/topichead>
+&lt;/map></pre>
+</fig><fig><title>Effective result post-resolution</title>
+<pre>&lt;map>&lt;title>Conref demonstration&lt;/title>
+  &lt;topichead id="heading"
+             navtitle="This is a heading"
+             toc="yes"
+             print="yes">
+    &lt;topicref href="topic.dita" navtitle="content"/>
+  &lt;/topichead>
+
+  &lt;topichead navtitle="This is a heading"
+             toc="no"
+             print="yes">
+    &lt;topicref href="topic.dita" navtitle="content"/>
+  &lt;/topichead>
+&lt;/map>
+</pre>
+</fig></example>
+</refbody>
+<related-links>
+<link href="../archSpec/conref.dita"></link>
+</related-links>
+</reference>
+<?Pub *0000003516?>

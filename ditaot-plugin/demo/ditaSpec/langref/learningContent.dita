@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference
+  id="learningContent" xml:lang="en-us">
+  <title>learningContent</title>
+  <shortdesc>A <keyword>Learning Content</keyword> topic provides the learning content itself, and
+    enables direct use of content from DITA task, concept, and reference topics, as well as
+    additional content of any topic type that supports specific objectives declared in the Learning
+    Overview topic type.
+  </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>learningContent</indexterm><indexterm>learning and training
+            elements<indexterm>learningContent</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody>
+  <section>
+  <p>A Learning Content topic comprises a set of self-contained content about a
+    single terminal learning objective supported by zero or more enabling learning objectives. </p>
+    <p><ph>A learning content topic <keyword>should</keyword> be rendered as single result
+      component (e.g., a single HTML page) when it has subordinate topics, either as direct child
+      elements or associated via a map. This result can be requested by specifying a value of
+      "to-content" for the chunk attribute of topic refs that point to learningContent topics. This
+      is the default value for the learningContentRef topicref type provided by the learning map
+      domain.</ph><draft-comment
+      author="WEK">Added explicit statement about requirement to render content topics as single
+      chunks.</draft-comment></p>
+  </section>
+  <section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-learningContent/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="learningContent-contains"/>
+      </p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-learningContent/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="learningContent-contained-by"/>
+      </p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>- topic/topic learningBase/learningBase learningContent/learningContent </p>
+    </section>
+    <example
+      id="example">
+      <title>Example</title>
+      <?Pub Caret?>
+      <codeblock>
+&lt;learningContent id="learningcontent">
+&lt;title>Your Mail Inbox&lt;/title>
+  &lt;learningContentbody>
+    &lt;lcObjectives>
+      &lt;lcObjectivesStem>When you complete this topic, you'll understand:&lt;/lcObjectivesStem>
+        &lt;lcObjectivesGroup>
+            &lt;lcObjective>How to use the mail inbox.&lt;/lcObjective>
+        &lt;/lcObjectivesGroup>
+    &lt;/lcObjectives>
+  &lt;/learningContentbody>
+  &lt;concept id="mail_inbox_concept" xml:lang="en-us">
+    &lt;title>Your Mail Inbox&lt;/title>
+    &lt;shortdesc>Use your mail inbox to track and manage incoming messages.&lt;/shortdesc>
+    &lt;conbody>
+        &lt;p>Knowing which messages you have not yet read and which ones are urgent
+        can help you decide how to best review a long list of messages. Unread messages
+        are indicated by bold text and a variety of icons identifies a characteristic
+        of the message, such as a high priority message or an invitation.&lt;/p>
+    &lt;/conbody>
+  &lt;/concept>
+&lt;/learningContent>
+</codeblock>
+    </example>
+    <section>
+      <title>Attributes</title>
+      <simpletable
+        id="learningContent_attr"
+        relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-topic">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmlnsditaarch">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/DITAArchVersion">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+        <!--<strow
+          id="domains">
+          <stentry>domains</stentry>
+          <stentry>Indicates the specialized domains that are included in the DTD or
+              Schema.<indexterm>domains attribute</indexterm></stentry>
+          <stentry>CDATA</stentry>
+          <stentry>(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d) (topic ut-d) (topic
+            indexing-d) (learningBase learning-d)</stentry>
+          <stentry>No</stentry>
+        </strow>-->
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+      </simpletable>
+    </section></refbody>
+</reference>

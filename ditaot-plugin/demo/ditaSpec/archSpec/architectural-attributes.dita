@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="architectural-attributes" xml:lang="en-us">
+<title>Architectural attributes</title>
+<shortdesc>The architectural attributes specify the version of DITA
+that the content supports, identify the DITA domains that are in use by the
+content, and provide essential information about specializations that are in
+use by the content.</shortdesc>
+<conbody>
+<p>The architectural attributes should not be marked up in the source
+DITA map and topic    instances. Instead, the values of the architectural
+attributes are handled by the processor when    the content is processed,
+preferably through defaults set in the DTD or Schema declaration.
+This    practice ensures that the DITA content instances do not specify
+invalid values for the    architectural attributes.</p>
+<p>The architectural attributes are as follows:</p>
+<dl><dlentry>
+<dt>class</dt>
+<dd>This attribute identifies the specialization modules for the element
+type as well as its ancestors. Every DITA element (except the &lt;dita>
+element that is used as the root of a ditabase document) has a @class
+attribute.</dd><?Pub Caret1?>
+</dlentry><dlentry>
+<dt>domains</dt>
+<dd>This attribute identifies the domain specialization modules used in a map or topic and, for each
+                    domain module, its module dependencies. The root element of every topic and map
+                    has a @domains attribute.</dd>
+</dlentry><dlentry>
+<dt>DITAArchVersion</dt>
+<dd>This attribute identifies the version of the DITA architecture used by the DTD or schema. The
+                    root element of every topic and map has a @DITAArchVersion attribute. The
+                    attribute is declared in a DITA namespace to allow namespace-sensitive tools to
+                    detect DITA markup.</dd>
+</dlentry></dl>
+<p>To make the document instance usable in the absence of a DTD or
+Schema declaration, a    normalization process may set the architectural
+attributes in the document instance.</p>
+</conbody>
+</concept>
+<?Pub *0000002025?>

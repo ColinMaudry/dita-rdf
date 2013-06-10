@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="filenaming-processing-modules">
+ <title>Processing component modularization and naming conventions</title>
+ <shortdesc></shortdesc>
+  <conbody>
+    <p>Files that implement processing associated with specific vocabulary or constraint modules
+      should generally be organized by module, such that the implementation components correspond to
+      the vocabulary modules that they implement and are, to the degree the implementation
+      technology provides for it, similarly modular. </p>
+    <p>For example, the DITA Open Toolkit provides a general plugin mechanism that allows implementation components to be dynamically added to and removed from a Toolkit instance. General practice is to define Toolkit plugins that correspond to modules.</p>
+    <p>For the specific case of cascading style sheets and XSLTs transformations, two key DITA implementation technologies, the suggested filenaming conventions are:</p>
+    <dl>
+      <dlentry>
+        <dt>CSS override files (recommended convention for tool providers)</dt>
+        <dd>
+          <ul
+            id="ul_e2dad691-6da8-4a19-9fe1-37704cc7deff">
+            <li><varname>typename</varname>.css</li>
+            <li><varname>customization-purpose</varname>.css</li>
+          </ul>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>XSLT override files (recommended convention for tool providers)</dt>
+        <dd>
+          <ul
+            id="ul_6cfc09e0-f96e-4a9b-9332-c834350935ed">
+            <li><varname>typename</varname>.xsl</li>
+            <li><varname>customization-purpose</varname>.xsl</li>
+          </ul>
+        </dd>
+      </dlentry>
+    </dl>
+  </conbody>
+</concept>

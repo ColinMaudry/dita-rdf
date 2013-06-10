@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="architectural_specification" xml:lang="en-us">
+ <title>Architectural specification</title>
+ <shortdesc>The architectural specification provides information about how DITA is designed. It is
+  divided into three sections: Base, technical content, and learning and training.</shortdesc>
+ <conbody><!--<draft-comment author="Kristen James Eberlein">Comment from
+            review #3:<p>[Jeff, 2 Jan 2010] It would be good to give more visibility to the "Base",
+             "technical content", and "learning and training" sections. ... It would be good to list
+             the document types that are part of the Technical Content and Learning and Training
+             families to give folks a better idea of what is included where. If there are any other
+             document types that aren't part of these two families, we should indicate where they
+             are described as well.</p></draft-comment>--></conbody>
+</concept>
+<?Pub Caret1?>
+<?Pub *0000000327?>

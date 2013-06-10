@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="transtextsolutions" xml:lang="en-US">
+<title>Transitional text solutions</title>
+<shortdesc>Topic orientation does not mean that transitions cannot
+be authored in DITA. The key  to providing both locational independence
+and intentional sequences is the adroit use of  DITA markup features.</shortdesc>
+<conbody>
+<p>The print attribute on the topicref element includes
+the value, "printonly",             which may be used to indicate
+that the topic be omitted when the DITA map is transformed to a format
+for which transitions are unnecessary. Consequently, a topic designated
+as "printonly" may be written in any style that serves as a transitional
+topic in the flow of printed information. </p>
+<p>You can also use conditional text to insert transitional sequences
+into a map so that you can include or exclude the content of short
+descriptions or paragraphs at the end of a topic. However, if you
+share conditionally marked topics with other business partners or
+teams, you must instruct them on the proper runtime settings to enable
+the conditions to be used the way you intended. </p>
+<p>DITA does not preclude authoring transitional text;
+it does provide an             environment that allows you to tag
+and manage transitional elements apart from             surrounding,
+topic-encapsulated information.</p>
+</conbody>
+</concept>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="constraintsDomainDesignPattern-xsd" xml:lang="en-us">
+<title>Constraint module XSD coding requirements</title>
+<conbody>
+<p>A given constraint definition module corresponds to exactly one
+topic, map, or domain       vocabulary module.</p>
+<section>
+      <title>Requirements for constraint definition modules</title>
+      <p>Topic and map type constraint modules <term>should</term> be named "<varname>qualifier</varname><varname>tagname</varname>Constraints.xsd", where <varname>qualifier</varname> is specific to the constraints module and characterizes it, e.g. "strict", "requiredTitle", etc. and <varname>tagname</varname> is the name of the element type to which the constraints apply, e.g. "topic", "p", "myNewTopicType", etc.</p>
+      <p>Domain constraint modules <term>should</term> be named "<varname>qualifier</varname><varname>domain</varname>DomainConstraints.xsd", where <varname>qualifier</varname> is specific to the constraints module and characterizes it, e.g. "strict", "requiredTitle", etc. and <varname>domain</varname> is the name of the domain to which the constraints apply, e.g. "hi-d", "pr-d", "mydomain-d", etc.</p>
+      <p
+        rev="public-review-1">Because of restrictions on the redefine feature of XML Schema, it is sometimes necessary to use an intermediate level of redefinition, which requires a separate XSD document. In that case, the intermediate XSD document <term>should</term> be named "<varname>qualifier</varname><varname>domain</varname>DomainConstraintsInt.xsd". </p>
+      <p>For each extension element type in the base vocabulary module whose content model or attributes are to be constrained in the constraint module, there <term>must</term> be a xs:redefine element that defines the restricted content model for the base element. Attributes for an element type <term>may</term> be constrained as part of the redefinition of the complex type.</p>
+      <note type="other" othertype="non-normative" rev="public-review-1">When adding an xs:redefine
+        element to an existing document type shell you must remove any xs:include elements that
+        refer to the XSD module to which the redefine is applied. For example, to redefine groups
+        defined in commonElementsMod.xsd you must remove any xs:include of
+        commonElementsMod.xsd.</note>
+      <fig frame="all" rev="public-review-1">
+        <title>Example of a structural constraint module</title>
+        <desc>The following code sample shows how the &lt;topic> element may be constrained to
+          create a stricter form of the element, in this case, disallowing the &lt;body> element.
+          This xs:redefine element would be placed in a file named noBodyTopicConstraint.xsd.</desc>
+        <codeblock>...
+&lt;xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.2">
+  &lt;xs:group name="topic.content">
+    &lt;xs:sequence>
+      &lt;xs:sequence>
+        &lt;xs:group ref="title"/>
+        &lt;xs:group ref="titlealts" minOccurs="0"/>
+        &lt;xs:choice minOccurs="1" >
+          &lt;xs:group ref="shortdesc" />
+          &lt;xs:group ref="abstract" />
+        &lt;/xs:choice>
+        &lt;xs:group ref="prolog" minOccurs="0"/>
+        <b>&lt;!--&lt;xs:group ref="body" minOccurs="0"/>--></b>
+        &lt;xs:group ref="related-links" minOccurs="0"/>
+        &lt;xs:group ref="topic-info-types" minOccurs="0"
+          maxOccurs="unbounded"/>
+      &lt;/xs:sequence>
+    &lt;/xs:sequence>
+  &lt;/xs:group>
+&lt;/xs:redefine>
+...</codeblock>
+      </fig>
+      <p>For selective restriction there <keyword>must</keyword> be a group with a subset list of extension elements for a domain in a reusable constraints module. The group name <keyword>should</keyword> be named "<varname>qualifier</varname><varname>domain</varname>-c-<varname>tagname</varname>" where <varname>qualifier</varname> is a description for the constraint vocabulary constraint module file, <varname>domain</varname> is the name of the domain, map, or topic being constrained, and <varname>tagname</varname> is the name of the extension element being restricted.</p>
+      <?Pub Caret 278?>
+      <fig
+        frame="all">
+        <title>Example of a domain constraint module</title>
+        <desc>The following code sample shows how the highlight domain can be constrained to limit the elements that are available in the domain to only &lt;b> and &lt;i>. These declarations would be placed in a file named basicHighlightConstraint.xsd.</desc>
+        <codeblock><![CDATA[...
+<xs:group name="basicHighlight-c-ph">
+  <xs:choice>
+    <xs:element ref="b"/>
+    <xs:element ref="i"/>
+  </xs:choice>
+</xs:group>
+...]]></codeblock>
+      </fig>
+    </section>
+<section>       <title>Requirements for shell document types</title> 
+     <p>Document type shell schemas that integrate constraint modules <term>must</term> reflect
+        these requirements:<ul>
+<li>For content model constraints, <term>must</term> include the constraint
+module instead             of the vocabulary module that it constrains.</li>
+<li>For selective extension, <term>must</term> include the extension
+subset constraint             module and use that group for domain
+or topic type extension.</li>
+<li><term>Must</term> declare the constraints in the domains attribute.</li>
+</ul><fig frame="all"><title>strictTopic.xsd (shell)</title><desc>The
+following code sample demonstrates the markup used to constrain the
+standard             &lt;topic> element. These declarations would
+be placed in a shell file named             "strictTopic.xsd".</desc>
+<codeblock><![CDATA[...
+<xs:include schemaLocation="basicHighlightConstraint.xsd"/>
+...
+<xs:redefine schemaLocation="commonElementGrp.xsd">
+  <xs:group name="ph">
+    <!-- drop base <ph> as well as apply basic subset of highlight domain -->
+    <xs:choice>
+      <xs:group ref="basicHighlight-c-ph"/>
+    </xs:choice>
+  </xs:group>
+  ...
+</xs:redefine>
+
+<xs:redefine schemaLocation="strictTopicConstraint.xsd">
+  <xs:complexType name="topic.class">
+    <xs:complexContent>
+      <xs:extension base="topic.class">
+        <!-- declare the constraint of topic and highlight vocabulary modules
+             and compatibility of constrained highlight with subset of 
+             topic constraints -->
+        <xs:attribute name="domains" type="xs:string"
+            default="(topic noBasePhrase-c)
+                     (topic strictTopic-c)
+                     (topic strictTopic-c hi-d basicHighlight-c)"/>
+        ...
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  ...
+</xs:redefine>
+...]]></codeblock>
+</fig></p>     </section>
+</conbody>
+</concept>
+<?Pub *0000006168?>

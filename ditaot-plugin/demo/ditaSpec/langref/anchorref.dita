@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="anchorref" xml:lang="en-us">
+<title>anchorref</title>
+<shortdesc><ph>The &lt;<keyword>anchorref</keyword>> element
+is used to reference an &lt;anchor> element in a map.</ph> The contents
+of an &lt;anchorref> element are rendered both in the original authored
+location and at the location of the referenced &lt;anchor> element.
+The referenced &lt;<keyword>anchor</keyword>> element may be defined
+in the current map or another map. <ph>When possible,
+this integration is done when displaying the map with &lt;anchor>
+to an end user. </ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>anchorref</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>This function of the &lt;anchorref> element is similar
+to that provided by the anchorref attribute of the &lt;map> element.
+However, instead of attaching an entire map to an anchor point, this
+element allows the author to attach only the contents of a single
+map branch. This enables architects to reuse a branch of content without
+reusing the entire map.</p><p>If the rendering platform does not support
+runtime integration of navigation based on the anchor point, a build
+system should treat the &lt;anchorref> element similar to a "conref
+push" instruction by pushing the content to the spot that contains
+the anchor. Note that many &lt;anchorref> elements may push content
+to the same point; the order in which items are pushed is left undefined,
+although the order within a single &lt;anchorref> is preserved.</p><p>Metadata
+cascading must take place in the original authored context, because
+the branch of content defined with the &lt;anchorref> remains independent
+from the referenced map. The &lt;anchorref> content does not take
+on the cascading metadata at the &lt;anchor> location. For example,
+if the map containing the &lt;anchorref> element sets a local copyright,
+that copyright cascades to the &lt;anchorref> element and its children;
+it is retained after the content is rendered at the target &lt;anchor>
+element.</p><p>By default, the content of the &lt;anchorref> element
+is rendered at both the anchor target and the original location. To
+prevent the content from being rendered at the location of the &lt;anchorref>
+element, set toc="no" on the &lt;anchorref> element, and then set
+toc="yes" on each of its children so that they will not inherit the
+toc="no" setting.</p><?Pub Caret 13?></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-anchorref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="anchorref-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-anchorref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="anchorref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/topicref mapgroup-d/anchorref </p></section>
+<example id="example"><title>Example</title><fig><title>Initial map
+contents</title>
+<codeblock>&lt;topicref href="carPrep.dita">
+    &lt;topicref href="beforePrep.dita"/>
+    &lt;anchor id="prepDetail"/>
+    &lt;topicref href="afterPrep.dita"/>
+&lt;/topicref>
+...
+&lt;topicref href="astroTasks.dita">
+    &lt;topicref href="astroOverview.dita"/>
+    <b>&lt;anchorref href="#prepDetail"></b>
+        &lt;topicref href="astroChecklist.dita"/>
+        &lt;topicref href="otherPreparation.dita"/>
+    <b>&lt;/anchorref></b>
+    &lt;topicref href="astroConclusion.dita"/>
+&lt;/topicref></codeblock>
+</fig><fig><title>Effective result of evaluating the &lt;anchorref>
+element</title>
+<codeblock>&lt;topicref href="carPrep.dita">
+    &lt;topicref href="beforePrep.dita"/>
+    &lt;anchor id="prepDetail"/>
+    &lt;topicref href="astroChecklist.dita"/>
+    &lt;topicref href="otherPreparation.dita"/>
+    &lt;topicref href="afterPrep.dita"/>
+&lt;/topicref>
+...
+&lt;topicref href="astroTasks.dita">
+    &lt;topicref href="astroOverview.dita"/>
+    &lt;topicref href="astroChecklist.dita"/>
+    &lt;topicref href="otherPreparation.dita"/>
+    &lt;topicref href="astroConclusion.dita"/>
+&lt;/topicref></codeblock>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-anchorref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/collection-type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/processing-role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-anchorref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/locktitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format-anchorref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/linking">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/toc">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/print">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/search">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/chunk">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000008530?>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcAreaShape" xml:lang="en-us">
+<title>lcAreaShape</title>
+<shortdesc>The &lt;lcAreaShape> element defines the shape of a linkable
+hotspot in a learning image.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lcAreaShape</indexterm><indexterm>learning and
+training elements<indexterm>lcAreaShape</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The &lt;lcAreaShape> element supports these values: <dl>
+<dlentry>
+<dt>rect</dt>
+<dd>Define a rectangular region. If you leave the shape element blank,
+this is assumed.</dd>
+</dlentry><dlentry>
+<dt>circle</dt>
+<dd>Define a circular region.</dd>
+</dlentry><dlentry>
+<dt>poly</dt>
+<dd>Define a polygonal region.</dd>
+</dlentry><dlentry>
+<dt>default</dt>
+<dd>Indicates the entire diagram. </dd>
+</dlentry></dl></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcAreaShape/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="shape-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcAreaShape/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="shape-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword learningInteractionBase-d/keyword learning-d/lcAreaShape </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;lcHotspotMap>
+   &lt;image href="hotlogos.gif">
+     &lt;alt>Baseball team logos&lt;/alt>
+   &lt;/image>
+   &lt;lcArea id="giants">
+     &lt;lcAreaShape>rect&lt;/lcAreaShape>
+     <b>&lt;lcAreaCoords>0,50,50,100&lt;/lcAreaCoords></b>
+     &lt;lcFeedback>No.&lt;/lcFeedback>
+   &lt;/lcArea>
+   &lt;lcArea id="orioles">
+     &lt;lcAreaShape>rect&lt;/lcAreaShape>
+     <b>&lt;lcAreaCoords>50,50,100,100&lt;/lcAreaCoords></b>
+     &lt;lcFeedback>No.&lt;/lcFeedback>
+   &lt;/lcArea>
+&lt;/lcHotspotMap></codeblock><?Pub Caret 361?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="lcAreaShape_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/translate-default-no">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmllang">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/dir">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004030?>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="cascading-in-a-ditamap" xml:lang="en-us">
+ <title><ph>Cascading of attributes and metadata in a DITA map</ph></title>
+ <abstract>
+  <shortdesc>Certain map-level attributes and metadata elements cascade throughout a map, which
+   facilitates attribute and metadata management. When attributes or metadata elements
+    <term>cascade</term>, they apply to the elements that are <ph>children</ph> of the
+   element where the attributes or metadata were specified. Cascading applies to a containment
+   hierarchy, as opposed to a element-type hierarchy.</shortdesc>
+ </abstract>
+ <prolog>
+  <metadata>
+   <keywords>
+    <indexterm>cascading, definition</indexterm>
+   </keywords>
+  </metadata>
+ </prolog>
+ <conbody>
+  <p>The following attributes and metadata elements cascade throughout the entire map:<ul>
+    <li>Attributes set on the &lt;map> element</li>
+    <li>Metadata elements that are contained in the &lt;topicmeta> element that is a child of the
+     &lt;map> element</li>
+   </ul>Attribute values and metadata elements in relationship tables can be applied to entire
+   columns or rows as well as individual cells, a practice that is particularly useful for attribute
+   and metadata management.</p>
+  <section>
+   <title>Attributes and metadata that cascade</title>
+   <p>The following attributes and metadata elements <ph>cascade</ph>:<dl>
+     <dlentry>
+      <dt>Attributes</dt>
+      <dd>
+       <ul id="attrlist">
+        <li>@audience, @platform, @product, @otherprops, @rev</li>
+        <li>@props and any attribute specialized from @props</li>
+        <li>@linking, @toc, @print, @search</li>
+        <li>@format, @scope, @type</li>
+        <li>@xml:lang, @dir, @translate</li>
+        <li>@processing-role</li>
+       </ul>
+      </dd>
+     </dlentry>
+     <dlentry id="elems">
+      <dt>Metadata elements</dt>
+      <dd>
+       <ul>
+        <li>author, source, publisher, copyright, critdates, permissions</li>
+        <li>audience, category, prodinfo, othermeta</li>
+       </ul>
+      </dd>
+     </dlentry>
+    </dl></p>
+   <p>Cascading is additive for attributes and metadata elements that accept multiple values. For
+    attributes that take a single value, <ph>the closest value defined on a containing
+     element</ph> takes effect. In a relationship table, row-level metadata is considered more
+    specific than column-level metadata, as shown in the following containment hierarchy:<ul
+     id="ul_eef359b5-be87-43ac-bd4b-63e59a57bc97">
+     <li>&lt;map> (most general)<ul id="ul_6ed2888b-b77e-4bda-93bd-b5c3150a7ca1">
+       <li>&lt;topicref> container (more specific)<ul id="ul_bd838f84-6717-4121-a475-04778eda8774">
+         <li>&lt;topicref> (most specific)</li>
+        </ul></li>
+       <li>&lt;reltable> (more specific)<ul id="ul_c8519779-983b-47cb-bb57-9de727da5d75">
+         <li>&lt;relcolspec> (more specific)<ul id="ul_b2469034-dcbf-48ff-bd8d-bef887e4220f">
+           <li>&lt;relrow> (more specific)<ul id="ul_506fb64d-aa80-4068-a6eb-e50fe57871dd">
+             <li>&lt;topicref> (most specific)</li>
+            </ul></li>
+          </ul></li>
+        </ul></li>
+      </ul></li>
+    </ul><!--<draft-comment author="Kristen James Eberlein" time="14 July 2009">Would
+a graphic better communicate what we are trying to do with an &lt;ul>?</draft-comment>--></p>
+  </section>
+  <section>
+   <title>Rules for cascading in the map</title>
+   <p>When determining the value of an attribute, processors <term>must</term> evaluate each
+    attribute on each individual element in a specific order; this order is specified in the
+    following list. Applications should continue through the list until a value is established or
+    until the end of the list is reached (at which point no value is established for the attribute).
+    In essence, the list provides instructions on how processors can construct a map where all
+    attribute values are set and all cascading is complete.</p>
+   <p>For example, in the case of <codeph>&lt;topicref toc="yes></codeph>, applications must stop at
+     <xref href="#cascading-in-a-ditamap/explicit-values" format="dita"/> in the list; a value is
+    specified for @toc in the document instance, so @toc values from containing elements will not
+    cascade to that specific &lt;topicref> element. The @toc="yes" setting on that &lt;topicref>
+    element may cascade to contained elements, provided those elements reach <xref
+     href="#cascading-in-a-ditamap/attributes-cascade" format="dita"/> below when evaluating the
+    @toc attribute.</p>
+   <p>For attributes within a map, the following processing order <term>must</term> occur:<ol
+     id="ol_6eb4fb9c-b56f-4471-bb2d-b183fef5980c">
+     <li id="common-start">The @conref and @keyref attributes are evaluated.</li>
+     <li id="explicit-values">The explicit values specified in the document instance are evaluated.
+      For example, a &lt;topicref> element with the @toc attribute set to "no" will use that
+      value.</li>
+     <li>The default or fixed attribute values that are expressed within DTDs or XSDs are evaluated.
+      For example, in the DTDs and XSDs, the @toc attribute on the &lt;reltable> element has a
+      default value of "no".</li>
+     <li id="common-end">The default values that are supplied by a controlled values file are
+      evaluated.</li>
+     <li id="attributes-cascade">The attributes cascade.</li>
+     <li>The processing-supplied default values are applied.</li>
+     <li>After the attributes are resolved within the map, they cascade to referenced maps.
+       <note>The processing-supplied default values do not cascade to other maps. For example, most
+       processors will supply a default value of @toc="yes" when no @toc attribute is specified.
+       However, a processor-supplied default of toc="yes" must not override a value of toc="no" that
+       is set on a referenced map. If the toc="yes" value is explicitly specified, is given as a
+       default through a DTD, XSD, or controlled values file, or cascades from a containing element
+       in the map, it will override a toc="no" setting on the referenced map. See <xref
+        href="map-to-map-cascading-of-metadata.dita"/> for more details.</note></li>
+     <li>Repeat steps <xref href="#cascading-in-a-ditamap/common-start" type="li"/> to <xref
+       href="#cascading-in-a-ditamap/common-end" type="li"/> for each referenced map.</li>
+     <li>The attributes cascade within each referenced map.</li>
+     <li>The processing-supplied default values are applied within each referenced map.</li>
+     <li>Repeat the process for maps referenced within the referenced maps.</li>
+    </ol><?Pub Caret -1?></p>
+  </section>
+  <example>
+   <title>Example of metadata elements cascading in a DITA map</title>
+   <p>The following code sample illustrates how an information architect can apply certain metadata
+    to all the DITA topics in a
+    map:<codeblock>&lt;map title="DITA maps" xml:lang="en-us">
+	&lt;topicmeta>
+		&lt;author>Kristen James Eberlein&lt;/author>
+		&lt;copyright>
+			&lt;copyryear year="2009"/>
+			&lt;copyrholder>OASIS&lt;/copyrholder>
+		&lt;/copyright>
+	&lt;/topicmeta>
+	&lt;topicref href="dita_maps.dita" navtitle="DITA maps">
+		&lt;topicref href="definition_ditamaps.dita" navtitle="Definition of DITA maps">&lt;/topicref>
+		&lt;topicref href="purpose_ditamaps.dita" navtitle="Purpose of DITA maps">&lt;/topicref>
+		...
+&lt;/map></codeblock></p>
+   <p>The author and copyright information cascades to each of the DITA topics referenced in the
+    DITA map. When the DITA map is processed to XHTML, for example, each XHTML files contains the
+    metadata information.</p>
+  </example>
+ </conbody>
+</concept>
+<?Pub *0000006825?>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="unknown" xml:lang="en-us">
+<title>unknown</title>
+<shortdesc> The &lt;unknown&gt; element is an open extension that
+allows information architects to incorporate xml fragments that do
+not necessarily fit into an existing DITA use case. Processors should
+ignore this element unless otherwise instructed. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Specialization elements<indexterm>unknown</indexterm></indexterm>
+<indexterm>unknown element</indexterm></keywords>
+</metadata></prolog><?Pub Caret -2?>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-unknown/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="unknown-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-unknown/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="unknown-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/unknown </p></section>
+<example id="example"><title>Example</title><p>This example
+features a specialized &lt;unknown> element that includes other non-DITA
+content. If this specialization is imported to a DTD or schema, the
+DTD or schema will need to handle declaring the new elements or any
+namespaces.</p><codeblock>&lt;body>
+  &lt;my-unknown class="+ topic/unknown mything/my-unknown ">
+    &lt;thing value="4"/>
+    &lt;otherthing value="16"/>
+  &lt;/my-unknown>
+&lt;/body></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="unknown_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002875?>

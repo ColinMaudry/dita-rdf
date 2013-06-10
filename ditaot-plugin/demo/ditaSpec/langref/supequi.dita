@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="supequi" xml:lang="en-us">
+<title>supequi</title>
+<shortdesc>The &lt;<keyword>supequi</keyword>> element specifies a
+tool, a piece of support equipment, or a piece of monitoring equipment
+that is needed to perform a task, such as a slide hammer.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>supequi</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-supequi/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="supequi-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-supequi/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="supequi-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/li task/li mitask-d/supequi</p></section>
+<example id="example"><title>Example</title><codeblock>&lt;supequip>
+ &lt;supeqli>
+  <b>&lt;supequi></b>Driver handle<b>&lt;/supequi></b>
+  <b>&lt;supequi></b>Slide hammer<b>&lt;/supequi></b>
+  <b>&lt;supequi></b>Axle seal installer<b>&lt;/supequi></b>
+ &lt;/supeqli>
+&lt;/supequip>
+</codeblock><?Pub Caret 143?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002575?>

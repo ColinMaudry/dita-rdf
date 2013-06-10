@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="behaviors" xml:lang="en-us">
+    <title>DITA processing</title>
+    <shortdesc>Several common DITA processing behaviors are driven by attributes, including setting
+        the set of vocabulary and constraint modules on which a DITA document depends, navigation,
+        linking, content reuse (via direct or indirect addressing), conditional processing,
+        chunking, and printing. In addition, translation of DITA content is expedited through the
+        use of the @dir, @translate, and @xml:lang attributes, and the &lt;index-sort-as>
+        element.</shortdesc>
+</concept>

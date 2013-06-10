@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="desc" xml:lang="en-us">
+<title>desc</title>
+<shortdesc>The &lt;<keyword>desc</keyword>&gt; element contains the
+description of the current element. In elements that also allow a
+title, such as table and fig, this is used to provide more information
+than is appropriate for the title. In the xref and link elements it
+contains a description of the target; processors may (but need not)
+choose to display this as hover help for a link. In the object element,
+desc provides alternate content to use when the context <?Pub Caret?>does
+not permit displaying the object.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>desc (description)</indexterm><indexterm>description
+(desc)</indexterm><indexterm>Body elements<indexterm>desc</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-desc/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="desc-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-desc/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="desc-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/desc </p></section>
+<example id="example">       <title>Example</title>       <codeblock
+xml:space="preserve">&lt;fig&gt;&lt;title&gt;The Handshake&lt;/title&gt;
+<b>&lt;desc&gt;</b>This image shows two hands clasped in a formal, 
+business-like handshake.<b>&lt;/desc&gt;</b>
+&lt;image href="handshake.jpg"&gt;
+ &lt;alt&gt;The handshake&lt;/alt&gt;
+&lt;/image&gt;
+&lt;/fig&gt;</codeblock>     </example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="desc_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>

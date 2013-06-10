@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="ditanav" xml:lang="en-us">
+     <title>Navigation behaviors</title>
+     <shortdesc>DITA includes markup that processors may use to generate reader navigation to or
+          across DITA topics.</shortdesc>
+     <conbody>
+          <p>While DITA content can be processed to create output with media-specific navigational
+               aids, this topic discusses only the behaviors that are derived from markup.</p>
+          <section>
+               <title>Tables of contents (TOCs)</title>
+               <p>Processors may generate a TOC based on the hierarchy of the &lt;topicref> elements
+                    in the DITA map. Each &lt;topicref> element in the map represents a node in the
+                    TOC (unless it is set as a "resource only" topic reference). These topic
+                    references define a navigation tree. When a map contains a topic reference to a
+                    map (often called a map reference), processors should integrate the referenced
+                    map's navigation tree with the referencing map's navigation tree at the point of
+                    reference. In this way, a deliverable may be compiled from multiple DITA
+                    maps.</p>
+               <note>
+                    <p>If a &lt;topicref> element that references a map contains child &lt;topicref>
+                         elements, the processing behavior of the child &lt;topicref> elements is
+                         undefined.</p>
+               </note>
+               <p>By default, the text for each node in the TOC is obtained from the referenced
+                    topic's title. If the @locktitle attribute on the &lt;topicref> element is set
+                    to "yes", the node text must be taken from the @navtitle attribute or
+                    &lt;navtitle> child element of the &lt;topicref> element and must not be read
+                    from the referenced topic's title. If a &lt;topicref> element contains both a
+                    &lt;navtitle> child element and a @navtitle attribute, the @locktitle attribute
+                    applies to both &lt;navtitle> and @navtitle and, when set to "yes", the value of
+                    the &lt;navtitle> element <keyword>must</keyword> be used.</p>
+               <p>A TOC node is generated for every &lt;topicref> element (or specialization
+                    thereof) that references a topic or specifies a navigation title, except in the
+                    following cases:</p>
+               <ul id="ul_8477b748-2748-45c3-b8ca-df776f1b536d">
+                    <li>The @processing-role attribute is specified on the &lt;topicref> element or
+                         an ancestor element.</li>
+                    <li>The @print attribute is specified on the &lt;topicref> element or an
+                         ancestor element and the current processing is not for print output.</li>
+                    <li>Conditional processing is used to filter out this node or an ancestor
+                         node.</li>
+                    <li>No @href or @navtitle attribute is set and no child &lt;navtitle> element
+                         exists, or the node is a &lt;topicgroup> element.</li>
+               </ul>
+               <p>To suppress a &lt;topicref> element from appearing in the TOC, set its @toc
+                    attribute to "no". The value of the @toc attribute cascades to child
+                    &lt;topicref> elements, so if @toc is set to "no" on a particular &lt;topicref>,
+                    all of that &lt;topicref>'s children are also excluded from the TOC. If a child
+                    &lt;topicref> overrides the cascading TOC node suppression by specifying
+                    @toc="yes", then the node that specifies @toc="yes" must appear in the TOC
+                    (minus the intermediate nodes that turned off @toc).</p>
+          </section>
+          <section>
+               <title>Indexing</title>
+               <p>An index may be generated from index entries occurring in topic bodies, topic
+                    prologs, or DITA maps. For more information, see the language reference for the
+                    &lt;indexterm> element.</p>
+          </section>
+     </conbody>
+</concept>
+<?Pub *0000004945?>

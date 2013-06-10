@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="learningOverviewbody" xml:lang="en-us">
+	<title>learningOverviewbody</title>
+	<shortdesc>The &lt;<keyword>learningOverviewbody</keyword>&gt; element is the main body-level
+element in a learningOverview topic. A learningOverviewbody has a very specific structure, with the 
+following elements in this order: &lt;lcIntro>, &lt;lcAudience>, &lt;lcDuration>, 
+&lt;lcPrereqs>, &lt;lcObjectives>,  &lt;lcResources>, followed by one or more &lt;section> elements.
+Each of the learningOverviewbody sections are optional.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>learningOverviewbody</indexterm><indexterm>learning and training elements<indexterm>learningOverviewbody</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-learningOverviewbody/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="learningOverviewbody-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-learningOverviewbody/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="learningOverviewbody-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/body learningBase/learningBasebody learningOverview/learningOverviewbody </p>
+		</section>
+<example id="example"><title>Example</title>
+<p>See <xref href="learningOverview.dita">learningOverview</xref>.</p>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="learningOverviewbody_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

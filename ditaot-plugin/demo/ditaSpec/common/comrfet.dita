@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="comrfet" xml:lang="en-us">
+<title>Commonly referenced attribute groups</title>
+<shortdesc>Common attribute groups, such as the selection and property
+attributes of most DITA elements, are described here as sets in order
+to reduce unnecessary duplication of common information.</shortdesc><?Pub
+Caret 113?>
+<prolog><metadata>
+<keywords><indexterm>Commonly referenced attribute descriptions</indexterm>
+</keywords>
+</metadata></prolog>
+<refbody></refbody>
+</reference>
+<?Pub *0000000876?>

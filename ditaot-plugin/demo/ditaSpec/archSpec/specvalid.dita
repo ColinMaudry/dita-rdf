@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept
+  id="specvalid" xml:lang="en-us">
+  <title>Requirements for specialized element types and attributes</title>
+  <shortdesc>When you specialize one element from another, or a new attribute from @props or @base,
+    the new element or attribute <term>must</term> obey certain rules in order to be a conforming
+    specialization.</shortdesc>
+  <conbody>
+    <p>A specialized element:</p>
+    <ul
+      id="ul_EA3B7077BCC6454F947D813EC26C6A05">
+      <li id="li_8A76B666D9A8424D82D746A58DA630F3"><term>Must</term> have a properly formed @class
+        attribute specifying inheritance from its parent.</li>
+      <li
+        id="li_1DEF508B0D9840C7B00AFF11D92EB450"><term>Must not</term> have a more inclusive content
+        model than its parent has.</li>
+      <li id="li_C292756146B543C699DA6D7A3E3C2F29"><term>Must not</term> have attributes that its
+        parent lacks.</li>
+      <li
+        id="li_FD9B4C1487694564ABF998CB831FCA5E"><term>Must not</term> have values or value ranges
+        of these attributes that are more extensive than those in the parent.</li>
+    </ul>
+    <p>An attribute specialized from the @props or @base attribute:</p>
+    <ul
+      id="ul_9B0A068B37114A048F621DE437720028">
+      <li
+        id="li_CA1DAF33E2FC4971BE578549610813CE"><term>Must</term> follow the rules for attribute
+        domain specialization.</li>
+      <li
+        id="li_1E1415DCB60F4941A2F2545D951CE2BE"><term>Must not</term> have values or value ranges
+        that are more extensive than those of the parent.</li>
+      <li
+        id="li_ECF6D0ED922A4250983EB215C1D34F81"><term>Must</term> conform to <?Pub Caret?>the rules
+        for conditional processing values, that is, alphanumeric space-delimited values. In
+        generalized form, the values <term>must</term> conform to the rules for attribute
+        generalization.</li>
+      <li><term>Must</term> be declared as a global attribute. Attribute specializations
+          <term>cannot</term> be limited to specific element types.</li>
+    </ul>
+    <p>DITA elements are never in a namespace. Only the @DITAArchVersion attribute is in a
+      DITA-defined namespace. All other attributes, except for those defined by the XML standard,
+      are in no namespace.</p>
+    <p>This limitation is imposed by the details of the @class attribute syntax, which makes it
+      impractical to have namespace-qualified names for either vocabulary modules or individual
+      element types or attributes. Elements included as descendants of the DITA &lt;foreign> element
+      type may be in any namespace.<note>For this reason, domain modules that are intended for wide
+        use should take care to define element type and attribute names that are unlikely to
+        conflict with names used in other domains, for example, by using a domain-specific prefix on
+        all names.</note></p>
+  </conbody>
+</concept>
+<?Pub *0000001342?>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="figgroup" xml:lang="en-us">
+<title>figgroup</title>
+<shortdesc>The &lt;<keyword>figgroup</keyword>&gt; element
+is used primarily for specialization, in order to create segments
+within a figure. The element may nest itself, which allows it to create
+complex specialized structures (such as the nestable groups of syntax
+within a syntax diagram). Figure groups can be used to contain multiple
+cross-references, footnotes or keywords, but not multipart images.
+Multipart images in DITA should be represented by a suitable media
+type displayed by the &lt;<keyword>object</keyword>&gt; element.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>figgroup</indexterm><indexterm>Body elements<indexterm>figgroup</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-figgroup/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="figgroup-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-figgroup/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="figgroup-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/figgroup </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;fig>
+  &lt;title>Sample complex figure&lt;/title>
+  <b>&lt;figgroup></b>
+    &lt;title>First group&lt;/title>
+    &lt;ph>These elements&lt;/ph>
+    &lt;ph>are grouped together&lt;/ph>
+    &lt;ph>for some purpose&lt;/ph>
+  <b>&lt;/figgroup></b>
+  <b>&lt;figgroup></b>
+    &lt;title>Second group&lt;/title>
+    &lt;data name="MetaItem" value="13"/>
+    &lt;data name="MetaThing" value="31"/>
+    &lt;ph>These elements&lt;/ph>
+    &lt;ph>are grouped with associated metadata&lt;/ph>
+  <b>&lt;/figgroup></b><?Pub Caret?>
+&lt;/fig> </codeblock><fig>
+<figgroup></figgroup>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="figgroup_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

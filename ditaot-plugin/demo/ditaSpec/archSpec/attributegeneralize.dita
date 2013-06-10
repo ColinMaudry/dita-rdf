@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Arbortext, Inc., 1988-2005, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="attributegeneralize" xml:lang="en-us">
+  <title>Attribute generalization</title>
+  <shortdesc>There is a particular syntax to generalize attributes that have been specialized from
+    the @props or @base attribute. Specialization-aware processors <keyword>should</keyword> be able
+    to recognize and process both the specialized and generalized forms of an attribute as being
+    equivalent in their values.</shortdesc>
+  <conbody>
+    <p>When a specialized attribute is generalized to an ancestor attribute, the value of the
+      ancestor attribute consists of the name of the specialized attribute followed by its
+      specialized value in parentheses. For example, given that "jobrole" is an attribute
+      specialized from "person", which in turn is specialized from "props":</p>
+    <ul id="ul_6BCECC8F518A421E94E4319755C102D5">
+      <li id="li_A44359339EE446539903A0B26FE898BE">jobrole="programmer" can be generalized to
+        person="jobrole(programmer)" or to props="jobrole(programmer)"</li>
+      <li id="li_D5E2DA845D944AE9975D7AF4A96B39BC">props="jobrole(programmer)" can be respecialized
+        to person="jobrole(programmer)" or to jobrole="programmer"</li>
+    </ul>
+    <p>In this example, generalization and respecialization can use the @domains attribute to
+      determine the ancestry of the specialized @jobrole attribute, and therefore the validity of
+      the specialized @person attribute as an intermediate target for generalization.</p>
+    <p>If more than one attribute is generalized, the value of each is separately represented in
+      this way in the value of the ancestor attribute.</p>
+    <p>Generalized attributes are typically not expected to be authored or edited directly, but are
+      used by generalizing processors to preserve the values of the specialized attributes during
+      the time or in the circumstances in which the document is in a generalized form.</p>
+    <p>A single element <keyword>may not</keyword> contain both generalized and specialized values
+      for the same attribute. For example, this element:
+      <codeblock>&lt;p pe<?Pub Caret?>rson="jobrole(programmer)" jobrole="admin"&gt;...&lt;/p&gt;</codeblock>provides
+      two values for the @jobrole attribute, but one is in a generalized syntax and the other in a
+      specialized syntax. This is an error condition, since it means the document has been only
+      partially generalized, or has been generalized and then edited using a specialized document
+      type. </p>
+  </conbody>
+</concept>
+<?Pub *0000002156?>

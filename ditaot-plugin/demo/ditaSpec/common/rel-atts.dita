@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="rel-atts" xml:lang="en-us">
+<title><keyword>rel-atts attribute group</keyword></title>
+<abstract><shortdesc>The "rel-atts" attribute group is deprecated
+in favor of the relational-atts group, which adds new attributes to
+the original "rel-atts" group.</shortdesc></abstract>
+<refbody>
+<section>The "rel-atts" attribute group includes attributes whose
+values may be used for representing navigational relationships. These
+attributes occur only on elements that represent relationships between
+topics. Beginning with DITA 1.2, the parameter is deprecated in favor
+of the <xref href="relational-atts.dita">relational-atts</xref> group;
+it is still defined so that specializations which use this entity
+may upgrade more easily.</section>
+<section><title>Attributes</title><simpletable id="rel-atts_attr"
+relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/otherrole">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section><?Pub Caret -2?>
+</refbody>
+</reference>
+<?Pub *0000001997?>

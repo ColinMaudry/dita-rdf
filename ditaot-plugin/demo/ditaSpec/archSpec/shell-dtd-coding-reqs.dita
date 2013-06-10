@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="shell-dtd-coding-reqs" xml:lang="en-us">
+  <title>DTD document-type shell: Coding requirements</title>
+  <shortdesc>A document type shell integrates one or more topic type or map type modules, zero or
+    more domain modules, and zero or more constraint modules. A DTD document type shell is organized
+    into sections, where each section contains a specific type of declaration.</shortdesc>
+  <conbody>
+    <p> DTD document type shells <keyword>may not</keyword> directly declare element types or
+      attributes. A DTD document type shell <keyword>must</keyword> conform to the following coding
+      requirements.</p>
+    <p>Each section of the shell is introduced by a comment. Shells <keyword>should</keyword> use
+      these comments to identify each section of the shell. Each section <keyword>should</keyword>
+      be present in the shell DTD, even if the section contains no declarations, and
+        <keyword>must</keyword> occur in the order they are presented here. The ordering is required
+      by the XML rules for entity declaration precedence and also serve to enable automatic shell
+      creation and modification. Shells <keyword>should</keyword> have an initial set of comments
+      that describe the shell and indicate the public identifiers, URNs, or absolute URLs by which
+      the shell should be referenced in DOCTYPE declarations. </p>
+    <dl>
+      <dlentry>
+        <dt>Topic or map entity inclusions</dt>
+        <dd>The topic or map entity declarations section includes the <filepath>.ent</filepath> file
+          for the top-level topic or map type the shell is configuring. </dd>
+        <dd>
+          <p>Topic shells <keyword>should</keyword> use the comment:
+            <codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    TOPIC ENTITY DECLARATIONS                  -->
+&lt;!-- ============================================================= -->  </codeblock></p>
+          <p>Map shells <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    MAP ENTITY DECLARATIONS                    -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>This section <keyword>must</keyword> declare and reference as an external parameter
+            entity the <filepath>.ent</filepath> file for the topic or map module where the entity
+            is named <codeph>%<i>typename</i>-dec</codeph>. For
+            example:<codeblock>&lt;!ENTITY % concept-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Concept//EN" 
+         "concept.ent"
+>%concept-dec;</codeblock></p>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Domain entity inclusions</dt>
+        <dd>
+          <p>The domain entity inclusions section includes the entity declaration files for each
+            element domain integrated by the document type. This section <keyword>should</keyword>
+            use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    DOMAIN ENTITY DECLARATIONS                 -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>For each element domain included in the shell, this section <keyword>must</keyword>
+            declare an external parameter entity for the domain's entity declaration file and
+            immediately reference the entity. The entity name for the domain declaration consists of
+            the domain name plus the <codeph>dec</codeph> suffix. In the following example, the
+            entity file for the highlight domain is included in the document type shell:</p>
+          <codeblock><![CDATA[<!ENTITY % hi-d-dec PUBLIC
+    "-//OASIS//ENTITIES DITA Highlight Domain//EN" 
+    "highlightDomain.ent"
+>%hi-d-dec;]]></codeblock>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Domain attribute inclusions</dt>
+        <dd>
+          <p>The domain attribute inclusions section includes the entity declaration files for each
+            attribute domain integrated by the document type. This section <keyword>should</keyword>
+            use the comment:</p>
+          <codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+&lt;!-- ============================================================= --></codeblock>
+          <p>For each attribute domain included in the shell, this section <keyword>must</keyword>
+            declare an external parameter entity for the domain's entity declaration file and
+            immediately reference the entity. The entity name for the domain declaration consists of
+            the domain name plus the <codeph>ent</codeph> suffix. In the following example, the
+            entity file for a new attribute domain is included in the document type shell:</p>
+          <codeblock><![CDATA[<!ENTITY % newAtt-d-dec PUBLIC
+    "-//My Company//ENTITIES New Attribute Domain//EN"
+    "newAttDomain.ent"
+>%newAtt-d-dec;]]></codeblock>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Element extension redefinitions</dt>
+        <dd>
+          <p>The element extension redefinition section contains redefinitions of element name
+            parameter entities to reflect the integration of domain-provided element types into base
+            content models. This section <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    DOMAIN EXTENSIONS                          -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>For each element that is extended by one or more domains, the document type shell
+            redefines the entity for the element. The new definition is a disjunctive list of
+            alternatives comprising the literal name of the element followed by the element
+            extension entity from each domain that is providing specializations. In the following
+            example, the entity for the &lt;pre&gt; element is redefined to allow specializations
+            from the programming, software, and user interface domains:</p>
+          <codeblock><![CDATA[<!ENTITY % pre
+    "pre        | 
+     %pr-d-pre; | 
+     %sw-d-pre; | 
+     %ui-d-pre;">]]></codeblock>
+          <p>The value of the entity <keyword>may</keyword> omit any base types from which other
+            types listed are specialized. For example, the preceding example could omit the &lt;pre>
+            element, effectively allowing only specializations of &lt;pre>, but not &lt;pre> itself:<codeblock><![CDATA[<!ENTITY % pre
+    "%pr-d-pre; | 
+     %sw-d-pre; | 
+     %ui-d-pre;">]]></codeblock></p>
+          <note>Omitting base types from domain extensions constitutes a form of constraint. The
+            constraint <keyword>must</keyword> be represented by a constraint module that declares
+            the @domains attribute declaration for the constraint. For the omission of &lt;pre> in
+            the preceding example the constraint might be called "noBasePre-c" and would be declared
+            in a file named "noBasePreConstraint.mod", containing the following declarations:
+            <codeblock>&lt;!ENTITY noBasePre-c-pre  "%pr-d-pre; | %sw-d-pre; | %ui-d-pre;">
+&lt;!ENTITY noBasePre-c-att  "(topic noBasePre-c)" >
+&lt;!ENTITY % pre          “%noBasePre-c-pre ;“></codeblock></note>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Attribute extension redefinitions</dt>
+        <dd>
+          <p>The attribute extension redefinition section integrates the declarations of
+            specializations of the base and props attributes (defined in attribute domain modules
+            included in the attribute domain inclusion section). This section must use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>The entities for extending the props and base attributes have a null value by
+            default:</p>
+          <codeblock>&lt;!ENTITY % props-attribute-extensions  "" &gt;
+&lt;!ENTITY % base-attribute-extensions   "" &gt;</codeblock>
+          <p>For each attribute domain included by the shell, the shell <keyword>must</keyword>
+            redefine the entity that is extended. The new definition is a list of the attribute
+            extension entities for the domains that are providing specializations. </p>
+          <codeblock>&lt;!ENTITY % props-attribute-extensions
+        "%newAtt-d-attribute; 
+         %othernewAtt-d-attribute;"&gt;
+&lt;!ENTITY % base-attribute-extensions
+        "%newfrombaseAtt-d-attribute; 
+         %othernewfrombaseAtt-d-attribute;"&gt;
+</codeblock>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Topic nesting redefinitions</dt>
+        <dd>
+          <p>The topic nesting section contains redefinitions of the topic nesting control parameter
+            entities defined by the topic modules integrated in the shell. This section
+              <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    TOPIC NESTING OVERRIDES                    -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>For each topic type integrated in the shell, the document type shell
+              <keyword>may</keyword> control nesting of subtopics by redefining the
+                <codeph><varname>topictype</varname>-info-types</codeph> entity. The definition is
+            usually an OR list of topic types that can be nested in the corresponding parent topic
+            type. Use the literal root element name of each topic, not the corresponding element
+            entity, as in the following example:</p>
+          <codeblock><![CDATA[<!ENTITY % concept-info-types "concept | myTopicType">]]></codeblock>
+          <p>The document type shell <keyword>may</keyword> also set the default for most topic
+            types by defining the global <codeph>info-types</codeph> entity, for example:
+            <codeblock>&lt;!ENTITY % info-types "concept | myTopicType"></codeblock></p>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Domain declaration redefinition</dt>
+        <dd>
+          <p>The domain declaration redefinition section sets the effective value of the @domains
+            attribute for the topic or map type modules integrated into the shell. This section
+              <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>The document type shell <keyword>must</keyword> redefine the
+              <codeph>included-domains</codeph> entity to list the domains for specializations that
+            are included in the document type, as well as any constraint modules, as in the
+            following example:</p>
+          <codeblock><![CDATA[<!ENTITY included-domains
+    "&hi-d-att; 
+     &ut-d-att; 
+     &ui-d-att; 
+     &pr-d-att; 
+     &sw-d-att; 
+     &newAtt-d-att;
+     &noBasePre-c-ph;
+   "
+>]]></codeblock>
+          <p>For a domain or structural module, the domains attribute value entity is declared in
+            the domain's .ent file. For constraint modules, the domains attribute value entity is
+            declared in the module's .mod file constraint modules do not use separate .ent
+            files).</p>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Content constraint module inclusions</dt>
+        <dd>The content constraint module inclusion section includes constraint modules that
+          override the base content models for structural or domain types integrated in the shell.
+          This section <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    CONTENT CONSTRAINT INTEGRATION             -->
+&lt;!-- ============================================================= --></codeblock><p>For
+            each constraint module integrated in the shell, the shell <keyword>must</keyword>
+            declare an external parameter entity for the constraint's <filepath>.mod</filepath> file
+            and immediately reference the entity. The entity name for the constraint declaration
+            consists of the constraint module name plus the <codeph>-c-mod</codeph> suffix. For
+            example, this constraint inclusion for the task topic type constrains the DITA 1.2
+            relaxed task content model to match the more constrained DITA 1.1 task content
+            model:<codeblock>&lt;!ENTITY % strictTaskbody-c-def  
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Strict Taskbody Constraint//EN" 
+  "strictTaskbodyConstraint.mod"
+>%strictTaskbody-c-def;</codeblock></p></dd>
+      </dlentry>
+      <dlentry>
+        <dt>Structural definition inclusions</dt>
+        <dd>
+          <p>The structural definition inclusion section includes the element type declaration
+              (<filepath>.mod</filepath>) files for each topic or map type integrated into the
+            shell. For topic shells, this section <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    TOPIC ELEMENT INTEGRATION                  -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>For map shells, this section <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    MAP ELEMENT INTEGRATION                    -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>For each structural type integrated in the document type, the document type shell
+              <keyword>must</keyword> declare and reference an external parameter entity for the
+            structural type module's <filepath>.mod</filepath> file. The entity name consists of the
+            name of the structural type plus a <codeph>-type</codeph> suffix. For example:</p>
+          <codeblock><![CDATA[<!ENTITY % topic-type PUBLIC
+    "-//OASIS//ELEMENTS DITA Topic//EN" 
+    "topic.mod"
+>%topic-type;]]></codeblock>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>Element domain definition inclusions</dt>
+        <dd>
+          <p>The element domain definition inclusion section includes the element definition files
+            for each element domain integrated into the shell. This section
+              <keyword>should</keyword> use the
+            comment:<codeblock>&lt;!-- ============================================================= -->
+&lt;!--                    DOMAIN ELEMENT INTEGRATION                 -->
+&lt;!-- ============================================================= --></codeblock></p>
+          <p>For each element domain used in the document type, the document type shell
+              <keyword>must</keyword> declare and reference an external parameter entity for the
+            domain definition module file (<filepath>.mod</filepath>). The entity name consists of
+            the domain name plus a <codeph>-def</codeph> suffix. For example:</p>
+          <codeblock><![CDATA[<!ENTITY % hi-d-def PUBLIC
+    "-//OASIS//ELEMENTS DITA Highlight Domain//EN" 
+    "highlightDomain.mod"
+>%hi-d-def;]]></codeblock>
+        </dd>
+      </dlentry>
+    </dl>
+  </conbody>
+</concept>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="dita_technicalContent_InformationTypes" xml:lang="en-US">
+<title>Technical content: Document and information types</title>
+<shortdesc>The Technical Content package contains five topic specializations
+that support seven   document types: concept, reference, general task,
+strict task, machinery task, glossary entry, and   glossary group.
+These topic types are specialized from the base topic and are designed
+  specifically for information that describes how to use products
+and processes they are dominated   by procedural, task-oriented information.
+The Technical Content package also includes   the map document type. <!--<xref format="dita" href="maps.dita#maps">Base</xref>--><?Pub
+Caret?></shortdesc>
+<conbody>
+<section>    <title>Concept</title>    <p>The concept document and
+information types provide conceptual information to support the  
+  performance of tasks. Concepts may include extended definitions
+of terms, expositions of     background information, descriptions
+of systems and objects, and other content that helps to     build
+the users' understanding of the tasks to be performed.</p>   </section>
+<section>    <title>Reference</title>    <p>The reference document
+and information types provide for the separation of fact-based   
+ information from concepts and tasks. Factual information may include
+tables and lists of     specifications, parameters, parts, commands,
+and other information that the users are likely to     look up. The
+reference information type allows fact-based content to be maintained
+by those     responsible for its accuracy and consistency.</p>   </section>
+<section>    <title>Task (strict task)</title>    <p>The task document
+type provides procedural information to support the performance of
+a task.     The task document type implements the strict task content
+model from DITA 1.0 and 1.1 by     combining the new general task
+(task) information type and the new Strict Taskbody constraint.  
+  This information model provides detailed semantics to encourage
+authors to label standard parts     of the task, including pre-requisites,
+sufficient conceptual information required to perform the     task,
+the commands that introduce each step in a procedure, additional support
+information     required to understand a step, the result of performing
+the task, and examples that demonstrate     the performance of the
+task. </p>   </section>
+<section>    <title>General task</title>    <p>The general task document
+and information types are new to DITA 1.2. They provide a less   
+ strict task model for task-oriented information than was available
+in DITA 1.0 and 1.1. The     general task model may be preferred over
+the strict task model by some organizations. It can     facilitate
+the migration of legacy task content that does not follow the strict
+task topic     model. The general task information type serves as
+the base for the strict task and     machine-industry task document
+types, can be used to create new document types, and can be a    
+base for new structural specializations.</p>    <p>Unfortunately,
+for historical reasons and to maintain compatibility with DITA 1.0
+and 1.1, the     names used for the various task components can be
+confusing:</p>    <ul>
+<li>General task is the name for the general task document type </li>
+<li>Task is the name for the strict task document type</li>
+<li>Task is also the name for the general task information type</li>
+<li>Task is the name of the specialized topic tag in the general information
+type which is used      in the strict task, general task, and machine-industry
+task document types</li>
+</ul>   </section>
+<section>    <title>Machinery task</title>    <p>The machinery-task
+document type is new to DITA 1.2 and is built by combining the general
+task     information type with the Task Requirements Domain and the
+Machinery Taskbody Constraint. It     provides procedural information,
+similar to other task types, and has a well-defined semantic     structure
+to meet the special requirements of organizations that develop instructional
+material     for industrial equipment, such as industrial products
+like trucks, mining machinery, and     automobiles. The machine-industry
+task requirements domain adds several new descriptive elements   
+ in the preliminary requirements (prelreqs) and closing requirements
+(closereqs) sections.</p>   </section>
+<section>    <title>Glossary entry</title>    <p>The glossary entry
+(glossentry) document type replaces the glossary document type of
+DITA 1.1.     It provides for the development of glossary topics that
+define terms, acronyms, and     abbreviations. It may also contain
+terminology information.</p>   </section>
+<section>    <title>Glossary group</title>    <p>The glossary group
+(glossgroup) document type, new in DITA 1.2, allows authors to incorporate
+    multiple glossary entries in a single collection tile.</p>   </section>
+</conbody>
+</concept>

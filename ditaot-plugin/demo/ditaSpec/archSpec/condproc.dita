@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?><!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="condproc" xml:lang="en-us">
+<title>Conditional processing (profiling)</title>
+<shortdesc><ph id="shortdesc">Attribute-based profiling, also known
+as conditional processing or       applicability, is the use of classifying
+metadata that enables the filtering, flagging,       searching, indexing,
+and other processing based on the association of an element with one
+or       more values in a specific classification domain.</ph></shortdesc>
+<conbody>
+<p>DITA defines attributes that are specifically intended to enable
+filtering or flagging of individual elements. Those attributes are
+@audience, @platform, @product, @otherprops, @props, <ph
+rev="public-review-1">and @rev (flagging only).</ph> This enables
+the creation of topics and maps that can be dynamically configured
+at  processing time to reflect a specific set of conditions, using
+the DITA-defined conditional processing profile (DITAVAL).</p><?Pub
+Caret 186?>
+<p>Processors should be able to perform filtering and flagging using
+the attributes listed above. Although metatdata elements exist with
+similar names, such as the &lt;audience>       element, processors
+are not required to perform conditional processing using metadata
+      elements. The @props attribute can be specialized to create
+new attributes, and processors       should be able to perform conditional
+processing on specializations of @props.</p>
+<section id="condprocattrs">       <title>Conditional processing attributes</title
+>       <p>For a topic or topicref, the audience, platform, and product
+metadata can be expressed with         attributes on the topic or
+topicref element or with elements within the topic prolog or     
+   topicmeta element. While the metadata elements are more expressive,
+the meaning of the         values is the same, and can be used in
+coordination. For example, the prolog elements can         fully define
+the audiences for a topic, and then metadata attributes can be used
+within the         content to identify parts that apply to only some
+of those audiences.</p>       <dl>
+<dlentry>
+<dt>audience</dt>
+<dd>The values in the audience attribute may also be used to reference
+a more complete             description of an audience in an audience
+element. Use the name of the audience in the             audience
+element when referring to the same audience in an audience attribute.<p
+>The               audience attribute takes a space-delimited list
+of values, which may or may not match               the name value
+of any audience elements.</p>           </dd>
+</dlentry>
+<dlentry>
+<dt>platform</dt>
+<dd>The platform might be the operating system, hardware, or other
+environment. This             attribute is equivalent to the platform
+element for the topic metadata.</dd>
+<dd>             <p>The platform attribute takes a space-delimited
+list of values, which may or may not               match the content
+of a platform element in the prolog.</p>           </dd>
+</dlentry>
+<dlentry>
+<dt>product</dt>
+<dd>The product or component name, version, brand, or internal code
+or number. This             attribute is equivalent to the prodinfo
+element for the topic metadata.</dd>
+<dd>             <p>The product attribute takes a space-delimited
+list of values, which may or may not               match the value
+of the prodname element in the prolog.</p>           </dd>
+</dlentry>
+<dlentry>
+<dt>rev</dt>
+<dd>The identifier for the revision level. For example, if a paragraph
+was changed or             added during revision 1.1, the rev attribute
+might contain the value "1.1". </dd>
+</dlentry>
+<dlentry
+          rev="public-review-1">
+          <dt>otherprops</dt>
+          <dd>A catch-all for metadata qualification values about the content. This attribute is equivalent to the othermeta element for the topic metadata. <p>The attribute takes a space-delimited list of values, which may or may not match the values of othermeta elements in the prolog.</p><p>For example, a simple otherprops value list: <codeph>&lt;codeblock otherprops="java cpp"></codeph></p><p><draft-comment>MP: deprecated grouped value syntax per TC meeting 2007/01/02</draft-comment>The attribute <term>may</term> take labeled groups of values as for @props. Processors <term>may</term> treat such values as equivalent to @props or they <term>may</term> treat such values as simple strings. The use of labeled groups in @otherprops is deprecated in favor of using specializations of @props. Processors <term>should</term> clearly document how they treat grouped @otherprops values. See <xref
+            href="attributegeneralize.dita#attributegeneralize"
+            format="dita"/> for details on generalized @props attribute values.</p> </dd>
+        </dlentry>
+<dlentry>
+<dt>props</dt>
+<dd>A generic attribute for conditional processing values. Starting with DITA 1.1, the props attribute can be specialized to create new conditional processing attributes. <ph
+            rev="public-review-1">See <xref
+            href="attributegeneralize.dita#attributegeneralize"
+            format="dita"/>.</ph></dd>
+</dlentry>
+</dl>     </section>
+<section id="usingcondatts">       <title>Using conditional processing
+attributes</title>       <p>Each attribute takes zero or more space-delimited
+string values. For example, you can use         the product attribute
+to identify that an element applies to two particular products. </p
+>       <fig>
+<title>Example source</title>
+<codeblock>
+&lt;p audience="administrator">Set the configuration options:
+    &lt;ul>
+        &lt;li product="extendedprod">Set foo to bar&lt;/li>
+        &lt;li product="basicprod extendedprod">Set your blink rate&lt;/li>
+        &lt;li>Do some other stuff&lt;/li>
+        &lt;li platform="Linux">Do a special thing for Linux&lt;/li>
+    &lt;/ul>
+&lt;/p>
+            </codeblock>
+</fig>     </section>
+<section id="proccondatts">       <title>Evaluating conditional processing
+attributes</title>       <p>At processing time, a DITAVAL conditional
+processing profile may be used to specify values         you want
+to include, exclude, or flag. </p>       <p>For example, a publisher
+producing information for a mixed audience using the basic product
+        could choose to flag information that applies to administrators,
+and exclude information         that applies to the extended product,
+by defining a conditional processing profile like         this:<codeblock
+>&lt;val>
+  &lt;prop att="audience" val="administrator" action="flag">
+    &lt;startflag>&lt;alt-text>ADMIN&lt;/alt-text>&lt;/startflag>
+  &lt;/prop>
+  &lt;prop att="product" val="extendedprod" action="exclude"/>
+&lt;/val></codeblock></p>       <p>At output time, the paragraph is
+flagged, and the first list item is excluded (since it         applies
+to extendedprod), but the second list item is still included (even
+though it does         apply to extendedprod, it also applies to basicprod,
+which was not excluded).</p>       <p>The result should look something
+like: <fig>
+<p><b>ADMIN</b> Set the configuration options: <ul>
+<li>Set your blink rate</li>
+<li>Do some other stuff </li>
+<li>Do a special thing for Linux</li>
+</ul></p>
+</fig></p>     </section>
+<section id="filterlogic">       <title>Filtering logic</title>  
+    <p>By default, values in conditional processing attributes that
+are not defined in a DITAVAL         profile evaluate to "include".
+For example, if the value audience="novice" is used on a         paragraph,
+but this value is not defined in a DITAVAL profile, the attribute
+evaluates to         "include". However, the DITAVAL profile may change
+this default to "exclude", so that any         value not explicitly
+defined in the DITAVAL profile will evaluate to "exclude". The profile
+        may also be used to change the default for a single attribute;
+for example, it may declare         that values in the platform attribute
+default to exclude while those in the product         attribute default
+to include. See <xref href="../common/about-ditaval.dita"></xref> for
+        information on how to set up a DITAVAL profile and how to
+change default behaviors.</p>       <p>When deciding whether to include
+or exclude a particular element, a processor should         evaluate
+each attribute, and then evaluate the set of attributes. <ul>
+<li>If <b>all</b> the values in a single attribute evaluate to "exclude",
+the attribute             evaluates to "exclude".</li>
+<li>If <b>any single attribute</b> evaluates to exclude, the element
+is excluded.</li>
+</ul></p>       <p>For example, if a paragraph applies to three products
+and the publisher has chosen to         exclude all of them, the processor
+should exclude the paragraph. This is true even if the         paragraph
+applies to an audience or platform that is not excluded. But if the
+paragraph         applies to an additional product that has not been
+excluded, then its content is still         relevant for the intended
+output and should be preserved.</p>     </section>
+<section id="flaglogic">       <title>Flagging logic</title>     
+ <p>When deciding whether to flag a particular element, a processor
+should evaluate each value.         Wherever a value that has been
+set as flagged appears in its attribute (for example,         audience="administrator")
+the process should add the flag. When multiple flags apply to a  
+      single element, multiple flags should be rendered, typically
+in the order they are         encountered.</p>       <p>Flagging could
+be done using text (for example, bold text against a colored background)
+or         using images. When the same element evaluates as both flagged
+and filtered (for example,         flagged because of an audience
+attribute value and filtered because of its product attribute    
+    values), the element should be filtered.</p>     </section>
+</conbody>
+</concept>
+<?Pub *0000010338?>

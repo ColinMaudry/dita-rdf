@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="subjectSchema" xml:lang="en-us">
+ <title>Subject scheme maps</title>
+ <shortdesc>A subject scheme map enables adopters to create custom controlled values and to manage
+  metadata attribute values for an organization or a project without having to write a DITA
+  specialization.</shortdesc>
+ <conbody>
+  <p>Subject scheme maps use key definition to define a collection of controlled values rather than
+   a collection of topics. The highest level of map that uses the set of controlled values must
+   reference the subject scheme map in which those controlled values are defined.</p>
+  <p>A controlled value is a short, readable, and meaningful keyword that can abe used as a value in
+   a metadata attribute. For example, the @audience metadata attribute may take a value that
+   identifies the user group associated with a particular content unit. Typical user values for a
+   medical-equipment product line might include therapist, oncologist, physicist, radiologist, and
+   so on. In a subject scheme map, an information architect can define a list of these audience
+   values. Authoring tools may use these lists of controlled values to provide value lists from
+   which authors may select values when they are entering metadata. </p>
+  <p>If controlled values for a metadata attribute are defined using the subject scheme map, tools
+   may give an organization a list of readable labels, a hierarchy of values to simplify selection,
+   and a shared definition of the value.</p>
+  <p>Controlled values may be used to classify content for filtering and flagging at build time.
+   They may also be used for retrieval and traversal of the content at run time if information
+   viewers that provide such functionality are available.</p>
+  <p>Tools may validate controlled values for attributes by reference to the subject scheme map. As
+   with all key definitions and references, the reference must appear in the highest map that makes
+   use of the controlled values.</p>
+  <section>
+   <title>Defining a list of controlled values</title>
+   <p>A specialized DITA map, &lt;subjectScheme> is used to define a collection of controlled
+    values. Each controlled value is defined using a specialized topic reference, called
+    &lt;subjectdef>. The &lt;subjectdef> is used to define both a category and a list of controlled
+    values. The top-level &lt;subjectdef> defines the category and the children define the
+    controlled values. The following example illustrates the use of &lt;subjectdef> to define
+    controlled values for a group of
+    users:<codeblock>&lt;subjectScheme>
+&lt;!-- Pull in a scheme that defines audience user values -->
+    &lt;subjectdef keys="users">
+        &lt;subjectdef keys="therapist">
+        &lt;subjectdef keys="oncologist">
+        &lt;subjectdef keys="radiationphysicist">
+        &lt;subjectdef keys="radiologist">
+    &lt;/subjectdef>
+
+ &lt;!-- Define an enumeration of the audience attribute, equal to
+       each value in the users subject. This makes the following values
+       valid for the audience attribute: therapist, oncologist, physicist, radiologist -->
+     &lt;enumerationdef>
+         &lt;attributedef name="audience"/>
+         &lt;subjectdef keyref="users"/>
+     &lt;/enumerationdef>...
+&lt;/subjectScheme></codeblock></p>
+   <p>Within the &lt;subjectdef> element<ul>
+     <li>&lt;navtitle> can provide a more readable value name</li>
+     <li>&lt;shortdesc> within &lt;topicmeta> can provide a definition</li>
+    </ul></p>
+   <p>An enumeration may be defined with hierarchical levels by nesting subject definitions. If
+    filtering or flagging excludes "therapist" and does not explicity identify "novice", processing
+    should apply filtering to all subsets of therapist. If filtering includes "novice" but does not
+    explicity exclude "therapist", processing should include the general therapist content because
+    it applies to "novice". If flagging explicity includes "therapist" but is not set explicity for
+    "novice", processing should apply the "therapist" flag to the "novice" content as a special type
+    of
+    therapist.<codeblock>&lt;subjectScheme>
+    &lt;subjectdef keys="users">
+        &lt;subjectdef keys="therapist">
+            &lt;subjectdef keys="novice"/>
+            &lt;subjectdef keys="expert"/>
+        &lt;/subjectdef>
+        &lt;subjectdef keys="oncologist">
+        &lt;subjectdef keys="physicist">
+        &lt;subjectdef keys="radiologist">
+    &lt;/subjectdef></codeblock></p>
+   <p>The &lt;subjectdef> element can use an @href attribute to refer to a more detailed definition
+    of the subject. For example, the value of "oncologist" could refer to an encyclopedia entry that
+    describes the oncologist role in
+    medicine.<codeblock>&lt;subjectdef keys="oncologist" href="encyclopedia/oncologist.dita"/></codeblock>These
+    definitions may help to clarify the meaning of a value, especially when different parts of an
+    organization may use the same term differently. An editor may support drilling down to the
+    subject definition topic for a detailed explanation of the subject. DITA output formatting may
+    produce a help file, PDF, or other readable catalog for understanding the controlled
+    values.<!-- Su-Laine: I've added _therapist to the values because if you also have
+     novice and expert subcategories for oncologists, physicists, and radiologists you will need to
+     provide unique values for each of them. Using a subject scheme map does not eliminate the need
+     to have a unique attribute value for each audience type. --><!-- Su-Laine: If the OT supports subject scheme maps, then it will do conditional processing
+     differently than if it does not support subject scheme maps. In the example above, say you want
+     to exclude audience="therapist". It the OT is aware of subject scheme maps, then it will also
+     exclude audience="novice." If it is not aware, then audience="novice" will be
+     included. --></p>
+  </section>
+  <!-- <section>
+   <title>Binding controlled values to an attribute</title>
+   <p>The &lt;enumerationdef> element binds the set of controlled values to a particular metadata
+    attribute. For example, the group of users defined in the example is associated with the
+    @audience attribute. </p>
+   <p>An enumeration can specify an empty category without children. In this case, no value is valid
+    for the attribute. </p>
+   <p>An enumeration can also specify an optional default value using &lt;defaultSubject>.</p>
+  </section>
+  <section>
+   <title>Binding multiple categories to a single attribute</title>
+   <p>Multiple categories can be bound to single attribute, such as @otherprops to allow for
+    additional sets of controlled values beyond those allowed by the standard conditional processing
+    attributes.<codeblock>&lt;subjectScheme>
+    &lt;subjectdef keys="users">
+        &lt;subjectdef keys="therapist">
+        &lt;subjectdef keys="oncologist">
+        &lt;subjectdef keys="physicist">
+        &lt;subjectdef keys="radiologist">
+    &lt;/subjectdef>
+    &lt;subjectdef keys="machinetypes" navtitle="Types of machinery">
+         &lt;subjectdef keys="large">
+         &lt;subjectdef keys="small">
+    &lt;/subjectdef>
+    &lt;enumerationdef>
+        &lt;attributedef name="audience"/>
+        &lt;subjectdef keyref="users"/>
+    &lt;/enumerationdef>
+    &lt;enumerationdef>
+        &lt;attributedef name="otherprops">
+        &lt;subjectdef keyref="machinetypes">
+    &lt;/enumerationdef>
+    &lt;/subjectScheme></codeblock></p>
+   <p>When an attribute is bound to multiple enumerations, DITA processing determines exclusion for
+    filtering based on the enumeration category rather than on the attribute. <draft-comment
+     >Su-Laine: Is concerned about the use of a single conditional attribute for multiple meanings
+     because both the map and a processor must be aware of this feature. Could also result in
+     incorrect filtering in cases where two &lt;subjectdef> elements in an &lt;enumerationdef> are
+     two lists of the "same" thing. You might have an organization with many applications developed
+     by different teams. So you might have severallists of applications defined as &lt;subjectdef
+     keys="apps1" navtitle="Team 1 apps"/> and &lt;subjectdef keys="apps2" navtitle="Team 2 apps"/>
+     and &lt;subjectdef keys="apps3" navtitle="Team 3 apps"/> . Propose leaving this out. If not,
+     propose changing the sentence above to ... DITA processors should determine ...." JTH: Su-Laine
+     believes this issue has not been addressed and is missing from DITA 1.3. See Eric's original
+     proposal 12031. "The writer can then supply the mysql and troubleshooting keys in the
+     otherprops attribute to indicate that the content pertains to both the MySQL database and the
+     troubleshooting task: </draft-comment><draft-comment>&lt;task ...> ... &lt;note
+     otherprops="mysql troubleshoot">Please check... is running.&lt;/note> ...
+     &lt;/task></draft-comment></p>
+     </section> -->
+  <section>
+   <title>Validating metadata attributes against a subject scheme</title>
+   <p>After locating the scheme, editors may validate an attribute against the bound enumeration,
+    preventing users from entering misspelled or undefined values. A map editor may validate the
+    audience attribute in a map against the scheme. A processor may check that all values listed for
+    an attribute in a DITAVAL file are bound to the attribute by the scheme before filtering or
+    flagging.</p>
+  </section>
+  <section>
+   <title>Scaling a subject scheme to define a taxonomy</title>
+   <p>A taxonomy differs from a controlled values list primarily in the degree of precision with
+    which the metadata values are defined. A set of controlled values lists is sometimes regarded as
+    the simplest form of taxonomy. Regardless of whether the goal is a simple list of controlled
+    values or a taxonomy:</p>
+   <ul>
+    <li>The same core elements are used (subjectScheme, subjectdef, and schemeref).</li>
+    <li>A category and its subjects can have a binding that enumerates the values of a metadata
+     attribute.</li>
+   </ul>
+   <p>Beyond the core elements and the attribute binding elements, sophisticated taxonomies can take
+    advantage of some optional elements in the scheme. Most of these optional elements make it
+    possible to specify more precise relationships among subjects.</p>
+   <p>The &lt;hasNarrower>, &lt;hasPart>, &lt;hasKind>, &lt;hasInstance>, and &lt;hasRelated>
+    elements specify the kind of relationship in a hierarchy between a container subject and its
+    contained subjects. The following example defines San Francisco as an instance of a city but a
+    geographic part of
+    California.<codeblock>&lt;subjectScheme>
+  &lt;hasInstance>
+    &lt;subjectdef keys="city" navtitle="City">
+       &lt;subjectdef keys="la" navtitle="Los Angeles"/>
+       &lt;subjectdef keys="nyc" navtitle=New York City"/>
+       &lt;subjectdef keys="sf" navtitle="San Francisco">
+    &lt;/subjectdef>
+    &lt;subjectdef keys="state" navtitle="State">
+       &lt;subjectdef keys="ca" navtitle="California"/>
+       &lt;subjectdef keys="ny" navtitle=New York"/>
+    &lt;/subjectdef>
+   &lt;/hasInstance>
+   &lt;hasPart>
+      &lt;subjectdef keys="place" navtitle="Place">
+        &lt;subjectdef keys="ca">
+          &lt;subjectdef keys="la">
+          &lt;subjectdef keys="sf">
+      &lt;/subjectdef>
+      &lt;subjectdef keys="ny">
+         &lt;subjectdef keys="nyc">
+      &lt;/subjectdef>
+    &lt;/hasPart>
+ &lt;/subjectScheme></codeblock></p>
+   <p>Sophisticated tools can use this scheme to associate content about San Francisco with related
+    content about other California places or with related content about other cities (depending on
+    the interests of the current user).</p>
+   <p>The scheme can also define relationships between subjects that are not hierarchical. For
+    instance, cities sometimes have "sister city" relationships. The example scheme could add a
+    subjectRelTable element to define these associative relationships, with a row for each
+    sister-city pair and the two cities in different columns in the row.</p>
+   <p>While users who have access to sophisticated processing tools benefit from defining taxonomies
+    with this level of precision, other users can safely ignore this advanced markup and define
+    taxonomies with hierarchies of subjectdef elements that aren't precise about the kind of
+    relationship between the subjects.</p>
+  </section>
+ </conbody>
+</concept>

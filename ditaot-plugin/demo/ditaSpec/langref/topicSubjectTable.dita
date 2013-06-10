@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topicSubjectTable" xml:lang="en-us">
+<title>topicSubjectTable</title>
+<shortdesc>The &lt;<keyword>topicSubjectTable</keyword>> element is
+a specialized relationship table which allows a map to use relationship
+tables to associate topics with subjects. Tools (such as search tools)
+may use these classifications to retrieve content that is relative
+to a specific subject or combination of subjects.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>topicSubjectTable</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>In a &lt;topicSubjectTable>, the first column is reserved
+for references to content. Subsequent columns are reserved for subjects
+that classify the content, each column supplying the subjects for
+a different category as identified in the header. The table resembles
+a traditional relationship table in which the first column identifies
+the source and the other columns identify the targets, but the relationship
+reflects the subjects covered by the content rather than linking between
+documents. </p><note>In a traditional reltable, topics in any given
+column establish relationships with topics in every other cell of
+the same row. In a &lt;topicSubjectTable>, topics in the first column
+are related to all of the subjects in the row, but no relationship
+is implied between subjects in different columns of the same row.
+Instead, relationships are defined between subjects using a subject
+scheme map (which provides a &lt;subjectRelTable> element for non-hierarchical
+relationships between subjects).</note></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicSubjectTable/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="topicSubjectTable-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicSubjectTable/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="topicSubjectTable-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/reltable classify-d/topicSubjectTable </p></section>
+<example id="example"><title>Example</title><p>The topic subject table
+below classifies topics with goals for retrieval and with operating
+systems for filtering. The map makes use of definitions in a subject
+scheme map, defined separately.</p><fig><title>Subject scheme map</title>
+<codeblock>&lt;subjectScheme>
+    &lt;hasKind>
+        &lt;subjectdef href="goalType.dita" keys="goal">
+            &lt;subjectdef href="performanceGoal.dita" keys="performance"/>
+            &lt;subjectdef href="reliabilityGoal.dita" keys="reliability"/>
+        &lt;/subjectdef>
+        &lt;subjectdef href="operatingSystem.dita" keys="os">
+            &lt;subjectdef href="linuxOS.dita" keys="linux"/>
+            &lt;subjectdef href="unixOS.dita" keys="unix"/>
+            &lt;subjectdef href="windowsOS.dita" keys="windows"/>
+        &lt;/subjectdef>
+    &lt;/hasKind>
+&lt;/subjectScheme></codeblock>
+</fig><fig><title>Topic subject table</title>
+<p>The following &lt;topicSubjectTable> classifies several topics
+according to subjects in the previous map. As with any &lt;topicSubjectTable>,
+the first column is used to specify topics. In this specific example,
+the second column is used to specify a goal, based on the "goal" subject
+in the header. The third column is used to specify an operating system.
+Based on those definitions, the following classifications are made
+by this table:<ul>
+<li>The topics "Configuring cron for efficient startup" and "Allocating
+raw storage" are each classified by the goal of "performance"; in
+addition, they are classified by the operating systems "linux" and
+"unix.</li>
+<li>The topics "Analyzing web logs for service issues" and "Detecting
+denial-of-service attacks" are each classified by the goal of "reliability";
+in addition, they are classified by the operating systems "linux",
+"unix", and "windows".</li>
+<li>No relationship is defined between subjects in the table, meaning
+that this table does not define any relationship between the goal
+of "performance" and the operating systems "linux" or "unix".</li>
+</ul></p>
+<codeblock>&lt;map>
+...
+&lt;topicSubjectTable>
+  &lt;topicSubjectHeader>
+    &lt;topicCell type="task"/>
+    &lt;subjectCell>
+      &lt;topicsubject keyref="goal"/>
+    &lt;/subjectCell>
+    &lt;subjectCell>
+      &lt;topicapply keyref="os"/>
+    &lt;/subjectCell>
+  &lt;/topicSubjectHeader>
+  &lt;topicSubjectRow>
+    &lt;topicCell>
+      &lt;topicref href="webServerStart.dita" navtitle="Configuring cron for efficient startup"/>
+      &lt;topicref href="dbDisk.dita" navtitle="Allocating raw storage"/>
+    &lt;/topicCell>
+    &lt;subjectCell>
+      &lt;topicsubject keyref="performance"/>
+    &lt;/subjectCell>
+    &lt;subjectCell>
+      &lt;topicapply keyref="linux"/>
+      &lt;topicapply keyref="unix"/>
+    &lt;/subjectCell>
+  &lt;/topicSubjectRow>
+  &lt;topicSubjectRow>
+    &lt;topicCell>
+      &lt;topicref href="webLogAnalyze.dita" navtitle="Analyzing web logs for service issues"/>
+      &lt;topicref href="webDenialService.dita" navtitle="Detecting denial-of-service attacks"/>
+    &lt;/topicCell>
+    &lt;subjectCell>
+      &lt;topicsubject keyref="reliability"/>
+    &lt;/subjectCell>
+    &lt;subjectCell>
+      &lt;topicapply keyref="linux"/>
+      &lt;topicapply keyref="unix"/>
+      &lt;topicapply keyref="windows"/>
+    &lt;/subjectCell>
+  &lt;/topicSubjectRow>
+  ...
+&lt;/topicSubjectTable>
+&lt;/map></codeblock>
+<p>A table view of this &lt;topicSubjectTable> might look as follows.
+This is only one of many possible views; to aid in understanding the
+example, the content topics in the first column are displayed using
+only their titles, and related subjects are displayed using only their
+keyref attribute value.</p>
+<simpletable>
+<sthead>
+<stentry><i>task</i></stentry>
+<stentry><i>goal</i></stentry>
+<stentry><i>os</i></stentry>
+</sthead>
+<strow>
+<stentry><lines>Configuring cron for efficient startup
+
+Allocating raw storage</lines></stentry>
+<stentry><lines>performance</lines></stentry>
+<stentry><lines>linux
+unix</lines></stentry>
+</strow>
+<strow>
+<stentry><lines>Analyzing web logs for service issues
+
+Detecting denial-of-service attacks</lines></stentry>
+<stentry><lines>reliability</lines></stentry>
+<stentry><lines>linux
+unix
+windows</lines></stentry>
+</strow>
+</simpletable>
+</fig></example><?Pub Caret -1?>
+<section id="attributes"><title>Attributes</title><simpletable
+id="reltable_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts-no-toc">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000007973?>

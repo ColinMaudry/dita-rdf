@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="navtitle" xml:lang="en-us">
+<title>navtitle</title>
+<shortdesc>The navigation title (&lt;<keyword>navtitle</keyword>&gt;)
+element is one of a set of alternate titles that can be included inside
+the &lt;<keyword>titlealts</keyword>&gt; element. This navigation
+title may differ from the first level heading that shows in the main
+browser window. Use &lt;<keyword>navtitle</keyword>&gt; when the actual
+title of the topic isn't appropriate for use in a table of contents,
+navigation pane, or online content (for example, because the actual
+title is too long). <ph>Beginning with DITA 1.2, the navtitle
+element is also available in the &lt;<keyword>topicmeta</keyword>>
+element in a &lt;<keyword>topicref</keyword>> in a map, and its use
+is preferred over the topicref&apos;s navtitle attribute.</ph></shortdesc><?Pub
+Caret 593?>
+<prolog><metadata>
+<keywords><indexterm>navtitle</indexterm><indexterm>Topic elements<indexterm>navtitle</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>When navtitle is used in a map, it functions
+in the same way as the navtitle attribute; both are used to specify
+a navigation title for the target of the &lt;<keyword>topicref</keyword>>
+element. That is, the title itself will only be used as an actual
+navigation title when the title is locked; the title is locked when
+the closest ancestor topicref element sets or inherits the attribute
+locktitle="yes". If the title is not locked, processing systems will
+typically retrieve the current title from the target topic, looking
+first for a navtitle element and second for the general title.</p><p>When
+both a navtitle element and a navtitle attribute are specified, the
+navtitle element should be used.</p><p>Because the navtitle element
+is available within topicmeta, and topicmeta is used in many different
+contexts, it is possible that navtitle can be specified in contexts
+where a navigation title does not make sense (for example, on the
+topicgroup element). In those situations, the navtitle element has
+no defined purpose.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-navtitle/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="navtitle-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-navtitle/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="navtitle-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/navtitle </p></section>
+<example id="example"><title>Example</title><fig><title>Navtitle sample
+in a topic</title>
+<codeblock>&lt;task id=progexample">
+ &lt;title>Publishing a DITA information set in PDF&lt;/title>
+  &lt;titlealts>&lt;navtitle>Publishing in PDF&lt;/navtitle>&lt;/titlealts>
+ &lt;taskbody> . . . &lt;/taskbody>
+&lt;/task></codeblock>
+</fig><fig><title>Navtitle samples in a map</title>
+<p>In this sample, the first title is not locked, and will generally
+be replaced with a title retrieved from a.dita. The second title is
+locked, and will be displayed when this map is used as a basis for
+navigation.</p>
+<codeblock>&lt;map xml:lang="en">
+  &lt;title>This is a sample map&lt;/title>
+  &lt;topicref href="a.dita">
+    &lt;topicmeta>
+      &lt;navtitle>Title of A&lt;/navtitle>
+    &lt;/topicmeta>
+  &lt;/topicref>
+  &lt;topicref href="b.dita" locktitle="yes">
+    &lt;topicmeta>
+      &lt;navtitle>Short Title for B&lt;/navtitle>
+    &lt;/topicmeta>
+  &lt;/topicref>
+&lt;/map></codeblock>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="navtitle_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004946?>

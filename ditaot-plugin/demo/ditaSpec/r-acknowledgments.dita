@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="r-acknowledgments" outputclass="appendix" xml:lang="en-us">
+<title>Acknowledgments</title>
+<shortdesc>(Non-normative) Many individuals participated in the creation
+of this specification and are gratefully acknowledged.</shortdesc>
+<refbody>
+<section>       <sl>
+<sli>Paul Antonov</sli>
+<sli>Robert Anderson, IBM</sli>
+<sli>Don Day, Individual Member</sli>
+<sli>Stanley Doherty, Individual Member</sli>
+<sli>Jim Early, Flatirons Solutions Corporation</sli>
+<sli rev="public-review-1">Kristen James Eberlein, SDL International</sli><?Pub Caret -1?>
+<sli>Yas Etessam, JustSystems</sli>
+<sli>Rob Frankland, Individual Member</sli>
+<sli>Paul Grosso, PTC</sli>
+<sli>JoAnn Hackos, Comtech Services, Inc.</sli>
+<sli>Richard Hamilton, Individual Member</sli>
+<sli>David Helfinstine, PTC</sli>
+<sli>Erik Hennum, IBM</sli>
+<sli>Alan Houser, Group Wellesley, Inc.</sli>
+<sli>John Hunt, IBM</sli>
+<sli>Gershon Joseph, Cisco Systems, Inc.</sli>
+<sli>Sowmya Kannan, Oracle Corporation</sli>
+<sli>Eliot Kimber, Really Strategies, Inc.</sli>
+<sli>Christian Kravogel, SeicoDyne GmbH</sli>
+<sli>Bruce Nevin, Cisco Systems, Inc.</sli>
+<sli>Jeff Ogden, PTC</sli>
+<sli>Seth Park, Freescale Semiconductor, Inc.</sli>
+<sli>Deborah Pickett, Individual Member</sli>
+<sli>Paul Prescod, JustSystems</sli>
+<sli>Michael Priestley, IBM</sli>
+<sli>Zarella Rendon, PTC</sli>
+<sli>Tony Self, Hyperwrite Pty. Ltd.</sli>
+<sli>Eric Sirois, IBM</sli>
+<sli>Dana Spradley, Oracle Corporation</sli>
+<sli>Su-Laine Yeo, JustSystems</sli>
+</sl>     </section>
+</refbody>
+</reference>
+<?Pub *0000001714?>

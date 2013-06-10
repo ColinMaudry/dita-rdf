@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<?Pub Sty _display FontColor="red"?>
+<map title="DITA 1.2 Architectural Specification: Base Version"
+xml:lang="en-us">
+<!-- <topicref href="peer-keydefs-base_elements.ditamap" format="ditamap"/>
+ <topicref href="peer-keydefs-technicalContent_elements.ditamap" format="ditamap"/>
+ <topicref href="peer-keydefs-learningTraining.ditamap" format="ditamap"/>-->
+<?Pub Caret -2?>
+<topicref format="ditamap" href="introduction_to_dita.ditamap"
+navtitle="Introduction to DITA"></topicref>
+<topicref format="ditamap" href="ditamarkup.ditamap"
+navtitle="DITA markup"></topicref>
+<topicref format="ditamap" href="processing.ditamap"
+navtitle="Processing"></topicref>
+<topicref collection-type="sequence" format="ditamap"
+href="specialization-and-custom-doctypes.ditamap"
+navtitle="Specialization, configuration, and extension"></topicref>
+</map>
+<?Pub *0000000998?>

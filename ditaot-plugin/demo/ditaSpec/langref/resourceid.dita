@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="resourceid" xml:lang="en-us">
+<title>resourceid</title>
+<shortdesc>The &lt;<keyword>resourceid</keyword>> element
+provides an identifier for   applications that require them in a particular
+format, when the normal id attribute of the topic   cannot be used.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>resourceid</indexterm><indexterm>Prolog elements<indexterm>resourceid</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>    <p>Each resourceid entry should be unique. While DITA
+only requires IDs to be unique within a     single topic or map, applications
+using the resourceid will generally require IDs to be     universally
+unique or unique within a given collection of topics.</p>   </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-resourceid/contains"
+id="contains" otherprops="contains">    <title>Contains</title>  
+ <p>The content model of this element may differ based on where it
+is used. Content model     information is located here: <xref
+keyref="resourceid-contains"></xref></p>   </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-resourceid/containedby"
+id="containedby" otherprops="containedby">    <title>Contained By</title> 
+  <p>The parents of this element may differ based on where it is used.
+Content model information is     located here: <xref
+keyref="resourceid-contained-by"></xref></p>   </section>
+<section id="inheritance" otherprops="inheritance">    <title>Inheritance</title> 
+  <p>- topic/resourceid </p>   </section>
+<example id="example">    <title>Example</title>    <pre>&lt;prolog>
+  &lt;resourceid id="sqlid00375" appname="dbaccess"/&gt;
+&lt;/prolog></pre><?Pub Caret -1?>   </example>
+<section id="attributes">    <title>Attributes</title>    <simpletable
+id="resourceid_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-resourceid">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/appname">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>   </section>
+</refbody>
+</reference>
+<?Pub *0000003562?>

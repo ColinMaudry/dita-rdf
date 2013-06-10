@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lomInteractivityType" xml:lang="en-us">
+<title>lomInteractivityType</title>
+<shortdesc>The &lt;<keyword>lomInteractivityType</keyword>&gt; provides
+learning metadata about the the type of interactivity supported by
+the resource. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lomInteractivityType</indexterm><indexterm>learning
+and training elements<indexterm>lomInteractivityType</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lomInteractivityType/contains" otherprops="contains"> 			<title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="lomInteractivityType-contains"></xref> 			</p> 		</section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lomInteractivityType/containedby" otherprops="containedby"> 			<title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="lomInteractivityType-contained-by"></xref> 			</p> 		</section>
+<section id="inheritance" otherprops="inheritance"> 			<title>Inheritance</title><p>+
+topic/data learningmeta-d/lomInteractivityType <?Pub Caret?></p> 		</section>
+<example id="example"><title>Example</title><p>See <xref
+href="lcLom.dita#lcLom/example">lcLom</xref>.</p> </example>
+<section id="attributes"> <title>Attributes</title>  <simpletable
+id="lomInteractivityType_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required</stentry>
+</sthead>
+<strow>
+<stentry>name</stentry>
+<stentry>The name used to indicate this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>lomInteractivityType</stentry>
+<stentry></stentry>
+</strow>
+<strow>
+<stentry>datatype</stentry>
+<stentry>The datatype for this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry></stentry>
+<stentry>no</stentry>
+</strow>
+<strow>
+<stentry>value</stentry>
+<stentry>The interactivity type for this content. See <xref
+href="../common/ditauseconreftarget.dita">this topic</xref> for more information
+on the -dita-use-conref-target value.</stentry>
+<stentry>(Active |Expositive |Mixed |Undefined | -dita-use-conref-target)</stentry>
+<stentry> </stentry>
+<stentry>yes</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>  </section>
+</refbody>
+</reference>

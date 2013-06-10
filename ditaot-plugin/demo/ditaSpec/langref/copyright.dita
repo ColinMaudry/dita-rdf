@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="copyright" xml:lang="en-us">
+<title>copyright</title>
+<shortdesc>The &lt;<keyword>copyright</keyword>> element specifies
+legal ownership of the content.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>copyright</indexterm><indexterm>Prolog elements<indexterm>copyright</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>       <p>The &lt;<keyword>copyright</keyword>> element is
+used for a single copyright entry. It includes the copyright years
+and the copyright holder. Multiple &lt;<keyword>copyright</keyword>>
+statements are allowed.</p><p>This element is equivalent to the Rights
+element in Dublin Core.</p><?Pub Caret -2?>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-copyright/contains"
+id="contains" otherprops="contains">       <title>Contains</title> 
+     <p>The content model of this element may differ based on where
+it is used. Content model         information is located here: <xref
+keyref="copyright-contains"></xref></p>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-copyright/containedby"
+id="containedby" otherprops="containedby">       <title>Contained
+By</title>       <p>The parents of this element may differ based on
+where it is used. Content model information         is located here: <xref
+keyref="copyright-contained-by"></xref></p>     </section>
+<section id="inheritance" otherprops="inheritance">       <title>Inheritance</title> 
+     <p>- topic/copyright </p>     </section>
+<example id="example">       <title>Example</title>       <codeblock>&lt;prolog&gt;
+ <b>&lt;copyright&gt;</b>
+  &lt;copyryear year="2001-04-12"&gt;&lt;/copyryear&gt;
+  &lt;copyrholder&gt;IBM&lt;/copyrholder&gt;
+ <b>&lt;/copyright&gt;</b>
+ <b>&lt;copyright type=secondary&gt;</b>
+  &lt;copyryear year="2002-03-03&gt;&lt;/copyryear&gt;
+  &lt;copyrholder&gt;Schweetones Publishing, Inc.&lt;/copyrholder&gt;
+ <b>&lt;/copyright&gt;</b>
+&lt;/prolog&gt;</codeblock>     </example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="copyright_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-copyright">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>
+<?Pub *0000003292?>

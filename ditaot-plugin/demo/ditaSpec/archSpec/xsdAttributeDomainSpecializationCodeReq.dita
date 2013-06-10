@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="schemaattdomain" xml:lang="en-us">
+  <title>Attribute domain coding requirements<?Pub Caret?></title>
+  <conbody>
+    <section id="section_0223BE7C47334E7DAA29C8381A39547F">
+      <p>An attribute domain <term>must</term> consist of one file, whose name consists of the module name plus Domain plus the <filepath>xsd</filepath> extension. For example: newAttDomain.xsd for an attribute named "new". The file must have a single attribute group definition that contains the definition of the attribute itself, where the attribute group is named <codeph><varname>attname</varname>Att-d-attribute</codeph>. </p>
+      <p
+        rev="public-review-1">For example, for an attribute named "new":<codeblock>&lt;xs:attributeGroup name="newAtt-d-attribute"&gt;
+  &lt;xs:attribute name="new" type="xs:string"/&gt;
+&lt;/xs:attributeGroup&gt;</codeblock></p>
+      <p
+        rev="public-review-1">The attribute domain must be reflected in a shell document type XSD that integrates it. See <xref
+        href="domainsatt.dita#domainsatt"
+        format="dita"/> for details of attribute domain @domains values. </p>
+      <p
+        rev="public-review-1">For example, if the attribute named "new" is a specialization of the @props attribute, the @domains value would be "<codeph>a(props new)</codeph>".</p>
+    </section>
+    <section id="section_70ECA7107B644C4BBA3606FC6F65F444"> </section>
+  </conbody>
+</concept>
+<?Pub *0000001758?>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="glossAlt" xml:lang="en-us">
+<title>glossAlt</title>
+<shortdesc>The &lt;glossAlt> element contains a variant term for the
+preferred term. The variant should have the same meaning as the term
+in the &lt;glossterm> element; the variant is simply another way to
+refer to the same term. There may be many ways to refer to a term;
+each variant is placed in its own &lt;glossAlt> element. The &lt;glossUsage>
+element may be used within &lt;glossAlt> to indicate when use of the
+alternate term is appropriate.</shortdesc><?Pub Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>glossAlt</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><note id="translation">Any list of alternative terms is,
+of course, specific to the language, so translation of a glossentry
+topic may result in empty elements within a &lt;<keyword>glossAlt</keyword>>
+container.</note></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-glossAlt/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="glossAlt-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-glossAlt/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="glossAlt-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/section concept/section glossentry/glossAlt </p></section>
+<example conref="glossentry.dita#glossentry/example" id="example"></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="section_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002859?>

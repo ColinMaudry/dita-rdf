@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lomStructure" xml:lang="en-us">
+	<title>lomStructure</title>
+	<shortdesc>The &lt;<keyword>lomStructure</keyword>&gt; provides learning metadata about the underlying organizational structure of the resource.
+</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lomStructure</indexterm><indexterm>learning and training elements<indexterm>lomStructure</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lomStructure/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lomStructure-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lomStructure/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lomStructure-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/data learning-d/lomStructure </p>
+</section>
+
+<example id="example"><title>Example</title>
+<p>See <xref href="lcLom.dita#lcLom/example">lcLom</xref>.</p>
+</example>
+
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lomStructure_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow>
+<stentry>name</stentry>
+<stentry>The name used to indicate this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>lomStructure</stentry>
+<stentry></stentry>
+</strow>
+<strow>
+<stentry>datatype</stentry>
+<stentry>The datatype for this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry></stentry>
+<stentry>no</stentry>
+</strow>
+<strow>
+<stentry>value</stentry>
+<stentry>The learning structure for this content. See <xref
+href="../common/ditauseconreftarget.dita">this topic</xref> for more information
+on the -dita-use-conref-target value.</stentry>
+<stentry>(Collection|
+             Mixed|
+             Linear|
+             Hierarchical|
+             Networked|
+             Branched|
+             Parceled|
+             Atomic|
+             -dita-use-conref-target)</stentry>
+<stentry>   </stentry>
+<stentry>yes</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE dita PUBLIC "-//OASIS//DTD DITA Composite//EN"
+ "ditabase.dtd">
+<?Pub Inc?>
+<dita>
+<concept id="reuse_file" xml:lang="en-us">
+<title>Reuse file</title>
+<shortdesc>This file contains elements used by multiple files in the
+DITA 1.2 specification.</shortdesc>
+<conbody>
+<lines><!--Short description for <anchor>: Used in anchor.dita and dita_spec_23_mapstruct.dita--><ph
+id="anchor_shortdesc">The &lt;<keyword>anchor</keyword>> element provides an integration point that another map can <ph
+rev="1.2.3">reference</ph> in order to insert its navigation into the current navigation tree. For those familiar with Eclipse help systems, this serves the same purpose as the &lt;anchor> element in that system. It <term>may not</term><?Pub
+Caret?> be supported for all output formats.</ph><!--Short description for <navref>: Used in navref.dita and dita_spec_23_mapstruct.dita--><ph
+id="navtitle_shortdesc">The &lt;<keyword>navref</keyword>> element represents a pointer to another map which should be preserved as a transcluding link rather than resolved. Output formats that support such linking will integrate the referenced resource when displaying the referencing map to an end user. </ph></lines>
+<!--Content used in <example> element in anchor.dita and dita_23_mapstruct.dita-->
+<p id="anchor">In this example, an anchor is defined with an ID of
+"a1". <codeblock>&lt;map>
+  &lt;title&gt;MyComponent tasks&lt;/title&gt;
+  &lt;topicref navtitle="Start here" href="start.dita" toc="yes">
+    &lt;navref mapref="othermap2.ditamap"/>
+    &lt;navref mapref="othermap3.ditamap"/>
+    &lt;anchor id="a1"/>
+  &lt;/topicref>
+&lt;/map></codeblock></p>
+<p id="anchoref">The id on &lt;anchor&gt; can be referenced by the
+anchorref attribute on another map's &lt;map&gt; element. For example,
+the map to be integrated at that spot would be defined as follows.<codeblock>&lt;map anchorref="a1"&gt;
+  &lt;title&gt;This map is pulled into the MyComponent task map&lt;/title&gt;
+  ...
+&lt;/map&gt;</codeblock></p>
+</conbody>
+</concept>
+</dita>
+<?Pub *0000002134?>

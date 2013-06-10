@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="shortcut" xml:lang="en-us">
+<title>shortcut</title>
+<shortdesc>The &lt;<keyword>shortcut</keyword>&gt; element identifies
+a keyboard shortcut for a menu or window action. This element is part
+of the DITA user interface domain, a special set of DITA elements
+designed to document user interface tasks, concepts and reference
+information.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>shortcut</indexterm><indexterm>User interface
+elements<indexterm>shortcut</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-shortcut/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="shortcut-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-shortcut/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="shortcut-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword ui-d/shortcut </p></section>
+<example id="example"><title>Example</title>This example:<codeblock>&lt;menucascade&gt;
+ &lt;uicontrol&gt;Start&lt;/uicontrol&gt;
+ &lt;uicontrol&gt;<b>&lt;shortcut&gt;</b>P<b>&lt;/shortcut&gt;</b>rograms&lt;/uicontrol&gt;
+&lt;/menucascade&gt;</codeblock>may produce the following result: <menucascade>
+<uicontrol>Start</uicontrol><uicontrol><shortcut>P</shortcut>rograms</uicontrol>
+</menucascade></example><?Pub Caret 174?>
+<section id="attributes"><title>Attributes</title><simpletable
+id="shortcut_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002833?>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference
+  id="tgroup"
+  xml:lang="en-us">
+  <title>tgroup</title>
+  <shortdesc>The &lt;<keyword>tgroup</keyword>&gt; element in a table contains column, row,
+    spanning, header, and the body (&lt;<keyword>tbody</keyword>&gt;) of the table.<draft-comment
+      author="WEK">Deleted " and footer specifications", since DITA uses the OASIS interchange
+      model, which doesn't include tfoot.</draft-comment></shortdesc>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>tgroup</indexterm><indexterm>Table elements<indexterm
+          >tgroup</indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <refbody><section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-tgroup/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="tgroup-contains"/></p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-tgroup/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="tgroup-contained-by"/></p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>- topic/tgroup </p>
+    </section><example
+      id="example"><title>Example</title>See <xref
+        href="table.dita"/>.</example>
+    <section
+      id="attributes">
+      <title>Attributes</title>
+      <simpletable
+        id="tgroup_attr"
+        relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/cols">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/colsep">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/rowsep">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/align">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section></refbody>
+</reference>

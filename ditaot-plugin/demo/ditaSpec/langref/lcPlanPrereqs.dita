@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcPlanPrereqs" xml:lang="en-us">
+	<title>lcPlanPrereqs</title>
+	<shortdesc>&lt;<keyword>lcPlanPrereqs</keyword>&gt; provides the knowledge, skills, abilities, courses and other activities learners must have satisfied to take the instruction.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcPlanPrereqs</indexterm><indexterm>learning and training elements<indexterm>lcPlanPrereqs</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcPlanPrereqs/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcPlanPrereqs-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcPlanPrereqs/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcPlanPrereqs-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title>
+<p>- topic/fig learningBase/fig learningPlan/lcPlanPrereqs </p>
+</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+...
+  &lt;lcPlanPrereqs&gt;
+    &lt;title&gt;Prerequisites&lt;/title&gt;
+    &lt;p&gt;This course assumes you have mastery of 
+      JWG 101 (Fundamentals of Joint Workgroups) or the 
+      equivalent.&lt;/p&gt;
+    &lt;/lcPlanPrereqs&gt;
+...
+  </codeblock>
+</example>
+
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcPlanPrereqs_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

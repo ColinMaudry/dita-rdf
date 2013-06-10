@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="source" xml:lang="en-us">
+<title>source</title>
+<shortdesc>The &lt;<keyword>source</keyword>> element identifies a
+resource from which the present   topic is derived, either completely
+or in part.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>source</indexterm><indexterm>Prolog elements<indexterm>source</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>    <p>The &lt;<keyword>source</keyword>> element contains
+a description of the resource.     Alternatively, the href attribute
+is used to reference a description of the resource. It is     implementation-dependent
+what it means when the element has both content and an href attribute
+    value.</p>    <p>This element is equivalent to the Source element
+in Dublin Core.</p>   </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-source/contains"
+id="contains" otherprops="contains">    <title>Contains</title>  
+ <p>The content model of this element may differ based on where it
+is used. Content model     information is located here: <xref
+keyref="source-contains"></xref></p>   </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-source/containedby"
+id="containedby" otherprops="containedby">    <title>Contained By</title> 
+  <p>The parents of this element may differ based on where it is used.
+Content model information is     located here: <xref
+keyref="source-contained-by"></xref></p>   </section>
+<section id="inheritance" otherprops="inheritance">    <title>Inheritance</title> 
+  <p>- topic/source </p>   </section>
+<example id="example">    <title>Example</title>    <pre>&lt;prolog&gt;
+ <b>&lt;source&gt;</b>Somewhere, someplace<b>&lt;/source&gt;</b>
+&lt;/prolog&gt;</pre><?Pub Caret 50?>   </example>
+<section id="attributes">    <title>Attributes</title>    <simpletable
+id="source_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-source">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>   </section>
+</refbody>
+</reference>
+<?Pub *0000003739?>

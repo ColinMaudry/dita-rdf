@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topicsetref" xml:lang="en-us">
+<title>topicsetref</title>
+<shortdesc>The &lt;topicsetref> element references a &lt;topicset>
+element. The referenced &lt;topicset> element can be defined in the
+current map or in another map.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>topicsetref</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>When possible, applications should treat the referenced &lt;topicset>
+as an independent unit that always retains its identity. For example,
+an application that renders DITA for a dynamic navigation platform
+may generate a reusable navigation structure for each &lt;topicset>,
+and each &lt;topicsetref> is retained as a reference to that structure.
+This differs slightly from the processing of the conref attribute,
+which results in a literal copy of the referenced content.</p><p>For
+situations that do not support reusing a topic set as an independent
+unit, such as a rendered PDF, applications may resolve the &lt;topicsetref>
+element in a manner similar to other &lt;topicref> elements that have
+the format attribute set to "ditamap". This may result in a new instance
+of the &lt;topicset> element.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicsetref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="topicsetref-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicsetref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="topicsetref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/topicref mapgroup-d/topicsetref </p></section>
+<example id="example"><title>Example</title><fig><title>Reusable chunk
+of information in a ditamap</title>
+<p>The following &lt;topicset> groups several topics that together
+make up an overview of SQL.</p>
+<codeblock>&lt;topicset id="sqlbasics" href="sqlOverview.dita">
+  &lt;topicref href="sqlSelection.dita"/>
+  &lt;topicref href="sqlJoin.dita"/>
+  &lt;topicref href="sqlFilter.dita"/>
+  &lt;!-- ... -->
+&lt;/topicset></codeblock>
+</fig><fig><title>&lt;topicsetref> element that reuses the chunk from
+within the same map</title>
+<p>In this case, another map includes the entire set of SQL Basics
+together with content related to programming with JDBC.</p>
+<codeblock>&lt;topichead navtitle="Mastering JDBC">
+  <b>&lt;topicsetref href="#sqlbasics"/></b>
+  &lt;topicref href="jdbcPrepare.dita"/>
+  &lt;!-- ... -->
+&lt;/topichead></codeblock>
+</fig><fig><title>Result of the reuse</title>
+<p>A reader of the JDBC information will see the content integrated
+as a single unit.</p><?Pub Caret -1?>
+<codeblock>&lt;topichead navtitle="Mastering JDBC">
+  &lt;topicset id="sqlbasics" href="sqlOverview.dita">
+    &lt;topicref href="sqlSelection.dita"/>
+    &lt;topicref href="sqlJoin.dita"/>
+    &lt;topicref href="sqlFilter.dita"/>
+    &lt;!-- ... -->
+  &lt;/topicset>
+  &lt;topicref href="jdbcPrepare.dita"/>
+  &lt;!-- ... -->
+&lt;/topichead></codeblock>
+</fig></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicsetref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/collection-type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/processing-role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-topicsetref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/locktitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/format-topicsetref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/linking">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/toc">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/print">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/search">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/chunk">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000007279?>

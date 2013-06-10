@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Key-based addressing">
+    <topicref navtitle="Key-based addressing" href="key-based_addressing.dita" type="concept"
+        collection-type="sequence">
+        <topicref navtitle="Overview of keys" href="overview_of_keys.dita" type="concept"/>
+        <topicref navtitle="Using keys to address DITA elements"
+            href="using_keys_to_address_dita_elements.dita" type="concept"/>
+        <topicref navtitle="Processing key references" href="processing_key_references.dita"
+            type="concept"/>
+        <topicref navtitle="Examples of keys" href="examples_of_keys.dita" type="concept"/>
+    </topicref>
+</map>

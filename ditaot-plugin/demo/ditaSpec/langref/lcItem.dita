@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcItem" xml:lang="en-us">
+<title>lcItem</title>
+<shortdesc>The &lt;<keyword>lcItem</keyword>&gt; element in an assessment
+interaction provides the content for an item that matches the match
+item in a match table. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lcItem</indexterm><indexterm>learning and training
+elements<indexterm>lcItem</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcItem/contains" otherprops="contains"> 			<title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="lcItem-contains"></xref> 			</p> 		</section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcItem/containedby" otherprops="containedby"> 			<title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="lcItem-contained-by"></xref> 			</p> 		</section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+ topic/stentry learningInteractionBase-d/stentry learning-d/lcItem </p> 		</section>
+<example conref="lcMatchTable.dita#lcMatchTable/example" id="example"></example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInteractions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

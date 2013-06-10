@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="constraintsDomainDesignPattern-dtd" xml:lang="en-us">
+<title>Constraint module DTD coding requirements </title>
+<prolog>
+<author>W. Eliot Kimber</author>
+</prolog>
+<conbody>
+<section><title>Requirements for structural constraint modules</title><p>A
+structural constraint module defines the constraints for exactly one
+map or topic element         type.</p><p>Constraint modules <term>should</term> be
+named "<varname>qualifier</varname><varname>tagname</varname>Constraints.mod",
+where <varname>qualifier</varname> is specific to the         constraints
+module and characterizes it, e.g. "strict", "requiredTitle", etc.
+and <varname>tagname</varname> is the name of the element type to
+which the constraints apply, e.g.         "topic", "p", "myNewTopicType",
+etc.</p><p>Within the constraint module there <term>must</term> be
+a declaration for a general         text entity named "<varname>tagname</varname>-constraints",
+where <varname>tagname</varname>         is the name of the element
+type to which the constraints apply. The replacement text for the
+        entity <term>must</term> be of the form "(<varname>tagname</varname> 
+       <varname>qualifier</varname><varname>Tagname</varname>-c)",
+where <varname>tagname</varname>         is the name of the element
+type to which the constraints apply, <varname>qualifier</varname> 
+       is as for the module filename (e.g., "strict"), and <varname>Tagname</varname> is
+the         element type name with an initial capital (e.g. "Topic").
+The literal "-c" indicates that         the name is the name of a
+constraints domain. There <term>must</term> also be a         declaration
+of the %<varname>tagname</varname>.content parameter entity that defines
+the         constrained content model. For         example:<codeblock>&lt;!ENTITY  topic-constraints  "(topic strictTopic-c)">
+&lt;!ENTITY % topic.content 
+  "((%title;), 
+    (%titlealts;)?, 
+    (%shortdesc;|
+     %abstract;), 
+    (%prolog;)?, 
+    (%body;)?, 
+    (%topic-info-types;)*)"
+></codeblock></p><p>In this example, the shortdesc-or-abstract choice,
+which is optional in the base &lt;topic>         content model, is
+required, defining a more-constrained content model.</p></section>
+<section><title>Requirements for domain constraint modules</title><p>A
+domain constraint module defines the constraints for exactly one element
+domain         module.</p><p>Domain constraint modules <term>should</term> be
+named "<varname>qualifier</varname><varname>domain</varname>DomainConstraints.mod",
+where <varname>qualifier</varname> is specific to the constraints
+module and characterizes it, e.g.         "strict", "requiredTitle",
+etc. and <varname>domain</varname> is the name of the domain to  
+      which the constraints apply, e.g. "hi-d", "pr-d", "mydomain-d",
+etc.</p><p>Within the constraint module there <term>must</term> be
+a declaration for a general         text entity named "<varname>tagname</varname>-constraints",
+where <varname>tagname</varname>         is the name of the element
+type to which the constraints apply. The replacement text for the
+        entity <term>must</term> be of the form "(<varname>tagname</varname> 
+       <varname>qualifier</varname><varname>Tagname</varname>-c)",
+where <varname>tagname</varname>         is the name of the element
+type to which the constraints apply, <varname>qualifier</varname> 
+       is as for the module filename (e.g., "strict"), and <varname>Tagname</varname> is
+the         element type name with an initial capital (e.g. "Topic").
+The literal "-c" indicates that         the name is the name of a
+constraints domain. There <term>must</term> also be a         declaration
+of the %<varname>tagname</varname>.content parameter entity that defines
+the         constrained content model.</p><p>For         example:<codeblock>&lt;!ENTITY % basicHighlight-c-ph  "b | i">
+
+&lt;!ENTITY   basicHighlight-c-att   "(topic hi-d basicHighlight-c)"></codeblock></p><p>In
+this example, the set of highlight domain elements has been reduced
+to just &lt;b> and         &lt;i>.</p></section>
+<section><title>Requirements for shell document types</title><p>Information
+on how to incorporate a constraint module into a DTD document type
+shell can be found in <xref href="shell-dtd-coding-reqs.dita"></xref>.</p><?Pub
+Caret -1?></section>
+</conbody>
+</concept>
+<?Pub *0000004606?>

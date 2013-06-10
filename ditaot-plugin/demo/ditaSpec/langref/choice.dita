@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="choice" xml:lang="en-us"><title>choice</title><shortdesc>Each &lt;<keyword>choice</keyword>&gt; element describes one way
+that the user could accomplish the current step.</shortdesc><prolog><metadata><keywords><indexterm>choice</indexterm><indexterm>Task elements<indexterm>choice</indexterm></indexterm></keywords></metadata></prolog><refbody><section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-choice/contains" otherprops="contains"><title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="choice-contains"/></p></section><section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-choice/containedby" otherprops="containedby"><title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="choice-contained-by"/></p></section><section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>- topic/li task/choice </p></section><example id="example"><title>Example</title><codeblock xml:space="preserve">&lt;step&gt;&lt;cmd&gt;Choose a server.&lt;/cmd&gt;
+  &lt;choices&gt;
+    <b>&lt;choice&gt;</b>If you have a remote server you want to test on, type the
+IP address or hostname of the server here.<b>&lt;/choice&gt;</b>
+    <b>&lt;choice&gt;</b>If you want to do local testing, just type localhost.<b>&lt;/choice&gt;</b>
+  &lt;/choices&gt;
+&lt;/step&gt;</codeblock></example><section id="attributes"><title>Attributes</title><simpletable id="choice_attr" relcolwidth="2* 3* 1* 1* 1*"><sthead><stentry>Name</stentry><stentry>Description</stentry><stentry>Data Type</stentry><stentry>Default Value</stentry><stentry>Required?</stentry></sthead><strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts"><stentry/><stentry/><stentry/><stentry/><stentry/></strow><strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts"><stentry/><stentry/><stentry/><stentry/><stentry/></strow><strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout"><stentry/><stentry/><stentry/><stentry/><stentry/></strow></simpletable></section></refbody></reference>

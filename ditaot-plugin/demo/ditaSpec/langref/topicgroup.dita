@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topicgroup" xml:lang="en-us">
+<title>topicgroup</title>
+<shortdesc>The &lt;<keyword>topicgroup</keyword>&gt; element groups &lt;topicref>
+elements for common treatment without affecting the structural hierarchy
+of the map, as opposed to nesting &lt;<keyword>topicref</keyword>&gt;
+elements, which does imply a structural hierarchy. The &lt;topicgroup>
+element can provide linking relationships and shared, inherited attributes
+to the set of elements that it contains without affecting the resulting
+table of contents or navigation.</shortdesc><?Pub Caret 0?>
+<prolog><metadata>
+<keywords><indexterm>topicgroup</indexterm><indexterm>Mapgroup elements<indexterm>topicgroup</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>Beginning with DITA 1.2, you are able to specify
+a &lt;navtitle> element within the &lt;topicmeta> element inside of
+a &lt;topicgroup>. The &lt;topicgroup> element is meant as a non-titled
+grouping element, so adding a &lt;navtitle> element to the &lt;topicgroup>
+element has no defined purpose, and processors must ignore the title.
+Processors may (but need not) issue a message when ignoring the title.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicgroup/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="topicgroup-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topicgroup/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="topicgroup-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/topicref mapgroup-d/topicgroup </p></section>
+<example id="example"><title>Example</title><p>Each &lt;topicref>
+element in the following example inherits the audience and linking
+attributes. In this way the common attributes are set for the entire
+group of &lt;topicref> elements without affecting the navigation hierarchy.</p><codeblock
+xml:space="preserve">&lt;topicgroup audience="novice" linking="none"&gt;
+  &lt;topicref href="this.dita"/&gt;
+  &lt;topicref href="that.dita"/&gt;
+  &lt;topicref href="theother.dita"/&gt;
+&lt;/topicgroup&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="topicgroup_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003771?>

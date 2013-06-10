@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcSequence" xml:lang="en-us">
+	<title>lcSequence</title>
+	<shortdesc>The &lt;<keyword>lcSequence</keyword>&gt; element in an assessment interaction provides the position of a sequence option in a sequence. </shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcSequence</indexterm><indexterm>learning and training elements<indexterm>lcSequence</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcSequence/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcSequence-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcSequence/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcSequence-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/data learningInteractionBase-d/data learning-d/lcSequence </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+      &lt;lcSequencing id="sequencing">
+        &lt;title>Sequencing City Populations in the U.S.&lt;/title>
+        &lt;lcQuestion>Order the following U.S. cities according to population, from
+          largest to smallest.&lt;/lcQuestion>
+        &lt;lcSequenceOptionGroup>
+          &lt;lcSequenceOption>
+            &lt;lcAnswerContent>Portland, Oregon&lt;/lcAnswerContent>
+            &lt;lcSequence name="lcSequence" value="2"/>
+          &lt;/lcSequenceOption>
+          &lt;lcSequenceOption>
+            &lt;lcAnswerContent>Chicago, Illinois&lt;/lcAnswerContent>
+            &lt;lcSequence name="lcSequence" value="1"/>
+          &lt;/lcSequenceOption>
+          &lt;lcSequenceOption>
+            &lt;lcAnswerContent>Portland, Maine&lt;/lcAnswerContent>
+            &lt;lcSequence name="lcSequence" value="4"/>
+          &lt;/lcSequenceOption>
+          &lt;lcSequenceOption>
+            &lt;lcAnswerContent>Syracuse, New York&lt;/lcAnswerContent>
+            &lt;lcSequence name="lcSequence" value="3"/>
+          &lt;/lcSequenceOption>
+        &lt;/lcSequenceOptionGroup>
+        &lt;lcFeedbackIncorrect>No, try again, please.     &lt;/lcFeedbackIncorrect>
+        &lt;lcFeedbackCorrect>Very good.&lt;/lcFeedbackCorrect>
+      &lt;/lcSequencing>
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcSequence_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow>
+<stentry>name</stentry>
+<stentry>The name used to indicate this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>lcSequence</stentry>
+<stentry>Required</stentry>
+</strow>
+<strow>
+<stentry>datatype</stentry>
+<stentry>The datatype for this data.</stentry>
+<stentry>CDATA</stentry>
+<stentry>Use numbers for sequence.</stentry>
+<stentry>Required</stentry>
+</strow>
+<strow>
+<stentry>value</stentry>
+<stentry>The position of an option in a sequence of options.</stentry>
+<stentry>PCDATA</stentry>
+<stentry>Use a number.</stentry>
+<stentry>Required</stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

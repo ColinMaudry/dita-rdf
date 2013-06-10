@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="bookchangehistory" xml:lang="en-us">
+<title>bookchangehistory</title>
+<shortdesc>The &lt;bookchangehistory&gt; element contains information
+about the history of the book's creation and publishing lifecycle,
+including who wrote, reviewed, edited, and tested the book. It also
+specifies when these events took place. </shortdesc><?Pub Caret 128?>
+<prolog><metadata>
+<keywords><indexterm>Bookmap elements<indexterm>bookchangehistory</indexterm></indexterm>
+<indexterm>bookchangehistory</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-bookchangehistory/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="bookchangehistory-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-bookchangehistory/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="bookchangehistory-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/data bookmap/bookchangehistory </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;bookmeta>
+  &lt;bookchangehistory>
+    &lt;reviewed>
+      &lt;started>&lt;year>2007&lt;/year>&lt;month>10&lt;/month>&lt;/started>
+      &lt;completed>&lt;year>2008&lt;/year>&lt;month>01&lt;/month>&lt;/completed>
+    &lt;/reviewed>
+    &lt;edited>
+      &lt;person>Joe T. Editor&lt;/person>
+      &lt;completed>&lt;year>2008&lt;/year>&lt;month>03&lt;/month>&lt;day>15&lt;/day>&lt;/completed>
+    &lt;/edited>
+    &lt;tested>
+      &lt;organization>OASIS&lt;/organization>
+      &lt;completed>&lt;year>2008&lt;/year>&lt;month>04&lt;/month>&lt;/completed>
+    &lt;/tested>
+    &lt;approved>
+      &lt;organization>OASIS&lt;/organization>
+      &lt;completed>&lt;year>2008&lt;/year>&lt;month>05&lt;/month>&lt;/completed>
+    &lt;/approved>
+    &lt;bookevent>
+      &lt;bookeventtype name="Type of Major Event"/>
+      &lt;completed>&lt;year>2009&lt;/year>&lt;/completed>
+    &lt;/bookevent>
+  &lt;/bookchangehistory>
+&lt;/bookmeta></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="bookchangehistory_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/name">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/datatype">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/value">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004702?>

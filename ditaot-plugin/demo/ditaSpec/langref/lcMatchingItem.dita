@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcMatchingItem" xml:lang="en-us">
+	<title>lcMatchingItem</title>
+	<shortdesc>The &lt;<keyword>lcMatchingItem</keyword>&gt; element in an assessment interaction provides the content for the matching side of a matching pair of items in a match table interaction.
+</shortdesc>
+
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcMatchingItem</indexterm><indexterm>learning and training elements<indexterm>lcMatchingItem</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatchingItem/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcMatchingItem-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatchingItem/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcMatchingItem-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/stentry learningInteractionBase-d/stentry learning-d/lcMatchingItem </p>
+		</section>
+<example id="example"><title>Example</title>
+<codeblock>
+...
+     &lt;lcMatchingPair>
+      &lt;lcItem>Boston&lt;/lcItem>
+      &lt;lcMatchingItem>Red Sox&lt;/lcMatchingItem>
+     &lt;/lcMatchingPair>
+...
+</codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInteractions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+
+</refbody>
+</reference>
+

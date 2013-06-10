@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="reconciling-topic-and-map-metadata" xml:lang="en-us">
+<title><ph>Reconciling topic and map metadata</ph></title>
+<shortdesc>The &lt;topicmeta> element in maps contains numerous elements
+that can be used to declare metadata. These metadata elements have
+an effect on the parent &lt;topicref> element, any child &lt;topicref>
+elements, and – if a direct child of the &lt;map> element – on the
+map as a whole.</shortdesc>
+<refbody>
+<section><p>For each element that can be contained in the &lt;topicmeta>
+element, the following table addresses the following questions:<dl>
+<dlentry>
+<dt>How does it apply to the topic?</dt>
+<dd>This column describes how the metadata specified within
+the &lt;topicmeta> element interacts with the metadata specified in
+the topic. In most cases, the properties are additive. For example,
+when the &lt;audience> element is set to "user" at the map level,
+the value "user" is added during processing to any audience metadata
+that is specified within the topic.</dd>
+</dlentry><dlentry>
+<dt>Does it cascade to other topics in the map?</dt>
+<dd>This column indicates whether the specified metadata
+value cascades to nested &lt;topicref> elements. For example, when
+an &lt;audience> element is set to "user" at the map level, all child &lt;topicref>
+elements implicitly have an &lt;audience> element set to "user" also.
+Elements which can apply only to the specific &lt;topicref> element,
+such as &lt;linktext>, do not cascade.</dd>
+</dlentry><dlentry>
+<dt>What is the purpose when specified on the &lt;map>
+element?</dt>
+<dd>The map element allows metadata to be specified for the entire
+map. This column describes what effect, if any, an element has when
+specified at this level.</dd>
+</dlentry></dl></p></section>
+<table><title>Topicmeta elements and their properties</title>
+<tgroup cols="4"><colspec colname="col1"/><colspec colname="col2"/>
+<colspec colname="COLSPEC0"/><colspec colname="COLSPEC1"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Element</entry>
+<entry colname="col2">How does it apply to the topic?</entry>
+<entry colname="COLSPEC0"><ph id="doesitcascade">Does it cascade to
+child &lt;topicref> elements?</ph></entry>
+<entry colname="COLSPEC1">What is the purpose when set on the &lt;map>
+element?</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">&lt;audience></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify an audience for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;author></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify an author for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;category></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify a category for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;copyright></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify a copyright for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;critdates></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify critical dates for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;data></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No, unless specialized for a purpose that
+cascades</entry>
+<entry colname="COLSPEC1">No stated purpose, until the element is
+specified</entry>
+</row>
+<row>
+<entry colname="col1">&lt;data-about></entry>
+<entry colname="col2">Add the property to the specified target</entry>
+<entry colname="COLSPEC0">No, unless specialized for a purpose that
+cascades</entry>
+<entry colname="COLSPEC1">No stated purpose, until the element is
+specified</entry>
+</row>
+<row>
+<entry colname="col1">&lt;foreign></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No, unless specialized for a purpose that
+cascades</entry>
+<entry colname="COLSPEC1">No stated purpose, until the element is
+specified</entry>
+</row>
+<row>
+<entry colname="col1">&lt;keywords></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">No stated purpose</entry>
+</row>
+<row>
+<entry colname="col1">&lt;linktext></entry>
+<entry colname="col2">Not added to the topic; applies only to links
+created based on this occurrence in the map</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">No stated purpose</entry>
+</row>
+<row>
+<entry colname="col1">&lt;metadata></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify metadata for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;navtitle></entry>
+<entry colname="col2">Not added to the topic; applies only to navigation
+that is created based on this occurrence in the map. The @locktitle
+attribute of the parent &lt;topicref> element must be set to "yes"
+in order for the navigation title to be used.</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">No stated purpose</entry>
+</row>
+<row>
+<entry colname="col1">&lt;othermeta></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">Define metadata for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;permissions></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify permissions for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;prodinfo></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify product info for the entire map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;publisher></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">Yes</entry>
+<entry colname="COLSPEC1">Specify a publisher for the map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;resourceid></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">Specify a resource ID for the map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;searchtitle></entry>
+<entry colname="col2">Replace the one in the topic. If multiple &lt;searchtitle>
+elements are specified for a singletarget, processors may choose to
+issue a warning.</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">No stated purpose</entry>
+</row>
+<row>
+<entry colname="col1">&lt;shortdesc></entry>
+<entry colname="col2"><ph>Only added to the topic when
+the &lt;topicref> element specifies a @copy-to attribute. Otherwise,
+it applies only to links created based on this occurrence in the map.</ph><note>Processors <term>may</term> or <term>may
+not</term> implement this behavior.</note></entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">Provide a description of the map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;source></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No</entry>
+<entry colname="COLSPEC1">Specify a source for the map</entry>
+</row>
+<row>
+<entry colname="col1">&lt;unknown></entry>
+<entry colname="col2">Add to the topic</entry>
+<entry colname="COLSPEC0">No, unless specialized for a purpose that
+cascades</entry>
+<entry colname="COLSPEC1">No stated purpose, until the element is
+specified</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refbody><?Pub Caret -2?>
+</reference>
+<?Pub *0000007991?>

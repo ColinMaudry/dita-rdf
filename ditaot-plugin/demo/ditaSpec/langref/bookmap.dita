@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="bookmap" xml:lang="en-us">
+<title>bookmap</title>
+<shortdesc>The &lt;bookmap&gt; element is a map specialization used
+to describe the relationships among a set of DITA topics intended
+to be configured as a traditional book. Bookmaps consist of references
+to topics organized as book content. The topic references therefore
+are labeled according to the book components they point to, such as
+booktitle, frontmatter, chapter, and appendix.</shortdesc><?Pub Caret 138?>
+<prolog><metadata>
+<keywords><indexterm>bookmap</indexterm><indexterm>Bookmap elements<indexterm>bookmap</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The containing element for a bookmap is the &lt;bookmap&gt;
+element, which can take title, id, conref, and anchorref attributes.
+Within the bookmap, use the various book components and subcomponents
+to add and organize references to the topics comprising the book.
+You can use the bookmap element to set default attribute values for
+all topic references in the map. </p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-bookmap/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="bookmap-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-bookmap/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="bookmap-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/map bookmap/bookmap </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;bookmap xml:lang="en-us">
+  &lt;booktitle>
+    &lt;booklibrary>Books about stuff&lt;/booklibrary>
+    &lt;mainbooktitle>A book about one thing&lt;/mainbooktitle>
+  &lt;/booktitle>
+  &lt;bookmeta>
+    &lt;bookrights>
+      &lt;copyrfirst>&lt;year>1994&lt;/year>&lt;/copyrfirst>
+      &lt;copyrlast>&lt;year>2006&lt;/year>&lt;/copyrlast>
+      &lt;bookowner>OASIS&lt;/bookowner>
+    &lt;/bookrights>
+  &lt;/bookmeta>
+  &lt;frontmatter>
+    &lt;booklists>
+      &lt;toc/>
+      &lt;figurelist/>
+      &lt;tablelist/>
+    &lt;/booklists>
+    &lt;bookabstract href="MyBookAbstract.dita"/>
+    &lt;preface href="preface.dita">&lt;/preface>
+  &lt;/frontmatter>
+  &lt;chapter href="chapter1.dita">
+    &lt;topicref href="subchap1.dita">&lt;/topicref>
+  &lt;/chapter>
+  &lt;chapter href="chapter2.dita">
+    &lt;topicref href="subchap2.dita">&lt;/topicref>
+  &lt;/chapter>
+  &lt;appendix href="app1.dita">
+    &lt;topicref href="insideApp1.dita">&lt;/topicref>
+  &lt;/appendix>
+  &lt;appendix href="app2.dita">
+    &lt;topicref href="insideApp2.dita">&lt;/topicref>
+  &lt;/appendix>
+  &lt;backmatter>
+    &lt;amendments href="updatesToTheBook.dita"/>
+    &lt;booklists>
+      &lt;trademarklist href="listoftrademarks.dita"/>
+      &lt;indexlist/>
+    &lt;/booklists>
+  &lt;/backmatter>
+&lt;/bookmap></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="bookmap_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-map">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/anchorref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmlnsditaarch">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/DITAArchVersion">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000005716?>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="language_reference" xml:lang="en-us">
+ <title>Language reference</title>
+ <shortdesc>The language reference provides information about each element in the DITA vocabulary
+  modules. It is divided into three sections: Base, technical content, and learning and training. It
+  also includes a section titled "Attributes" that applies to all three of the preceding
+  sections.</shortdesc>
+</concept>
+<?Pub Caret1?>
+<?Pub *0000000309?>

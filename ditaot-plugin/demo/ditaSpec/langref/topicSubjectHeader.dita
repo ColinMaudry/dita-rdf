@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topicSubjectHeader" xml:lang="en-us">
+<title>topicSubjectHeader</title>
+<shortdesc>The &lt;<keyword>topicSubjectHeader</keyword>> element
+specifies constraints on the subjects used in classifications.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>topicSubjectHeader</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>You use the &lt;topicSubjectHeader><?Pub Caret?> element
+to supply a header row for a topic classification table when you want
+to encourage classification with subjects from different categories
+(also known as a facet classification). Each cell in the header row
+identifies the subject for a different category. The subjects in the
+same column within the classification rows must appear in the category
+in the subject scheme. For instance, if the cell within the header
+row specifies the Operating System category, the subjects in the column
+must be kinds of operating systems.</section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-topicSubjectHeader/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="topicSubjectHeader-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-topicSubjectHeader/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="topicSubjectHeader-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/relrow classify-d/topicSubjectHeader </p></section>
+<example conref="topicSubjectTable.dita#topicSubjectTable/example"
+id="example"></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="relrow_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

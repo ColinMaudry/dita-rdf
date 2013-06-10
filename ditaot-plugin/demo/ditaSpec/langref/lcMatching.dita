@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference
+  id="lcMatching" xml:lang="en-us">
+  <title>lcMatching</title>
+  <shortdesc>In an <keyword>lcMatching</keyword> interaction, the learner identifies the correct
+    choice that matches another choice and, optionally, any feedback for the pair or for correct or
+    incorrect matches.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>lcMatching</indexterm><indexterm>learning and training elements<indexterm
+            >lcMatching</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody><section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatching/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="lcMatching-contains"/>
+      </p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatching/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="lcMatching-contained-by"/>
+      </p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>+ topic/fig learningInteractionBase-d/lcInteractionBase learning-d/lcMatching </p>
+    </section>
+    <example
+      id="example">
+      <title>Example</title>
+      <codeblock>&lt;!--Matching Interaction                    -->
+&lt;lcMatching id="matching">
+  &lt;title>Matching teams with cities&lt;/title>
+  &lt;lcQuestion>Match the team with the city.&lt;/lcQuestion>
+  &lt;lcMatchTable>
+    &lt;lcMatchingHeader>
+      &lt;lcItem>Team&lt;/lcItem>
+      &lt;lcMatchingItem>City&lt;/lcMatchingItem>
+    &lt;/lcMatchingHeader>
+    &lt;lcMatchingPair>
+      &lt;lcItem>Boston&lt;/lcItem>
+      &lt;lcMatchingItem>Red Sox&lt;/lcMatchingItem>
+      &lt;lcMatchingItemFeedback>
+        &lt;lcFeedbackCorrect>The Red Sox play in Boston's Fenway Park&lt;/lcFeedbackCorrect>
+        &lt;lcFeedbackIncorrect>That is not Boston's home team&lt;/lcFeedbackIncorrect>
+      &lt;/lcMatchingItemFeedback>
+    &lt;/lcMatchingPair>
+    &lt;lcMatchingPair>
+      &lt;lcItem>San Francisco&lt;/lcItem>
+      &lt;lcMatchingItem>Giants&lt;/lcMatchingItem>
+      &lt;lcMatchingItemFeedback>
+        &lt;lcFeedbackCorrect>The Giants play in San Franciso's Candlestick Park&lt;/lcFeedbackCorrect>
+        &lt;lcFeedbackIncorrect>That is not San Franciso's home team&lt;/lcFeedbackIncorrect>
+      &lt;/lcMatchingItemFeedback>
+    &lt;/lcMatchingPair>
+    &lt;lcMatchingPair>
+      &lt;lcItem>Chicago&lt;/lcItem>
+      &lt;lcMatchingItem>Cubs&lt;/lcMatchingItem>
+      &lt;lcMatchingItemFeedback>
+        &lt;lcFeedbackCorrect>The Cubs play in Chicago's Wrigley Field&lt;/lcFeedbackCorrect>
+        &lt;lcFeedbackIncorrect>That is not Chicago's home team.&lt;/lcFeedbackIncorrect>
+      &lt;/lcMatchingItemFeedback>
+    &lt;/lcMatchingPair>
+    &lt;lcMatchingPair>
+      &lt;lcItem>Toronto&lt;/lcItem>
+      &lt;lcMatchingItem>Blue Jays&lt;/lcMatchingItem>
+      &lt;lcMatchingItemFeedback>
+        &lt;lcFeedbackCorrect>The Blue Jays play in Toronto's SkyDome&lt;/lcFeedbackCorrect>
+        &lt;lcFeedbackIncorrect>That is not Toronto's home team.&lt;/lcFeedbackIncorrect>
+      &lt;/lcMatchingItemFeedback>
+    &lt;/lcMatchingPair>
+  &lt;/lcMatchTable>
+&lt;/lcMatching>
+  </codeblock>
+    </example>
+    <section
+      id="attributes">
+      <title>Attributes</title>
+      <simpletable
+        id="lcMatching_attr"
+        relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/id-learning">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>      
+    </section></refbody>
+</reference>

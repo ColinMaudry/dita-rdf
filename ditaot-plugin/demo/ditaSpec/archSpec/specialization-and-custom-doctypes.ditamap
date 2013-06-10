@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<map collection-type="sequence" title="Specialization, Configuration and Extension" xml:lang="en-us">
+  <topicref href="configuration-specialization-and-constraints.dita" collection-type="sequence">
+    <topicref href="ditaspecialization.dita" collection-type="sequence">
+      <topicref href="recognizedconstraintmechanisms.dita"/>
+      <?Pub Caret1?>
+    </topicref>
+    <topicref href="createCustomDocType.dita" collection-type="sequence">
+      <topicref href="shell-dtd-coding-reqs.dita"/>
+      <topicref href="xsdShellDoctypeCodeReq.dita"/>
+    </topicref>
+    <topicref href="specialize.dita" rev="1.1" collection-type="sequence">
+      <topicref href="vocabularymodules.dita"/>
+      <topicref href="specvalid.dita" rev="1.1"/>
+      <topicref href="classatt.dita"/>
+      <topicref href="domainsatt.dita"/>
+      <topicref collection-type="sequence" href="generalize.dita" rev="1.1"/>
+      <topicref href="attributegeneralize.dita"/>
+      <topicref href="foreigncontentspec.dita" rev="1.1"/>
+      <topicref href="specialization_module_requirements.dita" collection-type="sequence">
+        <topicref href="dtdmod.dita" rev="1.2" collection-type="sequence">
+          <topicref href="dtdGeneralCodingReq.dita"/>
+          <topicref href="dtdStructuralCodingReq.dita"/>
+          <topicref href="dtdTopicTypeCodingReq.dita"/>
+          <topicref href="dtdElementDomainCodingReq.dita"/>
+          <topicref href="dtdAttributeDomainCodingReq.dita"/>
+        </topicref>
+        <topicref href="schemamod.dita" rev="1.1" collection-type="sequence">
+          <topicref href="xsdGeneralCodingReq.dita"/>
+          <topicref href="xsdStructuralSpecializationReqs.dita"/>
+          <topicref href="xsdAttributeDomainSpecializationCodeReq.dita"/>
+        </topicref>
+      </topicref>
+    </topicref>
+    <topicref href="createConstraintsDomainSpec.dita" collection-type="sequence">
+      <topicref href="constraintsDomainDesignPattern-dtd.dita"/>
+      <topicref href="constraintsDomainDesignPattern-xsd.dita"/>
+      <topicref href="constraintsGeneralize.dita"/>
+      <topicref href="constraint-module-examples.dita"/>
+    </topicref>
+  </topicref>
+</map>
+<?Pub *0000004182?>

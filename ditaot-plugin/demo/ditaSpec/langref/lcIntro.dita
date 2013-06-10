@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcIntro" xml:lang="en-us">
+	<title>lcIntro</title>
+	<shortdesc>The &lt;<keyword>lcIntro</keyword>&gt; provides a detailed introduction
+and description of the content to be delivered, in cases where the &lt;shortdesc&gt;
+is not adequate to fully describe the content. It may also include instructor
+notes.</shortdesc>
+
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcIntro</indexterm>
+<indexterm>learning and training elements<indexterm>lcIntro</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcIntro/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcIntro-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcIntro/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcIntro-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section learningBase/lcIntro </p>
+		</section>
+<example id="example">   <title>Example</title>   <codeblock>
+&lt;learningOverview id=&quot;overview&quot;&gt;
+  &lt;title&gt;Learning Overview topic&lt;/title&gt;
+  &lt;learningOverviewbody&gt;
+    &lt;lcIntro&gt;&lt;title&gt;Introduction&lt;/title&gt;
+	&lt;p&gt;If you need an introduction, you would 
+        include it here.&lt;/p&gt;
+	&lt;note&gt;You can have notes, 
+	tables, all kinds of things like that here, 
+	if you desire.&lt;/note&gt;
+   &lt;/lcIntro&gt;  
+  &lt;/learningOverviewbody&gt;
+&lt;/learningOverview&gt;
+  </codeblock> </example>
+<section>
+<simpletable id="learningBasebody_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="navref" xml:lang="en-us">
+<title>navref</title>
+<shortdesc><!--
+The &lt;<keyword>navref</keyword>&gt; element references a map file from within a map file.  The reference is resolved at runtime for Eclipse navigation, typically to pull together the navigation for multiple components into a product navigation. 
+--><ph conref="../common/conref_file.dita#reuse_file/navtitle_shortdesc"></ph><!--
+<ph conref="../common/commonLRdefs.dita#commonLRdefs/only4eclipse"></ph>
+--> </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>navref</indexterm><indexterm>Map elements<indexterm>navref</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>For example, if a map is converted to the Eclipse
+help system format, the DITA element <codeph>&lt;navref mapref="other.ditamap"/&gt;</codeph> should
+be converted to the Eclipse element <codeph>&lt;link toc="other.xml"/&gt;</codeph>.
+When Eclipse loads the referencing map, it will replace this link
+element with the contents of the file "other.xml", provided that the
+file "other.xml" is available.</p><p>Note that not all output formats
+support such linking. In order to include another map directly without
+depending on the output format, use a &lt;topicref> element with the
+format attribute set to "ditamap". The effect is similar to a conref.
+For example, the following markup represents a literal inclusion of
+the map "other.ditamap":<codeblock xml:space="preserve">&lt;topicref href="other.ditamap" format="ditamap"/&gt;</codeblock></p><?Pub
+Caret 331?></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-navref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="navref-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-navref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="navref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/navref </p></section>
+<example id="example"><title>Example</title><p>In this example, the
+map titled "MyComponent tasks" references the maps "othermap2.ditamap"
+and "othermap3.ditamap".</p><codeblock>&lt;map title="MyComponent tasks"&gt;
+ &lt;navref mapref="../com.ibm.xml.doc/othermap1.ditamap"/&gt;
+ &lt;navref mapref="../com.ibm.xml.doc/othermap2.ditamap"/&gt;
+&lt;/map&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="navref_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/mapref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003958?>

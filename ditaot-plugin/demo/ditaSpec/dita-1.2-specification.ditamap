@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+ "..\..\dita\dtd\bookmap.dtd">
+<?Pub Sty _display FontColor="red"?>
+<bookmap outputclass="specification" xml:lang="en-us">
+<booktitle outputclass="specificationTitles">
+<mainbooktitle outputclass="specificationTitle">Darwin Information
+Typing Architecture (DITA) Version 1.2</mainbooktitle>
+<booktitlealt outputclass="specificationLevel">OASIS Standard</booktitlealt>
+<booktitlealt outputclass="specificationApproved">1 December 2010</booktitlealt>
+<booktitlealt outputclass="specificationShorttitle">DITA Version 1.2
+Specification</booktitlealt></booktitle>
+<bookmeta>
+<shortdesc outputclass="specificationAbstract">The Darwin Information
+Typing Architecture (DITA) 1.2 specification defines both a) a set
+of document types for authoring and organizing topic-oriented information;
+and b) a set of mechanisms for combining, extending, and constraining
+document types.</shortdesc><?Pub Caret -2?>
+<bookrights><copyrfirst><year>2005</year></copyrfirst><copyrlast><year>2010</year>
+</copyrlast><bookowner><organization>OASIS</organization></bookowner>
+</bookrights>
+<data outputclass="specificationURIs"></data>
+<!-- For each group: allow notApplicable OR one authoritative version and zero or more versionLink -->
+<data outputclass="thisVersion"><data format="html"
+href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html"
+outputclass="authoritativeVersion" scope="external"></data><data
+format="pdf"
+href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.pdf"
+outputclass="versionLink" scope="external"></data><data format="chm"
+href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec-chm.zip"
+outputclass="versionLink" scope="external"></data><data format="zip"
+href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.zip"
+outputclass="versionLink" scope="external"></data></data><data
+outputclass="previousVersion"><data format="html"
+href="http://docs.oasis-open.org/dita/v1.2/cs01/spec/DITA1.2-spec.html"
+outputclass="authoritativeVersion" scope="external"></data><data
+format="pdf"
+href="http://docs.oasis-open.org/dita/v1.2/cs01/spec/DITA1.2-spec.pdf"
+outputclass="versionLink" scope="external"></data><data format="chm"
+href="http://docs.oasis-open.org/dita/v1.2/cs01/spec/DITA1.2-spec-chm.zip"
+outputclass="versionLink" scope="external"></data><data format="zip"
+href="http://docs.oasis-open.org/dita/v1.2/cs01/spec/DITA1.2-spec.zip"
+outputclass="versionLink" scope="external"></data></data><data
+outputclass="latestVersion"><data format="html"
+href="http://docs.oasis-open.org/dita/v1.2/spec/DITA1.2-spec.html"
+outputclass="authoritativeVersion" scope="external"></data><data
+format="pdf"
+href="http://docs.oasis-open.org/dita/v1.2/spec/DITA1.2-spec.pdf"
+outputclass="versionLink" scope="external"></data><data format="chm"
+href="http://docs.oasis-open.org/dita/v1.2/spec/DITA1.2-spec-chm.zip"
+outputclass="versionLink" scope="external"></data><data format="zip"
+href="http://docs.oasis-open.org/dita/v1.2/spec/DITA1.2-spec.zip"
+outputclass="versionLink" scope="external"></data></data><data
+format="html"
+href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dita"
+outputclass="technicalCommittee">OASIS Darwin Information Typing Architecture
+(DITA) TC</data><data outputclass="tcChair">Don Day, Individual Member</data>
+<data outputclass="specEditor">Kristen James Eberlein, SDL International</data>
+<data outputclass="specEditor">Robert D. Anderson, IBM</data><data
+outputclass="specEditor">Gershon Joseph, Cisco Systems, Inc.</data>
+<data outputclass="relatedWork">  <data format="html"
+href="http://docs.oasis-open.org/dita/v1.1/archspec/archspec.html"
+outputclass="supercedesWork" scope="external">OASIS DITA Version 1.1
+Architectural Specification</data>  <data format="html"
+href="http://docs.oasis-open.org/dita/v1.1/langspec/ditaref-type.html"
+outputclass="supercedesWork" scope="external">OASIS DITA Version 1.1
+Language Specification</data>  <data format="zip"
+href="http://docs.oasis-open.org/dita/v1.2/os/DITA1.2-dtds.zip"
+outputclass="relatedToWork" scope="external">OASIS DITA Version 1.2
+DTDs</data>  <data format="zip"
+href="http://docs.oasis-open.org/dita/v1.2/os/DITA1.2-xsds.zip"
+outputclass="relatedToWork" scope="external">OASIS DITA Version 1.2
+XML Schemas</data></data><data outputclass="declaredNamespace">None</data>
+<data format="html"
+href="http://www.oasis-open.org/committees/dita/ipr.php"
+outputclass="iprPolicy" scope="external"></data><data format="html"
+href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dita"
+outputclass="errata" scope="external"></data><data
+outputclass="specTrademarks">The names "OASIS" and "DITA" are trademarks
+of <ph><xref format="html" href="http://www.oasis-open.org/"
+scope="external">OASIS</xref></ph>, the owner and developer of this
+specification, and should be used only to refer to the organization
+and its official outputs. OASIS welcomes reference to, and implementation
+and use of, specifications, while reserving the right to enforce its
+marks against misleading uses. Please see <ph><xref format="html"
+href="http://www.oasis-open.org/who/trademark.php" scope="external">http://www.oasis-open.org/who/trademark.php</xref></ph> for
+above guidance.</data></bookmeta>
+<frontmatter>
+<booklists>
+<toc/></booklists>
+</frontmatter>
+<chapter format="ditamap" href="introduction.ditamap"></chapter>
+<chapter format="ditamap" href="architectural-specification.ditamap">
+</chapter>
+<chapter format="ditamap" href="language-reference.ditamap"></chapter>
+<chapter href="conformance.dita"></chapter>
+<appendix href="r-acknowledgments.dita"></appendix>
+<appendix format="ditamap" href="non-normative-information.ditamap">
+</appendix>
+<backmatter>
+<booklists>
+<indexlist/></booklists>
+</backmatter>
+<reltable title="Concept to concept">
+<relheader>
+<relcolspec type="concept"></relcolspec>
+<relcolspec type="concept"></relcolspec>
+</relheader>
+<relrow>
+<relcell>
+<topicref format="dita"
+href="archSpec/conditional-processing-attributes.dita"
+navtitle="Conditional processing attributes" scope="local" type="concept">
+</topicref>
+</relcell>
+<relcell>
+<topicref format="dita" href="archSpec/condproc.dita"
+navtitle="Conditional processing (profiling)" scope="local"
+type="concept"></topicref>
+</relcell>
+</relrow>
+</reltable>
+<reltable title="Concept to reference">
+<relheader>
+<relcolspec type="concept"></relcolspec>
+<relcolspec type="reference"></relcolspec>
+</relheader>
+<relrow>
+<relcell>
+<topicref format="dita"
+href="archSpec/conditional-processing-attributes.dita"
+navtitle="Conditional processing attributes" scope="local" type="concept">
+</topicref>
+<topicref format="dita" href="archSpec/condproc.dita"
+navtitle="Conditional processing (profiling)" scope="local"
+type="concept"></topicref>
+</relcell>
+<relcell>
+<topicref format="dita" href="common/select-atts.dita"
+navtitle="select-atts attribute group" scope="local" type="reference">
+</topicref>
+<topicref format="dita" href="common/about-ditaval.dita"
+navtitle="DITAVAL elements" scope="local" type="concept"></topicref>
+</relcell>
+</relrow>
+</reltable>
+</bookmap>
+<?Pub *0000007215?>

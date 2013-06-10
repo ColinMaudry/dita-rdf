@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="archspec-learningtraining" xml:lang="en-us">
+<title>Architectural Specification: Learning and Training Version</title>
+<shortdesc>DITA 1.2 introduces the Learning and Training specialization,
+which is designed for   developing instructional materials. It contains
+all of base DITA and some (but not all) parts of   the Technical Content
+package.</shortdesc>
+</concept><?Pub Caret -3?>
+<?Pub *0000000573?>

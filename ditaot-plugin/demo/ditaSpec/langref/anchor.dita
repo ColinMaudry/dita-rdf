@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="anchor" xml:lang="en-us">
+<title>anchor</title>
+<shortdesc><ph
+conref="../common/conref_file.dita#reuse_file/anchor_shortdesc"></ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>anchor</indexterm><indexterm>map reference anchor
+point</indexterm><indexterm>Map elements<indexterm>anchor</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The &lt;anchor> element is typically used to allow integration
+of run-time components. For build-time integration, you can instead
+use the conref or conkeyref attribute on an element inside the map.
+For example, a &lt;topicref> element may use conref to pull in content
+at build-time from a &lt;topicref> in another map.</section><?Pub
+Caret 248?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-anchor/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="anchor-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-anchor/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="anchor-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/anchor </p></section>
+<example id="example"><title>Example</title><p
+conref="../common/conref_file.dita#reuse_file/anchor"></p><p
+conref="../common/conref_file.dita#reuse_file/anchoref"></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="anchor_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-anchor">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003306?>

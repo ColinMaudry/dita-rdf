@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="printing">
+ <title>Printing </title>
+ <shortdesc>By default, the content of most elements is included in all output media. The DITA map
+  provides a means to suppress element content from appearing in print-oriented media, or from
+  appearing in non-print-oriented media, such as HTML. The generation or non-generation of print and
+  other forms of output can also be affected through the use of other navigation-related attributes. </shortdesc>
+ <conbody>
+  <p>The author can specify whether individual topics or groups of topics referenced in a DITA map
+   should be included for processing to print-oriented outputs such as PDF. Each map (or map
+   specialization) and topicref (or topicref specialization) in a DITA map supports the attributes
+   @toc, @processing-role, and @print. The @print attribute supports the following enumerated
+   values, each controlling the way that print-oriented processors handle the inclusion or exclusion
+   of topics or groups of topics.</p>
+  <p>
+   <simpletable frame="all">
+    <sthead>
+     <stentry>@print value</stentry>
+     <stentry>Print-oriented Processing</stentry>
+     <stentry>Non-print-oriented Processing</stentry>
+    </sthead>
+    <strow>
+     <stentry>
+      <p>unspecified (default)</p>
+      <p><b>Example:</b></p>
+      <p><msgph>&lt;topicref href="foo.dita"></msgph></p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>included</b> in output. </p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>included</b> in output. </p>
+     </stentry>
+    </strow>
+    <strow>
+     <stentry>
+      <p><msgph>yes</msgph></p>
+      <p><b>Example:</b></p>
+      <p><msgph>&lt;topicref href="foo.dita" print="yes"></msgph></p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>included</b> in output. </p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>included</b> in output. </p>
+     </stentry>
+    </strow>
+    <strow>
+     <stentry>
+      <p><msgph>printonly</msgph></p>
+      <p><b>Example:</b></p>
+      <p><msgph>&lt;topicref href="foo.dita" print="printonly"></msgph></p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>included</b> in output. </p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>excluded</b> in output. </p>
+     </stentry>
+    </strow>
+    <strow>
+     <stentry>
+      <p><msgph>no</msgph></p>
+      <p><b>Example:</b></p>
+      <p><msgph>&lt;topicref href="foo.dita" print="no"></msgph></p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>excluded</b> in output. </p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element are <b>included</b> in output. </p>
+     </stentry>
+    </strow>
+    <strow>
+     <stentry>
+      <p><msgph>-dita-use-conref-target</msgph></p>
+      <p><b>Example:</b></p>
+      <p><msgph>&lt;topicref conref="#foo-topic" print="-dita-use-conref-target"></msgph></p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element derive a value for @print from the @print value of the
+       referenced map element. </p>
+      <p>See <xref href="../common/ditauseconreftarget.dita"/> for more details on this value.</p>
+     </stentry>
+     <stentry>
+      <p>Topics referenced by the map element derive a value for @print from the @print value of the
+       referenced map element. </p>
+      <p>See <xref href="../common/ditauseconreftarget.dita"/> for more details on this value.</p>
+     </stentry>
+    </strow>
+   </simpletable>
+  </p>
+  <note>If a value for @print is not specified explicitly in a map element, but is specified in a
+   map that references the map element, the @print value cascades to the referenced map. If the
+   @print value is not specified on the referencing map, a default of "yes" is assumed.</note>
+  <p>Use <msgph>@print="printonly"</msgph> to identify transitional topics to be included
+   exclusively in highly contextual or linear print-oriented output.</p>
+  <p>If the referenced topic should be excluded from all output formats, set the @processing-role
+   attribute to "resource-only" instead of using the @print attribute. Content within that topic may
+   still be referenced for display in other locations.</p>
+ </conbody>
+</concept>

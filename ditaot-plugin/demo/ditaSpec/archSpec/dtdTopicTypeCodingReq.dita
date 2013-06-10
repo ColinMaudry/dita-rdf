@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept
+  id="concept_0a4c9c5d-a953-4738-be55-8d3b6c228968"
+  xml:lang="en-us">
+  <title>Topic type module coding requirements</title>
+  <?Pub Caret1?>
+  <shortdesc>Topic type vocabulary modules <term>must</term> conform to additional coding
+    requirements for defining default topic nesting.</shortdesc>
+  <conbody>
+    <section
+      id="section_5E63C9E47F0D41EE83D5EB24F1617684">
+      <title>Default nested topics entity</title>
+      <p>A topic type module <term>must</term> define an entity to specify default subordinate
+        topics. The entity name <term>must</term> be the topic element name plus the <codeph
+          >-info-types</codeph> suffix. For example, the info-types entity for the concept topic is
+          <codeph>concept-info-types</codeph>. If the topic has default subordinate topics, this
+        entity can default to a list of element entities. If not, the entity can default to the
+        value of the <codeph>info-types</codeph> entity as in the following example:</p>
+      <codeblock><![CDATA[<!ENTITY % concept-info-types "%info-types;">]]></codeblock>
+      <p>A document type shell can then control how topics are allowed to nest by redefining the
+          <codeph><varname>topictype</varname>-info-types</codeph> entity for each topic type, or it
+        can efficiently create common nesting rules by redefining the main info-types entity.</p>
+      <p>In the declaration of the root element of a topic type, the last position in the content
+        model <term>must</term> be the <codeph><varname
+          >topictype</varname>-info-types</codeph> nested topics entity, as in the following
+        example:</p>
+      <codeblock>&lt;!ENTITY % concept.content
+  "((%title;), 
+    (%titlealts;)?,
+    (%abstract; | 
+     %shortdesc;)?, 
+    (%prolog;)?, 
+    (%conbody;)?, 
+    (%related-links;)?,
+    <b>(%concept-info-types;)*</b>)"
+></codeblock>
+    </section>
+  </conbody>
+</concept>
+<?Pub *0000002129?>

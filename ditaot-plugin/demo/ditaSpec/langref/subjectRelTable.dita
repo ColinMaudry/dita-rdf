@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="subjectRelTable" xml:lang="en-us">
+<title>subjectRelTable</title>
+<shortdesc>The &lt;<keyword>subjectRelTable</keyword>> element is
+a specialized relationship table which establishes relationships between
+the subjects in different columns of the same row. This element provides
+an efficient way to author non-hierarchical relationships between
+subjects. Tools (such as search tools) that use subject relationships
+to find related content may use these associative relationships in
+a similar way to the hierarchical relationships.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>subjectRelTable</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-subjectRelTable/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="subjectRelTable-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-subjectRelTable/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="subjectRelTable-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/reltable subjectScheme/subjectRelTable </p></section>
+<example id="example"><title>Example</title><p>The subject relationship
+table in this example establishes environmentFor relationships between
+operating systems and applications. Based on the subjectRole element,
+subjects in the first column are operating systems which are the environment
+for an application, while subjects in the second column are applications
+that run in that environment. For a user interested in content about
+the operating system, content about the applications may also be relevant.</p><codeblock>&lt;subjectScheme>
+  &lt;hasKind>
+    &lt;subjectdef keys="operatingSystem">
+        &lt;subjectdef keys="linuxOS"/>
+        &lt;subjectdef keys="windowsOS"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="application">
+        &lt;subjectdef keys="IDE">
+            &lt;subjectdef keys="eclipseIDE"/>
+            &lt;subjectdef keys="visualStudioIDE"/>
+        &lt;/subjectdef>
+        &lt;subjectdef keys="webBrowser">
+            &lt;subjectdef keys="firefoxBrowser"/>
+            &lt;subjectdef keys="ieBrowser"/>
+        &lt;/subjectdef>
+    &lt;/subjectdef>
+  &lt;/hasKind>
+  ...
+  &lt;subjectRelTable>
+    &lt;subjectRelHeader>
+      &lt;subjectRole>
+        &lt;subjectdef keyref="operatingSystem">
+          &lt;hasRelated keyref="environmentFor">
+            &lt;subjectdef keyref="application"/>
+          &lt;/hasRelated>
+        &lt;/subjectdef>
+      &lt;/subjectRole>
+      &lt;subjectRole>
+        &lt;subjectdef keyref="application"/>
+      &lt;/subjectRole>
+    &lt;/subjectRelHeader>
+    &lt;subjectRel>
+      &lt;subjectRole>
+        &lt;subjectdef keyref="linuxOS"/>
+        &lt;subjectdef keyref="windowsOS"/>
+      &lt;/subjectRole>
+      &lt;subjectRole>
+        &lt;subjectdef keyref="eclipseIDE"/>
+        &lt;subjectdef keyref="firefoxBrowser"/>
+      &lt;/subjectRole>
+    &lt;/subjectRel>
+    &lt;subjectRel>
+      &lt;subjectRole>
+        &lt;subjectdef keyref="windowsOS"/>
+      &lt;/subjectRole>
+      &lt;subjectRole>
+        &lt;subjectdef keyref="ieBrowser"/>
+        &lt;subjectdef keyref="visualStudioIDE"/>
+      &lt;/subjectRole>
+    &lt;/subjectRel>
+  &lt;/subjectRelTable>
+&lt;/subjectScheme></codeblock><p>A table view of the subjectRelTable
+may look like this; each &lt;subjectRel> represents a single row,
+and each &lt;subjectRole> represents a cell.<table><title>subjectRelTable
+as a table</title>
+<tgroup cols="2"><colspec colname="col1"/><colspec colname="col2"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1"><codeblock><i>&lt;subjectdef keyref="operatingSystem">
+ &lt;hasRelated keyref="environmentFor">
+  &lt;subjectdef keyref="application"/>
+ &lt;/hasRelated>
+&lt;/subjectdef></i></codeblock></entry>
+<entry colname="col2"><codeblock><i>&lt;subjectdef keyref="application"/></i></codeblock></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><lines>&lt;subjectdef keyref="linuxOS"/>
+&lt;subjectdef keyref="windowsOS"/></lines></entry>
+<entry colname="col2"><lines>&lt;subjectdef keyref="eclipseIDE"/>
+&lt;subjectdef keyref="firefoxBrowser"/></lines></entry>
+</row>
+<row>
+<entry colname="col1"><lines>&lt;subjectdef keyref="windowsOS"/></lines></entry>
+<entry colname="col2"><lines>&lt;subjectdef keyref="ieBrowser"/>
+&lt;subjectdef keyref="visualStudioIDE"/></lines></entry>
+</row>
+</tbody>
+</tgroup>
+</table><?Pub Caret -2?></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="reltable_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts-no-toc">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000006097?>

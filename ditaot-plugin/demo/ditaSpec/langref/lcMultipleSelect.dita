@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference
+  id="lcMultipleSelect" xml:lang="en-us">
+  <title>lcMultipleSelect</title>
+  <shortdesc>In an <keyword>lcMultipleSelect</keyword> interaction, the learner must indicate two or
+    more correct answers from a list of choices.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>lcMultipleSelect</indexterm><indexterm>learning and training elements<indexterm
+            >lcMultipleSelect</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody><section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcMultipleSelect/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="lcMultipleSelect-contains"/>
+      </p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-lcMultipleSelect/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="lcMultipleSelect-contained-by"/>
+      </p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>+ topic/fig learningInteractionBase-d/lcInteractionBase learning-d/lcMultipleSelect </p>
+    </section>
+    <example
+      id="example">
+      <title>Example</title>
+      <codeblock>
+      &lt;!--Multiple select Interaction                    -->
+      &lt;lcMultipleSelect
+        id="ms1">
+        &lt;title>Finding Major League Baseball logos&lt;/title>
+        &lt;lcQuestion>Which one of the following is a logo of a Major League Baseball team? (You may
+          choose more than one.)&lt;/lcQuestion>
+        &lt;lcAnswerOptionGroup>
+          &lt;lcAnswerOption
+            id="A">
+            &lt;lcAnswerContent>
+              &lt;image
+                href="logo1.gif"/>
+            &lt;/lcAnswerContent>
+            &lt;lcCorrectResponse/>
+            &lt;lcFeedback>Yes, that's one.&lt;/lcFeedback>
+          &lt;/lcAnswerOption>
+          &lt;lcAnswerOption
+            id="B">
+            &lt;lcAnswerContent>
+              &lt;image
+                href="logo2.gif"/>
+            &lt;/lcAnswerContent>
+            &lt;lcCorrectResponse/>
+            &lt;lcFeedback>Yes, that's one.&lt;/lcFeedback>
+          &lt;/lcAnswerOption>
+          &lt;lcAnswerOption
+            id="C">
+            &lt;lcAnswerContent>
+              &lt;image
+                href="logo3.gif"/>
+            &lt;/lcAnswerContent>
+            &lt;lcFeedback>No, not that one. Sorry!&lt;/lcFeedback>
+          &lt;/lcAnswerOption>
+          &lt;lcAnswerOption
+            id="D">
+            &lt;lcAnswerContent>
+              &lt;image
+                href="logo4.gif"/>
+            &lt;/lcAnswerContent>
+            &lt;lcCorrectResponse/>
+            &lt;lcFeedback>Yes, that's one.&lt;/lcFeedback>
+          &lt;/lcAnswerOption>
+        &lt;/lcAnswerOptionGroup>
+      &lt;/lcMultipleSelect>
+  </codeblock>
+    </example>
+    <section
+      id="attributes">
+      <title>Attributes</title>
+      <simpletable
+        id="lcMultipleSelect_attr"
+        relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/id-learning">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section></refbody>
+</reference>

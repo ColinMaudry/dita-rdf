@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="lcHotspot" xml:lang="en-us">
+<title>lcHotspot</title>
+<shortdesc>In a <keyword>lcHotspot</keyword> interaction, the learner
+clicks on a region of the     screen to indicate a choice.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>lcHotspot</indexterm><indexterm>learning and
+training elements<indexterm>lcHotspot</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcHotspot/contains"
+id="contains" otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where
+it is used. Content model         information is located here: <xref
+keyref="lcHotspot-contains"></xref>
+      </p>
+    </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-lcHotspot/containedby"
+id="containedby" otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it
+is used. Content model information         is located here: <xref
+keyref="lcHotspot-contained-by"></xref>
+      </p>
+    </section>
+<section id="inheritance" otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>+ topic/fig learningInteractionBase-d/lcInteractionBase learning-d/lcHotspot </p>
+</section>
+<example id="example">
+      <title>Example</title><codeblock>   &lt;!--Hotspot Interaction    -->
+   &lt;lcHotspot id="hotspots">
+    &lt;title>Team logos hotspot&lt;/title>
+    &lt;lcQuestion>Which of the following is the logo for the Cleveland Indians?&lt;/lcQuestion>
+    &lt;lcHotspotMap>
+     &lt;image href="hotlogos.gif"/>
+     &lt;lcArea id="indians">
+      &lt;lcAreaShape>rect&lt;/lcAreaShape>
+      &lt;lcAreaCoords>0,0,50,50&lt;/lcAreaCoords>
+      &lt;lcCorrectResponse value="indians"/>
+      &lt;lcFeedback>Yes.&lt;/lcFeedback>
+     &lt;/lcArea>
+     &lt;lcArea id="giants">
+      &lt;lcAreaShape>rect&lt;/lcAreaShape>
+      &lt;lcAreaCoords>50,0,100,50&lt;/lcAreaCoords>
+      &lt;lcFeedback>No.&lt;/lcFeedback>
+     &lt;/lcArea>
+     &lt;lcArea id="cardinals">
+      &lt;lcAreaShape>rect&lt;/lcAreaShape>
+      &lt;lcAreaCoords>0,50,50,100&lt;/lcAreaCoords>
+      &lt;lcFeedback>No.&lt;/lcFeedback>
+     &lt;/lcArea>
+     &lt;lcArea id="orioles">
+      &lt;lcAreaShape>rect&lt;/lcAreaShape>
+      &lt;lcAreaCoords>50,50,100,100&lt;/lcAreaCoords>
+      &lt;lcFeedback>No.&lt;/lcFeedback>
+     &lt;/lcArea>
+    &lt;/lcHotspotMap>
+   &lt;/lcHotspot>
+</codeblock><?Pub Caret -2?>
+    </example>
+<section id="attributes">
+      <title>Attributes</title>
+      <simpletable id="lcHotspot_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-learning">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>
+    </section>
+</refbody>
+</reference>
+<?Pub *0000004355?>

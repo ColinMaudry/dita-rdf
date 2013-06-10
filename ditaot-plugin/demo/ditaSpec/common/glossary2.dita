@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="glossary2" xml:lang="en-us">
+<title>Glossentry elements</title>
+<shortdesc>Use the glossentry topic type to define glossary
+terms. Each glossentry topic should define a single sense of a term.</shortdesc><?Pub
+Caret1?>
+<prolog><metadata>
+<keywords><indexterm>Glossentry elements</indexterm></keywords>
+</metadata></prolog>
+<refbody></refbody>
+</reference>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="menucascade" xml:lang="en-us"><title>menucascade</title><shortdesc>The &lt;<keyword>menucascade</keyword>&gt; element is used to document
+a series of menu choices. The &lt;<keyword>menucascade</keyword>&gt; element
+contains one or more user interface control (&lt;<keyword>uicontrol</keyword>&gt;)
+elements, for example: <codeph>Start &gt; Programs &gt; Accessories &gt; Notepad</codeph>.
+If there is more than one &lt;<keyword>uicontrol</keyword>&gt; element, the
+formatter shows connecting characters between the menu items to represent
+the menu cascade. This element is part of the DITA user interface domain,
+a special set of DITA elements designed to document user interface tasks,
+concepts and reference information.</shortdesc><prolog><metadata><keywords><indexterm>menucascade</indexterm><indexterm>User interface elements<indexterm>menucascade</indexterm></indexterm></keywords></metadata></prolog><refbody><section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-menucascade/contains" otherprops="contains"><title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="menucascade-contains"/></p></section><section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-menucascade/containedby" otherprops="containedby"><title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="menucascade-contained-by"/></p></section><section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+ topic/ph ui-d/menucascade </p></section><example id="example"><title>Example</title>This example:<pre xml:space="preserve">&lt;menucascade&gt;
+ &lt;uicontrol&gt;Start&lt;/uicontrol&gt;
+ &lt;uicontrol&gt;Programs&lt;/uicontrol&gt;
+ &lt;uicontrol&gt;Accessories&lt;/uicontrol&gt;
+ &lt;uicontrol&gt;Notepad&lt;/uicontrol&gt;
+&lt;/menucascade&gt;</pre>  produces this output: <menucascade><uicontrol>Start</uicontrol><uicontrol>Programs</uicontrol><uicontrol>Accessories</uicontrol><uicontrol>Notepad</uicontrol></menucascade></example><section id="attributes"><title>Attributes</title><simpletable id="menucascade_attr" relcolwidth="2* 3* 1* 1* 1*"><sthead><stentry>Name</stentry><stentry>Description</stentry><stentry>Data Type</stentry><stentry>Default Value</stentry><stentry>Required?</stentry></sthead><strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts"><stentry/><stentry/><stentry/><stentry/><stentry/></strow><strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts"><stentry/><stentry/><stentry/><stentry/><stentry/></strow><strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey"><stentry/><stentry/><stentry/><stentry/><stentry/></strow></simpletable></section></refbody></reference>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="body2map2" xml:lang="en-us">
+<title>Basic map elements</title>
+<shortdesc>DITA maps are built from a few core elements that are used
+for referencing and organizing topics. The &lt;topicmeta> element
+is also available to specify metadata for the map, for individual
+topics, or for groups of topics. Many elements inside &lt;topicmeta>
+are also available inside the topic prolog.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Map elements</indexterm></keywords>
+</metadata></prolog>
+<refbody></refbody>
+</reference><?Pub Caret -3?>
+<?Pub *0000000945?>

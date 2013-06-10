@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="sectiondiv" xml:lang="en-us">
+<title>sectiondiv</title>
+<shortdesc>The &lt;<keyword>sectiondiv</keyword>> element allows logical
+grouping of content within a <keyword>section</keyword>. There is
+no additional meaning associated with the <keyword>sectiondiv</keyword> element,
+aside from its function as a container for other content. The <keyword>sectiondiv</keyword> element
+does not contain a title; the lowest level of titled content within
+a topic is the section itself. If additional hierarchy is required,
+nested topics should be used in place of the section.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>sectiondiv</indexterm><indexterm>Topic elements<indexterm>sectiondiv</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The <keyword>sectiondiv</keyword> element nests itself, which
+means that it will often be used by specializers to create structured
+information within sections. Another common use case for the sectiondiv
+element is to group a sequence of related elements for reuse, so that
+another topic may reference the entire set with a single conref attribute.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-sectiondiv/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="sectiondiv-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-sectiondiv/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="sectiondiv-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/sectiondiv </p></section>
+<example id="example"><title>Example</title><p>In the example below,
+the sectiondiv element is used to group content that may be reused
+in other situations.</p><codeblock>&lt;section>
+  &lt;title>Nice pets&lt;/title>
+  &lt;sectiondiv id="smallpets">
+    &lt;p>Cats are nice.&lt;/p>
+    &lt;p>Dogs are nice.&lt;/p>
+    &lt;p>Friends of mine really love their hedgehogs.&lt;/p>
+  &lt;/sectiondiv>
+  &lt;sectiondiv id="biggerpets">
+    &lt;p>Lots of people want ponies when they grow up.&lt;/p>
+    &lt;p>Llamas are also popular.&lt;/p>
+  &lt;/sectiondiv>
+&lt;/section></codeblock><?Pub Caret 168?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="sectiondiv_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003616?>

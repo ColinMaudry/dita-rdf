@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="booktitlealt" xml:lang="en-us">
+<title>booktitlealt</title>
+<shortdesc>The &lt;booktitlealt&gt; element contains the
+alternative title, subtitle, or short title for a book. It may be
+specialized into a specific element for those or other purposes.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Bookmap elements<indexterm>booktitlealt</indexterm></indexterm>
+<indexterm>booktitlealt</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-booktitlealt/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="booktitlealt-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-booktitlealt/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="booktitlealt-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/ph bookmap/booktitlealt </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;bookmap>
+  &lt;booktitle>
+    &lt;mainbooktitle>This is my big and fancy book&lt;/mainbooktitle>
+    &lt;booktitlealt>Shorter title&lt;/booktitle>
+  &lt;/booktitle><?Pub Caret?>
+  &lt;!-- ... -->
+&lt;/bookmap></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="booktitlealt_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

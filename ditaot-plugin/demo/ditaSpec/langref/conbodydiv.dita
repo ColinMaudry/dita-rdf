@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="conbodydiv" xml:lang="en-us">
+<title>conbodydiv</title>
+<shortdesc>The &lt;<keyword>conbodydiv</keyword>> element is similar
+to the &lt;bodydiv> element in that it provides an informal container
+for content that may be grouped within a concept. There are no additional
+semantics attached to the conbodydiv element; it is purely a grouping
+element provided to help organize content. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>conbodydiv</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>The parent &lt;conbody> element has a restriction that sections
+or examples can only be followed by other sections or examples. The &lt;conbodydiv>
+element, which allows groupings of sections and examples, keeps the
+same restriction in place; once used, only sections, examples, or
+other &lt;conbodydiv> groups are allowed.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-conbodydiv/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="conbodydiv-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-conbodydiv/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="conbodydiv-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/bodydiv concept/conbodydiv </p></section>
+<example id="example"><title>Example</title><p>One common use case
+for the &lt;conbodydiv> element is to group a sequence of sections
+for reuse, so that another concept may reference the entire set with
+a single conref attribute.</p><codeblock>&lt;concept id="sample" xml:lang="en">
+ &lt;title>Conbodydiv example&lt;/title>
+ &lt;shortdesc>This concept is a sample of how to
+use conbodydiv.&lt;/shortdesc>
+ &lt;conbody>
+  &lt;p>Introduce the example.&lt;/p>
+  &lt;p>Next group some sections that may be reused elsewhere.&lt;/p>
+  &lt;conbodydiv id="my_conbodydiv">
+   &lt;section>&lt;title>First&lt;/title> ... &lt;/section>
+   &lt;section>&lt;title>Second&lt;/title> ... &lt;/section>
+  &lt;/conbodydiv>
+ &lt;/conbody>
+&lt;/concept></codeblock></example><?Pub Caret -2?>
+<section id="attributes"><title>Attributes</title><simpletable
+id="conbodydiv_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003518?>

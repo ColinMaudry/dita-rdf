@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="id" xml:lang="en-us">
+ <title>DITA<?Pub Caret?> addressing</title>
+ <shortdesc><ph id="shortdesc"> DITA provides a number of facilities for establishing relationships
+   among DITA elements and between DITA elements and non-DITA resources. All DITA relationships use
+   the same addressing facilities irrespective of the semantics of the relationship established.
+   DITA addresses are either direct, URI-based addresses, or indirect key-based addresses. Within
+   DITA documents, individual elements are addressed by unique IDs specified on the common @id
+   attribute. DITA defines two fragment identifier syntaxes for addressing DITA elements, one for
+   topics and elements within maps and one for non-topic elements within topics.</ph></shortdesc>
+</concept>
+<?Pub *0000004302?>

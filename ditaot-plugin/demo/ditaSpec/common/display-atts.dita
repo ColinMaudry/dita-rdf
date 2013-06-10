@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="display-atts" xml:lang="en-us">
+ <title>display-atts attribute group</title>
+ <shortdesc>The "display-atts" attribute group includes attributes whose values may be used for
+  affecting the display of a topic or element.</shortdesc>
+ <prolog>
+  <metadata>
+   <keywords>
+    <indexterm>%display-atts</indexterm>
+    <indexterm>Commonly referenced attribute
+     descriptions<indexterm>display-atts</indexterm></indexterm>
+   </keywords>
+  </metadata>
+ </prolog>
+ <refbody>
+  <!-- Moved the following description of @pgwide into the @expanse row -->
+  <!--<section>
+<p id="pgwide-explan">In DITA tables, in place of the <apiname>expanse</apiname> attribute
+used by other DITA elements, the <apiname>pgwide</apiname> attribute is used
+instead, to conform with the OASIS Exchange Table Model. This attribute has
+a similar semantic (1=page width; 0=resize to galley or column).</p>
+</section>-->
+  <section>
+   <title>Attributes</title>
+   <simpletable id="display-atts_attr" relcolwidth="1* 3* 1* 1* 1*">
+    <sthead>
+     <stentry>Name</stentry>
+     <stentry>Description</stentry>
+     <stentry>Data Type</stentry>
+     <stentry>Default Value</stentry>
+     <stentry>Required?</stentry>
+    </sthead>
+    <strow conref="commonLRdefs.dita#commonLRdefs/scale">
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+    </strow>
+    <strow conref="commonLRdefs.dita#commonLRdefs/frame">
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+    </strow>
+    <strow conref="commonLRdefs.dita#commonLRdefs/expanse">
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+    </strow>
+   </simpletable>
+  </section>
+  <example>
+   <title>Example</title>
+   <p>The "display-atts" attribute group is used within the DITA DTDs and schemas as a common
+    definition for attributes that affect presentation of certain elements. A typical example might
+    be:</p>
+   <?Pub Caret 176?>
+   <codeblock>&lt;codeblock scale="90" frame="topbot" expanse="page">
+/* a long sample program */
+Do forever
+  Say "Hello, World"
+End
+&lt;/codeblock></codeblock>
+  </example>
+ </refbody>
+</reference>
+<?Pub *0000002550?>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="longquoteref" xml:lang="en-us">
+<title>longquoteref</title>
+<shortdesc>The &lt;<keyword>longquoteref</keyword>> element provides
+a reference to the source of a long quote. The long quote (&lt;lq>)
+element itself allows an href attribute to specify the source of a
+quote, but it does not allow other standard linking attributes such
+as keyref, scope, and format. The &lt;longquoteref> element should
+be used for references that make use of these attributes.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>longquoteref</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><draft-comment>The following comment added based on a review
+request that we provide processing information.</draft-comment>Rendering
+of this element is left up to DITA processors. Depending on the presentation
+format, it may be appropriate to ignore the element, present it as
+a link, use it to turn the entire quote into a link, or do something
+else.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-longquoteref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="longquoteref-contains"></xref></p></section><?Pub Caret -2?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-longquoteref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="longquoteref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/longquoteref </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;p>A great person once said the following thing.
+&lt;lq>Examples are the key to any
+specification.&lt;longquoteref href="http://www.example.org/quotes" scope="external"/>&lt;/lq>&lt;/p></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003819?>

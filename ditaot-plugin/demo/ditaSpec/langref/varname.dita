@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="varname" xml:lang="en-us"><?Pub Caret1?>
+<title>varname</title>
+<shortdesc>The variable name (&lt;<keyword>varname</keyword>&gt;)
+element defines a variable that must be supplied to a software application.
+The variable name element is very similar to the variable (var) element,
+but variable name is used outside of syntax diagrams. This element
+is part of the DITA software domain, a special set of DITA elements
+designed to document software tasks, concepts and reference information.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>varname (variable name)</indexterm><indexterm>variable
+name (varname)</indexterm><indexterm>Software elements<indexterm>varname
+(variable name)</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-varname/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="varname-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-varname/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="varname-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword sw-d/varname </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;filepath&gt;
+  &lt;varname&gt;install-dir&lt;/varname&gt;\projects\working\&lt;varname&gt;project-dir&lt;/varname&gt;
+       \source\&lt;varname&gt;filename&lt;/varname&gt;.java
+&lt;/filepath&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="varname_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="link" xml:lang="en-us">
+<title>link</title>
+<shortdesc>The &lt;<keyword>link</keyword>&gt; element defines a relationship
+to another topic. <ph>Links are typically sorted when displayed
+based on their attributes, which define the type or role of the link&apos;s
+target in relation to the current topic.</ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>link</indexterm><indexterm>Related Links elements<indexterm>link</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The optional container elements for link (&lt;linkpool> and &lt;linklist>)
+allow authors to define groups with common attributes or to preserve
+the authored sequence of links on output. <ph id="1.1">Links placed
+in a &lt;linkpool> may be rearranged or removed for display purposes
+(combined with other local or map-based links); links in a &lt;linklist>
+should be displayed in the order they are defined. Refer to those
+elements for additional explanation.</ph></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-link/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="link-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-link/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="link-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/link </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;related-links&gt;
+  &lt;linkpool type="concept"&gt;
+    &lt;link href="czez.dita#czez" role="next">&lt;/link>
+    &lt;link href="czunder.dita">&lt;/link>
+    &lt;link format="html" href="czover.htm#sqljsupp" role="parent"&gt;
+      &lt;linktext>Overview of the CZ&lt;/linktext>
+    &lt;/link>
+    &lt;link format="html" href="czesqlj.htm#sqljemb"&gt;
+      &lt;linktext>Working with CZESQLJ&lt;/linktext>
+      &lt;desc>When you work with CZESQLJ, you need to know...&lt;/desc>
+    &lt;/link>
+  &lt;/linkpool&gt;
+&lt;related-links&gt;
+</codeblock><?Pub Caret 419?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="link_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/query">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/otherrole">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004682?>

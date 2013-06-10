@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ditaspec" xml:lang="en-us">
+ <title>Introduction</title>
+ <shortdesc>The Darwin Information Typing Architecture (DITA) 1.2 specification defines a set of
+  document types for authoring and organizing topic-oriented information, as well as a set of
+  mechanisms for combining, extending, and constraining document types.</shortdesc>
+ <conbody>
+  <section>
+   <p>The DITA 1.2 specification consists of the following components:<dl>
+     <dlentry>
+      <dt>Document Type Definitions (DTDs) and XML Schemas (XSDs)</dt>
+      <dd>The DTDs and XSDs – along with the catalog files – define DITA markup for the DITA
+       vocabulary modules and DITA document types. While the DTDs and XSDs should define the same
+       DITA elements, the DTDs are normative if there is a discrepancy. <ph id="1.2.3"
+        ><?Pub Caret?>If there is a discrepancy between the written specification (this document)
+        and the DTDs, the written specification takes precedence.</ph></dd>
+     </dlentry>
+     <dlentry>
+      <dt>DITA 1.2 written specification</dt>
+      <dd>
+       <p>While the DITA 1.2 documentation does contain some introductory information, it is
+        intended neither as an introduction to DITA nor as a users guide. The intended audience of
+        this documentation consists of implementers of the DITA standard, including tool developers
+        and XML architects who develop specializations. The documentation contains several parts:<ul>
+         <li>Architectural specification</li>
+         <li>Language reference</li>
+         <li>Conformance statement</li>
+         <li>Appendices</li>
+        </ul></p>
+       <p>The DITA 1.2 written specification is available in the following formats: XHTML, CHM, PDF,
+        and DITA source. The XHTML version is authoritative.</p>
+      </dd>
+     </dlentry>
+    </dl></p>
+  </section>
+ </conbody>
+</concept>
+<?Pub *0000006598?>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="thescopeattribute" xml:lang="en-us">
+<title>The scope attribute</title>
+<shortdesc>The scope attribute identifies the closeness of the relationship
+between the current document and the target resource.</shortdesc><?Pub
+Caret?>
+<refbody>
+<section><ul>
+<li>Set scope to local when the resource is part of the current set
+of content.</li>
+<li>Set scope to peer when the resource is part of the current set
+of content but is not accessible at build time. An implementation
+may choose to open such resources in the same browser window to distinguish
+them from those with scope set to external.</li>
+<li>Set scope to external when the resource is not part of the current
+information set and should open in a new browser window.</li>
+<li>See <xref href="ditauseconreftarget.dita"></xref> for more information
+on -dita-use-conref-target.</li>
+</ul><p><ph conref="commonLRdefs.dita#commonLRdefs/may-inherit"></ph> The
+processing default is local.</p></section>
+</refbody>
+</reference>

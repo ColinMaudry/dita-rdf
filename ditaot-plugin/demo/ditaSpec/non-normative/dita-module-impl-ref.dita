@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dita-module-impl" xml:lang="en-US">
+  <title>DITA module and shell implementation reference</title>
+  <shortdesc>(Non-normative) The DITA standard defines a set of base types and vocabulary modules
+    and a set of specialized map types, topic types, and domains. </shortdesc>
+</topic>

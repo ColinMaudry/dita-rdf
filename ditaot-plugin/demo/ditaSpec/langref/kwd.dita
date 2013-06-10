@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="kwd" xml:lang="en-us">
+<title>kwd</title>
+<shortdesc>The &lt;<keyword>kwd</keyword>&gt; element defines a keyword
+within a syntax diagram. A keyword must be typed or output, either
+by the user or application, exactly as specified in the syntax definition. <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>kwd (syntax diagram keyword)</indexterm><indexterm>Programming
+elements<indexterm>kwd (syntax diagram keyword)</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-kwd/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="kwd-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-kwd/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="kwd-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/keyword pr-d/kwd </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">&lt;syntaxdiagram frame="bottom"&gt;
+ &lt;title&gt;CopyFile&lt;/title&gt;
+ &lt;groupseq&gt;<b>&lt;kwd&gt;</b>COPYF<b>&lt;/kwd&gt;</b>&lt;/groupseq&gt;
+ &lt;groupcomp&gt;&lt;var&gt;input-filename&lt;/var&gt;<b>&lt;kwd&gt;</b>*INFILE<b>&lt;/kwd&gt;</b>&lt;/groupcomp&gt;
+ &lt;groupseq&gt;&lt;var&gt;output-filename&lt;/var&gt;<b>&lt;kwd&gt;</b>*OUTFILE<b>&lt;/kwd&gt;</b>&lt;/groupseq&gt;
+ &lt;groupchoice&gt;&lt;var&gt;input-filename&lt;/var&gt;<b>&lt;kwd&gt;</b>*INFILE<b>&lt;/kwd&gt;</b>&lt;/groupchoice&gt;
+ &lt;groupchoice&gt;&lt;var&gt;output-filename&lt;/var&gt;<b>&lt;kwd&gt;</b>*OUTFILE<b>&lt;/kwd&gt;</b>&lt;/groupchoice&gt;
+&lt;/syntaxdiagram&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="kwd_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/importance-var">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/props">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/platform">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/product">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/audience">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/otherprops">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/rev">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/status">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004911?>

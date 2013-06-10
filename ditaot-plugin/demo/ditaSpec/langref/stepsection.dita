@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="stepsection" xml:lang="en-us">
+<title>stepsection</title>
+<shortdesc>The &lt;<keyword>stepsection</keyword>> element provides
+expository text before a step element. Although the element is specialized
+from &lt;li> and has the same content model as a list item, it is
+not intended to represent a step in a task.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>stepsection</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><note>DITA applications which render &lt;stepsection> elements
+among the &lt;step> elements must provide a way to number the steps
+without numbering the &lt;stepsection> elements (although this does
+not need to be the only or default presentation).</note><?Pub Caret 154?></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-stepsection/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="stepsection-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-stepsection/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="stepsection-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/li task/stepsection </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;steps>
+  &lt;step>&lt;cmd>Get out a bowl&lt;/cmd>&lt;/step>
+  &lt;stepsection>The next two steps are very important!&lt;/stepsection>
+  &lt;step>&lt;cmd>Put on safety gloves&lt;/cmd>&lt;/step>
+  &lt;step>&lt;cmd>Put on goggles&lt;/cmd>&lt;/step>
+  &lt;step>&lt;cmd>Pour milk and cereal into the bowl&lt;/cmd>&lt;/step>
+&lt;/steps></codeblock><p>The sample above would typically be rendered
+with "Get out a bowl" as step number one, "Put on safety gloves" as
+step number two, and "The next two steps are very important!" as an
+unnumbered item in between the first two items.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003269?>

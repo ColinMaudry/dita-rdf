@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="chunking" xml:lang="en-us">
+   <title>Chunking</title>
+   <shortdesc>Content may be chunked (divided or merged into new output documents) in different ways
+      for the purposes of authoring, for delivering content, and for navigation. For example,
+      something best authored as a set of separate topics may need to be delivered as a single Web
+      page. A map author can use the chunk attribute to split up multi-topic documents into
+      component topics or combine multiple topics into a single document as part of output
+      processing.</shortdesc>
+   <conbody>
+      <example>
+         <title>Examples of use</title>
+         <p>Here are some examples of potential uses of the chunk attribute:</p>
+         <dl>
+            <dlentry>
+               <dt>Reuse of a nested topic</dt>
+               <dd>A content provider creates a set of topics as a single document. Another user
+                  wants to incorporate only one of the nested topics from the document. The new user
+                  can reference the nested topic from a DITA map, using the chunk attribute to
+                  specify that the topic should be produced in its own document.</dd>
+            </dlentry>
+            <dlentry>
+               <dt>Identification of a set of topics as a unit</dt>
+               <dd>A curriculum developer wants to compose a lesson for a SCORM LMS (Learning
+                  Management System) from a set of topics without constraining reuse of those
+                  topics. The LMS can save and restore the learner&apos;s progress through the
+                  lesson if the lesson is identified as a referenceable unit. The curriculum
+                  developer defines the collection of topics with a DITA map, using the chunk
+                  attribute to identify the learning module as a unit before generating the SCORM
+                  manifest. </dd>
+            </dlentry>
+         </dl>
+      </example>
+      <section>
+         <title>Using the chunk attribute</title>
+         <p>When a set of topics is processed for output using a map, the map author may use the
+            chunk attribute to override whatever default chunking behavior is set by the processor.
+            The chunk attribute allows the map author to request that multi-topic documents be be
+            broken into multiple documents, and that multiple individual topics be combined into a
+            single document.</p>
+         <p>Chunking is necessarily output processor specific with chunked output required for some
+            and not supported for other types of output. Chunking is also implementation specific
+            with some implementations supporting some, but not all, chunking methods, or adding new
+            implementation specific chunking methods to the standard methods described in this
+            specification. </p>
+         <p>The value of the chunk attribute consists of one or more space delimited
+            tokens. Tokens are defined in three categories: for selecting topics, for setting
+            chunking policies, and for defining how the chunk values impact rendering. It is an
+            error to use two tokens from the same category on a single topicref element.<dl>
+               <dlentry>
+                  <dt>Selecting topics</dt>
+                  <dd>These values describe what portion of a target document is referenced. Such
+                     tokens are only useful when addressing a document that is made up of multiple
+                     topics. These values are ignored when the element on which they are specified
+                     does not reference a topic. Recognized values include:<ul
+                        id="ul_a54387c0-37ce-4321-9214-89228cacbf2e">
+                        <li><b><codeph>select-topic</codeph></b>: The "select-topic" token is used
+                           to select an individual topic without any ancestors, descendents, or
+                           peers from within the same document.</li>
+                        <li><b><codeph>select-document</codeph></b>: The "select-document" token is
+                           used to select the target topic together with all ancestors, descendents,
+                           and peers within the target document.</li>
+                        <li><b><codeph>select-branch</codeph></b>: The "select-branch" token is used
+                           to select the target topic together with its descendents.</li>
+                     </ul></dd>
+               </dlentry>
+               <dlentry>
+                  <dt>Policies for splitting or combining documents</dt>
+                  <dd>Two tokens are defined for setting chunking policies. Each token applies only
+                     to the current topicref or topicref specialization, except when used on the map
+                     element, in which case the value establishes a policy for the entire map.<ul
+                        id="ul_32c4e9a4-a3ed-4338-9ffb-d3a2d52fa563">
+                        <li><b><codeph>by-topic</codeph></b>: The "by-topic" token establishes a
+                           policy for the current topicref (or topicref specialization) where a
+                           separate output chunk is produced for each of the selected topics. </li>
+                        <li><b><codeph>by-document</codeph></b>: The "by-document" token establishes
+                           a policy for the current topicref (or topicref specialization) where a
+                           single output chunk is produced for the referenced topic or topics. </li>
+                     </ul></dd>
+               </dlentry>
+               <dlentry>
+                  <dt>Rendering the selection</dt>
+                  <dd>The following tokens affect how the chunk values impact rendering of the map
+                     or topics.<ul id="ul_5fc069d4-ac12-4ab1-9d55-bedca81b8daf">
+                        <li><b><codeph>to-content</codeph></b>: The "to-content" token indicates
+                           that the selection should be rendered as a new chunk of content. <ul
+                              id="ul_9308eb24-c3e3-4add-9f54-5f0aefd08b6e">
+                              <li>When specified on a topicref or topicref specialization, this
+                                 means that the topics selected by this topicref and its children
+                                 will be rendered as a single chunk of content.</li>
+                              <li>When specified on the map element, this indicates that the
+                                 contents of all topics referenced by the map are to be rendered as
+                                 a single document.</li>
+                              <li>When specified on a topicref or topicref specialization that
+                                 contains a title but no target, this indicates that a title-only
+                                 topic must be generated in the rendered result, along with any
+                                 topics referenced by child topicrefs (and topicref specializations)
+                                 of this topicref. The rendition address of the generated topic is
+                                 determined as defined for the copy-to attribute. If the copy-to
+                                 attribute is not specified and the topicref has no id attribute,
+                                 the address of the generated topic is not required to be
+                                 predictable or consistent across rendition instances.</li>
+                           </ul><p>For cross references to topicref elements, if the value of the
+                              chunk attribute is "to-content" or is unspecified, the cross reference
+                              is treated as a reference to the target topic. If the reference is to
+                              a topicref with no target, it is treated as a reference to the
+                              generated title-only topic.</p></li>
+                        <li><b><codeph>to-navigation</codeph></b>: The "to-navigation" token
+                           indicates that a new chunk of navigation should be used to render the
+                           current selection (such as an individual Table of Contents or related
+                           links). When specified on the map element, this token indicates that the
+                           map should be presented as a single navigation chunk. If a cross
+                           reference is made to a topicref that has a title but no target, and the
+                           chunk value of that topicref is set to "to-navigation", the resulting
+                           cross reference is treated as a reference to the rendered navigation
+                           document (such as an entry in the table of contents).</li>
+                     </ul></dd>
+               </dlentry>
+            </dl></p>
+         <p>Some tokens or combinations of tokens may not be appropriate for all output types. When
+            unsupported or conflicting tokens are encountered during output processing, warning or
+            error messages should be produced. Recovery from such conflicts or other errors is
+            implementation dependent. </p>
+         <p>There is no default value for the chunk attribute and the chunk attribute does not
+            cascade from container elements, meaning that the chunk value on one topicref is not
+            passed to its children. A default by-xxx policy for an entire map may be established by
+            setting the chunk attribute on the map element, which will apply to any topicref that
+            does not specify its own by-xxx policy.</p>
+         <p>When no chunk attribute values are given, chunking behavior is implementation dependent.
+            When variations of this sort are not desired, a default for a specific map may be
+            established by including a chunk attribute value on the map element. </p>
+         <p>When creating new documents via chunk processing, the storage object name or identifier
+            (if relevant) is determined as follows:<ol id="ol_8eabafe8-d24f-4782-9d4d-4ae7085e3c3e">
+               <li>If an entire map is used to generate a single chunk (by placing
+                  to-content on the map element), the name is taken from the name of the map.</li>
+               <li>If the @copy-to attribute is specified, the name is taken from the @copy-to
+                  attribute.</li>
+               <li>If @copy-to is not specified and the by-topic policy is in effect, the name is
+                  taken from the @id attribute of the topic.</li>
+               <li>If @copy-to is not specified and the by-document policy is in effect, the name is
+                  taken from the name of the referenced document.</li>
+            </ol></p>
+      </section>
+      <example>
+         <title>Examples </title>
+         <p>In the examples below, an extension of ".xxxx" is used in place of the actual
+            extensions that will vary by output format. For example, when the output format is HTML,
+            the extension may actually be ".html", but this is not required.</p>
+         <p>The examples below assume the existence of the following files:<ul
+               id="ul_51f70fb1-03f5-460c-8990-6614b124ecc2">
+               <li>parent1.dita, parent2.dita, etc., each containing a single topic with id P1, P2,
+                  etc.</li>
+               <li>child1.dita, child2.dita, etc., each containing a single topic with id C1, C2,
+                  etc.</li>
+               <li>grandchild1.dita, grandchild2.dita, etc., each containing a single topic with id
+                  GC1, GC2, etc.</li>
+               <li>nested1.dita, nested2.dita, etc., each containing two topics: parent topics with
+                  id N1, N2, etc., and child topics with ids N1a, N2a, etc.</li>
+               <li>ditabase.dita, with the following
+                  contents:<codeblock>&lt;dita xml:lang="en-us">
+  &lt;topic id="X">
+    &lt;title>Topic X&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+  &lt;/topic>
+  &lt;topic id="Y">
+    &lt;title>Topic Y&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+    &lt;topic id="Y1">
+      &lt;title>Topic Y1&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+      &lt;topic id="Y1a">
+       &lt;title>Topic Y1a&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+      &lt;/topic>
+    &lt;/topic>
+    &lt;topic id="Y2">
+      &lt;title>Topic Y2&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+    &lt;/topic>
+  &lt;/topic>
+  &lt;topic id="Z">
+    &lt;title>Topic Z&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+    &lt;topic id="Z1">
+      &lt;title>Topic Z1&lt;/title>&lt;body>&lt;p>content&lt;/p>&lt;/body>
+    &lt;/topic>
+  &lt;/topic>
+&lt;/dita></codeblock></li>
+            </ul></p>
+         <ol id="ol_ecc1e554-0573-4210-be1d-610940157305">
+            <li>The following map causes the entire map to generate a single output
+               chunk.<codeblock>&lt;map chunk="to-content"> 
+   &lt;topicref href="parent1.dita"> 
+      &lt;topicref href="child1.dita"/> 
+      &lt;topicref href="child2.dita"/> 
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map will generate a separate chunk for every topic in every
+               document referenced by the map. In this case, it will result in the topics P1.xxxx,
+               N1.xxxx, and
+               N1a.xxxx.<codeblock>&lt;map chunk="by-topic"> 
+   &lt;topicref href="parent1.dita"> 
+      &lt;topicref href="nested1.dita"/> 
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map will generate two chunks: parent1.xxxx will contain only topic P1,
+               while child1.xxxx will contain topic C1, with topics GC1 and GC2 nested within
+               C1.<codeblock>&lt;map> 
+   &lt;topicref href="parent1.dita"> 
+      &lt;topicref href="child1.dita" chunk="to-content"> 
+        &lt;topicref href="grandchild1.dita"/>
+        &lt;topicref href="grandchild2.dita"/>
+      &lt;/topicref>
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map breaks down portions of ditabase.dita into three chunks. The first
+               chunk Y.xxxx will contain only the single topic Y. The second chunk Y1.xxxx will
+               contain the topic Y1 along with its child Y1a. The final chunk Y2.xxxx will contain
+               only the topic Y2. For navigation purposes, the chunks for Y1 and Y2 are still nested
+               within the chunk for
+               Y.<codeblock>&lt;map>
+  &lt;topicref href="ditabase.dita#Y" copy-to="Y.dita"
+            chunk="to-content select-topic">
+    &lt;topicref href="ditabase.dita#Y1" copy-to="Y1.dita"
+              chunk="to-content select-branch"/>
+    &lt;topicref href="ditabase.dita#Y2" copy-to="Y2.dita"
+              chunk="to-content select-topic"/>
+  &lt;/topicref>
+&lt;/map></codeblock></li>
+            <li>The following map will produce a single output chunk named parent1.xxxx, containing
+               topic P1, with topic Y1 nested within P1, but without topic
+               Y1a.<codeblock>&lt;map chunk="by-document"> 
+   &lt;topicref href="parent1.dita" chunk="to-content"> 
+      &lt;topicref href="ditabase.dita#Y1" 
+         chunk="select-topic"/> 
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map will produce a single output chunk, parent1.xxxx, containing topic
+               P1, topic Y1 nested within P1, and topic Y1a nested within
+               Y1.<codeblock>&lt;map chunk="by-document"> 
+   &lt;topicref href="parent1.dita" chunk="to-content"> 
+      &lt;topicref href="ditabase.dita#Y1" 
+         chunk="select-branch"/> 
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map will produce a single output chunk, P1.xxxx. The topic P1 will be
+               the root topic, and topics X, Y, and Z (together with their descendents) will be
+               nested within topic
+               P1.<codeblock>&lt;map chunk="by-topic"> 
+   &lt;topicref href="parent1.dita" chunk="to-content"> 
+      &lt;topicref href="ditabase.dita#Y1" 
+         chunk="select-document"/> 
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map will produce a single output chunk named parentchunk.xxxx
+               containing topic P1 at the root. Topic N1 will be nested within P1, and N1a will be
+               nested within
+               N1.<codeblock>&lt;map chunk="by-document"> 
+   &lt;topicref href="parent1.dita" chunk="to-content" copy-to="parentchunk.dita"> 
+      &lt;topicref href="nested1.dita" chunk="select-branch"/> 
+   &lt;/topicref> 
+&lt;/map> </codeblock></li>
+            <li>The following map will produce two output chunks. The first chunk named
+               parentchunk.xxxx will contain the topics P1, C1, C3, and GC3. The "to-content" token
+               on the reference to child2.dita causes that branch to begin a new chunk named
+               child2chunk.xxxx, which will contain topics C2 and
+               GC2.<codeblock>&lt;map chunk="by-document"> 
+   &lt;topicref href="parent1.dita" 
+      chunk="to-content" copy-to="parentchunk.dita"> 
+      &lt;topicref href="child1.dita" chunk="select-branch"/> 
+      &lt;topicref href="child2.dita" 
+         chunk="to-content select-branch" 
+         copy-to="child2chunk.dita"> 
+         &lt;topicref href="grandchild2.dita"/> 
+      &lt;/topicref> 
+      &lt;topicref href="child3.dita"> 
+         &lt;topicref href="grandchild3.dita" 
+            chunk="select-branch"/> 
+      &lt;/topicref> 
+   &lt;/topicref> 
+ &lt;/map> </codeblock></li>
+            <li>The following map produces a single chunk named nestedchunk.xxxx, which contains
+               topic N1 with no topics nested
+               within.<codeblock>&lt;map> 
+   &lt;topicref href="nested1.dita#N1" 
+             copy-to="nestedchunk.dita" 
+             chunk="to-content select-topic"/> 
+&lt;/map> </codeblock></li>
+            <li>The following map will produce two navigation chunks, one for P1, C1, and the other
+               topic references nested under parent1.dita, and a second for P2, C2, and the other
+               topic references nested under
+               parent2.dita.<codeblock>&lt;map> 
+    &lt;topicref href="parent1.dita" 
+          navtitle="How to set up a web server"
+          chunk="to-navigation"> 
+       &lt;topicref href="child1.dita" 
+          chunk="select-branch"/> 
+       &lt;!-- ... -->
+    &lt;/topicref> 
+    &lt;topicref href="parent2.dita" 
+          navtitle="How to ensure database security"
+          chunk="to-navigation"> 
+       &lt;topicref href="child2.dita" 
+          chunk="select-branch"/> 
+       &lt;!-- ... -->
+    &lt;/topicref> 
+    &lt;!-- ... -->
+&lt;/map> 
+  </codeblock></li>
+         </ol>
+      </example>
+      <section>
+         <title>Implementation-specific tokens and future considerations </title>
+         <p>Additional chunk tokens may be added to the DITA Standard in the future. In addition,
+            implementers may define their own custom, implementation-specific tokens. To avoid name
+            conflicts between implementations or with future additions to the standard,
+            implementation-specific tokens should consist of a prefix that gives the name or an
+            abbreviation for the implementation followed by a colon followed by the chunking method
+            name. For example: “acme:level2” could be a token for the Acme DITA Toolkit that
+            requests the “level2” chunking method.</p>
+      </section>
+   </conbody>
+</concept>
+<?Pub *0000016444?>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="groupchoice" xml:lang="en-us">
+<title>groupchoice</title>
+<shortdesc>The &lt;<keyword>groupchoice</keyword>&gt; element is part
+of the subset of elements that define syntax diagrams in DITA. A group
+is a logical set of pieces of syntax that go together. A group choice
+specifies that the user must make a choice about which part of the
+syntax to use. Groups are often nested. <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>groupchoice (group choice)</indexterm>
+<!--
+<indexterm>group choice (groupchoice)</indexterm>
+-->
+<indexterm>Programming elements<indexterm>groupchoice</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-groupchoice/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="groupchoice-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-groupchoice/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="groupchoice-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/figgroup pr-d/groupchoice </p></section>
+<example id="example"><title>Example</title><pre xml:space="preserve">&lt;syntaxdiagram frame="bottom"&gt;
+ &lt;title&gt;CopyFile&lt;/title&gt;
+ &lt;groupseq&gt;&lt;kwd&gt;COPYF&lt;/kwd&gt;&lt;/groupseq&gt;
+ &lt;groupcomp&gt;&lt;var&gt;input-filename&lt;/var&gt;&lt;kwd&gt;*INFILE&lt;/kwd&gt;&lt;/groupcomp&gt;
+ &lt;groupseq&gt;&lt;var&gt;output-filename&lt;/var&gt;&lt;kwd&gt;*OUTFILE&lt;/kwd&gt;&lt;/groupseq&gt;
+ <b>&lt;groupchoice&gt;</b>&lt;var&gt;input-filename&lt;/var&gt;&lt;kwd&gt;*INFILE&lt;/kwd&gt;<b>&lt;/groupchoice&gt;</b>
+ <b>&lt;groupchoice&gt;</b>&lt;var&gt;output-filename&lt;/var&gt;&lt;kwd&gt;*OUTFILE&lt;/kwd&gt;<b>&lt;/groupchoice&gt;</b>
+&lt;/syntaxdiagram&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="groupchoice_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/importance-var">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/props">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/platform">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/product">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/audience">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/otherprops">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/rev">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/status">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000005079?>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="glossAcronym" xml:lang="en-us">
+<title>glossAcronym</title>
+<shortdesc>The &lt;glossAcronym> element defines an acronym as an
+alternate form for the term defined in the &lt;glossterm> element. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>glossAcronym</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><p>This element may be used together with the &lt;abbreviated-form>
+element to display an expanded version of an acronym the first time
+that acronym appears in a set of text. See <xref
+href="abbreviated-form.dita">&lt;abbreviated-form></xref> for <?Pub
+Caret?>information on how the two elements interact.</p><note>Several
+issues arise when acronyms are translated into other languages. For
+example, an acronym in one language may not have an equivalent in
+another language. When acronyms are first displayed, some languages
+will display the expanded form first followed by the acronym in parenthesis,
+while other languages do the reverse. For some acronyms, a translation
+may need to render both the original and the translated version of
+the acronym. For all of these reasons, DITA allows an author or translator
+to control what is presented to a reader by using the &lt;glossSurfaceForm>
+element, which will often accompany the &lt;glossAcronym>. The <xref
+href="abbreviated-form.dita">&lt;abbreviated-form></xref> topic contains
+information on how the &lt;glossSurfaceForm> and &lt;glossAcronym>
+elements affect references to the primary term.</note></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-glossAcronym/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="glossAcronym-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-glossAcronym/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="glossAcronym-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/title concept/title glossentry/glossAcronym </p></section>
+<example conref="glossentry.dita#glossentry/example" id="example"></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="title_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

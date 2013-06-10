@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="object" xml:lang="en-us">
+<title>object</title>
+<shortdesc>DITA's &lt;<keyword>object</keyword>&gt; element
+corresponds to the HTML &lt;<keyword>object</keyword>&gt; element,
+and its attributes' semantics derive from their HTML definitions.
+For example, the <i><keyword>type</keyword></i> attribute differs
+from the type attribute on many other DITA elements.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>object</indexterm><indexterm>Body elements<indexterm>object</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>The &lt;<keyword>object</keyword>&gt; element allows authors
+to include animated images, applets, plug-ins, ActiveX controls, video
+clips, and other multimedia objects in a topic.<!--DITA 1.2 review 3 - removed clause "for rendering after transformation to HTML."--></p><!--<draft-comment>Per the following review comments from
+Paul Grosso: "That is way too prescriptive and implementation-dependent
+to be in the DITA spec and should be deleted." The following paragraph
+was removed from the spec:<p>To support Flash animations and movies,
+the value <filepath>swflash.cab</filepath> is checked in the codebase
+attribute. That enables the OBJECT tag in the HTML to display Flash
+objects in Intenet Explorer. The enable these to display in browsers
+such as NetScape and FireFox, an EMBED tag is also added to the HTML.
+Note that while the Embed tag is required to display these objects,
+the Embed tag is not in the XHTML 1.0 Transitional tag set.</p></draft-comment>--></section><?Pub
+Caret -1?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-object/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="object-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-object/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="object-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/object </p></section>
+<example id="example"><title>Example</title>Output processors may
+need to modify data to enable compatible function across various browsers,
+so these examples are only representative:<pre xml:space="preserve">&lt;p&gt;Cutting the keys from the system unit:&lt;/p&gt;
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/
+flash/swflash.cab#version=6,0,0,0"
+ data="cutkey370.swf"
+ type="application/x-shockwave-flash"
+ height="280"
+ width="370"
+ id="cutkey370"&gt;
+ &lt;desc&gt;A description of the task&lt;/desc&gt;
+ &lt;param name="movie" value="cutkey370.swf"/&gt;
+ &lt;param name="quality" value="high"/&gt;
+ &lt;param name="bgcolor" value="#FFFFFF"/&gt;
+&lt;/object&gt;
+</pre><pre xml:space="preserve">&lt;p&gt;What's EIM?&lt;/p&gt;
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/
+flash/swflash.cab#version=6,0,0,0"
+ data="eim.swf"
+ height="400"
+ width="500"
+ id="eim"&gt;
+ &lt;desc&gt;Some great, glorious info&lt;/desc&gt;
+ &lt;param name="movie" value="eim.swf"/&gt;
+ &lt;param name="quality" value="high"/&gt;
+ &lt;param name="bgcolor" value="#FFFFFF"/&gt;
+ &lt;param name="pluginspace"
+ value="http://www.macromedia.com/go/getflashplayer"/&gt;
+&lt;/object&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="object_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/declare">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classid">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/codebase">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/data">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type-object">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/codetype">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/archive">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/standby">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/height-object">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/width-object">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/usemap">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/name">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/tabindex">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/longdescref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000007220?>

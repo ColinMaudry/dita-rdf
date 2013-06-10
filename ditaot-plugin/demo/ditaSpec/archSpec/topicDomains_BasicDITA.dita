@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="TopicDomains_BasicDITA" xml:lang="en-US">
+<title>Topic domains: Basic DITA</title>
+<shortdesc>A DITA vocabulary domain defines a set of elements associated
+with a particular subject area or authoring requirement regardless
+of topic type. DITA incorporates three domains into the basic DITA
+content: typographic, utilities, and indexing. Other domains are incorporated
+ into the  DITA Technical Content and Learning and Training specializations.</shortdesc>
+<conbody>
+<p>The elements in a domain are defined in a domain module. A domain
+module can be integrated with a topic type to make the domain elements
+available within the topic type structure. The following domains are
+provided as part of basic DITA: </p>
+<table id="table_529082F256B54D629E70B424B7A43053">
+<title>DITA topic domains: Basic DITA</title>
+<tgroup cols="4"><colspec colname="col1" colwidth="54*"/><colspec colname="COLSPEC0" colwidth="136*"/><colspec colname="col2" colwidth="41*"/><colspec colname="col3" colwidth="137*"/>
+<thead>
+<row valign="bottom">
+<entry colname="col1">Domain</entry>
+<entry colname="COLSPEC0">Description</entry>
+<entry colname="col2">Short name</entry>
+<entry colname="col3">Module name</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1">Typographic</entry>
+<entry colname="COLSPEC0">For highlighting when the appropriate semantic element doesn't
+exist yet</entry>
+<entry colname="col2">hi-d</entry>
+<entry colname="col3">                                           
+       <lines>highlightDomain.mod (DTD)
+highlightDomain.xsd (Schema)</lines>         
+                                         </entry>
+</row>
+<row>
+<entry colname="col1">Utilities</entry>
+<entry colname="COLSPEC0">For providing imagemaps and other useful structures </entry>
+<entry colname="col2">ut-d</entry>
+<entry colname="col3">                                           
+       <lines>utilitiesDomain.mod (DTD)
+utilitiesDomain.xsd (Schema)</lines> 
+                                                 </entry>
+</row>
+<row>
+<entry colname="col1">Indexing</entry>
+<entry colname="COLSPEC0">For extended indexing functions such as see and see-also</entry>
+<entry colname="col2">indexing-d</entry>
+<entry colname="col3">                                           
+       <lines>indexingDomain.mod (DTD)
+indexingDomain.xsd (Schema)</lines>  
+                                                </entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</conbody>
+</concept>

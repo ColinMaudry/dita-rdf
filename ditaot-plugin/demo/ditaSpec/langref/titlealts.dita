@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="titlealts" xml:lang="en-us">
+<title>titlealts</title>
+<shortdesc><ph>The &lt;<keyword>titlealts</keyword>> element
+allows the insertion of alternate titles, such as titles that should
+be used in creating a table of contents for navigation or a title
+specific to search results. When the &lt;<keyword>titlealts</keyword>>
+element is absent, the title element is used for all title purposes.</ph><!--Replaced this earlier shortdesc based on review comments
+in draft 3 of the DITA 1.2 spec review:
+The alternate title element (&lt;<keyword>titlealts</keyword>&gt;)
+is optional, but can occur after the topic title. Two elements can
+be inserted as sub-elements of &lt;<keyword>titlealts</keyword>&gt;:
+navigation title &lt;<keyword>navtitle</keyword>&gt; and search title &lt;<keyword>searchtitle</keyword>&gt;.
+--><?Pub Caret -2?></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>titlealts (alternate titles)</indexterm><indexterm>Topic
+elements<indexterm>titlealts</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><!--Removed this text during the third review of DITA 1.2: 
+When your DITA topic is transformed to XHTML, the &lt;<keyword>searchtitle</keyword>&gt;element
+is used to create a title element at the top of the resulting
+XHTML file. This title may differ from the first level heading that
+shows in the main browser window. In HTML output, the &lt;<keyword>navtitle</keyword>&gt;may
+be used to create navigation panels when your DITA topics are
+part of an HTML-based help or information system. The design intent
+is to enable navigation for HTML Help and Eclipse help systems.--></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-titlealts/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="titlealts-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-titlealts/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="titlealts-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/titlealts </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;task id="progexample"&gt;
+   &lt;title&gt;Example of Required Programming&lt;/title&gt;
+      &lt;titlealts&gt;&lt;navtitle&gt;Programming Example&lt;/navtitle&gt;&lt;/titlealts&gt;
+   &lt;taskbody&gt; . . . &lt;/taskbody&gt;
+&lt;/task&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="titlealts_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003851?>

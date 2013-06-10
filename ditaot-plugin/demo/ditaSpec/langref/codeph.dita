@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="codeph" xml:lang="en-us">
+<title>codeph</title>
+<shortdesc>The code phrase (&lt;<keyword>codeph</keyword>&gt;) element
+represents a snippet of code within the main flow of text. The code
+phrase is displayed in a monospaced font for emphasis. <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>codeph (code phrase)</indexterm><indexterm>code
+phrase (codeph)</indexterm><indexterm>Programming elements<indexterm>codeph
+(code phrase)</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-codeph/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="codeph-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-codeph/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="codeph-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/ph pr-d/codeph </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;p&gt;The second line of the sample program code, &lt;codeph&gt;Do forever&lt;/codeph&gt;, 
+represents the start of a loop construct.&lt;/p&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="codeph_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002679?>

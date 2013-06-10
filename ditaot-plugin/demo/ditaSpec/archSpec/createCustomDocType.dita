@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="createCustomDocType" xml:lang="en-us">
+  <title>Configuration (Document type shells)</title>
+  <shortdesc><ph id="shortdesc">A given DITA map or topic document is governed by a DITA document
+      type that defines the set of structural modules (topic or map types), domain modules, and
+      constraints modules that the map or topic can use.</ph></shortdesc>
+  <conbody>
+    <p>The DITA document type is defined entirely by the set of modules declared on the @domains
+      attribute of the document's root element and by the values of the @class attributes of all the
+      elements in the document. If the @domains attribute declares both structural and domain
+      vocabulary modules, then the @domains attribute by itself serves to define the DITA document
+      type. The information on the @domains and @class attributes is sufficient to implement all
+      DITA-defined processing and constraint checking on documents (for example, determining if a
+      referenced element in a content reference has a set of modules compatible with the modules
+      used by the referencing element's document).</p>
+    <p>Thus, DITA <keyword>does not</keyword> require that conforming DITA documents have an
+      associated DTD, XSD, or other formal document type definition as long as all required
+      attributes are explicit in document instances. However, most DITA documents have an associated
+      DTD or XML schema document by which the documents can be validated using normal XML processors
+      and that can provide default values for the @domains and @class attributes, in particular. In
+      addition, while the DITA specification only defines coding requirements for DTDs and XML
+      schema documents, conforming DITA documents <keyword>may</keyword> use other document type
+      constraint languages, such as RelaxNG or Schematron.</p>
+    <p>Per the coding requirements for DITA document types, document type shells are always
+      implemented as a top-level file that only includes and configures vocabulary modules—they
+      never directly define new element or attribute types.</p>
+    <p>Two document type shells define the same DITA document type if they integrate the same set of
+      vocabulary and constraint modules. For example, a shell document type that is an unmodified
+      copy of the OASIS-provided topic document type shell (topic.dtd or topic.xsd) defines the same
+      DITA document type as the original but, because it is a distinct file, has a distinct system
+      identifier (because it is not a replacement for the OASIS-provided shell but a copy of it,
+      which <keyword>must</keyword> be stored in a different location) and <keyword>must</keyword>
+      have a unique public identifier if a public identifier is associated with it. In particular,
+      for document type shells not created by OASIS, the public identifier or URN for the document
+      type shell <keyword>must not</keyword> indicate OASIS as the owner and
+        <keyword>should</keyword> reflect the owner or creator of the document type shell. For
+      example, if example.com creates a copy of the topic.dtd document type shell for its own use,
+      an appropriate public identifier would be "-//example.com//DTD DITA Topic//EN", where
+      "example.com" is the owner identifier component of the public identifier. An appropriate URN
+      would be "urn:example.com:names:dita:xsd:topic.xsd".<note>The public or system identifier
+        associated with a given document type shell is not, by itself, necessarily distinguishing.
+        This is because two different shell document types, owned by different owners, may define
+        the same DITA document type as indicated by the effective value of the @domains
+        attribute.</note></p>
+    <p>While the DITA specification includes a starter set of document type shells for common
+      combinations of modules, those document type shells are not mandatory.</p>
+    <note>Even if an initial implementation does not require configuration, constraint, or
+      specialization, it can be useful to create new shell document types. That way, if modification
+      is required in the future, documents will not need to be modified to point to a new shell
+      document type.</note>
+    <p>DITA document type shells <keyword>must</keyword> follow the <ph rev="public-review-1">coding
+        requirements</ph> defined in this specification. This ensures consistency of implementation
+      and also serves to make the task of creating document type shells almost entirely
+      mechanical.</p>
+  </conbody>
+</concept>
+<?Pub *0000002526?>

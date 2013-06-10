@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="keywords" xml:lang="en-us">
+ <title>keywords</title>
+ <shortdesc>The &lt;keywords> element contains a list of terms from a controlled or uncontrolled
+  subject vocabulary that applies to the topic or map. The keywords may be used by a search engine.
+  The keywords are marked up using the &lt;indexterm> and/or &lt;keyword> elements.</shortdesc>
+ <prolog>
+  <metadata>
+   <keywords><indexterm>keywords</indexterm><indexterm>Prolog elements<indexterm
+      >keywords</indexterm></indexterm>
+    <indexterm>Map elements<indexterm>keywords</indexterm></indexterm>
+   </keywords>
+  </metadata>
+ </prolog>
+ <refbody><section>
+   <p>All &lt;keyword> and/or &lt;indexterm> elements in the &lt;keywords> element are considered
+    part of the topic's metadata and should be reflected in the output as appropriate for the output
+     medium.<note>While the &lt;<xref href="keyword.dita">keyword</xref>> element may be
+     used inline, the &lt;keywords> element is not an inline element. The &lt;keywords> element only
+     appears in the &lt;topicmeta> or &lt;prolog>, and is used to specify keywords that apply to the
+     topic.</note></p>
+  </section><section conref="../common/commonNavLibraryTable.dita#contentmodel-keywords/contains"
+   id="contains" otherprops="contains">
+   <title>Contains</title>
+   <p>The content model of this element may differ based on where it is used. Content model
+    information is located here: <xref keyref="keywords-contains"/></p>
+  </section><section conref="../common/commonNavLibraryTable.dita#contentmodel-keywords/containedby"
+   id="containedby" otherprops="containedby">
+   <title>Contained By</title>
+   <p>The parents of this element may differ based on where it is used. Content model information is
+    located here: <xref keyref="keywords-contained-by"/></p>
+  </section><section id="inheritance" otherprops="inheritance">
+   <title>Inheritance</title>
+   <p>- topic/keywords </p>
+  </section>
+  <example id="example">
+   <title>Example</title>
+   <p>The following example is metadata from an installation task:</p>
+   <codeblock xml:space="preserve">&lt;prolog&gt;
+ &lt;metadata>
+  &lt;keywords&gt;
+   &lt;keyword&gt;installing&lt;/keyword&gt;
+   &lt;keyword&gt;uninstalling&lt;/keyword&gt;
+   &lt;keyword&gt;prerequisites&lt;/keyword&gt; 
+   &lt;keyword&gt;helps&lt;/keyword&gt;
+   &lt;keyword&gt;wizards&lt;/keyword&gt;
+  &lt;/keywords&gt;
+ &lt;/metadata>
+&lt;/prolog&gt;</codeblock>
+  </example>
+  <section id="attributes">
+   <title>Attributes</title>
+   <simpletable id="keywords_attr" relcolwidth="2* 3* 1* 1* 1*">
+    <sthead>
+     <stentry>Name</stentry>
+     <stentry>Description</stentry>
+     <stentry>Data Type</stentry>
+     <stentry>Default Value</stentry>
+     <stentry>Required?</stentry>
+    </sthead>
+    <strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+    </strow>
+    <strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+    </strow>
+    <strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+     <stentry/>
+    </strow>
+   </simpletable>
+  </section></refbody>
+</reference>

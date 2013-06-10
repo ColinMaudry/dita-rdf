@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<map title="DITA 1.2 Architectural Specification: Technical Content Version" xml:lang="en-us">
+ <topicref href="dita-1.2_technicalContent_overview.dita"
+  navtitle="Overview of the DITA 1.2 Specification: Technical Content"/>
+ <topicref href="dita_technicalContent_InformationTypes.dita"
+  navtitle="Technical content: Information types" collection-type="sequence">
+  <topicref href="dita_concept_topic.dita" navtitle="Concept topic"/>
+  <topicref href="dita_reference_topic.dita" navtitle="Reference topic"/>
+  <topicref href="dita_generic_task_topic.dita" navtitle="General task topic"/>
+  <topicref href="dita_task_topic.dita" navtitle="Task topic (strict)"/>
+  <topicref format="dita" href="dita_machinerytask_topic.dita" locktitle="yes"
+   navtitle="Machinery Task topic" scope="local" type="concept"/>
+  <topicref href="dita_glossary_topic.dita" navtitle="Glossary Entry topic"/>
+  <topicref href="dita_glossarygroup_topic.dita" navtitle="Glossary Group topic"
+   ><?Pub Caret?></topicref>
+  <topicref href="dita_spec_intro_bookmap.dita" navtitle="Bookmap"/>
+ </topicref>
+ <topicref href="dita_technicalContent_TopicDomains.dita"
+  navtitle="Topic domains: Technical content"/>
+ <topicref href="xNALDomain.dita" navtitle="The xNAL domain"/>
+</map>
+<?Pub *0000001478?>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="DITA maps" xml:lang="en-us">
+<topicref href="ditamaps.dita" navtitle="DITA maps" collection-type="sequence">
+ <topicref href="definition-of-ditamaps.dita" navtitle="Definition of DITA maps"/>
+ <topicref href="purpose-of-ditamaps.dita" navtitle="Purpose of DITA maps"/>
+ <topicref href="ditamap-elements.dita" navtitle="DITA map elements"/>
+ <topicref href="ditamap-attributes.dita" navtitle="DITA map attributes"/>
+ <topicref href="subjectSchema.dita" navtitle="subjectSchema"/>
+</topicref>
+</map>

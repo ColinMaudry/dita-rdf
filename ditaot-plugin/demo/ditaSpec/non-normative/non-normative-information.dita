@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd">
+<concept id="non-normative-information" outputclass="appendix">
+    <title>Non-normative information</title>
+    <shortdesc>This section contains non-normative information, including topics about new features
+        in DITA 1.2 and migrating from DITA 1.1 to DITA 1.2. </shortdesc>
+</concept>

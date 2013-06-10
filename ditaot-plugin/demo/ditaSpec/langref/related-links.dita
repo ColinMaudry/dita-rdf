@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="related-links" xml:lang="en-us">
+<title>related-links</title>
+<shortdesc>The related information links of a topic (&lt;<keyword>related-links</keyword>&gt;
+element) are stored in a special section following the body of the
+topic. After a topic is processed into its final output form, the
+related links are usually displayed at the end of the topic, although
+some Web-based help systems might display them in a separate navigation
+frame.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>related-links</indexterm><indexterm>Topic elements<indexterm>related-links</indexterm></indexterm>
+<indexterm>Related Links elements<indexterm>related-links</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>Links specified within the &lt;related-links>
+element are typically displayed together with links generated based
+on a map context; see <xref
+href="../archSpec/ditalinking.dita#ditalinking"></xref> for more information
+on map based linking.</p><?Pub Caret 104?><note
+othertype="Processing notes" type="other">         <ol>
+<li>Links within a &lt;linklist> element must appear in the order
+defined, while those outside of a linklist may be sorted and displayed
+in a different order or location (based upon their role, target, importance,
+or other qualifiers).</li>
+<li>PDF output typically ignores hierarchical links such as those
+with roles of ancestor, parent, child, descendant, next, previous,
+or sibling, although this behavior is not required.</li>
+<!--Removed the following item, per review comments from Paul Grosso. 
+The description of @format is defined elsewhere, and conflicts with this one.
+
+<li>The value of the <i><keyword>format</keyword></i> attribute has
+a processing default of <q>dita</q> unless the scope attribute is
+set to <i>external</i>, in which case format is assumed to be not-dita.</li>-->
+</ol>       </note>     </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-related-links/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="related-links-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-related-links/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="related-links-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/related-links </p></section>
+<example id="example"><title>Example</title><p>The following
+indicates that the two external links are always applicable to this
+topic, regardless of how the topic is used.</p><codeblock>&lt;related-links scope="external" format="html">
+  &lt;link href="http://www.example.org">
+    &lt;linktext>Example 1&lt;/linktext>
+  &lt;/link>
+  &lt;link href="http://www.example.com">
+    &lt;linktext>Example 2&lt;/linktext>
+  &lt;/link>
+&lt;/related-links></codeblock></example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="related-links_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/otherrole">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>
+<?Pub *0000005165?>

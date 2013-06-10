@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="general-coding-requirements" xml:lang="en-us">
+  <title>General element type declaration coding requirements<?Pub Caret?></title>
+  <shortdesc>Structural and element domain vocabulary modules <keyword>must</keyword> reflect the
+    same coding requirements for element type declarations.</shortdesc>
+  <conbody>
+    <section>
+      <title>Module names</title>
+      <p>Each vocabulary module has a short name that is used to construct file names, entity names,
+        and other names used in associated declarations. Modules <keyword>may</keyword> also have
+        abbreviated names that further shorten the short name, for example "sw" for the "software"
+        domain, where "software" is the short name and "sw" is the abbreviated name. </p>
+      <p>For structural modules, the module name <keyword>must</keyword> be the element type name of
+        the top-level topic or map type defined by the module, such as "concept", "bookmap".</p>
+      <p>For element domain modules, the module name <keyword>must</keyword> be a name that reflects
+        the subject domain to which the domain applies, such as "highlight", "software". Domain
+        module names should be sufficiently unique that they are unlikely to conflict with any other
+        domains.</p>
+    </section>
+    <section>
+      <title>Module files</title>
+      <p>A structural or element domain vocabulary module <keyword>must</keyword> have two
+        files:</p>
+      <ul id="ul_D7BFFD862DE84CBABE9FC4A34BFD430C">
+        <li id="li_5E6A30823E6646B582EEDAACFDB332C0">
+          <p>A module entity declaration file, which declares the entities used to integrate the
+            module into a shell DTD. </p>
+          <p>For structural modules, the file name is the module name plus the
+              <filepath>ent</filepath> extension, e.g. <filepath>concept.ent</filepath>.</p>
+          <p>For domain modules, the file name is the domain name plus <filepath>Domain</filepath>
+            plus the <filepath>ent</filepath> extension, e.g.
+              <filepath>highlightDomain.ent</filepath>, <filepath>newAttDomain.ent</filepath>.</p>
+        </li>
+        <li id="li_CA93076E32D344DBB656231FD7D63406">
+          <p>A definition module, which contains the element type and/or attribute list declarations
+            for the module. </p>
+          <p>For structural modules, the file name is the module name plus the
+              <filepath>mod</filepath> extension, e.g., <filepath>concept.mod</filepath></p>
+          <p>For domain modules, the file name is the domain name plus "Domain" and the
+              <filepath>mod</filepath> extension, e.g., <filepath>highlightDomain.mod</filepath>,
+              <filepath>newAttDomain.mod</filepath>.</p>
+        </li>
+      </ul>
+    </section>
+    <section id="section_39382827620948F284CD0F6242F009F3">
+      <title>Domain declaration entity</title>
+      <p>The domain declaration entity <keyword>must</keyword> conform to the following
+        implementation pattern:</p>
+      <p>The declaration file <keyword>must</keyword> define an entity that associates the domain
+        with a module. The name of the entity is the structure type name or domain abbreviation plus
+        the <codeph>-att</codeph> suffix, e.g. "concept-att", "hi-d-att".</p>
+      <p>The value of the entity <keyword>must</keyword> list the dependencies of the domain module
+        in order of dependency from left to right within enclosing parentheses, starting with the
+        topic module. Domain abbreviations are used in the list, and the defining domain is the last
+        item in the list. The following example declares the dependency of the highlight domain on
+        the base topic module. </p>
+      <codeblock>&lt;!ENTITY hi-d-att "(topic hi-d)"&gt;</codeblock>
+      <p>The domain declaration entity is used to construct the effective value of the domains
+        attribute for a map or topic type as configured in a shell DTD.</p>
+    </section>
+    <section id="section_AF5B8ABA77DA4474A0AF0DF0AFD8E018">
+      <title>Element definitions</title>
+      <p>A structural or domain vocabulary module <keyword>must</keyword> contain a declaration for
+        each specialized element type named by the module. While the XML standard allows content
+        models to refer to undeclared element types, all element types named in content models or
+        attribute list declarations within a vocabulary module <keyword>must</keyword> have an
+        ELEMENT declaration, in one of:<ul>
+          <li>The vocabulary module</li>
+          <li>A base module of which the vocabulary module is a direct or indirect
+            specialization</li>
+          <li>A required domain module (if the vocabulary module is a structural module).</li>
+        </ul></p>
+      <p>The specialized elements <keyword>must</keyword> follow the rules of the architecture in
+        defining content models and attributes.</p>
+      <p>For each element type declared in the vocabulary module there must be an element name
+        parameter entity whose default value is the name of the element,
+        e.g.:<codeblock><![CDATA[<!ENTITY % conbody "conbody">]]></codeblock></p>
+      <p>The element name entity provides a layer of abstraction that facilitates redefinition. A
+        document type shell can predefine an element entity to add domain-specialized elements or
+        replace a base element type with one or more specializations of that type. Because
+        declarations use the entity rather than the element type name to include the element in a
+        content model, the redefinition given in a shell is propagated to every context in which the
+        base element occurs.</p>
+      <p>The element name parameter entities <keyword>must</keyword> be grouped together at the top
+        of the vocabulary module before any other declarations to ensure they are declared before
+        any use in content models declared in the same module. The declarations
+          <keyword>may</keyword> occur in any order. By convention, they are usually ordered
+        alphabetically or grouped logically. </p>
+      <p>For each element type, the content model and attribute list declarations
+          <keyword>should</keyword> start with a descriptive comment. For
+        example:<codeblock>&lt;!--                    LONG NAME: Topic Head                      --></codeblock></p>
+      <p>Each element type <keyword>must</keyword> have a corresponding content model parameter
+        entity named <codeph>%<i>tagname</i>.content</codeph>. The value of the entity
+          <keyword>must</keyword> be the complete content model definition. For
+        example:<codeblock>&lt;!ENTITY % topichead.content
+  "((%topicmeta;)?, 
+    (%anchor; | 
+     %data.elements.incl; | 
+     %navref; | 
+     %topicref;)*)
+"></codeblock></p>
+      <p>The content model parameter entity <keyword>may</keyword> be overridden in shell DTDs or
+        constraint modules to further constrain the content model for the element type.</p>
+      <p>Each element type <keyword>must</keyword> have a corresponding attribute list parameter
+        entity named <codeph>%<i>tagname</i>.attributes</codeph>. The parameter entity must declare
+        all attributes used by the element type (except for the attributes provided by the
+          <codeph>%global-atts;</codeph> parameter entity, which is always referenced as part of the
+        attribute list declaration for an element's class attribute). For
+        example:<codeblock>&lt;!ENTITY % topichead.attributes
+ "navtitle 
+     CDATA 
+          #IMPLIED
+   outputclass 
+     CDATA 
+          #IMPLIED
+   keys 
+     CDATA 
+          #IMPLIED
+   %topicref-atts;
+   %univ-atts;"
+></codeblock></p>
+      <p>The ELEMENT declaration for each element type <keyword>must</keyword> consist entirely of a
+        reference to the corresponding content model parameter
+        entity:<codeblock>&lt;!ELEMENT topichead    %topichead.content;></codeblock></p>
+      <p>The ATTLIST declaration for each element type <keyword>must</keyword> consist entirely of a
+        reference to the corresponding attribute list parameter
+        entity:<codeblock>&lt;!ATTLIST topichead    %topichead.attributes;></codeblock></p>
+      <p>The content model parameter entity, attribute list parameter entity, ELEMENT declaration,
+        and ATTLIST declaration <keyword>should</keyword> be grouped together within the module.
+        Each such group of declarations may occur in any order within the module. For
+        example:<codeblock>&lt;!--                    LONG NAME: Topic Head                      -->
+&lt;!ENTITY % topichead.content
+  "((%topicmeta;)?, 
+    (%anchor; | 
+     %data.elements.incl; | 
+     %navref; | 
+     %topicref;)* )
+">
+&lt;!ENTITY % topichead.attributes
+  "navtitle 
+      CDATA 
+          #IMPLIED
+   outputclass 
+      CDATA 
+           #IMPLIED
+   keys 
+      CDATA 
+          #IMPLIED
+   %topicref-atts;
+   %univ-atts;"
+>
+&lt;!ELEMENT topichead    %topichead.content;>
+&lt;!ATTLIST topichead    %topichead.attributes;></codeblock></p>
+    </section>
+    <section id="section_EFD64B31C18E4DCD99C6449F2E03AD14">
+      <title>Attributes</title>
+      <p><draft-comment author="sethpark"  id="commentf6">[RDAnderson, 4 Jan 2010]
+          In the final section about attributes, we should provide a pointer to the topic in the
+          specialization section, "Element type class hierarchy declaration (the class attribute)".
+          This section as written leaves out some details, without mentioning that more is required;
+          we should indicate that complete details of constructing the class attribute are in the
+          other topic.</draft-comment>The attributes of an element type <keyword>must</keyword>
+        restrict or conserve those of the element type it specializes. Specialized element types may
+        not add new attributes. New global attributes may be defined via attribute domain modules.
+        Structural modules <keyword>may</keyword> require the use of attribute domain modules.</p>
+      <p>A vocabulary module <keyword>must</keyword> define a @class attribute for every specialized
+        element declared in the module. The @class attribute <keyword>must</keyword> include the
+        value of the @class attribute of the base element, and append to it the element name
+        qualified by the topic element name with at least one leading and trailing space. The @class
+        attribute for an element introduced by a structural specialization <keyword>must</keyword>
+        start with a minus sign ("-"). The @class attribute for a domain specialization
+          <keyword>must</keyword> start with a plus sign ("+"). The initial minus or plus sign
+          <keyword>must</keyword> be followed by one or more spaces. The attribute value
+          <keyword>must</keyword> end with one or more trailing spaces. </p>
+      <p>The ATTLIST declaration for the @class attribute <keyword>must</keyword> also include a
+        reference to the %global-atts parameter entity.</p>
+      <p>For example, the ATTLIST definition for the &lt;conbody&gt; element (a specialization of
+        the &lt;body&gt; element in the &lt;topic&gt; base type) includes global attributes with an
+        entity, then the definition of the @class attribute, as follows:</p>
+      <codeblock>&lt;!ATTLIST conbody     %global-atts;  class CDATA "- topic/body  concept/conbody "&gt;</codeblock>
+      <p>The @class attribute declarations for a module <keyword>must</keyword> be grouped together
+        at the end of the module after any other declarations. The declarations may occur in any
+        order. By convention they are often ordered alphabetically or grouped logically.</p>
+      <p>See <xref href="classatt.dita#classatt" format="dita"/> for complete details on the @class
+        attribute.</p>
+    </section>
+  </conbody>
+</concept>
+<?Pub *0000011492?>

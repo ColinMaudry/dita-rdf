@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference id="classification_elements" xml:lang="en-us">
+<title>Classification elements</title>
+<shortdesc>Classification elements support managing metadata. Those
+in the Subject Scheme map are used to define controlled values, and
+to bind them to DITA attributes as enumerations. Those declared in
+the classification domain are used in other maps to classify content
+according to the scheme.</shortdesc><?Pub Caret -2?>
+</reference>
+<?Pub *0000000628?>

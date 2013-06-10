@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+ "map.dtd">
+<map xml:lang="en-us">
+ <title>Processing</title>
+ <topicref href="behaviors.dita" navtitle="DITA processing" rev="1.1" collection-type="sequence">
+  <topicref href="module-compatibility.dita"
+   navtitle="Module compatibility and the domains attribute"/>
+  <topicref href="ditanav.dita" navtitle="Navigation behaviors" rev="1.1" type="concept"/>
+  <topicref format="ditamap" href="ditalinkingandaddressing.ditamap"
+   navtitle="DITA linking and addressing"/>
+  <topicref href="conref.dita" navtitle="Content inclusion (conref)" rev="1.1" type="concept"/>
+  <topicref href="condproc.dita" navtitle="Conditional processing (profiling)" rev="1.1"
+   type="concept"/>
+  <topicref href="chunking.dita" navtitle="Chunking" rev="1.1" type="concept"/>
+  <topicref href="printing.dita" navtitle="Printing" type="concept"/>
+  <topicref href="translation.dita" navtitle="Translation" rev="1.1" type="concept"
+   collection-type="sequence">
+   <topicref href="xmllang.dita" navtitle="The xml:lang attribute" rev="1.1" type="reference"/>
+   <topicref href="diratt.dita" navtitle="The dir attribute" rev="1.1" type="reference"/>
+  </topicref>
+ </topicref>
+</map>
+<?Pub *0000002701?>

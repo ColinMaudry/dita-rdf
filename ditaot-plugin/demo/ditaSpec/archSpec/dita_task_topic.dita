@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="dita_task_topic" xml:lang="en-Us">
+ <title>Task topic (strict task)</title>
+ <shortdesc>The strict task document type supports the development of instructions for the
+  completion of a procedure. The strict task document type is built using the general task
+  information type combined with the Strict Taskbody Constraint. See the reference below to ensure
+  that you have the correct task document type when you update to DITA 1.2.</shortdesc>
+ <conbody>
+  <section>
+   <title>The purpose of the standard task information type</title>
+   <p>Tasks are the essential building blocks to provide procedural information. A task information
+    type answers the "How do I?" question by providing precise step-by-step instructions detailing
+    the requirements that must be fulfilled, the actions that must be performed, and the order in
+    which the actions must be performed. The task topic includes sections for describing the
+    context, prerequisites, expected results, and other aspects of a task.</p>
+  </section>
+  <section>
+   <title>The structure of the task topic</title>
+   <p>The &lt;task> element is the top-level element for the strict task topic. The strict task
+    document type contains a title and a taskbody with optional alternative titles (titlealts), a
+    short description or abstract, a prolog,and related-links.</p>
+   <p>The &lt;taskbody> element is the main body element inside a strict task document type. The
+    strict task body has a constrained structure, with these optional elements in the following
+    order: </p>
+   <dl>
+    <dlentry>
+     <dt>&lt;prereq></dt>
+     <dd>Describes information that the user needs to know or do before starting the immediate task.
+      This section may occur only once.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;context></dt>
+     <dd>Provides background information for the task. This information helps the users understand
+      the purpose of the task and what they will gain by completing the task correctly. This section
+      should be brief and does not replace or recreate a concept topic on the same subject, although
+      the context section may include some conceptual information. This section may occur only
+      once.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;steps></dt>
+     <dd>Provides the main content of the task topic. A task consists of a series of steps that
+      accomplish the task. The &lt;steps> element must have one or more &lt;step> elements, which
+      provide the specifics about each step in the task. The &lt;steps> element may occur only
+       once.<p>The &lt;step> element represents an action that a user must follow to accomplish a
+       task. Each step in a task must contain a command &lt;cmd> element which describes the
+       particular action the user must perform to accomplish the overall task. The step element may
+       also contain information &lt;info>, substeps &lt;substeps>, tutorial information
+       &lt;tutorialinfo>, a step example &lt;stepxmp>, choices &lt;choices>, or a stepresult
+       &lt;stepresult>, although these are optional.</p></dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;steps-unordered></dt>
+     <dd>Provides alternative content for the task topic, allowing for a single step in a procedure
+      or a set of commands that need not be performed in a specific order.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;result></dt>
+     <dd>Describes the expected outcome for the task as a whole. </dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;example></dt>
+     <dd>Provides an example that illustrates or supports the task. </dd>
+    </dlentry>
+    <dlentry>
+     <dt>&lt;postreq></dt>
+     <dd>Describes steps or tasks that the user should do after the successful completion of the
+      current task. It is often supported by links to the next task or tasks in the
+      &lt;related-links> section.</dd>
+    </dlentry>
+   </dl>
+  </section>
+  <example>Here is an example of a task
+   topic:<codeblock>&lt;task id="birdhousebuilding">
+    &lt;title>Building a bird house&lt;/title>
+    &lt;shortdesc>Building a birdhouse is a perfect activity 
+    for adults to share with their children or grandchildren. 
+    It can be used to teach about birds, as well as the proper use of tools.
+    &lt;/shortdesc>
+ &lt;taskbody>
+  &lt;context>Birdhouses provide safe locations for birds to build nests and raise their young. They also provide shelter during cold and rainy spells.&lt;/context>
+  &lt;prereq>To build a sound birdhouse, you will need a complete set of tools:
+  &lt;ul>&lt;li>hand saw&lt;/li>
+      &lt;li>hammer ... &lt;/li>
+  &lt;/ul>&lt;/prereq>
+ &lt;steps>
+   &lt;step>&lt;cmd>Lay out the dimensions for the birdhouse elements.&lt;/cmd>&lt;/step>
+   &lt;step>&lt;cmd>Cut the elements to size.&lt;/cmd>&lt;/step>
+   &lt;step>&lt;cmd>Drill a 1 1/2" diameter hole for the bird entrance on the front.&lt;/cmd>
+         &lt;info>You need to look at the drawing for the correct placement of the 
+               hole.&lt;/info>&lt;/step>
+   ...
+  &lt;/steps>
+  &lt;result>You now have a beautiful new birdhouse!&lt;/result>
+  &lt;postreq>Now find a good place to mount it.&lt;/postreq>
+ &lt;/taskbody>
+&lt;/task></codeblock></example>
+  <section>
+   <title>Maintaining specializations using the strict task model</title>
+   <p>Organizations that have created specializations based on the DITA 1.0 and 1.1 strict task
+    model should review the recommendations in <xref format="dita"
+     href="../non-normative/migration-1_1-to-1_2.dita" scope="local" type="concept"/> to maintain their
+    specializations. </p>
+  </section>
+  <section>
+   <title>Modules</title>
+   <p>The following DITA modules are provided for the task topic.</p>
+   <sl>
+    <sli>task.mod. task.ent, strictTaskbody constraint (DTD)</sli>
+    <sli>taskMod.xsd, taskGrp.xsd, strictTaskbodyConstraintMod.xsd (Schema)</sli>
+   </sl>
+  </section>
+ </conbody>
+</concept>

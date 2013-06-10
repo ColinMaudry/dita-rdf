@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="univ-atts" xml:lang="en-us">
+<title>univ-atts attribute group</title>
+<shortdesc>The "univ-atts" attribute group defines a set of common
+attributes available on most DITA elements.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>%univ-atts</indexterm><indexterm>Commonly referenced
+attribute descriptions<indexterm>univ-atts</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>The "univ-atts" group includes:<ul>
+<li>the attributes in the <xref href="select-atts.dita">select-atts</xref> attribute
+group</li>
+<li>the attributes in the <xref href="id-atts.dita">id-atts</xref> attribute
+group</li>
+<li>the attributes in the <xref href="localization-atts.dita">localization-atts</xref> attribute
+group<?Pub Caret?></li>
+</ul></section>
+</refbody>
+</reference>

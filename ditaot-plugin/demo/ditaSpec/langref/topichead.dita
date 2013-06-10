@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="topichead" xml:lang="en-us">
+<title>topichead</title>
+<shortdesc>The &lt;<keyword>topichead</keyword>&gt; element
+provides a title-only entry in a navigation map, which should appear
+as a heading when the map is rendered as a table of contents. In print
+contexts it should also appear as a heading in the rendered content.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Mapgroup elements<indexterm>topichead</indexterm></indexterm>
+<indexterm>topichead</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>Beginning with DITA 1.2, the navtitle can be specified
+by using a &lt;navtitle> element within the &lt;topicmeta> element,
+so the &lt;topichead> element no longer requires the navtitle attribute.
+In order to ensure backward compatibility with earlier versions of
+DITA, the new &lt;navtitle> element is not required. However, a &lt;topichead>
+element must contain either a navtitle attribute or a &lt;topicmeta>
+element that contains a &lt;navtitle> element. DITA processors should
+generate a warning if a navigation title is not specified.</section><?Pub
+Caret 214?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topichead/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="topichead-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-topichead/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="topichead-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+map/topicref mapgroup-d/topichead </p></section>
+<example id="example"><title>Example</title><p>Note that
+in the following example, the first &lt;topichead> element uses a &lt;navtitle>
+element to provide the title, while the second &lt;topichead> element
+uses a navtitle attribute. This is only to illustrate that both uses
+are valid; in general, the element is preferred over the attribute.</p><codeblock>&lt;map>
+  <b>&lt;topichead></b>
+    <b>&lt;topicmeta>&lt;navtitle>Computers&lt;/navtitle>&lt;/topicmeta></b>
+    &lt;topicref href="eniac.dita"/>
+    &lt;topicref href="system360.dita"/>
+    &lt;topicref href="pdp8.dita"/>
+  <b>&lt;/topichead></b>
+  <b>&lt;topichead navtitle="Books"></b>
+    &lt;topicref href="hardback.dita"/>
+    &lt;topicref href="paperback.dita"/>
+  <b>&lt;/topichead></b>
+&lt;/map></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="topichead_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/copy-to" rev="public-review-1">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004151?>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference
+  id="learningObject" xml:lang="en-us">
+  <title>learningObject</title>
+  <shortdesc><keyword>learningObject</keyword> organizes topic references to DITA learning topics as
+    a learning object. </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>learningObject</indexterm><indexterm>learning and training elements<indexterm
+            >learningObject</indexterm></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody><section>
+      <p>A learningObject follows a specific sequence of topic references to learning content,
+        starting with a learningPlan, then a learning overview or learning pre-assessment, one or
+        more learning content topics, a learning summary, and one or more learning post-assessment
+        topics. </p>
+      <p>By default, the topic references in a learningObject are expected to use the
+        learning-specific topic types. However, the href can point to content of any type that you
+        want to structure as a learning object. In this way, you can structure any existing DITA
+        content as a learning object, and then take advantage of the learning-specific processing
+        available for building and packaging that content for delivery in a learning system or
+        learning context.</p>
+    </section><section
+      id="contains"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-learningObject/contains"
+      otherprops="contains">
+      <title>Contains</title>
+      <p>The content model of this element may differ based on where it is used. Content model
+        information is located here: <xref
+          keyref="learningObject-contains"/>
+      </p>
+    </section><section
+      id="containedby"
+      conref="../common/commonNavLibraryTable.dita#contentmodel-learningObject/containedby"
+      otherprops="containedby">
+      <title>Contained By</title>
+      <p>The parents of this element may differ based on where it is used. Content model information
+        is located here: <xref
+          keyref="learningObject-contained-by"/>
+      </p>
+    </section><section
+      id="inheritance"
+      otherprops="inheritance">
+      <title>Inheritance</title>
+      <p>+ map/topicref learningmap-d/learningObject</p>
+    </section>
+    <example
+      id="example">
+      <title>Example</title>
+      <draft-comment
+        author="WEK">Added example of using learningContentComponentRef within
+        learningContentRef.</draft-comment>
+      <codeblock>
+&lt;map title="learningobject_example"&gt;
+ &lt;!-- learningObject clusters can appear anywhere in a map hierarchy but always
+     follow a consistent information pattern within the LO -->
+ &lt;learningObject collection-type="sequence" href="topOverview.dita" type="learningOverview">
+  &lt;learningPlanRef href="testlearningPlan.dita" type="learningPlan">
+  &lt;/learningPlanRef>
+  &lt;learningOverviewRef href="testlearningOverview.dita" type="learningOverview">
+  &lt;/learningOverviewRef>
+  &lt;learningContentRef href="testlearningContent.dita" type="learningContent">
+    &lt;learningContentComponentRef href="termA.dita" type="glossentry"/>
+    &lt;learningContentComponentRef href="termB.dita" type="glossentry"/>
+  &lt;/learningContentRef>
+  &lt;learningAssessmentRef href="testlearningAssess.dita" type="learningAssessment">
+  &lt;/learningAssessmentRef>
+  &lt;learningSummaryRef href="testlearningSummary.dita" type="learningSummary">
+  &lt;/learningSummaryRef>
+ &lt;/learningObject>
+&lt;/map&gt;
+</codeblock>
+    </example>
+    <section
+      id="attributes">
+      <title>Attributes</title>
+      <simpletable
+        id="learningObject_attr"
+        relcolwidth="2* 3* 1* 1* 1*">
+        <sthead>
+          <stentry>Name</stentry>
+          <stentry>Description</stentry>
+          <stentry>Data Type</stentry>
+          <stentry>Default Value</stentry>
+          <stentry>Required?</stentry>
+        </sthead>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/query">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/copy-to">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow>
+          <stentry>type</stentry>
+          <stentry>The topic type of the map reference.</stentry>
+          <stentry>CDATA</stentry>
+          <stentry>learningOverview</stentry>
+          <stentry>IMPLIED</stentry>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/topicref-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+        <strow
+          conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+          <stentry/>
+        </strow>
+      </simpletable>
+    </section></refbody>
+</reference>

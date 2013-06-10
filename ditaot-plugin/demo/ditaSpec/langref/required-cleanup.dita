@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="required-cleanup" xml:lang="en-us">
+<title>required-cleanup</title>
+<shortdesc>A &lt;<keyword>required-cleanup</keyword>&gt; element is
+used as a placeholder for migrated elements that cannot be appropriately
+tagged without manual intervention. As the element name implies, the
+intent for authors is to clean up the contained material and eventually
+remove the &lt;<keyword>required-cleanup</keyword>&gt; element. Authors
+should not insert this element into documents. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>required-cleanup</indexterm><indexterm>Specialization
+elements<indexterm>required-cleanup</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section><note othertype="Processing notes" type="other"><ul>
+<li>Processors must strip this element from output by default. The
+content of &lt;required-cleanup> is not considered to be verified
+data.</li>
+<li>Processor options may be provided to allow a draft view of migrated
+content in context.</li>
+</ul></note></section><?Pub Caret -1?>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-required-cleanup/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="required-cleanup-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-required-cleanup/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="required-cleanup-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/required-cleanup </p></section>
+<example id="example"><title>Example</title><p>Presuming an original
+HTML document had contained some content within a &lt;<keyword>center</keyword>&gt;
+tag (for which there is no clear migrational equivalent in DITA),
+the following might be the result that is valid within an XML editor,
+but which requires an author to decide how to better tag or revise
+this original content:</p><codeblock xml:space="preserve">&lt;section&gt;
+  &lt;title&gt;Some section title&lt;/title&gt;
+  &lt;required-cleanup remap="center"&gt;Some original content migrated
+  from a &amp;lt;center&gt; tag.&lt;/required-cleanup&gt;
+&lt;/section&gt;
+</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="required-cleanup_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/remap">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/translate-default-no">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmllang">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/dir">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004466?>

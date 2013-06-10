@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="title" xml:lang="en-us">
+<title>title</title>
+<shortdesc>The &lt;<keyword>title</keyword>&gt; element
+contains a heading or label for the main parts of a topic, including
+the topic as a whole, its sections and examples, and its labelled
+content, such as figures and tables. Beginning with DITA 1.1, the
+element may also be used to provide a title for a map. <ph><?Pub
+Caret?>With DITA 1.2, the element is also available in reltables,
+although in the reltable a title is typically used for reference information
+(not for content displayed to an end user).</ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>title</indexterm><indexterm>Topic elements<indexterm>title</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-title/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="title-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-title/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="title-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/title </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;topic id="topic"&gt;
+ &lt;title&gt;Some little topic&lt;/title&gt;
+ &lt;body&gt;
+  &lt;p&gt;Some discourse.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/topic&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="title_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

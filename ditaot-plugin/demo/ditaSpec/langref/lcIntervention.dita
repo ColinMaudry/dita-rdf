@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcIntervention" xml:lang="en-us">
+	<title>lcIntervention</title>
+	<shortdesc>The &lt;<keyword>lcIntervention</keyword>&gt; describes the approach and strategies to building the learning materials, based on the needs analysis.</shortdesc>
+
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcIntervention</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcIntervention/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcIntervention-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcIntervention/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcIntervention-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/section  learningBase/section learningPlan/lcIntervention </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+&lt;learningPlan id="learningPlanTest"> 
+    &lt;title>Learning Plan&lt;/title> 
+    &lt;shortdesc>It's always good to provide a plan.
+    &lt;/shortdesc>
+    &lt;learningPlanbody>
+        &lt;lcIntervention> 
+            &lt;title>Intervention&lt;/title>
+            &lt;lcInterventionItem>
+                &lt;lcLearnStrat>Lesson 5
+consists of three SCOs, available from the LMS table of contents. The lesson
+addresses teaching points that support the module objectives. &lt;/lcLearnStrat> 
+                &lt;lcPlanObjective>Learn the basics of SCORM.&lt;/lcPlanObjective>
+                &lt;lcAssessment>The
+module will have a final assessment with questions associated to the SCOs that
+comprise the module. &lt;/lcAssessment>
+                &lt;lcDelivery>The course may be presented by
+land, by sea, and by air.&lt;/lcDelivery>
+            &lt;/lcInterventionItem>
+        &lt;/lcIntervention>
+    &lt;/learningPlanbody>
+&lt;/learningPlan>
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcIntervention_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>
+

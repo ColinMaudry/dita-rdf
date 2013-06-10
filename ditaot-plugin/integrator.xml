@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project id="net.zebrana.ditaot.dita2rdf" default="dita2rdf">
+	<target name="dita2rdf" depends="build-init,map2rdf"/>
+	<target name="map2rdf">
+	<echo>dita2rdf plugin, by Colin Maudry</echo>
+	<echo>Updates and support requests at https://github.com/ColinMaudry/dita-rdf</echo>
+		<antcall target="dita.map.rd">
+			<param name="input"
+			    value="${dita.temp.dir}${file.separator}${user.input.file}" />
+			<param name="output"
+			    value="${dita.map.output.dir}${file.separator}${dita.map.filename.root}.rdf" />
+		</antcall>
+	</target>
+	<target name="dita.map.rdf"  description="Build RDF/XML output from ditamap">
+		<echo>Merging the topics...</echo>
+		<xslt in="${input}"
+		                out="${dita.merged.dir}${file.separator}${dita.map.filename.root}_MERGED.xml"
+		                style="${dita.script.dir}${file.separator}topicmerge.xsl">
+		                <!--<xmlcatalog refid="dita.catalog" />-->
+		            </xslt>
+		<echo>** Done merging **</echo>
+		<echo>Transforming DITA to RDF/XML...</echo>
+		            <xslt
+		                in="${dita.merged.dir}${file.separator}${dita.map.filename.root}_MERGED.xml"
+		                out="${output}" style="xsl/dita2rdf.xsl">
+		                <!--<xmlcatalog refid="dita.catalog" />-->
+		            </xslt>
+		<echo>** Done transforming **</echo>
+		<echo>*** dita2rdf processing successful ***</echo>
+		</target>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="archspec-technicalcontent" xml:lang="en-us">
+ <title>Architectural Specification: Technical Content Version</title>
+ <shortdesc>Previously, the document types and specializations for technical content were included
+  as an integral part of the base DITA specification. With the release of DITA 1.2 and the
+  increasingly number of specializations that are part of the DITA specification, the document types
+  and specializations for technical content have a dedicated section in the DITA
+  specification.</shortdesc>
+</concept>
+<?Pub Caret1?>
+<?Pub *0000000352?>

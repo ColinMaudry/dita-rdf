@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="classd" xml:lang="en-us">
+<title>Classification domain elements</title>
+<shortdesc>The classification domain elements are used to identify
+the subject matter of content that is referenced in a map. These subjects
+must be subjects defined in a subject scheme map. In particular, this
+allows an author to classify content in new subject categories that
+are not bound to existing metadata attributes.</shortdesc><?Pub Caret 115?>
+<prolog><metadata>
+<keywords><indexterm>Domains elements<indexterm>classification domain</indexterm></indexterm>
+<indexterm>Classification domain elements</indexterm></keywords>
+</metadata></prolog>
+<refbody></refbody>
+</reference>
+<?Pub *0000000855?>

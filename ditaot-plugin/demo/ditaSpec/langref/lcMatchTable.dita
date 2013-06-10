@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcMatchTable" xml:lang="en-us">
+	<title>lcMatchTable</title>
+	<shortdesc>The &lt;<keyword>lcMatchTable</keyword>&gt; element in an assessment interaction provides  
+a format for matching items.
+</shortdesc>
+
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcMatchTable</indexterm><indexterm>learning and training elements<indexterm>lcMatchTable</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatchTable/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcMatchTable-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcMatchTable/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcMatchTable-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/simpletable learningInteractionBase-d/simpletable learning-d/lcMatchTable </p>
+		</section>
+<example id="example">
+  <title>Example</title>
+  <codeblock>
+      &lt;lcMatching id="matching">
+        &lt;title>Matching teams with cities&lt;/title>
+        &lt;lcQuestion>Match the team with the city.&lt;/lcQuestion>
+        &lt;lcMatchTable>
+          &lt;lcMatchingHeader>
+            &lt;lcItem>Team&lt;/lcItem>
+            &lt;lcMatchingItem>City&lt;/lcMatchingItem>
+          &lt;/lcMatchingHeader>
+          &lt;lcMatchingPair>
+            &lt;lcItem>Boston&lt;/lcItem>
+            &lt;lcMatchingItem>Red Sox&lt;/lcMatchingItem>
+          &lt;/lcMatchingPair>
+          &lt;lcMatchingPair>
+            &lt;lcItem>San Francisco&lt;/lcItem>
+            &lt;lcMatchingItem>Giants&lt;/lcMatchingItem>
+          &lt;/lcMatchingPair>
+          &lt;lcMatchingPair>
+            &lt;lcItem>Chicago&lt;/lcItem>
+            &lt;lcMatchingItem>Cubs&lt;/lcMatchingItem>
+          &lt;/lcMatchingPair>
+          &lt;lcMatchingPair>
+            &lt;lcItem>Toronto&lt;/lcItem>
+            &lt;lcMatchingItem>Blue Jays&lt;/lcMatchingItem>
+          &lt;/lcMatchingPair>
+        &lt;/lcMatchTable>
+        &lt;lcFeedbackCorrect>Good job.&lt;/lcFeedbackCorrect>
+        &lt;lcFeedbackIncorrect>Not quite.&lt;/lcFeedbackIncorrect>
+      &lt;/lcMatching>
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcInteractions_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>
+

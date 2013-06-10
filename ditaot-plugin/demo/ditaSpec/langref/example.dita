@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="example" xml:lang="en-us">
+<title>example</title>
+<shortdesc>The &lt;<keyword>example</keyword>&gt; element is a section
+with the specific role of containing examples that illustrate or support
+the current topic.  The &lt;<keyword>example</keyword>&gt; element
+has the same content model as &lt;<keyword>section</keyword>&gt;. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>example</indexterm><indexterm>Topic elements<indexterm>example</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>DITA uses &lt;<keyword>example</keyword>&gt; to contain
+both discussion and sample code or outputs. Hence, in a DITA topic,
+to represent programming code and results within the discussion in
+an example, use the &lt;<keyword>codeblock</keyword>&gt; and &lt;<keyword>systemoutput</keyword>&gt;
+elements within the example element. For lines of text, use the &lt;<keyword>lines</keyword>&gt;
+element. For pre-formatted text such as email headers, use the &lt;<keyword>pre</keyword>&gt;
+element.</p></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-example/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="example-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-example/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="example-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/example </p></section>
+<example id="example"><?Pub Caret?><title>Example</title><codeblock>&lt;example id="example">
+  &lt;title>Example&lt;/title>
+  &lt;codeblock>&amp;lt;p&amp;gt;Example of the p element&amp;lt;/p&amp;gt;&lt;/codeblock>
+&lt;/example></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="example_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

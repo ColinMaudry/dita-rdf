@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="overview_of_keys">
+    <title>Overview of keys</title>
+    <shortdesc>To use key references, one must understand how keys are defined and bound to
+        resources, how a map hierarchy establishes a key space, and the interaction of keys with
+        conditional processing.</shortdesc>
+    <conbody>
+        <section>
+            <title>Key definition</title>
+            <p>Keys are defined within maps. Key names are defined using the @keys attribute on
+                &lt;topicref> elements (or specializations of topicref, such as &lt;keydef>).</p>
+            <p id="syntax">The @keys attribute uses the following syntax:<ul>
+                    <li>The value of the @keys attribute is one or more space separated key
+                        names.</li>
+                    <li> Key names consist of characters that are legal in a URI. The case of key
+                        names is significant.</li>
+                    <li>The following characters are prohibited in key names: "{", "}", "[", "]",
+                        "/", "#", "?", and whitespace characters.</li>
+                </ul></p>
+            <p>The @keys attribute in any &lt;topicref> element can be used to define keys,
+                regardless of any other purpose that it may serve in the map. However, common
+                practice is to define most or all keys separately from the topic references that are
+                used to establish navigation hierarchies and relationships. If a separate DITA map
+                is created that contains only key definitions, it should have the @processing-role
+                attribute set to "resource-only". The map-group vocabulary module includes the
+                &lt;keydef> element, a specialization of &lt;topicref> in which the value of the
+                @processing-role attribute is set by default to "resource-only".</p>
+        </section>
+        <section>
+            <title>Key binding</title>
+            <p>A key can be bound simultaneously to several resources: </p>
+            <ul>
+                <li>It is directly bound to the resource addressed by the @href attribute of the
+                    key-defining element, if a @keyref either is not specified or cannot be resolved
+                    following key space construction.</li>
+                <li>If the key-defining element specifies a @keyref attribute and the key reference
+                    can be resolved following key space construction, the key is bound to any
+                    directly addressed resource bound to the referenced key (directly or
+                    indirectly). (It is an error for a topicref to refer directly or indirectly to
+                    any key that it defines.)</li>
+                <li>It is bound to the subelements of the &lt;topicmeta> element within the
+                    key-defining element, if any are present.</li>
+            </ul>
+        </section>
+        <section>
+            <title>Key spaces</title>
+            <p>A root map and its directly addressed, local scope descendant maps establish a unique
+                key space within which each unique key name has exactly one binding to a set of
+                resources.</p>
+            <p>For the purposes of determining the effective key definitions for the key space
+                represented by a given root map, a map tree is determined by considering only
+                directly addressed, local scope maps descending from the root map. The order of
+                subordinate maps is determined by the document order of the topicrefs that point to
+                them. Indirect references to maps with key references are necessarily ignored until
+                after the key space is determined.</p>
+            <p>Maps addressed by &lt;navref> do not contribute to the key space of a map tree. Maps
+                referenced by &lt;navref> are equivalent to maps referenced with a scope of "peer"
+                or "external" and therefore need not be present or available at the time the
+                referencing map is processed for purposes of key space construction.</p>
+        </section>
+        <section>
+            <title>Keys and conditional processing </title>
+            <p>The effective keys for a map might be affected by conditional processing (filtering).
+                Processors <term>should</term> perform conditional processing before determining
+                effective key definitions. However, processors <term>may</term> determine effective
+                key bindings before filtering. Consequently, different processors might produce
+                different effective bindings for the same map when there are key definitions that
+                might be filtered out based on their select attributes.</p>
+            <p>If filtering is not done first, the same root map may result in different effective
+                key spaces for different sets of conditions. For processors that provide sets of
+                available keys within an information set, such as authoring support systems, keys
+                may need to be associated with the conditions specified on their key definitions.
+                For example, given a map that defines the key "os-name" twice with different
+                conditions, an author may need to know both that the key has two possible bindings
+                within the key space and what the conditions are under which those bindings are
+                effective. It also means that processors might need both a root map and a set of
+                active conditions (for example, a DITAVAL document) in order to correctly determine
+                the effective key space.</p>
+            <p>A relative URI reference in a key definition is resolved relative to the base URI
+                established for the location of the key definition rather than relative to the
+                various locations of references using the key.</p>
+        </section>
+        <section>
+            <title>Effective key definitions</title>
+            <p>For a given key there is at most one effective definition within a key space. A key
+                definition is the effective definition for a given key if it is the first, in
+                document order, within the map document that contains it, and is the first in the
+                map tree in breadth-first order. It is not an error for the same key name to be
+                defined more than once within a map or map tree, and duplicate key definitions
+                    <keyword>should</keyword> be ignored without warning. </p>
+            <note>A given &lt;topicref> element that defines more than one key may be the effective
+                definition for some of its keys but not for others. It is the duplicate binding of a
+                key name to its definition that is ignored, not the key-defining topic reference as
+                a whole.</note>
+            <p>Key definitions are not scoped by the map document within which they occur or by the
+                element hierarchy of their containing map document. Keys do not have to be declared
+                before they are referenced. The key space is effective for the entire document, so
+                the order of key definitions and key references relative to one another within the
+                map hierarchy is not significant, and keys defined in any map in the map tree are
+                available for use with key references from all maps and topics processed in the
+                context of the root map. </p>
+            <note>These rules mean that key definitions higher in the map tree hierarchy take
+                precedence over key definitions lower in the map tree and that key definitions in
+                referencing maps always take precedence over key definitions in referenced maps.
+                These rules also mean that the entire key space must be determined before any keys
+                can be resolved to their ultimately-addressed resources (if any).</note>
+            <note>Because keys are defined in maps, all key-based processing must be done in the
+                context of a root map that establishes the effective key space. </note>
+            <!--<p>Topicrefs that address subordinate maps that use @keyref  without
+a fallback           @href value or that use @conkeyref without
+a fallback           @conref value do not contribute
+to the map tree for the purpose of         determining the key space.
+The maps ultimately referenced by such topicrefs will contribute 
+       to the map tree but only at the locations where those maps
+are directly addressed. This         means that such maps may occur
+in the map tree in a different position than they would if       
+ the key-based address was a direct address. </p>-->
+            <!--Above needs clarification. The following is the proposed replacement.-->
+            <p>For key definitions in a submap to be included in the key space, there must be a
+                direct URI reference to that submap from another directly addressed map in the map
+                tree. However, if that same submap is referenced indirectly and has no direct URI
+                reference as a backup (using @keyref without providing a fallback @href value, or
+                using @conkeyref without providing a fallback @conref value), that reference is
+                ignored for purposes of constructing the key space, and the definitions in that
+                submap consequently do not enter into the construction of the key space at that
+                point.</p>
+        </section>
+    </conbody>
+</concept>

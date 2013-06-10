@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normative-references">
+    <title>Normative references</title>
+    <shortdesc>Normative references are references to external documents or resources to which
+        implementers of DITA <keyword>must</keyword> comply.</shortdesc>
+    <conbody>
+        <dl>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[Namespaces in XML 1.0]</dt>
+                <dd>T. Bray, D. Hollander, A. Layman, R. Tobin, and H. S. Thompson, editors,
+                        <cite>Namespaces in XML 1.0 (Third Edition)</cite>, <xref
+                        href="http://www.w3.org/TR/2009/REC-xml-names-20091208/" format="html"
+                        >http://www.w3.org/TR/2009/REC-xml-names-20091208/</xref>, W3C
+                    Recommendation, 8 December 2009.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[Namespaces in XML 1.1]</dt>
+                <dd> T. Bray, D. Hollander, A. Layman, and R. Tobin, editors, <cite>Namespaces in
+                        XML 1.1 (Second Edition)</cite>, <xref
+                        href="http://www.w3.org/TR/2006/REC-xml-names11-20060816/" format="html"
+                        >http://www.w3.org/TR/2006/REC-xml-names11-20060816/</xref>, W3C
+                    Recommendation, 16 August 2006</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[RFC 2119]</dt>
+                <dd>S. Bradner, <cite>Key words for use in RFCs to Indicate Requirement
+                        Levels</cite>, <xref href="http://www.ietf.org/rfc/rfc2119.txt" format="txt"
+                        >http://www.ietf.org/rfc/rfc2119.txt</xref>, IETF RFC 2119, March 1997.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[RFC 3986]</dt>
+                <dd>T. Berners-Lee, R. Fielding, and L. Masinter, <cite>Uniform Resource Identifiers
+                        (URI): Generic Syntax</cite>, <xref
+                        href="http://tools.ietf.org/html/rfc3986" format="txt"
+                        >http://tools.ietf.org/html/rfc3986</xref>, IETF RFC 3986, January
+                    2005.</dd>
+                <dd/>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference"> [XML 1.0]</dt>
+                <dd>T. Bray, J. Paoli, C. M. Sperberg-McQueen, E. Maler, and F. Yergeau, editors,
+                        <cite>Extensible Markup Language (XML) 1.0 (Fifth Edition)</cite>, <xref
+                        href="http://www.w3.org/TR/REC-xml/" format="html"
+                        >http://www.w3.org/TR/REC-xml/</xref>, W3C Recommendation, 26 November
+                    2008.</dd>
+                <dd> </dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XML 1.1]</dt>
+                <dd>T. Bray, J. Paoli, C.M. Sperberg-McQueen, E. Maler, F.Yergeau, and J. Cowan,
+                    editors, <cite>Extensible Markup Language (XML) 1.1 (Second
+                        Edition)</cite>,<xref href="http://www.w3.org/TR/2006/REC-xml11-20060816/"
+                        format="html">http://www.w3.org/TR/2006/REC-xml11-20060816/</xref>, W3C
+                    Recommendation, 16 August 2006, edited in place 29 September 2006.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XSD 1.0 Structures]</dt>
+                <dd>H. S. Thompson, D. Beech, M. Maloney, and N. Mendelsohn, editors, <cite>XML
+                        Schema Part 1: Structures Second Edition</cite>, <xref
+                        href="http://www.w3.org/TR/xmlschema-1/" format="html"
+                        >http://www.w3.org/TR/xmlschema-1/</xref>, W3C Recommendation, 28 October
+                    2004.</dd>
+            </dlentry>
+            <dlentry>
+                <dt outputclass="oasis-style-reference">[XSD 1.0 Datatypes]</dt>
+                <dd> P. V. Biron and A. Malhotra, editors, <cite>XML Schema Part 2: Datatypes Second
+                        Edition</cite>, <xref href="http://www.w3.org/TR/xmlschema-2/" format="html"
+                        >http://www.w3.org/TR/xmlschema-2/</xref>, W3C Recommendation, 28 October
+                    2004.</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

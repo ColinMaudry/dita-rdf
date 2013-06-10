@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcGapItem" xml:lang="en-us">
+	<title>lcGapItem</title>
+	<shortdesc>The &lt;<keyword>lcGapItem</keyword>&gt; describes gaps between existing training objectives and related job-task-analysis content.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcGapItem</indexterm>
+<indexterm>learning and training elements<indexterm>lcGapItem</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcGapItem/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcGapItem-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcGapItem/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcGapItem-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/fig learningBase/fig learningPlan/lcGapItem </p>
+		</section>
+<example id="example">
+			<title>Example</title>
+			<codeblock>
+...
+      &lt;lcGapItem>
+        &lt;title>Gap item&lt;/title>
+        &lt;lcPlanObjective>Learn the basics before you go further.&lt;/lcPlanObjective>
+        &lt;lcJtaItem>Current learning objectives provide guidance to developing small modules with terminal learning objectives.&lt;/lcJtaItem>
+        &lt;lcGapItemDelta>Current learners do not have the capability to approach learning 
+         development in a modular strategy that saves time and costs across 
+         the enterprise.&lt;/lcGapItemDelta>
+      &lt;/lcGapItem>
+...
+			</codeblock>
+		</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcGapItem_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

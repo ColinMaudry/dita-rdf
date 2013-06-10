@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Non-normative information">
+    <topicref href="non-normative/non-normative-information.dita">
+        <topicref href="non-normative/changes-from-previous-versions.dita">
+            <topicref href="non-normative/new-in_1_2.dita"/>
+            <topicref href="non-normative/new-in_1_1.dita"/>
+        </topicref>
+        <topicref href="non-normative/migration-1_1-to-1_2.dita"/>
+        <topicref href="non-normative/DITA-mime-type.dita"/>
+        <topicref href="non-normative/foreigngeneralization.dita" navtitle="Foreign generalization"/>
+        <topicref href="non-normative/elementsMerged.dita"/>
+        <topicref  href="non-normative/dita-module-impl-ref.dita" navtitle="DITA module and shell implementation reference"/>
+        <topicref href="non-normative/dtdorganization.dita" navtitle="DTD organization"/>
+        <topicref href="non-normative/schemaorganization.dita" navtitle="XML schema organization"/>
+        <topicref href="non-normative/filenaming-processing-modules.dita"/>
+        <topicref href="non-normative/interoperability-considerations.dita"/>
+        <topicref href="non-normative/speclimits.dita"/>
+    </topicref>
+</map>

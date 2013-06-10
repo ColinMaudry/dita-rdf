@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="xsdStructuralSpecializationReqs" xml:lang="en-us">
+  <title>Structural specialization coding requirements</title>
+  <?Pub Caret1?>
+  <shortdesc>An XSD structural module declares a top-level map or topic type, implemented as a pair
+    of XSD documents, one that defines groups used to integrate and override the type and one that
+    defines the element types specific to the type.</shortdesc>
+  <conbody>
+    <p>A structural type module <term>must</term> conform to the following coding requirements in
+      addition to the general module coding requirements: </p>
+    <section>
+      <title>Module files</title>
+      <p>A structural vocabulary module <term>must</term> have two files:</p>
+      <ul id="ul_D7BFFD862DE84CBABE9FC4A34BFD430C">
+        <li id="li_5E6A30823E6646B582EEDAACFDB332C0">A module schema document. The file name is the
+          name of the root structural element plus <filepath>Mod</filepath> plus the
+            <filepath>.xsd</filepath> extension. For example, <filepath>conceptMod.xsd</filepath> is
+          the module schema document for the concept topic type.</li>
+        <li id="li_CA93076E32D344DBB656231FD7D63406">A module group definition schema document. The
+          file name is the name of the root structural element plus <filepath>Grp</filepath> plus
+          the <filepath>.xsd</filepath> extension. For example, <filepath>conceptGrp.xsd</filepath>
+          is the module group definition schema document for the concept topic type.</li>
+      </ul>
+    </section>
+    <section id="section_48CC341A288448D39DC32181F8D1C3ED">
+      <title>Structural module schema document</title>
+      <p>The root element <term>must</term> reference the @DITAArchVersion attribute and the
+        @domains attribute. These attributes give processors a reliable way to check the
+        architecture version and look up the list of domains available in the document type. The
+        @DITAArchVersion attribute is referenced as in the following example:</p>
+      <codeblock>&lt;xs:attribute name="id" type="xs:ID" use="required"/&gt;
+&lt;xs:attribute ref="ditaarch:DITAArchVersion" /&gt;</codeblock>
+      <p>See <xref format="dita" href="xsdShellDoctypeCodeReq.dita#topicShellPattern"/> for
+        information on how to set the values for the <codeph>domains</codeph> attibute for XSD
+        shells. </p>
+      <p>For topic modules, the last position in the content model <term>must</term> be the
+            <codeph><varname>topictype</varname>-info-types</codeph> nested topics group as in the
+        following example of the root element of the concept topic:</p>
+      <codeblock>&lt;xs:complexType name="concept.class"&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:group ref="title"/&gt;
+    &lt;xs:group ref="titlealts" minOccurs="0"/&gt;
+    &lt;xs:choice minOccurs="0"&gt;
+      &lt;xs:group ref="shortdesc" /&gt;
+      &lt;xs:group ref="abstract" /&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:group ref="prolog" minOccurs="0"/&gt;
+    &lt;xs:group ref="conbody" minOccurs="0"/&gt;
+    &lt;xs:group ref="related-links" minOccurs="0"/&gt;
+    &lt;xs:group ref="concept-info-types" minOccurs="0" maxOccurs="unbounded"/&gt;
+  &lt;/xs:sequence&gt;
+  ...
+&lt;/xs:complexType&gt;</codeblock>
+    </section>
+    <section>
+      <title>Topic module schema document</title>
+      <p>For topic modules, the module schema document must define an info-type model group. The
+        name of this group is the topic element name plus <codeph>-info-types</codeph>. Thus, the
+        info-type model group for the concept topic type is <codeph>concept-info-types</codeph>. The
+        following example shows how this group is defined in <filepath>conceptMod.xsd</filepath>:
+        <codeblock id="topicinfotype">&lt;xs:group name="concept-info-types"&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:group ref="concept" minOccurs="0"/&gt;
+    &lt;xs:group ref="info-types" minOccurs="0"/&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:group&gt;</codeblock></p>
+    </section>
+  </conbody>
+</concept>
+<?Pub *0000004241?>

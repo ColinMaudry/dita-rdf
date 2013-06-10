@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Language reference">
+	<topicmeta>
+		<author></author>
+	</topicmeta>
+    <topicref href="language_reference.dita" navtitle="Language reference">
+        <topicref href="langRef-base.dita" locktitle="yes" navtitle="Base elements">
+            <topicref format="ditamap" href="base_elements.ditamap" navtitle="Base elements"/>
+        </topicref>
+        <topicref href="langRef-technicalContent.dita" locktitle="yes" navtitle="Technical content elements">
+            <topicref format="ditamap" href="technicalContent_elements.ditamap" navtitle="Technical content elements"/>
+        </topicref>
+        <topicref href="langRef-learningTraining.dita" locktitle="yes" navtitle="Learning and training elements">
+            <topicref format="ditamap" href="learningTraining_elements.ditamap" navtitle="Learning and training"/>
+        </topicref>
+        <topicref format="ditamap" href="ditaref-commonatts.ditamap" navtitle="Common attribute definitions"/>
+        <topicref collection-type="sequence" href="element-quick-reference.dita" navtitle="Element quick reference">
+            <topicref href="common/base_elements_a_to_z.dita"/>
+            <topicref href="common/technical_content_elements_a_to_z.dita" navtitle="Technical content elements, A to Z"/>
+            <topicref href="common/learning_training_elements_a_to_z.dita" navtitle="Learning and training elements, A to Z"/>
+            <topicref href="common/alldita1.2elements_a_to_z.dita" navtitle="All DITA 1.2 elements, A to Z"/>
+        </topicref>
+    </topicref>
+</map>

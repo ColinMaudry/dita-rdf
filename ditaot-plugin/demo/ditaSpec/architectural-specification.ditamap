@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Architectural specification">
+    <topicref href="architectural_specification.dita" navtitle="Architectural specification">
+        <topicref href="archSpec-base.dita" locktitle="yes" navtitle="Base architecture">
+            <topicref format="ditamap" href="archSpec/archspec.ditamap" id="DITA1.2ArchitecturalSpecificationB" navtitle="DITA 1.2 architectural specification: Base version"/>
+        </topicref>
+        <topicref href="archSpec-technicalContent.dita" locktitle="yes" navtitle="Technical content architecture">
+            <topicref format="ditamap" href="archSpec/archSpec-technicalContent.ditamap" navtitle="DITA 1.2 architectural specification: Technical content version"/>
+        </topicref>
+        <topicref  href="archSpec-learningTraining.dita" locktitle="yes" navtitle="Learning and training architecture">
+            <topicref format="ditamap" href="archSpec/archSpec-learningTraining.ditamap" navtitle="DITA 1.2 architectural specification: Learning &amp; training version"/>
+        </topicref>
+     </topicref>
+</map>

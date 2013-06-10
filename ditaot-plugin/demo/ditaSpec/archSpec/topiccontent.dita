@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="topiccontent" xml:lang="en-us">
+<title>Topic content</title>
+<shortdesc>The content of all topics, regardless of topic type, is
+built on the same common structures.</shortdesc>
+<conbody>
+<dl>
+<dlentry>
+<dt>Topic body</dt>
+<dd>The topic body contains all content except for that
+contained in the title or the short description/abstract. The topic
+body may be specialized to impose constraints appropriate for the
+specific topic type even when titles and prolog are generic, or the
+topic body may be generic where the topic title and prolog are specialized.</dd>
+</dlentry>
+<dlentry>
+<dt>Sections and examples</dt>
+<dd>The body of a topic may contain divisions, such as sections and examples. They may contain
+     block-level elements like titles and paragraphs and phrase-level elements like API names or
+     text. It is recommend that sections have titles, whether they are entered directly into the
+     title element or rendered using a fixed or default title.</dd>
+<dd>Either body divisions or untitled sections or examples may be used to delimit
+     arbitrary structures within a topic body. However, body divisions may nest, but sections and
+     examples cannot contain sections.
+     <!-- JTH 8/20 consolidated the section, example, and body division
+      definitions -->
+    </dd></dlentry>
+<dlentry>
+<dt>Sectiondiv</dt>
+<dd>Sectiondiv allows for the arbitrary grouping of content within
+a section for the purpose of      content reuse. The sectiondiv does
+not include a title. Content that requires a title should      use
+section or example. </dd></dlentry>
+<dlentry>
+<dt>Bodydiv</dt>
+<dd>Bodydiv allows for the arbitrary grouping of content within the
+body of a topic for the      purpose of content reuse. The bodydiv
+does not include a title. Content that requires a title      should
+use section or example. </dd></dlentry>
+<dlentry>
+<dt>Block-level elements</dt>
+<dd>Paragraphs, lists, and tables are <ph>types</ph> of
+"block" elements. As a class      of content, they can contain other
+blocks, phrases, or text, though the rules vary for each      structure.</dd>
+</dlentry>
+<dlentry>
+<dt>Phrases and keywords</dt>
+<dd>Block-level elements can contain markup to label parts of a paragraph
+or parts of a sentence as having special semantic meaning or presentation
+characteristics, such as &lt;uicontrol> or &lt;b>. Phrases can usually
+contain other phrases and keywords as well as text. Keywords can only
+contain text.</dd></dlentry>
+<dlentry>
+<dt>Images</dt>
+<dd>Images can be inserted to display photos, illustrations, screen
+captures, diagrams, and the like. At the phrase level, they can display
+trademark characters, icons, toolbar buttons, and the like.      <!-- JTH: deleted "at the block level" here and in next section -->
+    </dd></dlentry>
+<dlentry>
+<dt>Multimedia</dt>
+<dd>With the object element, multimedia information may
+be added to display, for      example, diagrams that can be rotated
+and expanded. With the <ph>&lt;foreign></ph>      element,
+media may be included within topic content, e.g., SVG graphics, MathML
+equations, and so on.</dd></dlentry>
+</dl>
+</conbody>
+</concept>

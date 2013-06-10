@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<concept id="schemaorganization" xml:lang="en-us">
+<title>XML schema organization</title>
+<shortdesc>(Non-normative) The OASIS DITA document types are implemented
+with a set of schema     modules. Some of these modules are used by
+every DITA schema document, others are     only used by topics or
+by maps, and some are only used in specific specializations.</shortdesc>
+<conbody>
+<section>       <title>XML schemas versus modules</title>       <p>A
+significant feature of the DITA implementation is that it places more
+importance on the         modules than on the actual document type
+shell. All element and attribute type declarations         are made
+in modules, which are then integrated into a document type using a
+document type         shell. Implementers are free to create new document-type
+shells that reorganize the modules,         introduce new modules,
+redefine modules, or remove modules as appropriate. For example, the
+        standard topic XML Schema from OASIS includes all of the standard
+topic domains; in         addition, while the default topic XML Schema
+allows topics to nest, it is not possible to         include concepts.
+A new XML Schema can change one or both of these features and still
+        conform to the DITA architecture; the XML Schema may add or
+remove domains, it may allow         topics to nest concepts or allow
+authoring of different types at the same level, as in the        
+ditabase document type.</p>     </section>
+<section conref="../archSpec/dita_modules.dita#ditamods/modules"></section>
+<section id="systemtIdentifiers"><title>XML Schema catalog identifiers</title><p>An
+XML resolver needs to be able to uniquely identify an XML Schema in
+order to map to a local resource. The DITA 1.2 specification includes
+both URN- and URL-based versions of the XML schemas. The URL versions
+are included as a convenience for use with tools that do not support
+catalog based resolution and are not normative. </p><p>Each schema
+document must be uniquely identified using a URN (Uniform Resource
+Name). Each schema document has a version-independent as well as a
+version-specific URN. </p><p>There are two patterns for the URNs.
+One for schemas that are part of the core standard and one for schemas
+created by TC subcommittees. The design pattern for the core standard
+schemas is:<lines>urn:oasis:names:tc:dita:xsd:&lt;filename.xsd>:&lt;version> </lines>The
+design pattern for schemas created by DITA Technical Committee sub-committees
+is:<lines>urn:oasis:names:tc:dita:spec:&lt;specialization-family-name>:xsd:&lt;filename.xsd>:&lt;version> </lines>Catalog
+identifiers for shell schemas and/or specializations that are not
+defined by the DITA Technical Committee or DITA Technical Committee
+sub-committees <keyword>should</keyword> use an owner identifier reflecting
+the owner of the shell, e.g. "example.com" then an appropriate URN
+would be "urn:example.com:names:dita:xsd:topic.xsd". The pattern "urn:oasis:names:tc:dita"
+is a convention indicating that the artifact is defined by the OASIS
+DITA Technical Committee.</p><p id="module-version-xpl"
+rev="public-review-1">The identifiers listed below are declared by
+the DITA Technical Committee for modules that are shipped with the
+DITA 1.2 distribution. Values that use a version number of 1.2 will
+always refer specifically to modules delivered with the DITA 1.2 specification.
+Values that use a version number of 1.x always refer to that module
+in the latest approved DITA 1.x specification (such as 1.1, 1.2, or
+1.3), but will not reference any modules in DITA 2.0 or later. Values
+without a version number refer to that module in the latest approved
+DITA specification, regardless of version.</p><p><b>Topic and topic-based
+specializations</b></p><?Pub Caret -2?><lines>urn:oasis:names:tc:dita:xsd:topic.xsd:1.2
+urn:oasis:names:tc:dita:xsd:topic.xsd:1.x
+urn:oasis:names:tc:dita:xsd:topic.xsd
+
+urn:oasis:names:tc:dita:xsd:basetopic.xsd:1.2
+urn:oasis:names:tc:dita:xsd:basetopic.xsd:1.x
+urn:oasis:names:tc:dita:xsd:basetopic.xsd
+
+urn:oasis:names:tc:dita:xsd:concept.xsd:1.2
+urn:oasis:names:tc:dita:xsd:concept.xsd:1.x
+urn:oasis:names:tc:dita:xsd:concept.xsd
+
+urn:oasis:names:tc:dita:xsd:reference.xsd:1.2
+urn:oasis:names:tc:dita:xsd:reference.xsd:1.x
+urn:oasis:names:tc:dita:xsd:reference.xsd
+
+urn:oasis:names:tc:dita:xsd:task.xsd:1.2
+urn:oasis:names:tc:dita:xsd:task.xsd:1.x
+urn:oasis:names:tc:dita:xsd:task.xsd
+
+urn:oasis:names:tc:dita:xsd:generalTask.xsd:1.2
+urn:oasis:names:tc:dita:xsd:generalTask.xsd:1.x
+urn:oasis:names:tc:dita:xsd:generalTask.xsd
+
+urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd:1.2
+urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd:1.x
+urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd
+
+urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.2
+urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.x
+urn:oasis:names:tc:dita:xsd:ditabase.xsd
+
+urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.2
+urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.x
+urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd
+
+urn:oasis:names:tc:dita:xsd:glossentry.xsd:1.2
+urn:oasis:names:tc:dita:xsd:glossentry.xsd:1.x
+urn:oasis:names:tc:dita:xsd:glossentry.xsd
+
+(NOTE: the glossary.xsd file is provided for backward compatibility with
+DITA 1.1. Documents should use the glossentry.xsd in new documents.)
+
+urn:oasis:names:tc:dita:xsd:glossary.xsd:1.2
+urn:oasis:names:tc:dita:xsd:glossary.xsd:1.x
+urn:oasis:names:tc:dita:xsd:glossary.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd </lines><p><b>Map
+and map-based specializations</b></p><lines>urn:oasis:names:tc:dita:xsd:map.xsd:1.2
+urn:oasis:names:tc:dita:xsd:map.xsd:1.x
+urn:oasis:names:tc:dita:xsd:map.xsd
+
+urn:oasis:names:tc:dita:xsd:basemap.xsd:1.2
+urn:oasis:names:tc:dita:xsd:basemap.xsd:1.x
+urn:oasis:names:tc:dita:xsd:basemap.xsd
+
+urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.2
+urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.x
+urn:oasis:names:tc:dita:xsd:bookmap.xsd
+
+urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.2
+urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.x
+urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd
+
+urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.2
+urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.x
+urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningBookmap.xsd
+
+urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.2
+urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.x
+urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd</lines><p><b>DITAVal
+package for conditional processing</b></p><lines>urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.2
+urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.x
+urn:oasis:names:tc:dita:xsd:ditaval.xsd</lines></section>
+</conbody>
+</concept>
+<?Pub *0000007940?>

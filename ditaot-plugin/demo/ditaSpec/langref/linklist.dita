@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<reference id="linklist" xml:lang="en-us">
+<title>linklist</title>
+<shortdesc>The &lt;<keyword>linklist</keyword>&gt; element defines
+an author-arranged group of links. When you use a &lt;<keyword>linklist</keyword>&gt;
+element, the organization of links on final output is in the same
+order as originally authored inside that element.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>linklist</indexterm><indexterm>Related Links
+elements<indexterm>linklist</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="linkgroups"><p>There are two ways to organize
+related information links within a topic. First, you can add them
+all in no particular order, either by using &lt;linkpool&gt; elements
+or by placing &lt;link> elements directly within &lt;related-links&gt;,
+in which case the rendering is implementation dependent. For example,
+tools may choose to sort all links based on the role or type; tools
+may also move or remove links to fit the context (for example, moving
+a prerequisite link to the top of a browser window, or removing links
+to the next topic if it is rendered on the same page in a PDF). These
+behaviors are examples only and are not required.</p><p>Second, links
+may be grouped using one or more &lt;linklist&gt; elements. When you
+group them using &lt;linklist&gt;, then the order of the links within
+each &lt;linklist> is preserved when rendered. You may also use a
+combination of the two approaches, which will allow some links to
+be automatically sorted while the others are left as-is.</p><p>Attributes
+set on the &lt;linkpool> and &lt;linklist&gt; elements are inherited
+by their descendants. For example, if you have a &lt;linklist&gt;
+element that contains all external links, you can set <i>scope="external"</i> on
+that outer &lt;linklist&gt; element and leave it off the &lt;link>
+elements within that &lt;linklist>.</p><?Pub Caret?></section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-linklist/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="linklist-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-linklist/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="linklist-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/linklist </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;related-links>
+  &lt;linklist scope="external">
+    &lt;title>Example links&lt;/title>
+    &lt;desc>These links will always appear in this order.&lt;/desc>
+    &lt;link href="http://www.example.org">
+      &lt;linktext>Example 1&lt;/linktext>
+    &lt;/link>
+    &lt;link href="http://www.example.com">
+      &lt;linktext>Example 2&lt;/linktext>
+    &lt;/link>
+  &lt;/linklits>
+&lt;/related-links></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="linklist_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/collection-type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/duplicates">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/mapkeyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/otherrole">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+<related-links>
+<linklist><title></title>
+<desc></desc>
+</linklist>
+</related-links>
+</reference>

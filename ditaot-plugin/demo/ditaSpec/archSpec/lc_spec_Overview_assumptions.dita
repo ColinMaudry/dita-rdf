@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Inc?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<reference id="dita_learning_specialization_top" xml:lang="en-us">
+ <title>A learning objects approach to learning and training content</title>
+ <shortdesc>The DITA Learning and Training specialization applies DITA principles and best practices
+  for using topic-based and modular content to plan, develop, and deliver learning and training
+  content.</shortdesc>
+ <refbody>
+  <section>
+   <p>The reusable learning objects, or RLO, approach to learning content derives from the
+    pioneering work of learning content designers at several companies, including Autodesk®,
+    Oracle®, and Cisco®. Author Peder Jacobsen defines an RLO as "a discrete reusable collection of
+    content used to present and support a single learning objective." With this approach, it is
+    possible to gather a pool of information objects and make them available for reuse and
+    repurposing in a variety of learning delivery contexts.</p>
+   <p>There is a strong affinity between the DITA topic-based, modular approach to content in
+    general, and the learning objects approach to learning content in particular.</p>
+   <p>Working assumptions about learning content and how to support authoring and delivering it with
+    DITA include the following: <ul>
+     <li>The DITA Learning and Training specialization builds on a reusable learning objects (RLO)
+      approach to learning content. </li>
+     <li>DITA <b>topic types</b> are the basic building blocks for learning objects and specify the
+      meaning and intention of content provided in instructional and information objects.</li>
+     <li>DITA <b>domains</b> provide the mechanism for defining <i>interactions</i>, which can be
+      used across the learning topic types.</li>
+     <li>DITA <b>domains</b> also provide the mechanism for defining learning <i>metadata</i>, which
+      can be assigned either in topics or in maps.</li>
+     <li>DITA <b>maps</b> arrange the DITA learning topics into a hierarchy of learning objects and
+      group such content for delivery as lessons, modules, and courses.</li>
+     <li>DITA <b>specialization </b>provides the mechanism for creating the learning-based topic
+      types, domains, and maps needed for instructional and information object content
+      requirements.</li>
+    </ul></p>
+   <fig>
+    <title>Learning objects and specialized DITA learning and training topic types </title>
+    <p>This figure shows the composition of learning objects as a) instructional objects, b)
+     information objects, and c) the specialized DITA topic types to support them.</p>
+    <image href="../resources/dita_learning_topics.JPG" placement="break">
+     <alt>Learning objects and the DITA learning types that support them</alt>
+    </image>
+    <p>In this approach, a learning object comprises a "discrete reusable collection of content used
+     to present and support a single learning objective," and consists of two primary information
+     components: <ul>
+      <li><b>instructional objects</b>, which provide the structured framework for a learning
+       experience. The learningOverview, learningSummary, and learningAssassessment topic types
+       provide content for instructional objects.</li>
+      <li><b>information objects</b>, which provide the source learning content - the topic-based
+       learning content and other supplemental content that supports the learning goals identified
+       in the instructional objects. The learningContent topic type provides content for information
+       objects.</li>
+      <li><b>instructional plans</b>, which identify the learning goals, needs, and objectives. The
+       learningPlan topic type provides content for instructional plans.</li>
+     </ul></p>
+   </fig>
+   <fig>
+    <title>Learning content design, authoring, and delivery through DITA specialization</title>
+    <p>This picture shows the end-to-end process for designing, authoring, and delivering
+     specialized learning content with DITA. <image href="../resources/dita_learning_e2e.JPG"
+      placement="break">
+      <alt>The end-to-end process for designing, authoring, and delivery specialized learning
+       content with DITA.</alt>
+     </image></p>
+    <p>In this approach, a learning content developer:<ol>
+      <li>Uses <b>learning map elements</b> to identify the learning objects and the supporting
+       content needed to address specific learning goals and objectives.</li>
+      <li>Uses <b>learning topic elements</b> to structure the learning content.</li>
+      <li>Applies <b>learning metadata elements</b> to describe specific characteristics of the
+       learning content, following a sub-set of the IEEE LOM standard.</li>
+      <?Pub Caret 35?>
+      <li>Constructs <b>specific build maps and relationship tables</b> to organize learning objects
+       for delivery as a course with specific output and delivery needs.</li>
+      <li>Invokes <b>processing</b> to generate specific learning deliverables, based on the default
+       processing available with DITA content and specialized as needed for learning-specific
+       purposes and delivery formats.</li>
+     </ol></p>
+   </fig>
+  </section>
+ </refbody>
+</reference>
+<?Pub *0000005041?>

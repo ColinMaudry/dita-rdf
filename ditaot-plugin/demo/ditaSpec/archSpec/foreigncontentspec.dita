@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept-1" xml:lang="en-us">
+  <title>Specializing foreign or unknown content</title>
+  <shortdesc>Specializing the &lt;foreign&gt; or &lt;unknown&gt; element is an open extension to
+    DITA for the purpose of incorporating standard vocabularies for non-textual content, such as
+    MathML and SVG, as in-line objects. <ph>These elements <keyword>should not</keyword>
+      be used to include textual content or metadata in DITA documents except where such content
+      acts as an example or display, rather than as the primary content of a topic.</ph></shortdesc>
+  <conbody>
+    <section id="section_C45458033A7347F8BF2D99D251A611C4">
+      <title>Incorporating foreign or unknown content</title>
+      <p>There are three methods of incorporating foreign content into DITA. </p>
+      <ul id="ul_35DA1E5F56044DE3BCF73F8CFCCB55DA">
+        <li id="li_73ABC413E3DA4472BF55D0EF1B73C728">A domain specialization of the &lt;foreign&gt;
+          or &lt;unknown&gt; element. This is the usual implementation.</li>
+        <li id="li_3DA9AC4CE9114E28A0F601CB66D26A29">A structural specialization using the
+          &lt;foreign&gt; or &lt;unknown&gt; element. This affords more control over the
+          content.</li>
+        <li id="li_7F1FFDC5D0C54080B1E819E4C1F7B685">Do nothing: simply embed the foreign
+          content within &lt;foreign&gt; or &lt;unknown&gt;.</li>
+      </ul>
+    </section>
+    <section id="section_9867B44DADC644579062CBA3B116AF61">
+      <title>Foreign or unknown content and the architectural @class attribute</title>
+      <p>Foreign content that is incorporated in DITA by one of these methods is not specialized.
+        Specialization depends upon the architectural @class attribute found in every DITA element.
+        If the foreign content has interoperability or vocabulary naming issues such as those that
+        are addressed by specialization in DITA, they must be addressed by means that are
+        appropriate to the foreign content. </p>
+    </section>
+    <example id="example_0566553963A34B66AFC511C71D16B023">
+      <title>Example of specializing foreign or unknown content using DTDs</title>
+      <p>The sample below describes how to create a domain declaration of the svg element, but does
+        not show how to integrate that declaration in a DITA document-type shell. For more specific
+        information on creating document-type shells, see <xref href="dtdmod.dita#mod_dtd"
+          format="dita"/>.</p>
+      <pre>&lt;!-- declaration for the specialized wrapper --&gt;
+&lt;!ENTITY % svg "svg"&gt;
+
+&lt;!-- included SVG document type --&gt;
+&lt;!ENTITY % SVG.prefix "svg" &gt;
+&lt;!ENTITY % svg-qname.mod
+    PUBLIC "-//W3C//ENTITIES SVG 1.1 Qualified Name//EN"
+           "svg-qname.mod" 
+&gt;%svg-qname.mod;
+
+&lt;!-- definition for the specialized wrapper  --&gt;
+&lt;!ENTITY % svg.content "
+     (%SVG.svg.qname;)
+">
+&lt;!ATTLIST % svg.attributes "
+">
+&lt;!ELEMENT svg %svg.content; &gt;
+&lt;!ATTLIST svg %svg.attributes; >
+
+&lt;!ATTLIST svg %global-atts; class CDATA "+ topic/foreign svg-d/svg "&gt; </pre>
+      <note>The example assumes that parameter entity <codeph>SVG.svg.qname</codeph> is declared in
+        the SVG DTD or schema.</note>
+    </example>
+    <example id="example_8C8549BD3D814F978CAC1C6667B82BE4">
+      <title>Example of SVG within a &lt;p&gt; element </title>
+      <pre>&lt;p&gt;This is an ellipse:
+  &lt;svg&gt;
+    &lt;svg:svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg"&gt;
+
+&lt;ellipse cx="300" cy="150" rx="200" ry="80"
+style="fill:rgb(200,100,50);
+stroke:rgb(0,0,100);stroke-width:2"/&gt;
+
+    &lt;/svg:svg&gt;    
+  &lt;/svg&gt;.
+&lt;/p&gt; </pre>
+    </example>
+    <example id="example_B14351B0016E4065A4D5CFE991D30BC0">
+      <title>Example of specializing foreign content using XML Schemas</title>
+      <p>The sample below describes how to create a domain declaration of the mathML element, but
+        does not show how to integrate that declaration in a DITA document-type shell. For more
+        specific information on creating document-type shells, see <xref
+          href="schemamod.dita#modSchema" format="dita"/></p>
+      <pre>&lt;!-- importing MathML document type --&gt; 
+&lt;xs:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="mathml2.xsd"&gt;
+ 
+&lt;!-- definition for the specialized wrapper  --&gt;
+&lt;xs:element name="mathML" type="mathML.class" /&gt;
+&lt;xs:complexType name="mathML.class"&gt;
+  &lt;xs:choice&gt;
+      &lt;xs:element ref="mml:math" /&gt;
+  &lt;/xs:choice&gt;
+  &lt;xs:attribute name="outputclass" type="xs:string"/&gt;
+    &lt;xs:attributeGroup ref="univ-atts"/&gt;
+    &lt;xs:attributeGroup ref="global-atts"/&gt;
+    &lt;xs:attribute ref="class" default="+ topic/foreign mathML/mathML"/&gt;
+&lt;/xs:complexType&gt;
+
+&lt;!-- definition for each element extended by the domain  --&gt;    
+&lt;xs:group name="ma-d-foreign"&gt;
+  &lt;xs:choice&gt;
+     &lt;xs:element ref="mathML" /&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:group&gt;
+  
+&lt;!-- definition for the named model groups  --&gt;
+&lt;xs:group name="foreign"&gt;
+   &lt;xs:choice&gt;
+     &lt;xs:group ref="foreign"/&gt;
+     &lt;xs:group ref="ma-d-foreign"/&gt;
+   &lt;/xs:choice&gt;
+&lt;/xs:group&gt;  </pre>
+    </example>
+    <example id="example_34AAE3513574457F8FE30CC970D35211">
+      <title>Example of MathML within an &lt;object&gt; element </title>
+      <pre>&lt;p&gt;... as in the formula 
+&lt;object&gt;
+  &lt;desc&gt;4 + x&lt;/desc&gt;
+  &lt;mathML&gt;
+    &lt;mml:math display="block"&gt;
+      &lt;mml:mrow&gt;
+        &lt;mml:mo&gt;&amp;sum;&lt;/mml:mo&gt;
+        &lt;mml:mn&gt;4&lt;/mml:mn&gt;
+        &lt;mml:mo&gt;+&lt;/mml:mo&gt;
+        &lt;mml:mi&gt;x&lt;/mml:mi&gt;
+      &lt;/mml:mrow&gt;
+    &lt;/mml:math&gt;    
+  &lt;/mathML&gt;
+ &lt;object&gt;.
+&lt;/p&gt; </pre>
+    </example>
+  </conbody>
+</concept>

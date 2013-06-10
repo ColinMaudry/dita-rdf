@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="hasKind" xml:lang="en-us">
+<title>hasKind</title>
+<shortdesc>The &lt;hasKind> element specifies that the contained hierarchy
+expresses KIND-OF relationships between subjects.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>hasKind</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>In a KIND-OF hierarchy, the child subject is a particular
+variety of the parent subject. A KIND-OF hierarchy is sometimes known
+as an IS-A, generic, or subsumption hierarchy. </section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-hasKind/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="hasKind-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-hasKind/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="hasKind-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+map/topicref subjectScheme/hasKind </p></section>
+<example id="example"><title>Example</title><p>This examples specifies
+that cars, trucks, and motorcycles are kinds of vehicles. In addition,
+compact, sedan, and station wagon are each a kind of car, while pickup
+and van are each a type of truck.</p><?Pub Caret -1?><codeblock>&lt;subjectScheme>
+  &lt;hasKind>
+    &lt;subjectdef keys="vehicle" navtitle="Vehicle">
+      &lt;subjectdef keys="car" navtitle="Passenger car">
+          &lt;subjectdef keys="compact" navtitle="Compact car"/>
+          &lt;subjectdef keys="sedan" navtitle="Sedan"/>
+          &lt;subjectdef keys="stationWagon" navtitle="Station wagon"/>
+      &lt;/subjectdef>
+      &lt;subjectdef keys="truck" navtitle="Truck">
+          &lt;subjectdef keys="pickup" navtitle="Pickup truck"/>
+          &lt;subjectdef keys="van" navtitle="Van"/>
+      &lt;/subjectdef>
+      &lt;subjectdef keys="motorcycle" navtitle="Motorcycle"/>
+    &lt;/subjectdef>
+  &lt;/hasInstance>
+&lt;/subjectScheme></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/navtitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-topicref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/keys">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/processing-role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004588?>

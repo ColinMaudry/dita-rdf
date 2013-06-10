@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="imagemap" xml:lang="en-us">
+<title>imagemap</title>
+<shortdesc>The imagemap element supports the basic functionality of
+the HTML <q>client-side</q> image map markup. Imagemap allows you
+to designate a linkable area or region over an image, allowing a link
+in that region to display another topic.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>imagemap</indexterm><indexterm>Utilities elements<indexterm>imagemap</indexterm></indexterm>
+</keywords><?Pub Caret 11?>
+</metadata></prolog>
+<refbody>
+<section><p>An HTML client-side image map binds an image to the navigation
+structure (the "map") by means of an ID association from the map to
+the image. In contrast, the DITA version of imagemap markup simply
+includes the target image as the first required element in the markup,
+followed by a sequence of area elements that represent the links associated
+with the contained image.</p><p>An imagemap structure can be output
+either to a standard HTML image map or to alternative forms of navigation
+(such as table-based image maps). When output as PDF, the minimal
+form would be to represent at least the image; advanced PDF output
+processors should be able to provide equivalent region-oriented hyperlinks.</p><p>The
+xref content contains the intended alternative text or hover text
+for the map area.</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-imagemap/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="imagemap-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-imagemap/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="imagemap-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/fig ut-d/imagemap </p></section>
+<example id="example"><title>Example</title><p>A simple imagemap looks
+like this (note that the rendering will depend on how this markup
+is supported for particular output formats):<codeblock
+xml:space="preserve">&lt;imagemap&gt;
+ &lt;image href="imagemapworld.jpg"&gt;
+   &lt;alt>Map of the world showing 5 areas&lt;/alt>
+ &lt;/image&gt;
+ &lt;area&gt;&lt;shape&gt;rect&lt;/shape&gt;&lt;coords&gt;2,0,53,59&lt;/coords&gt;
+  &lt;xref href="d1-s1.dita"&gt;Section 1&lt;/xref&gt;
+ &lt;/area&gt;
+ &lt;area&gt;&lt;shape&gt;rect&lt;/shape&gt;&lt;coords&gt;54,1,117,60&lt;/coords&gt;
+  &lt;xref href="d1-s2.dita"&gt;&lt;/xref&gt;
+ &lt;/area&gt;
+ &lt;area&gt;&lt;shape&gt;rect&lt;/shape&gt;&lt;coords&gt;54,62,114,116&lt;/coords&gt;
+  &lt;xref href="#inline" type="topic"&gt;&lt;/xref&gt;
+ &lt;/area&gt;
+ &lt;area&gt;&lt;shape&gt;circle&lt;/shape&gt;&lt;coords&gt;120,154,29&lt;/coords&gt;
+  &lt;xref format="html" href="test.html"&gt;&lt;/xref&gt;
+ &lt;/area&gt;
+ &lt;area&gt;&lt;shape&gt;poly&lt;/shape&gt;
+  &lt;coords&gt;246,39,200,35,173,52,177,86,215,90,245,84,254,65&lt;/coords&gt;
+  &lt;xref format="pdf" href="test.pdf"&gt;&lt;/xref&gt;
+ &lt;/area&gt;
+&lt;/imagemap&gt;</codeblock></p><p>The areas defined correspond to
+this graphic image with the areas visible:<image
+href="images/imagemapworld.jpg" placement="break"><alt>Map of the
+world showing 5 areas</alt></image></p><p>The values for use in the
+shape and coords elements must follow the guidelines defined for image
+maps in HTML 4.1,  <xref format="html"
+href="http://www.w3.org/TR/html401/struct/objects.html#edef-MAP"
+scope="external">Client-side image maps: the MAP and AREA elements</xref></p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="imagemap_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000005216?>

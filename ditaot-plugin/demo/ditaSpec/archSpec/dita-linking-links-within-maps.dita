@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="links-within-maps" xml:lang="en-us">
+ <title>Links within maps</title>
+ <shortdesc>DITA maps serve primarily to define a navigation hierarchy of topics and non-DITA
+  resources. Through relationship tables, maps may also define arbitrary topic-to-topic
+  relationships such as "related links". Maps may also link to topics or non-DITA resources to
+  establish dependency relationships without binding the linked resource into the navigation
+  tree.</shortdesc>
+ <conbody>
+  <p>By default, the topic references within a map but not within a relationship table establish a
+   navigation tree rooted at the root map within a map tree. A topic reference contributes to the
+   navigation tree when it specifies a navigation title or references a topic or non-DITA resource.
+   The @collection-type attribute of the &lt;topicref> element determines the relationships
+   established between the topicref and its parent, sibling, and child topicrefs, as well as among
+   its child topicrefs. </p>
+  <p>A &lt;topicref> or &lt;navref> element that references a map does not bind the map to the
+   navigation tree but acts as a form of use-by-reference link to the direct subelements of &lt;map>
+   and the relationship tables of the referenced map.</p>
+  <p>Maps may also contain relationship tables (&lt;reltable>). Relationship tables establish
+   navigation links among sets of topics and non-DITA resources. A given relationship table defines
+   one or more links of a specific relationship type. See <xref format="dita"
+    href="../langref/reltable.dita#reltable"/>. A map may include any number of relationship tables.
+   Within a map tree, the effective set of relationship tables is the union of all the relationship
+   tables in all the maps in the map tree. </p>
+  <p>Topic references that specify a @processing-role value of "resource-only" establish
+   dependencies from the map to the associated resource but do not bind the resource to the
+   navigation tree. Resource-only topic references are typically used for key definitions where the
+   key is not intended to represent a specific navigation tree location and for topics that hold
+   elements used only for content reference or that otherwise should not be reflected in the
+   navigation tree.</p>
+  <p>Topic references in the navigation tree can further control whether or not they are included in
+   tables of contents using the @toc attribute. A topic reference that specifies "no" for the @toc
+   attribute and is not a resource-only topic reference still contributes to the navigation tree. In
+   particular, any relationships determined by the value of the @collection-type attribute are
+   created.</p>
+  <p>Topic references in the navigation tree can use the @linking attribute to control how links
+   created by the effective @collection-type value apply to the topic reference's associated
+   resource. See <xref format="dita" href="../common/topicref-atts.dita#topicref-atts"/>.</p>
+  <p>Within maps, subordinate maps may be linked in either of two ways:<ul>
+    <li>&lt;topicref> with a @format value of "ditamap" (this type of map reference is sometimes
+     referred to as a "mapref")</li>
+    <?Pub Caret 35?>
+    <li>&lt;navref></li>
+   </ul></p>
+  <p>The &lt;navref> element links to an otherwise independent map and indicates that the
+   integration of that map's navigation structure into the larger navigation tree is deferred so
+   that it can be performed as a final step in any delivery of the rendered content. Maps referenced
+   by &lt;navref> do not contribute to the key space of the map tree from which they are referenced.
+   The map referenced by &lt;navref> need not be available for processing at the time the
+   referencing map is processed.</p>
+ </conbody>
+</concept>
+<?Pub *0000004045?>

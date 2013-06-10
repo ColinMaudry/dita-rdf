@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="result" xml:lang="en-us">
+<title>result</title>
+<shortdesc>The &lt;<keyword>result</keyword>&gt; element describes
+the expected outcome for the task as a whole. </shortdesc>
+<prolog><metadata>
+<keywords><indexterm>result</indexterm><indexterm>Task elements<indexterm>result</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><note>To describe the outcome of specific step, use the &lt;<keyword>stepresult</keyword>>
+element instead.</note><?Pub Caret 51?></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-result/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="result-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-result/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="result-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/section task/result </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;task id="sqlj"&gt;
+ &lt;titleCreating an SQLJ file&lt;/title&gt;
+ &lt;taskbody&gt;
+  &lt;context&gt;Once you have set up SQLJ, you need to create a new SQLJ file.
+  You cannot add #sqlj statements directly in the Source pane of the
+  Workbench.&lt;/context&gt;
+  &lt;<b>result</b>&gt;The SQLJ file is successfully created when the SQLJ server
+  displays the "File Created" dialog.&lt;/<b>result</b>&gt;
+ &lt;/taskbody&gt;
+&lt;/task&gt;</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="result_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002896?>

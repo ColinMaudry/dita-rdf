@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="generalize" xml:lang="en-us">
+  <title>Generalization</title>
+  <shortdesc>Specialized content can be generalized to any ancestor type. The generalization process
+    can preserve information about the former level of specialization to allow round-tripping
+    between specialized and unspecialized forms of the same content.</shortdesc>
+  <conbody>
+    <p>Among the purposes of generalization: <ul id="ul_bbe7b9b5-e877-4a19-ae05-450dd4911304">
+        <li>Migration of content (for example, when retiring an unsuccessful specialization), </li>
+        <li>Temporary round-tripping (for example, when moving content through a process that is not
+          specialization aware and has only been enabled for instances of the base structural type), </li>
+        <li>Reuse of specialized content in an environment that does not support one or more of its
+          specializations (which may be thought of as a special case of round-tripping). </li>
+      </ul></p>
+    <p>When generalizing for migration, the @class attribute and @domains attribute should be absent
+      from the generalized instance document so that the default values in the DITA document type
+      shell will be used. When generalizing for round-tripping, the @class attribute and @domains
+      attribute <keyword>should</keyword> retain the original specialized values in the generalized
+      instance document.</p>
+    <p>All DITA documents contain a mix of markup from at least one structural type and zero or more
+      domains. When generalizing the document, the generalizer may choose to leave a structural type
+      or domain as-is, or may choose to generalize that type or domain to any of its ancestors.</p>
+    <p>The generalizer can supply the source and target modules for each generalization, for
+      example, "generalize from reference to topic". The generalizer can specify multiple target
+      modules, for example, "generalize from reference to topic and from ui-d to topic". When the
+      source and target modules are not supplied, generalization is assumed to be from all
+      structural types to the base (topic or map), and no generalization is performed for domains. </p>
+    <p>The generalizer can also supply the target DITA document type shell. When the target document
+      type is not supplied, the generalized document will not contain a reference to a DITA
+      document-type shell. With the exception of topic nesting constraints, it is possible to
+      generate a document type shell based on the @class and @domains attributes in the specialized
+      documents. If the@ domains attribute includes all structural, domain, and constraint modules
+      used, the @domains attribute alone is sufficient to enable generation of a document type
+      shell.</p>
+    <p>A generalization process <keyword>should</keyword> be able to handle cases where it is given:
+        <ul id="ul_049703e0-066c-4184-8cbf-11f1acc0df20">
+        <li>Just source modules for generalization (in which case the designated source types are
+          generalized to topic or map), </li>
+        <li>Just target modules for generalization (in which case all descendants of the target are
+          generalized to that target), or </li>
+        <li>Both (in which case only the specified descendants of the target are generalized to that
+          target).</li>
+      </ul></p>
+    <p>For each structural type instance, the generalization process checks whether the structural
+      type instance is a candidate for generalization, or whether it has domains that are candidates
+      for generalization. It is important to be selective about which structural type instances to
+      process; if the process simply generalizes every element based on its @class attribute values,
+      an instruction to generalize "reference" to "topic" could leave an APIReference topic with an
+      invalid content model, since any elements it reuses from "reference" would have been renamed
+      to topic-level equivalents.</p>
+    <p>The @class attribute for the root element of the structural type is checked before
+      generalizing structural types:<simpletable keycol="1">
+        <sthead>
+          <stentry/>
+          <stentry>Source module unspecified</stentry>
+          <stentry>Source module specified</stentry>
+        </sthead>
+        <strow>
+          <stentry>Target module unspecified</stentry>
+          <stentry>Generalize this structural type to its base ancestor</stentry>
+          <stentry>Check whether the root element of the topic type matches a specified source
+            module; generalize to its base ancestor if it does, otherwise ignore the structural type
+            instance unless it has domains to generalize.</stentry>
+        </strow>
+        <strow>
+          <stentry>Target module specified</stentry>
+          <stentry>Check whether the @class attribute contains the target module.  If it does
+            contain the target, rename the element to the value associated with the target module.
+            Otherwise, ignore the element.</stentry>
+          <stentry>It is an error if the root element matches a specified source but its @class
+            attribute does not contain the target. If the root element matches a specified source
+            module and its @class attribute does contain the target module, generalize to the target
+            module. Otherwise, ignore the structural type instance unless it has domains to
+            generalize.</stentry>
+        </strow>
+      </simpletable></p>
+    <?Pub Caret1?>
+    <p>The @domains attribute for the root element of the structural type is checked before
+      generalizing domains:<simpletable keycol="1">
+        <sthead>
+          <stentry/>
+          <stentry>Source module unspecified</stentry>
+          <stentry>Source module specified</stentry>
+        </sthead>
+        <strow>
+          <stentry>Target module unspecified</stentry>
+          <stentry>Do not generalize domain specializations in this structural type.</stentry>
+          <stentry>Check whether the @domains attribute lists the specified domain; proceed with
+            generalization if it does, otherwise ignore the structural type instance unless it is
+            itself a candidate for generalization.</stentry>
+        </strow>
+        <strow>
+          <stentry>Target module specified</stentry>
+          <stentry>Check whether the @domains attribute contains the target module. If it does,
+            generalize to the target module. Otherwise, skip the structural type instance unless it
+            is itself a candidate for generalization.</stentry>
+          <stentry>It is an error if the @domains attribute matches a specified source but the
+            domain value string does not contain the target. If the @domains attribute matches a
+            specified source module and the domain value string does contain the target module,
+            generalize to the target module. Otherwise, ignore the structural type instance unless
+            it is itself a candidate for generalization.</stentry>
+        </strow>
+      </simpletable></p>
+    <p>For each element in a candidate structural type instance:<simpletable keycol="1">
+        <sthead>
+          <stentry/>
+          <stentry>Source module unspecified</stentry>
+          <stentry>Source module specified</stentry>
+        </sthead>
+        <strow>
+          <stentry>Target module unspecified</stentry>
+          <stentry>If the @class attribute starts with "-" (part of a structural type), rename the
+            element to its base ancestor equivalent. Otherwise ignore it.</stentry>
+          <stentry>Check whether the last value of the @class attribute matches a specified source;
+            generalize to its base ancestor if it does, otherwise ignore the element.</stentry>
+        </strow>
+        <strow>
+          <stentry>Target module specified</stentry>
+          <stentry>Check whether the @class attribute contains the target module; rename the element
+            to the value associated with the target module if it does contain the target, otherwise
+            ignore the element.</stentry>
+          <stentry>It is an error if the last value in the @class attribute matches a specified
+            source but the previous values do not include the target. If the last value in the
+            @class attribute matches a specified source module and the previous values do include
+            the target module, rename the element to the value associated with the target module.
+            Otherwise, ignore the element.</stentry>
+        </strow>
+      </simpletable>When renaming elements during round-trip generalization, the generalization
+      process <keyword>should</keyword> preserve the values of all attributes. When renaming
+      elements during one-way or migration generalization, the process <keyword>should</keyword>
+      preserve the values of all attributes except the @class and @domains attribute, both of which
+      should be supplied by the target document type.</p>
+  </conbody>
+</concept>
+<?Pub *0000007559?>

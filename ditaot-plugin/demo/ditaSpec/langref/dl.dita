@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="dl" xml:lang="en-us">
+<title>dl</title>
+<shortdesc>A definition list (&lt;<keyword>dl</keyword>&gt;) is a
+list of terms and corresponding definitions. The term (&lt;<keyword>dt</keyword>&gt;)
+is usually flush left. The description or definition (&lt;<keyword>dd</keyword>&gt;)
+is usually either indented and on the next line, or on the same line
+to the right of the term. <ph>However, actual rendering
+is up to the rendering engine.</ph></shortdesc>
+<prolog><metadata>
+<keywords><indexterm>dl (definition list)</indexterm><indexterm>definition
+list (dl)</indexterm><indexterm>Body elements</indexterm><indexterm>List
+elements<indexterm>definition list</indexterm></indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section>       <p>You can also provide an optional heading for the
+terms and definitions, using the &lt;<keyword>dlhead</keyword>&gt;
+element, which contains header elements for those columns. The default
+formatting for the &lt;<keyword>dlhead</keyword>&gt; generally looks
+like a table with a heading row, but this is also up to the rendering
+engine.</p>     </section>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-dl/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="dl-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-dl/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="dl-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/dl </p></section>
+<example id="example"><title>Examples</title><fig id="simpleexample">
+<title>Simple definition list example</title>
+<codeblock>&lt;dl>
+&lt;dlentry>
+&lt;dt>Bytes returned&lt;/dt>
+&lt;dd>The number of bytes of data returned.&lt;/dd>
+&lt;/dlentry>
+&lt;dlentry>
+&lt;dt>Bytes available&lt;/dt>
+&lt;dd>The number of bytes of data available to be returned.&lt;/dd>
+&lt;/dlentry>
+&lt;dlentry>&lt;dt>Handle&lt;/dt>
+&lt;dd>The returned handle value&lt;/dd>
+&lt;/dlentry>
+&lt;/dl></codeblock>
+</fig><fig id="complexexample"><title>Definition list with a heading</title>
+<codeblock>&lt;dl>
+ &lt;dlhead>
+  &lt;dthd>Image File View Selection&lt;/dthd>
+  &lt;ddhd>Resulting Information&lt;/ddhd>
+ &lt;/dlhead>
+ &lt;dlentry>
+  &lt;dt>File Type&lt;/dt>
+  &lt;dd>Image's file extension&lt;/dd>
+ &lt;/dlentry>
+ &lt;dlentry>
+  &lt;dt>Image Class&lt;/dt>
+  &lt;dd>Image is raster, vector, metafile or 3D&lt;/dd>
+ &lt;/dlentry>
+ &lt;dlentry>
+  &lt;dt>Number of pages&lt;/dt>
+  &lt;dd>Number of pages in the image&lt;/dd>
+ &lt;/dlentry>
+ &lt;dlentry>
+  &lt;dt>Fonts&lt;/dt>
+  &lt;dd>Names of the fonts contained within a vector image&lt;/dd>
+ &lt;/dlentry>
+&lt;/dl></codeblock>
+</fig><p>Rendering of definition lists will vary by application and
+by display format. The second example may, but need not, be rendered
+as follows.</p><dl>
+<dlhead>
+<dthd>Image File View Selection</dthd><ddhd>Resulting Information</ddhd>
+</dlhead>
+<dlentry>
+<dt>File Type</dt>
+<dd>Image's file extension</dd>
+</dlentry><dlentry>
+<dt>Image Class</dt>
+<dd>Image is raster, vector, metafile or 3D</dd>
+</dlentry><dlentry>
+<dt>Number of pages</dt>
+<dd>Number of pages in the image</dd>
+</dlentry><dlentry>
+<dt>Fonts</dt>
+<dd>Names of the fonts contained within a vector image</dd>
+</dlentry></dl></example>
+<section id="attributes">       <title>Attributes</title><?Pub Caret?><simpletable
+id="dl_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/compact">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>

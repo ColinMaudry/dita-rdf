@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="area" xml:lang="en-us">
+<title>area</title>
+<shortdesc>The &lt;area> element describes a linkable area
+within an imagemap. It allows the author to specify a shape within
+the image, the coordinates of that shape, and a link target for the
+area.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>Utilities elements<indexterm>area</indexterm></indexterm>
+<indexterm>area</indexterm></keywords><?Pub Caret -2?>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-area/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="area-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-area/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="area-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/figgroup ut-d/area </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;area>
+ &lt;shape>rect&lt;/shape>
+ &lt;coords>54,1,117,60&lt;/coords>
+ &lt;xref href="d1-s2.dita">&lt;/xref>
+&lt;/area></codeblock><p>A more complete example is located
+in the description for <xref href="imagemap.dita"></xref>.</p></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="area_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002616?>

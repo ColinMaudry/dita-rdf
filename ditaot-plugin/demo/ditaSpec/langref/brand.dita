@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="brand" xml:lang="en-us">
+<title>brand</title>
+<shortdesc>The &lt;<keyword>brand</keyword>&gt; element indicates
+the manufacturer or brand associated with the product described by
+the parent  &lt;<keyword>prodinfo</keyword>&gt; element.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>brand</indexterm><indexterm>Prolog elements<indexterm>brand</indexterm></indexterm>
+</keywords>
+<prodinfo><prodname></prodname>
+<vrmlist><vrm version="1"/></vrmlist>
+</prodinfo>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-brand/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="brand-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-brand/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="brand-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/brand </p></section>
+<example id="example"><title>Example</title><codeblock>&lt;prodinfo&gt;
+ &lt;prodname&gt;Some Product&lt;/prodname&gt;
+ &lt;vrmlist>&lt;vrm version="1"/>&lt;/vrmlist>
+ <b>&lt;brand&gt;eServer&lt;/brand&gt;</b>
+ &lt;series&gt;iSeries&lt;/series&gt;
+&lt;/prodinfo&gt; </codeblock><?Pub Caret 34?></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="brand_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000002648?>

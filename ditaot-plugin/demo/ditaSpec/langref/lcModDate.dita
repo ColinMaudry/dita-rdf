@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcModDate" xml:lang="en-us"><title>lcModDate</title><shortdesc>The &lt;<keyword>lcModDate</keyword>&gt; provides the project modification date.
+</shortdesc>
+<prolog><metadata><keywords><indexterm>lcModDate</indexterm><indexterm>learning and training elements<indexterm>lcModDate</indexterm></indexterm></keywords></metadata></prolog><refbody><section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcModDate/contains" otherprops="contains"><title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcModDate-contains"/></p></section><section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcModDate/containedby" otherprops="containedby"><title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcModDate-contained-by"/></p></section><section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>- topic/fig learningBase/fig learningPlan/lcModDate </p></section>
+<example id="example"><title>Example</title>
+<codeblock>
+...
+   &lt;lcModDate>
+    &lt;title>Modification Date&lt;/title>
+    &lt;p>20070315&lt;/p>
+  &lt;/lcModDate&lt;
+...
+</codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcModDate_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section></refbody>
+</reference>

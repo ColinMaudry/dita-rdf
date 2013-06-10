@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="choicetable" xml:lang="en-us">
+<title>choicetable</title>
+<shortdesc>The &lt;<keyword>choicetable</keyword>&gt; element contains
+a series of optional choices available within a step of a task.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>choicetable</indexterm><indexterm>Task elements<indexterm>choicetable</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><p>By default, processors should highlight the choice column
+is bold. To change the highlighting, set the keycol attribute of the
+&lt;choicetable> tag to 0 (zero).</p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-choicetable/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="choicetable-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-choicetable/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref
+keyref="choicetable-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/simpletable task/choicetable </p></section>
+<example id="example"><pre xml:space="preserve">&lt;step&gt;&lt;cmd&gt;Then this&lt;/cmd&gt;
+&lt;substeps&gt;
+&lt;substep importance="optional"&gt;&lt;cmd&gt;which is done by doing this&lt;/cmd&gt;&lt;/substep&gt;
+&lt;substep importance="required"&gt;&lt;cmd&gt;and then this.&lt;/cmd&gt;&lt;/substep&gt;
+&lt;/substeps&gt;
+<b>&lt;choicetable&gt;</b>
+&lt;chhead&gt;
+&lt;choptionhd&gt;Do something&lt;/choptionhd&gt;
+&lt;chdeschd&gt;Or Else this&lt;/chdeschd&gt;
+&lt;/chhead&gt;
+&lt;chrow&gt;&lt;choption&gt;Do this&lt;/choption&gt;
+&lt;chdesc&gt;and this will happen&lt;/chdesc&gt;&lt;/chrow&gt;
+&lt;chrow&gt;&lt;choption&gt;Do that&lt;/choption&gt;
+&lt;chdesc&gt;and that will happen&lt;/chdesc&gt;&lt;/chrow&gt;
+<b>&lt;/choicetable&gt;</b>
+&lt;/step&gt;</pre></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="choicetable_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/relcolwidth">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/keycol-choicetable">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/refcols">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody><?Pub Caret -2?>
+</reference>
+<?Pub *0000004154?>

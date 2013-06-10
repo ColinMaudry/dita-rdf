@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcLom" xml:lang="en-us">
+	<title>lcLom</title>
+	<shortdesc>The &lt;<keyword>lcLom</keyword>&gt; provides a set of specialized data elements to use to specify metadata in the learning topics and learning map domain.  
+</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcLom</indexterm><indexterm>learning and training elements<indexterm>lcLom</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcLom/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcLom-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcLom/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcLom-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>+ topic/data learning-d/lcLom </p>
+		</section>
+<example id="example">
+  <title>LOM Examples</title>
+  <codeblock>
+&lt;learningContent id="learningcontent"&gt;
+  &lt;title&gt;LOM samples&lt;/title&gt;
+  &lt;shortdesc&gt;Here are samples of LOM metadata.&lt;/shortdesc&gt;
+  &lt;prolog&gt;
+    &lt;lcLom>
+      &lt;lomStructure value="collection">&lt;/lomStructure>
+      &lt;lomCoverage>This course was first offered in ancient Rome, with no updates
+        needed since.&lt;/lomCoverage>
+      &lt;lomAggregationLevel value="1">&lt;/lomAggregationLevel>
+      &lt;lomTechRequirement value="ms-windows">&lt;/lomTechRequirement>
+      &lt;lomInstallationRemarks>No installation is required for this content.&lt;/lomInstallationRemarks>
+      &lt;lomOtherPlatformRequirements>no other platform requirements&lt;/lomOtherPlatformRequirements>
+      &lt;lomInteractivityType value="expositive">&lt;/lomInteractivityType>
+      &lt;lomLearningResourceType value="narrativetext">&lt;/lomLearningResourceType>
+      &lt;lomInteractivityLevel value="medium">&lt;/lomInteractivityLevel>
+      &lt;lomSemanticDensity value="medium">&lt;/lomSemanticDensity>
+      &lt;lomIntendedUserRole value="teacher">&lt;/lomIntendedUserRole>
+      &lt;lomContext value="other">&lt;/lomContext>
+      &lt;lomTypicalAgeRange value="18-22">&lt;/lomTypicalAgeRange>
+      &lt;lomDifficulty value="easy">&lt;/lomDifficulty>
+      &lt;lomTypicalLearningTime value="00:30">&lt;/lomTypicalLearningTime>
+    &lt;/lcLom>
+  &lt;/prolog&gt;
+  &lt;learningContentbody&gt;&lt;/learningContentbody&gt;
+&lt;/learningContent&gt;
+  </codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcLom_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/mapkeyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>
+

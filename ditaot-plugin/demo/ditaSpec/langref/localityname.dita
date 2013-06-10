@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="localityname" xml:lang="en-us">
+<title>localityname</title>
+<shortdesc>The &lt;localityname&gt; element contains the name of the
+locality or city.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>xNAL elements<indexterm>localityname</indexterm></indexterm>
+<indexterm>localityname</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-localityname/contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="localityname-contains"></xref></p></section>
+<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-localityname/containedby" otherprops="containedby"><title>Contained
+By</title><p>The parents of this element may differ based on where
+it is used. Content model information is located here: <xref
+keyref="localityname-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/ph xnal-d/localityname </p></section>
+<example id="example"><title>Example</title><codeblock><?Pub Caret?>&lt;addressdetails&gt;
+&lt;thoroughfare&gt;123 Yellow Brick Road&lt;/thoroughfare&gt;
+&lt;locality&gt;
+&lt;localityname&gt;Emerald City&lt;/localityname&gt;
+&lt;postalcode&gt;66780&lt;/postalcode&gt;
+&lt;/locality&gt;
+&lt;administrativearea&gt;Kansas&lt;/administrativearea&gt;
+&lt;country&gt;USA&lt;/country&gt;
+&lt;/addressdetails&gt;
+</codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="localityname_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classoutkey">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>

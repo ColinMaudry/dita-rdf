@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Introduction to DITA" xml:lang="en-us">
+  <topicref href="introduction-to-dita.dita" navtitle="Introduction to DITA"
+    collection-type="sequence">
+    <topicref href="about_specification_source.dita" navtitle="About the specification source"/>
+    <topicref href="dita-terminology.dita" navtitle="Terminology and notation"/>
+    <topicref href="basic-concepts.dita"/>
+    <topicref href="fileext.dita"/>
+    <topicref href="single_sourcing.dita"
+      navtitle="Producing different deliverables from a single source"/>
+  </topicref>
+</map>

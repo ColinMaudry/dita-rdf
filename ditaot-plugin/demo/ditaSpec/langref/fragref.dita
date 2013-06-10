@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="fragref" xml:lang="en-us">
+<title>fragref</title>
+<shortdesc>The fragment reference (&lt;<keyword>fragref</keyword>&gt;)
+element provides a logical reference to a syntax definition fragment
+so that you can reference a syntax fragment multiple times, or pull
+a large section of syntax out of line for easier reading. <ph
+conref="apiname.dita#apiname/progdomainelement"></ph></shortdesc><?Pub
+Caret -1?>
+<prolog><metadata>
+<keywords><indexterm>fragref (fragment reference)</indexterm>
+<!--
+<indexterm>fragment reference (fragref)</indexterm>
+-->
+<indexterm>Programming elements<indexterm>fragref (fragment reference)</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-fragref/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="fragref-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-fragref/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="fragref-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>+
+topic/xref pr-d/fragref </p></section>
+<example id="example"><title>Example</title>This markup example:<pre
+xml:space="preserve">&lt;syntaxdiagram frame="none"&gt;
+ &lt;title&gt;CopyFile&lt;/title&gt;
+ &lt;groupseq&gt;&lt;kwd&gt;COPYF&lt;/kwd&gt;&lt;/groupseq&gt;
+ &lt;groupcomp&gt;&lt;var&gt;input-filename&lt;/var&gt;&lt;kwd&gt;*INFILE&lt;/kwd&gt;&lt;/groupcomp&gt;
+ &lt;groupseq&gt;&lt;var&gt;output-filename&lt;/var&gt;&lt;kwd&gt;*OUTFILE&lt;/kwd&gt;&lt;/groupseq&gt;
+ <b>&lt;fragref href="#syntax/overlay"&gt;&lt;/fragref&gt;</b>
+ &lt;groupchoice&gt;&lt;var&gt;input-filename&lt;/var&gt;&lt;kwd&gt;*INFILE&lt;/kwd&gt;&lt;/groupchoice&gt;
+ &lt;groupchoice&gt;&lt;var&gt;output-filename&lt;/var&gt;&lt;kwd&gt;*OUTFILE&lt;/kwd&gt;&lt;/groupchoice&gt;
+ &lt;fragment id="overlay"&gt;
+  &lt;title&gt;Overlay&lt;/title&gt;
+  &lt;groupchoice&gt;&lt;kwd&gt;*OVERLAP&lt;/kwd&gt;&lt;kwd&gt;*Prompt&lt;/kwd&gt;&lt;/groupchoice&gt;
+ &lt;/fragment&gt;
+&lt;/syntaxdiagram&gt;
+</pre>produces the following output:<pre xml:space="preserve">CopyFile
+
+&gt;&gt;-COPYF--input-filename*INFILE--output-filename--*OUTFILE------&gt;
+
+&gt;--| Overlay |--+-input-filename-+--+-output-filename-+--------&gt;&lt;
+                '-*INFILE--------'  '-*OUTFILE--------'
+
+Overlay
+
+|--+-*OVERLAP-+-------------------------------------------------|
+   '-*Prompt--'
+</pre></example>
+<section id="attributes">       <title>Attributes</title>       <simpletable
+id="fragref_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/href-fragref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/importance-optreq">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/props">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/platform">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/product">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/audience">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/otherprops">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/rev">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/status">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable>     </section>
+</refbody>
+</reference>
+<?Pub *0000005829?>

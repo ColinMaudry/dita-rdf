@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="processing_key_references">
+    <title>Processing key references</title>
+    <conbody>
+        <p>When a key definition is bound to a resource addressed by @href or @keyref and does not
+            specify "none" for the @linking attribute, all references to that key definition become
+            navigation links to the bound resource. When a key definition is not bound to a resource
+            or specifies "none" for the @linking attribute, references to that key do not become
+            navigation links.</p>
+        <p>When a key definition has a &lt;topicmeta> subelement, elements that refer to that key
+            and that are empty may get their effective content from the first matching subelement of
+            the &lt;topicmeta> subelement of the key-defining topicref. If no matching element is
+            found, the contents of the &lt;linktext> tag, if present, should be used. Elements
+            within &lt;linktext> that do not match the content model of the key reference directly
+            or after generalization should be skipped. For &lt;link> tags with a keyref attribute,
+            the contents of the &lt;shortdesc> tag in the key-defining element should provide the
+            &lt;desc> contents.</p>
+        <p>When a key definition has no @href value and no @keyref value, references to
+            that key will not result in a link, even if they do contain an @href attribute of their
+            own. If the key definition also does not contain a &lt;topicmeta> subelement, empty
+            elements that refer to the key (such as <codeph>&lt;link keyref="a"/></codeph> or
+                <codeph>&lt;xref keyref="a" href="fallback.dita"/></codeph>) are removed.</p>
+        <p>Matching element content for key references contained in @keyref attributes
+            falls into one of two categories:<ol>
+                <li>For elements on which no @href attribute is available (such as cite, dt,
+                    keyword, term, ph, indexterm, index-base, and indextermref, and their
+                    specializations), matching content is taken from the &lt;keyword> or &lt;term>
+                    elements within &lt;keywords> within &lt;topicmeta>. If more than one
+                    &lt;keyword> or &lt;term> is present, the matching content is taken from the
+                    first of them.</li>
+                <li>For elements that in addition to @keyref or @conkeyref do specify an @href
+                    attribute (such as author, data, data-about, image, link, lq, navref, publisher,
+                    source, topicref, xref, and their specializations), matching content includes
+                    all elements from within the key definition element that are in valid context
+                    within the key reference. Elements that are invalid within the key reference
+                    element directly or after generalization are not included or are filtered
+                    out.</li>
+            </ol></p>
+        <p>For key reference elements that become navigation links, if there is no matching element
+            in the key definition, normal link text determination rules apply as for &lt;xref>.</p>
+        <p>If a referencing element contains a key reference with an undefined key, it is processed
+            as if there were no key reference, and the value of the @href attribute is used as the
+            reference. If the @href attribute is not specified either, the element is not treated as
+            a navigation link. If it is an error for the element to be empty, an implementation
+                <keyword>may</keyword> give an error message, and <keyword>may</keyword> recover
+            from this error condition by leaving the key reference element empty.</p>
+        <!--<p>For key references to undefined keys, if there is an @href attribute
+on         the referencing element, the value of the @href attribute
+is used as the         reference and the key reference element is
+processed as if there were no key reference. If         the key reference
+element does not specify @href, the element is not
+        treated as a navigation link. It is an error for the element
+to be empty, and an         implementation <keyword>may</keyword> give
+an error message, and <keyword>may</keyword>         recover from
+this error condition by leaving the key reference element empty. </p>-->
+        <p>For topic references that use the @keyref attribute, the effective value of the
+            &lt;topicref> element is determined as follows:<ul
+                id="ul_CF2B3DB7B65B42CB825E4A77367C7759">
+                <li
+        id="li_8C2182B15AAA403FA6BE0200EFB2EB9E">
+        <p>The effective resource bound to the &lt;topicref> element is determined by resolving all intermediate key references. Each key reference is resolved either to a resource addressed directly by URI reference in an @href attribute, or to no resource. Processors <keyword>may</keyword> impose reasonable limits on the number of intermediate key references they will resolve. Processors <keyword>should</keyword> support at least three levels of key references.</p>
+        <!-- 
+              WEK: I added these last two may and should statements as DITA provides no
+              explicit way to indicate any sort of maximum "hop count". We want to make it clear
+              processors don't have to support infinite recursion but can't arbitrarily disallow all
+              indirection either.-->
+        <note>This rule applies to all topic references, including those that define keys. Thus, the effective bound resource for a key definition that uses the @keyref attribute cannot be determined until the key space has been constructed.</note>
+        <p>The attributes that are common to a key definition element and a key reference element using that key, other than the @keys,<ph
+          rev="public-review-1"> @processing-role,</ph> and @id attributes, are combined as for content references, including the special processing for the @xml:lang, @dir, and @translate attributes. There is no special processing associated with either the @locktitle or the @lockmeta attributes when attributes are combined.</p>
+        <draft-comment
+          author="WEK">Removed paragraph and list per public review 1 comment C024.</draft-comment>
+      </li>
+                <li id="li_DFBE0534F51646B0B05BB73B9E9B9636">Content from a key reference element
+                    and a key-defining element is combined following the rules for combining
+                    metadata between maps and other maps and between maps and topics. The @lockmeta
+                    attribute is honored when metadata content is combined.</li>
+                <li id="li_A7CB6EAC9293478886B1E03824DE8BB7">The combined attributes and content
+                    cascade from one map to another or from a map to a topic, but this is controlled
+                    by existing rules for cascading, which are not affected by the use of key
+                    references.</li>
+            </ul></p>
+    </conbody>
+</concept>

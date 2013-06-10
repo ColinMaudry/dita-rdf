@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept
+  id="domainpattern"
+  xml:lang="en-us">
+  <title>Element domain module coding requirements</title>
+  <shortdesc>An element domain vocabulary module defines element types that are appropriate for the
+    subject-matter or application domain for which they are designed. The purpose is usually to
+    enhance the user's interaction by providing <q>semantic</q> elements whose names more accurately
+    denote their content, making that content easier to search and retrieve.</shortdesc>
+  <conbody>
+    <section>
+      <title>Domain entity file</title>
+      <p>In addition to the domain declaration entity, the entity declaration file for element
+        domain modules <term>must</term> include the following components:</p>
+      <dl>
+        <dlentry>
+          <dt>Element extension entity</dt>
+          <dd>
+            <p>The declaration (<filepath>.ent</filepath>) file <term>must</term> define an
+              entity for each element extended by the domain. The base of the entity name is the
+              abbreviation for the domain and the extension of the entity name is the name of the
+              extended element. For example, the highlight domain (abbreviated as <codeph
+                >hi-d</codeph>) extends the <codeph>ph</codeph> element, so the entity for the
+              extended element is named <codeph>hi-d-ph</codeph>. </p>
+            <p>The value of the entity is a disjunctive list of the specialized elements that are
+              intended to occur in the same locations as the extended element. </p>
+            <p>For example, the <codeph>hi-d-ph</codeph> entity is defined as follows:</p>
+            <codeblock>&lt;!ENTITY % hi-d-ph "b | u | i | tt | sup | sub"&gt;</codeblock>
+          </dd>
+        </dlentry>
+      </dl>
+    </section>
+  </conbody>
+</concept>

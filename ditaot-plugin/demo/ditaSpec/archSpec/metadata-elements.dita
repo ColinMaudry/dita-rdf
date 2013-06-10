@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="metadata-elements" xml:lang="en-us">
+ <title>Metadata elements</title>
+ <shortdesc>The metadata elements, many of which map to Dublin core metadata, are available in
+  topics and DITA maps. This design enables authors and information architects to use identical
+  metadata markup in both topics and maps. </shortdesc>
+ <conbody>
+ <p>The &lt;metadata> element is a wrapper element that contains many of the metadata elements. In
+    topics, the &lt;metadata> element is available in the &lt;prolog> element. In maps, the
+    &lt;metadata> element is available in the &lt;topicmeta> element. </p>
+   <p>In DITA maps, the metadata elements also are available directly in the &lt;topicmeta> element.
+    However, it is recommended to use the metadata elements available in the &lt;metadata> element,
+    as it better supports reuse between topics and maps. Collections of metadata can be shared
+    between DITA maps and topics by using the conref or keyref mechanism.</p>
+   <p>In general, specifying metadata in a &lt;topicmeta> element is equivalent to specifying it in
+    the &lt;prolog> element of a referenced topic. The value of specifying the metadata at the map
+    level is that the topic then can be reused in other maps where different metadata might apply.
+    Many items in the &lt;topicmeta> element also cascade to nested &lt;topicref> elements within
+    the map.</p>
+   <note>Not all metadata elements are currently available in the &lt;metadata> element. However,
+    they are available in either the topic &lt;prolog> element or the map &lt;topicmeta>
+    element.</note>
+ </conbody>
+ <related-links>
+  <linklist>
+   <link format="xhtml" href="http://dublincore.org/"><?Pub Caret?>
+    <linktext>Dublin Core Metadata Initiative (DCMI)</linktext></link>
+  </linklist>
+ </related-links>
+</concept>

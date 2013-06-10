@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="fileext" xml:lang="en-us">
+  <title>File naming conventions</title>
+  <shortdesc>DITA uses certain naming conventions and file extension for topics, maps, modules, and
+    document-type implementation files.</shortdesc>
+  <conbody>
+    <p>Files that contain DITA content <keyword>should</keyword> use the following naming
+      conventions:</p>
+    <dl>
+      <dlentry>
+        <dt>DITA topics</dt>
+        <dd>
+          <ul id="ul_3f454a98-4dfa-468f-bf1f-1b0c1b2a051c">
+            <li>*.dita (recommended)</li>
+            <li>*.xml </li>
+          </ul>
+        </dd>
+      </dlentry>
+      <dlentry>
+        <dt>DITA maps</dt>
+        <dd>*.ditamap</dd>
+      </dlentry>
+      <dlentry>
+        <dt>Conditional processing profiles</dt>
+        <dd><varname>profilename</varname>.ditaval</dd>
+      </dlentry>
+    </dl>
+    <p id="doctype-naming-conventions">Files that define DITA document-type components <keyword
+        >must</keyword> use the following naming conventions:<dl>
+        <dlentry>
+          <dt>Document-type shell files</dt>
+          <dd>
+            <ul id="ul_3298f6ba-c3a1-419b-88e5-104eb24fe903">
+              <li><varname>typename</varname>.dtd</li>
+              <li><varname>typename</varname>.xsd</li>
+            </ul>
+            <p>Where <varname>typename</varname> is the name of the intended root topic or map type
+              defined by the document type shell or, as needed, a name that clearly identifies both
+              the intended root map or topic type and distinguishes the document type shell from
+              other shells for the same root type.<note type="other" othertype="non-normative">For
+                example, the OASIS-provided document-type shells for technical content include two
+                different document-type shells for the task topic type:
+                  <filepath>task.dtd</filepath> and <filepath>generalTask.dtd</filepath>, where
+                  <filepath>task.dtd</filepath> includes the strict task body constraint module and
+                  <filepath>generalTask.dtd</filepath> does not.</note></p>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>DTD structural module files</dt>
+          <dd>
+            <ul id="ul_ceea4d8e-0217-4484-a72a-add72e8b1d48">
+              <li><varname>typename</varname>.mod</li>
+              <li><varname>typename</varname>.ent </li>
+            </ul>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>DTD domain module files</dt>
+          <dd>
+            <ul id="ul_a0cf5d76-8f9c-4d1c-bfed-a65e9756695f">
+              <li><varname>typename</varname>Domain.mod</li>
+              <li><varname>typename</varname>Domain.ent</li>
+            </ul>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>DTD constraint module files</dt>
+          <dd><varname>constraintname</varname>Constraint.mod</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Schema structural module files</dt>
+          <dd>
+            <ul id="ul_eefc504e-3109-4ab5-bbe9-91221b4ecf74">
+              <li><varname>typename</varname>Mod.xsd</li>
+              <li><varname>typename</varname>Grp.xsd</li>
+            </ul>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Schema domain module files</dt>
+          <dd><varname>typename</varname>Domain.xsd </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Schema constraint module files</dt>
+          <dd>
+            <ul id="ul_49a2afe7-c7d2-4c8f-967e-97c6c8ef207d">
+              <li><varname>constraintname</varname>ConstraintMod.xsd</li>
+              <li><varname>constraintname</varname>ConstraintIntMod.xsd</li>
+            </ul>
+          </dd>
+        </dlentry>
+      </dl></p>
+  </conbody>
+</concept>

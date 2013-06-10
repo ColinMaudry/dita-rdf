@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="metadata" xml:lang="en-us">
+<title>metadata</title>
+<shortdesc>The &lt;<keyword>metadata</keyword>&gt; section
+of the prolog contains information about a topic such as audience
+and product information. Metadata can be used by computational processes
+to select particular topics or to prepare search indexes or to customize
+navigation. Elements inside of &lt;<keyword>metadata</keyword>&gt;
+provide information about the content and subject of a topic; prolog
+elements outside of &lt;<keyword>metadata</keyword>&gt; provide lifecycle
+information for the content unit (such as the author or copyright),
+which are unrelated to the subject.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>metadata</indexterm><indexterm>Prolog elements<indexterm>metadata</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section>Beginning with DITA 1.2, the metadata element is
+available inside topicmeta in maps, although the contents of metadata
+are still available directly inside topicmeta. As with the prolog,
+the metadata element within topicmeta allows you to group elements
+that describe the content or subject of the target. The primary purpose
+for enabling the metadata element within maps is to allow easier reuse
+between topics and maps.</section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-metadata/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="metadata-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-metadata/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="metadata-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/metadata </p></section>
+<example id="example"><title>Example</title><p>Metadata within a topic:</p><codeblock>&lt;prolog&gt;
+  <b>&lt;metadata&gt;</b>
+    &lt;audience type="user" job="using" experiencelevel="novice"/&gt;
+  <b>&lt;/metadata&gt;</b>
+&lt;/prolog&gt;</codeblock><?Pub Caret 104?><p>Metadata within a map:</p><codeblock>&lt;topicref href="metadata.dita" navtitle="metadata element">
+  &lt;topicmeta>
+    <b>&lt;metadata></b>
+      &lt;keywords>
+        &lt;indexterm>metadata element&lt;/indexterm>
+      &lt;/keywords>
+    <b>&lt;/metadata></b>
+  &lt;/topicmeta>
+&lt;/prolog></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="metadata_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/mapkeyref">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classonly">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000003911?>

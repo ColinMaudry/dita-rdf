@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?><!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<?Pub Sty _display FontColor="red"?>
+<?Pub Inc?>
+<concept id="terminology" xml:lang="en-us">
+<title>DITA terminology and notation</title>
+<shortdesc>The DITA specification uses specific notation and terms
+to define the           components of the DITA standard.         
+ <!--This terminology is not intended to serve as a tutorial or provide
+a user-friendly introduction to the DITA standard.--></shortdesc>
+<conbody>
+<section>                <title>Notation</title>                <p><ph>The
+following conventions are used throughout the                    
+     specification:</ph><dl><dlentry>
+<dt>attribute types</dt>
+<dd>Attribute names may be preceded by @ to distinguish them from
+                                   elements or surrounding text, for
+example, the @props or the                                    @class
+attribute.</dd>
+</dlentry><dlentry>
+<dt>element types</dt>
+<dd>Element names may be delimited with angle brackets (&lt; and >)
+to                                    distinguish them from surrounding
+text, for example, the                                    &lt;keyword>
+and the &lt;prolog> element.</dd>
+</dlentry></dl></p>                <p>In general, the unqualified
+use of the term <term>map</term> or <term>topic</term>           
+         can be interpreted to mean "a &lt;map> element and any specialization
+of a                     &lt;map> element " or "a &lt;topic> element
+or any specialization of a                     &lt;topic> element."</p> 
+         </section>
+<section>                <title><ph>Normative and non-normative information</ph></title> 
+              <p>The DITA specification contains normative and non-normative
+information:<dl><dlentry>
+<dt>Normative information</dt>
+<dd>Normative information is the formal portion of the specification
+                                   that describes the rules and requirements
+that make up the DITA                                    standard
+and which must be followed.</dd>
+</dlentry><dlentry>
+<dt>Non-normative information</dt>
+<dd>Non-normative information includes descriptions that provide 
+                                  background, examples, and other
+useful information that are not                                  
+ formal requirements or rules that must be followed. <ph>The terms
+non-normative and informative are used                           
+             interchangeably.</ph></dd>
+</dlentry></dl></p>                <p>All information in the specification
+should be considered normative                     unless it is an
+example, an appendix, or is explicitly labeled as informative or 
+                   non-normative. Appendices are always non-normative,
+unless explicitly stated                     otherwise. The DITA specification
+contains examples to help clarify or                     illustrate
+specific aspects of the specification. Because examples are specific
+                    rather than general, they may not illustrate all
+aspects or be the only way to                     accomplish or implement
+an aspect of the specification. Therefore all examples           
+         are non-normative, unless explicitly stated otherwise.</p> 
+         </section>
+<section>                <title>Basic DITA terminology</title>   
+            <p>The following terminology is used to discuss basic
+DITA concepts:</p>                <dl><dlentry>
+<dt>DITA attribute type</dt>
+<dd>An attribute type that is one of the following:<ul>
+<li>One of the base attribute types that are defined by the DITA 
+                                       specification</li>
+<li>A specialization of the either the @base or @props           
+                             attribute</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>DITA document</dt>
+<dd>An XML document that conforms to the requirements of this    
+                          specification. A DITA document <term>must</term> have
+as its root                               element one of the following
+elements:<ul>
+<li>&lt;map> or a specialization of the &lt;map> element</li>
+<li>&lt;topic> or a specialization of the &lt;topic> element</li>
+<li>&lt;dita>, which cannot be specialized, but which allows     
+                                   documents with multiple sibling
+topics</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>DITA document type</dt>
+<dd>A unique set of structural modules, domain modules, and constraint
+                              modules that taken together provide
+the XML element and attribute                               declarations
+that define the structure of DITA documents. DITA                
+              document types normally are implemented using DITA document-type
+                              shells.</dd>
+</dlentry><dlentry>
+<dt>DITA document-type shell</dt>
+<dd>A set of DTD or XSD declarations that implement a DITA document
+type by                               using the rules and design patterns
+that are included in the DITA                               specification.
+A DITA document-type shell includes and configures one           
+                   or more structural modules, zero or more domain
+modules, and zero or                               more constraint
+modules. With the exception of the optional                      
+        declarations for the &lt;dita> element and its attributes,
+DITA                               document-type shells do not declare
+any element or attribute types                               directly.</dd>
+</dlentry><dlentry>
+<dt>DITA element</dt>
+<dd>An XML element instance whose type is a DITA element type. DITA
+                              elements must exhibit a @class attribute
+that has a value that                               conforms to the
+rules for specialization hierarchy                               specifications.</dd>
+</dlentry><dlentry>
+<dt>DITA element type</dt>
+<dd>An element type that is one of the following:<ul>
+<li>One of the base element types that are defined by the DITA   
+                                     specification</li>
+<li>A specialization of one of the base element types</li>
+</ul>A DITA element type is declared in exactly one vocabulary module.
+                              DITA element types may only exhibit
+attributes that are DITA attribute                               types.</dd>
+</dlentry><dlentry>
+<dt>map instance </dt>
+<dd>An occurrence of a map type in a document.</dd>
+</dlentry><dlentry>
+<dt>map type</dt>
+<dd>An element type that defines a set of relationships among topic
+                              instances. The map type provides the
+root element and, through the                               contained
+element types, the substructure for the map instances. The       
+                       map substructure provides hierarchy, group,
+and matrix organization of                               references
+to topic instances.</dd>
+</dlentry><dlentry>
+<dt>structural type instance</dt>
+<dd>An occurrence of a topic type or a map type in a document.</dd>
+</dlentry><dlentry>
+<dt>topic instance </dt>
+<dd>An occurrence of a topic type in a document.</dd>
+</dlentry><dlentry>
+<dt>topic type</dt>
+<dd>An element type that defines a complete unit of content. The topic
+type                               provides the root element for the
+topic and, through the contained                               element
+types, the substructure for the topic instances. The root        
+                      element of the topic type is not necessarily
+the same as the root                               element of a document
+type; document types may nest multiple topic                     
+         types and may also declare non-DITA wrapper elements as the
+root                               element for compatibility with
+other processes.</dd>
+</dlentry></dl>           </section>
+<section>                <title>Specialization terminology</title> 
+              <p>The following terminology is used to discuss DITA
+specialization:</p>                <dl><dlentry>
+<dt>base content model</dt>
+<dd>The content model of a DITA element before specialization or the
+                              application of constraints or extensions.</dd>
+</dlentry><dlentry>
+<dt>base type</dt>
+<dd>An element or attribute type that is not a specialization. All
+base                               types are defined by the DITA specification.</dd>
+</dlentry><dlentry>
+<dt>extension element</dt>
+<dd>Within a vocabulary module, an element type that can be extended,
+                              replaced, or constrained for use in
+a DITA document type.</dd>
+</dlentry><dlentry>
+<dt>generalization</dt>
+<dd>The process by which a specialized element is transformed into
+a                               less-specialized ancestor element
+or a specialized attribute is                               transformed
+into a less-specialized ancestor attribute. The original         
+                     specialization-hierarchy information may be preserved
+in the                               generalized instance, thus allowing
+the original specialized type to                               be
+recreated from the generalized instance.</dd>
+</dlentry><dlentry>
+<dt>restricted content model</dt>
+<dd>For a DITA element type, a content model that has been restricted
+from                               the base content model for the
+element type by one <ph>or                                    more</ph> of
+the following mechanisms:<ul>
+<li>Removing optional elements</li>
+<li>Requiring optional elements</li>
+<li>Ordering of unordered elements</li>
+<li>Restricting repeatable (but optional) elements from          
+                              repeating</li>
+</ul>Content models may be restricted through the use of constraint
+                              modules or through specialization.</dd>
+</dlentry><dlentry>
+<dt>selective domain extension</dt>
+<dd>An extension that replaces an extension element with element types
+that                               are defined in an domain module,
+thus making the base type unavailable                            
+  in the DITA document-type shell that configures the extension.</dd>
+</dlentry><dlentry>
+<dt>specialization</dt>
+<dd>(1) The act of defining new element or attribute types as a semantic
+                              refinement of existing element or attribute
+types</dd>
+<dd>(2) An element or attribute type that is a specialization of a
+base                               type</dd>
+<dd>(3) A process by which a generalized element is transformed into
+one of                               its more specialized element
+types or a generalized attribute is                              
+transformed into a more specialized attribute.</dd>
+</dlentry><dlentry>
+<dt>specialization hierarchy</dt>
+<dd>The sequence of element or attribute types, from the most general
+to                               most specialized, from which a given
+element or attribute type is                               specialized.
+The specialization hierarchy for a DITA element is               
+               formally declared through its @class attribute.</dd>
+</dlentry><dlentry>
+<dt>specialization parent</dt>
+<dd>For a given DITA element type, the most specialized of its ancestors
+in                               its specialization hierarchy.</dd>
+</dlentry><dlentry>
+<dt>specialized attribute type</dt>
+<dd>An attribute type that is defined as a semantic refinement of
+another                               attribute type. The attribute
+type must be specialized from either the                         
+     @base or @props attribute, and its range of permissible values
+must be                               a subset of or identical to
+the values allowed by the original                               attribute
+type.</dd>
+</dlentry><dlentry>
+<dt>specialized element type</dt>
+<dd>An element type that is defined as a semantic refinement of an
+existing                               element type. The content allowed
+by the specialized element type must                             
+ be a subset of or identical to the content allowed by the original
+                              element type. Within a DITA document,
+all specialized element types                               must be
+refinements of one of the base element types, with the           
+                   exception of elements that are used in the context
+of &lt;foreign> or                               &lt;unknown> elements.</dd>
+</dlentry><dlentry>
+<dt>structural type</dt>
+<dd>A topic type or map type.</dd>
+</dlentry></dl>           </section>
+<section>                <title>DITA modules</title>             
+  <p>The following terminology is used to discuss DITA modules:</p> 
+              <dl><dlentry>
+<dt>attribute domain module</dt>
+<dd>A domain module that defines exactly one specialization of either
+the                               @base or @props attribute.</dd>
+</dlentry><dlentry>
+<dt>constraint module</dt>
+<dd>A set of declarations that imposes additional constraints onto
+the                               element or attribute types that
+are defined in a specific vocabulary                             
+ module.</dd>
+</dlentry><dlentry>
+<dt>domain module</dt>
+<dd>A set of element types or an attribute type that supports a specific
+                              subject or functional area. Element
+types or attribute types in a                               domain
+can be integrated with topic types or map types to enhance       
+                       semantic support for particular kinds of content.
+For example, the                               structural type &lt;topic>
+declares the &lt;keyword> element; when                          
+    integrated with a domain for describing user interfaces, new keyword
+                              specializations (such as &lt;wintitle>)
+become available wherever                               &lt;keyword>
+was allowed in the original structural type.</dd>
+</dlentry><dlentry>
+<dt>element domain module</dt>
+<dd>A domain module that defines one or more element types for use
+within                               maps or topics.</dd>
+</dlentry><dlentry>
+<dt>map module</dt>
+<dd>A structural module that defines a single map type.</dd>
+</dlentry><dlentry>
+<dt>structural module</dt>
+<dd>A vocabulary module that defines exactly one top-level map type
+or                               topic type. Structural modules <keyword>may</keyword> also
+define                               specializations of elements from
+domain modules.</dd>
+</dlentry><dlentry>
+<dt>topic module</dt>
+<dd>A structural module that defines a single top-level topic type.</dd>
+</dlentry><dlentry>
+<dt>vocabulary module</dt>
+<dd>A uniquely-named unit of element type or attribute type declaration.
+                              There are two types of vocabulary modules:
+structural modules and                               domain modules.
+For a given map type, topic type, or domain, there is            
+                  exactly one vocabulary module that defines it.</dd>
+</dlentry></dl>                <p>The following figure illustrates
+the relationship between a DITA document, its                    
+DITA document-type shell, and the various vocabulary modules that
+it uses.<fig><title>Instances, modules, and declarations</title><image
+href="../resources/instances-modules-declarations-01.jpg" width="5in">
+<alt>Shows the relationship between a DITA document, its DITA    
+                               document-type shell, and the various
+document-type modules that                                    it uses.</alt>
+</image></fig></p>           </section>
+<section>                <title>Linking and addressing terms</title> 
+              <p>The following terminology is used to discuss linking
+and addressing terms:</p>                <dl><dlentry>
+<dt>key name</dt>
+<dd><ph>An identifier defined by a value of the @keys            
+                       attribute.</ph> A key is bound to one or more
+of the following items:<ul>
+<li>A resource addressed by the &lt;topicref> element or a       
+                                 specialization of the &lt;topicref>
+element</li>
+<li>An element contained with the &lt;topicmeta> element of the  
+                                      &lt;topicref> element or a specialization
+of                                         the&lt;topicref> element</li>
+</ul></dd>
+</dlentry><dlentry>
+<dt>key definition</dt>
+<dd>A &lt;topicref> element or specialization of a &lt;topicref> element
+                              that specifies the @keys attribute and
+defines one or more key                               names.</dd>
+</dlentry><dlentry>
+<dt>key resolution context</dt>
+<dd>The root map that establishes the context for resolving key references.
+                              For a given key-resolution instance,
+there is at most one root map                               that defines
+the effective value of the key space, as determined by           
+                   the key definition precedence rules..</dd>
+</dlentry><dlentry>
+<dt>key space</dt>
+<dd>The effective set of unique key names that are defined by a given
+key                               resolution context. Within a given
+key resolution context, a key name                               has
+at most one binding.</dd>
+</dlentry><dlentry id="referenced-element">
+<dt>referenced element</dt>
+<dd>An element that is referenced by another DITA element. See also <term>referencing
+element</term>.</dd>
+<dd><b>Example</b><p>The following code sample is from the       
+                                 <filepath>installation-reuse.dita</filepath> topic.
+The                                    &lt;step> element that it contains
+is a referenced element; other                                   
+DITA topics reference the &lt;step> element by using the @conref 
+                                  attribute.<codeblock>&lt;step id="run-startcmd-script">
+	&lt;cmd>Run the startcmd script that is applicable to your operating-system environment.&lt;/cmd>
+&lt;/step></codeblock></p></dd>
+</dlentry><dlentry id="referencing-element">
+<dt>referencing element</dt>
+<dd>An element that references another DITA element by specifying
+an                               addressing attribute. See also <term>referenced
+element</term> and <term>addressing attribute</term></dd>
+<dd><b>Example</b><p>The following &lt;step> element is a referencing
+                                   element. It uses the @conref attribute
+to reference a &lt;step>                                    element
+in the <filepath>installation-reuse.dita</filepath>              
+                     topic.<codeblock>&lt;step conref="installation-reuse.dita#reuse/run-startcmd-script>
+	&lt;cmd/>
+&lt;/step></codeblock></p><?Pub Caret -3?></dd>
+</dlentry><dlentry id="addressing-attribute">
+<dt>addressing attribute</dt>
+<dd>An attribute, such as @conref, @conkeyref, @keyref, and @href,
+that                               specifies an address (a URI reference
+or a key reference).</dd>
+</dlentry></dl>           </section>
+</conbody>
+</concept>
+<?Pub *0000019269?>

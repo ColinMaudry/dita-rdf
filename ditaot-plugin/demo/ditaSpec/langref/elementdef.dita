@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="elementdef" xml:lang="en-us">
+<title>elementdef</title>
+<shortdesc>The &lt;<keyword>elementdef</keyword>> element identifies
+an element on which an attribute is enumerated. When the &lt;<keyword>elementdef</keyword>>
+is left out of an &lt;<keyword>enumerationdef</keyword>> element,
+the enumeration is bound to the attribute in all elements.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>elementdef</indexterm></keywords>
+</metadata></prolog>
+<refbody>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-elementdef/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref
+keyref="elementdef-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-elementdef/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="elementdef-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/data subjectScheme/elementdef </p></section>
+<example id="example"><title>Example</title><p>In this example, the
+&lt;lomDifficulty> element has been specialized from the &lt;data>
+element. The value attribute on the &lt;lomDifficulty> element (but
+not the value attribute on other elements) is bound to a specific
+set of values. This means that processors should limit that attribute
+on that element to the values veryEasy, easy, medium, difficult, or
+veryDifficult.</p><?Pub Caret -1?><codeblock>&lt;subjectScheme>
+  &lt;subjectdef keys="difficulty">
+    &lt;subjectdef keys="veryEasy"/>
+    &lt;subjectdef keys="easy"/>
+    &lt;subjectdef keys="medium"/>
+    &lt;subjectdef keys="difficult"/>
+    &lt;subjectdef keys="veryDifficult"/>
+  &lt;/subjectdef>
+  ...
+  &lt;enumerationdef>
+    <b>&lt;elementdef name="lomDifficulty"/></b>
+    &lt;attributedef name="value"/>
+    &lt;subjectdef keyref="difficulty"/>
+  &lt;/enumerationdef>
+&lt;/subjectScheme></codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="attribute_table" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/name-elementdef">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/status">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/translate">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/base">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004000?>

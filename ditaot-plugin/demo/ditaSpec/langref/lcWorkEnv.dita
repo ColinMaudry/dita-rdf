@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="lcWorkEnv" xml:lang="en-us">
+	<title>lcWorkEnv</title>
+	<shortdesc>The &lt;<keyword>lcWorkEnv</keyword>&gt; describes the working conditions and contexts in which the training will be applied.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lcWorkEnv</indexterm><indexterm>learning and training elements<indexterm>lcWorkEnv</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-lcWorkEnv/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="lcWorkEnv-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-lcWorkEnv/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="lcWorkEnv-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/fig learningBase/fig learningPlan/lcWorkEnv </p>
+</section>
+
+<example id="example">
+<title>Example</title>
+<codeblock>
+...
+      &lt;lcWorkEnv>
+        &lt;title>Work Environment&lt;/title>
+        &lt;lcWorkEnvDescription>All learners work in a typical office environment.&lt;/lcWorkEnvDescription>
+        &lt;lcPlanResources>You need lots of pencils.&lt;/lcPlanResources>
+        &lt;lcProcesses>Follow these processes:
+          &lt;ul>
+            &lt;li>Fill our the pencil request form.&lt;/li>
+            &lt;li>Sharpen the pencils as soon as they arrive, to keep them fresh.&lt;/li>
+          &lt;ul>
+        &lt;/lcProcesses>
+      &lt;/lcWorkEnv>
+...
+</codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title> 
+<simpletable id="lcWorkEnv_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/display-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/spectitle">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/univ-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable> 
+</section>
+</refbody>
+</reference>

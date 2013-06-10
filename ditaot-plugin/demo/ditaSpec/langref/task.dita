@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<reference id="task" xml:lang="en-us">
+<title>task</title>
+<shortdesc>The &lt;<keyword>task</keyword>&gt; element is the top-level
+element for a task topic. Tasks are the main building blocks for task-oriented
+user assistance. They generally provide step-by-step instructions
+that will enable a user to perform a task. A task answers the question
+of "how to?" by telling the user precisely what to do and the order
+in which to do it. Tasks have the same high-level structure as other
+topics, with a title, short description and body.</shortdesc>
+<prolog><metadata>
+<keywords><indexterm>task</indexterm><indexterm>Task elements<indexterm>task</indexterm></indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><note
+conref="taskbody.dita#taskbody/constrained-taskbody-xpl"></note><?Pub
+Caret -2?><p>See the <xref href="taskbody.dita">taskbody</xref> description
+for additional details about the two models and for a description
+of impacts to DITA 1.1 documents.</p></section>
+<!--<section>In the document types provided by OASIS with DITA
+1.0 and 1.1, the task only allowed a single set of steps. In DITA
+1.2 this restriction is relaxed so that a task may define more than
+one set of steps. However, OASIS will continue to distribute a sample
+document type that only allows a single set (using the new constraints
+mechanism available with DITA 1.2), for use by those that prefer the
+more restrictive model.</section>-->
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-task/contains"
+id="contains" otherprops="contains"><title>Contains</title><p>The
+content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="task-contains"></xref></p></section>
+<section
+conref="../common/commonNavLibraryTable.dita#contentmodel-task/containedby"
+id="containedby" otherprops="containedby"><title>Contained By</title><p>The
+parents of this element may differ based on where it is used. Content
+model information is located here: <xref keyref="task-contained-by"></xref></p></section>
+<section id="inheritance" otherprops="inheritance"><title>Inheritance</title><p>-
+topic/topic task/task </p></section>
+<example id="example"><title>Example</title><codeblock
+xml:space="preserve">&lt;task id="sqlj"&gt;
+ &lt;title&gt;Creating an SQLJ file&lt;/title&gt;
+ &lt;taskbody&gt;
+  &lt;context&gt;Once you have set up SQLJ, you need to create a new SQLJ file.
+  &lt;/context&gt;
+  &lt;steps&gt;
+   &lt;step&gt;&lt;cmd&gt;Open...&lt;/cmd&gt;&lt;/step&gt;
+  &lt;/steps&gt;
+ &lt;/taskbody&gt;
+&lt;/task&gt; </codeblock></example>
+<section id="attributes"><title>Attributes</title><simpletable
+id="task_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-topic">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmlnsditaarch">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/DITAArchVersion">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
+<?Pub *0000004781?>

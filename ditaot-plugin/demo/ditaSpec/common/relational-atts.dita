@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2009, v.4002-->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Sty _display FontColor="red"?>
+<!--             (C) Copyright OASIS Open 2005.                    -->
+<!--             (C) Copyright IBM Corporation 2001, 2004.         -->
+<!--             All Rights Reserved.                              -->
+<reference id="relational-atts" xml:lang="en-us">
+<title>relational-atts attribute group</title>
+<shortdesc>The "relational-atts" attribute group includes attributes
+whose values may be used for representing navigational relationships.
+These attributes occur only on elements that represent relationships
+among DITA elements or between DITA elements and non-DITA resources.</shortdesc><?Pub
+Caret 264?>
+<prolog><metadata>
+<keywords><indexterm>%relational-atts</indexterm><indexterm>Commonly
+referenced attribute descriptions<indexterm>relational-atts</indexterm>  </indexterm>
+</keywords>
+</metadata></prolog>
+<refbody>
+<section><title>Attributes</title><simpletable id="rel-atts_attr"
+relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="commonLRdefs.dita#commonLRdefs/type">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/format">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/scope">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/role">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="commonLRdefs.dita#commonLRdefs/otherrole">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+<example>          <p>The "relational-atts" attribute group is used
+within the DITA DTDs as a common definition for attributes available
+to elements that represent topic-to-topic relationships. Some typical
+examples include:</p><pre>&lt;link type="task" role="child" href="how2uninst.dita" scope="local"/>
+&lt;link type="concept" role="parent" href="aboutTheThing.dita" scope="local"/></pre></example>
+</refbody>
+</reference>
+<?Pub *0000002581?>

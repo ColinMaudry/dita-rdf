@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2008, v.4002-->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+ "concept.dtd">
+<concept id="dita_ref_topic" xml:lang="en-Us">
+  <title>Reference topic</title>
+  <shortdesc>The DITA reference document type uses the reference information type. Reference topics
+    are specialized from the base topic information type. They contain the standard topic elements,
+    including title, short descriptions or abstract, prolog, a <?Pub Caret?>body, and related
+    links.</shortdesc>
+  <conbody>
+    <section>
+      <title>The purpose of the reference information type</title>
+      <p>Reference topics that provide data in support of the performance of a task. Reference
+        topics may provide lists and tables that include product specifications, parts lists,
+        constraints on use or performance, and other data that is often “looked up” rather than
+        memorized. A reference topic may also describe regular constituents of a subject or product,
+        such as commands in a programming language. or required tools for a series of maintenance
+        tasks.</p>
+      <p> Reference topics provide quick access to fact-based information. In technical information,
+        reference topics are used to list product specifications and parameters, provide essential
+        data, and provide detailed information on subjects such as the commands in a programming
+        language. Reference topics may hold any subject matter that has regular content, such as
+        ingredients for food in recipes, bibliographic lists, catalogue items, and so on. </p>
+    </section>
+    <section>
+      <title>The structure of the reference topic</title>
+      <p>The top-level element for a reference topic is the &lt;reference> element. </p>
+      <p>The &lt;refbody> element holds the main body-level elements of the reference topic.
+        Reference topics limit the body to tables (both simple and complex), property lists, syntax
+        sections, and generic sections and examples.</p>
+      <p>All of the elements of &lt;refbody> are optional and may appear in any sequence and number.
+      </p>
+    </section>
+    <section>
+      <title>Limitations on the reference body</title>
+      <p>The &lt;refbody> provides for an unlimited number of subdivisions in the form of sections,
+        examples, syntax sections, property lists, and tables. However, once an author decides to
+        incorporate a section, example, property list, or syntax section in the &lt;refbody>, only
+        additional sections, examples, property lists, or syntax sections are allowed. Simple and
+        complex tables may appear within sections, examples, and syntax sections. They may not
+        appear within the property list or simple or complex table sections. Sections, examples,
+        syntax sections, table subdivisions, and property lists may not nest, meaning that only one
+        level of subdivision is permitted in the reference topic.</p>
+    </section>
+    <section>
+      <title>The sections of the reference body </title>
+      <dl>
+        <dlentry>
+          <dt>&lt;section></dt>
+          <dd>Represents an organizational division in a reference topic. Sections organize subsets
+            of information within a larger topic. You can only include a simple list of peer
+            sections in a topic; sections cannot be nested. A section may have an optional
+            title.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>&lt;refsyn></dt>
+          <dd>Contains syntax or signature content (for example, a command-line utility's calling
+            syntax or an API's signature). The &lt;refsyn> contains a brief, possibly diagrammatic
+            description of the subject's interface or high-level structure.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>&lt;example></dt>
+          <dd>Provides examples that illustrate or support the current topic. The &lt;example>
+            element has the same content model as &lt;section>. </dd>
+        </dlentry>
+        <dlentry>
+          <dt>&lt;table></dt>
+          <dd>Organizes information according into a rows and columns. Table markup also allows for
+            more complex structures, including spanning rows and columns, as well as table captions.
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>&lt;simpletable></dt>
+          <dd>Holds information in regular rows and columns and does not allow a caption. </dd>
+        </dlentry>
+        <dlentry>
+          <dt>&lt;properties></dt>
+          <dd>Lists properties of a subject and their types, values, and descriptions.</dd>
+        </dlentry>
+      </dl>
+    </section>
+    <example>Following is an example of a simple reference topic, including the &lt;refsyn>
+      element.<codeblock>&lt;reference id="boldproperty">
+&lt;title>Bold property&lt;/title>
+&lt;shortdesc>(Read-write) Whether to use a bold font for the specified text string.&lt;/shortdesc>
+&lt;refbody>
+  &lt;refsyn>
+    &lt;synph>
+      &lt;var>object&lt;/var>&lt;delim>.&lt;/delim>&lt;kwd>Font&lt;/kwd>&lt;delim>.&lt;/delim>
+      &lt;kwd>Bold&lt;/kwd>&lt;delim> = &lt;/delim>&lt;var>trueorfalse&lt;/var>
+    &lt;/synph>
+  &lt;/refsyn>
+  &lt;properties>
+    &lt;property>
+      &lt;proptype>Data type&lt;/proptype>
+      &lt;propvalue>Boolean&lt;/propvalue>
+    &lt;/property>
+    &lt;property>
+      &lt;proptype>Legal values&lt;/proptype>
+      &lt;propvalue>True (1) or False (0)&lt;/propvalue>
+    &lt;/property>
+  &lt;/properties>
+&lt;/refbody>
+&lt;/reference></codeblock></example>
+    <example>Following is an example of a simple reference topic, including the &lt;property>
+      element.<codeblock>&lt;reference id="oiltypes">
+&lt;title>Oil Types&lt;/title>
+&lt;shortdesc>The tables provide the recommended oil types.&lt;/shortdesc>
+&lt;refbody>
+    &lt;properties>
+    &lt;property>         
+      &lt;prophead>
+          &lt;proptypehd>Oil type&lt;/proptypehd>
+          &lt;propvaluehd>Oil brand&lt;/propvaluehd>
+          &lt;propdeschd>Appropriate use&lt;/propdeschd>
+      &lt;/prophead>
+     &lt;property>
+      &lt;proptype>Primary oil&lt;/proptype>
+      &lt;propvalue>A1X&lt;propvalue>
+      &lt;propdesc>Appropriate for one-cylinder engines&lt;/propdesc>
+    &lt;/property>
+    &lt;property>
+      &lt;proptype>Secondary oil&lt;/proptype>
+      &lt;propvalue>B2Z&lt;/propvalue>
+      &lt;propdesc>Appropriate for two-cylinder engines&lt;/propdesc>
+    &lt;/property>
+  &lt;/properties>
+&lt;/refbody>
+&lt;/reference></codeblock><!-- jeff ogden: consider adding example output for all
+          examples MP response: aim for comprehensive example addition
+          in 1.2 --></example>
+    <section>
+      <title>Modules</title>
+      <p>The following DITA modules are provided for the reference topic.</p>
+      <sl>
+        <sli>reference.mod, reference.ent (DTD)</sli>
+        <sli>referenceMod.xsd, referenceGrp.xsd (Schema)</sli>
+      </sl>
+    </section>
+  </conbody>
+</concept>
+<?Pub *0000006645 0?>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?Pub Sty _display FontColor="red"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+ "reference.dtd">
+<?Pub Inc?>
+<reference id="lcOverview_usecases" xml:lang="en-us">
+ <title>Use cases</title>
+ <shortdesc>Several use cases inform the design and development of the DITA Learning and Training
+  Specialization.</shortdesc>
+ <refbody>
+  <section>
+   <dl>
+    <dlentry>
+     <dt>Enable indexing, searching, and retrieval of learning content</dt>
+     <dd>By structuring content with DITA topics and maps as self-contained learning objects matched
+      with appropriate DITA metadata, it is possible to enable fast indexing, search, and retrieval
+      of learning content that meets specific learning goals and objectives.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>Creating custom courses quickly</dt>
+     <dd>A company has a large inventory of topic-based content that is used to provide technical
+      and troubleshooting information about a set of componentized software products. It desires to
+      enable field engineers to quickly identify technical content that is suitable for providing
+      on-site training. The DITA Learning and Training Specialization enables field engineers to
+      draw on their inventory of topics and quickly assemble learning content to meet specific
+      customer needs.</dd>
+    </dlentry>
+    <dlentry>
+     <dt>Making technical content available for direct sharing and reuse in learning and
+      training</dt>
+     <dd>A DITA learning specialization makes it possible to define a context for and directly
+      assemble and use existing technical content for delivery as learning and training. The DITA
+      approach identifies consistent structures and patterns and leverages them to enable a
+      consistent approach for sharing content across teams. The result is much more opportunity to
+      share content between different providers and across areas of expertise, to learn from each
+      other, and to deliver content and the learning experience consistently. As a result, instead
+      of copy, paste, and make unique as the norm, we have write once and share with others as the
+      new norm.</dd>
+    </dlentry>
+   </dl>
+   <?Pub Caret -2?>
+  </section>
+ </refbody>
+ <related-links>
+  <linklist>
+   <title>Resources</title>
+   <link href="http://www.clarktraining.com/content/articles/LearningObjects.pdf" scope="external" format="pdf">
+    <linktext>"Recycling Knowledge with Learning Objects," by Ruth Clark.</linktext>
+   </link>
+   <link href="http://www.ibm.com/developerworks/xml/library/x-think21.html" scope="external" format="html">
+    <linktext>"Thinking XML: Learning Objects Metadata," by Uche Obguji (IBM developerWorks,
+     2003).</linktext>
+   </link>
+   <link href="http://edutechwiki.unige.ch/en/DITA" scope="external" format="html">
+    <linktext>"DITA in Education," by Dan Schneider, EduTech Wiki.</linktext>
+   </link>
+   <link href="http://www.ibm.com/developerworks/xml/library/x-dita9a/" scope="external" format="html">
+    <linktext>"An XML-based information architecture for learning content," by John Hunt and Robert
+     Bernard (IBM developerWorks, 2005).</linktext>
+   </link>
+   <link href="http://www.ibm.com/developerworks/xml/library/x-dita7/" scope="external" format="html">
+    <linktext>"Design patterns for information architecture with DITA map domains," by Erik Hennum,
+     Don Day, John Hunt, and Dave Schell (IBM developerWorks, 2004).</linktext>
+   </link>
+  </linklist>
+ </related-links>
+</reference>
+<?Pub *0000003638?>

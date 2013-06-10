@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference
+  PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="learningOverview" xml:lang="en-us">
+	<title>learningOverview</title>
+	<shortdesc>A <keyword>Learning Overview</keyword> topic identifies the learning
+objectives, includes other information helpful to the learner, such as prerequisites,
+duration, intended audience, and can include information and strategies that
+seeks to gain attention and stimulate recall of prior learning.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>learningOverview</indexterm><indexterm>learning and training elements<indexterm>learningOverview</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="contains" conref="../common/commonNavLibraryTable.dita#contentmodel-learningOverview/contains" otherprops="contains">
+			<title>Contains</title><p>The content model of this element may differ based on where it is used.
+Content model information is located here: <xref keyref="learningOverview-contains"/>
+			</p>
+		</section>
+		<section id="containedby" conref="../common/commonNavLibraryTable.dita#contentmodel-learningOverview/containedby" otherprops="containedby">
+			<title>Contained By</title><p>The parents of this element may differ based on where it is used. Content model
+information is located here: <xref keyref="learningOverview-contained-by"/>
+			</p>
+		</section>
+		<section id="inheritance" otherprops="inheritance">
+			<title>Inheritance</title><p>- topic/topic learningBase/learningBase     learningOverview/learningOverview </p>
+		</section>
+<example id="example">
+<title>Example</title>
+<codeblock>
+&lt;learningOverview id="understanding_the_basics" xml:lang="en-us">
+  &lt;title>Overview: Understanding the basics&lt;/title>
+  &lt;shortdesc>Mail basics start from the inbox, viewing and opening messages
+    you receive, and moving them to appropriate mail folders for easy access and
+    retrieval.&lt;/shortdesc>
+  &lt;learningOverviewbody>
+    &lt;lcAudience>The intended audience includes new users of the company email
+      system and anyone wanting a refresher on the basic features.&lt;/lcAudience>
+    &lt;lcDuration>
+      &lt;title>Expected duration&lt;/title>
+      &lt;lcTime value="00:30">It should take you no more than 30 minutes to complete
+        this module.&lt;/lcTime>
+    &lt;/lcDuration>
+    &lt;lcObjectives>
+      &lt;lcObjectivesStem>When you complete this lesson, you'll know how to perform
+        the following mail basics:&lt;/lcObjectivesStem>
+      &lt;lcObjectivesGroup>
+        &lt;lcObjective>Viewing the inbox&lt;/lcObjective>
+        &lt;lcObjective>Opening a message&lt;/lcObjective>
+        &lt;lcObjective>Moving messages to a folder&lt;/lcObjective>
+      &lt;/lcObjectivesGroup>&lt;
+    &lt;/lcObjectives>
+  &lt;/learningOverviewbody>
+&lt;/learningOverview>
+</codeblock>
+</example>
+<section id="attributes">
+<title>Attributes</title>
+<simpletable id="learningOverview_attr" relcolwidth="2* 3* 1* 1* 1*">
+<sthead>
+<stentry>Name</stentry>
+<stentry>Description</stentry>
+<stentry>Data Type</stentry>
+<stentry>Default Value</stentry>
+<stentry>Required?</stentry>
+</sthead>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/id-topic">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/conref-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/xmlnsditaarch">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/DITAArchVersion">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/select-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow
+conref="../common/commonLRdefs.dita#commonLRdefs/localization-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/global-atts">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/classandout">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+<!--<strow id="domains">
+<stentry>domains</stentry>
+<stentry>Indicates the specialized domains that are included in the DTD or
+Schema.<indexterm>domains attribute</indexterm></stentry>
+<stentry>CDATA</stentry>
+<stentry>(topic ui-d) (topic hi-d) (topic pr-d) (topic sw-d) (topic ut-d)
+(topic indexing-d) (learningBase learning-d)</stentry>
+<stentry>No</stentry>
+</strow>-->
+<strow conref="../common/commonLRdefs.dita#commonLRdefs/domains">
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+<stentry></stentry>
+</strow>
+</simpletable></section>
+</refbody>
+</reference>
