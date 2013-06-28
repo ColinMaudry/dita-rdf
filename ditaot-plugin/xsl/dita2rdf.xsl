@@ -20,6 +20,7 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 	
 	<xsl:import href="rdf/map2rdf.xsl"/>
 	<xsl:import href="rdf/topic2rdf.xsl"/>
+	<xsl:import href="parms.xsl"/>
 	<dita:extension id="dita.xsl.rdf" behavior="org.dita.dost.platform.ImportXSLAction" xmlns:dita="http://dita-ot.sourceforge.net"/>
 	<xsl:param name="rdfBaseURI">http://www.w3.org/1999/02/22-rdf-syntax-ns#</xsl:param>
 	<xsl:param name="rdfsBaseURI">http://www.w3.org/2000/01/rdf-schema#</xsl:param>
@@ -44,9 +45,9 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 			<s> datasheet/datasheet </s>
 			<s> datasheet/subtitle </s>
 			-->	
-			<s></s>
 		</specializations>
 	</xsl:param>
+
 	
 	<xsl:output method="xml" indent="no" omit-xml-declaration="no" standalone="no" media-type="application/rdf+xml"/>
 	
@@ -65,7 +66,6 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 			xmlns:dita="{$ditaBaseURI}"
 			xmlns:schema="{$schemaBaseURI}">
 			<xsl:apply-templates/>
-			
 		</rdf:RDF>
 	</xsl:template>
 	
@@ -73,6 +73,11 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 		<doc:desc>Elements and attributes that are not specifically matched by a template are ignored.</doc:desc>
 	</doc:doc>
 	<xsl:template match="* | @* | node()"/>
+	
+	<!-- Function that processes profiling attributes -->	
+	<xsl:function name="colin:getProfilingAttributes">
+		
+	</xsl:function>
 	
 	<xsl:function name="colin:getURI">
 		<xsl:param name="resourceBaseUri"/>
