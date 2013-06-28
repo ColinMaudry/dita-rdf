@@ -35,12 +35,9 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 		<xsl:param name="mapLanguage">
 			<xsl:value-of select="@xml:lang"/>
 		</xsl:param>
-		<xsl:param name="mapAuthors">
-			<xsl:value-of select="*[contains(@class,' map/map ')]//*[contains(@class,' map/topicmeta ')]/*[contains(@class,' topic/author ')]"/>
-		</xsl:param>
 		<rdf:Description rdf:about="{colin:getURI($resourcesBaseUri,local-name(),@xml:lang,@id)}">
 			<rdf:type rdf:resource="{colin:getElementType(@class,local-name())}"/>
-			
+			<dita:id><xsl:value-of select="@id"/></dita:id>
 			<!-- Map title -->
 			<xsl:if test="$mapTitle != ''">
 				<dita:title>
@@ -50,8 +47,8 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 					<xsl:value-of select="$mapTitle"/>
 				</dita:title> 
 			</xsl:if>
-			<!-- Map author(s) -->
-			
+			<xsl:call-template name="profilingAttributes"/>
+		
 			
 			
 			
