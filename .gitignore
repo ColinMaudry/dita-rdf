@@ -1,0 +1,9 @@
+neologisms/
+.htaccess
+.htaccess_
+.project
+README.md.rej
+build.xml
+build_dita2xhtml.xml
+build_template.xml
+dita-rdf.xpr
