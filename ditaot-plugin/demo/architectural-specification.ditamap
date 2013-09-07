@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Architectural specification">
+	<title></title>
+	<topicmeta>
+		<author>Colin</author>
+	</topicmeta>
+    <topicref href="architectural_specification.dita" navtitle="Architectural specification"/>     
+</map>
