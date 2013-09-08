@@ -9,6 +9,8 @@ Installation:
 You should keep reading:
 	This plugin enables you to export the metadata of a ditamap and the referenced topics in RDF, via an RDF/XML serialization.
 	
+	Because the development of this plugin started in late-2013, it exclusively uses XSLT 2.0 and consequently only works with Saxon 9.x+ and other XSLT 2.0 compliant processors.
+	
 	In order to keep the plugin light-weight, with good performance and low code maintenance, I have left the "data safeguards" to a minimum. What is that? It means that this plugin applies the saying "Rubbish in, rubbish out". To be more specific, it means that if the metadata contained in your DITA content is inconsistent, incomplete or simply wrong, it will not be easy to use the resulting RDF.
 	
 	To avoid issues, here are a couple of things you can do have good output metadata:
