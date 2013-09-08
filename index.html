@@ -49,6 +49,81 @@
 <li>A graphical representation of the ontology can be viewed here: <a href="http://bit.ly/DitaRdfLucidChart">http://bit.ly/DitaRdfLucidChart</a>
 </li>
 </ul><p>The DITA RDF ontology and the related tools are licensed under a under a Creative Commons BY-SA 3.0 license (<a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>).</p>
+
+
+
+<h1>
+<a name="objective" class="anchor" href="#objective"><span class="octicon octicon-link"></span></a>Objective</h1>
+
+<p>This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html">DITA 1.2 specification</a> in a format that can be understood in the semantic Web of data.</p>
+
+<h1>
+<a name="scope" class="anchor" href="#scope"><span class="octicon octicon-link"></span></a>Scope</h1>
+
+<p>This ontology does not aim at completeness (the whole DITA 1.2 language specification) but at covering the metadata that describes DITA content.</p>
+
+<p>The scope of this ontology includes the meaningful elements and attributes of the [DITA 1.2 vocabulary]. I focused on the metadata elements that are derived from <a href="http://dublincore.org/documents/dcmi-terms/">Dublin core</a> (title, author, etc) and on the relationships between maps, topics and other documents. </p>
+
+<p>The scope of this ontology does not include the elements and attributes that bear little semantics, such as (not exhaustive):</p>
+
+<ul>
+<li>highlight domain (underline, bold, italic, etc.)</li>
+<li>hazard domain</li>
+<li>paragraphs</li>
+<li>tables</li>
+<li>lists</li>
+<li>sections</li>
+</ul><p>Also, it does not include (yet) the elements that bear semantics but that my company doesn’t use. I will add them, but you can ping me if you would like to see them added (not exhaustive):</p>
+
+<ul>
+<li>metadata specific to DITA specializations (learning, machinery, semiconductors, etc.)</li>
+<li>the programming, indexing, software, utilities and UI domains (will add them as separate modules)</li>
+<li>category</li>
+</ul><h1>
+<a name="base-ontologies" class="anchor" href="#base-ontologies"><span class="octicon octicon-link"></span></a>Base ontologies</h1>
+
+<p>I have chosen to use the Nepomuk ontologies <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie">NIE</a> and <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo">NFO</a>, and specialize the classes. The distinction they make between data objects (sequences of bytes) and information elements (interpretations) prevents the confusion between:</p>
+
+<ul>
+<li>the file as data on a file system, that has a path and can be moved or renamed</li>
+<li>the information contained in this file that results from its interpretation (by an XML editor or a PDF viewer).</li>
+</ul><p>For instance, let’s consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.</p>
+
+<h1>
+<a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h1>
+
+<p>This idea came to me when we (NXP Customer Documentation Services) <a href="http://blog.nxp.com/is-linked-data-the-future-of-data-integration-in-the-enterprise/">decided</a> to publish the metadata of our products and documents as RDF in order to end the siloization of our various data types, define company-wide data models and so that external organizations can easily consume this data.</p>
+
+<p>I have already set up the publication of the metadata about binary documents (data sheets, user manuals, etc.), but since our DITA content is built on complex relationships (topic reuse) and our primary format for translation, we need a proper ontology to describe it. The driver is to provide detailed metrics to authors and greatly facilitate certain internal processes such as the selection of the content to translate. Indeed, we consider that being able to formulate multidimensional queries across topics, maps, users, products and company divisions is a major step ahead.</p>
+
+<p>The driver is consequently mostly internal, but we plan to publish a subset of this metadata when we go live with the whole public data set. Follow <a href="https://www.twitter.com/nxpdata">@nxpdata</a> to get the latest updates about the linked data published by NXP.</p>
+
+<p>Finally, since the challenges we face are most likely similar to the ones other DITA-enabled organizations face, I decided to share my findings.</p>
+
+<p><em>TODO add links to real-life RDF samples.</em></p>
+
+<h1>
+<a name="publishing-method-and-availability" class="anchor" href="#publishing-method-and-availability"><span class="octicon octicon-link"></span></a>Publishing method and availability</h1>
+
+<p>The namespace base URI is <a href="http://purl.org/dita/ns#">http://purl.org/dita/ns#</a> and the recommended prefix is <strong>dita:</strong>.</p>
+
+<p>By default this URI returns the XHTML version of the ontology, but it also supports content negotiation for RDF/XML and Turtle (<a href="http://uriburner.com:8000/vapour?uri=http%3A%2F%2Fpurl.org%2Fdita%2Fns%23&amp;htmlVersions=1&amp;defaultResponse=rdfxml&amp;userAgent=vapour.sourceforge.net">Vapour test</a>).</p>
+
+<p>The ontology is written in a Turtle file and converted to RDF/XML using an public Web service (<a href="http://rdf-translator.appspot.com/">http://rdf-translator.appspot.com/</a>). Feel free to checkout the Git project and contribute.</p>
+
+<p>A graphical representation of the DITA RDF model can be <a href="http://bit.ly/DitaRdfLucidChart">viewed on LucidChart</a>.</p>
+
+<p>The DITA RDF ontology is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 unported license</a>. That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page (<a href="https://github.com/ColinMaudry/dita-rdf">https://github.com/ColinMaudry/dita-rdf</a>). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).</p>
+
+<h1>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h1>
+
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/ColinMaudry">@ColinMaudry</a>
+</li>
+<li>Email: <a href="mailto:colin@zebrana.net">colin@zebrana.net</a>
+</li>
+</ul>
       </section>
     </div>
 
