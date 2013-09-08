@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-This stylesheet is part of the dita2rdf DITA Open toolkit plugin, available at https://github.com/ColinMaudry/dita-rdf  
-This project project is driven by Colin Maudry and licensed under a CC BY-SA Unported 3 license.
--->
 <xsl:stylesheet version="2.0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -17,10 +13,14 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:colin="http://zebrana.net/"
 	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl">
+	<!--
+This stylesheet is part of the dita2rdf DITA Open toolkit plugin, available at https://github.com/ColinMaudry/dita-rdf  
+This project project is driven by Colin Maudry and licensed under a CC BY-SA Unported 3 license.
+-->
 	
 	<xsl:import href="rdf/map2rdf.xsl"/>
 	<xsl:import href="rdf/topic2rdf.xsl"/>
-	<xsl:import href="parms.xsl"/>
+	<xsl:import href="params.xsl"/>
 	<dita:extension id="dita.xsl.rdf" behavior="org.dita.dost.platform.ImportXSLAction" xmlns:dita="http://dita-ot.sourceforge.net"/>
 	<xsl:param name="rdfBaseURI">http://www.w3.org/1999/02/22-rdf-syntax-ns#</xsl:param>
 	<xsl:param name="rdfsBaseURI">http://www.w3.org/2000/01/rdf-schema#</xsl:param>
@@ -33,21 +33,7 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 	<xsl:param name="ditaBaseURI">http://purl.org/dita/ns#</xsl:param>
 	<xsl:param name="schemaBaseURI">http://schema.org/</xsl:param>
 	
-	<xsl:param name="resourcesBaseUri">http://data.example.com/id/dita/</xsl:param>
 	
-	<!-- Example
-		http://purl.org/nxp/schema/v1/ if the URI of your specialization "datasheet" is "http://purl.org/nxp/schema/v1/datasheet"
-		-->
-	<xsl:param name="specializationsBaseURI">http://purl.org/example/ns#</xsl:param>
-	<xsl:param name="userSpecializations">
-		<specializations>
-			<!-- Examples (don't forget the spaces)
-			<s> datasheet/datasheet </s>
-			<s> datasheet/subtitle </s>
-			-->	
-		</specializations>
-	</xsl:param>
-
 	
 	<xsl:output method="xml" indent="no" omit-xml-declaration="no" standalone="no" media-type="application/rdf+xml"/>
 	
@@ -74,12 +60,12 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 	</doc:doc>
 	<xsl:template match="* | @* | node()"/>
 	
-	<!-- Function that processes profiling attributes -->	
+	<!-- Function that processes profiling attributes 
 	<xsl:function name="colin:getProfilingAttributes">
 		
-	</xsl:function>
+	</xsl:function>-->	
 	
-	<xsl:function name="colin:getURI">
+	<xsl:function name="colin:getInformationObjectUri">
 		<xsl:param name="resourceBaseUri"/>
 		<xsl:param name="resourceFamily"/>
 		<xsl:param name="resourceLanguage"/>
@@ -97,14 +83,14 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 		<xsl:param name="elementName"/>
 		<xsl:variable name="className" select="concat(upper-case(substring($elementName,1,1)),
 			substring($elementName, 2))"/>
-		<xsl:choose>
-			<xsl:when test="contains($userSpecializations/s,$class)">
+	<!--		<xsl:choose>
+		<xsl:when test="contains($userSpecializations/s,$class)">
 				<xsl:value-of select="xsd:anyURI(concat($specializationsBaseURI,$className))"/>
 			</xsl:when>
-			<xsl:otherwise>
+			<xsl:otherwise>-->
 				<xsl:value-of select="xsd:anyURI(concat($ditaBaseURI,$className))"/>
-			</xsl:otherwise>
-		</xsl:choose>
+	<!--		</xsl:otherwise>
+		</xsl:choose>-->
 	</xsl:function>
 	
 </xsl:stylesheet>

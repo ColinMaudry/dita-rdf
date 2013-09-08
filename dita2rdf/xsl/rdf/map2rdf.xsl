@@ -25,7 +25,7 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 		<xsl:param name="mapTitle">
 			<xsl:choose>
 					<xsl:when test="/*[contains(@class,' map/map ')]/*[contains(@class,' topic/title ')]">
-						<xsl:value-of select="normalize-space(/*[contains(@class,' map/map ')]/*[contains(@class,' topic/title ')])"/>
+						<xsl:value-of select="/*[contains(@class,' map/map ')]/*[contains(@class,' topic/title ')]"/>
 					</xsl:when>
 					<xsl:when test="/*[contains(@class,' map/map ')]/@title">
 						<xsl:value-of select="/*[contains(@class,' map/map ')]/@title"/>
@@ -35,7 +35,7 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 		<xsl:param name="mapLanguage">
 			<xsl:value-of select="@xml:lang"/>
 		</xsl:param>
-		<rdf:Description rdf:about="{colin:getURI($resourcesBaseUri,local-name(),@xml:lang,@id)}">
+		<rdf:Description rdf:about="{colin:getInformationObjectUri($resourcesBaseUri,local-name(),@xml:lang,@id)}">
 			<rdf:type rdf:resource="{colin:getElementType(@class,local-name())}"/>
 			<dita:id><xsl:value-of select="@id"/></dita:id>
 			<!-- Map title -->
@@ -47,7 +47,6 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 					<xsl:value-of select="$mapTitle"/>
 				</dita:title> 
 			</xsl:if>
-			<xsl:call-template name="profilingAttributes"/>
 		
 			
 			
