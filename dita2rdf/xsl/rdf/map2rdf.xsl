@@ -36,7 +36,9 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 			<xsl:value-of select="@xml:lang"/>
 		</xsl:param>
 		<rdf:Description rdf:about="{colin:getInformationObjectUri($resourcesBaseUri,local-name(),@xml:lang,@id)}">
-			<rdf:type rdf:resource="{colin:getElementType(@class,local-name())}"/>
+			<xsl:call-template name="colin:getRdfTypes">
+				<xsl:with-param name="class" select="@class"/>
+			</xsl:call-template>
 			<dita:id><xsl:value-of select="@id"/></dita:id>
 			<!-- Map title -->
 			<xsl:if test="$mapTitle != ''">

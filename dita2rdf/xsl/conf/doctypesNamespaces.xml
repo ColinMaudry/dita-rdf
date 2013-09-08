@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctypes>
+	<doctype name="topic">http://purl.org/dita/ns#</doctype>
+	<doctype name="map">http://purl.org/dita/ns#</doctype>
+	<doctype name="bookmap">http://purl.org/dita/ns#</doctype>
+	<doctype name="task">http://purl.org/dita/ns#</doctype>
+	<doctype name="concept">http://purl.org/dita/ns#</doctype>
+	<doctype name="reference">http://purl.org/dita/ns#</doctype>
+</doctypes>
+
