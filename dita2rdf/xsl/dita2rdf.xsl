@@ -78,7 +78,7 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 		<xsl:value-of select="concat($resourceBaseUri,$resourceFamily,'/',$languageCode,$resourceId)"/>
 	</xsl:function>
 
-	<xsl:function name="colin:getElementType">
+	<xsl:function name="colin:getRdfTypes">
 		<xsl:param name="class"/>
 		<xsl:param name="elementName"/>
 		<xsl:variable name="className" select="concat(upper-case(substring($elementName,1,1)),
