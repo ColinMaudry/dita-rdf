@@ -91,4 +91,8 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 				<rdf:type rdf:resource="{concat($classBaseUri,$className)}"/>
 			</xsl:for-each>
 	</xsl:template>
+	
+	<xsl:template match="*[contains(@class, ' topic/author ')]">
+		<dita:author><xsl:apply-templates/></dita:author>
+	</xsl:template>
 </xsl:stylesheet>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 This stylesheet is part of the dita2rdf DITA Open toolkit plugin, available at https://github.com/ColinMaudry/dita-rdf  
-This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unported 3 license.
+This project project is driven by Colin Maudry and licensed under a CC BY-SA Unported 3 license.
 -->
 
 <xsl:stylesheet version="2.0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -35,11 +35,12 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 		<xsl:param name="mapLanguage">
 			<xsl:value-of select="@xml:lang"/>
 		</xsl:param>
-		<rdf:Description rdf:about="{colin:getInformationObjectUri($resourcesBaseUri,local-name(),@xml:lang,@id)}">
+		<xsl:param name="id" select="if (@id!='') then @id else generate-id()"/>
+		<rdf:Description rdf:about="{colin:getInformationObjectUri($resourcesBaseUri,local-name(),@xml:lang,$id)}">
 			<xsl:call-template name="colin:getRdfTypes">
 				<xsl:with-param name="class" select="@class"/>
 			</xsl:call-template>
-			<dita:id><xsl:value-of select="@id"/></dita:id>
+			<dita:id><xsl:value-of select="$id"/></dita:id>
 			<!-- Map title -->
 			<xsl:if test="$mapTitle != ''">
 				<dita:title>
@@ -47,13 +48,9 @@ This project project is driveb by Colin Maudry and licensed under a CC BY-SA Unp
 						<xsl:attribute name="xml:lang" select="$mapLanguage"/>
 					</xsl:if>
 					<xsl:value-of select="$mapTitle"/>
-				</dita:title> 
-			</xsl:if>
-		
-			
-			
-			
-			
+				</dita:title>
+				<xsl:apply-templates select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/author ')]"/>				
+			</xsl:if>			
 		</rdf:Description>		
 	</xsl:template>
 </xsl:stylesheet>

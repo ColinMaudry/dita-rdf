@@ -13,4 +13,8 @@ This project project is driven by Colin Maudry and licensed under a CC BY-SA Unp
 	
 	<!-- Located here to have lower precedence over the other imported templates -->
 	<xsl:template match=" * | @* |node()"/>
+	<xsl:template match="text()">
+		<xsl:value-of select="."/>
+	</xsl:template>
+
 </xsl:stylesheet>
