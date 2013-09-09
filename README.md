@@ -19,6 +19,11 @@ The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License v
 
 <iframe src="https://docs.google.com/document/d/1FCr81IoW7SKzyLH0cAnfqXJYExHUnOHcAuBhQagv9AU/pub?embedded=true"></iframe>
 
+# Contact
+
+* Twitter: [@ColinMaudry](https://www.twitter.com/ColinMaudry)
+* Email: colin@zebrana.net
+
 # Objective
 
 This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the semantic Web of data.
@@ -76,8 +81,3 @@ The ontology is written in a Turtle file and converted to RDF/XML using an publi
 A graphical representation of the DITA RDF model can be [viewed on LucidChart](http://bit.ly/DitaRdfLucidChart).
 
 The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https://creativecommons.org/licenses/by-sa/3.0/). That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page ([https://github.com/ColinMaudry/dita-rdf](https://github.com/ColinMaudry/dita-rdf)). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).
-
-# Contact
-
-* Twitter: [@ColinMaudry](https://www.twitter.com/ColinMaudry)
-* Email: colin@zebrana.net
