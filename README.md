@@ -13,7 +13,9 @@ Useful links:
  - The online version of the DITA RDF ontology can be found at http://purl.org/dita/ns# (this is also the base URI of the ontology).
  - A graphical representation of the ontology can be viewed here: http://bit.ly/DitaRdfLucidChart
 
-The DITA RDF ontology and the related tools are licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
+The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
+
+The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (https://gnu.org/licenses/gpl.html).
 
 <iframe src="https://docs.google.com/document/d/1FCr81IoW7SKzyLH0cAnfqXJYExHUnOHcAuBhQagv9AU/pub?embedded=true"></iframe>
 
