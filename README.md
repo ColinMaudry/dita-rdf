@@ -1,16 +1,16 @@
 The DITA RDF project
 ====================
 
-The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of teh metadata of a DITA documentation to the Semantic Web and consequently connect it with other data such as product, personal, government data.
+The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of the metadata of a DITA documentation set to the Semantic Web and consequently connect it with other data types (product, people, sales, non-DITA document metadata, etc.).
 
 See the useful links below if you want to know more about the Semantic Web.
 
 # Status
 
- - The ontology is already available as a Turtle file, dita.ttl. It can also be viewed here and as a graphic here.
- - A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triple from DITA content
- - The plugin will be adapted to be used in Componize for Alfresco
- - A tutorial will be written to publish the RDF triples resulting from a transformation to a triple store and query your DITA metadata
+ - The ontology is already available as a Turtle file, dita.ttl. It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form, and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
+ - A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triples from DITA content
+ - The plugin will be adapted to be used in [Componize for Alfresco](http://www.componize.com)
+ - A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata
 
 # Useful links
 
