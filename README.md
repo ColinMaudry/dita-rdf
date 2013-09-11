@@ -1,13 +1,13 @@
 The DITA RDF project
 ====================
 
-The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of the metadata of a DITA documentation set to the Semantic Web and consequently connect it with other data types (product, people, sales, non-DITA document metadata, etc.).
+The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of the metadata of a DITA documentation set to the Semantic Web and consequently its linking with other data types (product, people, sales, non-DITA document metadata, etc.).
 
 See the useful links below if you want to know more about the Semantic Web.
 
 # Status
 
- - The ontology is already available as a Turtle file, dita.ttl. It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form, and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
+ - The ontology is already available as a Turtle file, [dita.ttl](https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl). It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form, and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
  - A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triples from DITA content
  - The plugin will be adapted to be used in [Componize for Alfresco](http://www.componize.com)
  - A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata
@@ -84,4 +84,4 @@ The ontology is written in a Turtle file and converted to RDF/XML using an publi
 
 A graphical representation of the DITA RDF model can be [viewed on LucidChart](http://bit.ly/DitaRdfLucidChart).
 
-The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https://creativecommons.org/licenses/by-sa/3.0/). That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page ([https://github.com/ColinMaudry/dita-rdf](https://github.com/ColinMaudry/dita-rdf)). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).
+The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https://creativecommons.org/licenses/by-sa/3.0/). That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page ([http://colinmaudry.github.io/dita-rdf/](http://colinmaudry.github.io/dita-rdf/)). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).
