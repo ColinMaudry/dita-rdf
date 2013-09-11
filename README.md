@@ -1,23 +1,27 @@
 The DITA RDF project
 ====================
 
-The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology.
+The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of teh metadata of a DITA documentation to the Semantic Web and consequently connect it with other data such as product, personal, government data.
 
-Check the repository wiki for more information (objective, scope, background...).
+See the useful links below if you want to know more about the Semantic Web.
 
- - The ontology is already available as a Turtle file, dita.ttl
+# Status
+
+ - The ontology is already available as a Turtle file, dita.ttl. It can also be viewed here and as a graphic here.
  - A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triple from DITA content
- - The plugin will then be adapted to be used in Componize for Alfresco
+ - The plugin will be adapted to be used in Componize for Alfresco
+ - A tutorial will be written to publish the RDF triples resulting from a transformation to a triple store and query your DITA metadata
 
-Useful links:
+# Useful links
+
+ - The official page of the Semantic Web: http://www.w3.org/standards/semanticweb/
+ - A good introduction to understand why the Semantic Web is the future of the Web, and how it completes XML: http://infomesh.net/2001/swintro/
  - The online version of the DITA RDF ontology can be found at http://purl.org/dita/ns# (this is also the base URI of the ontology).
  - A graphical representation of the ontology can be viewed here: http://bit.ly/DitaRdfLucidChart
 
 The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
 
 The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (https://gnu.org/licenses/gpl.html).
-
-<iframe src="https://docs.google.com/document/d/1FCr81IoW7SKzyLH0cAnfqXJYExHUnOHcAuBhQagv9AU/pub?embedded=true"></iframe>
 
 # Contact
 
@@ -26,7 +30,7 @@ The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License v
 
 # Objective
 
-This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the semantic Web of data.
+This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the Semantic Web of data.
 
 # Scope
 
