@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="DITA RDF ontology : DITA RDF ontology and tools to generate RDF triples out of DITA content." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <title>DITA RDF ontology</title>
+    <title>The DITA RDF project by ColinMaudry</title>
   </head>
 
   <body>
+    <header>
+      <div class="inner">
+        <h1>The DITA RDF project</h1>
+        <h2>DITA RDF ontology and tools to generate RDF triples out of DITA content.</h2>
+        <a href="https://github.com/ColinMaudry/dita-rdf" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ColinMaudry/dita-rdf">View on GitHub</a>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p>The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of the metadata of a DITA documentation set to the Semantic Web and consequently connect it with other data types (product, people, sales, non-DITA document metadata, etc.).</p>
 
-          <h1 id="project_title">DITA RDF ontology</h1>
-          <h2 id="project_tagline">DITA RDF ontology and tools to generate RDF triples out of DITA content.</h2>
+<p>See the useful links below if you want to know more about the Semantic Web.</p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/ColinMaudry/dita-rdf/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/ColinMaudry/dita-rdf/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="the-dita-rdf-project" class="anchor" href="#the-dita-rdf-project"><span class="octicon octicon-link"></span></a>The DITA RDF project</h1>
-
-<p>The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology.</p>
-
-<p>Check the repository wiki for more information (objective, scope, background...).</p>
+<h1>
+<a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>Status</h1>
 
 <ul>
-<li>The ontology is already available as a Turtle file, dita.ttl</li>
-<li>A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triple from DITA content</li>
-<li>The plugin will then be adapted to be used in Componize for Alfresco</li>
-</ul><p>Useful links:</p>
+<li>The ontology is already available as a Turtle file, dita.ttl. It can also be viewed <a href="http://purl.org/dita/ns#">here</a> in a more human-readable form, and <a href="http://bit.ly/DitaRdfLucidChart">here</a> as a graphic.</li>
+<li>A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triples from DITA content</li>
+<li>The plugin will be adapted to be used in <a href="http://www.componize.com">Componize for Alfresco</a>
+</li>
+<li>A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata</li>
+</ul><h1>
+<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links</h1>
 
 <ul>
+<li>The official page of the Semantic Web: <a href="http://www.w3.org/standards/semanticweb/">http://www.w3.org/standards/semanticweb/</a>
+</li>
+<li>A good introduction to understand why the Semantic Web is the future of the Web, and how it completes XML: <a href="http://infomesh.net/2001/swintro/">http://infomesh.net/2001/swintro/</a>
+</li>
 <li>The online version of the DITA RDF ontology can be found at <a href="http://purl.org/dita/ns#">http://purl.org/dita/ns#</a> (this is also the base URI of the ontology).</li>
 <li>A graphical representation of the ontology can be viewed here: <a href="http://bit.ly/DitaRdfLucidChart">http://bit.ly/DitaRdfLucidChart</a>
 </li>
-</ul><p>The DITA RDF ontology and the related tools are licensed under a under a Creative Commons BY-SA 3.0 license (<a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>).</p>
+</ul><p>The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (<a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>).</p>
 
-
+<p>The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (<a href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>).</p>
 
 <h1>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h1>
+
+<ul>
+<li>Twitter: <a href="https://www.twitter.com/ColinMaudry">@ColinMaudry</a>
+</li>
+<li>Email: <a href="mailto:colin@zebrana.net">colin@zebrana.net</a>
+</li>
+</ul><h1>
 <a name="objective" class="anchor" href="#objective"><span class="octicon octicon-link"></span></a>Objective</h1>
 
-<p>This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html">DITA 1.2 specification</a> in a format that can be understood in the semantic Web of data.</p>
+<p>This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html">DITA 1.2 specification</a> in a format that can be understood in the Semantic Web of data.</p>
 
 <h1>
 <a name="scope" class="anchor" href="#scope"><span class="octicon octicon-link"></span></a>Scope</h1>
@@ -114,28 +126,26 @@
 <p>A graphical representation of the DITA RDF model can be <a href="http://bit.ly/DitaRdfLucidChart">viewed on LucidChart</a>.</p>
 
 <p>The DITA RDF ontology is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 unported license</a>. That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page (<a href="https://github.com/ColinMaudry/dita-rdf">https://github.com/ColinMaudry/dita-rdf</a>). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).</p>
+        </section>
 
-<h1>
-<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h1>
+        <aside id="sidebar">
+          <a href="https://github.com/ColinMaudry/dita-rdf/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ColinMaudry/dita-rdf/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-<ul>
-<li>Twitter: <a href="https://www.twitter.com/ColinMaudry">@ColinMaudry</a>
-</li>
-<li>Email: <a href="mailto:colin@zebrana.net">colin@zebrana.net</a>
-</li>
-</ul>
-      </section>
+          <p class="repo-owner"><a href="https://github.com/ColinMaudry/dita-rdf"></a> is maintained by <a href="https://github.com/ColinMaudry">ColinMaudry</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">DITA RDF ontology maintained by <a href="https://github.com/ColinMaudry">ColinMaudry</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -145,7 +155,6 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
