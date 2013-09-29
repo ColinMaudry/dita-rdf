@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="features-benefits">
+	<title>Features and benefits</title>
+	<body>
+		<!-- This topic, the "Features and benefits" section, lists the features and benefits available for the selected product or component.
+		
+		There are two methods to add content here, depending if you prefer:
+		         - defining the rank of a module of features and benefits (first, last, after X, etc.), then you need to add a placeholder for this module of features and benefits. Below, you can see that the module of features and benefits for the "absorbers" has been placed at the top.
+		         - or letting the features and benefits be listed "as they come", then you just populate it before the "unordered" bodydiv placeholder. This is the default behaviour.
+
+To put the module of features and benefits for the "engine" component before the one for the "absorbers" component:
+   1- in this file, create an element <bodydiv id="engine"/> before the "absorbers" placeholder.
+   2- follow the instructions included in /information/engine/features-benefits/[engine-name].dita
+-->
+
+		<bodydiv id="absorbers"/>
+		<bodydiv id="unordered"/>
+		
+		<!-- I hope nobody will come up with a component called "unordered".... -->
+	</body>
+</topic>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ch_v33">
+	<title><keyword keyref="dsp-name"/> characteristics</title>
+	<body>
+		<!-- This is the characteristics module of a sub-component. By default, it is not directly pushed to the "Characteristics" section, it is first imported by its super component. -->
+		<bodydiv conaction="pushbefore" id="import">
+		<table>
+			<tgroup cols="2">
+				<colspec colname="1"/>
+				<colspec colname="2"/>
+				<thead>
+					<row>
+						<entry namest="1" nameend="2"><p>DSP characteristics</p></entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>
+							<p>DSP clock speed</p>
+						</entry>
+						<entry>
+							<p><ph id="dsp-clock-speed">1 GHz</ph></p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>DSP subsystem</p>
+						</entry>
+						<entry>
+							<p><ph id="max-speed">NovaCore SC3400</ph></p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		</bodydiv>
+		<!-- If you want to define the rank of this module in the target topic, comment out the line below  -->
+		<bodydiv conaction="mark" conkeyref="characteristics/unordered"/>
+		
+	</body>
+</topic>

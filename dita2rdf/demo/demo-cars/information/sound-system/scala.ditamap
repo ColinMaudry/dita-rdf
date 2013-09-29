@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Scala sound system" id="ds_scala" rev="0.5">
+	<keydef keys="sound-system-name">
+		<topicmeta>
+			<keywords>
+				<keyword>Scala sound system</keyword>
+			</keywords>
+		</topicmeta>
+	</keydef>
+	<topicref keys="sound-system-description" href="description/scala.dita" format="dita"/>
+	<mapref href="dsp/concerto-v33.ditamap"/>
+	<mapref href="speaker/presto-s5.ditamap"></mapref>
+	
+
+	
+</map>

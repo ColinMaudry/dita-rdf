@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="to2_rbg_k">
+  <title>Features and benefits</title>
+  <body>
+  	<bodydiv conaction="pushbefore">
+  	<ul>
+  		<li>
+  			<p>Optimum suspension damping control ensures superb tyre to road contact.</p>
+  		</li>
+  		<li>
+  			<p>Excellent roll and oversteer control.</p>
+  		</li>
+  	</ul>
+  	</bodydiv>
+  	<bodydiv conkeyref="features-benefits/unordered" conaction="mark"/>
+  	<bodydiv conkeyref="obsidian-features-benefits/import" conaction="mark"/>
+  	<bodydiv conaction="pushafter">
+  		<ul>
+  			<li>Thanks to the Maelstrom absorber technology, the Obsidian tires perform much better on snow and icey roads.</li>
+  		</ul>
+  	</bodydiv>
+  	
+  </body>
+</topic>

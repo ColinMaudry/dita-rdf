@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Presto S5 speakers" id="ds_S5" rev="0.5">
+	<keydef keys="speakers-name">
+		<topicmeta>
+			<keywords>
+				<keyword>Presto S5 speakers</keyword>
+			</keywords>
+		</topicmeta>
+	</keydef>
+	<topicref keys="speakers-characteristics" href="characteristics/presto-s5.dita" format="dita"/>
+	<topicref href="features-benefits/presto-s5.dita" format="dita"/>
+	
+
+	
+</map>

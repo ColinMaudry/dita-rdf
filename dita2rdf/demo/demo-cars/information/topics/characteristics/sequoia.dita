@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ch_sequoia">
+	<title>Sequoia characteristics</title>
+	<body>
+		<table id="table">
+			<tgroup cols="3">
+				<colspec/>
+				<colspec/>
+				<colspec/>
+				<tbody>
+					<row>
+						<entry>
+							<p>Length</p>
+						</entry>
+						<entry>
+							<p><ph id="car-length">4.210</ph></p>
+						</entry>
+						<entry>
+							<p>m</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>Width</p>
+						</entry>
+						<entry>
+							<p><ph id="car-width">1.442</ph></p>
+						</entry>
+						<entry>
+							<p>m</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>Height</p>
+						</entry>
+						<entry>
+							<p><ph id="car-height">1.667</ph></p>
+						</entry>
+						<entry>
+							<p>m</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+			
+		</table>
+	</body>
+</topic>

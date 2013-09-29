@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="fb-">
+	<title><keyword keyref="dsp-name"/> description</title>
+  <body>
+  	<p>The <keyword keyref="dsp-name"/> is the third generation of our high-performance multicore DSP devices that target wireline and wireless infrastructure applications. It builds on the success of previous multicore DSPs and is designed to bolster the rapidly expanding voice/video/data triple-play services in this space.</p>
+  </body>
+</topic>

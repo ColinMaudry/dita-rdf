@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dita.build.dita2rdf" default="dita2rdf">
+	<!--
+ Copyright 2013, Colin Maudry
+
+
+ This file is part of the DITA RDF plugin for the DITA Open toolkit.
+ 
+ 
+ 
+    The DITA RDF plugin is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    
+    The DITA RDF plugin is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with the DITA RDF plugin.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+<!--This file is inspired from the build.xml file included in the org.dita.pdf2 plugin,
+		included in the standard DITA Open toolkit.
+-->
+	<target name="dita2rdf.init">
+		<echo>dita2rdf plugin, by Colin Maudry</echo>
+		<echo>Updates and support requests at https://github.com/ColinMaudry/dita-rdf</echo>
+		<dita-ot-fail id="DOTA066F">
+			<condition>
+				<and>
+					<isset property="args.xsl.rdf"></isset>
+					<not>
+						<available file="${args.xsl.rdf}" type="file"></available>
+					</not>
+				</and>
+			</condition>
+			<param name="1" location="${args.xsl.rdf}"></param>
+		</dita-ot-fail>
+		
+	</target>
+	
+	<target name="dita2rdf" depends="dita2rdf.init, build-init, preprocess, map2rdf"/>
+	
+	<target name="map2rdf">
+		<dirname property="dita.temp.dir.fullpath" file="${dita.temp.dir}${file.separator}dummy.file"></dirname>
+		<pipeline message="topicmerge" inputmap="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" tempdir="${dita.temp.dir.fullpath}">
+			<module class="org.dita.dost.module.TopicMergeModule">
+				<param name="output" location="${dita.temp.dir.fullpath}${file.separator}${dita.map.filename.root}_MERGED.xml"></param>
+				<param name="style" location="${dita.plugin.org.dita.pdf2.dir}/xsl/common/topicmerge.xsl"></param>
+			</module>
+		</pipeline>
+		<antcall target="publish.map.rdf"/>
+	</target>
+	
+	<target name="transform.map2rdf.init">
+		<condition property="rdf.temp.dir" value="${dita.temp.dir}" else="${dita.map.output.dir}">
+			<isfalse value="${com.github.colinmaudry.dita2rdf.use-out-temp}"></isfalse>
+		</condition>
+		
+		<property name="customization.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization"></property>
+		<property file="${customization.dir}/build.properties"></property>
+		
+		<loadfile property="default.locale">
+			<string>${default.language}</string>
+			<filterchain>
+				<tokenfilter>
+					<replaceregex pattern="-" replace="_" flags="gi"></replaceregex>
+				</tokenfilter>
+			</filterchain>
+		</loadfile>
+		
+		<property name="lib.dir" value="${dita.dir}/lib"></property>
+		<property name="merged.file" value="${dita.map.filename.root}_MERGED.xml"></property>
+		
+		<!--<property name="artwork.dir" value="${rdf.temp.dir}"></property>-->
+		
+		<condition property="file.protocol.prefix" value="file://">
+			<os family="unix"></os>
+		</condition>
+		
+		<condition property="file.protocol.prefix" value="file:/">
+			<not><isset property="file.protocol.prefix"></isset></not>
+		</condition>
+		
+		<property name="xml.catalog.files" value="${customization.dir}/catalog.xml;${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg/catalog.xml;${dita.dir}/catalog-dita.xml"></property>
+		
+		<property name="xsl.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl"></property>
+		<property name="xsl.common.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl/common"></property>
+		<property name="cfg.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg"></property>
+		<property name="cfg.common.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg/common"></property>
+		
+		<path id="project.class.path">
+			<pathelement path="${java.class.path}"></pathelement>
+			<fileset dir="${lib.dir}/saxon">
+				<include name="**/*.jar"></include>
+			</fileset>
+			<!--
+        <pathelement location="${lib.dir}/xml-apis.jar"/>
+        <pathelement location="${lib.dir}/xercesImpl.jar"/>
+      -->
+			<pathelement location="${lib.dir}/resolver.jar"></pathelement>
+			<pathelement location="${lib.dir}/icu4j.jar"></pathelement>
+		</path>
+	</target>
+	
+	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf"></target>
+	<target name="publish.map.rdf.init">
+		<property name="inputFile" location="${dita.temp.dir}/${merged.file}"></property>
+		<property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.rdf"/>
+		<property name="outputFile.base" value="${dita.map.filename.root}"></property>
+		<property name="artworkPrefix" value="${artwork.dir}"></property>
+	</target>
+	
+	<target name="transform.topic2rdf" depends="transform.topic2rdf.init,  transform.topic2rdf.main"/>
+	
+	<target name="transform.topic2rdf.init">
+		<!--<taskdef name="detect-lang" classname="com.suite.sol.ditaot.DetectLang" classpathref="project.class.path"></taskdef>
+		<taskdef name="gen-variable" classname="org.dita.dost.pdf2.VariableFileTask" classpathref="project.class.path"></taskdef>-->
+		
+		<makeurl file="${inputFile}" property="inputFile.url" validate="true"></makeurl>
+		
+		<!-- use customized xsl file for rdf transform.-->
+		<condition property="temp.transformation.file" value="${args.xsl.rdf}">
+			<and>
+				<isset property="args.xsl.rdf"></isset>
+				<available file="${args.xsl.rdf}" type="file"></available>
+			</and>
+		</condition>
+		<condition property="temp.transformation.file" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/${args.xsl.rdf}">
+			<and>
+				<not><isset property="temp.transformation.file"></isset></not>
+				<isset property="args.xsl.rdf"></isset>
+			</and>
+		</condition>
+		
+		<property name="temp.transformation.file" location="${xsl.dir}/dita2rdf.xsl"/>
+	</target>
+	
+	<!-- Apparently, a flagging-preprocess.xsl should be created to support filtering. Flagging is not required for RDF. -->
+	<!--<target name="transform.topic2rdf.flagging" depends="transform.topic2rdf.flagging.filter,                    transform.topic2rdf.flagging.no-filter"></target>-->
+	
+	
+	<target name="transform.topic2rdf.main">
+		<!--makeurl seems to output file:/C: style instead of file:///C: -->
+		<makeurl property="dita.map.output.dir.url" file="${rdf.temp.dir}" validate="no"></makeurl>
+		<makeurl property="work.dir.url" file="${dita.temp.dir}" validate="no"></makeurl>
+		<makeurl property="customization.dir.url" file="${customization.dir}"></makeurl>
+		<makeurl property="user.input.dir.url" file="${dita.input.dirname}"></makeurl>
+		
+		
+		<mkdir dir="${dita.map.output.dir}"/>
+		
+		
+		<xslt style="${temp.transformation.file}" in="${dita.temp.dir}/${merged.file}" out="${outputFile}">
+			<param name="customizationDir.url" expression="${customization.dir.url}"></param>
+			<param name="input.dir.url" expression="${user.input.dir.url}"></param>
+			<param name="output.dir.url" expression="${dita.map.output.dir.url}"></param>
+			<param name="work.dir.url" expression="${work.dir.url}"></param>
+			
+			<xmlcatalog>
+				<catalogpath path="${xml.catalog.files}"></catalogpath>
+			</xmlcatalog>
+		</xslt>
+	</target>
+	
+	
+</project>

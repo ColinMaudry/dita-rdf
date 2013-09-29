@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="fb_coyote">
+  <title>Features and benefits</title>
+  <body>
+  	<!-- if you want to define the rank of this module in the "Characteristics" section, replace the <bodydiv> element such as <bodydiv conkeyref="characteristics/[component-name]"/>, and comment out the <bodydiv> at the end of the topic.  -->
+  	<bodydiv conaction="pushbefore">
+  <ul>
+  	<li><p>Low engine noise level.</p></li>
+  	<li><p>Good consumption/horse power ratio.</p></li>
+  </ul>
+  	</bodydiv>
+  	<bodydiv conkeyref="features-benefits/unordered" conaction="mark"/>
+  </body>
+</topic>

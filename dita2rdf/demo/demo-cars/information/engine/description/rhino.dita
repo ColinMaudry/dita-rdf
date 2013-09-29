@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="desc_rhino">
+	<title><keyword keyref="engine-name"/> description</title>
+	<body>
+	<p>The <keyword keyref="engine-name"/> lets you cruise through the woods with no resistance. Its <ph
+				conkeyref="engine-char/horse-power"/> will make the rocky hills feel like a stairway to the sky... at <ph conkeyref="engine-char/max-speed"/>!.</p>
+	</body>
+</topic>

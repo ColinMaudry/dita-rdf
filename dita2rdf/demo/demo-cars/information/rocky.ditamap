@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Forester range" id="ds_for" rev="0.5">
+	
+	<mapref href="forrester.ditamap"/>
+	<keydef keys="description" href="topics/desc-rocky.dita" format="dita"/>
+	<mapref href="engine/rhino.ditamap"/>
+	<mapref href="tornado-upper.ditamap"/>
+	<mapref href="tornado-tongue.ditamap"/>
+	
+</map>
