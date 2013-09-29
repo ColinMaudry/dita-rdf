@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="Rhino engine" id="ds_rhino" rev="0.5">
+	
+	<keydef keys="engine-name">
+		<topicmeta>
+			<keywords>
+				<keyword>Rhino engine</keyword>
+			</keywords>
+		</topicmeta>
+	</keydef>
+	<keydef keys="engine-characteristics" href="characteristics/rhino.dita"></keydef>
+	<topicref keys="engine-description" href="topics/desc-rhino.dita" format="dita"/>
+	
+	
+</map>

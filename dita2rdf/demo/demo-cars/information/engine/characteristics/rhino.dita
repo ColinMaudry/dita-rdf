@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ch_rhino">
+	<title><keyword keyref="engine-name"/> characteristics</title>
+	<body>
+		<!-- if you want to define the rank of this module in the "Characteristics" section, replace the <bodydiv> element such as <bodydiv conkeyref="characteristics/[component-name]"/>, and comment out the <bodydiv> at the end of the topic.  -->
+		<bodydiv conaction="pushbefore">
+		<table>
+			<tgroup cols="2">
+				<colspec colname="1"/>
+				<colspec colname="2"/>
+				<thead>
+					<row>
+						<entry namest="1" nameend="2"><p>Engine characteristics</p></entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry nameend="2" namest="1"><p><keyword keyref="engine-name"/></p></entry>
+					</row>
+					<row>
+						<entry>
+							<p>Horse power</p>
+						</entry>
+						<entry>
+							<p><ph id="horse-power">510 hp</ph></p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>Maximum speed</p>
+						</entry>
+						<entry>
+							<p><ph id="max-speed">250 km/h</ph></p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>Acceleration (0 to 100 km/h)</p>
+						</entry>
+						<entry>
+							<p><ph id="acceleration">5.1 s</ph></p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>Consumption</p>
+						</entry>
+						<entry>
+							<p><ph id="consumption">8.4 l/100 km</ph></p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		</bodydiv>
+		<bodydiv conkeyref="characteristics/unordered" conaction="mark"/>
+	</body>
+</topic>

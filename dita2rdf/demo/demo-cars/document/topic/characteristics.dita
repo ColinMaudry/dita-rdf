@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="characteristics">
+	<title>Characteristics</title>
+	<body>
+		<!-- This topic, the "Characteristics" section, lists the characteristics available for the selected product or component.
+		
+		There are two methods to add content here, depending if you prefer:
+		         - defining the rank of a module of characteristics (first, last, after X, etc.), then you need to add a placeholder for this module of characteristics. Below, you can see that the module of characteristics for the "absorbers" has been placed at the top.
+		         - or letting the characteristics be listed "as they come", then you just populate it before the "unordered" bodydiv placeholder. This is the default behaviour.
+
+To put the module of characteristics for the "engine" component before the one for the "absorbers" component:
+   1- in this file, create an element <bodydiv id="engine"/> before the "absorbers" placeholder.
+   2- follow the instructions included in /information/engine/characteristics/[engine-name].dita
+-->
+		
+		  <bodydiv id="absorbers"/>
+			<bodydiv id="unordered"/>
+		
+		<!-- I hope nobody will come up with a component called "unordered".... -->
+	</body>
+</topic>

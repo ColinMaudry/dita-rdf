@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="fb-obsidian">
+  <title>Features and benefits</title>
+  <body>
+  	<bodydiv conaction="pushbefore">
+		  <ul>
+		  	<li><p>Any terrain, road or trail, the car sticks to the road.</p></li>
+		  	<li><p>The <keyword keyref="tires-name"/> enable extra water evacuation, for a world-class wet performance.</p></li>
+		  </ul>
+		  <bodydiv id="import"/>
+  </bodydiv>
+  	<bodydiv conkeyref="features-benefits/unordered" conaction="mark"/>
+  </body>
+</topic>
