@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dita.build" default="dita2rdf">
+	
+	<target name="dita2rdf" depends="map2rdf-xslt"/>
+	
+	<target name="map2rdf.init">
+		<property name="merged.file" value="${dita.map.filename.root}_MERGED.xml"></property>
+		<echo>dita2rdf plugin, by Colin Maudry</echo>
+		<echo>Updates and support requests at https://github.com/ColinMaudry/dita-rdf</echo>
+		<antcall target="dita.map.rdf">
+			<param name="input"
+				value="${dita.temp.dir}${file.separator}${user.input.file}" />
+			<param name="output"
+				value="${dita.map.output.dir}${file.separator}${dita.map.filename.root}.rdf" />
+		</antcall>
+	</target>
+	
+	<target name="map2rdf-topicmerge" depends="map2rdf.init">
+		<pipeline message="topicmerge" inputmap="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" tempdir="${dita.temp.dir.fullpath}">
+			<module class="org.dita.dost.module.TopicMergeModule">
+				<param name="output" location="${dita.temp.dir.fullpath}${file.separator}${dita.map.filename.root}_MERGED.xml"></param>
+				<param name="style" location="${dita.plugin.org.dita.pdf2.dir}/xsl/common/topicmerge.xsl"></param>
+			</module>
+		</pipeline>
+	</target>
+	
+	<target name="map2rdf-xslt" description="Build RDF/XML output from ditamap" depends="map2rdf-topicmerge">
+		<echo>Transforming DITA to RDF/XML by traversing the references...</echo>
+		<xslt
+			in="${input}"
+			out="${output}" style="xsl/dita2rdf.xsl">
+		</xslt>
+		<echo>** Done transforming **</echo>
+		<echo>*** dita2rdf processing successful ***</echo>
+	</target>
+	
+	<antcall target="publish.map.rdf"></antcall>
+	
+	<target name="publish.map.pdf" depends="transform.topic2pdf.init,                    publish.map.pdf.init,                    transform.topic2pdf"></target>
+</project>
