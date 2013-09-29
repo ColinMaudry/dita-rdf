@@ -5,7 +5,7 @@
 	<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
 	<property name="run.integrator" value="true"/>
 	
-	<property name="plugin-id" value="com.github.colinmaudry.dit2rdf.ditaot-plugin"></property>
+	<property name="plugin-id" value="com.github.colinmaudry.dita2rdf"></property>
 	<property name="temp.dir" value="temp"/>
 	<property name="temp.plugin.dir" location="temp/${plugin-id}"/>
 	<property name="dita-rdf-ot-plugin-dir" value="dita-ot"/>
