@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="dita.build" default="dita2rdf">
+<project name="dita.build.dita2rdf" default="dita2rdf">
 	<!--
  Copyright 2013, Colin Maudry
 
@@ -26,7 +26,7 @@
 <!--This file is inspired from the build.xml file included in the org.dita.pdf2 plugin,
 		included in the standard DITA Open toolkit.
 -->
-	<target name="dita2pdf2.init">
+	<target name="dita2rdf.init">
 		<echo>dita2rdf plugin, by Colin Maudry</echo>
 		<echo>Updates and support requests at https://github.com/ColinMaudry/dita-rdf</echo>
 		<dita-ot-fail id="DOTA066F">
@@ -45,7 +45,7 @@
 	
 	<target name="dita2rdf" depends="dita2rdf.init, build-init, preprocess, map2rdf"/>
 	
-	<target name="map2rdf" depends="map2rdf.init">
+	<target name="map2rdf">
 		<dirname property="dita.temp.dir.fullpath" file="${dita.temp.dir}${file.separator}dummy.file"></dirname>
 		<pipeline message="topicmerge" inputmap="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" tempdir="${dita.temp.dir.fullpath}">
 			<module class="org.dita.dost.module.TopicMergeModule">
@@ -61,7 +61,7 @@
 			<isfalse value="${com.github.colinmaudry.dita2rdf.use-out-temp}"></isfalse>
 		</condition>
 		
-		<property name="customization.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/Customization"></property>
+		<property name="customization.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization"></property>
 		<property file="${customization.dir}/build.properties"></property>
 		
 		<loadfile property="default.locale">
@@ -110,7 +110,7 @@
 	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf"></target>
 	<target name="publish.map.rdf.init">
 		<property name="inputFile" location="${dita.temp.dir}/${merged.file}"></property>
-		<!--property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.pdf"/-->
+		<property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.rdf"/>
 		<property name="outputFile.base" value="${dita.map.filename.root}"></property>
 		<property name="artworkPrefix" value="${artwork.dir}"></property>
 	</target>
@@ -137,7 +137,7 @@
 			</and>
 		</condition>
 		
-		<property name="temp.transformation.file" location="${xsl.rdf.dir}/dita2rdf.xsl.xsl"/>
+		<property name="temp.transformation.file" location="${xsl.dir}/dita2rdf.xsl"/>
 	</target>
 	
 	<!-- Apparently, a flagging-preprocess.xsl should be created to support filtering. Flagging is not required for RDF. -->
@@ -150,9 +150,12 @@
 		<makeurl property="work.dir.url" file="${dita.temp.dir}" validate="no"></makeurl>
 		<makeurl property="customization.dir.url" file="${customization.dir}"></makeurl>
 		<makeurl property="user.input.dir.url" file="${dita.input.dirname}"></makeurl>
-		<makeurl property="variable.file.url" file="${variable.file}"></makeurl>
 		
-		<xslt style="${temp.transformation.file}" in="${dita.temp.dir}/stage1a.xml" out="${dita.temp.dir}/${merged.file}">
+		
+		<mkdir dir="${dita.map.output.dir}"/>
+		
+		
+		<xslt style="${temp.transformation.file}" in="${dita.temp.dir}/${merged.file}" out="${outputFile}">
 			<param name="customizationDir.url" expression="${customization.dir.url}"></param>
 			<param name="input.dir.url" expression="${user.input.dir.url}"></param>
 			<param name="output.dir.url" expression="${dita.map.output.dir.url}"></param>
