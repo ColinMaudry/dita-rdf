@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="build.dita-rdf.dita-ot.plugin" default="package-zip-and-copy-plugin" basedir=".">
 	<!-- Enter the location of you DITA OT directory here: -->
-	<property name="dita-ot.dir" value="C:\Program Files (x86)\Oxygen XML Editor 15\frameworks\dita\DITA-OT"/>
+	<property name="dita-ot.dir" value="..\..\DITA-OT1.8"/>
 	<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
 	<property name="run.integrator" value="true"/>
 	
