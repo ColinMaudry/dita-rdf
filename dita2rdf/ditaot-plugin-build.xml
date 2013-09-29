@@ -16,22 +16,22 @@
 		<mkdir dir="${temp.dir}"/>
 		<mkdir dir="${temp.plugin.dir}"/>
 		<copy todir="${temp.plugin.dir}">
-			<fileset dir="." includes="xsl/**.*"/>
+			<fileset dir="." includes="xsl/**/*"/>
 		</copy>
 		<copy todir="${temp.plugin.dir}">
-			<fileset dir="${dita-rdf-ot-plugin-dir}" includes="**/*.*" excludes=""/>
+			<fileset dir="${dita-rdf-ot-plugin-dir}"/>
 		</copy>
 	</target>
 	
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
 		<zip destfile="dita2rdf-ditaot-plugin.zip">
-			<fileset dir="${temp.dir}" includes="${plugin-id}" excludes=""/>
+			<fileset dir="${temp.dir}" includes="${plugin-id}"/>
 		</zip>
 	</target>	
 	
 	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT" depends="package-zip">
 		<copy todir="${dita-ot.dir}/plugins">
-			<fileset dir="${temp.dir}" includes="${plugin-id}/**.*"></fileset>
+			<fileset dir="${temp.dir}" includes="${plugin-id}/**/*"></fileset>
 		</copy>
 		<antcall  target="run-integrator"/>
 	</target>
