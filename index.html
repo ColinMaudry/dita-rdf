@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'/>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'/>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    	<link rel="stylesheet" type="text/css" href="stylesheets/custom.css" media="screen" />
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -29,7 +28,10 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <p>The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of the metadata of a DITA documentation set to the Semantic Web and consequently connect it with other data types (product, people, sales, non-DITA document metadata, etc.).</p>
+          <h1>
+<a name="the-dita-rdf-project" class="anchor" href="#the-dita-rdf-project"><span class="octicon octicon-link"></span></a>The DITA RDF project</h1>
+
+<p>The objective of this project is to develop an ontology to describe DITA XML objects and to publish tools to generate RDF triples based on that ontology. In the end, it enables the publication of the metadata of a DITA documentation set to the Semantic Web and consequently its linking with other data types (product, people, sales, non-DITA document metadata, etc.).</p>
 
 <p>See the useful links below if you want to know more about the Semantic Web.</p>
 
@@ -37,11 +39,23 @@
 <a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>Status</h1>
 
 <ul>
-<li>The ontology is already available as a Turtle file, dita.ttl. It can also be viewed <a href="http://purl.org/dita/ns#">here</a> in a more human-readable form, and <a href="http://bit.ly/DitaRdfLucidChart">here</a> as a graphic.</li>
-<li>A DITA Open toolkit plugin will be created soon to enable the extraction of RDF triples from DITA content</li>
-<li>The plugin will be adapted to be used in <a href="http://www.componize.com">Componize for Alfresco</a>
+<li>The ontology is already available as a Turtle file, <a href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl">dita.ttl</a>. It can also be viewed <a href="http://purl.org/dita/ns#">here</a> in a more human-readable form, and <a href="http://bit.ly/DitaRdfLucidChart">here</a> as a graphic.</li>
+<li>
+<p>A DITA Open toolkit plugin is available <a href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip">here</a> to enable the extraction of RDF triples from DITA content. The following metadata is extracted (including specializations) for maps and topics:</p>
+
+<ul>
+<li><a href="https://github.com/id" class="user-mention">@id</a></li>
+<li>title</li>
+<li>language</li>
+<li>author</li>
+<li>topicref/<a href="https://github.com/href" class="user-mention">@href</a>
 </li>
-<li>A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata</li>
+<li>
+<a href="http://www.w3.org/TR/rdf-schema/#ch_type">rdf:type</a>, including super classes (e.g. dita:Map and dita:Bookmap for a bookmap)</li>
+</ul>
+</li>
+<li><p>The plugin will be adapted to be used in <a href="http://www.componize.com">Componize for Alfresco</a></p></li>
+<li><p>A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata</p></li>
 </ul><h1>
 <a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links</h1>
 
@@ -126,7 +140,7 @@
 
 <p>A graphical representation of the DITA RDF model can be <a href="http://bit.ly/DitaRdfLucidChart">viewed on LucidChart</a>.</p>
 
-        	<p>The DITA RDF ontology is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 unported license</a>. That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page (<a href="http://colinmaudry.github.io/dita-rdf/">http://colinmaudry.github.io/dita-rdf/</a>). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).</p>
+<p>The DITA RDF ontology is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 unported license</a>. That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page (<a href="http://colinmaudry.github.io/dita-rdf/">http://colinmaudry.github.io/dita-rdf/</a>). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).</p>
         </section>
 
         <aside id="sidebar">
@@ -139,8 +153,7 @@
             .tar.gz file
           </a>
 
-          <p class="repo-owner"><a href="https://github.com/ColinMaudry/dita-rdf"/> is maintained by <a
-							href="https://github.com/ColinMaudry">Colin Maudry</a>.</p>
+          <p class="repo-owner"><a href="https://github.com/ColinMaudry/dita-rdf"></a> is maintained by <a href="https://github.com/ColinMaudry">ColinMaudry</a>.</p>
 
           <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
