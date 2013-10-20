@@ -26,7 +26,7 @@
 	<xsl:param name="doctypesNamespaces" select="document('conf/doctypesNamespaces.xml')"></xsl:param>
 	
 	<!-- Located here to have lower precedence over the other imported templates -->
-	<xsl:template match=" * | @* |node()"/>
+	<xsl:template match=" * | @* "/>
 	<xsl:template match="text()">
 		<xsl:value-of select="."/>
 	</xsl:template>
