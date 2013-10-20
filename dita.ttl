@@ -156,6 +156,10 @@
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:range xsd:string ;
 			rdfs:label "keyword" .
+		:lang a rdf:Property ;
+			rdfs:comment "The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766." ;
+			rdfs:label "language" ;
+			rdfs:range xsd:language .
 		:prodinfo a rdf:Property ;
 			rdfs:domain :Doctype ;
 			rdfs:range :Prodinfo ;
