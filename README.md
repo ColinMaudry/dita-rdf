@@ -24,13 +24,11 @@ See the useful links below if you want to know more about the Semantic Web.
  - A good introduction to understand why the Semantic Web is the future of the Web, and how it completes XML: http://infomesh.net/2001/swintro/
  - The online version of the DITA RDF ontology can be found at http://purl.org/dita/ns# (this is also the base URI of the ontology).
  - A graphical representation of the ontology can be viewed here: http://bit.ly/DitaRdfLucidChart
-
-The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
+ - A poster that illustrates the objective of the project (exhibited at the [Summer School of the Semantic Web 2013 http://bit.ly/DitaRdfPoster
+[The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
 
 The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (https://gnu.org/licenses/gpl.html).
-
 # Contact
-
 * Twitter: [@ColinMaudry](https://www.twitter.com/ColinMaudry)
 * Email: colin@zebrana.net
 
@@ -53,7 +51,7 @@ The scope of this ontology does not include the elements and attributes that bea
 * lists
 * sections
 
-Also, it does not include (yet) the elements that bear semantics but that my company doesn’t use. I will add them, but you can ping me if you would like to see them added (not exhaustive):
+Also, it does not include (yet) the elements that bear semantics but that my company doesnï¿½t use. I will add them, but you can ping me if you would like to see them added (not exhaustive):
 
 * metadata specific to DITA specializations (learning, machinery, semiconductors, etc.)
 * the programming, indexing, software, utilities and UI domains (will add them as separate modules)
@@ -66,7 +64,7 @@ I have chosen to use the Nepomuk ontologies [NIE](http://www.semanticdesktop.org
 * the file as data on a file system, that has a path and can be moved or renamed
 * the information contained in this file that results from its interpretation (by an XML editor or a PDF viewer).
 
-For instance, let’s consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.
+For instance, letï¿½s consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.
 
 # Background
 
@@ -90,4 +88,4 @@ The ontology is written in a Turtle file and converted to RDF/XML using an publi
 
 A graphical representation of the DITA RDF model can be [viewed on LucidChart](http://bit.ly/DitaRdfLucidChart).
 
-The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https://creativecommons.org/licenses/by-sa/3.0/). That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page ([http://colinmaudry.github.io/dita-rdf/](http://colinmaudry.github.io/dita-rdf/)). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).
+The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https://creativecommons.org/licenses/by-sa/3.0/). That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page ([http://colinmaudry.github.io/dita-rdf/](http://colinmaudry.github.io/dita-rdf/)). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (thatï¿½s the SA, share alike part of the license).
