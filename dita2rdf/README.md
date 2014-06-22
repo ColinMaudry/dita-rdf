@@ -24,7 +24,6 @@ If you ditribute this plugin or a modified version of it, You MUST:
 2. Run 'ant -f integrator.xml strict' at the root of your DITA opent toolkit installation.
 
 The new transtype 'rdf' is now available. Send me feedback either at colin@maudry.com or by [opening issues](https://github.com/ColinMaudry/dita-rdf/issues)!
-		 
 
 This plugin enables you to export the metadata of a ditamap and the referenced topics in RDF, via an RDF/XML serialization.
 
