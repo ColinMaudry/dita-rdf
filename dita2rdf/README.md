@@ -1,29 +1,29 @@
 
-Thanks for giving a spin to the dita2rdf plugin! Please report bugs and questions to https://github.com/ColinMaudry/dita-rdf/issues.
+Thanks for giving a spin to the dita2rdf (DITA Open Toolkit)[http://dita-ot.github.io/] plugin! Please report bugs and questions to https://github.com/ColinMaudry/dita-rdf/issues.
 
 ### License
 
 The licensing information can be found in the "license" file. That's the GPL v3, so basically you CAN:
-		  - include this plugin in a commercial product
-		  - modify it
-		  - distribute it
-		  - receive patent rights (if any)
-		 
-		 You CANNOT:
-		  - hold me liable if this plugin causes you any trouble, damage, loss, etc.
-		  - modify the license associated with it (= sublicensing)
-		 
-		 If you ditribute this plugin or a modified version of it, You MUST:
-		  - Include this license and the copyright notice (Copyright 2013, Colin Maudry)
-		  - Clearly indicate if you make changes to the original code
-		  - Distribute the original AND modified source code
+- include this plugin in a commercial product
+- modify it
+- distribute it
+- receive patent rights (if any)
+
+You CANNOT:
+- hold me liable if this plugin causes you any trouble, damage, loss, etc.
+- modify the license associated with it (= sublicensing)
+
+If you ditribute this plugin or a modified version of it, You MUST:
+- Include this license and the copyright notice (Copyright 2013, Colin Maudry)
+- Clearly indicate if you make changes to the original code
+- Distribute the original AND modified source code
 
 ### Installation
 
-		 1. Extract the content of dita-rdf/dita2rdf/dita2rdf-ditaot-plugin.zip to [DITA-OT]/plugins.
-		 2. Run 'ant -f integrator.xml strict' at the root of your DITA opent toolkit installation.
+1. Extract the content of dita-rdf/dita2rdf/dita2rdf-ditaot-plugin.zip to [DITA-OT]/plugins.
+2. Run 'ant -f integrator.xml strict' at the root of your DITA opent toolkit installation.
 
-The new transtype 'rdf' is now available. Send me feedback either at colin@maudry.com or by opening issues!
+The new transtype 'rdf' is now available. Send me feedback either at colin@maudry.com or by (opening issues)[https://github.com/ColinMaudry/dita-rdf/issues]!
 		 
 
 This plugin enables you to export the metadata of a ditamap and the referenced topics in RDF, via an RDF/XML serialization.
