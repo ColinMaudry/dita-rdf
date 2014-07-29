@@ -67,6 +67,8 @@
 <li>The online version of the DITA RDF ontology can be found at <a href="http://purl.org/dita/ns#">http://purl.org/dita/ns#</a> (this is also the base URI of the ontology).</li>
 <li>A graphical representation of the ontology can be viewed here: <a href="http://bit.ly/DitaRdfLucidChart">http://bit.ly/DitaRdfLucidChart</a>
 </li>
+<li>A poster that illustrates the objective of the project (exhibited at the <a href="http://sssw.org/2013/">Summer School of the Semantic Web 2013</a>): <a href="http://bit.ly/DitaRdfPoster">http://bit.ly/DitaRdfPoster</a>
+</li>
 </ul><p>The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (<a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>).</p>
 
 <p>The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (<a href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>).</p>
@@ -100,7 +102,7 @@
 <li>tables</li>
 <li>lists</li>
 <li>sections</li>
-</ul><p>Also, it does not include (yet) the elements that bear semantics but that my company doesn’t use. I will add them, but you can ping me if you would like to see them added (not exhaustive):</p>
+</ul><p>Also, it does not include (yet) the elements that bear semantics but that my company doesn�t use. I will add them, but you can ping me if you would like to see them added (not exhaustive):</p>
 
 <ul>
 <li>metadata specific to DITA specializations (learning, machinery, semiconductors, etc.)</li>
@@ -114,7 +116,7 @@
 <ul>
 <li>the file as data on a file system, that has a path and can be moved or renamed</li>
 <li>the information contained in this file that results from its interpretation (by an XML editor or a PDF viewer).</li>
-</ul><p>For instance, let’s consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.</p>
+</ul><p>For instance, let's consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.</p>
 
 <h1>
 <a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h1>
@@ -134,13 +136,19 @@
 
 <p>The namespace base URI is <a href="http://purl.org/dita/ns#">http://purl.org/dita/ns#</a> and the recommended prefix is <strong>dita:</strong>.</p>
 
-<p>By default this URI returns the XHTML version of the ontology, but it also supports content negotiation for RDF/XML and Turtle (<a href="http://uriburner.com:8000/vapour?uri=http%3A%2F%2Fpurl.org%2Fdita%2Fns%23&amp;htmlVersions=1&amp;defaultResponse=rdfxml&amp;userAgent=vapour.sourceforge.net">Vapour test</a>).</p>
+<p>By default this URI returns the XHTML version of the ontology, but it also supports content negotiation for RDF/XML and Turtle (<a href="http://uriburner.com:8000/vapour?uri=http%3A%2F%2Fpurl.org%2Fdita%2Fns%23&amp;acceptRdfXml=1&amp;acceptJsonLD=1&amp;htmlVersions=1&amp;defaultResponse=rdfxml&amp;userAgent=vapour.sourceforge.net">Vapour test</a>).</p>
 
-<p>The ontology is written in a Turtle file and converted to RDF/XML using an public Web service (<a href="http://rdf-translator.appspot.com/">http://rdf-translator.appspot.com/</a>). Feel free to checkout the Git project and contribute.</p>
+<p>The ontology is written in a Turtle file and converted to various serializations using an public Web service (<a href="http://rdf.greggkellogg.net/distiller">http://rdf.greggkellogg.net/distiller</a>):</p>
+
+<ul>
+<li>Turtle (<a href="http://colin.maudry.com/ontologies/dita.ttl">download</a>)</li>
+<li>RDF/XML (<a href="http://colin.maudry.com/ontologies/dita.rdf">download</a>)</li>
+<li>JSON-LD (<a href="http://colin.maudry.com/ontologies/dita.jsonld">download</a>)</li>
+</ul><p>The Turtle version is the truth. Feel free to checkout the Git project and contribute.</p>
 
 <p>A graphical representation of the DITA RDF model can be <a href="http://bit.ly/DitaRdfLucidChart">viewed on LucidChart</a>.</p>
 
-<p>The DITA RDF ontology is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 unported license</a>. That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page (<a href="http://colinmaudry.github.io/dita-rdf/">http://colinmaudry.github.io/dita-rdf/</a>). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that’s the SA, share alike part of the license).</p>
+<p>The DITA RDF ontology is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 unported license</a>. That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page (<a href="http://colinmaudry.github.io/dita-rdf/">http://colinmaudry.github.io/dita-rdf/</a>). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that's the SA, share alike part of the license).</p>
         </section>
 
         <aside id="sidebar">
