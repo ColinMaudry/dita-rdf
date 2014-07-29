@@ -83,9 +83,15 @@ _TODO add links to real-life RDF samples._
 
 The namespace base URI is http://purl.org/dita/ns# and the recommended prefix is **dita:**.
 
-By default this URI returns the XHTML version of the ontology, but it also supports content negotiation for RDF/XML and Turtle ([Vapour test](http://uriburner.com:8000/vapour?uri=http%3A%2F%2Fpurl.org%2Fdita%2Fns%23&htmlVersions=1&defaultResponse=rdfxml&userAgent=vapour.sourceforge.net)).
+By default this URI returns the XHTML version of the ontology, but it also supports content negotiation for RDF/XML and Turtle ([Vapour test](http://uriburner.com:8000/vapour?uri=http%3A%2F%2Fpurl.org%2Fdita%2Fns%23&acceptRdfXml=1&acceptJsonLD=1&htmlVersions=1&defaultResponse=rdfxml&userAgent=vapour.sourceforge.net)).
 
-The ontology is written in a Turtle file and converted to RDF/XML using an public Web service ([http://rdf-translator.appspot.com/](http://rdf-translator.appspot.com/)). Feel free to checkout the Git project and contribute.
+The ontology is written in a Turtle file and converted to various serializations using an public Web service ([http://rdf.greggkellogg.net/distiller])):
+
+* Turtle ([download](http://colin.maudry.com/ontologies/dita.ttl))
+* RDF/XML ([download](http://colin.maudry.com/ontologies/dita.rdf))
+* JSON-LD ([download](http://colin.maudry.com/ontologies/dita.jsonld))
+
+The Turtle version is the truth. Feel free to checkout the Git project and contribute.
 
 A graphical representation of the DITA RDF model can be [viewed on LucidChart](http://bit.ly/DitaRdfLucidChart).
 
