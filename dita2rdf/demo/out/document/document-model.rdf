@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:dita="http://purl.org/dita/ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:schema="http://schema.org/"
+         xmlns:colin="http://colin.maudry.com/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ot="http://www.idiominc.com/opentopic"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/">
+   <rdf:Description rdf:about="http://data.example.com/resources/map/en-US/ds_doc" xml:lang="en-US">
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+      <dita:id>ds_doc</dita:id>
+	     <dita:title xml:lang="en-US">Sequoia series</dita:title>
+	
+	
+
+	     <dita:referenceObject>
+         <dita:Topicref rdf:about="http://data.example.com/resources/map/en-US/ds_doc/topicref:1;8:34">
+            <rdf:type rdf:resource="Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en/t_ig2_rb_gk"
+                                xml:lang="en-US">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <dita:id>t_ig2_rb_gk</dita:id>
+                  <dita:title xml:lang="en">Quick description</dita:title>
+  
+               </rdf:Description>
+            </dita:href>
+         </dita:Topicref>
+      </dita:referenceObject>
+	     <dita:referenceObject>
+         <dita:Topicref rdf:about="http://data.example.com/resources/map/en-US/ds_doc/topicref:2;9:101">
+            <rdf:type rdf:resource="Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en/features-benefits"
+                                xml:lang="en-US">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <dita:id>features-benefits</dita:id>
+	                 <dita:title xml:lang="en">Features and benefits</dita:title>
+	
+               </rdf:Description>
+            </dita:href>
+         </dita:Topicref>
+      </dita:referenceObject>
+		
+	     <dita:referenceObject>
+         <dita:Topicref rdf:about="http://data.example.com/resources/map/en-US/ds_doc/topicref:3;11:84">
+            <rdf:type rdf:resource="Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en/characteristics"
+                                xml:lang="en-US">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <dita:id>characteristics</dita:id>
+	                 <dita:title xml:lang="en">Characteristics</dita:title>
+	
+               </rdf:Description>
+            </dita:href>
+         </dita:Topicref>
+      </dita:referenceObject>
+
+	
+   </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<doctypes>
+		<!-- 
+		This is the base URI that will be use to define the URI of the extracted resources.
+		For instance, if your company is NXP Semiconductors:
+		
+		http://data.nxp.com/resources/
+				
+		As a result, the URI for:
+			<datasheet id="ds_1254933687955" xml:lang="fr-FR">
+				[...]
+			</datasheet>
+		
+		will be:
+			http://data.nxp.com/resources/fr-FR/datasheet/ds_1254933687955
+		
+		The base URI for resources (http://data.nxp.com/resources/) must be a URL for which you control the domain (nxp.com). The URI MUST end with a /.
+		-->
+		<resourcesBaseUri uri="http://data.example.com/resources/"/>
+		
+		<!-- Standard doctypes -->
+		<doctype ditaClass="topic/topic" classUri="http://purl.org/dita/ns#Topic"/>
+		<doctype ditaClass="map/map" classUri="http://purl.org/dita/ns#Map"/>
+		<doctype ditaClass="bookmap/bookmap" classUri="http://purl.org/dita/ns#Bookmap"/>
+		<doctype ditaClass="task/task" classUri="http://purl.org/dita/ns#Task"/>
+		<doctype ditaClass="concept/concept" classUri="http://purl.org/dita/ns#Concept"/>
+		<doctype ditaClass="reference/reference" classUri="http://purl.org/dita/ns#Reference"/>
+		<!--  
+		Add the class URI mappings for your shell specializations (document types) below.
+		In RDF, the good practice consists in capitalizing the first letter of the fragment.
+		For instance, if your company is NXP Semiconductors and you have a 'datasheet' doctype:
+		
+		<doctype ditaClass="datasheet/datasheet">http://data.nxp.com/schema/v1/Datasheet</doctype>
+		
+		The base URI (http://data.nxp.com/schema#), must be a URL for which you control the domain (nxp.com). The URI MUST end with a # or a /.
+		In RDF, the convention consists in capitalizing the first letter of the fragment for classes (Datasheet).
+		-->
+		
+		
+		
+		
+		
+	</doctypes>
+</config>
+

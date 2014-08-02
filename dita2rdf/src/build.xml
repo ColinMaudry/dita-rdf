@@ -50,7 +50,7 @@
 		<pipeline message="topicmerge" inputmap="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" tempdir="${dita.temp.dir.fullpath}">
 			<module class="org.dita.dost.module.TopicMergeModule">
 				<param name="output" location="${dita.temp.dir.fullpath}${file.separator}${dita.map.filename.root}_MERGED.xml"></param>
-				<param name="style" location="${dita.plugin.org.dita.pdf2.dir}/xsl/common/topicmerge.xsl"></param>
+				<param name="style" location="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl/common/topicmerge.xsl"></param>
 			</module>
 		</pipeline>
 		<antcall target="publish.map.rdf"/>
@@ -62,7 +62,6 @@
 		</condition>
 		
 		<property name="customization.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization"></property>
-		<property file="${customization.dir}/build.properties"></property>
 		
 		<loadfile property="default.locale">
 			<string>${default.language}</string>
