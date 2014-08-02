@@ -18,12 +18,11 @@
     along with the DITA RDF plugin.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <xsl:stylesheet version="2.0"	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:colin="http://zebrana.net/"
+	xmlns:colin="http://colin.maudry.com/"
 	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl">
-
-	<xsl:param name="profilingAttributes">audience,platform,product,otherprops,props,rev</xsl:param>
-	<xsl:param name="resourcesBaseUri">http://data.example.com/id/</xsl:param>
-	<xsl:param name="doctypesNamespaces" select="document('conf/config_custom.xml')"></xsl:param>
+	
+	<xsl:param name="configpath">cfg:rdf/config.xml</xsl:param>
+	<xsl:param name="config" select="document($configpath), /*"></xsl:param>
 	
 	<!-- Located here to have lower precedence over the other imported templates -->
 	<xsl:template match=" * | @* "/>
