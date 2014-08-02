@@ -22,7 +22,7 @@
 	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl">
 	
 	<xsl:param name="configpath">cfg:rdf/config.xml</xsl:param>
-	<xsl:param name="config" select="document($configpath), /*"></xsl:param>
+	<xsl:param name="config" select="document($configpath)"></xsl:param>
 	
 	<!-- Located here to have lower precedence over the other imported templates -->
 	<xsl:template match=" * | @* "/>

@@ -28,7 +28,7 @@
 	xmlns:dita="http://purl.org/dita/ns#"
 	xmlns:schema="http://schema.org/"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:colin="http://zebrana.net/"
+	xmlns:colin="http://colin.maudry.com/"
 	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
 	xmlns:ot="http://www.idiominc.com/opentopic"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
@@ -42,7 +42,7 @@
 		</xsl:param>
 		<xsl:param name="mapId" select="if (@id!='') then @id else generate-id()"/>
 		<xsl:param name="mapUri">
-			<xsl:value-of select="colin:getInformationObjectUri($resourcesBaseUri,local-name(),@xml:lang,$mapId)"/>
+			<xsl:value-of select="colin:getInformationObjectUri(local-name(),@xml:lang,$mapId)"/>
 		</xsl:param>
 			
 		<rdf:Description rdf:about="{$mapUri}">
@@ -82,10 +82,7 @@
 	<doc:doc>
 		<doc:desc>Passthrough template for maps</doc:desc>
 	</doc:doc>
-	<xsl:template match="
-		*[contains(@class, ' map/topicmeta ')] |
-		ot:map
-		">
+	<xsl:template match="*[contains(@class, ' map/topicmeta ')] |	ot:map">
 		<xsl:apply-templates/>
 	</xsl:template>
 </xsl:stylesheet>
