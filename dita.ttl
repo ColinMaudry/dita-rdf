@@ -29,11 +29,11 @@
 	<http://purl.org/dita/ns#>
 	a owl:Ontology ;
 	dcterms:title "DITA RDF ontology" ;
-	dcterms:creator <http://zebrana.net/rdf/colin-maudry#me>,
+	dcterms:creator <http://colin.maudry/rdf/colin-maudry#me>,
 		[ foaf:name "Colin Maudry" ] ;
 	dcterms:created "2013-01-04"^^xsd:date ;
-	dcterms:modified "2013-27-05"^^xsd:date ;
-	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under a CC BY-SA 3.0 license." ;
+	dcterms:modified "2014-07-30"^^xsd:date ;
+	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the CC BY-SA 3.0 license." ;
 	cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
 	foaf:depiction <http://bit.ly/DitaRdfLucidChart> ;
 	vann:preferredNamespaceUri "http://purl.org/dita/ns#";
@@ -78,7 +78,7 @@
 		:Topicref rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html> ;
 			rdfs:comment "The topicref element identifies a topic (such as a concept, task, or reference) or other resource."@en-US ;
-			rdfs:label "Topiref" .
+			rdfs:label "Topicref" .
 		:Mapref rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
 			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'."@en-US ;
@@ -118,7 +118,7 @@
 		#for maps and topics
 		:referenceObject rdfs:subPropertyOf nie:hasLogicalPart ;
 			rdfs:label "referenceObject" ;
-			nie:comment "Describes a reference object that is part of a DITA file."@en-US ;
+			rdfs:comment "Describes a reference object that is part of a DITA file."@en-US ;
 			rdfs:domain :Doctype ;
 			rdfs:range :ReferenceObject .
 		:title rdfs:subPropertyOf dcterms:title ;

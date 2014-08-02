@@ -1,0 +1,1252 @@
+// JSON-LD created from Turtle input with http://rdf.greggkellogg.net/distiller
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
+        "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+        "frbr": "http://purl.org/vocab/frbr/core#",
+        "cc": "http://creativecommons.org/ns#",
+        "vann": "http://purl.org/vocab/vann/"
+    },
+    "@graph": [
+        {
+            "@id": "_:g69921796274580",
+            "foaf:name": "Colin Maudry"
+        },
+        {
+            "@id": "http://purl.org/dita/ns#",
+            "@type": "owl:Ontology",
+            "cc:license": {
+                "@id": "http://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "dcterms:created": {
+                "@value": "2013-01-04",
+                "@type": "xsd:date"
+            },
+            "dcterms:creator": [
+                {
+                    "@id": "http://colin.maudry/rdf/colin-maudry#me"
+                },
+                {
+                    "@id": "_:g69921796274580"
+                }
+            ],
+            "dcterms:description": "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the CC BY-SA 3.0 license.",
+            "dcterms:modified": {
+                "@value": "2013-05-27",
+                "@type": "xsd:date"
+            },
+            "dcterms:title": "DITA RDF ontology",
+            "foaf:depiction": {
+                "@id": "http://bit.ly/DitaRdfLucidChart"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html"
+            },
+            "vann:preferredNamespacePrefix": "dita",
+            "vann:preferredNamespaceUri": "http://purl.org/dita/ns#"
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Bookmap",
+            "rdfs:comment": {
+                "@value": "The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Bookmap",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Map"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Concept",
+            "rdfs:comment": {
+                "@value": "The DITA concept document type uses the concept information type.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Concept",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topic"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Conref",
+            "rdfs:comment": {
+                "@value": "Include artwork or images in a DITA topic by using the <image> element.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Image",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Doctype",
+            "rdfs:comment": {
+                "@value": "All the DITA document types.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Doctype",
+            "rdfs:subClassOf": {
+                "@id": "nfo:PlainTextDocument"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Image",
+            "rdfs:comment": {
+                "@value": "Include artwork or images in a DITA topic by using the <image> element.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Image",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Key",
+            "@type": "rdfs:Class",
+            "rdfs:comment": {
+                "@value": "The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Key",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Keydef",
+            "rdfs:comment": {
+                "@value": "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Keydef",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Map",
+            "rdfs:comment": {
+                "@value": "DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Map",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Mapref",
+            "rdfs:comment": {
+                "@value": "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Mapref",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topicref"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Prodinfo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": {
+                "@value": "The prodinfo metadata element contains information about the product or products that are the subject matter of the current topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Prodinfo",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Reference",
+            "rdfs:comment": {
+                "@value": "The DITA reference document type uses the reference information type.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Reference",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topic"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#ReferenceObject",
+            "rdfs:comment": {
+                "@value": "The DITA reference object is used to link, fetch or push content in relation with another file or object.",
+                "@language": "en-us"
+            },
+            "rdfs:label": {
+                "@value": "DITA base reference object",
+                "@language": "en-us"
+            },
+            "rdfs:subClassOf": {
+                "@id": "nie:InformationElement"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Task",
+            "rdfs:comment": {
+                "@value": "The strict task document type supports the development of instructions for the completion of a procedure.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Task",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topic"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Topic",
+            "rdfs:comment": {
+                "@value": "DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Topic",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Topicref",
+            "rdfs:comment": {
+                "@value": "The topicref element identifies a topic (such as a concept, task, or reference) or other resource.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Topicref",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Xref",
+            "rdfs:comment": {
+                "@value": "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Xref",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#audience",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "audience",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#author",
+            "rdfs:comment": {
+                "@value": "The author metadata element contains the name of the topic's author.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "author",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "dcterms:author"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#conref",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "scope",
+            "rdfs:range": {
+                "@id": "xsd:anyURI"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#format",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The format attribute identifies the format of the resource being cross referenced.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "format",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#href",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "href",
+            "rdfs:range": {
+                "@id": "nie:FileDataObject"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#keyref",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "keyref",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#Key"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#keys",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "This attribute is used to reference content that can be reused.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "http://purl.org/dita/ns#Keydef"
+                },
+                {
+                    "@id": "http://purl.org/dita/ns#Topicref"
+                }
+            ],
+            "rdfs:label": "keys",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#Key"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#keyword",
+            "rdfs:comment": {
+                "@value": "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "keyword",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "nie:keyword"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#lang",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766.",
+            "rdfs:label": "language",
+            "rdfs:range": {
+                "@id": "xsd:language"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#othermeta",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "othermeta",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#platform",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "platform",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#prodinfo",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "Connects a DITA file with the product information that it is related to.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            },
+            "rdfs:label": "prodinfo",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#prodname",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The prodname metadata element contains the name of the product that is supported by the information in this topic.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "prodname",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#referenceObject",
+            "rdfs:comment": {
+                "@value": "Describes a reference object that is part of a DITA file.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            },
+            "rdfs:label": "referenceObject",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "nie:hasLogicalPart"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#scope",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "scope",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#searchtitle",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "searchtitle",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "http://purl.org/dita/ns#metadata"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#shortdesc",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "shortdesc",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#title",
+            "rdfs:comment": {
+                "@value": "The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "title",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "dcterms:title"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#vrmModification",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "vrm Modification",
+            "rdfs:range": {
+                "@id": "xsd:integer"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#vrmRelease",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "vrm Release",
+            "rdfs:range": {
+                "@id": "xsd:integer"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#vrmVersion",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "vrm Version",
+            "rdfs:range": {
+                "@id": "xsd:integer"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+            }
+        }
+    ]
+}{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "nie": "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#",
+        "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#",
+        "frbr": "http://purl.org/vocab/frbr/core#",
+        "cc": "http://creativecommons.org/ns#",
+        "vann": "http://purl.org/vocab/vann/"
+    },
+    "@graph": [
+        {
+            "@id": "_:g69921796274580",
+            "foaf:name": "Colin Maudry"
+        },
+        {
+            "@id": "http://purl.org/dita/ns#",
+            "@type": "owl:Ontology",
+            "cc:license": {
+                "@id": "http://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "dcterms:created": {
+                "@value": "2013-01-04",
+                "@type": "xsd:date"
+            },
+            "dcterms:creator": [
+                {
+                    "@id": "http://colin.maudry/rdf/colin-maudry#me"
+                },
+                {
+                    "@id": "_:g69921796274580"
+                }
+            ],
+            "dcterms:description": "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the CC BY-SA 3.0 license.",
+            "dcterms:modified": {
+                "@value": "2013-05-27",
+                "@type": "xsd:date"
+            },
+            "dcterms:title": "DITA RDF ontology",
+            "foaf:depiction": {
+                "@id": "http://bit.ly/DitaRdfLucidChart"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html"
+            },
+            "vann:preferredNamespacePrefix": "dita",
+            "vann:preferredNamespaceUri": "http://purl.org/dita/ns#"
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Bookmap",
+            "rdfs:comment": {
+                "@value": "The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Bookmap",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Map"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Concept",
+            "rdfs:comment": {
+                "@value": "The DITA concept document type uses the concept information type.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Concept",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topic"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Conref",
+            "rdfs:comment": {
+                "@value": "Include artwork or images in a DITA topic by using the <image> element.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Image",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Doctype",
+            "rdfs:comment": {
+                "@value": "All the DITA document types.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Doctype",
+            "rdfs:subClassOf": {
+                "@id": "nfo:PlainTextDocument"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Image",
+            "rdfs:comment": {
+                "@value": "Include artwork or images in a DITA topic by using the <image> element.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Image",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Key",
+            "@type": "rdfs:Class",
+            "rdfs:comment": {
+                "@value": "The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Key",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Keydef",
+            "rdfs:comment": {
+                "@value": "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Keydef",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Map",
+            "rdfs:comment": {
+                "@value": "DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Map",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Mapref",
+            "rdfs:comment": {
+                "@value": "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Mapref",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topicref"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Prodinfo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": {
+                "@value": "The prodinfo metadata element contains information about the product or products that are the subject matter of the current topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Prodinfo",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Reference",
+            "rdfs:comment": {
+                "@value": "The DITA reference document type uses the reference information type.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Reference",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topic"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#ReferenceObject",
+            "rdfs:comment": {
+                "@value": "The DITA reference object is used to link, fetch or push content in relation with another file or object.",
+                "@language": "en-us"
+            },
+            "rdfs:label": {
+                "@value": "DITA base reference object",
+                "@language": "en-us"
+            },
+            "rdfs:subClassOf": {
+                "@id": "nie:InformationElement"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Task",
+            "rdfs:comment": {
+                "@value": "The strict task document type supports the development of instructions for the completion of a procedure.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Task",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Topic"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Topic",
+            "rdfs:comment": {
+                "@value": "DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Topic",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Topicref",
+            "rdfs:comment": {
+                "@value": "The topicref element identifies a topic (such as a concept, task, or reference) or other resource.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Topiref",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#Xref",
+            "rdfs:comment": {
+                "@value": "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "Xref",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+            },
+            "rdfs:subClassOf": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#audience",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "audience",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#author",
+            "rdfs:comment": {
+                "@value": "The author metadata element contains the name of the topic's author.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "author",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "dcterms:author"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#conref",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "scope",
+            "rdfs:range": {
+                "@id": "xsd:anyURI"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#format",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The format attribute identifies the format of the resource being cross referenced.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "format",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#href",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "href",
+            "rdfs:range": {
+                "@id": "nie:FileDataObject"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#keyref",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "keyref",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#Key"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#keys",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "This attribute is used to reference content that can be reused.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "http://purl.org/dita/ns#Keydef"
+                },
+                {
+                    "@id": "http://purl.org/dita/ns#Topicref"
+                }
+            ],
+            "rdfs:label": "keys",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#Key"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#keyword",
+            "rdfs:comment": {
+                "@value": "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "keyword",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "nie:keyword"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#lang",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766.",
+            "rdfs:label": "language",
+            "rdfs:range": {
+                "@id": "xsd:language"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#othermeta",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "othermeta",
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#platform",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "platform",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#prodinfo",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "Connects a DITA file with the product information that it is related to.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            },
+            "rdfs:label": "prodinfo",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#prodname",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The prodname metadata element contains the name of the product that is supported by the information in this topic.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "prodname",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#referenceObject",
+            "rdfs:comment": {
+                "@value": "Describes a reference object that is part of a DITA file.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Doctype"
+            },
+            "rdfs:label": "referenceObject",
+            "rdfs:range": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "nie:hasLogicalPart"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#scope",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#ReferenceObject"
+            },
+            "rdfs:label": "scope",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#searchtitle",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "searchtitle",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "http://purl.org/dita/ns#metadata"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#shortdesc",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "shortdesc",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#title",
+            "rdfs:comment": {
+                "@value": "The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables.",
+                "@language": "en-us"
+            },
+            "rdfs:label": "title",
+            "rdfs:range": {
+                "@id": "xsd:string"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html"
+            },
+            "rdfs:subPropertyOf": {
+                "@id": "dcterms:title"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#vrmModification",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "vrm Modification",
+            "rdfs:range": {
+                "@id": "xsd:integer"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#vrmRelease",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "vrm Release",
+            "rdfs:range": {
+                "@id": "xsd:integer"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+            }
+        },
+        {
+            "@id": "http://purl.org/dita/ns#vrmVersion",
+            "@type": "rdf:Property",
+            "rdfs:comment": {
+                "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
+                "@language": "en-us"
+            },
+            "rdfs:domain": {
+                "@id": "http://purl.org/dita/ns#Prodinfo"
+            },
+            "rdfs:label": "vrm Version",
+            "rdfs:range": {
+                "@id": "xsd:integer"
+            },
+            "rdfs:seeAlso": {
+                "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+            }
+        }
+    ]
+}
