@@ -62,7 +62,6 @@
 		</condition>
 		
 		<property name="customization.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization"></property>
-		<property file="${customization.dir}/build.properties"></property>
 		
 		<loadfile property="default.locale">
 			<string>${default.language}</string>
