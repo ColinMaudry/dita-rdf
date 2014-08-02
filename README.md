@@ -7,7 +7,7 @@ See the useful links below if you want to know more about the Semantic Web.
 
 # Status
 
- * The ontology is already available as a Turtle file, [dita.ttl](https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl). It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form, and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
+ * The ontology is already available as a Turtle file, [dita.ttl](https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl). It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form (to be improved!), and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
  * A DITA Open toolkit plugin is available [here](https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip) to enable the extraction of RDF triples from DITA content. The following metadata is extracted (including specializations) for maps and topics:
 	- @id
 	- title
@@ -20,11 +20,8 @@ See the useful links below if you want to know more about the Semantic Web.
 
 # Useful links
 
+ - A very good introduction to RDF, the Semantic Web, and how it completes XML: http://www.cambridgesemantics.com/semantic-university/rdf-101
  - The official page of the Semantic Web: http://www.w3.org/standards/semanticweb/
- - A good introduction to understand why the Semantic Web is the future of the Web, and how it completes XML: http://infomesh.net/2001/swintro/
- - The online version of the DITA RDF ontology can be found at http://purl.org/dita/ns# (this is also the base URI of the ontology).
- - A graphical representation of the ontology can be viewed here: http://bit.ly/DitaRdfLucidChart
- - A poster that illustrates the objective of the project (exhibited at the [Summer School of the Semantic Web 2013](http://sssw.org/2013/)): http://bit.ly/DitaRdfPoster
 
 The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
 
@@ -36,6 +33,8 @@ The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License v
 # Objective
 
 This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the Semantic Web of data.
+
+[This poster](http://bit.ly/DitaRdfPoster) illustrates the objective of the project. I presented it during the 10th Summer School on Ontology Engineering and the Semantic Web ([SSSW 2013](http://sssw.org/2013/)).
 
 # Scope
 
