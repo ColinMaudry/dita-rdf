@@ -35,6 +35,10 @@
 	
 The DITA-OT extracts the metadata of the provided DITA map. When finished, the resulting `[map name].rdf` is available in `[DITA-OT]/out`. Depending on your source DITA folder structure, the resulting RDF can also be in a sub-directory of `[DITA-OT]/out`. Check the last lines of the processing log ([xslt]).
 
+	###Known issues
+	
+	* https://github.com/ColinMaudry/dita-rdf/labels/bug
+
 	### You should keep reading
 	
 		This plugin enables you to export the metadata of a DITA map and the referenced topics in RDF, via an RDF/XML serialization.
