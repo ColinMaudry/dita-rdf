@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<resourcesBaseUri uri="http://data.example.com/resources/"/>	
+	<domains>
+		<domain domainId="topic" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
+	</domains>
+</config>
+

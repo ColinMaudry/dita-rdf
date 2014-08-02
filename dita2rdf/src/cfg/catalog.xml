@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<uri name="cfg:rdf/config.xml" uri="rdf/config.xml"/>
+	<uri name="cfg:rdf/xsl/custom.xsl" uri="rdf/xsl/custom.xsl"/>
+</catalog>
