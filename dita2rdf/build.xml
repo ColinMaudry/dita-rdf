@@ -1,46 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="build.dita-rdf.dita-ot.plugin" default="package-zip-and-copy-plugin" basedir=".">
+<project name="build.dita-rdf.dita-ot.plugin" default="package-zip-copy-plugin-demo" basedir=".">
 	<!-- Enter the location of you DITA OT directory here: -->
-	<property name="dita-ot.dir" value="C:\Users\colin\programs\DITA-OT1.8.4"/>
+	<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
 	<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
 	<property name="run.integrator" value="true"/>
 	
 	<property name="plugin-id" value="com.github.colinmaudry.dita2rdf"></property>
-	<property name="temp.dir" value="temp"/>
-	<property name="temp.plugin.dir" location="temp/${plugin-id}"/>
+	<property name="demo.dir" value="demo"/>
+	<property name="temp.demo.dir" value="${demo.dir}/out/temp"/>
+	<property name="temp.plugin.dir" location="temp"/>
 	<property name="dita-rdf-ot-plugin-dir" value="dita-ot"/>
+	<property name="ditaot.classpath" value="${ditaot.dir}\lib;${ditaot.dir}lib/dost.jar;${ditaot.dir}lib/commons-codec-1.4.jar;${ditaot.dir}lib/resolver.jar;${ditaot.dir}lib/icu4j.jar;${ditaot.dir}lib/xercesImpl.jar;${ditaot.dir}lib/xml-apis.jar;${ditaot.dir}lib/saxon/saxon9.jar;${ditaot.dir}lib/saxon/saxon9-dom.jar;"/>
+	
 
-	<target name="package-zip-and-copy-plugin" depends="package-zip,copy-plugin-dita-ot"/>
+	<target name="package-zip-copy-plugin" depends="package-zip,copy-plugin-dita-ot"/>
+	<target name="package-zip-copy-plugin-demo" depends="package-zip-copy-plugin,demo"/>
 
 	<target name="make.temp.dir" description="Create the buid temporary directory, and gather the files together.">
-		<delete dir="${temp.dir}"/>
-		<mkdir dir="${temp.dir}"/>
-		<mkdir dir="${temp.plugin.dir}"/>
-		<copy todir="${temp.plugin.dir}" >
+		<delete dir="${temp.plugin.dir}"/>
+		<mkdir dir="${temp.plugin.dir}/${plugin-id}"/>
+		<copy todir="${temp.plugin.dir}/${plugin-id}" >
 			<fileset dir="src/" includes="**/*" />
 		</copy>
 	</target>
 	
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
 		<zip destfile="dita2rdf-ditaot-plugin.zip">
-			<fileset dir="${temp.dir}" includes="${plugin-id}/**/*"/>
+			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"/>
 		</zip>
 	</target>	
 	
 	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT">
-		<delete dir="${dita-ot.dir}/plugins/${plugin-id}"/>
-		<copy todir="${dita-ot.dir}/plugins">
-			<fileset dir="${temp.dir}" includes="${plugin-id}/**/*"></fileset>
+		<delete dir="${ditaot.dir}plugins/${plugin-id}"/>
+		<copy todir="${ditaot.dir}plugins">
+			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"></fileset>
 		</copy>
 		<antcall  target="run-integrator"/>
 	</target>
 	
 	<target name="run-integrator" if="run.integrator">
-		<ant dir="${dita-ot.dir}" antfile="integrator.xml"/>
+		<ant dir="${ditaot.dir}" antfile="integrator.xml"/>
 	</target>
 	
 	<target name="clean-temp" description="Delete temporary folder" depends="copy-plugin-dita-ot">
-		<delete dir="${temp.dir}"/>
+		<delete dir="${temp.plugin.dir}"/>
+	</target>
+	
+	<target name="demo">
+		<delete dir="demo/out"/>
+		<mkdir dir="${temp.demo.dir}"/>
+		<exec dir="${ditaot.dir}" executable="${ditaot.dir}tools/ant/bin/ant.bat" searchpath="true">
+			<env key="DITA_DIR" value="${ditaot.dir}"/>
+			<env key="CLASSPATH" value="${ditaot.classpath}"/>
+			<arg prefix="-Djavax.xml.transform.TransformerFactory=" value="net.sf.saxon.TransformerFactoryImpl"/>
+			<arg prefix="-Dargs.input=" path="${demo.dir}/demo-cars/document/document-model.ditamap"/>
+			<arg prefix="-Doutput.dir=" path="${demo.dir}/out"/>
+			<arg prefix="-Ddita.temp.dir=" path="${temp.demo.dir}"/>
+			<arg prefix="-Dclean.temp=" value="no"/>
+			<arg prefix="-Dtranstype=" value="rdf"/>
+		</exec>
 	</target>
 	
 </project>
