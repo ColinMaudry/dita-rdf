@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="build.dita-rdf.dita-ot.plugin" default="package-zip-and-copy-plugin" basedir=".">
 	<!-- Enter the location of you DITA OT directory here: -->
-	<property name="dita-ot.dir" value="..\..\DITA-OT1.8"/>
+	<property name="dita-ot.dir" value="C:\Users\colin\programs\DITA-OT1.8.4"/>
 	<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
 	<property name="run.integrator" value="true"/>
 	
@@ -10,26 +10,25 @@
 	<property name="temp.plugin.dir" location="temp/${plugin-id}"/>
 	<property name="dita-rdf-ot-plugin-dir" value="dita-ot"/>
 
-	<target name="package-zip-and-copy-plugin" depends="package-zip,copy-plugin-dita-ot,clean-temp"/>
+	<target name="package-zip-and-copy-plugin" depends="package-zip,copy-plugin-dita-ot"/>
 
 	<target name="make.temp.dir" description="Create the buid temporary directory, and gather the files together.">
+		<delete dir="${temp.dir}"/>
 		<mkdir dir="${temp.dir}"/>
 		<mkdir dir="${temp.plugin.dir}"/>
-		<copy todir="${temp.plugin.dir}">
-			<fileset dir="." includes="xsl/**/*"/>
-		</copy>
-		<copy todir="${temp.plugin.dir}">
-			<fileset dir="${dita-rdf-ot-plugin-dir}"/>
+		<copy todir="${temp.plugin.dir}" >
+			<fileset dir="src/" includes="**/*" />
 		</copy>
 	</target>
 	
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
 		<zip destfile="dita2rdf-ditaot-plugin.zip">
-			<fileset dir="${temp.dir}" includes="${plugin-id}"/>
+			<fileset dir="${temp.dir}" includes="${plugin-id}/**/*"/>
 		</zip>
 	</target>	
 	
-	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT" depends="package-zip">
+	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT">
+		<delete dir="${dita-ot.dir}/plugins/${plugin-id}"/>
 		<copy todir="${dita-ot.dir}/plugins">
 			<fileset dir="${temp.dir}" includes="${plugin-id}/**/*"></fileset>
 		</copy>

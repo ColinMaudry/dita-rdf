@@ -23,7 +23,7 @@
 
 	<xsl:param name="profilingAttributes">audience,platform,product,otherprops,props,rev</xsl:param>
 	<xsl:param name="resourcesBaseUri">http://data.example.com/id/</xsl:param>
-	<xsl:param name="doctypesNamespaces" select="document('conf/doctypesNamespaces.xml')"></xsl:param>
+	<xsl:param name="doctypesNamespaces" select="document('conf/config_custom.xml')"></xsl:param>
 	
 	<!-- Located here to have lower precedence over the other imported templates -->
 	<xsl:template match=" * | @* "/>
