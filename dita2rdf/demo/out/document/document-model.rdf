@@ -14,7 +14,7 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dcterms="http://purl.org/dc/terms/">
    <rdf:Description rdf:about="http://data.example.com/resources/map/en-US/ds_doc" xml:lang="en-US">
-      <rdf:type rdf:resource="Map"/>
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
       <dita:id>ds_doc</dita:id>
 	     <dita:title xml:lang="en-US">Sequoia series</dita:title>
 	
@@ -26,7 +26,7 @@
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en/t_ig2_rb_gk"
                                 xml:lang="en-US">
-                  <rdf:type rdf:resource="Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                   <dita:id>t_ig2_rb_gk</dita:id>
                   <dita:title xml:lang="en">Quick description</dita:title>
   
@@ -40,7 +40,7 @@
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en/features-benefits"
                                 xml:lang="en-US">
-                  <rdf:type rdf:resource="Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                   <dita:id>features-benefits</dita:id>
 	                 <dita:title xml:lang="en">Features and benefits</dita:title>
 	
@@ -55,7 +55,7 @@
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en/characteristics"
                                 xml:lang="en-US">
-                  <rdf:type rdf:resource="Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                   <dita:id>characteristics</dita:id>
 	                 <dita:title xml:lang="en">Characteristics</dita:title>
 	
