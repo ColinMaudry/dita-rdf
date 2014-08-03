@@ -3,7 +3,7 @@ Thanks for giving a spin to the dita2rdf plugin! Please report bugs and question
 
 ###Requirements
 
-* DITA open toolkit 1.8.x (version 1.5+ could work but not tested)
+* [DITA open toolkit](http://dita-ot.github.io/) 1.8.x (version 1.5+ could work but not tested)
 
 ###Installation
 
