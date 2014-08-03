@@ -43,16 +43,24 @@
 		
 	</target>
 	
-	<target name="dita2rdf" depends="dita2rdf.init, build-init, preprocess, map2rdf"/>
+	<target name="dita2rdf" depends="dita2rdf.init, build-init,short-preprocess, map2rdf"/>
+	
+	<target name="short-preprocess" depends="gen-list,debug-filter,copy-files,keyref"/>
+	<!-- 
+	For userguide.ditamap:
+			-with preprocess: 17 seconds total processing time
+			-with short-preprocess: 7 seconds total processing time
+			
+	Why keeping these targets?	
+	copy-files: because the keyref path looks for the files in the temps.dir. They must be there.
+	debug-filter: because this is where user.input.dir is set (eg: C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\demo-cars). Could be created in Ant instead of Java (DebugAndFilterModuleTest.java).
+	gen-list: because keyref needs the list of keydef
+	keyref: because we need the resolved keys to be able to browse the content
+	-->
+	
 	
 	<target name="map2rdf">
 		<dirname property="dita.temp.dir.fullpath" file="${dita.temp.dir}${file.separator}dummy.file"></dirname>
-		<pipeline message="topicmerge" inputmap="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" tempdir="${dita.temp.dir.fullpath}">
-			<module class="org.dita.dost.module.TopicMergeModule">
-				<param name="output" location="${dita.temp.dir.fullpath}${file.separator}${dita.map.filename.root}_MERGED.xml"></param>
-				<param name="style" location="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl/common/topicmerge.xsl"></param>
-			</module>
-		</pipeline>
 		<antcall target="publish.map.rdf"/>
 	</target>
 	
@@ -73,7 +81,6 @@
 		</loadfile>
 		
 		<property name="lib.dir" value="${dita.dir}/lib"></property>
-		<property name="merged.file" value="${dita.map.filename.root}_MERGED.xml"></property>
 		
 		<!--<property name="artwork.dir" value="${rdf.temp.dir}"></property>-->
 		
@@ -108,7 +115,7 @@
 	
 	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf"></target>
 	<target name="publish.map.rdf.init">
-		<property name="inputFile" location="${dita.temp.dir}/${merged.file}"></property>
+		<property name="inputFile" location="${args.input}"></property>
 		<property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.rdf"/>
 		<property name="outputFile.base" value="${dita.map.filename.root}"></property>
 		<property name="artworkPrefix" value="${artwork.dir}"></property>
@@ -154,7 +161,7 @@
 		<mkdir dir="${dita.map.output.dir}"/>
 		
 		
-		<xslt style="${temp.transformation.file}" in="${dita.temp.dir}/${merged.file}" out="${outputFile}">
+		<xslt style="${temp.transformation.file}" in="${inputFile}" out="${outputFile}">
 			<param name="customizationDir.url" expression="${customization.dir.url}"></param>
 			<param name="input.dir.url" expression="${user.input.dir.url}"></param>
 			<param name="output.dir.url" expression="${dita.map.output.dir.url}"></param>
