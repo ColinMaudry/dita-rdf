@@ -99,7 +99,7 @@
 		<xsl:param as="xs:string" name="class"/>
 		<xsl:variable name="firstCharRemoved" select="substring($class,2)"/>
 		<xsl:for-each select="tokenize(normalize-space($firstCharRemoved),' ')">
-			<xsl:variable name="domainId" select="substring-after(.,'/')"/>
+			<xsl:variable name="domainId" select="substring-before(.,'/')"/>
 			<xsl:message>
 				<xsl:value-of select="$domainId"/>
 			</xsl:message>
