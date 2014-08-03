@@ -131,7 +131,7 @@
 	<doc:doc>
 		<doc:desc>Template for @href that have a non-DITA target. Target metadata is not retrieved.</doc:desc>
 	</doc:doc>
-	<xsl:template match="@ohref">
+	<xsl:template match="@href">
 		<dita:href rdf:resource="{.}"/>
 	</xsl:template>
 </xsl:stylesheet>

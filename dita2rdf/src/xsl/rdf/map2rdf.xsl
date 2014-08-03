@@ -36,6 +36,16 @@
 	<doc:doc>
 		<doc:desc>The root template for maps.</doc:desc>
 	</doc:doc>
+	
+	<!-- Map specific functions -->
+	<xsl:function name="colin:getKeyUri">
+		<xsl:param name="documentUri"/>
+		<xsl:param name="keyname"/>
+		<xsl:value-of select="concat($documentUri,'/keys/',$keyname)"/>
+	</xsl:function>
+	
+	
+	
 	<xsl:template match="*[contains(@class,' map/map ')]">
 		<xsl:param name="mapLanguage">
 			<xsl:value-of select="@xml:lang"/>
@@ -57,7 +67,7 @@
 				<xsl:value-of select="$mapId"/>
 			</dita:id>
 			
-			<xsl:apply-templates select="ot:map">
+			<xsl:apply-templates>
 				<xsl:with-param name="mapLanguage" select="$mapLanguage" tunnel="yes"/>
 				<xsl:with-param name="mapUri" select="$mapUri" tunnel="yes"/>
 			</xsl:apply-templates>			
@@ -71,16 +81,33 @@
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
-				<xsl:apply-templates select="@*"/>
+				<xsl:apply-templates select=".[@href]/@keys">
+					<xsl:with-param name="xtrf" select="@xtrf"/>
+				</xsl:apply-templates>
+				<xsl:apply-templates select=".[not(@keys)]/@href"/>
+				<!-- For now, only extract keys if they are references 
+							Only extract @href if no @keys-->
 			</rdf:Description>
 		</dita:referenceObject>
 		<xsl:apply-templates/>
 	</xsl:template>
-	
+	<xsl:template match="@keys">
+		<xsl:param name="mapUri" tunnel="yes"/>
+		<xsl:param name="xtrf"/>
+		<xsl:variable name="base" select="translate($xtrf,'\','/')"/>
+		<xsl:variable name="relative" select="../@href"></xsl:variable>
+		<xsl:for-each select="tokenize(.,' ')">
+			<dita:key>
+				<dita:Key rdf:about="{colin:getKeyUri($mapUri,.)}">
+					<dita:href rdf:resource="{resolve-uri($relative,$base)}"/>
+				</dita:Key>
+			</dita:key>
+		</xsl:for-each>
+	</xsl:template>
 	<doc:doc>
 		<doc:desc>Passthrough template for maps</doc:desc>
 	</doc:doc>
-	<xsl:template match="*[contains(@class, ' map/topicmeta ')] |	ot:map">
+	<xsl:template match="*[contains(@class, ' map/topicmeta ')]">
 		<xsl:apply-templates/>
 	</xsl:template>
 </xsl:stylesheet>
