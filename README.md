@@ -5,7 +5,7 @@ The objective of this project is to develop an ontology to describe DITA XML obj
 
 See the useful links below if you want to know more about the Semantic Web.
 
-# Status
+## Status
 
  * The ontology is already available as a Turtle file, [dita.ttl](https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl). It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form (to be improved!), and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
  * A DITA Open toolkit plugin is available [here](https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip) (documentation [here](./dita2rdf)) to enable the extraction of RDF triples from DITA content. The following metadata is extracted (including specializations) for maps and topics:
@@ -18,7 +18,7 @@ See the useful links below if you want to know more about the Semantic Web.
  * The plugin will be adapted to be used in [Componize for Alfresco](http://www.componize.com)
  * A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata
 
-# Useful links
+## Useful links
 
  - A very good introduction to RDF, the Semantic Web, and how it completes XML: http://www.cambridgesemantics.com/semantic-university/rdf-101
  - The official page of the Semantic Web: http://www.w3.org/standards/semanticweb/
@@ -26,7 +26,9 @@ See the useful links below if you want to know more about the Semantic Web.
 The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
 
 The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (https://gnu.org/licenses/gpl.html).
-# Contact
+
+## Contact
+
 * Twitter: [@ColinMaudry](https://www.twitter.com/ColinMaudry)
 * Email: colin@zebrana.net
 
@@ -57,7 +59,7 @@ Also, it does not include (yet) the elements that bear semantics but that my com
 * the programming, indexing, software, utilities and UI domains (will add them as separate modules)
 * category
 
-# Base ontologies
+## Base ontologies
 
 I have chosen to use the Nepomuk ontologies [NIE](http://www.semanticdesktop.org/ontologies/2007/01/19/nie) and [NFO](http://www.semanticdesktop.org/ontologies/2007/03/22/nfo), and specialize the classes. The distinction they make between data objects (sequences of bytes) and information elements (interpretations) prevents the confusion between:
 
@@ -66,7 +68,7 @@ I have chosen to use the Nepomuk ontologies [NIE](http://www.semanticdesktop.org
 
 For instance, let�s consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.
 
-# Background
+## Background
 
 This idea came to me when we (NXP Customer Documentation Services) [decided](http://blog.nxp.com/is-linked-data-the-future-of-data-integration-in-the-enterprise/) to publish the metadata of our products and documents as RDF in order to end the siloization of our various data types, define company-wide data models and so that external organizations can easily consume this data.
 
@@ -78,7 +80,7 @@ Finally, since the challenges we face are most likely similar to the ones other 
 
 _TODO add links to real-life RDF samples._
 
-# Publishing method and availability
+## Publishing method and availability
 
 The namespace base URI is http://purl.org/dita/ns# and the recommended prefix is **dita:**.
 
@@ -94,4 +96,10 @@ The Turtle version is the truth. Feel free to checkout the Git project and contr
 
 A graphical representation of the DITA RDF model can be [viewed on LucidChart](http://bit.ly/DitaRdfLucidChart).
 
-The DITA RDF ontology is licensed under a [CC BY-SA 3.0 unported license](https://creativecommons.org/licenses/by-sa/3.0/). That means you can use it in your own software and products, even commercial one, as long as you specify that I (Colin Maudry) am the author and link back to the project home page ([http://colinmaudry.github.io/dita-rdf/](http://colinmaudry.github.io/dita-rdf/)). You can also modify it and publish it as  new ontologies as long as you mention that you modified my work, link back to the home page and publish your new ontologies under the same or similar terms (that�s the SA, share alike part of the license).
+##Public domain
+
+The DITA RDF ontology, the DITA RDF plugin and all the code included in the DITA RDF project are free and released into the public domain, excepted the parts that were reused from the pdf2 DITA-OT plugin, developed by Idiom Inc.
+
+See [UNLICENSE](UNLICENSE) for the whole shebang.
+
+If you find the DITA RDF project useful, I would be grateful if you tweet about it (something like "kudos @CMaudry!") or if you mention the origin and the author of this software in the documentation of your product.
