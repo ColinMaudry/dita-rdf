@@ -161,7 +161,7 @@
 		<mkdir dir="${dita.map.output.dir}"/>
 		
 		
-		<xslt style="${temp.transformation.file}" in="${inputFile}" out="${outputFile}">
+		<xslt style="${temp.transformation.file}" in="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" out="${outputFile}">
 			<param name="customizationDir.url" expression="${customization.dir.url}"></param>
 			<param name="input.dir.url" expression="${user.input.dir.url}"></param>
 			<param name="output.dir.url" expression="${dita.map.output.dir.url}"></param>
