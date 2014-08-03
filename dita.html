@@ -1,1177 +1,217 @@
-<html>
-<head>
-</head>
-<body>
-    <h1>The DITA RDF ontology (<a href="http://purl.org/dita/ns#">http://purl.org/dita/ns#</a>)</h1>
-    <table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://creativecommons.org/ns#license
-          </td>
-          <td>
-            <a href="http://creativecommons.org/licenses/by-sa/3.0/" property="http://creativecommons.org/ns#license">http://creativecommons.org/licenses/by-sa/3.0/</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://purl.org/dc/terms/created
-          </td>
-          <td content="2013-01-04" datatype="http://www.w3.org/2001/XMLSchema#date" property="http://purl.org/dc/terms/created">Friday, 04 January 2013</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://purl.org/dc/terms/creator
-          </td>
-          <td>
-            <ul>
-              <li>
-                <a href="http://colin.maudry/rdf/colin-maudry#me" property="http://purl.org/dc/terms/creator">http://colin.maudry/rdf/colin-maudry#me</a>
-              </li>
-              <li rel="http://purl.org/dc/terms/creator" resource="_:g69921796698560">
-                <table class="properties">
-                  <tbody><tr class="property">
-                    <td class="label">
-                      http://xmlns.com/foaf/0.1/name
-                    </td>
-                    <td property="http://xmlns.com/foaf/0.1/name">Colin Maudry</td>
-                  </tr>
-                </tbody></table>
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://purl.org/dc/terms/description
-          </td>
-          <td property="http://purl.org/dc/terms/description">The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the CC BY-SA 3.0 license.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://purl.org/dc/terms/modified
-          </td>
-          <td content="2013-05-27" datatype="http://www.w3.org/2001/XMLSchema#date" property="http://purl.org/dc/terms/modified">Monday, 27 May 2013</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://purl.org/vocab/vann/preferredNamespacePrefix
-          </td>
-          <td property="http://purl.org/vocab/vann/preferredNamespacePrefix">dita</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://purl.org/vocab/vann/preferredNamespaceUri
-          </td>
-          <td property="http://purl.org/vocab/vann/preferredNamespaceUri">http://purl.org/dita/ns#</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://xmlns.com/foaf/0.1/depiction
-          </td>
-          <td>
-            <a href="http://bit.ly/DitaRdfLucidChart" property="http://xmlns.com/foaf/0.1/depiction">http://bit.ly/DitaRdfLucidChart</a>
-          </td>
-        </tr>
-      </tbody></table>
-      <span class="type">http://www.w3.org/2000/01/rdf-schema#Class</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Key</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/2000/01/rdf-schema#Class</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Prodinfo</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The prodinfo metadata element contains information about the product or products that are the subject matter of the current topic.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Bookmap</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#Map">
-            <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Map</h3><table class="properties">
-              
-              <tbody><tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#comment
-                </td>
-                <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved.</td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#seeAlso
-                </td>
-                <td>
-                  <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html</a>
-                </td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#subClassOf
-                </td>
-                <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#Doctype">
-                  <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Doctype</h3><table class="properties">
-                    
-                    <tbody><tr class="property">
-                      <td class="label">
-                        http://www.w3.org/2000/01/rdf-schema#comment
-                      </td>
-                      <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">All the DITA document types.</td>
-                    </tr>
-                    <tr class="property">
-                      <td class="label">
-                        http://www.w3.org/2000/01/rdf-schema#subClassOf
-                      </td>
-                      <td>
-                        <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument</a>
-                      </td>
-                    </tr>
-                  </tbody></table>
-                </td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Concept</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA concept document type uses the concept information type.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#Topic">
-            <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Topic</h3><table class="properties">
-              
-              <tbody><tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#comment
-                </td>
-                <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.</td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#seeAlso
-                </td>
-                <td>
-                  <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html</a>
-                </td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#subClassOf
-                </td>
-                <td>
-                  <a href="http://purl.org/dita/ns#Doctype" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#Doctype</a>
-                </td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Image</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Include artwork or images in a DITA topic by using the &lt;image&gt; element.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#ReferenceObject">
-            <h3 property="http://www.w3.org/2000/01/rdf-schema#label" lang="en-US">DITA base reference object</h3><table class="properties">
-              
-              <tbody><tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#comment
-                </td>
-                <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA reference object is used to link, fetch or push content in relation with another file or object.</td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#subClassOf
-                </td>
-                <td>
-                  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement</a>
-                </td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Image</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Include artwork or images in a DITA topic by using the &lt;image&gt; element.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Mapref</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The mapref element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to 'ditamap'.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#Topicref">
-            <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Topicref</h3><table class="properties">
-              
-              <tbody><tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#comment
-                </td>
-                <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The topicref element identifies a topic (such as a concept, task, or reference) or other resource.</td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#seeAlso
-                </td>
-                <td>
-                  <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html</a>
-                </td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#subClassOf
-                </td>
-                <td>
-                  <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#ReferenceObject</a>
-                </td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Reference</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA reference document type uses the reference information type.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Topic" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#Topic</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Task</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The strict task document type supports the development of instructions for the completion of a procedure.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Topic" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#Topic</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Xref</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Use the cross-reference (&lt;xref&gt;) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">language</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment">The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#language" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#language</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">othermeta</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The othermeta element can be used to identify properties not otherwise included in &lt;metadata&gt; and to assign name/content values to those properties.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">Keydef</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subClassOf
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">audience</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">author</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The author metadata element contains the name of the topic's author.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subPropertyOf
-          </td>
-          <td>
-            <a href="http://purl.org/dc/terms/author" property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">http://purl.org/dc/terms/author</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">keyword</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subPropertyOf
-          </td>
-          <td>
-            <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#keyword" property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#keyword</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">prodinfo</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Connects a DITA file with the product information that it is related to.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Doctype" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Doctype</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">referenceObject</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Describes a reference object that is part of a DITA file.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Doctype" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Doctype</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subPropertyOf
-          </td>
-          <td>
-            <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart" property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">shortdesc</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">title</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subPropertyOf
-          </td>
-          <td>
-            <a href="http://purl.org/dc/terms/title" property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">http://purl.org/dc/terms/title</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">scope</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The scope attribute identifies the closeness of the relationship between the current document and the target resource.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#anyURI" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#anyURI</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">format</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The format attribute identifies the format of the resource being cross referenced.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">href</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#FileDataObject" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#FileDataObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">keyref</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Key" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#Key</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">platform</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">prodname</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The prodname metadata element contains the name of the product that is supported by the information in this topic.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">scope</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The scope attribute identifies the closeness of the relationship between the current document and the target resource.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">searchtitle</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#string" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#string</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subPropertyOf
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#metadata" property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">http://purl.org/dita/ns#metadata</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">vrm Modification</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#integer" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#integer</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">vrm Release</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#integer" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#integer</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">vrm Version</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.w3.org/2001/XMLSchema#integer" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.w3.org/2001/XMLSchema#integer</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h3 property="http://www.w3.org/2000/01/rdf-schema#label">keys</h3><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">This attribute is used to reference content that can be reused.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <ul>
-              <li>
-                <a href="http://purl.org/dita/ns#Keydef" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Keydef</a>
-              </li>
-              <li>
-                <a href="http://purl.org/dita/ns#Topicref" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Topicref</a>
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Key" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#Key</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>  
-</body>
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <title>RDF Distiller</title>
+    <link href='/css/main.css' rel='stylesheet' type='text/css'>
+    <script charset='utf-8' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js' type='text/javascript'></script>
+    <script>
+      // Navigation
+      $(function () {
+        // Select appropriate nav tab
+        var href = window.location.pathname;
+        $('nav.main a').removeClass('selected');
+        $('nav.main a[href="' + href + '"]').addClass('selected');
+      });
+    </script>
+    <script type="text/javascript">
+    // Navigation
+    $(function () {
+      // Display field sets having class of
+      // Clicking on a tab hides fieldsets not having that hash element as a class
+      $('nav.distiller a').click(function() {
+        var cls = this.hash.substr(1);
+        $('fieldset').hide();
+        $('fieldset.' + cls).show();
+        $('nav.distiller a').removeClass('selected');
+        $(this).addClass('selected');
+        return(false); // No bubbling, leave history alone.
+      });
+    
+      // Hide fieldsets
+      $('fieldset').hide();
+    
+      // Select appropriate nav tab
+      var cls = window.location.hash.substr(1);
+      $('nav.distiller a:first').each(function(){
+        $('fieldset.' + this.className).show();
+        $(this).addClass('selected');
+      });
+      
+      // If the output format is rdfa, re-write the result text area
+      // as an iFrame and add results
+      $('div.results textarea.rdfa').each(function() {
+        var content = $(this).val();
+        $(this).after($('<iframe width="100%"/>'));
+        setTimeout(function() {
+          var iframe = $('div.results iframe')[0];
+          var iframe_doc = iframe.contentWindow.document;
+          iframe_doc.open(); iframe_doc.close(); // must open and close document object to start using it!
+          iframe_doc.write(content);
+          setTimeout(function() {
+            var innerDoc = (iframe.contentDocument) ? iframe.contentDocument : iframe.contentWindow.document;
+            var height = innerDoc.body.offsetHeight;
+            if (height === null && iframe.Document && iframe.Document.body.scrollHeight) {
+              height = iframe.Document.body.scrollHeight;
+            }
+            $(iframe).attr('height', height);
+          }, 10);
+        }, 1);
+      }).hide();
+    
+    });
+    
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="main">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/distiller">Distiller</a></li>
+          <li><a href="/sparql">SPARQL endpoint</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/doap">Project Descriptions</a></li>
+          <li><a target="_blank" href="/yard/index.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>RDF Distiller</h1>
+    <p>
+      RDF.rb is a <span property="doap:programming-language">Ruby</span> Gem
+      implementing RDF graphs, readers and writers to help integrate semantic technologies
+      into Ruby projects.
+    </p>
+    <p>
+      The distiller transforms data between different RDF formats.
+      The <a href="#distiller">form below</a> can be used to start the service installed at this site.
+    </p>
+    <nav class='distiller'>
+      <ul>
+        <li>
+          <a class='url' href='#url'>
+            From URL
+          </a>
+        </li>
+        <li>
+          <a class='input' href='#input'>
+            From Form Input
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <form action='/distiller' enctype='multipart/form-data' method='post'>
+      <fieldset class='url upload input'>
+        <legend>
+          Distill RDF Information
+        </legend>
+        <fieldset class='url upload input'>
+          <label for='uri'>
+            URI
+          </label>
+          <input id='uri' name='uri' size='80' type='text'>
+        </fieldset>
+        <fieldset class='url upload input'>
+          <legend>
+            Options
+          </legend>
+          <p>
+            <label for='in_fmt'>
+              Input Format:
+            </label>
+            <select id='in_fmt' name='in_fmt'>
+              <option value='content'>
+                Content Detect
+              </option>
+              <option value='json'>json</option>
+              <option value='jsonld'>jsonld</option>
+              <option value='microdata'>microdata</option>
+              <option value='n3'>n3</option>
+              <option value='nquads'>nquads</option>
+              <option value='ntriples'>ntriples</option>
+              <option value='rdfa'>rdfa</option>
+              <option value='rdfxml'>rdfxml</option>
+              <option value='trig'>trig</option>
+              <option value='trix'>trix</option>
+              <option value='turtle'>turtle</option>
+            </select>
+            <label for='fmt'>
+              Output Format:
+            </label>
+            <select id='in_fmt' name='fmt'>
+              <option value='json'>json</option>
+              <option value='jsonld'>jsonld</option>
+              <option value='microdata'>microdata</option>
+              <option value='n3'>n3</option>
+              <option value='nquads'>nquads</option>
+              <option value='ntriples'>ntriples</option>
+              <option value='rdfa'>rdfa</option>
+              <option value='rdfxml'>rdfxml</option>
+              <option value='trig'>trig</option>
+              <option value='trix'>trix</option>
+              <option selected='selected' value='turtle'>turtle</option>
+            </select>
+          </p>
+          <p>
+            <label for='debug'>
+              Show Parser debug information:
+            </label>
+            <input id='debug' name='debug' type='checkbox' value='true'>
+            <br>
+            <label for='validate'>
+              Validate Input:
+            </label>
+            <input id='validate' name='validate' type='checkbox' value>
+            <br>
+            <label for='vocab_expnsion'>
+              Expand graph (RDFa only):
+            </label>
+            <input id='vocab_expansion' name='vocab_expansion' type='checkbox' value>
+            <br>
+            <label for='rdfagraph'>
+              Output Graph (RDFa only):
+            </label>
+            <select id='rdfagraph' name='rdfagraph'>
+              <option value='output'>output</option>
+              <option value='processor'>processor</option>
+              <option value='output,processor'>output,processor</option>
+            </select>
+            <br>
+            <label for='raw'>
+              Raw Output:
+            </label>
+            <input id='raw' name='raw' type='checkbox' value>
+          </p>
+        </fieldset>
+        <fieldset class='input'>
+          <legend>
+            Markup
+          </legend>
+          <textarea class='input' cols='128' id='content' name='content' rows='15'></textarea>
+        </fieldset>
+        <input name='commit' type='submit' value='Submit'>
+      </fieldset>
+    </form>
+    <div class='results'>
+      <h2>
+        Result
+      </h2>
+      <p></p>
+      Note, to see result directly, such as formatted HTML for RDFa output, choose the 'Raw Output' option above.
+      <textarea class='turtle' cols='128' rows='20'></textarea>
+    </div>
+    <div>
+      <h2>
+        Alternative access to the Distiller
+      </h2>
+      <p>
+        The distiller URI may be used directly with an HTML GET by passing the source URI and other options as parameters:
+      </p>
+      <pre class='alt_access'><a href='http://rdf.greggkellogg.net/distiller?format=turtle&amp;rdfagraph=&amp;uri=http://www.example.com/' target='_blank'>http://rdf.greggkellogg.net/distiller?format=turtle&amp;rdfagraph=&amp;uri=http://www.example.com/</a></pre>
+    </div>
+    <footer>
+      This is version 1.1.5.2 of the RDF Distiller developed and hosted by <a target="_blank" href="http://greggkellogg.net/">Kellogg Associates</a>.
+      Please consider us when looking for Ruby Linked Data solutions.
+    </footer>
+  </body>
+</html>

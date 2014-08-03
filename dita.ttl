@@ -12,10 +12,8 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 
 
-
-
-#Author: Colin Maudry, DITA implementer and Product data analyst at NXP Semiconductors, Eindhoven.
-#Contact: colin.maudry@nxp.com
+#Author: Colin Maudry
+#Contact: colin@maudry.com
 #The purpose of this vocabulary is to describe information objects that are represented as DITA XML.
 #The vocabulary that describes DITA XML data objects can be found at http://purl.org/dita/ns#. 
 #This ontology uses the concept of information object as described in the Nepomuk Information Elements ontology (http://www.semanticdesktop.org/ontologies/nie/). 
@@ -29,16 +27,18 @@
 	<http://purl.org/dita/ns#>
 	a owl:Ontology ;
 	dcterms:title "DITA RDF ontology" ;
-	dcterms:creator <http://colin.maudry/rdf/colin-maudry#me>,
-		[ foaf:name "Colin Maudry" ] ;
+	dcterms:creator <http://colin.maudry/rdf/colin-maudry#me> ;
 	dcterms:created "2013-01-04"^^xsd:date ;
-	dcterms:modified "2014-07-30"^^xsd:date ;
-	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the CC BY-SA 3.0 license." ;
-	cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+	dcterms:modified "2014-08-03"^^xsd:date ;
+	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the Unlicense (public domain)." ;
+	cc:license <http://unlicense.org> ;
 	foaf:depiction <http://bit.ly/DitaRdfLucidChart> ;
 	vann:preferredNamespaceUri "http://purl.org/dita/ns#";
     vann:preferredNamespacePrefix "dita";
 	rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html> .
+
+	<http://colin.maudry/rdf/colin-maudry#me> foaf:name "Colin Maudry" ;
+		foaf:mbox <mailto:colin@maudry.com> .
 	
 	#Classes
 		

@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:frbr="http://purl.org/vocab/frbr/core#"
+   xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+   xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="http://dydra.com/">
-  <ns1:Ontology xmlns:ns1="http://www.w3.org/2002/07/owl#" rdf:about="http://purl.org/dita/ns#">
-    <ns2:license xmlns:ns2="http://creativecommons.org/ns#" rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
-    <ns3:created xmlns:ns3="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-04</ns3:created>
-    <ns4:creator xmlns:ns4="http://purl.org/dc/terms/" rdf:resource="http://colin.maudry/rdf/colin-maudry#me"/>
-    <ns5:creator xmlns:ns5="http://purl.org/dc/terms/">
-      <rdf:Description>
-        <ns6:name xmlns:ns6="http://xmlns.com/foaf/0.1/">Colin Maudry</ns6:name>
-      </rdf:Description>
-    </ns5:creator>
-    <ns7:description xmlns:ns7="http://purl.org/dc/terms/">The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the CC BY-SA 3.0 license.</ns7:description>
-    <ns8:modified xmlns:ns8="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-27</ns8:modified>
-    <ns9:title xmlns:ns9="http://purl.org/dc/terms/">DITA RDF ontology</ns9:title>
-    <ns10:preferredNamespacePrefix xmlns:ns10="http://purl.org/vocab/vann/">dita</ns10:preferredNamespacePrefix>
-    <ns11:preferredNamespaceUri xmlns:ns11="http://purl.org/vocab/vann/">http://purl.org/dita/ns#</ns11:preferredNamespaceUri>
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns="http://purl.org/dita/ns#" xml:base="http://triplr.org/">
+  <rdf:Description rdf:about="http://colin.maudry/rdf/colin-maudry#me">
+    <foaf:mbox rdf:resource="mailto:colin@maudry.com"/>
+    <foaf:name>Colin Maudry</foaf:name>
+  </rdf:Description>
+  <owl:Ontology rdf:about="http://purl.org/dita/ns#">
+    <cc:license rdf:resource="http://unlicense.org"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-04</dcterms:created>
+    <dcterms:creator rdf:resource="http://colin.maudry/rdf/colin-maudry#me"/>
+    <dcterms:description>The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the Unlicense (public domain).</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-03</dcterms:modified>
+    <dcterms:title>DITA RDF ontology</dcterms:title>
+    <vann:preferredNamespacePrefix>dita</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://purl.org/dita/ns#</vann:preferredNamespaceUri>
     <rdfs:seeAlso rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html"/>
-    <ns12:depiction xmlns:ns12="http://xmlns.com/foaf/0.1/" rdf:resource="http://bit.ly/DitaRdfLucidChart"/>
-  </ns1:Ontology>
+    <foaf:depiction rdf:resource="http://bit.ly/DitaRdfLucidChart"/>
+  </owl:Ontology>
   <rdf:Description rdf:about="http://purl.org/dita/ns#Bookmap">
     <rdfs:comment xml:lang="en-US">The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.</rdfs:comment>
     <rdfs:label>Bookmap</rdfs:label>
@@ -254,3 +262,9 @@
     <rdfs:seeAlso rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"/>
   </rdf:Property>
 </rdf:RDF>
+<!--
+Made by Triplr http://triplr.org/ by Dave Beckett, http://www.dajobe.org/
+from http://colin.maudry.com/ontologies/dita.ttl in format turtle to rdfxml-abbrev
+using Redland librdf 1.0.16, Rasqal 0.9.30 and Raptor 2.0.9 from http://librdf.org/
+This document is http://triplr.org/rdf/colin.maudry.com/ontologies/dita.ttl
+-->
