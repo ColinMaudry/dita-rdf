@@ -8,7 +8,7 @@ See the useful links below if you want to know more about the Semantic Web.
 ## Status
 
  * The ontology is already available as a Turtle file, [dita.ttl](https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl). It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form (to be improved!), and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
- * A DITA Open toolkit plugin is available [here](https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip) (documentation [here](./dita2rdf)) to enable the extraction of RDF triples from DITA content. The following metadata is extracted (including specializations) for maps and topics:
+ * A DITA Open toolkit plugin is available [here](https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip) (documentation [here](./dita2rdf)) to enable the extraction of RDF triples from DITA content ([RDF output example](http://colin.maudry.com/rdf/userguide.rdf)). The following metadata is extracted (including specializations) for maps and topics:
 	- @id
 	- title
 	- language
