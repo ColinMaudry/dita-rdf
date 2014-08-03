@@ -100,9 +100,6 @@
 		<xsl:variable name="firstCharRemoved" select="substring($class,2)"/>
 		<xsl:for-each select="tokenize(normalize-space($firstCharRemoved),' ')">
 			<xsl:variable name="domainId" select="substring-before(.,'/')"/>
-			<xsl:message>
-				<xsl:value-of select="$domainId"/>
-			</xsl:message>
 			<xsl:variable name="classBaseUri" select="$config/config/domains/domain[@domainId=$domainId]/@baseUri"/>
 			<xsl:variable name="elementName" select="substring-after(.,'/')"/>
 			<xsl:variable name="className" select="concat(upper-case(substring($elementName, 1,1)),
@@ -127,7 +124,6 @@
 	</doc:doc>
 	<xsl:template match="@ohref[../@format='dita' or ../@format='ditamap' or contains(.,'.dita')]">
 		<xsl:variable name="topicId" select="../@id"/>
-		<xsl:message>Href template</xsl:message>
 		<dita:href>
 			<xsl:apply-templates select="/*//*[@id = $topicId][contains(@class,' map/map ') or contains(@class,' topic/topic ')]"/>
 		</dita:href>

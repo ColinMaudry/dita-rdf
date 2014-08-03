@@ -68,14 +68,13 @@
 		<xsl:param name="mapUri" tunnel="yes"/>
 		<dita:referenceObject>
 			<rdf:Description rdf:about="{colin:getReferenceObjectUri($mapUri,@xtrc)}">
-				<xsl:message>dita:Topicref</xsl:message>
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
 				<xsl:apply-templates select="@*"/>
-				<xsl:apply-templates/>
 			</rdf:Description>
 		</dita:referenceObject>
+		<xsl:apply-templates/>
 	</xsl:template>
 	
 	<doc:doc>
