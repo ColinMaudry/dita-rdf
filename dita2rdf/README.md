@@ -7,7 +7,7 @@ Thanks for giving a spin to the dita2rdf plugin! Please report bugs and question
 
 ###Installation
 
-1. Extract `/dita2rdf/dita2rdf-ditaot-plugin.zip to [DITA-OT]/plugins`, `[DITA-OT]` being the directory of your DITA open toolkit installation.
+1. Extract `/dita2rdf/dita2rdf-ditaot-plugin.zip` to `[DITA-OT]/plugins`, `[DITA-OT]` being the directory of your DITA open toolkit installation.
 2. Run `[DITA-OT]/startcmd.bat` (or `[DITA-OT]/startcmd.bat` if you're under a Linux operating system)
 3. Run the command `ant -f integrator.xml strict` at the root of your DITA opent toolkit installation.
 
