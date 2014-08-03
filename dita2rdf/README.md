@@ -8,7 +8,7 @@ Thanks for giving a spin to the dita2rdf plugin! Please report bugs and question
 ###Installation
 
 1. Extract `/dita2rdf/dita2rdf-ditaot-plugin.zip` to `[DITA-OT]/plugins`, `[DITA-OT]` being the directory of your DITA open toolkit installation.
-2. Run `[DITA-OT]/startcmd.bat` (or `[DITA-OT]/startcmd.bat` if you're under a Linux operating system)
+2. Run `[DITA-OT]/startcmd.bat` (or `[DITA-OT]/startcmd.sh` if you run a Linux operating system)
 3. Run the command `ant -f integrator.xml strict` at the root of your DITA opent toolkit installation.
 
 The plugin is installed and the new `rdf` transtype is available.
@@ -25,6 +25,7 @@ The plugin is installed and the new `rdf` transtype is available.
 ###Test
 
 1. In `[DITA-OT]`, run `ant -Dargs.input=docsrc/userguide.ditamap -Dtranstype=rdf`
+2. Report issues and comments [here](https://github.com/ColinMaudry/dita-rdf/issues)
 
 The DITA-OT extracts the metadata of the DITA source files of the DITA-OT user guide. When finished, the resulting `userguide.rdf` is available in `[DITA-OT]/out`.
 
