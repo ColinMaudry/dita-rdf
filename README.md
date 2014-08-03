@@ -29,16 +29,16 @@ The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License v
 
 ## Contact
 
-* Twitter: [@ColinMaudry](https://www.twitter.com/ColinMaudry)
-* Email: colin@zebrana.net
+* Twitter: [@CMaudry](https://www.twitter.com/ColinMaudry)
+* Email: colin@maudry.com
 
-# Objective
+## Objective
 
 This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the Semantic Web of data.
 
 [This poster](http://bit.ly/DitaRdfPoster) illustrates the objective of the project. I presented it during the 10th Summer School on Ontology Engineering and the Semantic Web ([SSSW 2013](http://sssw.org/2013/)).
 
-# Scope
+## Scope
 
 This ontology does not aim at completeness (the whole DITA 1.2 language specification) but at covering the metadata that describes DITA content.
 
@@ -53,7 +53,7 @@ The scope of this ontology does not include the elements and attributes that bea
 * lists
 * sections
 
-Also, it does not include (yet) the elements that bear semantics but that my company doesn�t use. I will add them, but you can ping me if you would like to see them added (not exhaustive):
+Also, it does not include (yet) the elements that bear semantics but that my company doesn' use. I will add them, but you can ping me if you would like to see them added (not exhaustive):
 
 * metadata specific to DITA specializations (learning, machinery, semiconductors, etc.)
 * the programming, indexing, software, utilities and UI domains (will add them as separate modules)
@@ -66,7 +66,7 @@ I have chosen to use the Nepomuk ontologies [NIE](http://www.semanticdesktop.org
 * the file as data on a file system, that has a path and can be moved or renamed
 * the information contained in this file that results from its interpretation (by an XML editor or a PDF viewer).
 
-For instance, let�s consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.
+For instance, let's consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic remains untouched.
 
 ## Background
 
