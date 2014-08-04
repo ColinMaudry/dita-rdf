@@ -34,7 +34,7 @@
 		standalone="yes"/>
 
 	<doc:doc>
-		<doc:desc>Merged maps and topics (output of topicmerge.xsl)</doc:desc>
+		<doc:desc>Temporary maps and topics (output of copy-files)</doc:desc>
 	</doc:doc>
 	<xsl:template match="/">
 		<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dita="http://purl.org/dita/ns#"
@@ -46,6 +46,9 @@
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 			<xsl:apply-templates/>
 		</rdf:RDF>
+	</xsl:template>
+	<xsl:template match="/" mode="not-root-document">
+			<xsl:apply-templates/>
 	</xsl:template>
 
 	<doc:doc>
@@ -99,10 +102,7 @@
 		<xsl:param as="xs:string" name="class"/>
 		<xsl:variable name="firstCharRemoved" select="substring($class,2)"/>
 		<xsl:for-each select="tokenize(normalize-space($firstCharRemoved),' ')">
-			<xsl:variable name="domainId" select="substring-after(.,'/')"/>
-			<xsl:message>
-				<xsl:value-of select="$domainId"/>
-			</xsl:message>
+			<xsl:variable name="domainId" select="substring-before(.,'/')"/>
 			<xsl:variable name="classBaseUri" select="$config/config/domains/domain[@domainId=$domainId]/@baseUri"/>
 			<xsl:variable name="elementName" select="substring-after(.,'/')"/>
 			<xsl:variable name="className" select="concat(upper-case(substring($elementName, 1,1)),
@@ -122,20 +122,30 @@
 			<xsl:apply-templates/>
 		</dita:author>
 	</xsl:template>
-	<doc:doc>
-		<doc:desc>Template for @href that have a DITA file as target. Target metadata is retrieved.</doc:desc>
-	</doc:doc>
-	<xsl:template match="@ohref[../@format='dita' or ../@format='ditamap' or contains(.,'.dita')]">
-		<xsl:variable name="topicId" select="../@id"/>
-		<xsl:message>Href template</xsl:message>
+	<xsl:template match="@keyref">
+		
+	</xsl:template>
+	<xsl:template match="@href[../@format and not(../@format['dita' or 'ditamap'])]">
+		<dita:href rdf:resource="{.}"/>
+	</xsl:template>
+	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format['dita' or
+		'ditamap']]">
+		<!--<xsl:variable name="fileUri" select="substring-before(.,'#')"/>-->
 		<dita:href>
-			<xsl:apply-templates select="/*//*[@id = $topicId][contains(@class,' map/map ') or contains(@class,' topic/topic ')]"/>
+			<xsl:apply-templates select="document(., /)/*"/>
 		</dita:href>
 	</xsl:template>
-	<doc:doc>
-		<doc:desc>Template for @href that have a non-DITA target. Target metadata is not retrieved.</doc:desc>
-	</doc:doc>
-	<xsl:template match="@ohref">
-		<dita:href rdf:resource="{.}"/>
+	<xsl:template match="@href[contains(.,'.xml') and not(../@format)]">
+		<xsl:choose>
+			<xsl:when test="document(., /)/*[@class][@domains]">
+				<!-- Looks like DITA... -->
+				<dita:href>
+					<xsl:apply-templates select="document(., /)/*"/>
+				</dita:href>
+			</xsl:when>
+			<xsl:otherwise>
+				<dita:href rdf:resource="{.}"/>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<doctypes>
 		<!-- 
 		This is the base URI that will be use to define the URI of the extracted resources.
 		For instance, if your company is NXP Semiconductors:
@@ -20,12 +19,15 @@
 		<resourcesBaseUri uri="http://data.example.com/resources/"/>
 		
 		<!-- Standard doctypes -->
-		<doctype ditaClass="topic/topic" classUri="http://purl.org/dita/ns#Topic"/>
-		<doctype ditaClass="map/map" classUri="http://purl.org/dita/ns#Map"/>
-		<doctype ditaClass="bookmap/bookmap" classUri="http://purl.org/dita/ns#Bookmap"/>
-		<doctype ditaClass="task/task" classUri="http://purl.org/dita/ns#Task"/>
-		<doctype ditaClass="concept/concept" classUri="http://purl.org/dita/ns#Concept"/>
-		<doctype ditaClass="reference/reference" classUri="http://purl.org/dita/ns#Reference"/>
+	<domains>
+		<domain domainId="topic" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="mapgroup-d" baseUri="http://purl.org/dita/ns#"/>
+
 		<!--  
 		Add the class URI mappings for your shell specializations (document types) below.
 		In RDF, the good practice consists in capitalizing the first letter of the fragment.
@@ -41,6 +43,6 @@
 		
 		
 		
-	</doctypes>
+	</domains>
 </config>
 

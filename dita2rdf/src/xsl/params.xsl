@@ -25,9 +25,6 @@
 	<xsl:param name="config" select="document($configpath)"></xsl:param>
 	
 	<!-- Located here to have lower precedence over the other imported templates -->
-	<xsl:template match=" * | @* "/>
-	<xsl:template match="text()">
-		<xsl:value-of select="."/>
-	</xsl:template>
+	<xsl:template match=" * | @* | node() | processing-instruction()"/>
 
 </xsl:stylesheet>
