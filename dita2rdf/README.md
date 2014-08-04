@@ -1,6 +1,14 @@
 
 Thanks for giving a spin to the dita2rdf plugin! Please report bugs and questions to https://github.com/ColinMaudry/dita-rdf/issues.
 
+###What does it do?
+
+The dita2rdf DITA Open Toolkit plugin (aka the dita2rdf plugin) adds a new transtype to the DITA OT: rdf.
+
+In short, running the rdf transtype on a DITA map or topic runs an extraction of the metadata of the content and stores in RDF/XML format, a serialization of RDF. The transformation not only extracts the metadata of the input file, it also follows the references (@href and resolved @keyref) to cover the whole documentation set.
+
+"Why on Earth would I want to do that?". Good question. I will give you great reasons when I add an extra step to the transformation: the upload of the result to a triple store, an RDF data base. I might also speak about it during the next DITA Europe conference if the committee considers these great reasons great enough.
+
 ###Requirements
 
 * [DITA open toolkit](http://dita-ot.github.io/) 1.8.x (version 1.5+ could work but not tested)
@@ -50,6 +58,7 @@ In order to keep the plugin light-weight, with good performance and low code mai
 To avoid issues, here are a couple of things you can do to have good metadata output: 
 - make sure all the maps and topics have an @id attribute in the root element, and that it is unique.
 - make sure all the maps and topics have a @xml:lang attribute in the root element that respects [the recommendations of the W3C](http://www.w3.org/International/articles/language-tags/). Due to certain spelling and cultural variants (e.g. date formats), distinguishing Bristish English (en-UK) and American English (en-US) is recommended.
+- make sure your topicref have a @format attribute with [the right value](http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html). It can go well without, looking for '.dita' in the @href value, but some URL might abuse this rule (eg. @href="http://blog.dita.xml.org").
 
 ###Under the hood
 
