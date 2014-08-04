@@ -5,7 +5,7 @@ Thanks for giving a spin to the dita2rdf plugin! Please report bugs and question
 
 The dita2rdf DITA Open Toolkit plugin (aka the dita2rdf plugin) adds a new transtype to the DITA OT: rdf.
 
-In short, running the rdf transtype on a DITA map or topic runs an extraction of the metadata of the content and stores it in RDF/XML format, a serialization of RDF. The transformation not only extracts the metadata of the input file, it also follows the references (@href and resolved @keyref) to cover the whole documentation set.
+In short, running the rdf transtype on a DITA map or topic runs an extraction of the metadata of the content and stores in RDF/XML format, a serialization of RDF. The transformation not only extracts the metadata of the input file, it also follows the references (@href and resolved @keyref) to cover the whole documentation set.
 
 "Why on Earth would I want to do that?". Good question. I will give you great reasons when I add an extra step to the transformation: the upload of the result to a triple store, an RDF data base. I might also speak about it during the next DITA Europe conference if the committee considers these great reasons great enough.
 
