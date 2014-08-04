@@ -55,15 +55,11 @@ To avoid issues, here are a couple of things you can do to have good metadata ou
 
 Here is the part dedicated to satisfy my fellow DITA hackers.
 
-The DITA RDF plugin was developped reusing most of the structure of the pdf2 plugin. The reason is simple: the pdf2 plugin is apparently the one that is the most taken care of by the community. I see it as a reference implementation.
+The DITA RDF plugin was developped reusing the methodology of the pdf2 plugin for the build and the customization, as I thought many DITA-OT users would feel more comfortable with a familiar structure.
 
-Furthermore, at least for the short term, its process is very close to what I wanted to implement:
+However, the dita2rdf plugin differs on a couple of points:
 
-- Single file output (pdf > rdf)
-- Merging all the documentation set in one file (ditamap_MERGED.xml)
-
-That was an easy way to deliver something stable with little efforts. Except some minor tweaking in build.xml, only the XSLT part is different from the pdf2 plugin.
-
-The main drawback is that most of the processing is useless for the intended purpose, thus performance is terrible.
+- The preprocess is 'specialized' to remove the steps that are not necessary for the purpose of this plugin. It also speeded up the processing. More details [here](https://github.com/ColinMaudry/dita-rdf/issues/14).
+- Though the original intent was to rely on the topicmerge to flatten the structure and have only file to process, it appeared too much information was left behind: mapref and @processing-role="resource-only". Topicmerge was consequently also removed, and the parsing is done by following the @href to jump from file to file (the temp files, not the original ones).
 
 For the long term, I'll aim at using as much XSLT as possible to make the code more portable. Possibly with a compatibility starting with DITA OT 2.0.
