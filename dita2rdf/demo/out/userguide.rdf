@@ -1,0 +1,2446 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:dita="http://purl.org/dita/ns#"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:schema="http://schema.org/"
+         xmlns:colin="http://colin.maudry.com/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ot="http://www.idiominc.com/opentopic"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/">
+   <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5" xml:lang="en-us">
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+      <dita:id>d5e5</dita:id>
+      <dita:title xml:lang="en-us">DITA Open Toolkit 1.8.4</dita:title>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/keydef:1;5:48">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/en-us/d5e5/keys/testkey">
+                  <dita:href rdf:resource="C:/Users/colin/programs/DITA-OT1.8.4/docsrc/readme/ant.dita"/>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:1;6:67">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>keyrefs</dita:id>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:1;10:93">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.ant">
+                              <dita:href rdf:resource="http://ant.apache.org/"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:2;12:115">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.dita-ot.current-release">
+                              <dita:href rdf:resource="http://sourceforge.net/projects/dita-ot/files/DITA-OT%20Stable%20Release/DITA%20Open%20Toolkit%201.8/"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:3;14:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.fop">
+                              <dita:href rdf:resource="http://xmlgraphics.apache.org/fop/download.html"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:4;16:96">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.html-help-workshop">
+                              <dita:href rdf:resource="http://msdn.microsoft.com/en-us/library/windows/desktop/ms669985%28v=vs.85%29.aspx"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:5;18:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.icu4j">
+                              <dita:href rdf:resource="http://www.icu-project.org/download/"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:6;20:80">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.oracle-jdk">
+                              <dita:href rdf:resource="http://www.oracle.com/technetwork/java/javase/downloads/index.html"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:7;21:102">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.saxon">
+                              <dita:href rdf:resource="http://saxon.sourceforge.net/"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:8;23:58">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/download.xalan">
+                              <dita:href rdf:resource="http://xml.apache.org/xalan-j/downloads.html"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:9;25:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:10;33:34">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:11;42:35">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:12;50:39">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:13;58:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:14;66:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:15;74:36">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:16;82:42">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:17;90:38">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:18;98:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:19;106:35">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:20;114:40">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:21;122:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:22;132:99">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/contributor-meeting-minutes">
+                              <dita:href rdf:resource="https://github.com/dita-ot/dita-ot/wiki/Meeting-minutes"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:23;139:19">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/dita-ot-developer">
+                              <dita:href rdf:resource="https://lists.sourceforge.net/lists/listinfo/dita-ot-developer"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:24;145:19">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/dita-ot-issues">
+                              <dita:href rdf:resource="https://github.com/dita-ot/dita-ot/issues"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:25;151:19">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/github-help">
+                              <dita:href rdf:resource="https://help.github.com/articles/set-up-git"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:26;156:106">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/github-project">
+                              <dita:href rdf:resource="https://github.com/dita-ot/dita-ot"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:27;162:19">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/license-Apache2.0">
+                              <dita:href rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/keyrefs/keydef:28;168:114">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/keyrefs/keys/license-CPL">
+                              <dita:href rdf:resource="http://www.opensource.org/licenses/cpl1.0.php"/>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/topicref:1;7:44">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d8e5" xml:lang="en-us">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <dita:id>d8e5</dita:id>
+                  <dita:title xml:lang="en-us">DITA Open Toolkit 1.8.4</dita:title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:2;8:38">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d9e6" xml:lang="en-us">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>d9e6</dita:id>
+                  <dita:title xml:lang="en-us">Getting started</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d9e6/topicref:1;9:89">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/d10e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d10e5</dita:id>
+                              <dita:title xml:lang="en-us">Getting Started with the DITA Open Toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d9e6/topicref:2;10:106">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d11e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d11e5</dita:id>
+                              <dita:title xml:lang="en-us">Installing the full-easy-install package</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d9e6/topicref:3;11:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d12e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d12e5</dita:id>
+                              <dita:title xml:lang="en-us">Running the demo build</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d9e6/topicref:4;12:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d13e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d13e5</dita:id>
+                              <dita:title xml:lang="en-us">Building your own content using the demo build</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:3;9:34">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme"
+                                xml:lang="en-us">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>mainDITAreadme</dita:id>
+                  <dita:title xml:lang="en-us">User Guide</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/topicref:1;7:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d15e6"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d15e6</dita:id>
+                              <dita:title xml:lang="en-us">DITA Open Toolkit User Guide</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/mapref:1;8:58">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/map/d16e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <dita:id>d16e5</dita:id>
+                              <dita:title>Overview of the DITA-OT</dita:title>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d16e5/topicref:1;5:89">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d17e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d17e5</dita:id>
+                                          <dita:title>Overview of the DITA Open Toolkit</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d16e5/topicref:2;6:55">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en/d18e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d18e5</dita:id>
+                                          <dita:title xml:lang="en">DITA Open Toolkit Release 1.8</dita:title>
+                                          <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d18e12"
+                                                           xml:lang="en">
+                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                             <dita:id>d18e12</dita:id>
+                                             <dita:title xml:lang="en-us">General Enhancements and Changes</dita:title>
+                                          </rdf:Description>
+                                          <rdf:Description rdf:about="http://data.example.com/resources/reference/d18e42" xml:lang="en">
+                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                             <dita:id>d18e42</dita:id>
+                                             <dita:title>Migration from previous releases</dita:title>
+                                          </rdf:Description>
+                                          <rdf:Description rdf:about="http://data.example.com/resources/reference/d18e287" xml:lang="en">
+                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                             <dita:id>d18e287</dita:id>
+                                             <dita:title>Issues</dita:title>
+                                          </rdf:Description>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d16e5/topicref:3;11:50">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d19e8">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d19e8</dita:id>
+                                          <dita:title xml:lang="en-us">DITA 1.2 Specification Support</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d16e5/topicref:4;12:37">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d20e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <dita:id>d20e5</dita:id>
+                                          <dita:title xml:lang="en-us">Tested platforms and tools</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/mapref:2;9:60">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <dita:id>d21e5</dita:id>
+                              <dita:title>Installing</dita:title>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5/topicref:1;5:41">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/en/d22e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d22e5</dita:id>
+                                          <dita:title xml:lang="en">Installing the DITA Open Toolkit</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5/topicref:2;6:48">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d23e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d23e5</dita:id>
+                                          <dita:title>Distribution packages</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5/topicref:3;7:81">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d24e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d24e5</dita:id>
+                                          <dita:title>Prerequisite software</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5/topicref:4;8:91">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d11e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d11e5</dita:id>
+                                          <dita:title xml:lang="en-us">Installing the full-easy-install package</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5/topicref:5;10:52">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d25e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d25e5</dita:id>
+                                          <dita:title>Installing the minimal or standard package on Linux or Mac OSX</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d21e5/topicref:6;12:54">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d26e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d26e5</dita:id>
+                                          <dita:title>Installing the minimal or standard package on Windows</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/mapref:3;10:60">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <dita:id>d27e5</dita:id>
+                              <dita:title>Publishing</dita:title>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:1;5:86">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d28e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d28e5</dita:id>
+                                          <dita:title>Publishing DITA content</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:2;6:45">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d29e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d29e5</dita:id>
+                                          <dita:title xml:lang="en-us">DITA-OT transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:3;7:40">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d30e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d30e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to Docbook</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:4;8:47">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d31e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d31e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to Eclipse Content</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:5;9:44">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d32e7">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d32e7</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to Eclipse help</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:6;10:60">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d33e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d33e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to HTML Help (CHM)</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:7;11:66">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d34e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d34e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to legacy PDF transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:8;12:36">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d35e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d35e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to Open Document Type</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:9;13:36">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d36e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d36e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to PDF (PDF2)</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:10;14:36">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d37e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d37e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to Rich Text Format </dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:11;15:38">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d38e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d38e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to TocJS</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:12;16:38">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d39e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d39e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to Troff</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:13;17:38">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d40e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d40e6</dita:id>
+                                          <dita:title xml:lang="en-us">DITA to XHTML</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:14;19:69">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d41e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d41e5</dita:id>
+                                          <dita:title xml:lang="en-us">Publishing DITA content from Ant</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:15;20:55">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d42e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d42e5</dita:id>
+                                          <dita:title>Ant</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:16;21:75">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/en/d43e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d43e5</dita:id>
+                                          <dita:title xml:lang="en">Building output using Ant</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:17;22:96">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d44e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d44e5</dita:id>
+                                          <dita:title>Creating an Ant build script</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:18;24:91">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d45e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d45e5</dita:id>
+                                          <dita:title xml:lang="en-us">Publishing DITA content from the command-line tool</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:19;25:74">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d46e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d46e5</dita:id>
+                                          <dita:title>Command-line tool</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d27e5/topicref:20;27:61">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d47e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d47e5</dita:id>
+                                          <dita:title>Building output using the command-line tool</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/mapref:4;11:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/map/d48e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <dita:id>d48e5</dita:id>
+                              <dita:title>Globalizing DITA content</dita:title>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d48e5/topicref:1;5:43">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/d49e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d49e5</dita:id>
+                                          <dita:title xml:lang="en-us">Globalizing DITA content</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d48e5/topicref:2;6:61">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d50e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d50e5</dita:id>
+                                          <dita:title>Globalization support offered by the DITA-OT</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d48e5/topicref:3;7:51">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d51e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d51e6</dita:id>
+                                          <dita:title xml:lang="en-us">Supported languages: HTML-based transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d48e5/topicref:4;8:49">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d52e6">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d52e6</dita:id>
+                                          <dita:title xml:lang="en-us">Supported languages: PDF transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/mapref:5;12:65">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <dita:id>d53e5</dita:id>
+                              <dita:title>Troubleshooting</dita:title>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:1;5:49">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d54e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d54e5</dita:id>
+                                          <dita:title>Error messages and troubleshooting</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:2;6:38">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d55e7">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d55e7</dita:id>
+                                          <dita:title>Error messages</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:3;7:80">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d56e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d56e5</dita:id>
+                                          <dita:title xml:lang="en-us">DITA-OT error messages</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:4;9:46">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d57e7">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d57e7</dita:id>
+                                          <dita:title xml:lang="en-us">Other error messages</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:5;10:34">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d58e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d58e5</dita:id>
+                                          <dita:title xml:lang="en-us">Log files</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:6;12:58">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d59e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d59e5</dita:id>
+                                          <dita:title>Accessing help from the command-line tool</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:7;14:51">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d60e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d60e5</dita:id>
+                                          <dita:title>Determing the version of the DITA Open Toolkit</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:8;15:46">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d61e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d61e5</dita:id>
+                                          <dita:title>Enabling debug mode</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d53e5/topicref:9;16:45">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/task/d62e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <dita:id>d62e5</dita:id>
+                                          <dita:title>Increasing Java memory allocation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/topicref:2;13:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <dita:id>d63e5</dita:id>
+                              <dita:title>Reference</dita:title>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:1;5:55">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d64e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d64e5</dita:id>
+                                          <dita:title>Reference</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:2;6:74">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d65e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d65e5</dita:id>
+                                          <dita:title xml:lang="en-us">Ant parameters</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:3;7:103">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d66e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d66e5</dita:id>
+                                          <dita:title>Ant parameters: All transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:4;8:101">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d67e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d67e5</dita:id>
+                                          <dita:title>Ant parameters: Common HTML-based transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:5;9:57">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/concept/d68e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <dita:id>d68e5</dita:id>
+                                          <dita:title>generate.outer.copy parameter</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:6;12:48">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d69e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d69e5</dita:id>
+                                          <dita:title>Ant parameters: Eclipse content transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:7;14:45">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d70e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d70e5</dita:id>
+                                          <dita:title>Ant parameters: Eclipse help transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:8;16:25">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d71e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d71e5</dita:id>
+                                          <dita:title>Ant parameters: HTML Help transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:9;17:101">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d72e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d72e5</dita:id>
+                                          <dita:title>Ant parameters: JavaHelp transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:10;19:43">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d73e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d73e5</dita:id>
+                                          <dita:title>Ant parameters: Legacy PDF transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:11;20:91">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d74e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d74e5</dita:id>
+                                          <dita:title>Ant parameters: ODT transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:12;21:65">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d75e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d75e5</dita:id>
+                                          <dita:title>Ant parameters: Other</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:13;22:93">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d76e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d76e5</dita:id>
+                                          <dita:title>Ant parameters: PDF transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:14;23:95">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d77e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d77e5</dita:id>
+                                          <dita:title>Ant parameters: XHTML transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:15;25:89">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d78e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d78e5</dita:id>
+                                          <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:16;26:93">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d79e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d79e5</dita:id>
+                                          <dita:title>Command-line tool parameters: All transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:17;28:44">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d80e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d80e5</dita:id>
+                                          <dita:title>Command-line tool parameters: All HTML-based transformations</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:18;29:100">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d81e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d81e5</dita:id>
+                                          <dita:title>Command-line tool parameters: Eclipse content transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:19;30:94">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d82e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d82e5</dita:id>
+                                          <dita:title>Command-line tool parameters: Eclipse help transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:20;32:25">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d83e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d83e5</dita:id>
+                                          <dita:title>Command-line tool parameters: HTML help transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:21;33:102">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d84e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d84e5</dita:id>
+                                          <dita:title>Command-line tool parameters: JavaHelp transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:22;34:92">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d85e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d85e5</dita:id>
+                                          <dita:title>Command-line tool parameters: ODT transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:23;35:91">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d86e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d86e5</dita:id>
+                                          <dita:title>Command-line tool parameters: PDF transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:24;36:95">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/d87e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d87e5</dita:id>
+                                          <dita:title>Command-line tool parameters: XHTML transformation</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                              <dita:referenceObject>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/d63e5/topicref:25;38:85">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                                    <dita:href>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/reference/en/d88e5">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <dita:id>d88e5</dita:id>
+                                          <dita:title xml:lang="en">lib/configuration.properties file</dita:title>
+                                       </rdf:Description>
+                                    </dita:href>
+                                 </rdf:Description>
+                              </dita:referenceObject>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:4;10:60">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5" xml:lang="en-us">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>d89e5</dita:id>
+                  <dita:title xml:lang="en-us">Developer's Reference</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:1;6:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/d90e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d90e5</dita:id>
+                              <dita:title xml:lang="en-us">DITA Open Toolkit Developer Reference</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:2;7:86">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d91e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d91e5</dita:id>
+                              <dita:title xml:lang="en-us">Architecture of the DITA Open Toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:3;8:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/d92e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d92e5</dita:id>
+                              <dita:title xml:lang="en-us">DITA-OT processing structure</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:4;9:58">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d93e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d93e5</dita:id>
+                              <dita:title xml:lang="en-us">DITA-OT processing modules</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:5;10:47">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d94e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d94e5</dita:id>
+                              <dita:title xml:lang="en-us">DITA-OT processing order</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:6;12:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d95e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d95e5</dita:id>
+                              <dita:title xml:lang="en-us">Pre-processing modules</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:7;13:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d96e6"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d96e6</dita:id>
+                              <dita:title xml:lang="en-us">Generate lists (gen-list)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:8;14:55">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d97e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d97e5</dita:id>
+                              <dita:title xml:lang="en-us">Debug and filter (debug-filter)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:9;15:53">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d98e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d98e5</dita:id>
+                              <dita:title xml:lang="en-us">Copy related files (copy-files)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:10;16:54">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d99e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d99e5</dita:id>
+                              <dita:title xml:lang="en-us">Conref push (conrefpush)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:11;17:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d100e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d100e5</dita:id>
+                              <dita:title xml:lang="en-us">Conref (conref)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:12;18:52">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d101e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d101e5</dita:id>
+                              <dita:title xml:lang="en-us">Move metadata (move-meta-entries)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:13;19:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d102e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d102e5</dita:id>
+                              <dita:title xml:lang="en-us">Resolve keyref (keyref)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:14;20:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d103e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d103e5</dita:id>
+                              <dita:title xml:lang="en-us">Resolve code references (codref)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:15;21:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d104e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d104e5</dita:id>
+                              <dita:title xml:lang="en-us">Resolve map references (mapref)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:16;22:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d105e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d105e5</dita:id>
+                              <dita:title xml:lang="en-us">Pull content into maps (mappull)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:17;23:49">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d106e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d106e5</dita:id>
+                              <dita:title xml:lang="en-us">Chunk topics (chunk)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:18;24:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d107e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d107e5</dita:id>
+                              <dita:title xml:lang="en-us">Map based linking (maplink and move-links)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:19;25:53">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d108e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d108e5</dita:id>
+                              <dita:title xml:lang="en-us">Pull content into topics (topicpull)</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:20;26:52">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d109e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d109e5</dita:id>
+                              <dita:title xml:lang="en-us">Flagging in the toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:21;28:49">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d110e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d110e5</dita:id>
+                              <dita:title xml:lang="en-us">XHTML processing modules</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:22;29:44">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/d111e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d111e5</dita:id>
+                              <dita:title xml:lang="en-us">Common XHTML processing</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:23;30:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d112e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d112e5</dita:id>
+                              <dita:title xml:lang="en-us">Default XHTML processing</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:24;31:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d113e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d113e5</dita:id>
+                              <dita:title xml:lang="en-us">Eclipse help processing</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:25;32:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d114e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d114e5</dita:id>
+                              <dita:title xml:lang="en-us">TocJS processing</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:26;33:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d115e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d115e5</dita:id>
+                              <dita:title xml:lang="en-us">HTML Help processing</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:27;34:46">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d116e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d116e5</dita:id>
+                              <dita:title xml:lang="en-us">JavaHelp processing</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:28;36:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d117e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d117e5</dita:id>
+                              <dita:title xml:lang="en-us">PDF processing modules</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:29;37:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/d118e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <dita:id>d118e5</dita:id>
+                              <dita:title xml:lang="en-us">Open Document Format processing modules</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:30;39:44">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d119e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d119e7</dita:id>
+                              <dita:title xml:lang="en-us">Extending the DITA Open Toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:31;40:49">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/en/d120e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d120e5</dita:id>
+                              <dita:title xml:lang="en">Installing plug-ins</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:32;41:47">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/en/d121e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d121e5</dita:id>
+                              <dita:title xml:lang="en">Removing plug-ins</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:33;42:67">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/d122e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d122e5</dita:id>
+                              <dita:title xml:lang="en-us">Rebuilding the DITA-OT documentation</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:34;44:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/d123e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d123e5</dita:id>
+                              <dita:title xml:lang="en-us">Configuring the DITA Open Toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:35;45:75">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/d124e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d124e5</dita:id>
+                              <dita:title xml:lang="en-us">plugin.properties file</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicset:1;47:57">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicset"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d125e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d125e7</dita:id>
+                              <dita:title xml:lang="en-us">Creating DITA-OT plug-ins</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:36;48:48">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d126e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d126e7</dita:id>
+                              <dita:title xml:lang="en-us">Plug-in configuration file</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:37;49:48">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d127e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d127e7</dita:id>
+                              <dita:title xml:lang="en-us">Extending the XML Catalog</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:38;50:47">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d128e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d128e7</dita:id>
+                              <dita:title xml:lang="en-us">Adding new targets to the Ant build process</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:39;51:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d129e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d129e7</dita:id>
+                              <dita:title xml:lang="en-us">Adding Ant targets to the pre-process pipeline</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:40;52:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d130e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d130e7</dita:id>
+                              <dita:title xml:lang="en-us">Integrating a new transform type</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:41;53:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d131e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d131e7</dita:id>
+                              <dita:title xml:lang="en-us">Override styles with XSLT</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:42;54:54">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d132e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d132e5</dita:id>
+                              <dita:title xml:lang="en-us">Modifying or adding generated text</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:43;55:48">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d133e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d133e7</dita:id>
+                              <dita:title xml:lang="en-us">Passing parameters to existing XSLT steps</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:44;56:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d134e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d134e5</dita:id>
+                              <dita:title xml:lang="en-us">Adding Java libraries to the classpath</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:45;57:46">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d135e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d135e7</dita:id>
+                              <dita:title xml:lang="en-us">Adding diagnostic messages</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:46;58:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d136e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d136e7</dita:id>
+                              <dita:title xml:lang="en-us">Managing plug-in dependencies</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:47;59:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d137e7"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d137e7</dita:id>
+                              <dita:title xml:lang="en-us">Version and support information</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:48;60:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d138e5"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d138e5</dita:id>
+                              <dita:title xml:lang="en-us">Creating a new plug-in extension point</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:49;61:44">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d139e8"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d139e8</dita:id>
+                              <dita:title xml:lang="en-us">Example plugin.xml file</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topichead:1;63:28">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topichead"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:50;67:59">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d140e6"
+                                            xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d140e6</dita:id>
+                              <dita:title xml:lang="en-us">XHTML migration for flagging updates in DITA-OT 1.7</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:51;69:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/task/en/d141e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <dita:id>d141e5</dita:id>
+                              <dita:title xml:lang="en">Customizing PDF output</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:52;70:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/d142e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d142e5</dita:id>
+                              <dita:title xml:lang="en-us">Internal Ant properties</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:53;71:70">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/d143e5" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d143e5</dita:id>
+                              <dita:title xml:lang="en-us">Implementation dependent features</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d89e5/topicref:54;72:51">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/d144e6" xml:lang="en-us">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d144e6</dita:id>
+                              <dita:title xml:lang="en-us">Extended functionality</dita:title>
+                              <rdf:Description rdf:about="http://data.example.com/resources/reference/d144e11"
+                                               xml:lang="en-us">
+                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                 <dita:id>d144e11</dita:id>
+                                 <dita:title xml:lang="en-us">Code reference processing</dita:title>
+                              </rdf:Description>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:5;11:69">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>d145e5</dita:id>
+                  <dita:title>Project Management Guidelines</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:1;5:78">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d146e6">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d146e6</dita:id>
+                              <dita:title xml:lang="en-us">DITA Open Toolkit Project Management Guidelines</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:2;6:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d147e6">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d147e6</dita:id>
+                              <dita:title xml:lang="en-us">Goals and objectives of the DITA Open Toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:3;7:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d148e6">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d148e6</dita:id>
+                              <dita:title xml:lang="en-us">DITA Open Toolkit development process</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:4;8:39">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d149e6">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d149e6</dita:id>
+                              <dita:title xml:lang="en-us">Project roles and responsibilities</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:5;9:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d150e7">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d150e7</dita:id>
+                              <dita:title xml:lang="en-us">DITA Open Toolkit release management</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:6;10:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d151e7">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d151e7</dita:id>
+                              <dita:title xml:lang="en-us">Feature requests and defect reports</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:7;12:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d152e8">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d152e8</dita:id>
+                              <dita:title xml:lang="en-us">How to participate in the DITA Open Toolkit</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:8;13:49">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d153e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d153e5</dita:id>
+                              <dita:title xml:lang="en-us">Due diligence for submission of bug fixes and patches from
+non-committers</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:9;14:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d154e6">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d154e6</dita:id>
+                              <dita:title xml:lang="en-us">DITA Open Toolkit Contribution Policy</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d145e5/topicref:10;15:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/d155e7">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <dita:id>d155e7</dita:id>
+                              <dita:title xml:lang="en-us">DITA-OT Contribution Questionnaire Form 1.2</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:6;12:59">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>d156e5</dita:id>
+                  <dita:title>DITA and DITA-OT resources</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5/topicref:1;5:98">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/d157e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d157e5</dita:id>
+                              <dita:title>DITA and DITA-OT resources</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5/topicref:2;7:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5/topicref:3;17:56">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5/topicref:4;26:64">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5/topicref:5;32:67">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/d161e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d161e5</dita:id>
+                              <dita:title>Web-based resources</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/d156e5/topicref:6;33:50">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/d162e5">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <dita:id>d162e5</dita:id>
+                              <dita:title xml:lang="en-us">developerWorks articles</dita:title>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:7;13:94">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#SubjectScheme"/>
+                  <dita:id>d163e5</dita:id>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/enumerationdef:1;4:19">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Enumerationdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:1;6:34">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:2;7:40">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:3;8:40">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:4;9:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/enumerationdef:2;11:19">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Enumerationdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:5;13:33">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:6;14:29">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:7;15:31">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/d163e5/subjectdef:8;16:33">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Subjectdef"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d5e5/mapref:8;14:68">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/reltable"
+                                xml:lang="en-us">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <dita:id>reltable</dita:id>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+   </rdf:Description>
+</rdf:RDF>
