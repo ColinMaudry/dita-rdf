@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- Copyright 2013, Colin Maudry
-	
- This file is part of the DITA RDF plugin for the DITA Open toolkit.
- 
-    The DITA RDF plugin is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-    
-    The DITA RDF plugin is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-    
-    You should have received a copy of the GNU General Public License
-    along with the DITA RDF plugin.  If not, see <http://www.gnu.org/licenses/>.
--->
 <xsl:stylesheet version="2.0" xmlns:colin="http://colin.maudry.com/" xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:dita="http://purl.org/dita/ns#" xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
