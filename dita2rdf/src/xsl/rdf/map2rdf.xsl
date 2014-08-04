@@ -81,10 +81,11 @@
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
-				<xsl:apply-templates select=".[@href]/@keys">
-					<xsl:with-param name="xtrf" select="@xtrf"/>
-				</xsl:apply-templates>
-				<xsl:apply-templates select=".[not(@keys)]/@href"/>
+				<xsl:apply-templates select=".[@href]/@keys"/>
+				<xsl:apply-templates select="@keyref"/>
+				<xsl:if test="not(@keys) and not(@keyref)">
+					<xsl:apply-templates select="@href[not('')]"/>
+				</xsl:if>
 				<!-- For now, only extract keys if they are references 
 							Only extract @href if no @keys-->
 			</rdf:Description>
@@ -93,8 +94,7 @@
 	</xsl:template>
 	<xsl:template match="@keys">
 		<xsl:param name="mapUri" tunnel="yes"/>
-		<xsl:param name="xtrf"/>
-		<xsl:variable name="base" select="translate($xtrf,'\','/')"/>
+		<xsl:variable name="base" select="translate(../@xtrf,'\','/')"/>
 		<xsl:variable name="relative" select="../@href"></xsl:variable>
 		<xsl:for-each select="tokenize(.,' ')">
 			<dita:key>
