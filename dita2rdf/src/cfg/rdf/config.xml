@@ -9,6 +9,7 @@
 		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="mapgroup-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="subjectScheme" baseUri="http://purl.org/dita/ns#"/>
 	</domains>
 </config>
 
