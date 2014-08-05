@@ -26,7 +26,10 @@ The plugin is installed and the new `rdf` transtype is available.
 2. In `/plugins/com.github.colinmaudry.dita2rdf/customization`, make a copy of `catalog.xml.orig`
 3. Rename the copy `catalog.xml`
 3. In `catalog.xml`, uncomment `<uri name="cfg:rdf/config.xml" uri="rdf/config.xml"/>`
-4. In `/plugins/com.github.colinmaudry.dita2rdf/customization/rdf/config.xml`, follow the instructions to edit the configuration
+4. Save
+4. In `/plugins/com.github.colinmaudry.dita2rdf/customization/rdf`, make a copy of `config.xml.orig`
+5. Rename the copy `config.xml`
+4. In `config.xml`, follow the instructions to edit the configuration
 5. Save
 
 ###Test
