@@ -18,7 +18,7 @@ See the useful links below if you want to know more about the Semantic Web.
 	- [rdf:type](http://www.w3.org/TR/rdf-schema/#ch_type), including super classes (e.g. dita:Map and dita:Bookmap for a bookmap)
  * The plugin will be adapted to be used in [Componize for Alfresco](http://www.componize.com)
  * A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata
- * I have set milestone with an extensive list of features [here](issues)
+ * I have set milestone with an extensive list of features [here](https://github.com/ColinMaudry/dita-rdf/issues)
 
 ## Useful links
 
