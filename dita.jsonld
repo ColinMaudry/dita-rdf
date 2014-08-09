@@ -21,7 +21,7 @@
       "foaf:name": "Colin Maudry"
     },
     {
-      "@id": "#",
+      "@id": "http://purl.org/dita/ns#",
       "@type": "owl:Ontology",
       "cc:license": {
         "@id": "http://unlicense.org"
@@ -33,7 +33,7 @@
       "dcterms:creator": {
         "@id": "http://colin.maudry/rdf/colin-maudry#me"
       },
-      "dcterms:description": "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the Unlicense (public domain).",
+      "dcterms:description": "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain).",
       "dcterms:modified": {
         "@value": "2014-08-03",
         "@type": "xsd:date"
@@ -49,7 +49,7 @@
       "vann:preferredNamespaceUri": "http://purl.org/dita/ns#"
     },
     {
-      "@id": "#Bookmap",
+      "@id": "http://purl.org/dita/ns#Bookmap",
       "rdfs:comment": {
         "@value": "The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.",
         "@language": "en-us"
@@ -59,11 +59,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Map"
+        "@id": "http://purl.org/dita/ns#Map"
       }
     },
     {
-      "@id": "#Concept",
+      "@id": "http://purl.org/dita/ns#Concept",
       "rdfs:comment": {
         "@value": "The DITA concept document type uses the concept information type.",
         "@language": "en-us"
@@ -73,11 +73,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Topic"
+        "@id": "http://purl.org/dita/ns#Topic"
       }
     },
     {
-      "@id": "#Conref",
+      "@id": "http://purl.org/dita/ns#Conref",
       "rdfs:comment": {
         "@value": "Include artwork or images in a DITA topic by using the <image> element.",
         "@language": "en-us"
@@ -87,11 +87,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       }
     },
     {
-      "@id": "#Doctype",
+      "@id": "http://purl.org/dita/ns#Doctype",
       "rdfs:comment": {
         "@value": "All the DITA document types.",
         "@language": "en-us"
@@ -102,7 +102,7 @@
       }
     },
     {
-      "@id": "#Image",
+      "@id": "http://purl.org/dita/ns#Image",
       "rdfs:comment": {
         "@value": "Include artwork or images in a DITA topic by using the <image> element.",
         "@language": "en-us"
@@ -112,11 +112,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       }
     },
     {
-      "@id": "#Key",
+      "@id": "http://purl.org/dita/ns#Key",
       "@type": "rdfs:Class",
       "rdfs:comment": {
         "@value": "The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "@id": "#Keydef",
+      "@id": "http://purl.org/dita/ns#Keydef",
       "rdfs:comment": {
         "@value": "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.",
         "@language": "en-us"
@@ -138,11 +138,123 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       }
     },
     {
-      "@id": "#Map",
+      "@id": "http://purl.org/dita/ns#LearningAssessment",
+      "rdfs:comment": {
+        "@value": "A Learning Assessment presents questions or interactions that measure progress, encourage recollection, and stimulate reinforcement of the learning content, and can be presented before the content as a pre-assessment or as a post-assessment test.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningAssessment",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningAssessment.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#LearningBase"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningBase",
+      "rdfs:comment": {
+        "@value": "The learningBase topic type is not used to deliver any actual learning content, but instead provides a set of common elements for use in the other more specific learning content types.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningBase",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningBase.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topic"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningContent",
+      "rdfs:comment": {
+        "@value": "A Learning Content topic provides the learning content itself, and enables direct use of content from DITA task, concept, and reference topics, as well as additional content of any topic type that supports specific objectives declared in the Learning Overview topic type.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningContent",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContent.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#LearningBase"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningObject",
+      "rdfs:comment": {
+        "@value": "learningObject organizes topic references to DITA learning topics as a learning object. ",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningObject",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningOverview",
+      "rdfs:comment": {
+        "@value": "A Learning Overview topic identifies the learning objectives, includes other information helpful to the learner, such as prerequisites, duration, intended audience, and can include information and strategies that seeks to gain attention and stimulate recall of prior learning.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningOverview",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverview.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#LearningBase"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningPlan",
+      "rdfs:comment": {
+        "@value": "A Learning Plan topic describes learning needs and goals, instructional design models, task analyses, learning taxonomies, and other information necessary to the lesson planning process.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningPlan",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlan.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#LearningBase"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningPlanRef",
+      "rdfs:comment": {
+        "@value": "Use a <learningPlanRef> element to include a topic reference to a learning plan topic as part of a learningObject.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningPlanRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#LearningSummary",
+      "rdfs:comment": {
+        "@value": "A Learning Summary recaps and provides context for the achievement or accomplishment of learning objectives, provides guidance to reinforce learning and long-term memory, and may pose questions to enhance encoding and verification of the learning content.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "LearningSummary",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummary.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#LearningBase"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#Map",
       "rdfs:comment": {
         "@value": "DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved.",
         "@language": "en-us"
@@ -152,11 +264,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Doctype"
+        "@id": "http://purl.org/dita/ns#Doctype"
       }
     },
     {
-      "@id": "#Mapref",
+      "@id": "http://purl.org/dita/ns#Mapref",
       "rdfs:comment": {
         "@value": "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'.",
         "@language": "en-us"
@@ -166,11 +278,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Topicref"
+        "@id": "http://purl.org/dita/ns#Topicref"
       }
     },
     {
-      "@id": "#Prodinfo",
+      "@id": "http://purl.org/dita/ns#Prodinfo",
       "@type": "rdfs:Class",
       "rdfs:comment": {
         "@value": "The prodinfo metadata element contains information about the product or products that are the subject matter of the current topic.",
@@ -182,7 +294,7 @@
       }
     },
     {
-      "@id": "#Reference",
+      "@id": "http://purl.org/dita/ns#Reference",
       "rdfs:comment": {
         "@value": "The DITA reference document type uses the reference information type.",
         "@language": "en-us"
@@ -192,11 +304,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Topic"
+        "@id": "http://purl.org/dita/ns#Topic"
       }
     },
     {
-      "@id": "#ReferenceObject",
+      "@id": "http://purl.org/dita/ns#ReferenceObject",
       "rdfs:comment": {
         "@value": "The DITA reference object is used to link, fetch or push content in relation with another file or object.",
         "@language": "en-us"
@@ -210,7 +322,7 @@
       }
     },
     {
-      "@id": "#Task",
+      "@id": "http://purl.org/dita/ns#Task",
       "rdfs:comment": {
         "@value": "The strict task document type supports the development of instructions for the completion of a procedure.",
         "@language": "en-us"
@@ -220,11 +332,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Topic"
+        "@id": "http://purl.org/dita/ns#Topic"
       }
     },
     {
-      "@id": "#Topic",
+      "@id": "http://purl.org/dita/ns#Topic",
       "rdfs:comment": {
         "@value": "DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.",
         "@language": "en-us"
@@ -234,11 +346,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#Doctype"
+        "@id": "http://purl.org/dita/ns#Doctype"
       }
     },
     {
-      "@id": "#Topicref",
+      "@id": "http://purl.org/dita/ns#Topicref",
       "rdfs:comment": {
         "@value": "The topicref element identifies a topic (such as a concept, task, or reference) or other resource.",
         "@language": "en-us"
@@ -248,11 +360,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       }
     },
     {
-      "@id": "#Xref",
+      "@id": "http://purl.org/dita/ns#Xref",
       "rdfs:comment": {
         "@value": "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.",
         "@language": "en-us"
@@ -262,11 +374,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
       },
       "rdfs:subClassOf": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       }
     },
     {
-      "@id": "#audience",
+      "@id": "http://purl.org/dita/ns#audience",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.",
@@ -281,7 +393,7 @@
       }
     },
     {
-      "@id": "#author",
+      "@id": "http://purl.org/dita/ns#author",
       "rdfs:comment": {
         "@value": "The author metadata element contains the name of the topic's author.",
         "@language": "en-us"
@@ -298,14 +410,14 @@
       }
     },
     {
-      "@id": "#conref",
+      "@id": "http://purl.org/dita/ns#conref",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       },
       "rdfs:label": "scope",
       "rdfs:range": {
@@ -316,14 +428,14 @@
       }
     },
     {
-      "@id": "#format",
+      "@id": "http://purl.org/dita/ns#format",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The format attribute identifies the format of the resource being cross referenced.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       },
       "rdfs:label": "format",
       "rdfs:range": {
@@ -334,14 +446,14 @@
       }
     },
     {
-      "@id": "#href",
+      "@id": "http://purl.org/dita/ns#href",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       },
       "rdfs:label": "href",
       "rdfs:range": {
@@ -352,25 +464,25 @@
       }
     },
     {
-      "@id": "#keyref",
+      "@id": "http://purl.org/dita/ns#keyref",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       },
       "rdfs:label": "keyref",
       "rdfs:range": {
-        "@id": "#Key"
+        "@id": "http://purl.org/dita/ns#Key"
       },
       "rdfs:seeAlso": {
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html"
       }
     },
     {
-      "@id": "#keys",
+      "@id": "http://purl.org/dita/ns#keys",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "This attribute is used to reference content that can be reused.",
@@ -378,22 +490,22 @@
       },
       "rdfs:domain": [
         {
-          "@id": "#Keydef"
+          "@id": "http://purl.org/dita/ns#Keydef"
         },
         {
-          "@id": "#Topicref"
+          "@id": "http://purl.org/dita/ns#Topicref"
         }
       ],
       "rdfs:label": "keys",
       "rdfs:range": {
-        "@id": "#Key"
+        "@id": "http://purl.org/dita/ns#Key"
       },
       "rdfs:seeAlso": {
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html"
       }
     },
     {
-      "@id": "#keyword",
+      "@id": "http://purl.org/dita/ns#keyword",
       "rdfs:comment": {
         "@value": "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.",
         "@language": "en-us"
@@ -410,7 +522,7 @@
       }
     },
     {
-      "@id": "#lang",
+      "@id": "http://purl.org/dita/ns#lang",
       "@type": "rdf:Property",
       "rdfs:comment": "The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766.",
       "rdfs:label": "language",
@@ -419,7 +531,91 @@
       }
     },
     {
-      "@id": "#othermeta",
+      "@id": "http://purl.org/dita/ns#learningContentComponentRef",
+      "rdfs:comment": {
+        "@value": "Use a learningContentComponentRef element to include a topic reference to a topic that acts as a subtopic of a learningContent topic.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "learningContentComponentRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentComponentRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#learningContentRef",
+      "rdfs:comment": {
+        "@value": "Use a learningContentRef element to include a topic reference to a learning content topic as part of a DITA learningObject.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "learningContentRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#learningOverviewRef",
+      "rdfs:comment": {
+        "@value": "Use a learningOverviewRef element to include a topic reference to a learning overview topic as part of a learningObject.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "learningOverviewRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#learningPostAssessmentRef",
+      "rdfs:comment": {
+        "@value": "Use a <learningPostAssessmentRef> element to include a topic reference to a learning assessment topic as part of a DITA learningObject.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "learningPostAssessmentRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#learningPreAssessmentRef",
+      "rdfs:comment": {
+        "@value": "Use a <learningPreAssessmentRef> element to include a topic reference to a learning assessment topic as part of a DITA learningObject.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "learningPreAssessmentRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#learningSummaryRef",
+      "rdfs:comment": {
+        "@value": "Use a <learningSummaryRef> to include topic reference to a learning summary topic in a DITA learning object.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "learningSummaryRef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummaryRef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#othermeta",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties.",
@@ -431,14 +627,14 @@
       }
     },
     {
-      "@id": "#platform",
+      "@id": "http://purl.org/dita/ns#platform",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Prodinfo"
+        "@id": "http://purl.org/dita/ns#Prodinfo"
       },
       "rdfs:label": "platform",
       "rdfs:range": {
@@ -449,29 +645,29 @@
       }
     },
     {
-      "@id": "#prodinfo",
+      "@id": "http://purl.org/dita/ns#prodinfo",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "Connects a DITA file with the product information that it is related to.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Doctype"
+        "@id": "http://purl.org/dita/ns#Doctype"
       },
       "rdfs:label": "prodinfo",
       "rdfs:range": {
-        "@id": "#Prodinfo"
+        "@id": "http://purl.org/dita/ns#Prodinfo"
       }
     },
     {
-      "@id": "#prodname",
+      "@id": "http://purl.org/dita/ns#prodname",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The prodname metadata element contains the name of the product that is supported by the information in this topic.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Prodinfo"
+        "@id": "http://purl.org/dita/ns#Prodinfo"
       },
       "rdfs:label": "prodname",
       "rdfs:range": {
@@ -482,31 +678,31 @@
       }
     },
     {
-      "@id": "#referenceObject",
+      "@id": "http://purl.org/dita/ns#referenceObject",
       "rdfs:comment": {
         "@value": "Describes a reference object that is part of a DITA file.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Doctype"
+        "@id": "http://purl.org/dita/ns#Doctype"
       },
       "rdfs:label": "referenceObject",
       "rdfs:range": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       },
       "rdfs:subPropertyOf": {
         "@id": "nie:hasLogicalPart"
       }
     },
     {
-      "@id": "#scope",
+      "@id": "http://purl.org/dita/ns#scope",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       },
       "rdfs:label": "scope",
       "rdfs:range": {
@@ -517,7 +713,7 @@
       }
     },
     {
-      "@id": "#searchtitle",
+      "@id": "http://purl.org/dita/ns#searchtitle",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic.",
@@ -531,11 +727,11 @@
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html"
       },
       "rdfs:subPropertyOf": {
-        "@id": "#metadata"
+        "@id": "http://purl.org/dita/ns#metadata"
       }
     },
     {
-      "@id": "#shortdesc",
+      "@id": "http://purl.org/dita/ns#shortdesc",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element.",
@@ -550,7 +746,7 @@
       }
     },
     {
-      "@id": "#title",
+      "@id": "http://purl.org/dita/ns#title",
       "rdfs:comment": {
         "@value": "The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables.",
         "@language": "en-us"
@@ -567,14 +763,14 @@
       }
     },
     {
-      "@id": "#vrmModification",
+      "@id": "http://purl.org/dita/ns#vrmModification",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Prodinfo"
+        "@id": "http://purl.org/dita/ns#Prodinfo"
       },
       "rdfs:label": "vrm Modification",
       "rdfs:range": {
@@ -585,14 +781,14 @@
       }
     },
     {
-      "@id": "#vrmRelease",
+      "@id": "http://purl.org/dita/ns#vrmRelease",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Prodinfo"
+        "@id": "http://purl.org/dita/ns#Prodinfo"
       },
       "rdfs:label": "vrm Release",
       "rdfs:range": {
@@ -603,14 +799,14 @@
       }
     },
     {
-      "@id": "#vrmVersion",
+      "@id": "http://purl.org/dita/ns#vrmVersion",
       "@type": "rdf:Property",
       "rdfs:comment": {
         "@value": "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "#Prodinfo"
+        "@id": "http://purl.org/dita/ns#Prodinfo"
       },
       "rdfs:label": "vrm Version",
       "rdfs:range": {

@@ -1,217 +1,1568 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html prefix='cc: http://creativecommons.org/ns# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ nfo: http://www.semanticdesktop.org/ontologies/2007/03/22/nfo# nie: http://www.semanticdesktop.org/ontologies/2007/01/19/nie# owl: http://www.w3.org/2002/07/owl# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# vann: http://purl.org/vocab/vann/ xsd: http://www.w3.org/2001/XMLSchema#' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
-    <title>RDF Distiller</title>
-    <link href='/css/main.css' rel='stylesheet' type='text/css'>
-    <script charset='utf-8' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js' type='text/javascript'></script>
-    <script>
-      // Navigation
-      $(function () {
-        // Select appropriate nav tab
-        var href = window.location.pathname;
-        $('nav.main a').removeClass('selected');
-        $('nav.main a[href="' + href + '"]').addClass('selected');
-      });
-    </script>
-    <script type="text/javascript">
-    // Navigation
-    $(function () {
-      // Display field sets having class of
-      // Clicking on a tab hides fieldsets not having that hash element as a class
-      $('nav.distiller a').click(function() {
-        var cls = this.hash.substr(1);
-        $('fieldset').hide();
-        $('fieldset.' + cls).show();
-        $('nav.distiller a').removeClass('selected');
-        $(this).addClass('selected');
-        return(false); // No bubbling, leave history alone.
-      });
-    
-      // Hide fieldsets
-      $('fieldset').hide();
-    
-      // Select appropriate nav tab
-      var cls = window.location.hash.substr(1);
-      $('nav.distiller a:first').each(function(){
-        $('fieldset.' + this.className).show();
-        $(this).addClass('selected');
-      });
-      
-      // If the output format is rdfa, re-write the result text area
-      // as an iFrame and add results
-      $('div.results textarea.rdfa').each(function() {
-        var content = $(this).val();
-        $(this).after($('<iframe width="100%"/>'));
-        setTimeout(function() {
-          var iframe = $('div.results iframe')[0];
-          var iframe_doc = iframe.contentWindow.document;
-          iframe_doc.open(); iframe_doc.close(); // must open and close document object to start using it!
-          iframe_doc.write(content);
-          setTimeout(function() {
-            var innerDoc = (iframe.contentDocument) ? iframe.contentDocument : iframe.contentWindow.document;
-            var height = innerDoc.body.offsetHeight;
-            if (height === null && iframe.Document && iframe.Document.body.scrollHeight) {
-              height = iframe.Document.body.scrollHeight;
-            }
-            $(iframe).attr('height', height);
-          }, 10);
-        }, 1);
-      }).hide();
-    
-    });
-    
-    </script>
+    <base href='http://purl.org/dita/ns#'>
+    <title>DITA RDF ontology</title>
+    <link href='http://rdf.kellogg-assoc.com/css/distiller.css' rel='stylesheet' type='text/css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js' type='text/javascript'></script>
+    <script src='http://rdf.kellogg-assoc.com/js/distiller.js' type='text/javascript'></script>
   </head>
   <body>
-    <header>
-      <nav class="main">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/distiller">Distiller</a></li>
-          <li><a href="/sparql">SPARQL endpoint</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/doap">Project Descriptions</a></li>
-          <li><a target="_blank" href="/yard/index.html">Documentation</a></li>
-        </ul>
-      </nav>
-    </header>
-    <h1>RDF Distiller</h1>
-    <p>
-      RDF.rb is a <span property="doap:programming-language">Ruby</span> Gem
-      implementing RDF graphs, readers and writers to help integrate semantic technologies
-      into Ruby projects.
-    </p>
-    <p>
-      The distiller transforms data between different RDF formats.
-      The <a href="#distiller">form below</a> can be used to start the service installed at this site.
-    </p>
-    <nav class='distiller'>
-      <ul>
-        <li>
-          <a class='url' href='#url'>
-            From URL
-          </a>
-        </li>
-        <li>
-          <a class='input' href='#input'>
-            From Form Input
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <form action='/distiller' enctype='multipart/form-data' method='post'>
-      <fieldset class='url upload input'>
-        <legend>
-          Distill RDF Information
-        </legend>
-        <fieldset class='url upload input'>
-          <label for='uri'>
-            URI
-          </label>
-          <input id='uri' name='uri' size='80' type='text'>
-        </fieldset>
-        <fieldset class='url upload input'>
-          <legend>
-            Options
-          </legend>
-          <p>
-            <label for='in_fmt'>
-              Input Format:
-            </label>
-            <select id='in_fmt' name='in_fmt'>
-              <option value='content'>
-                Content Detect
-              </option>
-              <option value='json'>json</option>
-              <option value='jsonld'>jsonld</option>
-              <option value='microdata'>microdata</option>
-              <option value='n3'>n3</option>
-              <option value='nquads'>nquads</option>
-              <option value='ntriples'>ntriples</option>
-              <option value='rdfa'>rdfa</option>
-              <option value='rdfxml'>rdfxml</option>
-              <option value='trig'>trig</option>
-              <option value='trix'>trix</option>
-              <option value='turtle'>turtle</option>
-            </select>
-            <label for='fmt'>
-              Output Format:
-            </label>
-            <select id='in_fmt' name='fmt'>
-              <option value='json'>json</option>
-              <option value='jsonld'>jsonld</option>
-              <option value='microdata'>microdata</option>
-              <option value='n3'>n3</option>
-              <option value='nquads'>nquads</option>
-              <option value='ntriples'>ntriples</option>
-              <option value='rdfa'>rdfa</option>
-              <option value='rdfxml'>rdfxml</option>
-              <option value='trig'>trig</option>
-              <option value='trix'>trix</option>
-              <option selected='selected' value='turtle'>turtle</option>
-            </select>
-          </p>
-          <p>
-            <label for='debug'>
-              Show Parser debug information:
-            </label>
-            <input id='debug' name='debug' type='checkbox' value='true'>
-            <br>
-            <label for='validate'>
-              Validate Input:
-            </label>
-            <input id='validate' name='validate' type='checkbox' value>
-            <br>
-            <label for='vocab_expnsion'>
-              Expand graph (RDFa only):
-            </label>
-            <input id='vocab_expansion' name='vocab_expansion' type='checkbox' value>
-            <br>
-            <label for='rdfagraph'>
-              Output Graph (RDFa only):
-            </label>
-            <select id='rdfagraph' name='rdfagraph'>
-              <option value='output'>output</option>
-              <option value='processor'>processor</option>
-              <option value='output,processor'>output,processor</option>
-            </select>
-            <br>
-            <label for='raw'>
-              Raw Output:
-            </label>
-            <input id='raw' name='raw' type='checkbox' value>
-          </p>
-        </fieldset>
-        <fieldset class='input'>
-          <legend>
-            Markup
-          </legend>
-          <textarea class='input' cols='128' id='content' name='content' rows='15'></textarea>
-        </fieldset>
-        <input name='commit' type='submit' value='Submit'>
-      </fieldset>
-    </form>
-    <div class='results'>
-      <h2>
-        Result
-      </h2>
-      <p></p>
-      Note, to see result directly, such as formatted HTML for RDFa output, choose the 'Raw Output' option above.
-      <textarea class='turtle' cols='128' rows='20'></textarea>
-    </div>
-    <div>
-      <h2>
-        Alternative access to the Distiller
-      </h2>
-      <p>
-        The distiller URI may be used directly with an HTML GET by passing the source URI and other options as parameters:
-      </p>
-      <pre class='alt_access'><a href='http://rdf.greggkellogg.net/distiller?format=turtle&amp;rdfagraph=&amp;uri=http://www.example.com/' target='_blank'>http://rdf.greggkellogg.net/distiller?format=turtle&amp;rdfagraph=&amp;uri=http://www.example.com/</a></pre>
-    </div>
-    <footer>
-      This is version 1.1.5.2 of the RDF Distiller developed and hosted by <a target="_blank" href="http://greggkellogg.net/">Kellogg Associates</a>.
-      Please consider us when looking for Ruby Linked Data solutions.
-    </footer>
+    <p>RDFa serialization URI base: &lt;http://purl.org/dita/ns#&gt;</p>
+    <td resource='' typeof='owl:Ontology'>
+      <span class='type'>owl:Ontology</span>
+      <table class='properties'>
+        <h1 property='dcterms:title'>DITA RDF ontology</h1>
+        <tr class='property'>
+          <td class='label'>
+            cc:license
+          </td>
+          <td>
+            <a href='http://unlicense.org' property='cc:license'>http://unlicense.org</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:created
+          </td>
+          <td content='2013-01-04' datatype='xsd:date' property='dcterms:created'>Friday, 04 January 2013</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:creator
+          </td>
+          <td rel='dcterms:creator' resource='http://colin.maudry/rdf/colin-maudry#me'>
+            <table class='properties'>
+              <tr class='property'>
+                <td class='label'>
+                  foaf:mbox
+                </td>
+                <td>
+                  <a href='mailto:colin@maudry.com' property='foaf:mbox'>mailto:colin@maudry.com</a>
+                </td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  foaf:name
+                </td>
+                <td property='foaf:name'>Colin Maudry</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:description
+          </td>
+          <td property='dcterms:description'>The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain).</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:modified
+          </td>
+          <td content='2014-08-03' datatype='xsd:date' property='dcterms:modified'>Sunday, 03 August 2014</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            vann:preferredNamespacePrefix
+          </td>
+          <td property='vann:preferredNamespacePrefix'>dita</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            vann:preferredNamespaceUri
+          </td>
+          <td property='vann:preferredNamespaceUri'>http://purl.org/dita/ns#</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            foaf:depiction
+          </td>
+          <td>
+            <a href='http://bit.ly/DitaRdfLucidChart' property='foaf:depiction'>http://bit.ly/DitaRdfLucidChart</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Key' typeof='rdfs:Class'>
+      <span class='type'>rdfs:Class</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Key</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Prodinfo' typeof='rdfs:Class'>
+      <span class='type'>rdfs:Class</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Prodinfo</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The prodinfo metadata element contains information about the product or products that are the subject matter of the current topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    
+    <td resource='Bookmap'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Bookmap</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td rel='rdfs:subClassOf' resource='Map'>
+            <table class='properties'>
+              <h1 property='rdfs:label'>Map</h1>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:comment
+                </td>
+                <td lang='en-US' property='rdfs:comment'>DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved.</td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:seeAlso
+                </td>
+                <td>
+                  <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html</a>
+                </td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:subClassOf
+                </td>
+                <td rel='rdfs:subClassOf' resource='Doctype'>
+                  <table class='properties'>
+                    <h1 property='rdfs:label'>Doctype</h1>
+                    <tr class='property'>
+                      <td class='label'>
+                        rdfs:comment
+                      </td>
+                      <td lang='en-US' property='rdfs:comment'>All the DITA document types.</td>
+                    </tr>
+                    <tr class='property'>
+                      <td class='label'>
+                        rdfs:subClassOf
+                      </td>
+                      <td>
+                        <a href='http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument' property='rdfs:subClassOf'>http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Concept'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Concept</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The DITA concept document type uses the concept information type.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td rel='rdfs:subClassOf' resource='Topic'>
+            <table class='properties'>
+              <h1 property='rdfs:label'>Topic</h1>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:comment
+                </td>
+                <td lang='en-US' property='rdfs:comment'>DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.</td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:seeAlso
+                </td>
+                <td>
+                  <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html</a>
+                </td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:subClassOf
+                </td>
+                <td>
+                  <a href='http://purl.org/dita/ns#Doctype' property='rdfs:subClassOf'>http://purl.org/dita/ns#Doctype</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Conref'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Image</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Include artwork or images in a DITA topic by using the &lt;image&gt; element.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td rel='rdfs:subClassOf' resource='ReferenceObject'>
+            <table class='properties'>
+              <h1 lang='en-US' property='rdfs:label'>DITA base reference object</h1>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:comment
+                </td>
+                <td lang='en-US' property='rdfs:comment'>The DITA reference object is used to link, fetch or push content in relation with another file or object.</td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:subClassOf
+                </td>
+                <td>
+                  <a href='http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement' property='rdfs:subClassOf'>http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Image'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Image</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Include artwork or images in a DITA topic by using the &lt;image&gt; element.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningAssessment'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningAssessment</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>A Learning Assessment presents questions or interactions that measure progress, encourage recollection, and stimulate reinforcement of the learning content, and can be presented before the content as a pre-assessment or as a post-assessment test.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningAssessment.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningAssessment.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td rel='rdfs:subClassOf' resource='LearningBase'>
+            <table class='properties'>
+              <h1 property='rdfs:label'>LearningBase</h1>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:comment
+                </td>
+                <td lang='en-US' property='rdfs:comment'>The learningBase topic type is not used to deliver any actual learning content, but instead provides a set of common elements for use in the other more specific learning content types.</td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:seeAlso
+                </td>
+                <td>
+                  <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningBase.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningBase.html</a>
+                </td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:subClassOf
+                </td>
+                <td>
+                  <a href='http://purl.org/dita/ns#Topic' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topic</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningContent'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningContent</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>A Learning Content topic provides the learning content itself, and enables direct use of content from DITA task, concept, and reference topics, as well as additional content of any topic type that supports specific objectives declared in the Learning Overview topic type.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContent.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContent.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#LearningBase' property='rdfs:subClassOf'>http://purl.org/dita/ns#LearningBase</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningObject'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningObject</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>learningObject organizes topic references to DITA learning topics as a learning object.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td rel='rdfs:subClassOf' resource='Topicref'>
+            <table class='properties'>
+              <h1 property='rdfs:label'>Topicref</h1>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:comment
+                </td>
+                <td lang='en-US' property='rdfs:comment'>The topicref element identifies a topic (such as a concept, task, or reference) or other resource.</td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:seeAlso
+                </td>
+                <td>
+                  <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html</a>
+                </td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:subClassOf
+                </td>
+                <td>
+                  <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningOverview'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningOverview</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>A Learning Overview topic identifies the learning objectives, includes other information helpful to the learner, such as prerequisites, duration, intended audience, and can include information and strategies that seeks to gain attention and stimulate recall of prior learning.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverview.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverview.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#LearningBase' property='rdfs:subClassOf'>http://purl.org/dita/ns#LearningBase</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningPlan'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningPlan</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>A Learning Plan topic describes learning needs and goals, instructional design models, task analyses, learning taxonomies, and other information necessary to the lesson planning process.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlan.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlan.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#LearningBase' property='rdfs:subClassOf'>http://purl.org/dita/ns#LearningBase</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningPlanRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningPlanRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a &lt;learningPlanRef&gt; element to include a topic reference to a learning plan topic as part of a learningObject.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='LearningSummary'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>LearningSummary</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>A Learning Summary recaps and provides context for the achievement or accomplishment of learning objectives, provides guidance to reinforce learning and long-term memory, and may pose questions to enhance encoding and verification of the learning content.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummary.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummary.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#LearningBase' property='rdfs:subClassOf'>http://purl.org/dita/ns#LearningBase</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Mapref'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Mapref</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The mapref element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to &#39;ditamap&#39;.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Reference'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Reference</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The DITA reference document type uses the reference information type.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topic' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topic</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Task'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Task</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The strict task document type supports the development of instructions for the completion of a procedure.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topic' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topic</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Xref'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Xref</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use the cross-reference (&lt;xref&gt;) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='lang' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>language</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td property='rdfs:comment'>The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#language' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#language</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='learningContentComponentRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>learningContentComponentRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a learningContentComponentRef element to include a topic reference to a topic that acts as a subtopic of a learningContent topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentComponentRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentComponentRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='learningContentRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>learningContentRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a learningContentRef element to include a topic reference to a learning content topic as part of a DITA learningObject.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='learningOverviewRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>learningOverviewRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a learningOverviewRef element to include a topic reference to a learning overview topic as part of a learningObject.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='learningPostAssessmentRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>learningPostAssessmentRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a &lt;learningPostAssessmentRef&gt; element to include a topic reference to a learning assessment topic as part of a DITA learningObject.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='learningPreAssessmentRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>learningPreAssessmentRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a &lt;learningPreAssessmentRef&gt; element to include a topic reference to a learning assessment topic as part of a DITA learningObject.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='learningSummaryRef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>learningSummaryRef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use a &lt;learningSummaryRef&gt; to include topic reference to a learning summary topic in a DITA learning object.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummaryRef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummaryRef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='othermeta' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>othermeta</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The othermeta element can be used to identify properties not otherwise included in &lt;metadata&gt; and to assign name/content values to those properties.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='Keydef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Keydef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a &lt;topicref&gt; element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    
+    <td resource='audience' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>audience</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='author'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>author</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The author metadata element contains the name of the topic&#39;s author.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subPropertyOf
+          </td>
+          <td>
+            <a href='http://purl.org/dc/terms/author' property='rdfs:subPropertyOf'>http://purl.org/dc/terms/author</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='keyword'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>keyword</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subPropertyOf
+          </td>
+          <td>
+            <a href='http://www.semanticdesktop.org/ontologies/2007/01/19/nie#keyword' property='rdfs:subPropertyOf'>http://www.semanticdesktop.org/ontologies/2007/01/19/nie#keyword</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='prodinfo' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>prodinfo</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Connects a DITA file with the product information that it is related to.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Doctype' property='rdfs:domain'>http://purl.org/dita/ns#Doctype</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Prodinfo' property='rdfs:range'>http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='referenceObject'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>referenceObject</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Describes a reference object that is part of a DITA file.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Doctype' property='rdfs:domain'>http://purl.org/dita/ns#Doctype</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:range'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subPropertyOf
+          </td>
+          <td>
+            <a href='http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart' property='rdfs:subPropertyOf'>http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='shortdesc' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>shortdesc</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='title'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>title</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subPropertyOf
+          </td>
+          <td>
+            <a href='http://purl.org/dc/terms/title' property='rdfs:subPropertyOf'>http://purl.org/dc/terms/title</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='conref' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>scope</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The scope attribute identifies the closeness of the relationship between the current document and the target resource.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:domain'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#anyURI' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#anyURI</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='format' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>format</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The format attribute identifies the format of the resource being cross referenced.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:domain'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='href' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>href</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:domain'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.semanticdesktop.org/ontologies/2007/01/19/nie#FileDataObject' property='rdfs:range'>http://www.semanticdesktop.org/ontologies/2007/01/19/nie#FileDataObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='keyref' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>keyref</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:domain'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Key' property='rdfs:range'>http://purl.org/dita/ns#Key</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='platform' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>platform</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Prodinfo' property='rdfs:domain'>http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='prodname' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>prodname</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The prodname metadata element contains the name of the product that is supported by the information in this topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Prodinfo' property='rdfs:domain'>http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='scope' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>scope</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The scope attribute identifies the closeness of the relationship between the current document and the target resource.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:domain'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='searchtitle' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>searchtitle</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subPropertyOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#metadata' property='rdfs:subPropertyOf'>http://purl.org/dita/ns#metadata</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='vrmModification' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>vrm Modification</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The vrm element contains information about a single product&#39;s version, modification, and release, to which the current topic applies.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Prodinfo' property='rdfs:domain'>http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#integer' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#integer</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='vrmRelease' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>vrm Release</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The vrm element contains information about a single product&#39;s version, modification, and release, to which the current topic applies.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Prodinfo' property='rdfs:domain'>http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#integer' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#integer</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource='vrmVersion' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>vrm Version</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The vrm element contains information about a single product&#39;s version, modification, and release, to which the current topic applies.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Prodinfo' property='rdfs:domain'>http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#integer' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#integer</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    
+    <td resource='keys' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>keys</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>This attribute is used to reference content that can be reused.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <ul>
+              <li>
+                <a href='http://purl.org/dita/ns#Keydef' property='rdfs:domain'>http://purl.org/dita/ns#Keydef</a>
+              </li>
+              <li>
+                <a href='http://purl.org/dita/ns#Topicref' property='rdfs:domain'>http://purl.org/dita/ns#Topicref</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Key' property='rdfs:range'>http://purl.org/dita/ns#Key</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    
+    
+    
+    
   </body>
 </html>

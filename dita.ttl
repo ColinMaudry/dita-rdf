@@ -30,7 +30,7 @@
 	dcterms:creator <http://colin.maudry/rdf/colin-maudry#me> ;
 	dcterms:created "2013-01-04"^^xsd:date ;
 	dcterms:modified "2014-08-03"^^xsd:date ;
-	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the Unlicense (public domain)." ;
+	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain)." ;
 	cc:license <http://unlicense.org> ;
 	foaf:depiction <http://bit.ly/DitaRdfLucidChart> ;
 	vann:preferredNamespaceUri "http://purl.org/dita/ns#";
@@ -70,6 +70,31 @@
 			rdfs:comment "The DITA reference document type uses the reference information type."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html> ;
 			rdfs:label "Reference" .
+
+		:LearningBase rdfs:subClassOf :Topic ;
+			rdfs:comment "The learningBase topic type is not used to deliver any actual learning content, but instead provides a set of common elements for use in the other more specific learning content types."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningBase.html> ;
+			rdfs:label "LearningBase" .
+		:LearningOverview rdfs:subClassOf :LearningBase ;
+			rdfs:comment "A Learning Overview topic identifies the learning objectives, includes other information helpful to the learner, such as prerequisites, duration, intended audience, and can include information and strategies that seeks to gain attention and stimulate recall of prior learning."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverview.html> ;
+			rdfs:label "LearningOverview" .
+		:LearningContent rdfs:subClassOf :LearningBase ;
+			rdfs:comment "A Learning Content topic provides the learning content itself, and enables direct use of content from DITA task, concept, and reference topics, as well as additional content of any topic type that supports specific objectives declared in the Learning Overview topic type."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContent.html> ;
+			rdfs:label "LearningContent" .	
+		:LearningSummary rdfs:subClassOf :LearningBase ;
+			rdfs:comment "A Learning Summary recaps and provides context for the achievement or accomplishment of learning objectives, provides guidance to reinforce learning and long-term memory, and may pose questions to enhance encoding and verification of the learning content."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummary.html> ;
+			rdfs:label "LearningSummary" .	
+		:LearningAssessment rdfs:subClassOf :LearningBase ;
+			rdfs:comment "A Learning Assessment presents questions or interactions that measure progress, encourage recollection, and stimulate reinforcement of the learning content, and can be presented before the content as a pre-assessment or as a post-assessment test."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningAssessment.html> ;
+			rdfs:label "LearningAssessment" .	
+		:LearningPlan rdfs:subClassOf :LearningBase ;
+			rdfs:comment "A Learning Plan topic describes learning needs and goals, instructional design models, task analyses, learning taxonomies, and other information necessary to the lesson planning process."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlan.html> ;
+			rdfs:label "LearningPlan" .
 		
 		#Reference objects
 		:ReferenceObject rdfs:subClassOf nie:InformationElement ;
@@ -99,6 +124,41 @@
 			rdfs:comment "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
 			rdfs:label "Xref" .
+
+		:LearningObject rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html> ;
+			rdfs:comment "learningObject organizes topic references to DITA learning topics as a learning object. "@en-US ;
+			rdfs:label "LearningObject" .
+		:LearningPlanRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html> ;
+			rdfs:comment "Use a <learningPlanRef> element to include a topic reference to a learning plan topic as part of a learningObject."@en-US ;
+			rdfs:label "LearningPlanRef" .
+		:learningPreAssessmentRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html> ;
+			rdfs:comment "Use a <learningPreAssessmentRef> element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
+			rdfs:label "learningPreAssessmentRef" .
+		:learningOverviewRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html> ;
+			rdfs:comment "Use a learningOverviewRef element to include a topic reference to a learning overview topic as part of a learningObject."@en-US ;
+			rdfs:label "learningOverviewRef" .
+		:learningContentRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentRef.html> ;
+			rdfs:comment "Use a learningContentRef element to include a topic reference to a learning content topic as part of a DITA learningObject."@en-US ;
+			rdfs:label "learningContentRef" .
+		:learningContentComponentRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentComponentRef.html> ;
+			rdfs:comment "Use a learningContentComponentRef element to include a topic reference to a topic that acts as a subtopic of a learningContent topic."@en-US ;
+			rdfs:label "learningContentComponentRef" .
+		:learningSummaryRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummaryRef.html> ;
+			rdfs:comment "Use a <learningSummaryRef> to include topic reference to a learning summary topic in a DITA learning object."@en-US ;
+			rdfs:label "learningSummaryRef" .
+		:learningPostAssessmentRef rdfs:subClassOf :Topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html> ;
+			rdfs:comment "Use a <learningPostAssessmentRef> element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
+			rdfs:label "learningPostAssessmentRef" .
+
+
 			
 		#Key
 		:Key a rdfs:Class ;
