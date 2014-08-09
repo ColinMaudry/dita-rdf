@@ -8,12 +8,13 @@ See the useful links below if you want to know more about the Semantic Web.
 ## Status
 
  * The ontology is already available as a Turtle file, [dita.ttl](https://github.com/ColinMaudry/dita-rdf/blob/master/dita.ttl). It can also be viewed [here](http://purl.org/dita/ns#) in a more human-readable form (to be improved!), and [here](http://bit.ly/DitaRdfLucidChart) as a graphic.
- * A DITA Open toolkit plugin is available [here](https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip) (documentation [here](./dita2rdf)) to enable the extraction of RDF triples from DITA content ([RDF output example](http://colin.maudry.com/rdf/userguide.rdf)). The following metadata is extracted (including specializations) for maps and topics:
+ * A DITA Open toolkit plugin is available [here](https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip) (documentation [here](./dita2rdf)) to enable the extraction of RDF triples from DITA content ([RDF output example](http://colin.maudry.com/rdf/userguide.rdf) extracted from the DITA OT user guide). The following metadata is extracted (including specializations) for maps and topics:
 	- @id
 	- title
 	- language
 	- author
 	- topicref/@href
+	- keys
 	- [rdf:type](http://www.w3.org/TR/rdf-schema/#ch_type), including super classes (e.g. dita:Map and dita:Bookmap for a bookmap)
  * The plugin will be adapted to be used in [Componize for Alfresco](http://www.componize.com)
  * A tutorial will be written to publish the RDF triples resulting from the transformation to a triple store and query your DITA metadata
