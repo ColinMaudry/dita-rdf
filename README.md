@@ -76,7 +76,7 @@ The driver was consequently mostly internal, but we plan to publish a subset of 
 
 Finally, since the challenges we face are most likely similar to the ones faced by other DITA-enabled organizations, I decided to share my findings.
 
-John Walker and Tim Nelissen, from NXP CDS, have since then founded [Semaku](http://semaku.com), a consultancy and software company dedicated to helping organization to solve their data and content silo issues using the linked data principles. I joined them in April 2014. 
+John Walker and Tim Nelissen, from NXP CDS, have since then founded [Semaku](http://semaku.com), a consultancy and software company dedicated to helping organizations to solve their data and content silo issues using the linked data principles. I joined them in April 2014. 
 
 ## Publishing method and availability
 
