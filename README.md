@@ -36,15 +36,15 @@ The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License v
 
 ## Objective
 
-This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a format that can be understood in the Semantic Web of data.
+This ontology is not meant to serve as an alternative to the standard DITA 1.2 DTDs and schemas. It translates the semantics of a subset of the vocabulary described in the [DITA 1.2 specification](http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html) in a [standard language](http://www.w3.org/TR/rdf11-primer/) that can be understood in the Semantic Web of data.
 
 [This poster](http://bit.ly/DitaRdfPoster) illustrates the objective of the project. I presented it during the 10th Summer School on Ontology Engineering and the Semantic Web ([SSSW 2013](http://sssw.org/2013/)).
 
 ## Scope
 
-This ontology does not aim at completeness (the whole DITA 1.2 language specification) but at covering the metadata that describes DITA content.
+This ontology does not aim at covering the whole DITA 1.2 language specification, but at covering the metadata that describes DITA content.
 
-The scope of this ontology includes the meaningful elements and attributes of the [DITA 1.2 vocabulary]. I focused on the metadata elements that are derived from [Dublin core](http://dublincore.org/documents/dcmi-terms/) (title, author, etc) and on the relationships between maps, topics and other documents. 
+The scope of this ontology includes the meaningful elements and attributes of the [DITA 1.2 vocabulary](http://docs.oasis-open.org/dita/v1.2/spec/DITA1.2-spec.html). I focused on the metadata elements that are derived from [Dublin core](http://dublincore.org/documents/dcmi-terms/) (title, author, etc) and on the relationships between maps, topics and other documents. 
 
 The scope of this ontology does not include the elements and attributes that bear little semantics, such as (not exhaustive):
 
@@ -55,7 +55,7 @@ The scope of this ontology does not include the elements and attributes that bea
 * lists
 * sections
 
-Also, it does not include (yet) the elements that bear semantics but that my company doesn' use. I will add them, but you can ping me if you would like to see them added (not exhaustive):
+Also, it does not include (yet) the elements that bear semantics but that my company doesn't use. I will add them, but you can ping me if you would like to see them added (not exhaustive):
 
 * metadata specific to DITA specializations (learning, machinery, semiconductors, etc.)
 * the programming, indexing, software, utilities and UI domains (will add them as separate modules)
@@ -76,11 +76,11 @@ This idea came to me when we (NXP Customer Documentation Services) [decided](htt
 
 I have already set up the publication of the metadata about binary documents (data sheets, user manuals, etc.), but since our DITA content is built on complex relationships (topic reuse) and our primary format for translation, we need a proper ontology to describe it. The driver is to provide detailed metrics to authors and greatly facilitate certain internal processes such as the selection of the content to translate. Indeed, we consider that being able to formulate multidimensional queries across topics, maps, users, products and company divisions is a major step ahead.
 
-The driver is consequently mostly internal, but we plan to publish a subset of this metadata when we go live with the whole public data set. Follow [@nxpdata](https://www.twitter.com/nxpdata) to get the latest updates about the linked data published by NXP.
+The driver was consequently mostly internal, but we plan to publish a subset of this metadata when we go live with the whole public data set. Follow [@nxpdata](https://www.twitter.com/nxpdata) to get the latest updates about the linked data published by NXP.
 
-Finally, since the challenges we face are most likely similar to the ones other DITA-enabled organizations face, I decided to share my findings.
+Finally, since the challenges we face are most likely similar to the ones faced by other DITA-enabled organizations, I decided to share my findings.
 
-_TODO add links to real-life RDF samples._
+John Walker and Tim Nelissen, from NXP CDS, have since then founded [Semaku](http://semaku.com), a consultancy and software company dedicated to helping organization to solve their data and content silo issues using the linked data principles. I joined them in April 2014. 
 
 ## Publishing method and availability
 
