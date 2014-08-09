@@ -11,14 +11,11 @@
 	xmlns:dita="http://purl.org/dita/ns#"
 	xmlns:schema="http://schema.org/"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:colin="http://colin.maudry.com/"
-	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
-	exclude-result-prefixes="colin xs doc">
+	xmlns:colin="http://zebrana.net/"
+	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl">
+	<xsl:import href="dita2rdf.xsl"/>
+<ditasf:extension id="dita.xsl.rdf" behavior="org.dita.dost.platform.ImportXSLAction" xmlns:ditasf="http://dita-ot.sourceforge.net"/>
+	<xsl:import href="cfg:rdf/attrs/custom.xsl"></xsl:import>
+	<xsl:import href="cfg:rdf/xsl/custom.xsl"></xsl:import>
 	
-	<xsl:param name="configpath">cfg:rdf/config.xml</xsl:param>
-	<xsl:param name="config" select="document($configpath)"></xsl:param>
-	
-	<!-- Located here to have lower precedence over the other imported templates -->
-	<xsl:template match=" * | @* | node() | processing-instruction()"/>
-
 </xsl:stylesheet>

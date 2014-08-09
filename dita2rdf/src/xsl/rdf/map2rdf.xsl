@@ -48,7 +48,6 @@
 			<dita:id>
 				<xsl:value-of select="$mapId"/>
 			</dita:id>
-			
 			<xsl:apply-templates>
 				<xsl:with-param name="mapLanguage" select="$mapLanguage" tunnel="yes"/>
 				<xsl:with-param name="mapUri" select="$mapUri" tunnel="yes"/>
