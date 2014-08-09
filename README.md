@@ -25,10 +25,6 @@ See the useful links below if you want to know more about the Semantic Web.
  - A very good introduction to RDF, the Semantic Web, and how it completes XML: http://www.cambridgesemantics.com/semantic-university/rdf-101
  - The official page of the Semantic Web: http://www.w3.org/standards/semanticweb/
 
-The DITA RDF ontology is licensed under a under a Creative Commons BY-SA 3.0 license (http://creativecommons.org/licenses/by-sa/3.0/).
-
-The DITA RDF DITA Open toolkit plugin is licensed under the GNU Public License version 3 (https://gnu.org/licenses/gpl.html).
-
 ## Contact
 
 * Twitter: [@CMaudry](https://www.twitter.com/ColinMaudry)
