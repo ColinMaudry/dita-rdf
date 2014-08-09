@@ -11,10 +11,12 @@
 	xmlns:dita="http://purl.org/dita/ns#"
 	xmlns:schema="http://schema.org/"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:colin="http://zebrana.net/"
-	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl">
-	<xsl:import href="dita2rdfImpl.xsl"/>
-<ditasf:extension id="dita.xsl.rdf" behavior="org.dita.dost.platform.ImportXSLAction" xmlns:ditasf="http://dita-ot.sourceforge.net"/>
-	<xsl:output method="xml" encoding="utf-8" indent="no" />
+	xmlns:colin="http://colin.maudry.com/"
+	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
+ exclude-result-prefixes="colin xs doc">
 	
+	
+	<xsl:import href="dita2rdf.xsl"></xsl:import>
+		
+	<xsl:import href="cfg:rdf/xsl/custom.xsl"></xsl:import>
 </xsl:stylesheet>

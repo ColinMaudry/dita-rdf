@@ -143,7 +143,7 @@
 			</and>
 		</condition>
 		
-		<property name="temp.transformation.file" location="${xsl.dir}/dita2rdf.xsl"/>
+		<property name="temp.transformation.file" location="${xsl.dir}/dita2rdf_shell.xsl"/>
 	</target>
 	
 	<!-- Apparently, a flagging-preprocess.xsl should be created to support filtering. Flagging is not required for RDF. -->
