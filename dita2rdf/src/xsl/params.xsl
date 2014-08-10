@@ -18,7 +18,7 @@
 	<xsl:param name="configpath">cfg:rdf/config.xml</xsl:param>
 	<xsl:param name="config" select="document($configpath)"></xsl:param>
 	
-	<!-- Located here to have lower precedence over the other imported templates -->
-	<xsl:template match=" * | @* | node() | processing-instruction()"/>
+	<!-- Located here to have lower priority over the other imported templates -->
+	<xsl:template match=" * | @* | node() | processing-instruction()" xml:space="default"/>
 
 </xsl:stylesheet>
