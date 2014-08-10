@@ -42,40 +42,6 @@
                   <rdf:type rdf:resource="http://purl.org/dita/ns#LearningPlan"/>
                   <dita:id>d9e5</dita:id>
                   <dita:title>Learning Plan</dita:title>
-                  <dita:title>lcProject</dita:title>
-                  <dita:title>lcClient</dita:title>
-                  <dita:title>lcPlanTitle</dita:title>
-                  <dita:title>lcCIN</dita:title>
-                  <dita:title>lcModDate</dita:title>
-                  <dita:title>lcDelivDate</dita:title>
-                  <dita:title>lcPlanSubject</dita:title>
-                  <dita:title>lcPlanDescrip</dita:title>
-                  <dita:title>lcPlanPrereqs</dita:title>
-                  <dita:title>lcNeedsAnalysis</dita:title>
-                  <dita:title>lcOrganizational</dita:title>
-                  <dita:title>lcPlanAudience</dita:title>
-                  <dita:title>lcWorkEnv</dita:title>
-                  <dita:title>lcTask</dita:title>
-                  <dita:title>another lcTask (as many more as you would like...)</dita:title>
-                  <dita:title>lcGapAnalysis</dita:title>
-                  <dita:title>an lcGapItem</dita:title>
-                  <dita:title>and another GapItem for you to consider</dita:title>
-                  <dita:title>lcIntervention</dita:title>
-                  <dita:title>lcInterventionItem</dita:title>
-                  <dita:title>another lcInterventionItem (and more if you want 'em)</dita:title>
-                  <dita:title>lcTechnical</dita:title>
-                  <dita:title>lcLMS</dita:title>
-                  <dita:title>lcHandouts</dita:title>
-                  <dita:title>lcClassroom</dita:title>
-                  <dita:title>lcOJT</dita:title>
-                  <dita:title>lcConstraints</dita:title>
-                  <dita:title>lcW3C</dita:title>
-                  <dita:title>lcPlayers</dita:title>
-                  <dita:title>lcViewers</dita:title>
-                  <dita:title>lcResolution</dita:title>
-                  <dita:title>lcFileSizeLimitations</dita:title>
-                  <dita:title>lcDownloadTime</dita:title>
-                  <dita:title>lcSecurity</dita:title>
                </rdf:Description>
             </dita:href>
          </rdf:Description>
@@ -91,13 +57,6 @@
                   <rdf:type rdf:resource="http://purl.org/dita/ns#LearningOverview"/>
                   <dita:id>d10e5</dita:id>
                   <dita:title>Learning Overview topic</dita:title>
-                  <dita:title>Introduction</dita:title>
-                  <dita:title>Audience</dita:title>
-                  <dita:title>Duration</dita:title>
-                  <dita:title>Prerequisites</dita:title>
-                  <dita:title>Objectives</dita:title>
-                  <dita:title>Resources</dita:title>
-                  <dita:title>Additional sections</dita:title>
                </rdf:Description>
             </dita:href>
          </rdf:Description>
@@ -125,7 +84,6 @@
                      <rdf:type rdf:resource="http://purl.org/dita/ns#LearningAssessment"/>
                      <dita:id>d11e64</dita:id>
                      <dita:title>Assessment</dita:title>
-                     <dita:title>True - False</dita:title>
                   </rdf:Description>
                   <rdf:Description rdf:about="http://data.example.com/resources/learningSummary/d11e103">
                      <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
@@ -133,7 +91,6 @@
                      <rdf:type rdf:resource="http://purl.org/dita/ns#LearningSummary"/>
                      <dita:id>d11e103</dita:id>
                      <dita:title>Summary</dita:title>
-                     <dita:title>A recap of objectives, perhaps</dita:title>
                   </rdf:Description>
                </rdf:Description>
             </dita:href>
@@ -150,43 +107,36 @@
                   <rdf:type rdf:resource="http://purl.org/dita/ns#LearningAssessment"/>
                   <dita:id>d12e5</dita:id>
                   <dita:title>Certification Test</dita:title>
-                  <dita:title>True - False sun rising</dita:title>
                   <dita:referenceObject>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/image:1;17:51">
-                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
-                     </rdf:Description>
-                  </dita:referenceObject>
-                  <dita:title>Multiple Choice - IEEE standards trivia</dita:title>
-                  <dita:title>Finding Major League Baseball logos</dita:title>
-                  <dita:referenceObject>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/image:2;70:39">
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5/image:1;17:51">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
                      </rdf:Description>
                   </dita:referenceObject>
                   <dita:referenceObject>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/image:3;79:39">
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5/image:2;70:39">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
                      </rdf:Description>
                   </dita:referenceObject>
                   <dita:referenceObject>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/image:4;88:39">
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5/image:3;79:39">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
                      </rdf:Description>
                   </dita:referenceObject>
                   <dita:referenceObject>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/image:5;96:39">
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5/image:4;88:39">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
                      </rdf:Description>
                   </dita:referenceObject>
-                  <dita:title>Sequencing City Populations in the U.S.</dita:title>
-                  <dita:title>Matching teams with cities</dita:title>
-                  <dita:title>Team logos hotspot</dita:title>
                   <dita:referenceObject>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/image:6;169:41">
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5/image:5;96:39">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
                      </rdf:Description>
                   </dita:referenceObject>
-                  <dita:title>Summary</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5/image:6;169:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:referenceObject>
                </rdf:Description>
             </dita:href>
          </rdf:Description>
@@ -202,12 +152,12 @@
                   <rdf:type rdf:resource="http://purl.org/dita/ns#LearningSummary"/>
                   <dita:id>d13e5</dita:id>
                   <dita:title>Learning summary</dita:title>
-                  <dita:title>Summary</dita:title>
-                  <dita:title>Objectives</dita:title>
-                  <dita:title>Review</dita:title>
-                  <dita:title>Next steps</dita:title>
-                  <dita:title>Resources</dita:title>
-                  <dita:title>More sections</dita:title>
+                  <dita:referenceObject>
+                     <rdf:Description rdf:about="http://data.example.com/resources/learningSummary/d13e5/xref:1;30:118">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:href/>
+                     </rdf:Description>
+                  </dita:referenceObject>
                </rdf:Description>
             </dita:href>
          </rdf:Description>
