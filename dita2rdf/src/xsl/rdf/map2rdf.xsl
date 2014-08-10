@@ -26,21 +26,19 @@
 		<xsl:value-of select="concat($documentUri,'/keys/',$keyname)"/>
 	</xsl:function>
 	
-	
-	
 	<xsl:template match="*[contains(@class,' map/map ')]">
-		<xsl:param name="mapLanguage">
+		<xsl:param name="language">
 			<xsl:value-of select="@xml:lang"/>
 		</xsl:param>
 		<xsl:param name="mapId" select="if (@id!='') then @id else generate-id()"/>
-		<xsl:param name="mapUri">
+		<xsl:param name="documentUri">
 			<xsl:value-of select="colin:getInformationObjectUri(local-name(),@xml:lang,$mapId)"/>
 		</xsl:param>
 			
-		<rdf:Description rdf:about="{$mapUri}">
+		<rdf:Description rdf:about="{$documentUri}">
 			<xsl:call-template name="colin:getLanguageAtt">
 				<xsl:with-param name="topicLanguage"/>
-				<xsl:with-param name="mapLanguage" select="$mapLanguage" tunnel="yes"/>
+				<xsl:with-param name="language" select="$language" tunnel="yes"/>
 			</xsl:call-template>
 			<xsl:call-template name="colin:getRdfTypes">
 				<xsl:with-param name="class" select="@class"/>
@@ -49,30 +47,13 @@
 				<xsl:value-of select="$mapId"/>
 			</dita:id>
 			<xsl:apply-templates>
-				<xsl:with-param name="mapLanguage" select="$mapLanguage" tunnel="yes"/>
-				<xsl:with-param name="mapUri" select="$mapUri" tunnel="yes"/>
+				<xsl:with-param name="language" select="$language" tunnel="yes"/>
+				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
 			</xsl:apply-templates>			
 		</rdf:Description>		
 	</xsl:template>
 		
-	<xsl:template match="*[contains(@class, ' map/topicref ')]">
-		<xsl:param name="mapUri" tunnel="yes"/>
-		<dita:referenceObject>
-			<rdf:Description rdf:about="{colin:getReferenceObjectUri($mapUri,@xtrc)}">
-				<xsl:call-template name="colin:getRdfTypes">
-					<xsl:with-param name="class" select="@class"/>
-				</xsl:call-template>
-				<xsl:apply-templates select=".[@href]/@keys"/>
-				<xsl:apply-templates select="@keyref"/>
-				<xsl:if test="not(@keys) and not(@keyref)">
-					<xsl:apply-templates select="@href[not('')]"/>
-				</xsl:if>
-				<!-- For now, only extract keys if they are references 
-							Only extract @href if no @keys-->
-			</rdf:Description>
-		</dita:referenceObject>
-		<xsl:apply-templates/>
-	</xsl:template>
+
 	<xsl:template match="@keys">
 		<xsl:param name="mapUri" tunnel="yes"/>
 		<xsl:variable name="base" select="translate(../@xtrf,'\','/')"/>

@@ -138,9 +138,9 @@
 		<doc:desc>Catch all template for reference objects (that have a non-empty @href). Topicref, image, xref, etc.</doc:desc>
 	</doc:doc>
 	<xsl:template match="*[@href and @href!='']">
-		<xsl:param name="mapUri" tunnel="yes"/>
+		<xsl:param name="documentUri" tunnel="yes"/>
 		<dita:referenceObject>
-			<rdf:Description rdf:about="{colin:getReferenceObjectUri($mapUri,@xtrc)}">
+			<rdf:Description rdf:about="{colin:getReferenceObjectUri($documentUri,@xtrc)}">
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>

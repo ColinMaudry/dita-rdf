@@ -21,10 +21,8 @@
 	<xsl:template match="*[contains(@class, ' topic/topic ')]">
 		<xsl:param name="topicLanguage" select="@xml:lang"/>
 		<xsl:param name="topicId" select="if (@oid!='') then @oid else generate-id()"/>
-		<xsl:param name="topicUri">
-			<xsl:value-of select="colin:getInformationObjectUri(local-name(),@xml:lang,$topicId)"/>
-		</xsl:param>
-		<rdf:Description rdf:about="{$topicUri}">
+		<xsl:param name="documentUri" select="colin:getInformationObjectUri(local-name(),@xml:lang,$topicId)"/>
+		<rdf:Description rdf:about="{$documentUri}">
 			<xsl:call-template name="colin:getLanguageAtt"/>
 			<xsl:call-template name="colin:getRdfTypes">
 				<xsl:with-param name="class" select="@class"/>
@@ -32,10 +30,10 @@
 			<dita:id>
 				<xsl:value-of select="$topicId"/>
 			</dita:id>
-			<xsl:apply-templates>
+			<xsl:apply-templates select="*">
 				<xsl:with-param name="topicLanguage" select="$topicLanguage" tunnel="yes"/>
-				<xsl:with-param name="topicUri" select="$topicUri" tunnel="yes"/>
-			</xsl:apply-templates>			
+				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
+			</xsl:apply-templates>
 		</rdf:Description>		
 	</xsl:template>	
 	<doc:doc>
@@ -47,6 +45,8 @@
 		">
 		<xsl:apply-templates/>
 	</xsl:template>
-	
+	<xsl:template match="*[contains(@class, ' topic/body ')]">
+		<xsl:apply-templates select=" descendant::*[@href]"/>
+	</xsl:template>
 	
 </xsl:stylesheet>
