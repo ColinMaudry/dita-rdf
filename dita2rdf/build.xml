@@ -56,6 +56,7 @@
 			<env key="CLASSPATH" value="${ditaot.classpath}"/>
 			<arg prefix="-Djavax.xml.transform.TransformerFactory=" value="net.sf.saxon.TransformerFactoryImpl"/>
 			<arg prefix="-Dargs.input=" path="${ditaot.dir}/docsrc/userguide.ditamap"/>
+			<!--<arg prefix="-Dargs.input=" path="${demo.dir}/learning/learningsample.ditamap"/>-->
 			<arg prefix="-Doutput.dir=" path="${demo.dir}/out"/>
 			<arg prefix="-Ddita.temp.dir=" path="${temp.demo.dir}"/>
 			<arg prefix="-Dclean.temp=" value="no"/>
