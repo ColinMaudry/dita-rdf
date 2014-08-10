@@ -99,14 +99,14 @@
 			<xsl:apply-templates/>
 		</dita:author>
 	</xsl:template>
-	<xsl:template match="@keyref"> </xsl:template>
-	<xsl:template match="@href[../@format and not(../@format['dita' or 'ditamap'])]">
+	<xsl:template match="@keyref"/> 
+	<xsl:template match="@href[../@format and not(../@format='dita' or ../@format='ditamap')]">
 		<dita:href rdf:resource="{.}"/>
 		<dita:format>
 			<xsl:value-of select="../@format"/>
 		</dita:format>
 	</xsl:template>
-	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format['dita' or 'ditamap']]">
+	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format='dita' or ../@format='ditamap']">
 		<xsl:variable name="documentHref">
 			<xsl:choose>
 				<xsl:when test="contains(.,'#')">
@@ -141,8 +141,8 @@
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<xsl:param name="debug" select="$debug"/>
 		<xsl:if test="$debug='1'">
-			<xsl:message>
-				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>
+			<xsl:message xml:space="default">
+				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href"/>]
 			</xsl:message>
 		</xsl:if>
 		<dita:referenceObject>
