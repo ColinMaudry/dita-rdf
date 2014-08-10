@@ -85,7 +85,10 @@
 		</xsl:for-each>
 	</xsl:template>
 
-	<xsl:template match="*[contains(@class,' topic/title ')] | @title[../*[contains(@class,' map/map ')]]">
+	<xsl:template match="
+		*[contains(@class, ' topic/topic ')]/*[contains(@class,' topic/title ')] |
+		*[contains(@class, ' map/map ')]/*[contains(@class,' topic/title ')] |
+		@title[../*[contains(@class,' map/map ')]]">
 		<dita:title>
 			<xsl:call-template name="colin:getLanguageAtt"/>
 			<xsl:value-of select="."/>
@@ -104,8 +107,18 @@
 		</dita:format>
 	</xsl:template>
 	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format['dita' or 'ditamap']]">
+		<xsl:variable name="documentHref">
+			<xsl:choose>
+				<xsl:when test="contains(.,'#')">
+					<xsl:value-of select="concat(substring-before(.,'#'),'#',substring-before(substring-after(.,'#'),'/'))"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="."/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
 		<dita:href>
-			<xsl:apply-templates select="document(., /)/*"/>
+			<xsl:apply-templates select="document($documentHref, /)/*"/>
 		</dita:href>
 	</xsl:template>
 	<xsl:template match="@href[contains(.,'.xml') and not(../@format)]">
@@ -120,5 +133,27 @@
 				<dita:href rdf:resource="{.}"/>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+	<doc:doc>
+		<doc:desc>Catch all template for reference objects (that have a non-empty @href). Topicref, image, xref, etc.</doc:desc>
+	</doc:doc>
+	<xsl:template match="*[@href and @href!='']">
+		<xsl:param name="mapUri" tunnel="yes"/>
+		<dita:referenceObject>
+			<rdf:Description rdf:about="{colin:getReferenceObjectUri($mapUri,@xtrc)}">
+				<xsl:call-template name="colin:getRdfTypes">
+					<xsl:with-param name="class" select="@class"/>
+				</xsl:call-template>
+				<xsl:apply-templates select=".[@href]/@keys"/>
+				<xsl:apply-templates select="@keyref"/>
+				<xsl:if test="not(@keys) and not(@keyref)">
+					<xsl:apply-templates select="@href[not('')]"/>
+				</xsl:if>
+				<!-- For now, only extract keys if they have references 
+							Only extract @href if no @keys-->
+			</rdf:Description>
+		</dita:referenceObject>
+		<!-- Nesting (e.g. of topicref) is not extracted. Not considered meaningful for the purpose of metadata querying. -->
+		<xsl:apply-templates/>
 	</xsl:template>
 </xsl:stylesheet>
