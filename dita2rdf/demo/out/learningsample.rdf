@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:dita="http://purl.org/dita/ns#"
+         xmlns:schema="http://schema.org/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ot="http://www.idiominc.com/opentopic"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/">
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:colin="http://colin.maudry.com/"
+                    xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
+                    rdf:about="http://data.example.com/resources/map/learningsample">
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+      <dita:id>learningsample</dita:id>
+      <dita:title>learning content samples</dita:title>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/learningObject:1;7:93">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#LearningObject"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/learningOverview/d8e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningOverview"/>
+                  <dita:id>d8e5</dita:id>
+                  <dita:title>The DITA Learning Topic Types</dita:title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/learningPlanRef:1;8:69">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#LearningPlanRef"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/learningPlan/d9e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningPlan"/>
+                  <dita:id>d9e5</dita:id>
+                  <dita:title>Learning Plan</dita:title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/learningOverviewRef:1;9:81">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#LearningOverviewRef"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/learningOverview/d10e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningOverview"/>
+                  <dita:id>d10e5</dita:id>
+                  <dita:title>Learning Overview topic</dita:title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/learningContentRef:1;10:78">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#LearningContentRef"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/learningContent/d11e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningContent"/>
+                  <dita:id>d11e5</dita:id>
+                  <dita:title>Creating a memo</dita:title>
+                  <rdf:Description rdf:about="http://data.example.com/resources/task/d11e25">
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                     <dita:id>d11e25</dita:id>
+                     <dita:title>Creating a memo</dita:title>
+                  </rdf:Description>
+                  <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d11e64">
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#LearningAssessment"/>
+                     <dita:id>d11e64</dita:id>
+                     <dita:title>Assessment</dita:title>
+                  </rdf:Description>
+                  <rdf:Description rdf:about="http://data.example.com/resources/learningSummary/d11e103">
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                     <rdf:type rdf:resource="http://purl.org/dita/ns#LearningSummary"/>
+                     <dita:id>d11e103</dita:id>
+                     <dita:title>Summary</dita:title>
+                  </rdf:Description>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/learningPostAssessmentRef:1;11:87">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#LearningPostAssessmentRef"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/learningAssessment/d12e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningAssessment"/>
+                  <dita:id>d12e5</dita:id>
+                  <dita:title>Certification Test</dita:title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+      <dita:referenceObject>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/learningsample/learningSummaryRef:1;12:78">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#LearningSummaryRef"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/learningSummary/d13e5">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#LearningSummary"/>
+                  <dita:id>d13e5</dita:id>
+                  <dita:title>Learning summary</dita:title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:referenceObject>
+   </rdf:Description>
+</rdf:RDF>

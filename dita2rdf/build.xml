@@ -47,7 +47,9 @@
 	</target>
 	
 	<target name="demo">
-		<delete dir="demo/out"/>
+		<delete>
+			<fileset dir="demo/out" includes="**/*" excludes="*.rdf"/>
+		</delete>
 		<mkdir dir="${temp.demo.dir}"/>
 		<exec dir="${ditaot.dir}" executable="${ditaot.dir}tools/ant/bin/ant.bat" searchpath="true">
 			<env key="DITA_DIR" value="${ditaot.dir}"/>
