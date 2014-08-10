@@ -22,6 +22,12 @@
 		<xsl:param name="topicLanguage" select="@xml:lang"/>
 		<xsl:param name="topicId" select="if (@oid!='') then @oid else generate-id()"/>
 		<xsl:param name="documentUri" select="colin:getInformationObjectUri(local-name(),@xml:lang,$topicId)"/>
+		<xsl:param name="debug" select="$debug"/>
+		<xsl:if test="$debug='1'">
+			<xsl:message>
+				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>
+			</xsl:message>
+		</xsl:if>
 		<rdf:Description rdf:about="{$documentUri}">
 			<xsl:call-template name="colin:getLanguageAtt"/>
 			<xsl:call-template name="colin:getRdfTypes">

@@ -139,6 +139,12 @@
 	</doc:doc>
 	<xsl:template match="*[@href and @href!='']">
 		<xsl:param name="documentUri" tunnel="yes"/>
+		<xsl:param name="debug" select="$debug"/>
+		<xsl:if test="$debug='1'">
+			<xsl:message>
+				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>
+			</xsl:message>
+		</xsl:if>
 		<dita:referenceObject>
 			<rdf:Description rdf:about="{colin:getReferenceObjectUri($documentUri,@xtrc)}">
 				<xsl:call-template name="colin:getRdfTypes">

@@ -34,7 +34,12 @@
 		<xsl:param name="documentUri">
 			<xsl:value-of select="colin:getInformationObjectUri(local-name(),@xml:lang,$mapId)"/>
 		</xsl:param>
-			
+		<xsl:param name="debug" select="$debug"/>
+		<xsl:if test="$debug='1'">
+			<xsl:message>
+				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>
+			</xsl:message>
+		</xsl:if>
 		<rdf:Description rdf:about="{$documentUri}">
 			<xsl:call-template name="colin:getLanguageAtt">
 				<xsl:with-param name="topicLanguage"/>

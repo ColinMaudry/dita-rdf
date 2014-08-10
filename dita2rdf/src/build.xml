@@ -166,6 +166,7 @@
 			<param name="input.dir.url" expression="${user.input.dir.url}"></param>
 			<param name="output.dir.url" expression="${dita.map.output.dir.url}"></param>
 			<param name="work.dir.url" expression="${work.dir.url}"></param>
+			<param name="debug" expression="${args.debug}"></param>
 			
 			<xmlcatalog>
 				<catalogpath path="${xml.catalog.files}"></catalogpath>
