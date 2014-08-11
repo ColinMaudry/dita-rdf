@@ -107,6 +107,7 @@
 		</dita:format>
 	</xsl:template>
 	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format='dita' or ../@format='ditamap']">
+		<xsl:param name="previousReference" tunnel="yes"/>
 		<xsl:variable name="documentHref">
 			<xsl:choose>
 				<xsl:when test="contains(.,'#')">
@@ -118,15 +119,38 @@
 			</xsl:choose>
 		</xsl:variable>
 		<dita:href>
-			<xsl:apply-templates select="document($documentHref, /)/*"/>
+			<!-- Only parse the next document if the current document is part of the documnentation set.
+			See https://github.com/ColinMaudry/dita-rdf/issues/42 -->
+			<xsl:choose>
+				<xsl:when test="contains($previousReference,' map/topicref ') or $previousReference=''">
+					<xsl:apply-templates select="document($documentHref, /)/*">
+						<xsl:with-param select="../@class" name="previousReference" tunnel="yes" as="attribute()"/>
+						
+					</xsl:apply-templates>
+				</xsl:when>
+				<xsl:otherwise>
+					<dita:href rdf:resource="{$documentHref}"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</dita:href>
 	</xsl:template>
 	<xsl:template match="@href[contains(.,'.xml') and not(../@format)]">
+		<xsl:param name="previousReference" tunnel="yes"/>
+		<!-- Only parse the next document if the current document is part of the documnentation set.
+			See https://github.com/ColinMaudry/dita-rdf/issues/42 -->
 		<xsl:choose>
 			<xsl:when test="document(., /)/*[@class][@domains]">
-				<!-- Looks like DITA... -->
 				<dita:href>
-					<xsl:apply-templates select="document(., /)/*"/>
+					<xsl:choose>
+						<xsl:when test="contains($previousReference,' map/topicref ') or $previousReference=''">
+							<xsl:apply-templates select="document(., /)/*">
+								<xsl:with-param select="../@class" name="previousReference" tunnel="yes" as="attribute()"/>
+							</xsl:apply-templates>
+						</xsl:when>
+						<xsl:otherwise>
+							<dita:href rdf:resource="{.}"/>
+						</xsl:otherwise>
+					</xsl:choose>
 				</dita:href>
 			</xsl:when>
 			<xsl:otherwise>
@@ -139,11 +163,8 @@
 	</doc:doc>
 	<xsl:template match="*[@href and @href!='']">
 		<xsl:param name="documentUri" tunnel="yes"/>
-		<xsl:param name="debug" select="$debug"/>
 		<xsl:if test="$debug='1'">
-			<xsl:message xml:space="default">
-				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href"/>]
-			</xsl:message>
+			<xsl:message xml:space="default"><xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href"/>]</xsl:message>
 		</xsl:if>
 		<dita:referenceObject>
 			<rdf:Description rdf:about="{colin:getReferenceObjectUri($documentUri,@xtrc)}">
@@ -153,7 +174,7 @@
 				<xsl:apply-templates select=".[@href]/@keys"/>
 				<xsl:apply-templates select="@keyref"/>
 				<xsl:if test="not(@keys) and not(@keyref)">
-					<xsl:apply-templates select="@href[not('')]"/>
+					<xsl:apply-templates select="@href[not('')]"/>				
 				</xsl:if>
 				<!-- For now, only extract keys if they have references 
 							Only extract @href if no @keys-->

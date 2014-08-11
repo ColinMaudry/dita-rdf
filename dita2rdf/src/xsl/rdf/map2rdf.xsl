@@ -60,12 +60,12 @@
 		
 
 	<xsl:template match="@keys">
-		<xsl:param name="mapUri" tunnel="yes"/>
+		<xsl:param name="documentUri" tunnel="yes"/>
 		<xsl:variable name="base" select="translate(../@xtrf,'\','/')"/>
 		<xsl:variable name="relative" select="../@href"></xsl:variable>
 		<xsl:for-each select="tokenize(.,' ')">
 			<dita:key>
-				<dita:Key rdf:about="{colin:getKeyUri($mapUri,.)}">
+				<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
 					<dita:href rdf:resource="{resolve-uri($relative,$base)}"/>
 				</dita:Key>
 			</dita:key>
