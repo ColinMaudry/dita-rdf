@@ -25,7 +25,54 @@
 	<xsl:template match="/" mode="not-root-document">
 		<xsl:apply-templates/>
 	</xsl:template>
-
+	
+	<xsl:template match="*[contains(@class,' map/map ')] | *[contains(@class,' topic/topic ')]">
+		<xsl:param name="language" tunnel="yes"/>
+		<xsl:param name="docLanguage">
+			<xsl:choose>
+				<xsl:when test="@xml:lang!=''">
+					<xsl:value-of select="@xml:lang"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$language"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:param>
+		<xsl:param name="id" select="if (@id!='') then @id else generate-id()"/>
+		<xsl:param name="documentUri">
+			<xsl:value-of select="colin:getInformationObjectUri(local-name(),@xml:lang,$id)"/>
+		</xsl:param>
+		<xsl:param name="debug" select="$debug"/>
+		<xsl:if test="$debug='1'">
+			<xsl:message>
+				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>
+			</xsl:message>
+		</xsl:if>
+		<rdf:Description rdf:about="{$documentUri}">
+			<xsl:if test="$docLanguage !=''">
+				<dita:lang><xsl:value-of select="$docLanguage"/></dita:lang>
+			</xsl:if>
+			<xsl:call-template name="colin:getRdfTypes">
+				<xsl:with-param name="class" select="@class"/>
+			</xsl:call-template>
+			<dita:id>
+				<xsl:value-of select="$id"/>
+			</dita:id>
+			<xsl:if test="@title!=''">
+				<dita:title>
+					<xsl:if test="$docLanguage !=''">
+						<xsl:attribute name="xml:lang" select="$docLanguage"/>
+					</xsl:if>
+					<xsl:value-of select="@title"/>
+				</dita:title>
+			</xsl:if>
+			<xsl:apply-templates>
+				<!-- The language and the documentUri parameters are tunneled to all further templates until the value is overriden by the next document. -->
+				<xsl:with-param name="language" select="$docLanguage" tunnel="yes"/>
+				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
+			</xsl:apply-templates>			
+		</rdf:Description>		
+	</xsl:template>
 
 	<xsl:function as="xs:anyURI" name="colin:getInformationObjectUri">
 		<xsl:param name="resourceFamily"/>
@@ -58,16 +105,30 @@
 		</xsl:for-each>
 	</xsl:template>
 
+<!-- The beauty of the tunnels: whenever @xml:lang is found, the $language param is set or reset and passed to the next templates. -->
+	<xsl:template match="@xml:lang[.!='']">
+		<xsl:param name="language"/>
+		<xsl:apply-templates>
+			<xsl:with-param name="language" select="." tunnel="yes"/>
+		</xsl:apply-templates>
+	</xsl:template>
+	<xsl:template name="colin:getLanguageAtt">
+		<xsl:param name="language" tunnel="yes"/>
+		<xsl:if test="$language !=''">
+			<xsl:attribute name="xml:lang" select="$language"/>
+		</xsl:if>
+	</xsl:template>
+
 	<xsl:template match="
 		*[contains(@class, ' topic/topic ')]/*[contains(@class,' topic/title ')] |
-		*[contains(@class, ' map/map ')]/*[contains(@class,' topic/title ')] |
-		@title[../*[contains(@class,' map/map ')]]">
+		*[contains(@class, ' map/map ')]/*[contains(@class,' topic/title ')] ">
 		<dita:title>
 			<xsl:call-template name="colin:getLanguageAtt"/>
-			<xsl:value-of select="."/>
+					<xsl:value-of select="."/>
 		</dita:title>
 	</xsl:template>
-	<xsl:template match="*[contains(@class, ' topic/author ')]">
+	
+	<xsl:template match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/author ')]">
 		<dita:author>
 			<xsl:apply-templates/>
 		</dita:author>

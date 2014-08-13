@@ -15,36 +15,7 @@
 	xmlns:ot="http://www.idiominc.com/opentopic"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
-	<doc:doc>
-		<doc:desc>The root template for topics.</doc:desc>
-	</doc:doc>
-	<xsl:template match="*[contains(@class, ' topic/topic ')]">
-		<xsl:param name="language" select="@xml:lang"/>
-		<xsl:param name="topicId" select="if (@id!='') then @id else generate-id()"/>
-		<xsl:param name="documentUri" select="colin:getInformationObjectUri(local-name(),@xml:lang,$topicId)"/>
-		<xsl:param name="debug" select="$debug"/>
-		<xsl:if test="$debug='1'">
-			<xsl:message>
-				<xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>
-			</xsl:message>
-		</xsl:if>
-		<rdf:Description rdf:about="{$documentUri}">
-			<xsl:if test="$language !=''">
-				<dita:lang><xsl:value-of select="$language"/></dita:lang>
-			</xsl:if>
-			<xsl:call-template name="colin:getRdfTypes">
-				<xsl:with-param name="class" select="@class"/>
-			</xsl:call-template>
-			<dita:id>
-				<xsl:value-of select="$topicId"/>
-			</dita:id>
-			<xsl:apply-templates select="*">
-				<!-- The language and the documentUri parameters are tunneled to all further templates until the value is overriden by the next document. -->
-				<xsl:with-param name="language" select="$language" tunnel="yes"/>
-				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
-			</xsl:apply-templates>
-		</rdf:Description>		
-	</xsl:template>	
+
 	<doc:doc>
 		<doc:desc>Passthrough template for topics</doc:desc>
 	</doc:doc>
@@ -55,7 +26,8 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/body ')]">
-		<xsl:apply-templates select=" descendant::*[@href]"/>
+		<!-- In topic/body, we only need the non-empty @href and @keyref elements -->
+		<xsl:apply-templates select="descendant::*[@href!='' or @keyref!='']"/>
 	</xsl:template>
 	
 </xsl:stylesheet>
