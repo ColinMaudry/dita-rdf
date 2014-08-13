@@ -41,10 +41,9 @@
 			</xsl:message>
 		</xsl:if>
 		<rdf:Description rdf:about="{$documentUri}">
-			<xsl:call-template name="colin:getLanguageAtt">
-				<xsl:with-param name="topicLanguage"/>
-				<xsl:with-param name="language" select="$language" tunnel="yes"/>
-			</xsl:call-template>
+			<xsl:if test="$language !=''">
+				<dita:lang><xsl:value-of select="$language"/></dita:lang>
+			</xsl:if>
 			<xsl:call-template name="colin:getRdfTypes">
 				<xsl:with-param name="class" select="@class"/>
 			</xsl:call-template>
@@ -52,6 +51,7 @@
 				<xsl:value-of select="$mapId"/>
 			</dita:id>
 			<xsl:apply-templates>
+				<!-- The language and the documentUri parameters are tunneled to all further templates until the value is overriden by the next document. -->
 				<xsl:with-param name="language" select="$language" tunnel="yes"/>
 				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
 			</xsl:apply-templates>			

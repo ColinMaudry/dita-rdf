@@ -26,15 +26,6 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 
-	<doc:doc>
-		<doc:desc>Elements and attributes that are not specifically matched by a template are ignored.</doc:desc>
-	</doc:doc>
-
-
-	<!-- Function that processes profiling attributes 
-	<xsl:function name="colin:getProfilingAttributes">
-		
-	</xsl:function>-->
 
 	<xsl:function as="xs:anyURI" name="colin:getInformationObjectUri">
 		<xsl:param name="resourceFamily"/>
@@ -54,24 +45,6 @@
 		<xsl:param name="xtrc"/>
 		<xsl:value-of select="concat($documentUri,'/',$xtrc)"/>
 	</xsl:function>
-
-	<xsl:template as="attribute(xml:lang)?" name="colin:getLanguageAtt">
-		<xsl:param name="topicLanguage" tunnel="yes"/>
-		<xsl:param name="mapLanguage" tunnel="yes"/>
-		<xsl:choose>
-			<xsl:when test="$topicLanguage !=''">
-				<xsl:attribute name="xml:lang">
-					<xsl:value-of select="$topicLanguage"/>
-				</xsl:attribute>
-			</xsl:when>
-			<xsl:when test="$mapLanguage !=''">
-				<xsl:attribute name="xml:lang">
-					<xsl:value-of select="$mapLanguage"/>
-				</xsl:attribute>
-			</xsl:when>
-		</xsl:choose>
-	</xsl:template>
-
 
 	<xsl:template name="colin:getRdfTypes">
 		<xsl:param as="xs:string" name="class"/>

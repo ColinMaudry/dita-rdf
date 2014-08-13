@@ -19,8 +19,8 @@
 		<doc:desc>The root template for topics.</doc:desc>
 	</doc:doc>
 	<xsl:template match="*[contains(@class, ' topic/topic ')]">
-		<xsl:param name="topicLanguage" select="@xml:lang"/>
-		<xsl:param name="topicId" select="if (@oid!='') then @oid else generate-id()"/>
+		<xsl:param name="language" select="@xml:lang"/>
+		<xsl:param name="topicId" select="if (@id!='') then @id else generate-id()"/>
 		<xsl:param name="documentUri" select="colin:getInformationObjectUri(local-name(),@xml:lang,$topicId)"/>
 		<xsl:param name="debug" select="$debug"/>
 		<xsl:if test="$debug='1'">
@@ -29,7 +29,9 @@
 			</xsl:message>
 		</xsl:if>
 		<rdf:Description rdf:about="{$documentUri}">
-			<xsl:call-template name="colin:getLanguageAtt"/>
+			<xsl:if test="$language !=''">
+				<dita:lang><xsl:value-of select="$language"/></dita:lang>
+			</xsl:if>
 			<xsl:call-template name="colin:getRdfTypes">
 				<xsl:with-param name="class" select="@class"/>
 			</xsl:call-template>
@@ -37,7 +39,8 @@
 				<xsl:value-of select="$topicId"/>
 			</dita:id>
 			<xsl:apply-templates select="*">
-				<xsl:with-param name="topicLanguage" select="$topicLanguage" tunnel="yes"/>
+				<!-- The language and the documentUri parameters are tunneled to all further templates until the value is overriden by the next document. -->
+				<xsl:with-param name="language" select="$language" tunnel="yes"/>
 				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
 			</xsl:apply-templates>
 		</rdf:Description>		
