@@ -132,6 +132,10 @@
 			rdfs:comment "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
 			rdfs:label "Xref" .
+		:Coderef rdfs:subClassOf :ReferenceObject ;
+			rdfs:comment "The <coderef> element references an external file that contains literal code."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html> ;
+			rdfs:label "Coderef" .
 
 		:LearningObject rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html> ;
