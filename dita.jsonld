@@ -63,6 +63,20 @@
       }
     },
     {
+      "@id": "http://purl.org/dita/ns#Coderef",
+      "rdfs:comment": {
+        "@value": "The <coderef> element references an external file that contains literal code.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "Coderef",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
+      }
+    },
+    {
       "@id": "http://purl.org/dita/ns#Concept",
       "rdfs:comment": {
         "@value": "The DITA concept document type uses the concept information type.",
@@ -279,6 +293,20 @@
       },
       "rdfs:subClassOf": {
         "@id": "http://purl.org/dita/ns#LearningBase"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#Link",
+      "rdfs:comment": {
+        "@value": "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "Link",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
       }
     },
     {

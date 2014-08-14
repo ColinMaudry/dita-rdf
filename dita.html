@@ -134,6 +134,49 @@
         </tr>
       </table>
     </td>
+    <td resource=':Coderef'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Coderef</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The &lt;coderef&gt; element references an external file that contains literal code.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td rel='rdfs:subClassOf' resource=':ReferenceObject'>
+            <table class='properties'>
+              <h1 lang='en-US' property='rdfs:label'>DITA base reference object</h1>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:comment
+                </td>
+                <td lang='en-US' property='rdfs:comment'>The DITA reference object is used to link, fetch or push content in relation with another file or object.</td>
+              </tr>
+              <tr class='property'>
+                <td class='label'>
+                  rdfs:subClassOf
+                </td>
+                <td>
+                  <a href='http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement' property='rdfs:subClassOf'>http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
     <td resource=':Concept'>
       <table class='properties'>
         <h1 property='rdfs:label'>Concept</h1>
@@ -206,24 +249,8 @@
           <td class='label'>
             rdfs:subClassOf
           </td>
-          <td rel='rdfs:subClassOf' resource=':ReferenceObject'>
-            <table class='properties'>
-              <h1 lang='en-US' property='rdfs:label'>DITA base reference object</h1>
-              <tr class='property'>
-                <td class='label'>
-                  rdfs:comment
-                </td>
-                <td lang='en-US' property='rdfs:comment'>The DITA reference object is used to link, fetch or push content in relation with another file or object.</td>
-              </tr>
-              <tr class='property'>
-                <td class='label'>
-                  rdfs:subClassOf
-                </td>
-                <td>
-                  <a href='http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement' property='rdfs:subClassOf'>http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement</a>
-                </td>
-              </tr>
-            </table>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
           </td>
         </tr>
       </table>
@@ -488,6 +515,33 @@
           </td>
           <td>
             <a href='http://purl.org/dita/ns#LearningBase' property='rdfs:subClassOf'>http://purl.org/dita/ns#LearningBase</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource=':Link'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Link</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Use the cross-reference (&lt;xref&gt;) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
           </td>
         </tr>
       </table>

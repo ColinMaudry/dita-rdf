@@ -327,4 +327,3 @@
 			rdfs:label "vrm Modification" ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html> ;
 			rdfs:comment "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies."@en-US .
-	
