@@ -202,6 +202,16 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html> ;
 			rdfs:comment "The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables."@en-US ;
 			rdfs:label "title" .
+		:id a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html> ;
+			rdfs:comment "The DITA identity attribute provides a mechanism for identifying content for linking. "@en-US ;
+			rdfs:label "id" .
+		:xtrf a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/global-atts.html> ;
+			rdfs:comment "xml-trace-filename, the original filename"@en-US ;
+			rdfs:label "xtrf" .
 		:searchtitle a rdf:Property ;
 			rdfs:range xsd:string ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html> ;		
@@ -259,6 +269,11 @@
 			rdfs:range :Key ;
 			rdfs:domain :ReferenceObject ;
 			rdfs:comment "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference."@en-US .
+		:keyname a rdf:Property ;
+			rdfs:comment "The name of the key." ;
+			rdfs:domain :Key ;
+			rdfs:label "keyname" ;
+			rdfs:range xsd:string .	
 		:format a rdf:Property ;
 			rdfs:label "format" ;
 			rdfs:comment "The format attribute identifies the format of the resource being cross referenced."@en-US ;

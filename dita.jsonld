@@ -561,6 +561,33 @@
       }
     },
     {
+      "@id": "http://purl.org/dita/ns#id",
+      "@type": "rdf:Property",
+      "rdfs:comment": {
+        "@value": "The DITA identity attribute provides a mechanism for identifying content for linking. ",
+        "@language": "en-us"
+      },
+      "rdfs:label": "id",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#keyname",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The name of the key.",
+      "rdfs:domain": {
+        "@id": "http://purl.org/dita/ns#Key"
+      },
+      "rdfs:label": "keyname",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
       "@id": "http://purl.org/dita/ns#keyref",
       "@type": "rdf:Property",
       "rdfs:comment": {
@@ -911,6 +938,21 @@
       },
       "rdfs:seeAlso": {
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#xtrf",
+      "@type": "rdf:Property",
+      "rdfs:comment": {
+        "@value": "xml-trace-filename, the original filename",
+        "@language": "en-us"
+      },
+      "rdfs:label": "xtrf",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/global-atts.html"
       }
     }
   ]
