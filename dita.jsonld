@@ -77,14 +77,28 @@
       }
     },
     {
-      "@id": "http://purl.org/dita/ns#Conref",
+      "@id": "http://purl.org/dita/ns#Conkeyref",
       "rdfs:comment": {
-        "@value": "Include artwork or images in a DITA topic by using the <image> element.",
+        "@value": "The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics.",
         "@language": "en-us"
       },
-      "rdfs:label": "Image",
+      "rdfs:label": "Conkeyref",
       "rdfs:seeAlso": {
-        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html"
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#ReferenceObject"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#Conref",
+      "rdfs:comment": {
+        "@value": "This attribute is used to reference content that can be reused.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "Conref",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html"
       },
       "rdfs:subClassOf": {
         "@id": "http://purl.org/dita/ns#ReferenceObject"
@@ -136,6 +150,20 @@
       "rdfs:label": "Keydef",
       "rdfs:seeAlso": {
         "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html"
+      },
+      "rdfs:subClassOf": {
+        "@id": "http://purl.org/dita/ns#Topicref"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#Keyref",
+      "rdfs:comment": {
+        "@value": "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.",
+        "@language": "en-us"
+      },
+      "rdfs:label": "Keyref",
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html"
       },
       "rdfs:subClassOf": {
         "@id": "http://purl.org/dita/ns#ReferenceObject"
@@ -410,21 +438,62 @@
       }
     },
     {
-      "@id": "http://purl.org/dita/ns#conref",
+      "@id": "http://purl.org/dita/ns#class",
       "@type": "rdf:Property",
       "rdfs:comment": {
-        "@value": "The scope attribute identifies the closeness of the relationship between the current document and the target resource.",
+        "@value": "Attribute used to store the class attribute and identify the nature of the Conref/Conkeyref.",
+        "@language": "en-us"
+      },
+      "rdfs:domain": [
+        {
+          "@id": "http://purl.org/dita/ns#Conkeyref"
+        },
+        {
+          "@id": "http://purl.org/dita/ns#Conref"
+        }
+      ],
+      "rdfs:label": "class",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/classatt.html"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#conkeyref",
+      "@type": "rdf:Property",
+      "rdfs:comment": {
+        "@value": "The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics.",
         "@language": "en-us"
       },
       "rdfs:domain": {
-        "@id": "http://purl.org/dita/ns#ReferenceObject"
+        "@id": "http://purl.org/dita/ns#Conkeyref"
       },
-      "rdfs:label": "scope",
+      "rdfs:label": "conkeyref",
       "rdfs:range": {
-        "@id": "xsd:anyURI"
+        "@id": "http://purl.org/dita/ns#Key"
       },
       "rdfs:seeAlso": {
-        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html"
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html"
+      }
+    },
+    {
+      "@id": "http://purl.org/dita/ns#conref",
+      "@type": "rdf:Property",
+      "rdfs:comment": {
+        "@value": "This attribute is used to reference content that can be reused.",
+        "@language": "en-us"
+      },
+      "rdfs:domain": {
+        "@id": "http://purl.org/dita/ns#Conref"
+      },
+      "rdfs:label": "conref",
+      "rdfs:range": {
+        "@id": "http://purl.org/dita/ns#Doctype"
+      },
+      "rdfs:seeAlso": {
+        "@id": "http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html"
       }
     },
     {

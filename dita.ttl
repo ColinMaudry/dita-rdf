@@ -108,18 +108,26 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
 			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'."@en-US ;
 			rdfs:label "Mapref" .
-		:Keydef rdfs:subClassOf :ReferenceObject ;
+		:Keydef rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html> ;
 			rdfs:comment "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US ;
 			rdfs:label "Keydef" .
+		:Keyref rdfs:subClassOf :ReferenceObject ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html> ;
+			rdfs:comment "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference."@en-US ;
+			rdfs:label "Keyref" .
 		:Image rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html> ;
 			rdfs:comment "Include artwork or images in a DITA topic by using the <image> element."@en-US ;
 			rdfs:label "Image" .
 		:Conref rdfs:subClassOf :ReferenceObject ;
-			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html> ;
-			rdfs:comment "Include artwork or images in a DITA topic by using the <image> element."@en-US ;
-			rdfs:label "Image" .	
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html> ;
+			rdfs:comment "This attribute is used to reference content that can be reused."@en-US ;
+			rdfs:label "Conref" .
+		:Conkeyref rdfs:subClassOf :ReferenceObject ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html> ;
+			rdfs:comment "The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics."@en-US ;
+			rdfs:label "Conkeyref" .		
 		:Xref rdfs:subClassOf :ReferenceObject ;
 			rdfs:comment "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
@@ -255,19 +263,31 @@
 			rdfs:comment "The scope attribute identifies the closeness of the relationship between the current document and the target resource."@en-US ;
 			rdfs:domain :ReferenceObject ;
 			rdfs:range xsd:string .
-		:conref a rdf:Property ;
-			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html> ;
-			rdfs:label "scope" ;
-			rdfs:comment "The scope attribute identifies the closeness of the relationship between the current document and the target resource."@en-US ;
-			rdfs:domain :ReferenceObject ;
-			rdfs:range xsd:anyURI .
 		:keys a rdf:Property ;
 			rdfs:domain :Keydef, :Topicref ;
 			rdfs:label "keys" ;
 			rdfs:comment "This attribute is used to reference content that can be reused."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html> ;
 			rdfs:range :Key .
-			
+		:conref a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html> ;
+			rdfs:range :Doctype ;
+			rdfs:label "conref" ;
+			rdfs:comment "This attribute is used to reference content that can be reused."@en-US ;
+			rdfs:domain :Conref .
+		:conkeyref a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html> ;
+			rdfs:range :Key ;
+			rdfs:label "conkeyref" ;
+			rdfs:comment "The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics."@en-US ;
+			rdfs:domain :Conkeyref .
+		:class a rdf:Property ;
+			rdfs:comment "Attribute used to store the class attribute and identify the nature of the Conref/Conkeyref."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/classatt.html> ;
+			rdfs:range xsd:string ;
+			rdfs:domain :Conkeyref, :Conref ;
+			rdfs:label "class" .
+
 		#specific to Prodinfo
 		:prodname a rdf:Property ;
 			rdfs:range xsd:string ;
@@ -299,13 +319,4 @@
 			rdfs:label "vrm Modification" ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html> ;
 			rdfs:comment "The vrm element contains information about a single product's version, modification, and release, to which the current topic applies."@en-US .
-		
-			
-		
-	
-	
-	
-		
-
-	
 	

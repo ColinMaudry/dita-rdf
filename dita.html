@@ -1,98 +1,15 @@
 <!DOCTYPE html>
-<html prefix='cc: http://creativecommons.org/ns# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ nfo: http://www.semanticdesktop.org/ontologies/2007/03/22/nfo# nie: http://www.semanticdesktop.org/ontologies/2007/01/19/nie# owl: http://www.w3.org/2002/07/owl# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# vann: http://purl.org/vocab/vann/ xsd: http://www.w3.org/2001/XMLSchema#' xmlns='http://www.w3.org/1999/xhtml'>
+<html prefix=': http://purl.org/dita/ns# cc: http://creativecommons.org/ns# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ nfo: http://www.semanticdesktop.org/ontologies/2007/03/22/nfo# nie: http://www.semanticdesktop.org/ontologies/2007/01/19/nie# owl: http://www.w3.org/2002/07/owl# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# vann: http://purl.org/vocab/vann/ xsd: http://www.w3.org/2001/XMLSchema#' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <base href='http://purl.org/dita/ns#'>
-    <title>DITA RDF ontology</title>
+    <base href='http://colin.maudry.com/ontologies/dita.ttl'>
+    <title>Key</title>
     <link href='http://rdf.kellogg-assoc.com/css/distiller.css' rel='stylesheet' type='text/css'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js' type='text/javascript'></script>
     <script src='http://rdf.kellogg-assoc.com/js/distiller.js' type='text/javascript'></script>
   </head>
   <body>
-    <p>RDFa serialization URI base: &lt;http://purl.org/dita/ns#&gt;</p>
-    <td resource='' typeof='owl:Ontology'>
-      <span class='type'>owl:Ontology</span>
-      <table class='properties'>
-        <h1 property='dcterms:title'>DITA RDF ontology</h1>
-        <tr class='property'>
-          <td class='label'>
-            cc:license
-          </td>
-          <td>
-            <a href='http://unlicense.org' property='cc:license'>http://unlicense.org</a>
-          </td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            dcterms:created
-          </td>
-          <td content='2013-01-04' datatype='xsd:date' property='dcterms:created'>Friday, 04 January 2013</td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            dcterms:creator
-          </td>
-          <td rel='dcterms:creator' resource='http://colin.maudry/rdf/colin-maudry#me'>
-            <table class='properties'>
-              <tr class='property'>
-                <td class='label'>
-                  foaf:mbox
-                </td>
-                <td>
-                  <a href='mailto:colin@maudry.com' property='foaf:mbox'>mailto:colin@maudry.com</a>
-                </td>
-              </tr>
-              <tr class='property'>
-                <td class='label'>
-                  foaf:name
-                </td>
-                <td property='foaf:name'>Colin Maudry</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            dcterms:description
-          </td>
-          <td property='dcterms:description'>The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain).</td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            dcterms:modified
-          </td>
-          <td content='2014-08-03' datatype='xsd:date' property='dcterms:modified'>Sunday, 03 August 2014</td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            vann:preferredNamespacePrefix
-          </td>
-          <td property='vann:preferredNamespacePrefix'>dita</td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            vann:preferredNamespaceUri
-          </td>
-          <td property='vann:preferredNamespaceUri'>http://purl.org/dita/ns#</td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            rdfs:seeAlso
-          </td>
-          <td>
-            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html</a>
-          </td>
-        </tr>
-        <tr class='property'>
-          <td class='label'>
-            foaf:depiction
-          </td>
-          <td>
-            <a href='http://bit.ly/DitaRdfLucidChart' property='foaf:depiction'>http://bit.ly/DitaRdfLucidChart</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td resource='Key' typeof='rdfs:Class'>
+    <p>RDFa serialization URI base: &lt;http://colin.maudry.com/ontologies/dita.ttl&gt;</p>
+    <td resource=':Key' typeof='rdfs:Class'>
       <span class='type'>rdfs:Class</span>
       <table class='properties'>
         <h1 property='rdfs:label'>Key</h1>
@@ -112,7 +29,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Prodinfo' typeof='rdfs:Class'>
+    <td resource=':Prodinfo' typeof='rdfs:Class'>
       <span class='type'>rdfs:Class</span>
       <table class='properties'>
         <h1 property='rdfs:label'>Prodinfo</h1>
@@ -132,8 +49,25 @@
         </tr>
       </table>
     </td>
-    
-    <td resource='Bookmap'>
+    <td resource='http://colin.maudry/rdf/colin-maudry#me'>
+      <table class='properties'>
+        <tr class='property'>
+          <td class='label'>
+            foaf:mbox
+          </td>
+          <td>
+            <a href='mailto:colin@maudry.com' property='foaf:mbox'>mailto:colin@maudry.com</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            foaf:name
+          </td>
+          <td property='foaf:name'>Colin Maudry</td>
+        </tr>
+      </table>
+    </td>
+    <td resource=':Bookmap'>
       <table class='properties'>
         <h1 property='rdfs:label'>Bookmap</h1>
         <tr class='property'>
@@ -154,7 +88,7 @@
           <td class='label'>
             rdfs:subClassOf
           </td>
-          <td rel='rdfs:subClassOf' resource='Map'>
+          <td rel='rdfs:subClassOf' resource=':Map'>
             <table class='properties'>
               <h1 property='rdfs:label'>Map</h1>
               <tr class='property'>
@@ -175,7 +109,7 @@
                 <td class='label'>
                   rdfs:subClassOf
                 </td>
-                <td rel='rdfs:subClassOf' resource='Doctype'>
+                <td rel='rdfs:subClassOf' resource=':Doctype'>
                   <table class='properties'>
                     <h1 property='rdfs:label'>Doctype</h1>
                     <tr class='property'>
@@ -200,7 +134,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Concept'>
+    <td resource=':Concept'>
       <table class='properties'>
         <h1 property='rdfs:label'>Concept</h1>
         <tr class='property'>
@@ -221,7 +155,7 @@
           <td class='label'>
             rdfs:subClassOf
           </td>
-          <td rel='rdfs:subClassOf' resource='Topic'>
+          <td rel='rdfs:subClassOf' resource=':Topic'>
             <table class='properties'>
               <h1 property='rdfs:label'>Topic</h1>
               <tr class='property'>
@@ -251,7 +185,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Conref'>
+    <td resource=':Image'>
       <table class='properties'>
         <h1 property='rdfs:label'>Image</h1>
         <tr class='property'>
@@ -265,14 +199,14 @@
             rdfs:seeAlso
           </td>
           <td>
-            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/conref.html</a>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html</a>
           </td>
         </tr>
         <tr class='property'>
           <td class='label'>
             rdfs:subClassOf
           </td>
-          <td rel='rdfs:subClassOf' resource='ReferenceObject'>
+          <td rel='rdfs:subClassOf' resource=':ReferenceObject'>
             <table class='properties'>
               <h1 lang='en-US' property='rdfs:label'>DITA base reference object</h1>
               <tr class='property'>
@@ -294,21 +228,21 @@
         </tr>
       </table>
     </td>
-    <td resource='Image'>
+    <td resource=':Keyref'>
       <table class='properties'>
-        <h1 property='rdfs:label'>Image</h1>
+        <h1 property='rdfs:label'>Keyref</h1>
         <tr class='property'>
           <td class='label'>
             rdfs:comment
           </td>
-          <td lang='en-US' property='rdfs:comment'>Include artwork or images in a DITA topic by using the &lt;image&gt; element.</td>
+          <td lang='en-US' property='rdfs:comment'>The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.</td>
         </tr>
         <tr class='property'>
           <td class='label'>
             rdfs:seeAlso
           </td>
           <td>
-            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html</a>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html</a>
           </td>
         </tr>
         <tr class='property'>
@@ -321,7 +255,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningAssessment'>
+    <td resource=':LearningAssessment'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningAssessment</h1>
         <tr class='property'>
@@ -342,7 +276,7 @@
           <td class='label'>
             rdfs:subClassOf
           </td>
-          <td rel='rdfs:subClassOf' resource='LearningBase'>
+          <td rel='rdfs:subClassOf' resource=':LearningBase'>
             <table class='properties'>
               <h1 property='rdfs:label'>LearningBase</h1>
               <tr class='property'>
@@ -372,7 +306,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningContent'>
+    <td resource=':LearningContent'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningContent</h1>
         <tr class='property'>
@@ -399,7 +333,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningObject'>
+    <td resource=':LearningObject'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningObject</h1>
         <tr class='property'>
@@ -420,7 +354,7 @@
           <td class='label'>
             rdfs:subClassOf
           </td>
-          <td rel='rdfs:subClassOf' resource='Topicref'>
+          <td rel='rdfs:subClassOf' resource=':Topicref'>
             <table class='properties'>
               <h1 property='rdfs:label'>Topicref</h1>
               <tr class='property'>
@@ -450,7 +384,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningOverview'>
+    <td resource=':LearningOverview'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningOverview</h1>
         <tr class='property'>
@@ -477,7 +411,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningPlan'>
+    <td resource=':LearningPlan'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningPlan</h1>
         <tr class='property'>
@@ -504,7 +438,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningPlanRef'>
+    <td resource=':LearningPlanRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningPlanRef</h1>
         <tr class='property'>
@@ -531,7 +465,7 @@
         </tr>
       </table>
     </td>
-    <td resource='LearningSummary'>
+    <td resource=':LearningSummary'>
       <table class='properties'>
         <h1 property='rdfs:label'>LearningSummary</h1>
         <tr class='property'>
@@ -558,7 +492,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Mapref'>
+    <td resource=':Mapref'>
       <table class='properties'>
         <h1 property='rdfs:label'>Mapref</h1>
         <tr class='property'>
@@ -585,7 +519,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Reference'>
+    <td resource=':Reference'>
       <table class='properties'>
         <h1 property='rdfs:label'>Reference</h1>
         <tr class='property'>
@@ -612,7 +546,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Task'>
+    <td resource=':Task'>
       <table class='properties'>
         <h1 property='rdfs:label'>Task</h1>
         <tr class='property'>
@@ -639,7 +573,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Xref'>
+    <td resource=':Xref'>
       <table class='properties'>
         <h1 property='rdfs:label'>Xref</h1>
         <tr class='property'>
@@ -666,7 +600,7 @@
         </tr>
       </table>
     </td>
-    <td resource='lang' typeof='rdf:Property'>
+    <td resource=':lang' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>language</h1>
@@ -686,7 +620,7 @@
         </tr>
       </table>
     </td>
-    <td resource='learningContentComponentRef'>
+    <td resource=':learningContentComponentRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>learningContentComponentRef</h1>
         <tr class='property'>
@@ -713,7 +647,7 @@
         </tr>
       </table>
     </td>
-    <td resource='learningContentRef'>
+    <td resource=':learningContentRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>learningContentRef</h1>
         <tr class='property'>
@@ -740,7 +674,7 @@
         </tr>
       </table>
     </td>
-    <td resource='learningOverviewRef'>
+    <td resource=':learningOverviewRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>learningOverviewRef</h1>
         <tr class='property'>
@@ -767,7 +701,7 @@
         </tr>
       </table>
     </td>
-    <td resource='learningPostAssessmentRef'>
+    <td resource=':learningPostAssessmentRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>learningPostAssessmentRef</h1>
         <tr class='property'>
@@ -794,7 +728,7 @@
         </tr>
       </table>
     </td>
-    <td resource='learningPreAssessmentRef'>
+    <td resource=':learningPreAssessmentRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>learningPreAssessmentRef</h1>
         <tr class='property'>
@@ -821,7 +755,7 @@
         </tr>
       </table>
     </td>
-    <td resource='learningSummaryRef'>
+    <td resource=':learningSummaryRef'>
       <table class='properties'>
         <h1 property='rdfs:label'>learningSummaryRef</h1>
         <tr class='property'>
@@ -848,7 +782,7 @@
         </tr>
       </table>
     </td>
-    <td resource='othermeta' typeof='rdf:Property'>
+    <td resource=':othermeta' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>othermeta</h1>
@@ -868,7 +802,7 @@
         </tr>
       </table>
     </td>
-    <td resource='Keydef'>
+    <td resource=':Keydef'>
       <table class='properties'>
         <h1 property='rdfs:label'>Keydef</h1>
         <tr class='property'>
@@ -890,13 +824,13 @@
             rdfs:subClassOf
           </td>
           <td>
-            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+            <a href='http://purl.org/dita/ns#Topicref' property='rdfs:subClassOf'>http://purl.org/dita/ns#Topicref</a>
           </td>
         </tr>
       </table>
     </td>
     
-    <td resource='audience' typeof='rdf:Property'>
+    <td resource=':audience' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>audience</h1>
@@ -924,7 +858,7 @@
         </tr>
       </table>
     </td>
-    <td resource='author'>
+    <td resource=':author'>
       <table class='properties'>
         <h1 property='rdfs:label'>author</h1>
         <tr class='property'>
@@ -959,7 +893,7 @@
         </tr>
       </table>
     </td>
-    <td resource='keyword'>
+    <td resource=':keyword'>
       <table class='properties'>
         <h1 property='rdfs:label'>keyword</h1>
         <tr class='property'>
@@ -994,7 +928,7 @@
         </tr>
       </table>
     </td>
-    <td resource='prodinfo' typeof='rdf:Property'>
+    <td resource=':prodinfo' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>prodinfo</h1>
@@ -1022,7 +956,7 @@
         </tr>
       </table>
     </td>
-    <td resource='referenceObject'>
+    <td resource=':referenceObject'>
       <table class='properties'>
         <h1 property='rdfs:label'>referenceObject</h1>
         <tr class='property'>
@@ -1057,7 +991,7 @@
         </tr>
       </table>
     </td>
-    <td resource='shortdesc' typeof='rdf:Property'>
+    <td resource=':shortdesc' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>shortdesc</h1>
@@ -1085,7 +1019,7 @@
         </tr>
       </table>
     </td>
-    <td resource='title'>
+    <td resource=':title'>
       <table class='properties'>
         <h1 property='rdfs:label'>title</h1>
         <tr class='property'>
@@ -1120,22 +1054,76 @@
         </tr>
       </table>
     </td>
-    <td resource='conref' typeof='rdf:Property'>
-      <span class='type'>rdf:Property</span>
+    <td resource=':Conkeyref'>
       <table class='properties'>
-        <h1 property='rdfs:label'>scope</h1>
+        <h1 property='rdfs:label'>Conkeyref</h1>
         <tr class='property'>
           <td class='label'>
             rdfs:comment
           </td>
-          <td lang='en-US' property='rdfs:comment'>The scope attribute identifies the closeness of the relationship between the current document and the target resource.</td>
+          <td lang='en-US' property='rdfs:comment'>The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource=':Conref'>
+      <table class='properties'>
+        <h1 property='rdfs:label'>Conref</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>This attribute is used to reference content that can be reused.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:subClassOf
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:subClassOf'>http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource=':conkeyref' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>conkeyref</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics.</td>
         </tr>
         <tr class='property'>
           <td class='label'>
             rdfs:domain
           </td>
           <td>
-            <a href='http://purl.org/dita/ns#ReferenceObject' property='rdfs:domain'>http://purl.org/dita/ns#ReferenceObject</a>
+            <a href='http://purl.org/dita/ns#Conkeyref' property='rdfs:domain'>http://purl.org/dita/ns#Conkeyref</a>
           </td>
         </tr>
         <tr class='property'>
@@ -1143,7 +1131,7 @@
             rdfs:range
           </td>
           <td>
-            <a href='http://www.w3.org/2001/XMLSchema#anyURI' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#anyURI</a>
+            <a href='http://purl.org/dita/ns#Key' property='rdfs:range'>http://purl.org/dita/ns#Key</a>
           </td>
         </tr>
         <tr class='property'>
@@ -1151,12 +1139,48 @@
             rdfs:seeAlso
           </td>
           <td>
-            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html</a>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html</a>
           </td>
         </tr>
       </table>
     </td>
-    <td resource='format' typeof='rdf:Property'>
+    <td resource=':conref' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>conref</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>This attribute is used to reference content that can be reused.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Conref' property='rdfs:domain'>http://purl.org/dita/ns#Conref</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://purl.org/dita/ns#Doctype' property='rdfs:range'>http://purl.org/dita/ns#Doctype</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource=':format' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>format</h1>
@@ -1192,7 +1216,7 @@
         </tr>
       </table>
     </td>
-    <td resource='href' typeof='rdf:Property'>
+    <td resource=':href' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>href</h1>
@@ -1228,7 +1252,7 @@
         </tr>
       </table>
     </td>
-    <td resource='keyref' typeof='rdf:Property'>
+    <td resource=':keyref' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>keyref</h1>
@@ -1264,7 +1288,7 @@
         </tr>
       </table>
     </td>
-    <td resource='platform' typeof='rdf:Property'>
+    <td resource=':platform' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>platform</h1>
@@ -1300,7 +1324,7 @@
         </tr>
       </table>
     </td>
-    <td resource='prodname' typeof='rdf:Property'>
+    <td resource=':prodname' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>prodname</h1>
@@ -1336,7 +1360,7 @@
         </tr>
       </table>
     </td>
-    <td resource='scope' typeof='rdf:Property'>
+    <td resource=':scope' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>scope</h1>
@@ -1372,7 +1396,7 @@
         </tr>
       </table>
     </td>
-    <td resource='searchtitle' typeof='rdf:Property'>
+    <td resource=':searchtitle' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>searchtitle</h1>
@@ -1408,7 +1432,7 @@
         </tr>
       </table>
     </td>
-    <td resource='vrmModification' typeof='rdf:Property'>
+    <td resource=':vrmModification' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>vrm Modification</h1>
@@ -1444,7 +1468,7 @@
         </tr>
       </table>
     </td>
-    <td resource='vrmRelease' typeof='rdf:Property'>
+    <td resource=':vrmRelease' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>vrm Release</h1>
@@ -1480,7 +1504,7 @@
         </tr>
       </table>
     </td>
-    <td resource='vrmVersion' typeof='rdf:Property'>
+    <td resource=':vrmVersion' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>vrm Version</h1>
@@ -1516,8 +1540,50 @@
         </tr>
       </table>
     </td>
-    
-    <td resource='keys' typeof='rdf:Property'>
+    <td resource=':class' typeof='rdf:Property'>
+      <span class='type'>rdf:Property</span>
+      <table class='properties'>
+        <h1 property='rdfs:label'>class</h1>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:comment
+          </td>
+          <td lang='en-US' property='rdfs:comment'>Attribute used to store the class attribute and identify the nature of the Conref/Conkeyref.</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:domain
+          </td>
+          <td>
+            <ul>
+              <li>
+                <a href='http://purl.org/dita/ns#Conkeyref' property='rdfs:domain'>http://purl.org/dita/ns#Conkeyref</a>
+              </li>
+              <li>
+                <a href='http://purl.org/dita/ns#Conref' property='rdfs:domain'>http://purl.org/dita/ns#Conref</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:range
+          </td>
+          <td>
+            <a href='http://www.w3.org/2001/XMLSchema#string' property='rdfs:range'>http://www.w3.org/2001/XMLSchema#string</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/classatt.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/classatt.html</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td resource=':keys' typeof='rdf:Property'>
       <span class='type'>rdf:Property</span>
       <table class='properties'>
         <h1 property='rdfs:label'>keys</h1>
@@ -1562,6 +1628,75 @@
     </td>
     
     
+    
+    <td resource=':' typeof='owl:Ontology'>
+      <span class='type'>owl:Ontology</span>
+      <table class='properties'>
+        <h1 property='dcterms:title'>DITA RDF ontology</h1>
+        <tr class='property'>
+          <td class='label'>
+            cc:license
+          </td>
+          <td>
+            <a href='http://unlicense.org' property='cc:license'>http://unlicense.org</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:created
+          </td>
+          <td content='2013-01-04' datatype='xsd:date' property='dcterms:created'>Friday, 04 January 2013</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:creator
+          </td>
+          <td>
+            <a href='http://colin.maudry/rdf/colin-maudry#me' property='dcterms:creator'>http://colin.maudry/rdf/colin-maudry#me</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:description
+          </td>
+          <td property='dcterms:description'>The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain).</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            dcterms:modified
+          </td>
+          <td content='2014-08-03' datatype='xsd:date' property='dcterms:modified'>Sunday, 03 August 2014</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            vann:preferredNamespacePrefix
+          </td>
+          <td property='vann:preferredNamespacePrefix'>dita</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            vann:preferredNamespaceUri
+          </td>
+          <td property='vann:preferredNamespaceUri'>http://purl.org/dita/ns#</td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            rdfs:seeAlso
+          </td>
+          <td>
+            <a href='http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html' property='rdfs:seeAlso'>http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html</a>
+          </td>
+        </tr>
+        <tr class='property'>
+          <td class='label'>
+            foaf:depiction
+          </td>
+          <td>
+            <a href='http://bit.ly/DitaRdfLucidChart' property='foaf:depiction'>http://bit.ly/DitaRdfLucidChart</a>
+          </td>
+        </tr>
+      </table>
+    </td>
     
     
   </body>
