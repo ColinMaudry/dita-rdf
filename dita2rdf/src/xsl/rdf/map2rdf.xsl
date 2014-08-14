@@ -30,6 +30,7 @@
 			<dita:key>
 				<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
 					<dita:href rdf:resource="{resolve-uri($relative,$base)}"/>
+					<dita:keyname><xsl:value-of select="."/></dita:keyname>
 				</dita:Key>
 			</dita:key>
 		</xsl:for-each>

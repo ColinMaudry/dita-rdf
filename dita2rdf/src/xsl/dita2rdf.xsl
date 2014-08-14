@@ -22,9 +22,6 @@
 			<xsl:apply-templates/>
 		</rdf:RDF>
 	</xsl:template>
-	<xsl:template match="/" mode="not-root-document">
-		<xsl:apply-templates/>
-	</xsl:template>
 	
 	<xsl:template match="*[contains(@class,' map/map ')] | *[contains(@class,' topic/topic ')]">
 		<xsl:param name="language" tunnel="yes"/>
@@ -58,6 +55,7 @@
 			<dita:id>
 				<xsl:value-of select="$id"/>
 			</dita:id>
+			<dita:xtrf><xsl:value-of select="@xtrf"/></dita:xtrf>
 			<xsl:if test="@title!=''">
 				<dita:title>
 					<xsl:if test="$docLanguage !=''">
@@ -133,7 +131,16 @@
 			<xsl:apply-templates/>
 		</dita:author>
 	</xsl:template>
-	<xsl:template match="@keyref"/> 
+	<xsl:template match="@keyref">
+		<xsl:param name="documentUri" tunnel="yes"/>
+		<!-- I deliberately omit the @href value, even if I have it available. The purpose is to represent the topic metadata regardless of the context map. -->
+		<xsl:variable name="keyname" select="if (contains(., '/')) then substring-before(.,'/') else ."/>
+		<dita:key>
+			<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
+				<dita:keyname><xsl:value-of select="$keyname"/></dita:keyname>
+			</dita:Key>
+		</dita:key>
+	</xsl:template> 
 	<xsl:template match="@href[../@format and not(../@format='dita' or ../@format='ditamap')]">
 		<dita:href rdf:resource="{.}"/>
 		<dita:format>
@@ -206,7 +213,7 @@
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
 				<xsl:apply-templates select=".[@href]/@keys"/>
-				<xsl:apply-templates select="@keyref"/>
+				<xsl:apply-templates select="@keyref[not('')]"/>
 				<xsl:if test="not(@keys) and not(@keyref)">
 					<xsl:apply-templates select="@href[not('')]"/>				
 				</xsl:if>
