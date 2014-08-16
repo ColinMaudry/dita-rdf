@@ -28,7 +28,6 @@
 	<xsl:template match="*[contains(@class, ' topic/body ')]  |
 		*[contains(@class, ' topic/related-links ')]">
 		<!-- In topic/body and topic/related-links, we only need the non-empty @href and @keyref elements -->
-		<xsl:apply-templates select="descendant::*[@href!='' or @keyref!='']"/>
-	</xsl:template>
-	
+		<xsl:apply-templates select="descendant::*[@href!='' or @keyref!=''] | descendant::*[contains(@class, ' topic/keyword ')]"/>
+	</xsl:template>	
 </xsl:stylesheet>

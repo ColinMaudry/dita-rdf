@@ -41,4 +41,6 @@
 	<xsl:template match="*[contains(@class, ' map/topicmeta ')]">
 		<xsl:apply-templates/>
 	</xsl:template>
+	<!-- For now, metadata cascading is limited to language -->
+	<xsl:template match="*[contains(@class, ' map/topicmeta ')][../*[contains(@class, ' map/topicref ')]]"/>
 </xsl:stylesheet>

@@ -135,11 +135,11 @@
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<!-- I deliberately omit the @href value, even if I have it available. The purpose is to represent the topic metadata regardless of the context map. -->
 		<xsl:variable name="keyname" select="if (contains(., '/')) then substring-before(.,'/') else ."/>
-		<dita:key>
+		<dita:keyref>
 			<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
 				<dita:keyname><xsl:value-of select="$keyname"/></dita:keyname>
 			</dita:Key>
-		</dita:key>
+		</dita:keyref>
 	</xsl:template> 
 	<xsl:template match="@href[../@format and not(../@format='dita' or ../@format='ditamap')]">
 		<dita:href rdf:resource="{.}"/>
@@ -166,7 +166,6 @@
 				<xsl:when test="contains($previousReference,' map/topicref ') or $previousReference=''">
 					<xsl:apply-templates select="document($documentHref, /)/*">
 						<xsl:with-param select="../@class" name="previousReference" tunnel="yes" as="attribute()"/>
-						
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:otherwise>
@@ -202,12 +201,12 @@
 	<doc:doc>
 		<doc:desc>Catch all template for reference objects (that have a non-empty @href). Topicref, image, xref, etc.</doc:desc>
 	</doc:doc>
-	<xsl:template match="*[@href and @href!='']">
+	<xsl:template match="*[@href and @href!=''] | *[@keyref and @keyref!=''] ">
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<xsl:if test="$debug='1'">
 			<xsl:message xml:space="default"><xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href"/>]</xsl:message>
 		</xsl:if>
-		<dita:referenceObject>
+		<xsl:element name="{concat('dita:',local-name())}">
 			<rdf:Description rdf:about="{colin:getReferenceObjectUri($documentUri,@xtrc)}">
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
@@ -220,8 +219,17 @@
 				<!-- For now, only extract keys if they have references 
 							Only extract @href if no @keys-->
 			</rdf:Description>
-		</dita:referenceObject>
+		</xsl:element>
 		<!-- Nesting (e.g. of topicref) is not extracted. Not considered meaningful for the purpose of metadata querying. -->
 		<xsl:apply-templates/>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/keywords ')]">
+		<xsl:apply-templates/>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/keyword ')][not(@keyref)]">
+		<dita:keyword><xsl:value-of select="."/></dita:keyword>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/category ')]">
+		<dita:category><xsl:value-of select="."/></dita:category>
 	</xsl:template>
 </xsl:stylesheet>
