@@ -321,6 +321,30 @@
 			rdfs:domain :Conkeyref, :Conref ;
 			rdfs:label "class" .
 
+		#Audience
+		:Audience a rdfs:Class ;
+			rdfs:comment "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
+			rdfs:label "Audience" .	
+		:audienceType a rdf:Property ; #could be :type, but wanted to distinguisg from other uses of type
+			rdfs:comment "Indicates the kind of person for whom the content of the topic is intended. Note that this differs from the type attribute on many other DITA elements."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
+			rdfs:range xsd:string ;
+			rdfs:label "type" ;
+			rdfs:domain dita:Audience .
+		:job a rdf:Property ;
+			rdfs:comment "Indicates the high-level task the audience for the topic is trying to accomplish."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
+			rdfs:range xsd:string ;
+			rdfs:label "job" ;
+			rdfs:domain dita:Audience .
+		:experiencelevel a rdf:Property ;
+			rdfs:comment "Indicates the level of experience the audience is assumed to possess."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
+			rdfs:range xsd:string ;
+			rdfs:label "experiencelevel" ;
+			rdfs:domain dita:Audience .		
+
 		#specific to Prodinfo
 		:prodname a rdf:Property ;
 			rdfs:range xsd:string ;
