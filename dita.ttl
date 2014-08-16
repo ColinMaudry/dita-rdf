@@ -241,6 +241,12 @@
 			rdfs:range :Audience ;
 			rdfs:domain :Doctype ;
 			rdfs:label "audience" .
+		:permissions a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/permissions.html> ;
+			rdfs:comment "The permissions prolog element specifies the level of entitlement needed to access the content."@en-US ;
+			rdfs:range xsd:string ;
+			rdfs:domain :Doctype ;
+			rdfs:label "permissions	" .
 		:source a rdfs:subPropertyOf dcterms:source ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/source.html> ;
 			rdfs:range xsd:string ;
@@ -353,7 +359,7 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:range xsd:string ;
 			rdfs:label "experiencelevel" ;
-			rdfs:domain dita:Audience .		
+			rdfs:domain dita:Audience .
 
 		#specific to Prodinfo
 		:prodname a rdf:Property ;
