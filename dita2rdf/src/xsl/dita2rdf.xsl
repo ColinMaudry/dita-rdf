@@ -85,7 +85,7 @@
 		<xsl:value-of select="concat($resourceBaseUri,$resourceFamily,'/',$languageCode,$resourceId)"/>
 	</xsl:function>
 
-	<xsl:function as="xs:anyURI" name="colin:getReferenceObjectUri">
+	<xsl:function as="xs:anyURI" name="colin:getInternalObjectUri">
 		<xsl:param name="documentUri"/>
 		<xsl:param name="xtrc"/>
 		<xsl:value-of select="concat($documentUri,'/',$xtrc)"/>
@@ -207,7 +207,7 @@
 			<xsl:message xml:space="default"><xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href"/>]</xsl:message>
 		</xsl:if>
 		<xsl:element name="{concat('dita:',local-name())}">
-			<rdf:Description rdf:about="{colin:getReferenceObjectUri($documentUri,@xtrc)}">
+			<rdf:Description rdf:about="{colin:getInternalObjectUri($documentUri,@xtrc)}">
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
@@ -223,11 +223,39 @@
 		<!-- Nesting (e.g. of topicref) is not extracted. Not considered meaningful for the purpose of metadata querying. -->
 		<xsl:apply-templates/>
 	</xsl:template>
+	
+	<!-- Audience -->
+	<xsl:template match="*[contains(@class, ' topic/audience')]">
+		<xsl:param name="documentUri" tunnel="yes"/>
+		<dita:audience>
+			<dita:Audience rdf:about="{colin:getInternalObjectUri($documentUri,@xtrc)}">
+				<xsl:apply-templates select="@*"/>
+			</dita:Audience>
+		</dita:audience>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/audience ')]/@type[not(../@othertype) and not('')]">
+		<dita:audienceType><xsl:value-of select="."/></dita:audienceType>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/audience ')]/@othertype[not('') and ../@type['other']]">
+		<dita:audienceType><xsl:value-of select="."/></dita:audienceType>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/audience ')]/@job[not(../@otherjob) and not('')]">
+		<dita:job><xsl:value-of select="."/></dita:job>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/audience ')]/@otherjob[not('') and ../@job['other']]">
+		<dita:job><xsl:value-of select="."/></dita:job>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/audience ')]/@experiencelevel[not('')]">
+		<dita:experiencelevel><xsl:value-of select="."/></dita:experiencelevel>
+	</xsl:template>
+	
+	<!-- Keywords -->
 	<xsl:template match="*[contains(@class, ' topic/keywords ')]">
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/keyword ')][not(@keyref)]">
-		<dita:keyword><xsl:value-of select="."/></dita:keyword>
+		<xsl:param name="language" tunnel="yes"/>
+		<dita:keyword xml:lang="{$language}"><xsl:value-of select="."/></dita:keyword>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/category ')]">
 		<dita:category><xsl:value-of select="."/></dita:category>
