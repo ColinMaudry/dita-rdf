@@ -367,7 +367,7 @@
 			rdfs:domain :Prodinfo ;
 			rdfs:label "platform" ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html> ;
-			rdfs:comment "The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element."@en-US .
+			rdfs:comment "The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element."@en-US .	
 		:vrmVersion a rdf:Property ;
 			rdfs:range xsd:integer ;
 			rdfs:domain :Prodinfo ;

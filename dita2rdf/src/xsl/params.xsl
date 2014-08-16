@@ -20,8 +20,8 @@
 	<xsl:param name="debug"/>
 	
 	<!-- Located here to have lower priority over the other imported templates -->
-	<xsl:template match=" * | @* | node() | processing-instruction()" xml:space="default"/>
-	<xsl:template match="text()" mode="get-text" xml:space="default">
+	<xsl:template match=" * | @* | processing-instruction()" xml:space="default"/>
+	<xsl:template match="text()" xml:space="default">
 		<xsl:value-of select="."/>
 	</xsl:template>
 

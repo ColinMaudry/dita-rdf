@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<resourcesBaseUri uri="http://data.example.com/resources/"/>	
+	<resourcesBaseUri uri="http://data.example.com/resources/"/>
+	<productsBaseUri uri="http://data.example.com/resources/products/"/>
+	<productVersionSeparator>#</productVersionSeparator>	
 	<domains>
 		<domain domainId="topic" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
@@ -17,9 +19,7 @@
 		<domain domainId="learningOverview" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="learningSummary" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="learningAssessment" baseUri="http://purl.org/dita/ns#"/>
-		<domain domainId="learningPlan" baseUri="http://purl.org/dita/ns#"/>
-		
-		
+		<domain domainId="learningPlan" baseUri="http://purl.org/dita/ns#"/>		
 	</domains>
 </config>
 

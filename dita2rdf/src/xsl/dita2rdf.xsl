@@ -9,7 +9,7 @@
 	<xsl:import href="rdf/map2rdf.xsl"/>
 	<xsl:import href="rdf/topic2rdf.xsl"/>
 
-	<xsl:output encoding="UTF-8" indent="yes" media-type="application/rdf+xml" method="xml" omit-xml-declaration="no"/>
+	<xsl:output encoding="UTF-8" indent="no" media-type="application/rdf+xml" method="xml" omit-xml-declaration="no"/>
 
 	<doc:doc>
 		<doc:desc>Temporary maps and topics (output of copy-files)</doc:desc>
@@ -264,6 +264,54 @@
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/audience ')]/@experiencelevel[not('')]">
 		<dita:experiencelevel><xsl:value-of select="."/></dita:experiencelevel>
+	</xsl:template>
+	
+	<!-- Prodinfo -->
+	<xsl:template match="*[contains(@class, ' topic/prodinfo ')]">
+		<xsl:param name="productUri" select="concat($config/config/productsBaseUri/@uri,prodname)"/>
+		<xsl:apply-templates select="*[contains(@class, ' topic/vrmlist ')]" mode="create-prodinfo">
+			<xsl:with-param name="productUri" select="$productUri"/>
+		</xsl:apply-templates>
+
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/vrmlist ')]/*[contains(@class, ' topic/vrm ')]" mode="create-prodinfo">
+		<xsl:param name="productUri"/>
+		<xsl:variable name="version" select="if (@version!='') then @version else 0"/>
+		<xsl:variable name="release" select="if (@release!='') then @release else 0"/>
+		<xsl:variable name="modification" select="if (@modification!='') then @modification else 0"/>
+		<xsl:variable name="versionNumber" select="concat($version,'.',$release,'.',$modification)"/>
+		<xsl:variable name="productUriFull" select="concat($productUri,$config/config/productVersionSeparator,$versionNumber)"/>
+		<dita:prodinfo>
+			<rdf:Description rdf:about="{$productUriFull}"/>
+			<xsl:call-template name="colin:getRdfTypes">
+				<xsl:with-param name="class" select="../../@class"/>
+			</xsl:call-template>
+			<dita:vrmVersion><xsl:value-of select="$version"/></dita:vrmVersion>
+			<dita:vrmRelease><xsl:value-of select="$release"/></dita:vrmRelease>
+			<dita:vrmModification><xsl:value-of select="$modification"/></dita:vrmModification>
+			<xsl:apply-templates select="../../*"/>			
+		</dita:prodinfo>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/prodname ')][text()]">
+		<dita:prodname><xsl:value-of select="."/></dita:prodname>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/component ')][text()]">
+		<dita:component><xsl:value-of select="."/></dita:component>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/brand ')][text()]">
+		<dita:brand><xsl:value-of select="."/></dita:brand>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/feature ')][text()]">
+		<dita:featnum><xsl:value-of select="."/></dita:featnum>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/platform ')][text()]">
+		<dita:platform><xsl:value-of select="."/></dita:platform>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/prognum ')][text()]">
+		<dita:prognum><xsl:value-of select="."/></dita:prognum>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/platform ')][text()]">
+		<dita:series><xsl:value-of select="."/></dita:series>
 	</xsl:template>
 	
 	<!-- Keywords -->
