@@ -122,8 +122,17 @@
 		*[contains(@class, ' map/map ')]/*[contains(@class,' topic/title ')] ">
 		<dita:title>
 			<xsl:call-template name="colin:getLanguageAtt"/>
-					<xsl:value-of select="."/>
+			<xsl:apply-templates mode="get-text"/>
 		</dita:title>
+	</xsl:template>
+	
+	<xsl:template match="
+		*[contains(@class, ' topic/topic ')]/*[contains(@class,' topic/shortdesc ')] |
+		*[contains(@class, ' topic/abstract ')]/*[contains(@class,' topic/shortdesc ')]">
+		<dita:shortdesc>
+			<xsl:call-template name="colin:getLanguageAtt"/>
+			<xsl:apply-templates mode="get-text"/>
+		</dita:shortdesc>
 	</xsl:template>
 	
 	<xsl:template match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/author ')]">
@@ -254,10 +263,15 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/keyword ')][not(@keyref)]">
-		<xsl:param name="language" tunnel="yes"/>
-		<dita:keyword xml:lang="{$language}"><xsl:value-of select="."/></dita:keyword>
+		<dita:keyword>
+			<xsl:call-template name="colin:getLanguageAtt"/>
+			<xsl:apply-templates mode="get-text"/>
+		</dita:keyword>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/category ')]">
-		<dita:category><xsl:value-of select="."/></dita:category>
+		<dita:category>
+			<xsl:call-template name="colin:getLanguageAtt"/>
+			<xsl:apply-templates mode="get-text"/>
+		</dita:category>
 	</xsl:template>
 </xsl:stylesheet>
