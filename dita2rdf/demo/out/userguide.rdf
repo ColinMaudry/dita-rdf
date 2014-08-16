@@ -235,29 +235,30 @@
                   <dita:title xml:lang="en-us">DITA Open Toolkit 1.8.4</dita:title>
                   <dita:shortdesc xml:lang="en-us">This document describes the DITA Open Toolkit project—what the project is, and how to
     use the site.</dita:shortdesc>
+                  <dita:source>source1</dita:source>
                   <dita:audience>
-                     <dita:Audience rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/audience:1;9:71">
+                     <dita:Audience rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/audience:1;10:71">
                         <dita:job>configuring</dita:job>
                         <dita:experiencelevel>noob</dita:experiencelevel>
                         <dita:audienceType>manager</dita:audienceType>
                      </dita:Audience>
                   </dita:audience>
                   <dita:audience>
-                     <dita:Audience rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/audience:2;10:103">
+                     <dita:Audience rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/audience:2;11:103">
                         <dita:job>cleaning</dita:job>
                         <dita:experiencelevel>noob</dita:experiencelevel>
                         <dita:audienceType>janitor</dita:audienceType>
                      </dita:Audience>
                   </dita:audience>
                   <dita:xref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/xref:1;20:81">
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/xref:1;21:81">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
                         <dita:href rdf:resource="http://www.opensource.org/licenses/cpl1.0.php"/>
                         <dita:format>html</dita:format>
                      </rdf:Description>
                   </dita:xref>
                   <dita:xref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/xref:2;22:12">
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/xref:2;23:12">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
                         <dita:href rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
                         <dita:format>html</dita:format>
@@ -265,14 +266,14 @@
                   </dita:xref>
                   <dita:keyword xml:lang="en-us">Java</dita:keyword>
                   <dita:link>
-                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/link:1;56:26">
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/link:1;57:26">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
                         <dita:href rdf:resource="http://sourceforge.net/projects/dita-ot/files/DITA-OT%20Stable%20Release/"/>
                         <dita:format>html</dita:format>
                      </rdf:Description>
                   </dita:link>
                   <dita:link>
-                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/link:2;61:26">
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/link:2;62:26">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
                         <dita:href rdf:resource="http://sourceforge.net/projects/dita-ot/files/DITA-OT%20Latest%20Test%20Build/"/>
                         <dita:format>html</dita:format>

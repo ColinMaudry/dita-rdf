@@ -127,7 +127,7 @@
 	</xsl:template>
 	
 	<xsl:template match="
-		*[contains(@class, ' topic/topic ')]/*[contains(@class,' topic/shortdesc ')] |
+	*[contains(@class,' topic/shortdesc ')] |
 		*[contains(@class, ' topic/abstract ')]/*[contains(@class,' topic/shortdesc ')]">
 		<dita:shortdesc>
 			<xsl:call-template name="colin:getLanguageAtt"/>
@@ -137,9 +137,15 @@
 	
 	<xsl:template match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/author ')]">
 		<dita:author>
-			<xsl:apply-templates/>
+			<xsl:apply-templates mode="get-text"/>
 		</dita:author>
 	</xsl:template>
+	
+	<xsl:template match="*[contains(@class, ' topic/source ')]">
+		<dita:source><xsl:apply-templates mode="get-text"/></dita:source>
+	</xsl:template>
+	
+	
 	<xsl:template match="@keyref">
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<!-- I deliberately omit the @href value, even if I have it available. The purpose is to represent the topic metadata regardless of the context map. -->
@@ -210,7 +216,9 @@
 	<doc:doc>
 		<doc:desc>Catch all template for reference objects (that have a non-empty @href). Topicref, image, xref, etc.</doc:desc>
 	</doc:doc>
-	<xsl:template match="*[@href and @href!=''] | *[@keyref and @keyref!=''] ">
+	<!-- When an element (e.g. source or author) have both text() and @href, the priority goes to the @href and text() is ignored.
+	If you use @href, don't forget to also add a @format attribute!-->
+	<xsl:template match="*[@href and @href!=''] | *[@keyref and @keyref!=''] " priority="2">
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<xsl:if test="$debug='1'">
 			<xsl:message xml:space="default"><xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href"/>]</xsl:message>
