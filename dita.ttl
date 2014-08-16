@@ -106,11 +106,11 @@
 			rdfs:label "Topicref" .
 		:Mapref rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
-			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'."@en-US ;
+			rdfs:comment "The mapref element is a convenience element that is equivalent to a topicref element with the format attribute set to 'ditamap'."@en-US ;
 			rdfs:label "Mapref" .
 		:Keydef rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html> ;
-			rdfs:comment "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a <topicref> element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US ;
+			rdfs:comment "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a topicref element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US ;
 			rdfs:label "Keydef" .
 		:Keyref rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html> ;
@@ -118,7 +118,7 @@
 			rdfs:label "Keyref" .
 		:Image rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html> ;
-			rdfs:comment "Include artwork or images in a DITA topic by using the <image> element."@en-US ;
+			rdfs:comment "Include artwork or images in a DITA topic by using the image element."@en-US ;
 			rdfs:label "Image" .
 		:Conref rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html> ;
@@ -137,9 +137,13 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
 			rdfs:label "Link" .
 		:Coderef rdfs:subClassOf :ReferenceObject ;
-			rdfs:comment "The <coderef> element references an external file that contains literal code."@en-US ;
+			rdfs:comment "The coderef element references an external file that contains literal code."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html> ;
 			rdfs:label "Coderef" .
+		:Keyword rdfs:subClassOf :ReferenceObject ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
+			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
+			rdfs:label "Keyword" .
 
 		:LearningObject rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html> ;
@@ -147,11 +151,11 @@
 			rdfs:label "LearningObject" .
 		:LearningPlanRef rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html> ;
-			rdfs:comment "Use a <learningPlanRef> element to include a topic reference to a learning plan topic as part of a learningObject."@en-US ;
+			rdfs:comment "Use a learningPlanRef element to include a topic reference to a learning plan topic as part of a learningObject."@en-US ;
 			rdfs:label "LearningPlanRef" .
 		:learningPreAssessmentRef rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html> ;
-			rdfs:comment "Use a <learningPreAssessmentRef> element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
+			rdfs:comment "Use a learningPreAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
 			rdfs:label "learningPreAssessmentRef" .
 		:learningOverviewRef rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html> ;
@@ -171,7 +175,7 @@
 			rdfs:label "learningSummaryRef" .
 		:learningPostAssessmentRef rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html> ;
-			rdfs:comment "Use a <learningPostAssessmentRef> element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
+			rdfs:comment "Use a learningPostAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
 			rdfs:label "learningPostAssessmentRef" .
 
 
@@ -237,11 +241,17 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html> ;
 			rdfs:comment "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties."@en-US ;
 			rdfs:label "othermeta" .
-		:keyword rdfs:subPropertyOf nie:keyword ;
+		:keyword  a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:range xsd:string ;
+			rdfs:rang dita:Keyword ;
 			rdfs:label "keyword" .
+		:category  a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/category.html> ;
+			rdfs:comment "The category element represents any category by which a topic might be classified for retrieval or navigation."@en-US ;
+			rdfs:range xsd:string ;
+			rdfs:label "category" .
 		:lang a rdf:Property ;
 			rdfs:comment "The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766." ;
 			rdfs:label "language" ;

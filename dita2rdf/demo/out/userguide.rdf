@@ -247,6 +247,7 @@
                         <dita:format>html</dita:format>
                      </rdf:Description>
                   </dita:xref>
+                  <dita:keyword>Java</dita:keyword>
                   <dita:link>
                      <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/link:1;50:26">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
@@ -367,6 +368,9 @@
                                     </dita:keyref>
                                  </rdf:Description>
                               </dita:xref>
+                              <dita:keyword>web</dita:keyword>
+                              <dita:keyword>X</dita:keyword>
+                              <dita:keyword>X</dita:keyword>
                               <dita:image>
                                  <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/rundemo/image:1;59:81">
                                     <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
@@ -474,6 +478,7 @@
                                              <dita:id>reference_yvj_ttj_bd</dita:id>
                                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\changes\rel1.8.xml</dita:xtrf>
                                              <dita:title xml:lang="en">Migration from previous releases</dita:title>
+                                             <dita:keyword>id</dita:keyword>
                                           </rdf:Description>
                                           <rdf:Description rdf:about="http://data.example.com/resources/reference/rel1.8.issues">
                                              <dita:lang>en</dita:lang>
@@ -1018,6 +1023,11 @@
                                                 </dita:keyref>
                                              </rdf:Description>
                                           </dita:keyword>
+                                          <dita:keyword>JAVA_HOME</dita:keyword>
+                                          <dita:keyword>ANT_HOME</dita:keyword>
+                                          <dita:keyword>PATH</dita:keyword>
+                                          <dita:keyword>DITA_HOME</dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
                                           <dita:keyword>
                                              <rdf:Description rdf:about="http://data.example.com/resources/task/Linuxsetup/keyword:3;71:85">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
@@ -1028,6 +1038,13 @@
                                                 </dita:keyref>
                                              </rdf:Description>
                                           </dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
+                                          <dita:keyword>JHHOME</dita:keyword>
+                                          <dita:keyword>fop.home</dita:keyword>
+                                          <dita:keyword>xep.dir</dita:keyword>
+                                          <dita:keyword>axf.path</dita:keyword>
                                           <dita:keyword>
                                              <rdf:Description rdf:about="http://data.example.com/resources/task/Linuxsetup/keyword:4;156:91">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
@@ -1038,6 +1055,7 @@
                                                 </dita:keyref>
                                              </rdf:Description>
                                           </dita:keyword>
+                                          <dita:keyword>DITA-dir</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1083,6 +1101,11 @@
                                                 </dita:keyref>
                                              </rdf:Description>
                                           </dita:keyword>
+                                          <dita:keyword>JAVA_HOME</dita:keyword>
+                                          <dita:keyword>ANT_HOME</dita:keyword>
+                                          <dita:keyword>PATH</dita:keyword>
+                                          <dita:keyword>DITA_HOME</dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
                                           <dita:keyword>
                                              <rdf:Description rdf:about="http://data.example.com/resources/task/installation-windows/keyword:4;67:83">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
@@ -1093,6 +1116,15 @@
                                                 </dita:keyref>
                                              </rdf:Description>
                                           </dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
+                                          <dita:keyword>CLASSPATH</dita:keyword>
+                                          <dita:keyword>JHHOME</dita:keyword>
+                                          <dita:keyword>hhc.dir</dita:keyword>
+                                          <dita:keyword>fop.home</dita:keyword>
+                                          <dita:keyword>xep.dir</dita:keyword>
+                                          <dita:keyword>axf.path</dita:keyword>
+                                          <dita:keyword>DITA-OT</dita:keyword>
                                           <dita:keyword>
                                              <rdf:Description rdf:about="http://data.example.com/resources/task/installation-windows/keyword:5;160:96">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
@@ -1103,6 +1135,7 @@
                                                 </dita:keyref>
                                              </rdf:Description>
                                           </dita:keyword>
+                                          <dita:keyword>DITA-dir</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1193,6 +1226,8 @@
                                           <dita:id>dita2eclipsehelp</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2eclipsehelp.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">DITA to Eclipse help</dita:title>
+                                          <dita:keyword>mapname</dita:keyword>
+                                          <dita:keyword>mapname</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1208,6 +1243,11 @@
                                           <dita:id>dita2htmlhelp</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2htmlhelp.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">DITA to HTML Help (CHM)</dita:title>
+                                          <dita:keyword>mapname</dita:keyword>
+                                          <dita:keyword>mapname</dita:keyword>
+                                          <dita:keyword>mapname</dita:keyword>
+                                          <dita:keyword>mapname</dita:keyword>
+                                          <dita:keyword>mapname</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1268,6 +1308,7 @@
                                           <dita:id>dita2word</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2word.xml</dita:xtrf>
                                           <dita:title xml:lang="en-us">DITA to Rich Text Format </dita:title>
+                                          <dita:keyword>wordrtf</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1283,6 +1324,7 @@
                                           <dita:id>dita2tocjs</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2tocjs.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">DITA to TocJS</dita:title>
+                                          <dita:keyword>tocjs</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1298,6 +1340,7 @@
                                           <dita:id>dita2troff</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2troff.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">DITA to Troff</dita:title>
+                                          <dita:keyword>troff</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1313,6 +1356,10 @@
                                           <dita:id>dita2xhtml</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2xhtml.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">DITA to XHTML</dita:title>
+                                          <dita:keyword>transtype</dita:keyword>
+                                          <dita:keyword>xhtml</dita:keyword>
+                                          <dita:keyword>web</dita:keyword>
+                                          <dita:keyword>xhtml</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1358,6 +1405,14 @@
                                           <dita:id>runant</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\DITA-antuse.xml</dita:xtrf>
                                           <dita:title xml:lang="en">Building output using Ant</dita:title>
+                                          <dita:keyword>input-file</dita:keyword>
+                                          <dita:keyword>transformation-type</dita:keyword>
+                                          <dita:keyword>parameter-name</dita:keyword>
+                                          <dita:keyword>value</dita:keyword>
+                                          <dita:keyword>build-script</dita:keyword>
+                                          <dita:keyword>target</dita:keyword>
+                                          <dita:keyword>build-script</dita:keyword>
+                                          <dita:keyword>target</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1373,6 +1428,13 @@
                                           <dita:id>creating-an-ant-build-script</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\creating-an-ant-build-script.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Creating an Ant build script</dita:title>
+                                          <dita:keyword>dita.dir</dita:keyword>
+                                          <dita:keyword>args.input</dita:keyword>
+                                          <dita:keyword>transtype</dita:keyword>
+                                          <dita:keyword>args.input</dita:keyword>
+                                          <dita:keyword>transtype</dita:keyword>
+                                          <dita:keyword>args.gen.task.lbl</dita:keyword>
+                                          <dita:keyword>output.dir</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1418,6 +1480,10 @@
                                           <dita:id>building-output-using-cl-tool</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\building-output-using-cl-tool.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Building output using the command-line tool</dita:title>
+                                          <dita:keyword>input-file</dita:keyword>
+                                          <dita:keyword>transformation-type</dita:keyword>
+                                          <dita:keyword>parameter-name</dita:keyword>
+                                          <dita:keyword>value</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1538,6 +1604,316 @@
                                           <dita:id>msgs</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\DITA-messages.xml</dita:xtrf>
                                           <dita:title xml:lang="en-us">Error messages</dita:title>
+                                          <dita:keyword>DOTA001F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA002F</dita:keyword>
+                                          <dita:keyword>DOTA003F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA004F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA006W</dita:keyword>
+                                          <dita:keyword>DOTA007E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA008E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA009E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA010E</dita:keyword>
+                                          <dita:keyword>DOTA011W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA012W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTA066F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA067W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTA068W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTA069F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTA069W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ001F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ002F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ003F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ004F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ005F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ006F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ007E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ009E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ012F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ013E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ014W</dita:keyword>
+                                          <dita:keyword>DOTJ015F</dita:keyword>
+                                          <dita:keyword>DOTJ016F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ017F</dita:keyword>
+                                          <dita:keyword>DOTJ018I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ020W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ021W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ022F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ023E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ025E</dita:keyword>
+                                          <dita:keyword>DOTJ026E</dita:keyword>
+                                          <dita:keyword>DOTJ028E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ029I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ030I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ031I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ033E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ034F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ035F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ036W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ037W</dita:keyword>
+                                          <dita:keyword>DOTJ038E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ039E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ040E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ041E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ042E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ043W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ044W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ045I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ046E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ047I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ049W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%3</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%4</dita:keyword>
+                                          <dita:keyword>DOTJ050W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ051E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ052E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ053W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ054E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTJ055E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ056E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTJ057E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX001W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%3</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX002W</dita:keyword>
+                                          <dita:keyword>DOTX003I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX004I</dita:keyword>
+                                          <dita:keyword>DOTX005E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX006E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX007I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX008E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX008W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX009W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTX010E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX011W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX012W</dita:keyword>
+                                          <dita:keyword>DOTX013E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX014E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX015E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX016W</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX017E</dita:keyword>
+                                          <dita:keyword>DOTX018I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX019W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX020E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX021E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX022W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX023W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX024E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX025E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX026W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX027W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX028E</dita:keyword>
+                                          <dita:keyword>DOTX029I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%3</dita:keyword>
+                                          <dita:keyword>%4</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTX030W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%3</dita:keyword>
+                                          <dita:keyword>%4</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTX031E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX032E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX033E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX034E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX035E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX036E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX037W</dita:keyword>
+                                          <dita:keyword>DOTX038I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX039W</dita:keyword>
+                                          <dita:keyword>DOTX040I</dita:keyword>
+                                          <dita:keyword>DOTX041W</dita:keyword>
+                                          <dita:keyword>DOTX042I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX043I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTX044E</dita:keyword>
+                                          <dita:keyword>DOTX045W</dita:keyword>
+                                          <dita:keyword>DOTX046W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX047W</dita:keyword>
+                                          <dita:keyword>DOTX048I</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX049I</dita:keyword>
+                                          <dita:keyword>DOTX050W</dita:keyword>
+                                          <dita:keyword>DOTX052W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX053E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX054W</dita:keyword>
+                                          <dita:keyword>DOTX055W</dita:keyword>
+                                          <dita:keyword>DOTX056W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX057W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX058W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>DOTX060W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX061W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX062I</dita:keyword>
+                                          <dita:keyword>DOTX063W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX064W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX065W</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX066W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX067E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>DOTX068W</dita:keyword>
+                                          <dita:keyword>PDFJ001E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFJ002E</dita:keyword>
+                                          <dita:keyword>PDFX001W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX002W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX003W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX004F</dita:keyword>
+                                          <dita:keyword>PDFX005F</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX006E</dita:keyword>
+                                          <dita:keyword>PDFX007W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX008W</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX009E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>PDFX010W</dita:keyword>
+                                          <dita:keyword>PDFX011E</dita:keyword>
+                                          <dita:keyword>%1</dita:keyword>
+                                          <dita:keyword>%2</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1579,6 +1955,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1594,6 +1972,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1609,6 +1989,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1624,6 +2006,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1654,6 +2038,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1694,6 +2080,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1724,6 +2112,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1803,6 +2193,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1825,11 +2217,13 @@
                                                          <dita:id>code-reference</dita:id>
                                                          <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\dev_ref\extended-functionality.dita</dita:xtrf>
                                                          <dita:title xml:lang="en-us">Code reference processing</dita:title>
+                                                         <dita:keyword>DOTJ052E</dita:keyword>
                                                       </rdf:Description>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
                                           </dita:xref>
+                                          <dita:keyword>%1</dita:keyword>
                                           <dita:xref>
                                              <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/errormessages/xref:23;319:125">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
@@ -1877,6 +2271,8 @@
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                                      <dita:keyword>parameter</dita:keyword>
+                                                      <dita:keyword>value</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1888,6 +2284,7 @@
                                                 <dita:format>html</dita:format>
                                              </rdf:Description>
                                           </dita:xref>
+                                          <dita:keyword>%1</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -1914,10 +2311,13 @@
                                                       <dita:id>t-increasing-the-JVM</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\increasing-the-jvm.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Increasing Java memory allocation</dita:title>
+                                                      <dita:keyword>1024</dita:keyword>
+                                                      <dita:keyword>1024</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
                                           </dita:xref>
+                                          <dita:keyword>generate-debug-attributes</dita:keyword>
                                           <dita:xref>
                                              <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/troubleshooting/xref:2;59:72">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
@@ -1929,6 +2329,8 @@
                                                       <dita:id>t-increasing-the-JVM</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\increasing-the-jvm.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">Increasing Java memory allocation</dita:title>
+                                                      <dita:keyword>1024</dita:keyword>
+                                                      <dita:keyword>1024</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
@@ -1948,6 +2350,8 @@
                                           <dita:id>loghandling</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\DITA-log.xml</dita:xtrf>
                                           <dita:title xml:lang="en-us">Log files</dita:title>
+                                          <dita:keyword>-l</dita:keyword>
+                                          <dita:keyword>/logdir</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2008,6 +2412,8 @@
                                           <dita:id>t-increasing-the-JVM</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\increasing-the-jvm.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Increasing Java memory allocation</dita:title>
+                                          <dita:keyword>1024</dita:keyword>
+                                          <dita:keyword>1024</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2067,6 +2473,58 @@
                                           <dita:id>ant-parameters-all-transformation-types</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-all-transformation-types.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: All transformations</dita:title>
+                                          <dita:keyword>args.debug</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.draft</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>DRAFT</dita:keyword>
+                                          <dita:keyword>args.draft</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>args.figurelink.style</dita:keyword>
+                                          <dita:keyword>NUMBER</dita:keyword>
+                                          <dita:keyword>TITLE</dita:keyword>
+                                          <dita:keyword>NUMBER</dita:keyword>
+                                          <dita:keyword>TITLE</dita:keyword>
+                                          <dita:keyword>FIGURELINK</dita:keyword>
+                                          <dita:keyword>args.filter</dita:keyword>
+                                          <dita:keyword>args.grammar.cache</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.input</dita:keyword>
+                                          <dita:keyword>args.input.dir</dita:keyword>
+                                          <dita:keyword>args.input.dir</dita:keyword>
+                                          <dita:keyword>args.input.dir</dita:keyword>
+                                          <dita:keyword>args.input</dita:keyword>
+                                          <dita:keyword>args.logdir</dita:keyword>
+                                          <dita:keyword>args.tablelink.style</dita:keyword>
+                                          <dita:keyword>NUMBER</dita:keyword>
+                                          <dita:keyword>TITLE</dita:keyword>
+                                          <dita:keyword>TABLELINK</dita:keyword>
+                                          <dita:keyword>clean.temp</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>dita.dir</dita:keyword>
+                                          <dita:keyword>dita.ext</dita:keyword>
+                                          <dita:keyword>DITAEXT</dita:keyword>
+                                          <dita:keyword>dita.extname</dita:keyword>
+                                          <dita:keyword>xml</dita:keyword>
+                                          <dita:keyword>dita</dita:keyword>
+                                          <dita:keyword>xml</dita:keyword>
+                                          <dita:keyword>dita.ext</dita:keyword>
+                                          <dita:keyword>dita.temp.dir</dita:keyword>
+                                          <dita:keyword>dita.input.valfile</dita:keyword>
+                                          <dita:keyword>args.filter</dita:keyword>
+                                          <dita:keyword>generate.copy.outer</dita:keyword>
+                                          <dita:keyword>1</dita:keyword>
+                                          <dita:keyword>2</dita:keyword>
+                                          <dita:keyword>3</dita:keyword>
                                           <dita:xref>
                                              <rdf:Description rdf:about="http://data.example.com/resources/reference/ant-parameters-all-transformation-types/xref:1;162:66">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
@@ -2078,10 +2536,37 @@
                                                       <dita:id>concept_rcv_xbp_xg</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\generate-copy-outer.dita</dita:xtrf>
                                                       <dita:title xml:lang="en-us">generate.outer.copy parameter</dita:title>
+                                                      <dita:keyword>generate.outer.copy</dita:keyword>
+                                                      <dita:keyword>1</dita:keyword>
+                                                      <dita:keyword>generate.outer.copy</dita:keyword>
+                                                      <dita:keyword>1</dita:keyword>
+                                                      <dita:keyword>2</dita:keyword>
+                                                      <dita:keyword>3</dita:keyword>
+                                                      <dita:keyword>generate.outer.copy</dita:keyword>
+                                                      <dita:keyword>generate.outer.copy</dita:keyword>
+                                                      <dita:keyword>2</dita:keyword>
+                                                      <dita:keyword>generate.outer.copy</dita:keyword>
+                                                      <dita:keyword>2</dita:keyword>
+                                                      <dita:keyword>output.dir</dita:keyword>
+                                                      <dita:keyword>generate.outer.copy</dita:keyword>
+                                                      <dita:keyword>3</dita:keyword>
                                                    </rdf:Description>
                                                 </dita:href>
                                              </rdf:Description>
                                           </dita:xref>
+                                          <dita:keyword>outer.control</dita:keyword>
+                                          <dita:keyword>fail</dita:keyword>
+                                          <dita:keyword>warn</dita:keyword>
+                                          <dita:keyword>quiet</dita:keyword>
+                                          <dita:keyword>gen-list-without-flagging</dita:keyword>
+                                          <dita:keyword>quiet</dita:keyword>
+                                          <dita:keyword>output.dir</dita:keyword>
+                                          <dita:keyword>DITA-dir</dita:keyword>
+                                          <dita:keyword>transtype</dita:keyword>
+                                          <dita:keyword>validate</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2097,6 +2582,54 @@
                                           <dita:id>ant-parameters-common-html-transtypes</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-common-html-transtypes.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: Common HTML-based transformations</dita:title>
+                                          <dita:keyword>args.artlbl</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.breadcrumbs</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>BREADCRUMBS</dita:keyword>
+                                          <dita:keyword>args.copycss</dita:keyword>
+                                          <dita:keyword>args.css</dita:keyword>
+                                          <dita:keyword>args.csspath</dita:keyword>
+                                          <dita:keyword>CSSPATH</dita:keyword>
+                                          <dita:keyword>args.cssroot</dita:keyword>
+                                          <dita:keyword>args.dita.locale</dita:keyword>
+                                          <dita:keyword>args.ftr</dita:keyword>
+                                          <dita:keyword>FTR</dita:keyword>
+                                          <dita:keyword>args.gen.default.meta</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>genDefMeta</dita:keyword>
+                                          <dita:keyword>args.hdf</dita:keyword>
+                                          <dita:keyword>args.hdr</dita:keyword>
+                                          <dita:keyword>HDR</dita:keyword>
+                                          <dita:keyword>args.hide.parent.link</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>NOPARENTLINK</dita:keyword>
+                                          <dita:keyword>args.rellinks</dita:keyword>
+                                          <dita:keyword>args.indexshow</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.outext</dita:keyword>
+                                          <dita:keyword>html</dita:keyword>
+                                          <dita:keyword>OUTEXT</dita:keyword>
+                                          <dita:keyword>args.xhtml.classattr</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>PRESERVE-DITA-CLASS</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.xsl</dita:keyword>
+                                          <dita:keyword>onlytopic.in.map</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2112,6 +2645,20 @@
                                           <dita:id>concept_rcv_xbp_xg</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\generate-copy-outer.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">generate.outer.copy parameter</dita:title>
+                                          <dita:keyword>generate.outer.copy</dita:keyword>
+                                          <dita:keyword>1</dita:keyword>
+                                          <dita:keyword>generate.outer.copy</dita:keyword>
+                                          <dita:keyword>1</dita:keyword>
+                                          <dita:keyword>2</dita:keyword>
+                                          <dita:keyword>3</dita:keyword>
+                                          <dita:keyword>generate.outer.copy</dita:keyword>
+                                          <dita:keyword>generate.outer.copy</dita:keyword>
+                                          <dita:keyword>2</dita:keyword>
+                                          <dita:keyword>generate.outer.copy</dita:keyword>
+                                          <dita:keyword>2</dita:keyword>
+                                          <dita:keyword>output.dir</dita:keyword>
+                                          <dita:keyword>generate.outer.copy</dita:keyword>
+                                          <dita:keyword>3</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2127,6 +2674,7 @@
                                           <dita:id>ant-parameters-eclipse-content-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-eclipse-content-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: Eclipse content transformation</dita:title>
+                                          <dita:keyword>args.eclipsecontent.toc</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2142,6 +2690,26 @@
                                           <dita:id>ant-parameters-eclipse-help-transformation.dita</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-eclipse-help-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: Eclipse help transformation</dita:title>
+                                          <dita:keyword>args.eclipsehelp.toc</dita:keyword>
+                                          <dita:keyword>args.eclipse.country</dita:keyword>
+                                          <dita:keyword>args.eclipse.language</dita:keyword>
+                                          <dita:keyword>us</dita:keyword>
+                                          <dita:keyword>ca</dita:keyword>
+                                          <dita:keyword>gb</dita:keyword>
+                                          <dita:keyword>en</dita:keyword>
+                                          <dita:keyword>args.eclipse.language</dita:keyword>
+                                          <dita:keyword>args.eclipse.language</dita:keyword>
+                                          <dita:keyword>en</dita:keyword>
+                                          <dita:keyword>args.eclipse.country</dita:keyword>
+                                          <dita:keyword>args.eclipse.provider</dita:keyword>
+                                          <dita:keyword>DITA</dita:keyword>
+                                          <dita:keyword>args.eclipse.version</dita:keyword>
+                                          <dita:keyword>0.0.0</dita:keyword>
+                                          <dita:keyword>args.eclipse.symbolic.name</dita:keyword>
+                                          <dita:keyword>org.sample.help.doc</dita:keyword>
+                                          <dita:keyword>args.eclipse.symbolic.name</dita:keyword>
+                                          <dita:keyword>org.sample.help.doc</dita:keyword>
+                                          <dita:keyword>args.eclipse.symbolic.name</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2157,6 +2725,7 @@
                                           <dita:id>ant-parameters-html-help-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-html-help-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: HTML Help transformation</dita:title>
+                                          <dita:keyword>args.htmlhelp.includefile</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2172,6 +2741,12 @@
                                           <dita:id>ant-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-javahelp-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: JavaHelp transformation</dita:title>
+                                          <dita:keyword>args.javahelp.map</dita:keyword>
+                                          <dita:keyword>args.input</dita:keyword>
+                                          <dita:keyword>args.javahelp.toc</dita:keyword>
+                                          <dita:keyword>args.javahelp.toc</dita:keyword>
+                                          <dita:keyword>args.javahelp.toc</dita:keyword>
+                                          <dita:keyword>args.javahelp.map</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2187,6 +2762,11 @@
                                           <dita:id>ant-parameters-legacypdf-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-legacypdf-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: Legacy PDF transformation</dita:title>
+                                          <dita:keyword>args.fo.output.rel.links</dita:keyword>
+                                          <dita:keyword>yes </dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.fo.include.rellinks</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2202,6 +2782,7 @@
                                           <dita:id>ant-parameters-odt-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-odt-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: ODT transformation</dita:title>
+                                          <dita:keyword>args.odt.img.embed</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2217,6 +2798,17 @@
                                           <dita:id>ant-parameters-other</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-other.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: Other</dita:title>
+                                          <dita:keyword>dita.preprocess</dita:keyword>
+                                          <dita:keyword>dita.preprocess.reloadstylesheet</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>dita.preprocess.reloadstylesheet.conref</dita:keyword>
+                                          <dita:keyword>dita.preprocess.reloadstylesheet.mapref</dita:keyword>
+                                          <dita:keyword>dita.preprocess.reloadstylesheet.mappull</dita:keyword>
+                                          <dita:keyword>dita.preprocess.reloadstylesheet.maplink</dita:keyword>
+                                          <dita:keyword>dita.preprocess.reloadstylesheet.topicpull</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2232,6 +2824,29 @@
                                           <dita:id>ant-parameters-pdf2-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-pdf2-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: PDF transformation</dita:title>
+                                          <dita:keyword>args.bookmap-order</dita:keyword>
+                                          <dita:keyword>retain</dita:keyword>
+                                          <dita:keyword>discard</dita:keyword>
+                                          <dita:keyword>discard</dita:keyword>
+                                          <dita:keyword>args.xsl.pdf</dita:keyword>
+                                          <dita:keyword>custom.xep.config</dita:keyword>
+                                          <dita:keyword>customization.dir</dita:keyword>
+                                          <dita:keyword>pdf.formatter</dita:keyword>
+                                          <dita:keyword>ah</dita:keyword>
+                                          <dita:keyword>fop</dita:keyword>
+                                          <dita:keyword>xep</dita:keyword>
+                                          <dita:keyword>publish.required.cleanup</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>args.draft</dita:keyword>
+                                          <dita:keyword>publishRequiredCleanup</dita:keyword>
+                                          <dita:keyword>args.draft</dita:keyword>
+                                          <dita:keyword>retain.topic.fo</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>no</dita:keyword>
+                                          <dita:keyword>org.dita.pdf2.use-out-temp</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2247,6 +2862,11 @@
                                           <dita:id>ant-parameters-xhtml-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\ant-parameters-xhtml-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Ant parameters: XHTML transformation</dita:title>
+                                          <dita:keyword>args.xhtml.contenttarget</dita:keyword>
+                                          <dita:keyword>contentwin</dita:keyword>
+                                          <dita:keyword>args.xhtml.toc</dita:keyword>
+                                          <dita:keyword>index</dita:keyword>
+                                          <dita:keyword>args.xhtml.toc.class</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2262,6 +2882,8 @@
                                           <dita:id>dita-ot-java-properties</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita-ot_java_properties.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters</dita:title>
+                                          <dita:keyword>parameter</dita:keyword>
+                                          <dita:keyword>value</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2277,6 +2899,22 @@
                                           <dita:id>tool-parameters-all-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-all-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: All transformations</dita:title>
+                                          <dita:keyword>basedir</dita:keyword>
+                                          <dita:keyword>cleantemp</dita:keyword>
+                                          <dita:keyword>debug</dita:keyword>
+                                          <dita:keyword>ditadir</dita:keyword>
+                                          <dita:keyword>ditaext</dita:keyword>
+                                          <dita:keyword>ditalocale</dita:keyword>
+                                          <dita:keyword>draft</dita:keyword>
+                                          <dita:keyword>filter</dita:keyword>
+                                          <dita:keyword>grammarcache</dita:keyword>
+                                          <dita:keyword>i</dita:keyword>
+                                          <dita:keyword>logdir</dita:keyword>
+                                          <dita:keyword>outdir</dita:keyword>
+                                          <dita:keyword>outext</dita:keyword>
+                                          <dita:keyword>tempdir</dita:keyword>
+                                          <dita:keyword>transtype</dita:keyword>
+                                          <dita:keyword>validate</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2292,6 +2930,24 @@
                                           <dita:id>tool-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-common-html-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: All HTML-based transformations</dita:title>
+                                          <dita:keyword>ftr</dita:keyword>
+                                          <dita:keyword>hdr</dita:keyword>
+                                          <dita:keyword>hdf</dita:keyword>
+                                          <dita:keyword>args.css</dita:keyword>
+                                          <dita:keyword>artlbl</dita:keyword>
+                                          <dita:keyword>copycss</dita:keyword>
+                                          <dita:keyword>csspath</dita:keyword>
+                                          <dita:keyword>cssroot</dita:keyword>
+                                          <dita:keyword>ftr</dita:keyword>
+                                          <dita:keyword>generateouter</dita:keyword>
+                                          <dita:keyword>hdf</dita:keyword>
+                                          <dita:keyword>hdr</dita:keyword>
+                                          <dita:keyword>indexshow</dita:keyword>
+                                          <dita:keyword>onlytopicinmap</dita:keyword>
+                                          <dita:keyword>outercontrol</dita:keyword>
+                                          <dita:keyword>usetasklabels</dita:keyword>
+                                          <dita:keyword>xhtmlclass</dita:keyword>
+                                          <dita:keyword>xsl</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2307,6 +2963,7 @@
                                           <dita:id>tool-parameters-eclipsecontent-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-eclipsecontent-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: Eclipse content transformation</dita:title>
+                                          <dita:keyword>eclipsecontenttoc</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2322,6 +2979,9 @@
                                           <dita:id>tool-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-eclipsehelp-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: Eclipse help transformation</dita:title>
+                                          <dita:keyword>eclipsehelptoc</dita:keyword>
+                                          <dita:keyword>provider</dita:keyword>
+                                          <dita:keyword>version</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2337,6 +2997,7 @@
                                           <dita:id>tool-parameters-htmlhelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-htmlhelp-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: HTML help transformation</dita:title>
+                                          <dita:keyword>htmlhelpincludefile</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2352,6 +3013,8 @@
                                           <dita:id>tool-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-javahelp-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: JavaHelp transformation</dita:title>
+                                          <dita:keyword>javahelpmap</dita:keyword>
+                                          <dita:keyword>javahelptoc</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2367,6 +3030,7 @@
                                           <dita:id>tool-parameters-odt-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-odt-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: ODT transformation</dita:title>
+                                          <dita:keyword>odtimgembed</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2382,6 +3046,10 @@
                                           <dita:id>tool-parameters-pdf-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-pdf-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: PDF transformation</dita:title>
+                                          <dita:keyword>fooutputrellinks</dita:keyword>
+                                          <dita:keyword>fouserconfig</dita:keyword>
+                                          <dita:keyword>retaintopicfo</dita:keyword>
+                                          <dita:keyword>xslpdf</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2397,6 +3065,7 @@
                                           <dita:id>reference_rv1_c4w_vg</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\tool-parameters-xhtml-transformation.dita</dita:xtrf>
                                           <dita:title xml:lang="en-us">Command-line tool parameters: XHTML transformation</dita:title>
+                                          <dita:keyword>xhtmltoc</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2412,11 +3081,33 @@
                                           <dita:id>configuration</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\configuration.dita</dita:xtrf>
                                           <dita:title xml:lang="en">lib/configuration.properties file</dita:title>
+                                          <dita:keyword>default.language</dita:keyword>
+                                          <dita:keyword> en</dita:keyword>
                                           <dita:xref>
                                              <rdf:Description rdf:about="http://data.example.com/resources/reference/en/configuration/xref:1;37:75">
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
                                              </rdf:Description>
                                           </dita:xref>
+                                          <dita:keyword>generate-debug-attributes</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>processing-mode</dita:keyword>
+                                          <dita:keyword>strict</dita:keyword>
+                                          <dita:keyword>lax</dita:keyword>
+                                          <dita:keyword>skip</dita:keyword>
+                                          <dita:keyword>org.dita.pdf2.index.frame-markup</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>org.dita.pdf2.index.frame-markup</dita:keyword>
+                                          <dita:keyword>yes</dita:keyword>
+                                          <dita:keyword>org.dita.pdf2.i18n.enabled</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>org.dita.pdf2.use-out-temp</dita:keyword>
+                                          <dita:keyword>true</dita:keyword>
+                                          <dita:keyword>false</dita:keyword>
+                                          <dita:keyword>plugindirs</dita:keyword>
+                                          <dita:keyword>plugin.ignores</dita:keyword>
                                        </rdf:Description>
                                     </dita:href>
                                  </rdf:Description>
@@ -2771,6 +3462,7 @@
                               <dita:id>XhtmlCommon</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\dev_ref\XhtmlCommon.dita</dita:xtrf>
                               <dita:title xml:lang="en-us">Common XHTML processing</dita:title>
+                              <dita:keyword>arg.css</dita:keyword>
                            </rdf:Description>
                         </dita:href>
                      </rdf:Description>
@@ -2876,6 +3568,7 @@
                               <dita:id>odtdefault</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\dev_ref\OdtDefault.dita</dita:xtrf>
                               <dita:title xml:lang="en-us">Open Document Format processing modules</dita:title>
+                              <dita:keyword>odt</dita:keyword>
                            </rdf:Description>
                         </dita:href>
                      </rdf:Description>
@@ -2936,6 +3629,8 @@
                               <dita:id>rebuilding-the-dita-ot-documentation</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\dev_ref\rebuilding-the-dita-ot-documentation.dita</dita:xtrf>
                               <dita:title xml:lang="en-us">Rebuilding the DITA-OT documentation</dita:title>
+                              <dita:keyword>target</dita:keyword>
+                              <dita:keyword>target</dita:keyword>
                            </rdf:Description>
                         </dita:href>
                      </rdf:Description>
@@ -3304,6 +3999,8 @@
                               <dita:id>dita2pdf-customization</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\readme\dita2pdf-customization.dita</dita:xtrf>
                               <dita:title xml:lang="en">Customizing PDF output</dita:title>
+                              <dita:keyword>print-pdf</dita:keyword>
+                              <dita:keyword>print-pdf</dita:keyword>
                            </rdf:Description>
                         </dita:href>
                      </rdf:Description>
@@ -3334,6 +4031,9 @@
                               <dita:id>implementation-dependent-features</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\dev_ref\DITA1.2-implementation-dependent-features.dita</dita:xtrf>
                               <dita:title xml:lang="en-us">Implementation dependent features</dita:title>
+                              <dita:keyword>DOTJ007E</dita:keyword>
+                              <dita:keyword>DOTX068W</dita:keyword>
+                              <dita:keyword>DOTJ054E</dita:keyword>
                               <dita:xref>
                                  <rdf:Description rdf:about="http://data.example.com/resources/reference/implementation-dependent-features/xref:1;68:81">
                                     <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
@@ -3362,6 +4062,7 @@
                                  <dita:id>code-reference</dita:id>
                                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\docsrc\dev_ref\extended-functionality.dita</dita:xtrf>
                                  <dita:title xml:lang="en-us">Code reference processing</dita:title>
+                                 <dita:keyword>DOTJ052E</dita:keyword>
                               </rdf:Description>
                            </rdf:Description>
                         </dita:href>
