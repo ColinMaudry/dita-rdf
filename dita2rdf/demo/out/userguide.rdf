@@ -66,9 +66,6 @@
 					<dita:prodinfo><rdf:Description rdf:about="http://data.example.com/resources/products/ABC123#1.3.0"/><rdf:type rdf:resource="http://purl.org/dita/ns#Prodinfo"/><dita:vrmVersion>1</dita:vrmVersion><dita:vrmRelease>3</dita:vrmRelease><dita:vrmModification>0</dita:vrmModification><dita:prodname>ABC123</dita:prodname><dita:brand>Brand</dita:brand></dita:prodinfo>
 				
 			
-				<dita:prodinfo><rdf:Description rdf:about="http://data.example.com/resources/products/1.8.4#1.2.0"/><rdf:type rdf:resource="http://purl.org/dita/ns#Prodinfo"/><dita:vrmVersion>1</dita:vrmVersion><dita:vrmRelease>2</dita:vrmRelease><dita:vrmModification>0</dita:vrmModification><dita:brand>Brand8</dita:brand></dita:prodinfo>
-				<dita:prodinfo><rdf:Description rdf:about="http://data.example.com/resources/products/1.8.4#1.4.0"/><rdf:type rdf:resource="http://purl.org/dita/ns#Prodinfo"/><dita:vrmVersion>1</dita:vrmVersion><dita:vrmRelease>4</dita:vrmRelease><dita:vrmModification>0</dita:vrmModification><dita:brand>Brand8</dita:brand></dita:prodinfo>
-			
 		
 	
   <dita:xref><rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/xref:1;41:81"><rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/><dita:href rdf:resource="http://www.opensource.org/licenses/cpl1.0.php"/><dita:format>html</dita:format></rdf:Description></dita:xref>CPL 1.0<dita:xref><rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome/xref:2;43:12"><rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/><dita:href rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/><dita:format>html</dita:format></rdf:Description></dita:xref>Apache 2.0<dita:keyword xml:lang="en-us">Java</dita:keyword>

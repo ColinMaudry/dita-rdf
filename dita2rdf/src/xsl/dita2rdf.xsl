@@ -267,7 +267,8 @@
 	</xsl:template>
 	
 	<!-- Prodinfo -->
-	<xsl:template match="*[contains(@class, ' topic/prodinfo ')]">
+	<!-- If prodname is empty, or if its resolved via the scope, prodinfo is skipped (for now) -->
+	<xsl:template match="*[contains(@class, ' topic/prodinfo ')][*[contains(@class, ' topic/prodname ')]/text()]">
 		<xsl:param name="productUri" select="concat($config/config/productsBaseUri/@uri,prodname)"/>
 		<xsl:apply-templates select="*[contains(@class, ' topic/vrmlist ')]" mode="create-prodinfo">
 			<xsl:with-param name="productUri" select="$productUri"/>
@@ -293,25 +294,25 @@
 		</dita:prodinfo>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/prodname ')][text()]">
-		<dita:prodname><xsl:value-of select="."/></dita:prodname>
+		<dita:prodname><xsl:value-of select="text()"/></dita:prodname>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/component ')][text()]">
-		<dita:component><xsl:value-of select="."/></dita:component>
+		<dita:component><xsl:value-of select="text()"/></dita:component>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/brand ')][text()]">
-		<dita:brand><xsl:value-of select="."/></dita:brand>
+		<dita:brand><xsl:value-of select="text()"/></dita:brand>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/feature ')][text()]">
-		<dita:featnum><xsl:value-of select="."/></dita:featnum>
+		<dita:featnum><xsl:value-of select="text()"/></dita:featnum>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/platform ')][text()]">
-		<dita:platform><xsl:value-of select="."/></dita:platform>
+		<dita:platform><xsl:value-of select="text()"/></dita:platform>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/prognum ')][text()]">
-		<dita:prognum><xsl:value-of select="."/></dita:prognum>
+		<dita:prognum><xsl:value-of select="text()"/></dita:prognum>
 	</xsl:template>
 	<xsl:template match="*[contains(@class, ' topic/platform ')][text()]">
-		<dita:series><xsl:value-of select="."/></dita:series>
+		<dita:series><xsl:value-of select="text()"/></dita:series>
 	</xsl:template>
 	
 	<!-- Keywords -->
