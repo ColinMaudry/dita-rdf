@@ -26,7 +26,7 @@
 		</rdf:RDF>
 	</xsl:template>
 
-	<xsl:template match="*[contains(@class,' map/map ')] | *[contains(@class,' topic/topic ')]">
+	<xsl:template match="*[contains(@class,' map/map ')] | *[contains(@class,' topic/topic ')][not(parent::*[contains(@class,' topic/topic ')])]" name="colin:document">
 		<xsl:param name="language" tunnel="yes"/>
 		<xsl:param name="currentUri" tunnel="yes"/>
 		
@@ -42,7 +42,7 @@
 		</xsl:param>
 		<xsl:param name="id" select="if (@id!='') then @id else generate-id()"/>
 		<xsl:param name="documentUri">
-		<xsl:value-of select="colin:getInformationObjectUri(local-name(),@xml:lang,$id)"/>
+		<xsl:value-of select="colin:getInformationObjectUri(local-name(),$docLanguage,$id)"/>
 		</xsl:param>
 		<xsl:if test="$debug='1'">
 			<xsl:message>
@@ -73,11 +73,11 @@
 					<xsl:value-of select="@title"/>
 				</dita:title>
 			</xsl:if>
-			<xsl:apply-templates>
-				<!-- The language and the documentUri parameters are tunneled to all further templates until the value is overriden by the next document. -->
-				<xsl:with-param name="language" select="$docLanguage" tunnel="yes"/>
-				<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
-			</xsl:apply-templates>
+					<xsl:apply-templates>
+						<!-- The language and the documentUri parameters are tunneled to all further templates until the value is overriden by the next document. -->
+						<xsl:with-param name="language" select="$docLanguage" tunnel="yes"/>
+						<xsl:with-param name="documentUri" select="$documentUri" tunnel="yes"/>
+					</xsl:apply-templates>
 		</rdf:Description>
 	</xsl:template>
 
@@ -198,7 +198,7 @@
 		</dita:format>
 	</xsl:template>
 	
-	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format='dita' or ../@format='ditamap'] | @conref">
+	<xsl:template match="@href[contains(.,'.dita')] | @href[../@format='dita' or ../@format='ditamap']" name="colin:ditaHref">
 		<xsl:param name="keynode"/>
 		<xsl:param name="targetDocument"/>
 		<xsl:param name="currentUri" tunnel="yes"/>
@@ -210,11 +210,12 @@
 		</xsl:if>
 		<!-- can be dita:href or dita:conref -->
 		<xsl:element name="{concat('dita:', local-name())}">
-			<!-- Only parse the next document if the current document is part of the documentation set.
-			See https://github.com/ColinMaudry/dita-rdf/issues/42 -->
+
+			<xsl:variable name="resolvedCurrentUri" select="colin:cleanDitaHref(.,$currentUri)"/>
 			<xsl:choose>
+				<!-- Only parse the next document if the current document is part of the documentation set.
+			See https://github.com/ColinMaudry/dita-rdf/issues/42 -->
 				<xsl:when test="contains($previousReference,' map/topicref ') or $previousReference=''">
-					<xsl:variable name="resolvedCurrentUri" select="colin:cleanDitaHref(.,$currentUri)"/>
 					<xsl:choose>
 						<xsl:when test="$targetDocument!=''">
 							<xsl:apply-templates select="$targetDocument/*">
@@ -231,35 +232,54 @@
 					</xsl:choose>											
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:attribute name="rdf:resource" select="."/>
+					<xsl:call-template name="colin:justGetTheUri">
+						<xsl:with-param name="resolvedCurrentUri" select="$resolvedCurrentUri"/>
+					</xsl:call-template>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:element>
 	</xsl:template>
+	<!-- Since conref only targets one element, processing all the target document is overkill -->
+	<xsl:template match="@conref">
+		<xsl:param name="currentUri" tunnel="yes"/>
+		<dita:conref>
+			<xsl:call-template name="colin:justGetTheUri">
+				<xsl:with-param name="resolvedCurrentUri" select="colin:cleanDitaHref(.,$currentUri)"/>
+			</xsl:call-template>
+		</dita:conref>
+	</xsl:template>
+	
+	<xsl:template name="colin:justGetTheUri">
+		<xsl:param name="resolvedCurrentUri"/>
+		<xsl:param name="docLanguage" tunnel="yes"/>
+		<xsl:variable name="targetDocumentRoot" select="document($resolvedCurrentUri)/*" as="node()"/>
+		<xsl:variable name="targetDocumentLang">
+			<xsl:choose>
+				<xsl:when test="$targetDocumentRoot/@xml:lang!=''">
+					<xsl:value-of select="$targetDocumentRoot/@xml:lang"/>
+				</xsl:when>
+				<xsl:otherwise>
+<!-- You'd better have @xml:lang set in your files...
+			If you xref to a topic that has a different language, it will inherit the language from the xref. 
+			For instance, from an 'fr-FR' topic to an 'en-UK' topic, if the 'en-UK' doesn't have @xml:lang, it gets the URI of an 'fr-FR' topic.-->
+					<xsl:value-of select="$docLanguage"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:attribute name="rdf:resource" select="colin:getInformationObjectUri($targetDocumentRoot/local-name(),$targetDocumentLang,$targetDocumentRoot/@id)"/>
+	</xsl:template>
+	
 	<xsl:template match="@href[contains(.,'.xml') and not(../@format)]">
-		<xsl:param name="previousReference" tunnel="yes"/>
-		<!-- Only parse the next document if the current document is part of the documnentation set.
-			See https://github.com/ColinMaudry/dita-rdf/issues/42 -->
 		<xsl:choose>
-			<xsl:when test="document(., /)/*[@class][@domains]">
-				<dita:href>
-					<xsl:choose>
-						<xsl:when test="contains($previousReference,' map/topicref ') or $previousReference=''">
-							<xsl:apply-templates select="document(., /)/*">
-								<xsl:with-param as="attribute()" name="previousReference" select="../@class" tunnel="yes"/>
-							</xsl:apply-templates>
-						</xsl:when>
-						<xsl:otherwise>
-							<dita:href rdf:resource="{.}"/>
-						</xsl:otherwise>
-					</xsl:choose>
-				</dita:href>
+			<xsl:when test="document(., /)/*[@class and @domains]">
+				<xsl:call-template name="colin:ditaHref"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<dita:href rdf:resource="{.}"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+
 	<doc:doc>
 		<doc:desc>Catch all template for reference objects (that have a non-empty @href). Topicref, image, xref, etc.</doc:desc>
 	</doc:doc>

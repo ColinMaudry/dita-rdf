@@ -13,7 +13,7 @@
 	xmlns:colin="http://colin.maudry.com/"
 	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
 	xmlns:ot="http://www.idiominc.com/opentopic"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" exclude-result-prefixes="colin doc xs">
 	
 
 	<doc:doc>
@@ -25,6 +25,7 @@
 		">
 		<xsl:apply-templates/>
 	</xsl:template>
+	
 	<xsl:template match="*[contains(@class, ' topic/body ')]  |
 		*[contains(@class, ' topic/related-links ')]">
 		<!-- In topic/body and topic/related-links, we only need the non-empty @href and @keyref elements -->
@@ -32,5 +33,10 @@
 		<xsl:message select="$currentUri"></xsl:message>
 		<xsl:apply-templates select="descendant::*[@href!='' or @keyref!='' or @conref!='' or @conkeyref!=''] | descendant::*[contains(@class, ' topic/keyword ')]"/>
 	</xsl:template>
-	<xsl:template match="*[contains(@class, ' topic/xref ')]/text()"/>	
+	<xsl:template match="*[contains(@class,' topic/topic ')]/*[contains(@class,' topic/topic ')]">
+			<dita:subtopic>
+				<xsl:call-template name="colin:document"/>
+			</dita:subtopic>
+	</xsl:template>
+	<xsl:template match="*[@href | @conref | @keyref | @conkeyref | @keys]/text()"/>	
 </xsl:stylesheet>
