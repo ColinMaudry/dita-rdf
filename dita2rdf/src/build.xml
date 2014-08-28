@@ -22,7 +22,7 @@
 	
 	<target name="dita2rdf" depends="dita2rdf.init, build-init,short-preprocess, map2rdf"/>
 	
-	<target name="short-preprocess" depends="gen-list,debug-filter,copy-files,keyref"/>
+	<target name="short-preprocess" depends="gen-list,debug-filter,copy-files"/>
 	<!-- 
 	For userguide.ditamap:
 			-with preprocess: 17 seconds total processing time
