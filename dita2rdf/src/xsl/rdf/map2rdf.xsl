@@ -22,17 +22,30 @@
 		<xsl:value-of select="concat($documentUri,'/keys/',$keyname)"/>
 	</xsl:function>
 	
-	<xsl:template match="@keys">
+	<!-- For now, only keydef that defines an href are supported (not key-keywords) -->
+	<xsl:template match="@keys[../@href]">
 		<xsl:param name="documentUri" tunnel="yes"/>
-		<xsl:variable name="base" select="translate(../@xtrf,'\','/')"/>
-		<xsl:variable name="relative" select="../@href"></xsl:variable>
-		<xsl:for-each select="tokenize(.,' ')">
-			<dita:key>
-				<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
-					<dita:href rdf:resource="{resolve-uri($relative,$base)}"/>
-					<dita:keyname><xsl:value-of select="."/></dita:keyname>
-				</dita:Key>
-			</dita:key>
+		<xsl:param name="currentUri" tunnel="yes"/>
+		<xsl:variable name="keynode" select=".."/>
+		<xsl:variable name="targetDocument">
+			<xsl:choose>
+				<xsl:when test="../@href[contains(.,'.dita')] | ../@href[../@format='dita' or ../@format='ditamap'] | ../@href[contains(.,'.xml') and not(../@format)]">
+					<!-- I won't be able to use document() in the for each because I won't be in the context of a document node. I consequently need to store the XML tree of the target file in a variable, to process it afterward. -->
+					<xsl:copy-of select="document(colin:cleanDitaHref(../@href,$currentUri))"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text></xsl:text>					
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:for-each select="tokenize(., ' ')">
+					<dita:key>
+						<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
+							<xsl:apply-templates select="$keynode/@href">
+								<xsl:with-param name="targetDocument" select="$targetDocument"/>
+							</xsl:apply-templates>
+						</dita:Key>
+					</dita:key>
 		</xsl:for-each>
 	</xsl:template>
 	<doc:doc>

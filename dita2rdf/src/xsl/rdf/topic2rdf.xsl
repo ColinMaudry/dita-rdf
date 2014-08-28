@@ -28,6 +28,9 @@
 	<xsl:template match="*[contains(@class, ' topic/body ')]  |
 		*[contains(@class, ' topic/related-links ')]">
 		<!-- In topic/body and topic/related-links, we only need the non-empty @href and @keyref elements -->
-		<xsl:apply-templates select="descendant::*[@href!='' or @keyref!=''] | descendant::*[contains(@class, ' topic/keyword ')]"/>
-	</xsl:template>	
+		<xsl:param name="currentUri" tunnel="yes"/>
+		<xsl:message select="$currentUri"></xsl:message>
+		<xsl:apply-templates select="descendant::*[@href!='' or @keyref!='' or @conref!='' or @conkeyref!=''] | descendant::*[contains(@class, ' topic/keyword ')]"/>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/xref ')]/text()"/>	
 </xsl:stylesheet>
