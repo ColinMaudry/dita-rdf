@@ -31,7 +31,7 @@ RewriteRule ^dita$ dita.ttl [R=303]
 # Rewrite rule to make sure we serve JSON-LD content from the namespace URI if requested
 RewriteCond %{HTTP_ACCEPT} application/ld\+json [OR]
 RewriteCond %{HTTP_ACCEPT} application/json
-RewriteRule ^dita$ dita.jsonld [R=303]
+RewriteRule ^dita$ http://dydra.com/colin-maudry/dita.jsonld [R=303]
 
 # Rewrite rule to make sure we serve the RDF/XML content from the namespace URI by default
 RewriteRule ^dita$ http://dydra.com/colin-maudry/dita.rdf [R=303]

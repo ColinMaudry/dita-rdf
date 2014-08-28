@@ -277,7 +277,7 @@
     use the site.</dita:shortdesc>
 	
 		                <dita:source>source1</dita:source>
-		
+		                <dita:permissions>restricted</dita:permissions>
 		
 		
 			               <dita:audience>
@@ -556,7 +556,7 @@ output that is produced by the DITA Open Toolkit.</dita:shortdesc>
                   <dita:title xml:lang="en-us">DITA-OT Readme map</dita:title>
 	                 <dita:title xml:lang="en-us">User Guide</dita:title>
 	
-		
+		                <dita:permissions>restricted</dita:permissions>
 		                <dita:audience>
                      <dita:Audience rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme/audience:1;9:71">
                         <dita:experiencelevel>expert</dita:experiencelevel>

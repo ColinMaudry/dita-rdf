@@ -165,12 +165,19 @@
 			<xsl:apply-templates mode="get-text"/>
 		</dita:shortdesc>
 	</xsl:template>
-
-	<xsl:template match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/author ')]">
+		<xsl:template match="*[contains(@class, ' topic/author ')]">
 		<dita:author>
 			<xsl:apply-templates mode="get-text"/>
 		</dita:author>
 	</xsl:template>
+	
+	
+	<xsl:template match="*[contains(@class, ' topic/permissions ')][@view!='']">
+		<dita:permissions>
+			<xsl:value-of select="@view"/>
+		</dita:permissions>
+	</xsl:template>
+	
 
 	<xsl:template match="*[contains(@class, ' topic/source ')]">
 		<dita:source>
