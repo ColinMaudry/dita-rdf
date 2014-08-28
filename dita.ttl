@@ -247,7 +247,7 @@
 			rdfs:range xsd:string ;
 			rdfs:domain :Doctype ;
 			rdfs:label "permissions	" .
-		:source a rdfs:subPropertyOf dcterms:source ;
+		:source rdfs:subPropertyOf dcterms:source ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/source.html> ;
 			rdfs:range xsd:string ;
 			rdfs:domain :Doctype ;
@@ -261,7 +261,7 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:range xsd:string ;
-			rdfs:rang dita:Keyword ;
+			rdfs:range :Keyword ;
 			rdfs:label "keyword" .
 		:category  a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/category.html> ;
@@ -281,6 +281,11 @@
 		#specific to maps
 		
 		#specific to topics
+		:subtopic a rdf:Property ;
+			rdfs:domain :Topic ;
+			rdfs:range :Topic ;
+			rdfs:label "subtopic";
+			rdfs:comment "Topics can be nested."@en-US .
 	
 		#specific to reference objects
 		:href a rdf:Property ;
@@ -342,24 +347,25 @@
 			rdfs:comment "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:label "Audience" .	
-		:audienceType a rdf:Property ; #could be :type, but wanted to distinguisg from other uses of type
+		#could be :type, but wanted to distinguisg from other uses of type
+		:audienceType a rdf:Property ; 
 			rdfs:comment "Indicates the kind of person for whom the content of the topic is intended. Note that this differs from the type attribute on many other DITA elements."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:range xsd:string ;
 			rdfs:label "type" ;
-			rdfs:domain dita:Audience .
+			rdfs:domain :Audience .
 		:job a rdf:Property ;
 			rdfs:comment "Indicates the high-level task the audience for the topic is trying to accomplish."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:range xsd:string ;
 			rdfs:label "job" ;
-			rdfs:domain dita:Audience .
+			rdfs:domain :Audience .
 		:experiencelevel a rdf:Property ;
 			rdfs:comment "Indicates the level of experience the audience is assumed to possess."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:range xsd:string ;
 			rdfs:label "experiencelevel" ;
-			rdfs:domain dita:Audience .
+			rdfs:domain :Audience .
 
 		#specific to Prodinfo
 		:prodname a rdf:Property ;
