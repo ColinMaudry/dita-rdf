@@ -17,17 +17,40 @@
 		The base URI for resources (http://data.nxp.com/resources/) must be a URL for which you control the domain (nxp.com). The URI MUST end with a /.
 		-->
 		<resourcesBaseUri uri="http://data.example.com/resources/"/>
+	
+	<!-- 
+	Same thing here, but for products.
+	This is the URI that will be the base for product URI. It will be completed with prodname and version.
+	-->
+	
+	<productsBaseUri uri="http://data.example.com/resources/products"/>
+	
+	<!-- Here you choose which character you want to use to separate the product URI from its version number. By default it looks like this:
+	http://data.example.com/resources/products/ABC123#1.2.3 
+	
+	Invalid values: % ? & \ ( ) ! -->
+	
+	<productVersionSeparator>#</productVersionSeparator>
 		
 		<!-- Standard doctypes -->
 	<domains>
 		<domain domainId="topic" baseUri="http://purl.org/dita/ns#"/>
-		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
-		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
+		
+		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningmap-d" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="mapgroup-d" baseUri="http://purl.org/dita/ns#"/>
-
+		
+		<domain domainId="learningBase" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningContent" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningOverview" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningSummary" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningAssessment" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningPlan" baseUri="http://purl.org/dita/ns#"/>
+		
 		<!--  
 		Add the class URI mappings for your shell specializations (document types) below.
 		In RDF, the good practice consists in capitalizing the first letter of the fragment.
