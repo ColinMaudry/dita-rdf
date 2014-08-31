@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_pyk_kdq_gp">
+	<title>RDF for the beginner</title>
+	<shortdesc>It's just another way to express data.</shortdesc>
+	<conbody>
+		<p>First things first, the <xref format="html" href="http://www.w3.org/TR/rdf11-primer/" scope="external"><term>Resource Description Framework</term> (RDF)</xref>,
+			is a W3C recommendation since 2003, with an update to version 1.1 in 2014. Its purpose is to achieve what the Web has enabled for documents, but this time with data. Since
+			the dawn of the Web, one of its main strength is to enable users to interlink documents easily, building browsing paths for the Web users. One Web page can be the starting
+			point to an infinity of other Web pages. With <term>RDF</term>, it's the same, but with data.</p>
+	</conbody>
+</concept>
