@@ -1,5 +1,6 @@
 .project
 /build*
+!build_publishdoc.xml
 dita-rdf.xpr
 temp/
 test*
@@ -9,6 +10,7 @@ dita2rdf/demo/docsrc
 dita2rdf/demo/out/*
 !*.rdf
 *.list
+/*.properties
 /documentation/*
 /documentation/src/out
 !/documentation/src
