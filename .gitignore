@@ -15,3 +15,4 @@ dita2rdf/demo/out/*
 !/documentation/*.pdf
 !/documentation/dita-rdf.html
 !/documentation/*.pdf
+!/documentation/*.chm
