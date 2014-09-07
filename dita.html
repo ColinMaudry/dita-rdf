@@ -31,6 +31,18 @@
     
     
       <span class="type">http://www.w3.org/2000/01/rdf-schema#Class</span>
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Doctype</h1><table class="properties">
+        
+        <tbody><tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#comment
+          </td>
+          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">All the DITA document types.</td>
+        </tr>
+      </tbody></table>
+    
+    
+      <span class="type">http://www.w3.org/2000/01/rdf-schema#Class</span>
       <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Key</h1><table class="properties">
         
         <tbody><tr class="property">
@@ -66,6 +78,18 @@
           <td>
             <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html</a>
           </td>
+        </tr>
+      </tbody></table>
+    
+    
+      <span class="type">http://www.w3.org/2000/01/rdf-schema#Class</span>
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label" lang="en-US">DITA base reference object</h1><table class="properties">
+        
+        <tbody><tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#comment
+          </td>
+          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA reference object is used to link, fetch or push content in relation with another file or object.</td>
         </tr>
       </tbody></table>
     
@@ -129,24 +153,8 @@
                 <td class="label">
                   http://www.w3.org/2000/01/rdf-schema#subClassOf
                 </td>
-                <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#Doctype">
-                  <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Doctype</h1><table class="properties">
-                    
-                    <tbody><tr class="property">
-                      <td class="label">
-                        http://www.w3.org/2000/01/rdf-schema#comment
-                      </td>
-                      <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">All the DITA document types.</td>
-                    </tr>
-                    <tr class="property">
-                      <td class="label">
-                        http://www.w3.org/2000/01/rdf-schema#subClassOf
-                      </td>
-                      <td>
-                        <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument</a>
-                      </td>
-                    </tr>
-                  </tbody></table>
+                <td>
+                  <a href="http://purl.org/dita/ns#Doctype" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#Doctype</a>
                 </td>
               </tr>
             </tbody></table>
@@ -175,24 +183,8 @@
           <td class="label">
             http://www.w3.org/2000/01/rdf-schema#subClassOf
           </td>
-          <td rel="http://www.w3.org/2000/01/rdf-schema#subClassOf" resource="http://purl.org/dita/ns#ReferenceObject">
-            <h1 property="http://www.w3.org/2000/01/rdf-schema#label" lang="en-US">DITA base reference object</h1><table class="properties">
-              
-              <tbody><tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#comment
-                </td>
-                <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The DITA reference object is used to link, fetch or push content in relation with another file or object.</td>
-              </tr>
-              <tr class="property">
-                <td class="label">
-                  http://www.w3.org/2000/01/rdf-schema#subClassOf
-                </td>
-                <td>
-                  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement</a>
-                </td>
-              </tr>
-            </tbody></table>
+          <td>
+            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#subClassOf">http://purl.org/dita/ns#ReferenceObject</a>
           </td>
         </tr>
       </tbody></table>
@@ -961,6 +953,34 @@
     
     
       <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">href</h1><table class="properties">
+        
+        <tbody><tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#comment
+          </td>
+          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.</td>
+        </tr>
+        <tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#domain
+          </td>
+          <td>
+            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
+          </td>
+        </tr>
+        <tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#seeAlso
+          </td>
+          <td>
+            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html</a>
+          </td>
+        </tr>
+      </tbody></table>
+    
+    
+      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
       <h1 property="http://www.w3.org/2000/01/rdf-schema#label">id</h1><table class="properties">
         
         <tbody><tr class="property">
@@ -1017,33 +1037,6 @@
     
     
       <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">prodinfo</h1><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Connects a DITA file with the product information that it is related to.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Doctype" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Doctype</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#Prodinfo</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
       <h1 property="http://www.w3.org/2000/01/rdf-schema#label">referenceObject</h1><table class="properties">
         
         <tbody><tr class="property">
@@ -1066,14 +1059,6 @@
           </td>
           <td>
             <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#subPropertyOf
-          </td>
-          <td>
-            <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart" property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart</a>
           </td>
         </tr>
       </tbody></table>
@@ -1254,7 +1239,7 @@
             http://www.w3.org/2000/01/rdf-schema#seeAlso
           </td>
           <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html</a>
+            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html</a>
           </td>
         </tr>
       </tbody></table>
@@ -1484,42 +1469,6 @@
     
     
       <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
-      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">href</h1><table class="properties">
-        
-        <tbody><tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#comment
-          </td>
-          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.</td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#domain
-          </td>
-          <td>
-            <a href="http://purl.org/dita/ns#ReferenceObject" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#ReferenceObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#range
-          </td>
-          <td>
-            <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#FileDataObject" property="http://www.w3.org/2000/01/rdf-schema#range">http://www.semanticdesktop.org/ontologies/2007/01/19/nie#FileDataObject</a>
-          </td>
-        </tr>
-        <tr class="property">
-          <td class="label">
-            http://www.w3.org/2000/01/rdf-schema#seeAlso
-          </td>
-          <td>
-            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html</a>
-          </td>
-        </tr>
-      </tbody></table>
-    
-    
-      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
       <h1 property="http://www.w3.org/2000/01/rdf-schema#label">job</h1><table class="properties">
         
         <tbody><tr class="property">
@@ -1693,6 +1642,42 @@
           </td>
           <td>
             <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html</a>
+          </td>
+        </tr>
+      </tbody></table>
+    
+    
+      <span class="type">http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</span>
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">prodinfo</h1><table class="properties">
+        
+        <tbody><tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#comment
+          </td>
+          <td property="http://www.w3.org/2000/01/rdf-schema#comment" lang="en-US">Connects a DITA file with the product information that it is related to.</td>
+        </tr>
+        <tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#domain
+          </td>
+          <td>
+            <a href="http://purl.org/dita/ns#Doctype" property="http://www.w3.org/2000/01/rdf-schema#domain">http://purl.org/dita/ns#Doctype</a>
+          </td>
+        </tr>
+        <tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#range
+          </td>
+          <td>
+            <a href="http://purl.org/dita/ns#Prodinfo" property="http://www.w3.org/2000/01/rdf-schema#range">http://purl.org/dita/ns#Prodinfo</a>
+          </td>
+        </tr>
+        <tr class="property">
+          <td class="label">
+            http://www.w3.org/2000/01/rdf-schema#seeAlso
+          </td>
+          <td>
+            <a href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html" property="http://www.w3.org/2000/01/rdf-schema#seeAlso">http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html</a>
           </td>
         </tr>
       </tbody></table>
@@ -2154,8 +2139,6 @@
             <a href="http://bit.ly/DitaRdfLucidChart" property="http://xmlns.com/foaf/0.1/depiction">http://bit.ly/DitaRdfLucidChart</a>
           </td>
         </tr>
-        </tbody>
-      </table>
-    
+      </tbody></table>    
   </body>
 </html>

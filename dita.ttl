@@ -5,8 +5,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
-@prefix nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -21,8 +19,6 @@
 #			http://dita.xml.org
 #			http://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture
 #for more information about the DITA XML standard.
-
-
 
 	<http://purl.org/dita/ns#>
 	a owl:Ontology ;
@@ -43,7 +39,7 @@
 	#Classes
 		
 		#Doctypes
-		:Doctype rdfs:subClassOf nfo:PlainTextDocument ;
+		:Doctype a rdfs:Class ;
 			rdfs:label "Doctype" ;
 			rdfs:comment "All the DITA document types."@en-US.		
 		:Topic 	rdfs:subClassOf :Doctype ;
@@ -97,7 +93,7 @@
 			rdfs:label "LearningPlan" .
 		
 		#Reference objects
-		:ReferenceObject rdfs:subClassOf nie:InformationElement ;
+		:ReferenceObject a rdfs:Class ;
 			rdfs:label "DITA base reference object"@en-US ;
 			rdfs:comment "The DITA reference object is used to link, fetch or push content in relation with another file or object."@en-US .
 		:Topicref rdfs:subClassOf :ReferenceObject ;
@@ -196,7 +192,7 @@
 	#Properties
 	
 		#for maps and topics
-		:referenceObject rdfs:subPropertyOf nie:hasLogicalPart ;
+		:referenceObject a rdf:Property ;
 			rdfs:label "referenceObject" ;
 			rdfs:comment "Describes a reference object that is part of a DITA file."@en-US ;
 			rdfs:domain :Doctype ;
@@ -291,7 +287,6 @@
 		#specific to reference objects
 		:href a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html> ;
-			rdfs:range nie:FileDataObject ;
 			rdfs:label "href" ;
 			rdfs:comment "The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource."@en-US ;
 			rdfs:domain :ReferenceObject .
