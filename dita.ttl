@@ -236,7 +236,7 @@
 			rdfs:comment "The author metadata element contains the name of the topic's author."@en-US ;
 			rdfs:label "author" .
 		:audience a rdf:Property ;
-			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html> ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:comment "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic."@en-US ;
 			rdfs:range :Audience ;
 			rdfs:domain :Doctype ;
@@ -273,6 +273,7 @@
 			rdfs:label "language" ;
 			rdfs:range xsd:language .
 		:prodinfo a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html> ;
 			rdfs:domain :Doctype ;
 			rdfs:range :Prodinfo ;
 			rdfs:label "prodinfo" ;
