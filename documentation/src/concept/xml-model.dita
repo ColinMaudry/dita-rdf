@@ -87,7 +87,7 @@
 		<ul id="ul_dsz_nqr_3p">
 			<li>slow retrieval of information: since the relationships don't rely on the tree features of XML but on identifiers, for each "hop" between two persons, the whole file would
 				have to be scanned to locate the identifier of the target person. </li>
-			<li>That would be like reproducing <xref href="../other-data-management.dita">the
+			<li>That would be like reproducing <xref href="relational-database.dita">the
 					table model</xref> in XML, with its drawbacks.</li>
 		</ul>
 		<p>So, as we know, XML is a very versatile format, but, as we just saw, its tree model doesn't faciliate the cross referencing of information as the only direct relations that

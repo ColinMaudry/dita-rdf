@@ -15,6 +15,6 @@
 		<result><p>The extraction starts.</p>
 		<p>When you see <systemoutput>BUILD SUCCESSFUL</systemoutput>, the extraction was successful and you can use the RDF/XML file available in the directory you provided for
 			-Doutput.dir.</p>
-		<p>If you see <systemoutput>BUILD FAILED</systemoutput>, it means there was an error during the extraction. See <xref href="../concept/contact-troubleshooting.html">Contact and reporting issues</xref>.</p></result>
+		<p>If you see <systemoutput>BUILD FAILED</systemoutput>, it means there was an error during the extraction. See <xref href="../concept/contact-troubleshooting.dita">Contact and reporting issues</xref>.</p></result>
 	</taskbody>
 </task>
