@@ -5,6 +5,7 @@
  <shortdesc></shortdesc>
  <conbody>
  	<p>The objective of this project is to develop an ontology to describe DITA XML objects and to develop tools to generate RDF triples based on that ontology.</p>
+ 	<p>The source code is published <xref format="html" href="https://github.com/ColinMaudry/dita-rdf" scope="external">on Github</xref>.</p>
  	<section>
  		<title>Objective</title>
 			<p><xref scope="external" format="html" href="https://www.lucidchart.com/documents/view/4655bd14-51ce-dc04-aa34-65dd0a001234">This poster</xref> illustrates the objective of the
@@ -39,7 +40,7 @@
 						</row>
 						<row>
 							<entry><xref href="sparql-queries.dita">SPARQL queries</xref></entry>
-							<entry/>
+							<entry>Not started</entry>
 							<entry>A set of SPARQL queries to get you started with querying the extracted metadata graph.</entry>
 						</row>
 						<row>
@@ -49,7 +50,7 @@
 									href="http://www.irisa.fr/LIS/ferre/sparklis/osparklis.html" scope="external">Sparklis</xref> are the candidate tools.</entry>
 						</row>
 						<row>
-							<entry>Componize pipeline plugin</entry>
+							<entry><xref format="html" href="http://www.componize.com" scope="external">Componize</xref> pipeline plugin</entry>
 							<entry>Not started (<xref format="html" href="https://github.com/ColinMaudry/dita-rdf/labels/componize-plugin" scope="external">see issues in Github</xref>)</entry>
 							<entry>A plugin that would enable Componize users to run the dita2rdf transformation.</entry>
 						</row>

@@ -5,10 +5,13 @@
 	<shortdesc>Requirements, and how to install the <keyword keyref="ditaot-plugin-name"/> in the DITA OT</shortdesc>
  <taskbody>
 		<prereq><ul><li>You have downloaded and extracted the <xref format="html" href="http://dita-ot.github.io/" scope="external">DITA Open Toolkit</xref></li>
-		<li>You have downloaded the <xref format="html" href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip" scope="external">dita2rdf DITA OT
-			plugin</xref></li></ul></prereq>
+		<!--<li>You have downloaded the <xref format="html" href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip" scope="external">dita2rdf DITA OT
+			plugin</xref></li>--></ul></prereq>
  	<context>You want to install the <keyword keyref="ditaot-plugin-name"/> in your DITA Open Toolkit.</context>
 		<steps id="ol_wz4_tsr_3p">
+			<step>
+				<cmd><xref format="html" href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip" scope="external">Download</xref> the <keyword keyref="ditaot-plugin-name"/> ZIP archive.</cmd>
+			</step>
 			<step>
 				<cmd>Extract <filepath>/dita2rdf/dita2rdf-ditaot-plugin.zip</filepath> to <filepath>[DITA-OT]/plugins</filepath>, [DITA-OT] being the directory of your DITA open toolkit installation.</cmd>
 			</step>
