@@ -24,7 +24,7 @@
 		<topicref format="html" href="http://www.cambridgesemantics.com/semantic-university/rdf-101" navtitle="RDF 101 (external link)" scope="external"/>
 		<topicref href="concept/data-models-compared.dita">
 			<topicref href="concept/relational-database.dita"/>
-			<topicref href="xml-model.dita"/>
+			<topicref href="concept/xml-model.dita"/>
 			<topicref href="concept/rdf-graph-model.dita"/>
 		</topicref>
 		<topicref href="concept/ontologies.dita"/>
