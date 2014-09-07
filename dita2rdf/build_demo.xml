@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="build.dita-rdf.dita-ot.plugin" default="package-zip-copy-plugin-demo" basedir=".">
-	<!-- Enter the location of you DITA OT directory here: -->
-	<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
-	<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
-	<property name="run.integrator" value="true"/>
 	
-	<property name="plugin-id" value="com.github.colinmaudry.dita2rdf"></property>
+	<!-- User properties -->
+				<!-- Enter the location of you DITA OT directory here: -->
+				<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
+	<property name="demo-set" value="oxygen-userguide">
+					<!-- Possibe demo sets:
+					- ditaot-userguide (the DITA OT user guide)
+					- oxygen-userguide (the Oxygen Author user guide, must be downloaded first, 13 MB )
+					- learning-samples (the Oxygen learning samples)
+					- ditardf-project	(the documentation of the DITA RDF project)	
+					-->
+				</property>
+				<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
+				<property name="run.integrator" value="true"/>
+				<!-- If you want to set a DITAVAL path, that here. It is resolved against ${ditaot.dir} -->
+	
+	 
+	<!--/ User properties -->
+	
 	<property name="demo.dir" value="demo"/>
 	<property name="temp.demo.dir" value="${demo.dir}/out/temp"/>
+	<property name="demo.input.dir" value="${temp.demo.dir}/unzipped/"/>
+	<property file="demo/properties/${demo-set}.properties"></property>
+	<property name="demo.zip" value="${demo.dir}/${demo-set}.zip"></property>
+	<property name="demo.input" value="${demo.input.dir}/${demo.input.path}${demo-set}.ditamap"></property>
+	<condition property="oxygenUserGuideDownloaded">
+		<or>
+			<not>
+				<equals arg1="${demo-set}" arg2="oxygen-userguide"/>
+			</not>
+			<available file="demo/oxygen-userguide.zip"></available>
+		</or>
+	</condition>
+	<property name="plugin-id" value="com.github.colinmaudry.dita2rdf"></property>
 	<property name="temp.plugin.dir" location="temp"/>
 	<property name="dita-rdf-ot-plugin-dir" value="dita-ot"/>
 	<property name="ditaot.classpath" value="${ditaot.dir}\lib;${ditaot.dir}lib/dost.jar;${ditaot.dir}lib/commons-codec-1.4.jar;${ditaot.dir}lib/resolver.jar;${ditaot.dir}lib/icu4j.jar;${ditaot.dir}lib/xercesImpl.jar;${ditaot.dir}lib/xml-apis.jar;${ditaot.dir}lib/saxon/saxon9.jar;${ditaot.dir}lib/saxon/saxon9-dom.jar;"/>
-	
-
 	<target name="package-zip-copy-plugin" depends="package-zip,copy-plugin-dita-ot"/>
 	<target name="package-zip-copy-plugin-demo" depends="package-zip-copy-plugin,demo"/>
 
@@ -46,23 +70,31 @@
 	<target name="clean-temp" description="Delete temporary folder" depends="copy-plugin-dita-ot">
 		<delete dir="${temp.plugin.dir}"/>
 	</target>
-	
+	<target name="download-oxygen-userguide" unless="oxygenUserGuideDownloaded">
+		<get verbose="yes" src="https://github.com/oxygenxml/userguide/archive/master.zip" dest="demo/oxygen-userguide.zip"/>
+	</target>
 	<target name="demo">
-		<delete>
-			<fileset dir="demo/out" includes="**/*" excludes="*.rdf"/>
+		
+		<delete includeemptydirs="true" verbose="yes">
+			<fileset dir="demo/out" includes="**" excludes="*.rdf"/>
 		</delete>
+		<antcall target="download-oxygen-userguide"/>
 		<mkdir dir="${temp.demo.dir}"/>
+		<mkdir dir="${demo.input.dir}"/>
+		<unzip src="${demo.zip}" dest="${demo.input.dir}"/>
+		<move file="${demo.input.dir}/${demo.input.path}${demo.input.filename}" tofile="${demo.input}"/>
 		<exec dir="${ditaot.dir}" executable="${ditaot.dir}tools/ant/bin/ant.bat" searchpath="true">
 			<env key="DITA_DIR" value="${ditaot.dir}"/>
 			<env key="CLASSPATH" value="${ditaot.classpath}"/>
 			<arg prefix="-Djavax.xml.transform.TransformerFactory=" value="net.sf.saxon.TransformerFactoryImpl"/>
-			<arg prefix="-Dargs.input=" path="${demo.dir}/docsrc/userguide.ditamap"/>
+			<arg prefix="-Dargs.input=" path="${demo.input}"/>
 			<!--<arg prefix="-Dargs.input=" path="${demo.dir}/learning/learningsample.ditamap"/>-->
 			<arg prefix="-Doutput.dir=" path="${demo.dir}/out"/>
-			<arg prefix="-Ddita.temp.dir=" path="${temp.demo.dir}"/>
+			<arg prefix="-Ddita.temp.dir=" path="${temp.demo.dir}/${demo-set}"/>
 			<arg prefix="-Dclean.temp=" value="no"/>
 			<arg prefix="-Dtranstype=" value="rdf"/>
 			<arg prefix="-Dargs.debug=" value="0"/>
+			<arg prefix="-Dargs.filter=" path="${demo.input.dir}${demo.input.path}editor.ditaval"/>
 		</exec>
 	</target>
 	
