@@ -28,7 +28,8 @@
 	<!-- Here you choose which character you want to use to separate the product URI from its version number. By default it looks like this:
 	http://data.example.com/resources/products/ABC123#1.2.3 
 	
-	Invalid values: % ? & \ ( ) ! -->
+	Invalid characters: % ? & \ ( ) !
+	-->
 	
 	<productVersionSeparator>#</productVersionSeparator>
 		
@@ -43,6 +44,8 @@
 		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="learningmap-d" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="mapgroup-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="subjectScheme" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="sw-d" baseUri="http://purl.org/dita/ns#"/>
 		
 		<domain domainId="learningBase" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="learningContent" baseUri="http://purl.org/dita/ns#"/>
