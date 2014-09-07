@@ -1,7 +1,5 @@
 .project
-/build.xml
-/build_dita2xhtml.xml
-/build_template.xml
+/build*
 dita-rdf.xpr
 temp/
 test*
@@ -11,3 +9,9 @@ dita2rdf/demo/docsrc
 dita2rdf/demo/out/*
 !*.rdf
 *.list
+/documentation/*
+/documentation/src/out
+!/documentation/src
+!/documentation/*.pdf
+!/documentation/dita-rdf.html
+!/documentation/*.pdf
