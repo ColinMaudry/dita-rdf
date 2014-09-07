@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="task_yyb_15r_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+	<title>Running the metadata extraction</title>
+	<shortdesc>How to run the extraction of the metadata of your DITA content</shortdesc>
+    <taskbody>
+		<prereq>You should have <xref format="html" href="http://colin.maudry.com/dita-rdf/task/configuring.html" scope="external">configured</xref> the dita2rdf DITA OT plugin.</prereq>
+		<context>You want to extract metadata from your DITA content as RDF.</context>
+		<steps>
+			<step>
+				<cmd>In [DITA-OT], run <userinput>ant -Dargs.input=[path/to/your/ditamap] -Doutput.dir=[path/to/store/the/output] -Dtranstype=rdf</userinput></cmd>
+				<info>For instance, on a Windows system: <userinput>ant -Dargs.input=C:\Users\colin\dita\map.ditamap -Doutput.dir=C:\Users\colin\dita\output -Dtranstype=rdf</userinput>.</info>
+			</step>
+			</steps>
+		<result><p>The extraction starts.</p>
+		<p>When you see <systemoutput>BUILD SUCCESSFUL</systemoutput>, the extraction was successful and you can use the RDF/XML file available in the directory you provided for
+			-Doutput.dir.</p>
+		<p>If you see <systemoutput>BUILD FAILED</systemoutput>, it means there was an error during the extraction. See <xref href="../concept/contact-troubleshooting.html">Contact and reporting issues</xref>.</p></result>
+	</taskbody>
+</task>

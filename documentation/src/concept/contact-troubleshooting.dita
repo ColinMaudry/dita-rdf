@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_twz_hvr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Contact and reporting issues</title>
+	<shortdesc>How to be in touch and reporting the problems and questions you might have with one of the deliverables</shortdesc>
+ <conbody>
+  <section>
+  	<title>Issues, bugs and questions</title>
+			<p>Github has a very good issue management system, let's use it!</p>
+			<p>If you have a Github account, please report the questions and bugs <xref format="html" href="https://github.com/ColinMaudry/dita-rdf/issues/new" scope="external"
+					>here</xref> and add the relevant label (<b>bug</b> if you get unexpected behaviour of the deliverables, <b>question</b> for the rest).</p>
+			<p>If you don't have a Github account please <xref href="mailto:colin@maudry.com?subject=%5Bdita-rdf%5D%20" scope="external" format="html">send me an email with [dita-rdf] in the subject</xref>.</p>
+			<p>If you report an issue with the dita2rdf DITA OT plugin, please provide the following:</p>
+			<ul id="ul_khy_kvr_3p">
+				<li>the processing logs of the DITA OT</li>
+				<li>Your config.xml file</li>
+				<li>Your RDF/XML output, if any</li>
+			</ul>
+  </section>
+ 	<section>
+ 		<title>Contact</title>
+			<p>I fluently speak French, English and Spanish.</p>
+			<ul id="ul_vjj_kvr_3p">
+				<li>Twitter: <xref format="html" href="https://twitter.com/CMaudry" scope="external">@CMaudry</xref> (you can also follow the hash tag <xref format="html"
+							href="https://twitter.com/hashtag/ditardf" scope="external">#ditardf</xref>)
+				</li>
+				<li>Email: <xref href="mailto:colin@maudry.com" scope="external" format="html">colin@maudry.com</xref>, or <xref href="mailto:colin.maudry@semaku.com" scope="external" format="html">colin.maudry@semaku.com</xref> for tailored
+					service</li>
+				<li>LinkedIn: <xref format="html" href="https://nl.linkedin.com/in/colinmaudry/en" scope="external">Colin Maudry</xref></li>
+				<li>Skype: colin.maudry</li>
+			</ul>
+ 	</section>
+ </conbody>
+</concept>

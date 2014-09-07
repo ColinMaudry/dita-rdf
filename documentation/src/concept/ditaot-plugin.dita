@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_r2y_zrr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>The <keyword keyref="ditaot-plugin-name"/></title>
+ <shortdesc>A plugin to the DITA OT that enables export of DITA metadata to RDF</shortdesc>
+ <conbody>
+  <p></p>
+ </conbody>
+</concept>

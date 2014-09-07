@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_djv_5rr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Publishing method and availability</title>
+ <shortdesc>The DITA RDF ontology is published following the best practices</shortdesc>
+ <conbody>
+		<p>The namespace base URI is <xref format="html" href="http://purl.org/dita/ns" scope="external">http://purl.org/dita/ns#</xref> and the recommended prefix is <b>dita:</b>.</p>
+		<p>By default this URI returns the XHTML version of the ontology, but it also supports <xref format="html" href="https://en.wikipedia.org/wiki/Content_negotiation"
+				scope="external">content negotiation</xref> for RDF/XML, JSON-LD and Turtle (<xref format="html"
+				href="http://uriburner.com:8000/vapour?uri=http%3A%2F%2Fpurl.org%2Fdita%2Fns%23&amp;acceptRdfXml=1&amp;acceptTurtle=1&amp;acceptJsonLD=1&amp;htmlVersions=1&amp;defaultResponse=dontmind&amp;userAgent=vapour.sourceforge.net"
+				scope="external">Vapour test</xref>).</p>
+		<p>The ontology is written in a Turtle file and uploaded to an RDF triple store hosted by <xref format="html" href="http://dydra.com" scope="external">Dydra</xref>:</p>
+		<ul id="ul_gs3_vrr_3p">
+			<li>Turtle (<xref format="html" href="http://colin.maudry.com/ontologies/dita.ttl" scope="external">download</xref>)</li>
+			<li>RDF/XML (<xref format="html" href="http://dydra.com/colin-maudry/dita.rdf" scope="external">download</xref>)</li>
+			<li>JSON-LD (<xref format="html" href="http://dydra.com/colin-maudry/dita.jsonld" scope="external">download</xref>)</li>
+		</ul>
+		<p>The Turtle version is the truth. Feel free to checkout the Git project and contribute. A graphical representation of the DITA RDF model can be viewed <xref format="html"
+				href="http://bit.ly/DitaRdfLucidChart" scope="external">on LucidChart</xref>.</p>
+	</conbody>
+</concept>

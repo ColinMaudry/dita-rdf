@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_nn3_w5r_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Release notes and roadmap</title>
+ <shortdesc>The changes, improvements and bug fixes per version of the dita2rdf plugin + the road map</shortdesc>
+ <conbody>
+  <p>TODO</p>
+ </conbody>
+</concept>

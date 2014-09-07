@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="concept_h1k_ssr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+	<title>Installing</title>
+	<shortdesc>Requirements, and how to install the <keyword keyref="ditaot-plugin-name"/> in the DITA OT</shortdesc>
+ <taskbody>
+		<prereq><ul><li>You have downloaded and extracted the <xref format="html" href="http://dita-ot.github.io/" scope="external">DITA Open Toolkit</xref></li>
+		<li>You have downloaded the <xref format="html" href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip" scope="external">dita2rdf DITA OT
+			plugin</xref></li></ul></prereq>
+ 	<context>You want to install the <keyword keyref="ditaot-plugin-name"/> in your DITA Open Toolkit.</context>
+		<steps id="ol_wz4_tsr_3p">
+			<step>
+				<cmd>Extract <filepath>/dita2rdf/dita2rdf-ditaot-plugin.zip</filepath> to <filepath>[DITA-OT]/plugins</filepath>, [DITA-OT] being the directory of your DITA open toolkit installation.</cmd>
+			</step>
+			<step>
+				<cmd>Run <filepath>[DITA-OT]/startcmd.bat</filepath> (or <filepath>[DITA-OT]/startcmd.sh</filepath> if you run a Linux operating system)A new console window opens.</cmd>
+			</step>
+			<step>
+				<cmd>Run the command <userinput>ant -f integrator.xml strict</userinput> at the root of your DITA open toolkit installation.</cmd>
+			</step>
+		</steps>
+		<result>The dita2rdf DITA OT plugin is installed in your DITA OT installation and the rdf transtype is available.</result>
+	</taskbody>
+</task>

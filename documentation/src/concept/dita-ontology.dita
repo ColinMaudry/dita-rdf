@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_fld_lrr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>The DITA RDF ontology</title>
+ <shortdesc>The translation of the DITA vocabulary into RDF</shortdesc>
+ <conbody>
+		<p>You can view a graphical representation of the DITA RDF ontology <xref format="html" href="http://bit.ly/DitaRdfLucidChart" scope="external">here</xref>.</p>
+	</conbody>
+</concept>

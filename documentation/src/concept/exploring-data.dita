@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_hcl_y5r_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Exploring the extracted metadata (a.k.a. "the cool part")</title>
+ <shortdesc>Guidelines to help you explore the extracted metadata</shortdesc>
+ <conbody>
+ 	<p>Once the metadata of your content has been extracted and added to a triple store, you can start querying it to get better insights about your content. In the end, the objective is to retrieve enough information to help you roll out your content strategy.</p>
+ </conbody>
+</concept>

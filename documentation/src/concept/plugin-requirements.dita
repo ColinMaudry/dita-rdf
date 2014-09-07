@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_cxz_4sr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Requirements</title>
+	<shortdesc>The minimum requirement to install and run the dita2rdf DITA OT plugin</shortdesc>
+ <conbody>
+<ul><li><xref format="html" href="http://dita-ot.github.io/" scope="external">DITA Open Toolkit</xref> 1.8.x (version 1.5+ could work but not tested). If you're not sure wich
+			edition to download, get the "full_easy_install", as it contains all the dependencies.</li></ul>
+	</conbody>
+</concept>

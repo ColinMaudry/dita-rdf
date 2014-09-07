@@ -1,129 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_fwj_xky_gp">
- <title>The RDF graph</title>
- <shortdesc></shortdesc>
+<concept id="concept_h4q_qqr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>The RDF graph</title>
+ <shortdesc>The RDF graph model simplifies the interlinking of information.</shortdesc>
  <conbody>
-		<p>The RDF graph model simplifies the interlinking of information.</p>
-		<p>First things first, the <xref format="html" href="http://www.w3.org/TR/rdf11-primer/" scope="external"><term>Resource Description Framework</term> (RDF)</xref>, is a W3C
-			recommendation since 2003, with an update to version 1.1 in 2014. Its purpose is to achieve what the Web has enabled for documents, but this time with data. Since the dawn of
-			the Web, one of its main strength is to enable users to interlink documents easily, building browsing paths for the Web users. One Web page can be the starting point to an
-			infinity of other Web pages. With <term>RDF</term>, it's the same, but with data.</p>
-		<section>
-			<title>What is a graph?</title>
-			<p>A graph is a structure in which each node can be related to an infinity of other nodes. Without further ado, let's see what our family data looks like as a graph (not RDF
-				yet):</p>
-			<p><fig id="fig_ndd_nwy_gp">
-					<title>The graph of the Landais-Todorov family</title>
-					<image href="https://www.lucidchart.com/publicSegments/view/54038d82-b0b0-4df9-9801-59400a009c1a/image.png" id="image_s5x_pwy_gp"/>
-				</fig>This graph doesn't represent all the data, but it shows the key features of a graph model: each node can be linked directly to an infinity of other nodes via
-				unidirectional relations. For instance, if we were interested in uncle/nephew relationships and would like to have a more direct connection, we could perfectly link Boris
-				to Isaac and Salomé with an <tt>ex:hasUncle</tt> property, without affecting the rest of the graph. The data model is not limiting.</p>
-			<p>Another way to represent a graph is write the triples that compose it. A triple is a statement compose of a subject, a property (or predicate) and an object.</p>
-			<p>
-				<simpletable frame="all" id="simpletable_acp_pkz_gp">
-					<sthead>
-						<stentry>Subject</stentry>
-						<stentry>Predicate</stentry>
-						<stentry>Object</stentry>
-					</sthead>
-					<strow>
-						<stentry>Olga</stentry>
-						<stentry>isInLoveWith</stentry>
-						<stentry>Eric</stentry>
-					</strow>
-					<strow>
-						<stentry>Boris</stentry>
-						<stentry>hasSister</stentry>
-						<stentry>Olga</stentry>
-					</strow>
-					<strow>
-						<stentry>Salomé</stentry>
-						<stentry>hasBrother</stentry>
-						<stentry>Isaac</stentry>
-					</strow>
-					<strow>
-						<stentry>...</stentry>
-						<stentry>...</stentry>
-						<stentry>...</stentry>
-					</strow>
-				</simpletable>
-			</p>
-		</section>
-		<section>
-			<title>From a graph to an RDF graph</title>
-			<p>RDF is a standard that is used to represent data as a graph, but it also includes a vocabulary to semantically describe the things depicted by the graph. First, let's add
-				a pinch of RDF and semantics on our family graph:</p>
-			<p>
-				<fig id="fig_pzf_ddz_gp">
-					<title>The RDF graph of the Landais-Todorov family</title>
-					<image href="https://www.lucidchart.com/publicSegments/view/540395b7-5b70-40f2-8920-40cd0a00dba3/image.png" id="image_g3j_fdz_gp"/>
-				</fig>
-			</p>
-			<p>
-				<simpletable frame="all" id="simpletable_xtp_clz_gp">
-					<sthead>
-						<stentry>Subject</stentry>
-						<stentry>Predicate</stentry>
-						<stentry>Object</stentry>
-					</sthead>
-					<strow>
-						<stentry>http://elandais.fr/eric</stentry>
-						<stentry>http://xmlns.com/foaf/0.1/givenName</stentry>
-						<stentry>"Eric"</stentry>
-					</strow>
-					<strow>
-						<stentry>http://elandais.fr/eric</stentry>
-						<stentry>http://example.com/isInLoveWith</stentry>
-						<stentry>http://elandais.fr/olga</stentry>
-					</strow>
-					<strow>
-						<stentry>http://elandais.fr/salomé</stentry>
-						<stentry>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</stentry>
-						<stentry>http://example.com/Female</stentry>
-					</strow>
-					<strow>
-						<stentry>...</stentry>
-						<stentry>...</stentry>
-						<stentry>...</stentry>
-					</strow>
-				</simpletable>
-			</p>
-			<p>Same triples but in the standard <xref format="html" href="http://www.w3.org/TeamSubmission/turtle/" scope="external">Turtle syntax</xref>, the most common and convenient
-				way to write RDF by
-				hand:<pre xml:space="preserve">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix foaf: &lt;http://xmlns.com/foaf/> .
-@prefix ex: &lt;http://example.com/family/> .
+		<p>First things first, the <xref format="html" href="http://www.w3.org/TR/rdf11-primer/" scope="external">Resource Description Framework (RDF)</xref>, is a W3C recommendation
+			since 2003, with an update to version 1.1 in 2014. Its purpose is to achieve what the Web has enabled for documents, but this time with data. Since the dawn of the Web, one
+			of its main strength is to enable users to interlink documents easily, building browsing paths for the Web users. One Web page can be the starting point to an infinity of
+			other Web pages. With RDF, it's the same, but with data.</p>
+ 	<section><title>What is a graph?</title><p>A graph is a structure in which each node can be related to an infinity of other nodes. Without further ado, let's see what our family
+				data looks like as a graph (not RDF yet):</p><image href="https://www.lucidchart.com/publicSegments/view/54038d82-b0b0-4df9-9801-59400a009c1a/image.png"
+				id="image_jvl_wqr_3p" scope="external"/><p>The graph of the Landais-Todorov family</p><p> This graph doesn't represent all the data, but it shows the key features of a
+				graph model: each node can be linked directly to an infinity of other nodes via unidirectional relations. For instance, if we were interested in uncle/nephew relationships
+				and would like to have a more direct connection, we could perfectly link Boris to Isaac and Salomé with an </p>ex:hasUncle<p> property, without affecting the rest of the
+				graph. The data model is not limiting.</p><p>Another way to represent a graph is write the triples that compose it. A triple is a statement compose of a subject, a property
+				(or predicate) and an object.</p><table id="concept_fwj_xky_gp__simpletable_acp_pkz_gp">
+				<tgroup cols="3">
+					<colspec colname="col1" colnum="1"/>
+					<colspec colname="col2" colnum="2"/>
+					<colspec colname="col3" colnum="3"/>
+					<tbody>
+						<row>
+							<entry id="d2051e59">Subject</entry>
+							<entry id="d2051e62">Predicate</entry>
+							<entry id="d2051e65">Object</entry>
+						</row>
+						<row>
+							<entry>Olga</entry>
+							<entry>isInLoveWith</entry>
+							<entry>Eric</entry>
+						</row>
+						<row>
+							<entry>Boris</entry>
+							<entry>hasSister</entry>
+							<entry>Olga</entry>
+						</row>
+						<row>
+							<entry>Salomé</entry>
+							<entry>hasBrother</entry>
+							<entry>Isaac</entry>
+						</row>
+						<row>
+							<entry>...</entry>
+							<entry>...</entry>
+							<entry>...</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table><b>From a graph to an RDF graph</b><p>RDF is a standard that is used to represent data as a graph, but it also includes a vocabulary to semantically describe the
+				things depicted by the graph. First, let's add a pinch of RDF and semantics on our family graph:</p><image
+				href="https://www.lucidchart.com/publicSegments/view/540395b7-5b70-40f2-8920-40cd0a00dba3/image.png" id="image_xwl_wqr_3p" scope="external"/><p>The RDF graph of the
+				Landais-Todorov family</p><table id="concept_fwj_xky_gp__simpletable_xtp_clz_gp">
+				<tgroup cols="3">
+					<colspec colname="col1" colnum="1"/>
+					<colspec colname="col2" colnum="2"/>
+					<colspec colname="col3" colnum="3"/>
+					<tbody>
+						<row>
+							<entry id="d2051e145">Subject</entry>
+							<entry id="d2051e148">Predicate</entry>
+							<entry id="d2051e151">Object</entry>
+						</row>
+						<row>
+							<entry>http://elandais.fr/eric</entry>
+							<entry>http://xmlns.com/foaf/0.1/givenName</entry>
+							<entry>"Eric"</entry>
+						</row>
+						<row>
+							<entry>http://elandais.fr/eric</entry>
+							<entry>http://example.com/isInLoveWith</entry>
+							<entry>http://elandais.fr/olga</entry>
+						</row>
+						<row>
+							<entry>http://elandais.fr/salomé</entry>
+							<entry>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</entry>
+							<entry>http://example.com/Female</entry>
+						</row>
+						<row>
+							<entry>...</entry>
+							<entry>...</entry>
+							<entry>...</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table><p>Same triples but in the standard <xref format="html" href="http://www.w3.org/TeamSubmission/turtle/" scope="external">Turtle syntax</xref>, the most common and
+				convenient way to write RDF by hand:</p>
+			<codeblock xml:space="preserve">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/&gt; .
+@prefix ex: &lt;http://example.com/family/&gt; .
 
-&lt;http://elandais.fr/eric> foaf:givenName "Eric" ;
-	ex:isInLoveWith &lt;http://elandais.fr/olga> .
-&lt;http://elandais.fr/salomé> rdf:type ex:Female .
-...	</pre></p>
-			<p>I have added a lot of new stuff, so I think the best way to explain with clarity is to explain the changes one by one.</p>
-			<dl>
+&lt;http://elandais.fr/eric&gt; foaf:givenName "Eric" ;
+	ex:isInLoveWith &lt;http://elandais.fr/olga&gt; .
+&lt;http://elandais.fr/salomé&gt; rdf:type ex:Female .
+...</codeblock><p>I
+				have added a lot of new stuff, so I think the best way to explain with clarity is to explain the changes one by one.</p><dl>
 				<dlentry>
 					<dt>What are the xx: prefixes?</dt>
-					<dd><p>If you are familiar with XML namespaces, this is roughly the same in RDF. The prefixes are a shortcut, as everything in RDF is identified with a URL. This way when you type
-							information you don't need to always write the full URI, you only need to declare the prefixes at the beginning of your file. For instance, <tt>foaf:age</tt> is
-							actually <xref format="html" href="http://xmlns.com/foaf/0.1/age" scope="external"><tt>http://xmlns.com/foaf/0.1/age</tt></xref>, which is a link to the
-							specifications of the Friend Of A Friend vocabulary. This system is very convenient as it enables anyone to create an age property as long as they have control over
-							an Internet domain.</p>
-						<p>For instance, I could create the property <tt>http://colin.maudry.com/properties#age</tt>. I haven't created a property for the age of a person, but I have created
-							the DITA ontology, that resides in <xref format="html" href="http://colin.maudry.com/ontologies/dita#author" scope="external"
-									><tt>http://colin.maudry.com/ontologies/dita#</tt></xref>, and for which the recommended prefix is <tt>dita:</tt>. </p><p>I also could have used <tt>ex:age</tt>, but FOAF is a very popular
-							vocabulary on the Semantic Web to describe people, and is consequently very well understood by people and software that deal with RDF.</p></dd>
+					<dd>
+						<p>If you are familiar with XML namespaces, this is roughly the same in RDF. The prefixes are a shortcut, as everything in RDF is identified with a URL. This way when
+							you type information you don't need to always write the full URI, you only need to declare the prefixes at the beginning of your file. For instance, foaf:age is
+							actually <xref format="html" href="http://xmlns.com/foaf/0.1/age" scope="external">http://xmlns.com/foaf/0.1/age</xref>, which is a link to the specifications of the
+							Friend Of A Friend vocabulary. This system is very convenient as it enables anyone to create an age property as long as they have control over an Internet domain.</p>
+						<p>For instance, I could create the property http://colin.maudry.com/properties#age. I haven't created a property for the age of a person, but I have created the DITA
+							ontology, that resides in <xref format="html" href="http://colin.maudry.com/ontologies/dita#author" scope="external">http://colin.maudry.com/ontologies/dita#</xref>,
+							and for which the recommended prefix is dita:. </p>
+						<p>I also could have used ex:age, but FOAF is a very popular vocabulary on the Semantic Web to describe people, and is consequently very well understood by people and
+							software that deal with RDF.</p>
+					</dd>
 				</dlentry>
 				<dlentry>
 					<dt>I see URLs instead of people's names</dt>
-					<dd><p>URIs (URL used as identifiers) are used to identify everything in RDF. They are very convenient because they rely on the Web technologies that ensure worldwide
-						validity. If you own the domain yourname.net, you have the control over all the URIs that are based in this domain.</p><p>In our data, we see that the Landais family uses
-						identifiers from the domain elandais.fr, because Eric Landais owns the domain. It is also possible to rely on an organization to create identifiers. For instance, I
-						could use the URL of my About.me page to identify myself (<xref format="html" href="http://about.me/ColinMaudry" scope="external">http://about.me/ColinMaudry</xref>),
-						since I have some control on what happens when you visit it.</p></dd>
+					<dd>
+						<p>URIs (URL used as identifiers) are used to identify everything in RDF. They are very convenient because they rely on the Web technologies that ensure worldwide
+							validity. If you own the domain yourname.net, you have the control over all the URIs that are based in this domain.</p>
+						<p>In our data, we see that the Landais family uses identifiers from the domain elandais.fr, because Eric Landais owns the domain. It is also possible to rely on an
+							organization to create identifiers. For instance, I could use the URL of my About.me page to identify myself (<xref format="html" href="http://about.me/ColinMaudry"
+								scope="external">http://about.me/ColinMaudry</xref>), since I have some control on what happens when you visit it.</p>
+					</dd>
 				</dlentry>
 				<dlentry>
 					<dt>The rectangles are strings, right?</dt>
-					<dd>They can be strings, but they can also be integers, dates, or a various range of types. They  are groupped under the generic term "literal" and are the only nodes of
+					<dd>They can be strings, but they can also be integers, dates, or a various range of types. They are groupped under the generic term "literal" and are the only nodes of
 						an RDF graph that don't have a URI. Their specificity is that can only be the subject of a property, not the subject. They are consequently the extremities of a
 						graph.</dd>
 				</dlentry>
@@ -133,7 +130,6 @@
 						reference. For example, the <xref format="html" href="https://www.lucidchart.com/documents/view/447899e0-5162-a0ee-a67f-27dc0a000cd9" scope="external">DITA
 							ontology</xref> has a graph representation drawn the same way. For small quantities of data you can view it as Turtle. Otherwise, you need to query it.</dd>
 				</dlentry>
-			</dl>
-		</section>
-	</conbody>
+			</dl></section>
+ </conbody>
 </concept>
