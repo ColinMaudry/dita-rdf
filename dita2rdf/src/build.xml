@@ -21,7 +21,6 @@
 	</target>
 	<property name="dita.input.valfile" value="${args.filter}"/>
 	<target name="dita2rdf" depends="dita2rdf.init, build-init,short-preprocess, map2rdf"/>
-	
 	<target name="short-preprocess" depends="gen-list,debug-filter,copy-generated-files"/>
 	<!-- 
 	For userguide.ditamap:
@@ -32,6 +31,8 @@
 	copy-generated-files: because @xtrf and @xtrc must be set.
 	debug-filter: because I need the filtering features (ditaval).
 	gen-list: because copy-generated-files needs the list of files.
+	
+	See also https://github.com/ColinMaudry/dita-rdf/issues/14
 	-->
 	
 	
