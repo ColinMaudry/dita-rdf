@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_rv4_rsv_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+ <title>RDF 101</title>
+ <shortdesc>A great introduction to RDF for the beginners</shortdesc>
+ <conbody>
+  <p><xref format="html" href="http://www.cambridgesemantics.com/semantic-university/rdf-101" scope="external">RDF 101 by Cambridge Semantics</xref></p>
+ </conbody>
+</concept>

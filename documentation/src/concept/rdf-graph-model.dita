@@ -12,7 +12,7 @@
 				data looks like as a graph (not RDF yet):</p><image href="https://www.lucidchart.com/publicSegments/view/54038d82-b0b0-4df9-9801-59400a009c1a/image.png"
 				id="image_jvl_wqr_3p" scope="external"/><p>The graph of the Landais-Todorov family</p><p> This graph doesn't represent all the data, but it shows the key features of a
 				graph model: each node can be linked directly to an infinity of other nodes via unidirectional relations. For instance, if we were interested in uncle/nephew relationships
-				and would like to have a more direct connection, we could perfectly link Boris to Isaac and Salomé with an </p>ex:hasUncle<p> property, without affecting the rest of the
+				and would like to have a more direct connection, we could perfectly link Boris to Isaac and Salomé with an <tt>hasUncle</tt> property, without affecting the rest of the
 				graph. The data model is not limiting.</p><p>Another way to represent a graph is write the triples that compose it. A triple is a statement compose of a subject, a property
 				(or predicate) and an object.</p><table id="concept_fwj_xky_gp__simpletable_acp_pkz_gp">
 				<tgroup cols="3">
@@ -111,8 +111,9 @@
 				<dlentry>
 					<dt>I see URLs instead of people's names</dt>
 					<dd>
-						<p>URIs (URL used as identifiers) are used to identify everything in RDF. They are very convenient because they rely on the Web technologies that ensure worldwide
-							validity. If you own the domain yourname.net, you have the control over all the URIs that are based in this domain.</p>
+						<p><xref format="html" href="http://www.w3.org/TR/cooluris/" scope="external">URIs</xref> (URL used as identifiers) are used to identify everything in RDF. They are very
+							convenient because they rely on the Web technologies that ensure worldwide validity. If you own the domain yourname.net, you have the control over all the URIs that
+							are based in this domain.</p>
 						<p>In our data, we see that the Landais family uses identifiers from the domain elandais.fr, because Eric Landais owns the domain. It is also possible to rely on an
 							organization to create identifiers. For instance, I could use the URL of my About.me page to identify myself (<xref format="html" href="http://about.me/ColinMaudry"
 								scope="external">http://about.me/ColinMaudry</xref>), since I have some control on what happens when you visit it.</p>
@@ -128,7 +129,7 @@
 					<dt>The graph looks quite messy...</dt>
 					<dd>That's what happens when you can link each nodes to any number of other nodes. This way of drawing graphs is only used for small graphs that are useful for future
 						reference. For example, the <xref format="html" href="https://www.lucidchart.com/documents/view/447899e0-5162-a0ee-a67f-27dc0a000cd9" scope="external">DITA
-							ontology</xref> has a graph representation drawn the same way. For small quantities of data you can view it as Turtle. Otherwise, you need to query it.</dd>
+							ontology</xref> has a graph representation drawn the same way. For small quantities of data you can view it as Turtle. Otherwise, you need to <xref href="sparql-queries.dita">query</xref> it.</dd>
 				</dlentry>
 			</dl></section>
  </conbody>

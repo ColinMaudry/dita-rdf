@@ -4,14 +4,13 @@
  <title>Base ontologies</title>
  <shortdesc>The ontologies from which the DITA RDF ontology is derived</shortdesc>
  <conbody>
-		<p>I have chosen to use the Nepomuk ontologies <xref format="html" href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie" scope="external">NIE</xref> and <xref
-				format="html" href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo" scope="external">NFO</xref>, and specialize the classes. The distinction they make between
-			data objects (sequences of bytes) and information elements (interpretations) prevents the confusion between:</p>
-		<ul id="ul_epl_5rr_3p">
-			<li>the file as data on a file system, that has a path and can be moved or renamed</li>
-			<li>the information contained in this file that results from its interpretation (by an XML editor or a PDF viewer)</li>
-		</ul>
-		<p>For instance, let's consider a DITA topic. If the topic is renamed, can we consider that the topic was modified? The file was modified, but the meaning born by the topic
-			remains untouched.</p>
+		<p>I was originally using the Nepomuk ontologies <xref format="html" href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie" scope="external">NIE</xref> and <xref
+				format="html" href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo" scope="external">NFO</xref>, and specialized the classes. The distinction they make between
+			data objects (sequences of bytes) and information elements (interpretations) was very useful to make different statements about the files on the file systems and the
+			semantics resulting from their interpretation.</p>
+		<p>However, for the short term, I considered that these ontologies added more confusion to the users without bringing enough benefits.</p>
+		<p>The DITA RDF ontology is consequently not based on other ontologies, excepting the references to <xref format="html"
+				href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms" scope="external">Dublin Core</xref>, inherited from the <xref format="html"
+				href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/metadata-elements.html" scope="external">DITA specification</xref>.</p>
 	</conbody>
 </concept>

@@ -19,20 +19,20 @@
 		</dita-ot-fail>
 		
 	</target>
-	
+	<property name="dita.input.valfile" value="${args.filter}"/>
 	<target name="dita2rdf" depends="dita2rdf.init, build-init,short-preprocess, map2rdf"/>
-	
-	<target name="short-preprocess" depends="gen-list,debug-filter,copy-files"/>
+	<target name="short-preprocess" depends="gen-list,debug-filter,copy-generated-files"/>
 	<!-- 
 	For userguide.ditamap:
 			-with preprocess: 17 seconds total processing time
-			-with short-preprocess: 7 seconds total processing time
+			-with short-preprocess: 5 seconds total processing time
 			
 	Why keeping these targets?	
-	copy-files: because the keyref path looks for the files in the temps.dir. They must be there.
-	debug-filter: because this is where user.input.dir is set (eg: C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\demo-cars). Could be created in Ant instead of Java (DebugAndFilterModuleTest.java).
-	gen-list: because keyref needs the list of keydef
-	keyref: because we need the resolved keys to be able to browse the content
+	copy-generated-files: because @xtrf and @xtrc must be set.
+	debug-filter: because I need the filtering features (ditaval).
+	gen-list: because copy-generated-files needs the list of files.
+	
+	See also https://github.com/ColinMaudry/dita-rdf/issues/14
 	-->
 	
 	

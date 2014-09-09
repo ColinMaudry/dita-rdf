@@ -41,12 +41,16 @@
 		<xsl:for-each select="tokenize(., ' ')">
 					<dita:key>
 						<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
+							<dita:keyname><xsl:value-of select="."/></dita:keyname>
 							<xsl:apply-templates select="$keynode/@href">
 								<xsl:with-param name="targetDocument" select="$targetDocument"/>
 							</xsl:apply-templates>
 						</dita:Key>
 					</dita:key>
 		</xsl:for-each>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' map/topicref ')][not(@href)]">
+		<xsl:apply-templates/>
 	</xsl:template>
 	<doc:doc>
 		<doc:desc>Passthrough template for maps</doc:desc>
