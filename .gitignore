@@ -5,7 +5,6 @@ dita-rdf.xpr
 temp/
 test*
 dita2rdf/demo/information/
-dita2rdf/demo/*.*
 dita2rdf/demo/docsrc
 dita2rdf/demo/out/*
 !*.rdf
