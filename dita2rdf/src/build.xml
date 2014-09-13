@@ -3,6 +3,8 @@
 <!--This file is inspired from the build.xml file included in the org.dita.pdf2 plugin,
 		included in the standard DITA Open toolkit.
 -->
+
+	
 	<target name="dita2rdf.init">
 		<echo>dita2rdf plugin, by Colin Maudry</echo>
 		<echo>Updates and support requests at https://github.com/ColinMaudry/dita-rdf</echo>
@@ -90,7 +92,7 @@
 		</path>
 	</target>
 	
-	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf"></target>
+	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf, publish.triplestore"/>
 	<target name="publish.map.rdf.init">
 		<property name="inputFile" location="${args.input}"></property>
 		<property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.rdf"/>
@@ -149,6 +151,43 @@
 				<catalogpath path="${xml.catalog.files}"></catalogpath>
 			</xmlcatalog>
 		</xslt>
+	</target>
+	<available property="http.installed" classname="org.missinglink.ant.task.http.HttpClientTask"/>
+	
+	<property file="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/build.properties"/>
+	
+	<property name="ml-ant-http.jar" value="ml-ant-http-1.1.3.jar"/>
+	<fileset id="runtime.libs" dir="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/lib">
+		<include name="${ml-ant-http.jar}"/>
+	</fileset>
+	<path id="runtime.classpath">
+		<fileset refid="runtime.libs"/>
+	</path>
+	<taskdef name="http" classname="org.missinglink.ant.task.http.HttpClientTask">
+		<classpath refid="runtime.classpath"/>
+	</taskdef>
+	
+	<condition property="skipUpload">
+		<or>
+			<not>
+				<available file="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/build.properties"/>
+			</not>
+			<isset property="args.skipUpload"/>
+		</or>
+	</condition>
+	
+	<target name="publish.triplestore" unless="skipUpload">
+		<tstamp/>
+		<property name="graphUri" value="${repository.graphs.base.uri}${dita.map.filename.root}"/>
+		
+		<http url="${repository.url}?graph=${graphUri}" expected="201" method="PUT" printresponseheaders="yes" printrequestheaders="yes">
+			<entity file="${outputFile}"/>
+			<credentials username="${repository.username}"/>
+				<headers>
+					<header name="Content-Type" value="application/rdf+xml"/>
+			</headers>
+		</http>
+		<echo>The URI of the created graph is &lt;${graphUri}></echo>
 	</target>
 	
 	
