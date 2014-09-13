@@ -300,6 +300,30 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	
+	<!-- Critdates -->
+	<!-- It's a bit weird that @golive and @expiry can be added to <created> and <modified>. I'm not sure of the semantics, but well... -->
+	<xsl:template match="*[contains(@class, ' topic/critdates ')]">
+		<xsl:apply-templates select="*/@*"/>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/created ')]/@date[normalize-space()]">
+		<dcterms:created rdf:datatype="http://purl.org/dc/terms/W3CDTF"><xsl:value-of select="."/></dcterms:created>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/created ')]/@expiry[normalize-space()]">
+		<dita:createdExpiry rdf:datatype="http://purl.org/dc/terms/W3CDTF"><xsl:value-of select="."/></dita:createdExpiry>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/created ')]/@golive[normalize-space()]">
+		<dita:createdGolive rdf:datatype="http://purl.org/dc/terms/W3CDTF"><xsl:value-of select="."/></dita:createdGolive>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/revised ')]/@modified[normalize-space()]">
+		<dcterms:modified rdf:datatype="http://purl.org/dc/terms/W3CDTF"><xsl:value-of select="."/></dcterms:modified>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/revised ')]/@expiry[normalize-space()]">
+		<dita:modifiedExpiry rdf:datatype="http://purl.org/dc/terms/W3CDTF"><xsl:value-of select="."/></dita:modifiedExpiry>
+	</xsl:template>
+	<xsl:template match="*[contains(@class, ' topic/revised ')]/@golive[normalize-space()]">
+		<dita:modifiedGolive rdf:datatype="http://purl.org/dc/terms/W3CDTF"><xsl:value-of select="."/></dita:modifiedGolive>
+	</xsl:template>
+	
 	<!-- Keyword, category -->
 	<xsl:template match="*[contains(@class, ' topic/keywords ')]">
 		<xsl:apply-templates/>
