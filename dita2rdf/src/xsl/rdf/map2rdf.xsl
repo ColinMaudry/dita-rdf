@@ -13,7 +13,7 @@
 	xmlns:colin="http://colin.maudry.com/"
 	xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl"
 	xmlns:ot="http://www.idiominc.com/opentopic"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" exclude-result-prefixes="xs doc colin">
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" exclude-result-prefixes="xs doc colin ot">
 	
 	<!-- Map specific functions -->
 	<xsl:function name="colin:getKeyUri">
