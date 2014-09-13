@@ -77,7 +77,7 @@
 		</xsl:apply-templates>
 	</xsl:template>
 	
-	<xsl:template match="  *[contains(@class,' topic/shortdesc ')] |   *[contains(@class, ' topic/abstract ')]/*[contains(@class,' topic/shortdesc ')]">
+	<xsl:template match="  *[contains(@class,' topic/shortdesc ')] | *[contains(@class, ' topic/abstract ')]/*[contains(@class,' topic/shortdesc ')]">
 		<xsl:apply-templates select="." mode="colin:processElementAsProperty">
 			<xsl:with-param name="objectType" as="xs:string" select="'literal'"/>
 			<xsl:with-param name="hasLanguage" as="xs:boolean" select="true()"/>

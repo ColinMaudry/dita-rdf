@@ -110,25 +110,27 @@
 		<xsl:variable name="class" as="attribute(class)" select="@class"/>
 		<xsl:variable name="domainId" as="xs:string" select="colin:getDomainId(string($class))"/>
 		<xsl:variable name="namespace" select="$config/config/domains/domain[@domainId=$domainId]/@baseUri"/>
-		<xsl:element name="{local-name()}" namespace="{$namespace}">
-			<xsl:choose>
-				<xsl:when test="$objectType = 'resource'">
-					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="colin:getInternalObjectUri($documentUri,@xtrc)"/>
-						<xsl:call-template name="colin:getRdfTypes">
-							<xsl:with-param name="class" select="@class"/>
-						</xsl:call-template>
-						<xsl:apply-templates/>				
-					</rdf:Description>
-				</xsl:when>
-				<xsl:when test="$objectType = 'literal'">
-					<xsl:if test="$hasLanguage = true()">
-						<xsl:call-template name="colin:getLanguageAtt"/>
-					</xsl:if>
-			<xsl:apply-templates mode="get-text"/>
-				</xsl:when>
-			</xsl:choose>
-		</xsl:element>
+		<xsl:if test=".//text()">
+			<xsl:element name="{local-name()}" namespace="{$namespace}">
+				<xsl:choose>
+					<xsl:when test="$objectType = 'resource'">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about" select="colin:getInternalObjectUri($documentUri,@xtrc)"/>
+							<xsl:call-template name="colin:getRdfTypes">
+								<xsl:with-param name="class" select="@class"/>
+							</xsl:call-template>
+							<xsl:apply-templates/>				
+						</rdf:Description>
+					</xsl:when>
+					<xsl:when test="$objectType = 'literal'">
+						<xsl:if test="$hasLanguage = true()">
+							<xsl:call-template name="colin:getLanguageAtt"/>
+						</xsl:if>
+							<xsl:value-of select="normalize-space(.)"/>
+					</xsl:when>
+				</xsl:choose>
+			</xsl:element>
+		</xsl:if>
 	</xsl:template>
 	
 	<!-- The beauty of the tunnels: whenever @xml:lang is found, the $language param is set or reset and passed to the next templates. -->
