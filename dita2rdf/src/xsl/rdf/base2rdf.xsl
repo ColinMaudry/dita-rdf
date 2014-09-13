@@ -296,10 +296,6 @@
 		</xsl:apply-templates>
 	</xsl:template>
 	
-	<xsl:template match="ph">
-		<xsl:apply-templates/>
-	</xsl:template>
-	
 	<!-- Critdates -->
 	<!-- It's a bit weird that @golive and @expiry can be added to <created> and <modified>. I'm not sure of the semantics, but well... -->
 	<xsl:template match="*[contains(@class, ' topic/critdates ')]">
