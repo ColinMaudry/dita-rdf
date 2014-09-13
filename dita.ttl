@@ -91,6 +91,8 @@
 			rdfs:comment "A Learning Plan topic describes learning needs and goals, instructional design models, task analyses, learning taxonomies, and other information necessary to the lesson planning process."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlan.html> ;
 			rdfs:label "LearningPlan" .
+			
+	    
 		
 		#Reference objects
 		:ReferenceObject a rdfs:Class ;
@@ -174,8 +176,6 @@
 			rdfs:comment "Use a learningPostAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
 			rdfs:label "learningPostAssessmentRef" .
 
-
-			
 		#Key
 		:Key a rdfs:Class ;
 			rdfs:comment "The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic."@en-US ;
@@ -273,9 +273,59 @@
 			rdfs:domain :Doctype ;
 			rdfs:range :Prodinfo ;
 			rdfs:label "prodinfo" ;
-			rdfs:comment "Connects a DITA file with the product information that it is related to."@en-US .			
+			rdfs:comment "Connects a DITA file with the product information that it is related to."@en-US .
+
+		
 	
 		#specific to maps
+		
+		:topicref rdfs:subPropertyOf :referenceObject ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html> ;
+			rdfs:comment "The topicref element identifies a topic (such as a concept, task, or reference) or other resource."@en-US ;
+			rdfs:label "topicref" .
+		:mapref rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
+			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map."@en-US ;
+			rdfs:label "mapref" .
+		
+		#specific to bookmaps
+		
+		:mainbooktitle a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mainbooktitle.html> ;
+			rdfs:comment "The mainbooktitle element contains the primary title information for a book."@en-US ;
+			rdfs:label "mainbooktitle" .
+		:booktitlealt a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/booktitlealt.html> ;
+			rdfs:comment "The booktitlealt element contains the alternative title, subtitle, or short title for a book. It may be specialized into a specific element for those or other purposes."@en-US ;
+			rdfs:label "booktitlealt" .
+		:booklibrary a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/booklibrary.html> ;
+			rdfs:comment "The booklibrary element contains the library information for a book. Library entries contain information about the series, library, or collection of documents to which the book belongs. "@en-US ;
+			rdfs:label "booklibrary" .
+		:part rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/part.html> ;
+			rdfs:comment "The part element references a part topic or a map that references part topics for the book. A new part is started. Use <part> to divide a document's chapters into logical groupings. For example, in a document that contains both guide and reference information, you can define two parts, one containing the guide information and the other containing the reference information."@en-US ;
+			rdfs:label "part" .
+		:chapter rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html> ;
+			rdfs:comment "The chapter element references a topic or map as a chapter within a book."@en-US ;
+			rdfs:label "chapter" .
+		:notices rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/notices.html> ;
+			rdfs:comment "The notices element references a topic containing special notice information, for example, legal notices about supplementary copyrights and trademarks associated with the book."@en-US ;
+			rdfs:label "notices" .
+		:frontmatter rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/frontmatter.html> ;
+			rdfs:comment "The frontmatter element contains the material that precedes the main body of a document. It may include items such as an abstract, a preface, and various types of book lists such as a toc, tablelist, or figurelist. "@en-US ;
+			rdfs:label "frontmatter" .
+		:backmatter rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/backmatter.html> ;
+			rdfs:comment "The backmatter element contains the material that follows the main body of a document and any appendices. It may include items such as a colophon, legal notices, and various types of book lists such as a glossary or an index."@en-US ;
+			rdfs:label "backmatter" .
+		
 		
 		#specific to topics
 		:subtopic a rdf:Property ;
@@ -362,6 +412,45 @@
 			rdfs:range xsd:string ;
 			rdfs:label "experiencelevel" ;
 			rdfs:domain :Audience .
+		
+		#Critdates
+		
+		:created rdfs:subPropertyOf dcterms:created ;
+			rdfs:comment "The created element specifies the document creation date using the date attribute."@en-US ;
+			rdfs:range dcterms:W3CDTF ;
+			rdfs:domain :Doctype ;
+			rdfs:label "created" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html> .
+		:createdGolive a rdf:Property ;
+			rdfs:comment "The publication or general availability (GA) date, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31."@en-US ;
+			rdfs:range dcterms:W3CDTF ;
+			rdfs:domain :Doctype ;
+			rdfs:label "created (golive)" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html> .
+		:createdExpiry a rdf:Property ;
+			rdfs:comment "The date when the information should be retired or refreshed, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31."@en-US ;
+			rdfs:range dcterms:W3CDTF ;
+			rdfs:domain :Doctype ;
+			rdfs:label "created (expiry)" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html> .
+		:revised rdfs:subPropertyOf dcterms:revised ;
+			rdfs:comment "The revised element in the prolog is used to maintain tracking dates that are important in a topic development cycle, such as the last modification date, the original availability date, and the expiration date."@en-US ;
+			rdfs:range dcterms:W3CDTF ;
+			rdfs:domain :Doctype ;
+			rdfs:label "revised" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/revised.html> .
+		:revisedGolive a rdf:Property ;
+			rdfs:comment "The publication or general availability (GA) date, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31."@en-US ;
+			rdfs:range dcterms:W3CDTF ;
+			rdfs:domain :Doctype ;
+			rdfs:label "revised (golive)" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/revised.html> .
+		:revisedExpiry a rdf:Property ;
+			rdfs:comment "The date when the information should be retired or refreshed, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31."@en-US ;
+			rdfs:range dcterms:W3CDTF ;
+			rdfs:domain :Doctype ;
+			rdfs:label "revised (expiry)" ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/revised.html> .
 
 		#specific to Prodinfo
 		:prodname a rdf:Property ;
