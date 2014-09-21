@@ -8,6 +8,7 @@
 		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="glossentry" baseUri="http://purl.org/dita/ns#"/>
 		
 		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
 		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
