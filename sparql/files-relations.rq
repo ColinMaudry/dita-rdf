@@ -1,0 +1,20 @@
+PREFIX dita: <http://purl.org/dita/ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+#This query can be used to create a visual graph of the document, and their relations
+
+SELECT ?sourceId ?relationLabel ?targetId
+WHERE { 
+
+{?source a dita:Topic .} union {?source a dita:Map .}
+{?target a dita:Topic .} union {?target a dita:Map .}
+
+?source dita:title ?sourceId .  
+?target dita:title ?targetId .   
+?relation rdfs:label ?relationLabel .
+  
+?source ?relation ?relationObject  .
+?relationObject dita:href ?target .
+
+  
+}
