@@ -92,7 +92,7 @@
 		</path>
 	</target>
 	
-	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf, publish.triplestore"/>
+	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf, publish.repository"/>
 	<target name="publish.map.rdf.init">
 		<property name="inputFile" location="${args.input}"></property>
 		<property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.rdf"/>
@@ -175,20 +175,34 @@
 			<isset property="args.skipUpload"/>
 		</or>
 	</condition>
+	<condition property="xmlConfigPath" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/rdf/config.xml" else="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg/rdf/config.xml">
+		<available file="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/rdf/config.xml"/>
+	</condition>
+	<condition property="methodIsPut">
+		<equals arg1="${repository.http.method}" arg2="PUT"/>
+	</condition>
 	
-	<target name="publish.triplestore" unless="skipUpload">
+	<target name="publish.repository">
 		<tstamp/>
-		<property name="graphUri" value="${repository.graphs.base.uri}${dita.map.filename.root}"/>
-		
-		<http url="${repository.url}?graph=${graphUri}" expected="201" method="PUT" printresponseheaders="yes" printrequestheaders="yes">
+		<xmlproperty file="${xmlConfigPath}"/>
+		<xmlproperty file="${dita.temp.dir}\docmeta.xml"/>
+		<echo>${dita.temp.dir}</echo>
+		<property name="graphUri" value="${config.graphsBaseUri(uri)}${doc.lang}${doc.id}"/>
+		<antcall target="deleteGraph"/>
+		<http url="${repository.import.url}?${repository.graph.parameter}=${graphUri}" method="${repository.http.method}" printresponseheaders="true" printrequestheaders="true">
 			<entity file="${outputFile}"/>
-			<credentials username="${repository.username}"/>
+			<credentials username="${repository.username}" password="${repository.password}"/>
 				<headers>
-					<header name="Content-Type" value="application/rdf+xml"/>
+					<header name="Content-Type" value="application/rdf+xml; charset=utf-8"/>
 			</headers>
 		</http>
 		<echo>The URI of the created graph is &lt;${graphUri}></echo>
 	</target>
-	
+	<target name="deleteGraph" unless="methodIsPut">
+		<echo>Deleting graph...</echo>
+		<http url="${repository.update.url}?update=DROP GRAPH &lt;${graphUri}>" method="GET" printresponseheaders="true" printrequestheaders="true">
+			<credentials username="${repository.username}" password="${repository.password}"/>
+		</http>
+	</target>
 	
 </project>
