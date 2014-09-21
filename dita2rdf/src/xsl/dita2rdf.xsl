@@ -27,9 +27,7 @@
 				<xsl:with-param name="currentUri" select="$currentUri" tunnel="yes"/>
 			</xsl:apply-templates>
 		</rdf:RDF>
-	</xsl:template>
-
-	
+	</xsl:template>	
 
 	<xsl:function as="xs:anyURI" name="colin:getInformationObjectUri">
 		<xsl:param name="resourceFamily"/>

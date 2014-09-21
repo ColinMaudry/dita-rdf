@@ -334,7 +334,7 @@
 	<xsl:template match="
 		*[contains(@class, ' topic/keyword ')][not(@keyref)]/text() |
 		*[contains(@class, ' topic/category ')][not(@keyref)]/text()">
-		<rdfs:label><xsl:value-of select="."/></rdfs:label>
+		<rdfs:label><xsl:value-of select="normalize-space(.)"/></rdfs:label>
 	</xsl:template>
 	
 </xsl:stylesheet>
