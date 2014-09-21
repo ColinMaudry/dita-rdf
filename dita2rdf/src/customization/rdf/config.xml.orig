@@ -14,9 +14,10 @@
 		will be:
 			http://data.nxp.com/resources/fr-FR/datasheet/ds_1254933687955
 		
-		The base URI for resources (http://data.nxp.com/resources/) must be a URL for which you control the domain (nxp.com). The URI MUST end with a /.
+		The base URIs for resources and for graphs must be a URLs for which you control the domain (example: nxp.com). The URI MUST end with a /.
 		-->
 		<resourcesBaseUri uri="http://data.example.com/resources/"/>
+		<graphsBaseUri uri="http://data.example.com/graphs/"/>
 	
 	<!-- 
 	Same thing here, but for products.

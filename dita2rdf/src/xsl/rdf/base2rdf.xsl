@@ -30,7 +30,11 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:param>
-		<xsl:param name="id" select="if (@id!='') then @id else generate-id()"/>
+		<xsl:param name="id">
+			<xsl:call-template name="colin:getRootId">
+				<xsl:with-param name="rootElement" select="." as="node()"/>
+			</xsl:call-template>
+		</xsl:param>	
 		<xsl:param name="documentUri">
 			<xsl:value-of select="colin:getInformationObjectUri(local-name(),$docLanguage,$id)"/>
 		</xsl:param>

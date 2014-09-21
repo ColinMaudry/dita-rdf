@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<resourcesBaseUri uri="http://data.example.com/resources/"/>
+	<graphsBaseUri uri="http://data.example.com/graphs/"/>
 	<productsBaseUri uri="http://data.example.com/resources/products/"/>
 	<productVersionSeparator>#</productVersionSeparator>	
 	<domains>

@@ -6,6 +6,7 @@
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 	<xsl:import href="params.xsl"/>
+	<xsl:import href="rdf/datasetMetadata.xsl"/>
 	<xsl:import href="rdf/base2rdf.xsl"/>
 	<xsl:import href="rdf/map2rdf.xsl"/>
 	<xsl:import href="rdf/topic2rdf.xsl"/>
@@ -13,12 +14,24 @@
 	
 	<xsl:output encoding="UTF-8" indent="yes" media-type="application/rdf+xml" method="xml" omit-xml-declaration="no"/>
 	<xsl:strip-space elements="*"/>
+	<xsl:param name="work.dir.url"/>
+
  
 	<doc:doc>
 		<doc:desc>Temporary maps and topics (output of copy-files)</doc:desc>
 	</doc:doc>
 	<xsl:template match="/">
 		<xsl:param name="currentUri" select="document-uri(/)"/>
+		<xsl:variable name="rootId">
+			<xsl:call-template name="colin:getRootId">
+				<xsl:with-param name="rootElement" select="/*" as="node()"/>
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:variable name="rootLangForPath">
+			<xsl:if test="/*/@xml:lang!=''">
+				<xsl:value-of select="concat(/*/@xml:lang,'/')"/>
+			</xsl:if>
+		</xsl:variable>
 		<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dita="http://purl.org/dita/ns#" xmlns:doc="http://www.oxygenxml.com/ns/doc/xsl" xmlns:foaf="http://xmlns.com/foaf/0.1/"
 			xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#" xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
 			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -26,6 +39,32 @@
 			<xsl:apply-templates>
 				<xsl:with-param name="currentUri" select="$currentUri" tunnel="yes"/>
 			</xsl:apply-templates>
+			<xsl:result-document method="xml" href="{$work.dir.url}docmeta.xml">
+				<doc>
+					<id>
+						<xsl:value-of select="$rootId"/>
+					</id>
+					<lang>
+						<xsl:value-of select="$rootLangForPath"/>
+					</lang>
+				</doc>
+			</xsl:result-document>
+			<xsl:call-template name="colin:datasetMetadata">
+				<xsl:with-param name="xtrf" select="/*/@xtrf" as="xs:anyURI"/>
+				<xsl:with-param name="rootId" select="$rootId"/>
+				<xsl:with-param name="rootLang" select="$rootLangForPath"/>
+				<xsl:with-param name="rootTitle">
+					<xsl:choose>
+						<xsl:when test="/*/title/text()">
+							<xsl:value-of select="/*/title/text()"/>
+						</xsl:when>
+						<xsl:when test="/*/@title!=''">
+							<xsl:value-of select="@title"/>
+					</xsl:when>
+						<xsl:otherwise/>
+					</xsl:choose>
+				</xsl:with-param>
+			</xsl:call-template>
 		</rdf:RDF>
 	</xsl:template>	
 
@@ -143,6 +182,10 @@
 		<xsl:if test="$language !=''">
 			<xsl:attribute name="xml:lang" select="$language"/>
 		</xsl:if>
+	</xsl:template>
+	<xsl:template name="colin:getRootId">
+		<xsl:param name="rootElement" as="node()"/>
+		<xsl:value-of select="if ($rootElement/@id!='') then $rootElement/@id else generate-id($rootElement)"/>
 	</xsl:template>
 	
 	<xsl:template name="colin:justGetTheUri">
