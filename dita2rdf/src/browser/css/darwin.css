@@ -1,0 +1,42 @@
+/* line 1, ../sass/darwin.scss */
+.viz-table {
+  width: 80%;
+  display: inline-block;
+}
+
+/*body {
+	font-family: Calibri, sans-serif;
+}
+*/
+/* line 11, ../sass/darwin.scss */
+table.browsable a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+}
+
+/* line 27, ../sass/darwin.scss */
+table.browsable > tbody > tr > td {
+  padding: 0;
+}
+/* line 30, ../sass/darwin.scss */
+table.browsable tbody > tr:hover {
+  background-color: #F5F5F5;
+}
+/* line 35, ../sass/darwin.scss */
+table.browsable tr.map {
+  background-color: rgba(30, 144, 255, 0.1);
+}
+/* line 37, ../sass/darwin.scss */
+table.browsable tr.map:hover {
+  background-color: rgba(30, 144, 255, 0.2);
+}
+/* line 35, ../sass/darwin.scss */
+table.browsable tr.topic {
+  background-color: rgba(255, 255, 0, 0.1);
+}
+/* line 37, ../sass/darwin.scss */
+table.browsable tr.topic:hover {
+  background-color: rgba(255, 255, 0, 0.2);
+}

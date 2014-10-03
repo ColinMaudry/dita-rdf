@@ -1,0 +1,41 @@
+.viz-table {
+	width:80%;
+	display: inline-block;
+}
+
+/*body {
+	font-family: Calibri, sans-serif;
+}
+*/
+
+table.browsable a
+{
+	display: block;
+	text-decoration:none;
+	color: inherit;
+	padding:8px;
+}
+
+
+$mapColor:dodgerblue;
+$topicColor:yellow;
+$subjectSchemeColor:green;
+
+
+table.browsable 
+{
+	& > tbody > tr > td {
+		padding:0;
+	}
+	tbody > tr:hover 	{
+			background-color:#F5F5F5;
+		}
+
+@each $type, $color in (map, $mapColor),(topic,$topicColor) {
+  tr.#{$type} {
+    background-color: rgba($color, 0.1) ;
+    &:hover {background-color: rgba($color, 0.2) ;}
+  }
+}
+	
+}
