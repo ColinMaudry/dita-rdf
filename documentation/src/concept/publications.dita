@@ -15,6 +15,11 @@
  			</thead>
  			<tbody>
  				<row>
+ 					<entry>September 26th, 2014</entry>
+ 					<entry><xref format="html" href="https://www.linkedin.com/in/theresagrotendorst" scope="external">Theresa Grotendorst</xref>, Content Management Consultant, who thinks that semantics are necesssary to publish smarter content. The DITA RDF project is a good step is that direction.</entry>
+ 					<entry><xref format="html" href="http://de.slideshare.net/TheresaGrotendorst/towards-dynamic-and-smart-content-semantic-technologies-for-adaptive-technical-documentation" scope="external">Presentation (Slideshare)</xref></entry>
+ 				</row>
+ 				<row>
  					<entry>August 12th, 2014</entry>
  					<entry><xref format="html" href="https://twitter.com/garyprusso" scope="external">Gary Russo</xref>, from <xref format="html" href="http://harpercollins.com/"
 								scope="external">Harper Collins</xref>, describing how he could use the dita2rdf DITA OT plugin to export the metadata of the DITA content in <xref format="html"

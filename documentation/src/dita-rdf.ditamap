@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
+<map id="dita-rdf" xml:lang="en-US">
  <title>The <keyword keyref="project-name"/></title>
 	<keydef keys="ditaot-plugin-name" toc="no">
 		<topicmeta>

@@ -9,7 +9,7 @@
 		<p>See <xref format="html" href="https://github.com/ColinMaudry/dita-rdf/blob/master/UNLICENSE" scope="external">UNLICENSE</xref> and <xref format="html"
 				href="http://unlicense.org/" scope="external">the Unlicense website</xref>.</p>
 		<p>If you find the DITA RDF project useful, I would be grateful if you tweet about it (something like "Kudos to @CMaudry for the #DITA RDF project!
-			http://purl.org/dita/rdf-project #ditardf") or if you mention the origin (http://purl.org/dita/rdf-project) and the author (Colin Maudry) of this project in the documentation
+			http://purl.org/dita/ditardf-project #ditardf") or if you mention the origin (http://purl.org/dita/ditardf-project) and the author (Colin Maudry) of this project in the documentation
 			of your product.</p>
 	</conbody>
 </concept>

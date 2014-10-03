@@ -3,6 +3,9 @@
  xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
 	<title>Welcome to the <keyword keyref="project-name"/></title>
  <shortdesc></shortdesc>
+	<prolog>
+		<author>Colin Maudry</author>
+	</prolog>
  <conbody>
  	<p>The objective of this project is to develop an ontology to describe DITA XML objects and to develop tools to generate RDF triples based on that ontology.</p>
  	<p>The source code is published <xref format="html" href="https://github.com/ColinMaudry/dita-rdf" scope="external">on Github</xref>.</p>
