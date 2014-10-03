@@ -14,6 +14,7 @@
                     rdf:about="http://data.example.com/resources/map/en-us/d9e5">
       <dita:lang>en-us</dita:lang>
       <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
       <dita:id>d9e5</dita:id>
       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\ditaot-userguide.ditamap</dita:xtrf>
       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit</title>
@@ -29,6 +30,7 @@
                         <dita:lang>en-us</dita:lang>
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                         <dita:id>ant</dita:id>
                         <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant.dita</dita:xtrf>
                         <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant</title>
@@ -47,6 +49,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>keyrefs</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\keyrefs.ditamap</dita:xtrf>
                   <dita:title xml:lang="en-us">Key references</dita:title>
@@ -256,6 +259,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/dita-otprojecthome">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>dita-otprojecthome</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\DITA-OTProjectHome.xml</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit</title>
@@ -342,6 +346,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d35e6">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>d35e6</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\quickstart.ditamap</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Getting started</title>
@@ -353,6 +358,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>exploring-the-dita-ot</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\quickstartguide\exploring-the-dita-ot.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Getting Started with the DITA Open Toolkit</title>
@@ -369,6 +375,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>installing-full-easy</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\installing-full-easy.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing the full-easy-install package</title>
@@ -435,6 +442,7 @@
                                     <dita:lang>en-us</dita:lang>
                                     <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                     <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                     <dita:id>rundemo</dita:id>
                                     <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\quickstartguide\rundemo.dita</dita:xtrf>
                                     <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Running the demo build</title>
@@ -503,6 +511,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>runmore</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\quickstartguide\runmore.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Building your own content using the demo build</title>
@@ -544,6 +553,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/mainDITAreadme">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>mainDITAreadme</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme.ditamap</dita:xtrf>
                   <dita:title xml:lang="en-us">DITA-OT Readme map</dita:title>
@@ -564,6 +574,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>DITA-readme</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-readme.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit User Guide</title>
@@ -580,6 +591,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d51e5">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>d51e5</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\overview.ditamap</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Overview of the DITA-OT</title>
@@ -591,6 +603,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>overview-of-dita-ot</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\overview-of-dita-ot.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Overview of the DITA Open Toolkit</title>
@@ -607,6 +620,7 @@
                                           <dita:lang>en</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>rel1.8</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\changes\rel1.8.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en">DITA Open Toolkit Release 1.8</title>
@@ -615,6 +629,7 @@
                                                 <dita:lang>en-us</dita:lang>
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                 <dita:id>general-enhancements-and-changes</dita:id>
                                                 <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\changes\rel1.8.xml</dita:xtrf>
                                                 <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">General Enhancements and Changes</title>
@@ -625,6 +640,7 @@
                                                 <dita:lang>en</dita:lang>
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                 <dita:id>reference_yvj_ttj_bd</dita:id>
                                                 <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\changes\rel1.8.xml</dita:xtrf>
                                                 <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Migration from previous releases</title>
@@ -642,6 +658,7 @@
                                                 <dita:lang>en</dita:lang>
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                 <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                 <dita:id>rel1.8.issues</dita:id>
                                                 <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\changes\rel1.8.xml</dita:xtrf>
                                                 <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Issues</title>
@@ -660,6 +677,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita1.2specification</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\specification\DITA1-2.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA 1.2 Specification Support</title>
@@ -717,6 +735,7 @@
                                        <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/testedplatformsandtools">
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>testedplatformsandtools</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-tested.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Tested platforms and tools</title>
@@ -737,6 +756,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d64e5">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>d64e5</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\installing.ditamap</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing</title>
@@ -748,6 +768,7 @@
                                           <dita:lang>en</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>installation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-installation.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Installing the DITA Open Toolkit</title>
@@ -764,6 +785,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>distribution_packages</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\distribution_packages.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Distribution packages</title>
@@ -970,6 +992,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>prerequisite-software</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\prerequisite-software.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Prerequisite software</title>
@@ -1091,6 +1114,7 @@
                                                    <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/testedplatformsandtools">
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>testedplatformsandtools</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-tested.xml</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Tested platforms and tools</title>
@@ -1111,6 +1135,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>installing-full-easy</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\installing-full-easy.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing the full-easy-install package</title>
@@ -1174,6 +1199,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>Linuxsetup</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\installing-minimal-package-on-linux.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing the minimal or standard package on Linux or Mac OSX</title>
@@ -1340,6 +1366,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>installation-windows</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\installing-minimal-package-windows.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing the minimal or standard package on Windows</title>
@@ -1548,6 +1575,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d79e5">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>d79e5</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\publishing.ditamap</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Publishing</title>
@@ -1559,6 +1587,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tranforming-dita-content</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tranforming-dita-content.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Publishing DITA content</title>
@@ -1575,6 +1604,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>availabletransforms</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\AvailableTransforms.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA-OT transformations</title>
@@ -1591,6 +1621,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2docbook</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2docbook.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to Docbook</title>
@@ -1607,6 +1638,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2eclipsecontent</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2eclipsecontent.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to Eclipse Content</title>
@@ -1623,6 +1655,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2eclipsehelp</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2eclipsehelp.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to Eclipse help</title>
@@ -1653,6 +1686,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2htmlhelp</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2htmlhelp.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to HTML Help (CHM)</title>
@@ -1704,6 +1738,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2legacypdf</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2legacypdf.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to legacy PDF transformation</title>
@@ -1720,6 +1755,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2odt</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2odt.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to Open Document Type</title>
@@ -1736,6 +1772,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2pdf</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2pdf.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to PDF (PDF2)</title>
@@ -1752,6 +1789,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2word</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2word.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to Rich Text Format</title>
@@ -1775,6 +1813,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2tocjs</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2tocjs.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to TocJS</title>
@@ -1798,6 +1837,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2troff</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2troff.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to Troff</title>
@@ -1821,6 +1861,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita2xhtml</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2xhtml.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA to XHTML</title>
@@ -1865,6 +1906,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>DITA-ant</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-ant.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Publishing DITA content from Ant</title>
@@ -1881,6 +1923,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant</title>
@@ -1897,6 +1940,7 @@
                                           <dita:lang>en</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>runant</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-antuse.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Building output using Ant</title>
@@ -1989,6 +2033,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>creating-an-ant-build-script</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\creating-an-ant-build-script.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Creating an Ant build script</title>
@@ -2054,6 +2099,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>usingparameterbuildingtool</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-javacmd.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Publishing DITA content from the command-line tool</title>
@@ -2070,6 +2116,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>command-line-tool</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\command-line-tool.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool</title>
@@ -2086,6 +2133,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>building-output-using-cl-tool</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\building-output-using-cl-tool.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Building output using the command-line tool</title>
@@ -2154,6 +2202,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d120e5">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>d120e5</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\globalizing.ditamap</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Globalizing DITA content</title>
@@ -2165,6 +2214,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita-globalization</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-globalization.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Globalizing DITA content</title>
@@ -2181,6 +2231,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>globalization-supported-in-dita-ot</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\globalization-supported-in-dita-ot.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Globalization support offered by the DITA-OT</title>
@@ -2197,6 +2248,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita-globalization-xhtml</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-globalization-xhtml.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Supported languages: HTML-based transformations</title>
@@ -2213,6 +2265,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita-globalization-pdf</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-globalization-pdf.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Supported languages: PDF transformations</title>
@@ -2233,6 +2286,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d130e5">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>d130e5</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\troubleshooting.ditamap</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Troubleshooting</title>
@@ -2244,6 +2298,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>task_pd3_vdv_qg</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\troubleshooting-overview.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Error messages and troubleshooting</title>
@@ -2260,6 +2315,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>msgs</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-messages.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Error messages</title>
@@ -4446,6 +4502,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>errormessages</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-messages-details.xml</dita:xtrf>
                                           <dita:title>
@@ -4486,6 +4543,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -4502,6 +4560,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4532,6 +4591,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -4548,6 +4608,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4650,6 +4711,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4680,6 +4742,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4716,6 +4779,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4746,6 +4810,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4782,6 +4847,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4812,6 +4878,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4848,6 +4915,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -4864,6 +4932,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -4894,6 +4963,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -4910,6 +4980,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -5086,6 +5157,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -5102,6 +5174,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -5132,6 +5205,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -5148,6 +5222,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -5184,6 +5259,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -5200,6 +5276,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -5230,6 +5307,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -5246,6 +5324,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -5458,6 +5537,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -5474,6 +5554,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -5510,6 +5591,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>extended-functionality</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extended-functionality.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Extended functionality</title>
@@ -5518,6 +5600,7 @@
                                                             <dita:lang>en-us</dita:lang>
                                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                            <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                             <dita:id>code-reference</dita:id>
                                                             <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extended-functionality.dita</dita:xtrf>
                                                             <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Code reference processing</title>
@@ -5541,6 +5624,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>extended-functionality</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extended-functionality.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Extended functionality</title>
@@ -5549,6 +5633,7 @@
                                                             <dita:lang>en-us</dita:lang>
                                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                             <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                            <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                             <dita:id>code-reference</dita:id>
                                                             <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extended-functionality.dita</dita:xtrf>
                                                             <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Code reference processing</title>
@@ -6042,6 +6127,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -6058,6 +6144,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -6088,6 +6175,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-ant-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -6104,6 +6192,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>dita-ot-java-properties</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -6220,6 +6309,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>troubleshooting</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-troubleshooting.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Other error messages</title>
@@ -6232,6 +6322,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>t-increasing-the-JVM</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\increasing-the-jvm.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Increasing Java memory allocation</title>
@@ -6269,6 +6360,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>t-increasing-the-JVM</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\increasing-the-jvm.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Increasing Java memory allocation</title>
@@ -6303,6 +6395,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>loghandling</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\DITA-log.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Log files</title>
@@ -6333,6 +6426,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>accessing-help-from-the-cl-tool</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\accessing-help-from-the-cl-tool.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Accessing help from the command-line tool</title>
@@ -6356,6 +6450,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>determining-version-of-dita-ot</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\determining-version-of-ditaot.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Determing the version of the DITA Open Toolkit</title>
@@ -6379,6 +6474,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>t-enabling-debug-mode</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\enabling-debug-mode.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Enabling debug mode</title>
@@ -6395,6 +6491,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>t-increasing-the-JVM</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\increasing-the-jvm.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Increasing Java memory allocation</title>
@@ -6428,6 +6525,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d187e5">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>d187e5</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\reference.ditamap</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Reference</title>
@@ -6439,6 +6537,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>reference</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\reference.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Reference</title>
@@ -6455,6 +6554,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita-ot-ant-properties</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_ant_properties.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters</title>
@@ -6471,6 +6571,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-all-transformation-types</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-all-transformation-types.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: All transformations</title>
@@ -6847,6 +6948,7 @@
                                                       <dita:lang>en-us</dita:lang>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                                       <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                                      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                                       <dita:id>concept_rcv_xbp_xg</dita:id>
                                                       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\generate-copy-outer.dita</dita:xtrf>
                                                       <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">generate.outer.copy parameter</title>
@@ -7056,6 +7158,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-common-html-transtypes</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-common-html-transtypes.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: Common HTML-based transformations</title>
@@ -7420,6 +7523,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>concept_rcv_xbp_xg</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\generate-copy-outer.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">generate.outer.copy parameter</title>
@@ -7534,6 +7638,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-eclipse-content-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-eclipse-content-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: Eclipse content transformation</title>
@@ -7557,6 +7662,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-eclipse-help-transformation.dita</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-eclipse-help-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: Eclipse help transformation</title>
@@ -7713,6 +7819,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-html-help-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-html-help-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: HTML Help transformation</title>
@@ -7736,6 +7843,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-javahelp-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: JavaHelp transformation</title>
@@ -7794,6 +7902,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-legacypdf-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-legacypdf-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: Legacy PDF transformation</title>
@@ -7851,6 +7960,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-odt-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-odt-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: ODT transformation</title>
@@ -7874,6 +7984,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-other</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-other.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: Other</title>
@@ -7966,6 +8077,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-pdf2-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-pdf2-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: PDF transformation</title>
@@ -8161,6 +8273,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>ant-parameters-xhtml-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\ant-parameters-xhtml-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Ant parameters: XHTML transformation</title>
@@ -8212,6 +8325,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>dita-ot-java-properties</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita-ot_java_properties.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters</title>
@@ -8242,6 +8356,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-all-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-all-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: All transformations</title>
@@ -8460,6 +8575,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-common-html-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: All HTML-based transformations</title>
@@ -8692,6 +8808,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-eclipsecontent-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-eclipsecontent-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: Eclipse content transformation</title>
@@ -8721,6 +8838,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-eclipsehelp-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: Eclipse help transformation</title>
@@ -8776,6 +8894,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-htmlhelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-htmlhelp-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: HTML help transformation</title>
@@ -8805,6 +8924,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-javahelp-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-javahelp-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: JavaHelp transformation</title>
@@ -8847,6 +8967,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-odt-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-odt-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: ODT transformation</title>
@@ -8876,6 +8997,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>tool-parameters-pdf-transformation</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-pdf-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: PDF transformation</title>
@@ -8944,6 +9066,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>reference_rv1_c4w_vg</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\tool-parameters-xhtml-transformation.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Command-line tool parameters: XHTML transformation</title>
@@ -8973,6 +9096,7 @@
                                           <dita:lang>en</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>configuration</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\configuration.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en">lib/configuration.properties file</title>
@@ -9156,6 +9280,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d239e5">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>d239e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\dev_ref.ditamap</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Developer's Reference</title>
@@ -9167,6 +9292,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>developer-reference</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\developer-reference.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit Developer Reference</title>
@@ -9183,6 +9309,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>ditaotarch</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\DITA-OTArchitecture.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Architecture of the DITA Open Toolkit</title>
@@ -9199,6 +9326,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>processing-structure</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\processing-structure.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA-OT processing structure</title>
@@ -9220,6 +9348,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>processing-pipeline-modules</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\processing-pipeline-modules.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA-OT processing modules</title>
@@ -9236,6 +9365,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>processing-order</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\processing-order.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA-OT processing order</title>
@@ -9252,6 +9382,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocessarch</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\DITA-OTPreprocess.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Pre-processing modules</title>
@@ -9268,6 +9399,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-genlist</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-genlist.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Generate lists (gen-list)</title>
@@ -9284,6 +9416,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-debugfilter</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-debugfilter.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Debug and filter (debug-filter)</title>
@@ -9300,6 +9433,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-copyfiles</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-copyfiles.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Copy related files (copy-files)</title>
@@ -9316,6 +9450,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-conrefpush</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-conrefpush.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Conref push (conrefpush)</title>
@@ -9332,6 +9467,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-conref</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-conref.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Conref (conref)</title>
@@ -9348,6 +9484,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-metadata</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-metadata.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Move metadata (move-meta-entries)</title>
@@ -9364,6 +9501,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-keyref</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-keyref.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Resolve keyref (keyref)</title>
@@ -9380,6 +9518,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-coderef</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-coderef.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Resolve code references (codref)</title>
@@ -9396,6 +9535,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-mapref</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-mapref.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Resolve map references (mapref)</title>
@@ -9412,6 +9552,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-mappull</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-mappull.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Pull content into maps (mappull)</title>
@@ -9428,6 +9569,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-chunk</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-chunk.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Chunk topics (chunk)</title>
@@ -9444,6 +9586,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-maplink</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-maplink.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Map based linking (maplink and move-links)</title>
@@ -9460,6 +9603,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>preprocess-topicpull</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-topicpull.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Pull content into topics (topicpull)</title>
@@ -9476,6 +9620,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>flagging</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\preprocess-flagging.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Flagging in the toolkit</title>
@@ -9492,6 +9637,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>xhtmlwithnavigation</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlWithNavigation.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">XHTML processing modules</title>
@@ -9508,6 +9654,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>XhtmlCommon</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlCommon.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Common XHTML processing</title>
@@ -9531,6 +9678,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>xhtmldefault</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlDefault.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Default XHTML processing</title>
@@ -9547,6 +9695,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>xhtmleclipse</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlEclipse.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Eclipse help processing</title>
@@ -9563,6 +9712,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>xhtmltocjs</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlTocjs.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">TocJS processing</title>
@@ -9579,6 +9729,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>xhtmlchm</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlCHM.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">HTML Help processing</title>
@@ -9595,6 +9746,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>xhtmljavahelp</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\XhtmlJavahelp.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">JavaHelp processing</title>
@@ -9611,6 +9763,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>pdfdefault</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\PdfDefault.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">PDF processing modules</title>
@@ -9627,6 +9780,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>odtdefault</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\OdtDefault.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Open Document Format processing modules</title>
@@ -9650,6 +9804,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>extending-the-ot</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extending-the-ot.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Extending the DITA Open Toolkit</title>
@@ -9666,6 +9821,7 @@
                               <dita:lang>en</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugins-installing</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugins-installing.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Installing plug-ins</title>
@@ -9682,6 +9838,7 @@
                               <dita:lang>en</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugins-removing</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugins-removing.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Removing plug-ins</title>
@@ -9698,6 +9855,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>rebuilding-the-dita-ot-documentation</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\rebuilding-the-dita-ot-documentation.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Rebuilding the DITA-OT documentation</title>
@@ -9728,6 +9886,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>configuring-the-dita-ot</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\configuring-the-dita-ot.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Configuring the DITA Open Toolkit</title>
@@ -9744,6 +9903,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>lib-org.dita.dost.platform-plugin.properties</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\lib-org.dita.dost.platform-plugin.properties.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">plugin.properties file</title>
@@ -9761,6 +9921,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugins-overview</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugins-overview.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Creating DITA-OT plug-ins</title>
@@ -9777,6 +9938,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-configfile</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-configfile.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Plug-in configuration file</title>
@@ -9793,6 +9955,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-xmlcatalog</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-xmlcatalog.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Extending the XML Catalog</title>
@@ -9809,6 +9972,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-anttarget</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-anttarget.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding new targets to the Ant build process</title>
@@ -9825,6 +9989,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-antpreprocess</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-antpreprocess.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding Ant targets to the pre-process pipeline</title>
@@ -9841,6 +10006,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-newtranstype</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-newtranstype.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Integrating a new transform type</title>
@@ -9857,6 +10023,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-overridestyle</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-overridestyle.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Override styles with XSLT</title>
@@ -9873,6 +10040,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-addgeneratedtext</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-addgeneratedtext.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Modifying or adding generated text</title>
@@ -9889,6 +10057,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-xsltparams</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-xsltparams.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Passing parameters to existing XSLT steps</title>
@@ -9905,6 +10074,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-javalib</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-javalib.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding Java libraries to the classpath</title>
@@ -9921,6 +10091,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-messages</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-messages.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding diagnostic messages</title>
@@ -9937,6 +10108,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-dependencies</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-dependencies.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Managing plug-in dependencies</title>
@@ -9953,6 +10125,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-support</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-support.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Version and support information</title>
@@ -9969,6 +10142,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-newextensions</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-newextensions.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Creating a new plug-in extension point</title>
@@ -9981,6 +10155,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>plugin-javalib</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-javalib.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding Java libraries to the classpath</title>
@@ -9997,6 +10172,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>plugin-addgeneratedtext</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-addgeneratedtext.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Modifying or adding generated text</title>
@@ -10013,6 +10189,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>plugin-overridestyle</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-overridestyle.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Override styles with XSLT</title>
@@ -10029,6 +10206,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>plugin-anttarget</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-anttarget.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding new targets to the Ant build process</title>
@@ -10045,6 +10223,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>plugin-anttarget</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-anttarget.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Adding new targets to the Ant build process</title>
@@ -10061,6 +10240,7 @@
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>plugin-xmlcatalog</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-xmlcatalog.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Extending the XML Catalog</title>
@@ -10081,6 +10261,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>plugin-sample</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\plugin-sample.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Example plugin.xml file</title>
@@ -10104,6 +10285,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>flagging-migration</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\flagging-migration.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">XHTML migration for flagging updates in DITA-OT 1.7</title>
@@ -10120,6 +10302,7 @@
                               <dita:lang>en</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>dita2pdf-customization</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\dita2pdf-customization.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en">Customizing PDF output</title>
@@ -10148,6 +10331,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>ant-properties</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\ant-properties.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Internal Ant properties</title>
@@ -10164,6 +10348,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>implementation-dependent-features</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\DITA1.2-implementation-dependent-features.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Implementation dependent features</title>
@@ -10196,6 +10381,7 @@
                                           <dita:lang>en</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>configuration</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\readme\configuration.dita</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en">lib/configuration.properties file</title>
@@ -10375,6 +10561,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>extended-functionality</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extended-functionality.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Extended functionality</title>
@@ -10383,6 +10570,7 @@
                                     <dita:lang>en-us</dita:lang>
                                     <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                                     <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                     <dita:id>code-reference</dita:id>
                                     <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\extended-functionality.dita</dita:xtrf>
                                     <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Code reference processing</title>
@@ -10410,6 +10598,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>d358e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\project-management.ditamap</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Project Management Guidelines</title>
@@ -10420,6 +10609,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/ditaopentoolkitprojectmanagement">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>ditaopentoolkitprojectmanagement</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\DITA-OTProjectManagement.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit Project Management Guidelines</title>
@@ -10435,6 +10625,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/ditaotgoals">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>ditaotgoals</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\DITA-OTProjectGoals.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Goals and objectives of the DITA Open Toolkit</title>
@@ -10450,6 +10641,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/development_process">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>development_process</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\DevelopmentProcess.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit development process</title>
@@ -10465,6 +10657,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/projectroles">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>projectroles</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ProjectRoles.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Project roles and responsibilities</title>
@@ -10480,6 +10673,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/ditaopentoolkitreleaselifecycle">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>ditaopentoolkitreleaselifecycle</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ReleaseLifeCycle.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit release management</title>
@@ -10511,6 +10705,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/fixesandfeatures">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>fixesandfeatures</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\FixesAndFeatures.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Feature requests and defect reports</title>
@@ -10536,6 +10731,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/howtoparticipate">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>howtoparticipate</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\HowToParticipate.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">How to participate in the DITA Open Toolkit</title>
@@ -10547,6 +10743,7 @@
                                        <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/contribution_policy">
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>contribution_policy</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ContributionPolicy.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit Contribution Policy</title>
@@ -10604,6 +10801,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/bugfixguidelines">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>bugfixguidelines</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\BugFixGuidelines-NoCLA.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Due diligence for submission of bug fixes and patches from non-committers</title>
@@ -10619,6 +10817,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/contribution_policy">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>contribution_policy</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ContributionPolicy.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit Contribution Policy</title>
@@ -10650,6 +10849,7 @@
                                        <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/development_process">
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>development_process</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\DevelopmentProcess.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit development process</title>
@@ -10665,6 +10865,7 @@
                                        <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/bugfixguidelines">
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>bugfixguidelines</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\BugFixGuidelines-NoCLA.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Due diligence for submission of bug fixes and patches from non-committers</title>
@@ -10680,6 +10881,7 @@
                                        <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/contribution">
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>contribution</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ContributionForm.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA-OT Contribution Questionnaire Form 1.2</title>
@@ -10704,6 +10906,7 @@
                            <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/contribution">
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>contribution</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ContributionForm.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA-OT Contribution Questionnaire Form 1.2</title>
@@ -10714,6 +10917,7 @@
                                        <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/contribution_policy">
                                           <dita:lang>en-us</dita:lang>
                                           <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                                           <dita:id>contribution_policy</dita:id>
                                           <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\ContributionPolicy.xml</dita:xtrf>
                                           <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA Open Toolkit Contribution Policy</title>
@@ -10776,6 +10980,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>d385e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dita-resources.ditamap</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA and DITA-OT resources</title>
@@ -10787,6 +10992,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>reference_ix5_r3j_xg</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\articles\dita-and-dita-ot-resources.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA and DITA-OT resources</title>
@@ -10824,6 +11030,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>reference_orf_15z_ck</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\articles\web-based-resources.dita</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Web-based resources</title>
@@ -10861,6 +11068,7 @@
                               <dita:lang>en-us</dita:lang>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
                               <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                               <dita:id>dw-articles</dita:id>
                               <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\articles\DITA-dWarticles.xml</dita:xtrf>
                               <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">developerWorks articles</title>
@@ -10945,6 +11153,7 @@
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#SubjectScheme"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>d393e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\subjectscheme.ditamap</dita:xtrf>
                </rdf:Description>
@@ -10959,6 +11168,7 @@
                <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/reltable">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
                   <dita:id>reltable</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\reltable.ditamap</dita:xtrf>
                </rdf:Description>
@@ -10968,7 +11178,7 @@
    </rdf:Description>
    <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
                  rdf:about="http://data.example.com/resources/dataset/en-us/d9e5">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-21T18:54:11.013+02:00</dcterms:issued>
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-25T00:58:37.89+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\ditaot-userguide.ditamap</dcterms:description>
       <dcterms:title xml:lang="en-us">DITA Open Toolkit </dcterms:title>
       <rdfs:label xml:lang="en-us">DITA Open Toolkit </rdfs:label>

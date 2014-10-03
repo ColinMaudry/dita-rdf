@@ -4,11 +4,14 @@
 	<!-- User properties -->
 				<!-- Enter the location of you DITA OT directory here: -->
 				<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
-	<property name="demo-set" value="oxygen-userguide">
+	<property name="demo-set" value="ditardf-project">
 					<!-- Possibe demo sets:
 					- ditaot-userguide (the DITA OT user guide)
-					- oxygen-userguide (the Oxygen Author user guide, must be downloaded first, 13 MB )
-					- learning-samples (the Oxygen learning samples)
+					- oxygen-userguide (the Oxygen Author user guide, will be downloaded by this script, 13 MB )
+					- garage
+					- oxy-MobilePhone
+					- oxy-flowers
+					- oxy-it-book
 					- ditardf-project	(the documentation of the DITA RDF project)	
 					-->
 				</property>
@@ -36,17 +39,21 @@
 	<property name="temp.plugin.dir" location="temp"/>
 	<property name="dita-rdf-ot-plugin-dir" value="dita-ot"/>
 	<property name="ditaot.classpath" value="${ditaot.dir}\lib;${ditaot.dir}lib/dost.jar;${ditaot.dir}lib/commons-codec-1.4.jar;${ditaot.dir}lib/resolver.jar;${ditaot.dir}lib/icu4j.jar;${ditaot.dir}lib/xercesImpl.jar;${ditaot.dir}lib/xml-apis.jar;${ditaot.dir}lib/saxon/saxon9.jar;${ditaot.dir}lib/saxon/saxon9-dom.jar;"/>
-	<target name="package-zip-copy-plugin" depends="package-zip,copy-plugin-dita-ot"/>
-	<target name="package-zip-copy-plugin-demo" depends="package-zip-copy-plugin,demo"/>
+	<target name="package-zip-copy-plugin" depends="package-zip,copy-plugin-dita-ot">
+		<zip destfile="demo/ditardf-project.zip">
+			<fileset dir="../documentation/src/" includes="**/*.dita*"/>
+		</zip>
+	</target>
+	<target name="package-zip-copy-plugin-demo" depends="package-zip-copy-plugin,demo">
+	</target>
 
-	<target name="make.temp.dir" description="Create the buid temporary directory, and gather the files together.">
+	<target name="make.temp.dir">
 		<delete dir="${temp.plugin.dir}"/>
 		<mkdir dir="${temp.plugin.dir}/${plugin-id}"/>
-		<copy todir="${temp.plugin.dir}/${plugin-id}" >
+		<copy todir="${temp.plugin.dir}/${plugin-id}"  >
 			<fileset dir="src/" includes="**/*" />
 		</copy>
 	</target>
-	
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
 		<zip destfile="dita2rdf-ditaot-plugin.zip">
 			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"/>

@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:dita="http://purl.org/dita/ns#"
+         xmlns:schema="http://schema.org/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xml:base="http://purl.org/dita/ns#">
+   <rdf:Description xmlns:ot="http://www.idiominc.com/opentopic"
+                    rdf:about="http://data.example.com/resources/map/flowers">
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+      <dita:id>flowers</dita:id>
+      <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-flowers.ditamap</dita:xtrf>
+      <dita:title>Growing Flowers</dita:title>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:1;3:46">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/introduction">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>introduction</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\introduction.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Introduction</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/introduction/xref:1;8:84">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/introduction/keys/flowers.perennial">
+                              <dita:keyname>flowers.perennial</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:2;4:37">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/care">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>care</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\care.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Care and Preparation</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:3;5:42">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/taskId">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>taskId</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\pruning.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Pruning</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:4;6:52">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/taskId">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>taskId</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\gardenPreparation.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Garden Preparation</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:5;8:65">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/index">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>index</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\index.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Flowers by Season</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:6;9:77">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/concept/conceptId">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>conceptId</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\springFlowers.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Spring Flowers</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:7;10:50">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\iris.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Iris</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;16:70">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;17:59">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;23:54">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.sepal">
+                              <dita:keyname>flowers.sepal</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:4;33:18">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.pollination">
+                              <dita:keyname>flowers.pollination</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:subtopic>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/use">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>use</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\iris.dita</dita:xtrf>
+                        <title xmlns="http://purl.org/dita/ns#">Use</title>
+                        <dita:xref>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/use/xref:5;55:66">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                              <dita:keyref>
+                                 <dita:Key rdf:about="http://data.example.com/resources/topic/use/keys/flowers.rhizome">
+                                    <dita:keyname>flowers.rhizome</dita:keyname>
+                                 </dita:Key>
+                              </dita:keyref>
+                           </rdf:Description>
+                        </dita:xref>
+                        <dita:link>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/use/link:1;63:49">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                              <dita:href>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                                    <dita:id>topic-1</dita:id>
+                                    <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\snowdrop.dita</dita:xtrf>
+                                    <title xmlns="http://purl.org/dita/ns#">Snowdrop</title>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:18">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                                <dita:keyname>flowers.genus</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;11:85">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.bulb">
+                                                <dita:keyname>flowers.bulb</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:image>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;13:61">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                       </rdf:Description>
+                                    </dita:image>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;22:18">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.perennial">
+                                                <dita:keyname>flowers.perennial</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:link>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;36:41">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                          <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                       </rdf:Description>
+                                    </dita:link>
+                                 </rdf:Description>
+                              </dita:href>
+                           </rdf:Description>
+                        </dita:link>
+                        <dita:link>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/use/link:2;64:41">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                              <dita:href>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                                    <dita:id>topic-1</dita:id>
+                                    <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\gardenia.dita</dita:xtrf>
+                                    <title xmlns="http://purl.org/dita/ns#">Gardenia</title>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:61">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                                <dita:keyname>flowers.genus</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:image>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;13:59">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                       </rdf:Description>
+                                    </dita:image>
+                                    <dita:link>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;34:42">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                          <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                       </rdf:Description>
+                                    </dita:link>
+                                 </rdf:Description>
+                              </dita:href>
+                           </rdf:Description>
+                        </dita:link>
+                        <dita:link>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/use/link:3;65:38">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                              <dita:href>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                                    <dita:id>topic-1</dita:id>
+                                    <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\lilac.dita</dita:xtrf>
+                                    <title xmlns="http://purl.org/dita/ns#">Lilac</title>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:52">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                                <dita:keyname>flowers.genus</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:image>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;11:55">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                       </rdf:Description>
+                                    </dita:image>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;19:44">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.panicle">
+                                                <dita:keyname>flowers.panicle</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;25:45">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.cultivar">
+                                                <dita:keyname>flowers.cultivar</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:link>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;42:39">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                          <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                       </rdf:Description>
+                                    </dita:link>
+                                 </rdf:Description>
+                              </dita:href>
+                           </rdf:Description>
+                        </dita:link>
+                     </rdf:Description>
+                  </dita:subtopic>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:8;11:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\snowdrop.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Snowdrop</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:18">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;11:85">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.bulb">
+                              <dita:keyname>flowers.bulb</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;13:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;22:18">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.perennial">
+                              <dita:keyname>flowers.perennial</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:link>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;36:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                              <dita:id>topic-1</dita:id>
+                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\iris.dita</dita:xtrf>
+                              <title xmlns="http://purl.org/dita/ns#">Iris</title>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:61">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                          <dita:keyname>flowers.genus</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:image>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;16:70">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                 </rdf:Description>
+                              </dita:image>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;17:59">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                          <dita:keyname>flowers.genus</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;23:54">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.sepal">
+                                          <dita:keyname>flowers.sepal</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:4;33:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.pollination">
+                                          <dita:keyname>flowers.pollination</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:subtopic>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/use">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                                    <dita:id>use</dita:id>
+                                    <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\iris.dita</dita:xtrf>
+                                    <title xmlns="http://purl.org/dita/ns#">Use</title>
+                                    <dita:xref>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/use/xref:5;55:66">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                          <dita:keyref>
+                                             <dita:Key rdf:about="http://data.example.com/resources/topic/use/keys/flowers.rhizome">
+                                                <dita:keyname>flowers.rhizome</dita:keyname>
+                                             </dita:Key>
+                                          </dita:keyref>
+                                       </rdf:Description>
+                                    </dita:xref>
+                                    <dita:link>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/use/link:1;63:49">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                          <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                       </rdf:Description>
+                                    </dita:link>
+                                    <dita:link>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/use/link:2;64:41">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                          <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                       </rdf:Description>
+                                    </dita:link>
+                                    <dita:link>
+                                       <rdf:Description rdf:about="http://data.example.com/resources/topic/use/link:3;65:38">
+                                          <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                          <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                       </rdf:Description>
+                                    </dita:link>
+                                 </rdf:Description>
+                              </dita:subtopic>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:link>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:9;13:77">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/concept/conceptId">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>conceptId</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\summerFlowers.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Summer Flowers</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:10;14:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\gardenia.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Gardenia</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:61">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;13:59">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:link>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;34:42">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                              <dita:id>topic-1</dita:id>
+                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\lilac.dita</dita:xtrf>
+                              <title xmlns="http://purl.org/dita/ns#">Lilac</title>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:52">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                          <dita:keyname>flowers.genus</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:image>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;11:55">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                 </rdf:Description>
+                              </dita:image>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;19:44">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.panicle">
+                                          <dita:keyname>flowers.panicle</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;25:45">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.cultivar">
+                                          <dita:keyname>flowers.cultivar</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:link>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;42:39">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                    <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                 </rdf:Description>
+                              </dita:link>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:link>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:11;15:51">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\lilac.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Lilac</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:52">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;11:55">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;19:44">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.panicle">
+                              <dita:keyname>flowers.panicle</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:3;25:45">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.cultivar">
+                              <dita:keyname>flowers.cultivar</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:link>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;42:39">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                              <dita:id>topic-1</dita:id>
+                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\gardenia.dita</dita:xtrf>
+                              <title xmlns="http://purl.org/dita/ns#">Gardenia</title>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:61">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                          <dita:keyname>flowers.genus</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:image>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;13:59">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                 </rdf:Description>
+                              </dita:image>
+                              <dita:link>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;34:42">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                    <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                 </rdf:Description>
+                              </dita:link>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:link>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:12;17:77">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/concept/conceptId">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>conceptId</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\autumnFlowers.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Autumn Flowers</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:13;18:59">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\chrysanthemum.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Chrysanthemum</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:18">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;10:58">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.perennial">
+                              <dita:keyname>flowers.perennial</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;12:71">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:link>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;38:43">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                              <dita:id>topic-1</dita:id>
+                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\salvia.dita</dita:xtrf>
+                              <title xmlns="http://purl.org/dita/ns#">Salvia</title>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:65">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                          <dita:keyname>flowers.genus</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:image>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;18:58">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                 </rdf:Description>
+                              </dita:image>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;43:52">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.pollination">
+                                          <dita:keyname>flowers.pollination</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:link>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;56:46">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                    <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                 </rdf:Description>
+                              </dita:link>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:link>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:14;19:52">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\salvia.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Salvia</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;8:65">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                              <dita:keyname>flowers.genus</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;18:58">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;43:52">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.pollination">
+                              <dita:keyname>flowers.pollination</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+                  <dita:link>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;56:46">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                        <dita:href>
+                           <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                              <dita:id>topic-1</dita:id>
+                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\chrysanthemum.dita</dita:xtrf>
+                              <title xmlns="http://purl.org/dita/ns#">Chrysanthemum</title>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;9:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.genus">
+                                          <dita:keyname>flowers.genus</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:xref>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:2;10:58">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                                    <dita:keyref>
+                                       <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.perennial">
+                                          <dita:keyname>flowers.perennial</dita:keyname>
+                                       </dita:Key>
+                                    </dita:keyref>
+                                 </rdf:Description>
+                              </dita:xref>
+                              <dita:image>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;12:71">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                                 </rdf:Description>
+                              </dita:image>
+                              <dita:link>
+                                 <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/link:1;38:43">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Link"/>
+                                    <dita:href rdf:resource="http://data.example.com/resources/topic/topic-1"/>
+                                 </rdf:Description>
+                              </dita:link>
+                           </rdf:Description>
+                        </dita:href>
+                     </rdf:Description>
+                  </dita:link>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:15;21:77">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/concept/conceptId">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>conceptId</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\winterFlowers.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Winter Flowers</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:16;22:53">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\flowers\gerbera.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Gerbera</title>
+                  <dita:image>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/image:1;10:57">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Image"/>
+                     </rdf:Description>
+                  </dita:image>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;21:67">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:keyref>
+                           <dita:Key rdf:about="http://data.example.com/resources/topic/topic-1/keys/flowers.cultivar">
+                              <dita:keyname>flowers.cultivar</dita:keyname>
+                           </dita:Key>
+                        </dita:keyref>
+                     </rdf:Description>
+                  </dita:xref>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:17;29:41">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.genus">
+                  <dita:keyname>flowers.genus</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.genus">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.genus</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryGenus.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Genus</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:18;31:47">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.pollination">
+                  <dita:keyname>flowers.pollination</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.pollination">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.pollination</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryPollination.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Pollination</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:19;33:41">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.sepal">
+                  <dita:keyname>flowers.sepal</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.sepal">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.sepal</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossarySepal.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Sepal</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:20;35:43">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.rhizome">
+                  <dita:keyname>flowers.rhizome</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.rhizome">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.rhizome</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryRhizome.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Rhizome</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:21;37:40">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.bulb">
+                  <dita:keyname>flowers.bulb</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.bulb">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.bulb</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryBulb.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Bulb</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:22;39:44">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.cultivar">
+                  <dita:keyname>flowers.cultivar</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.cultivar">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.cultivar</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryCultivar.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Cultivar</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:23;41:45">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.perennial">
+                  <dita:keyname>flowers.perennial</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.perennial">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.perennial</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryPerennial.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Perennial</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:24;43:43">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:key>
+               <dita:Key rdf:about="http://data.example.com/resources/map/flowers/keys/flowers.panicle">
+                  <dita:keyname>flowers.panicle</dita:keyname>
+                  <dita:href>
+                     <rdf:Description rdf:about="http://data.example.com/resources/glossentry/flowers.panicle">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Glossentry"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                        <dita:id>flowers.panicle</dita:id>
+                        <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\glossaryPanicle.dita</dita:xtrf>
+                        <glossterm xmlns="http://purl.org/dita/ns#">Panicle</glossterm>
+                     </rdf:Description>
+                  </dita:href>
+               </dita:Key>
+            </dita:key>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/map/flowers/topicref:25;45:43">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>topic-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\copyright.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Copyright</title>
+                  <dita:xref>
+                     <rdf:Description rdf:about="http://data.example.com/resources/topic/topic-1/xref:1;7:48">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Xref"/>
+                        <dita:href rdf:resource="http://www.wikipedia.com"/>
+                        <dita:format>html</dita:format>
+                     </rdf:Description>
+                  </dita:xref>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+   </rdf:Description>
+   <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+                 rdf:about="http://data.example.com/resources/dataset/flowers">
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-25T21:06:20.743+02:00</dcterms:issued>
+      <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-flowers.ditamap</dcterms:description>
+      <dcterms:title>Growing Flowers</dcterms:title>
+      <rdfs:label>Growing Flowers</rdfs:label>
+   </dcat:Dataset>
+</rdf:RDF>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:dita="http://purl.org/dita/ns#"
+         xmlns:schema="http://schema.org/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xml:base="http://purl.org/dita/ns#">
+   <rdf:Description xmlns:ot="http://www.idiominc.com/opentopic"
+                    rdf:about="http://data.example.com/resources/bookmap/taskbook">
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Bookmap"/>
+      <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+      <dita:id>taskbook</dita:id>
+      <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-it-book.ditamap</dita:xtrf>
+      <booklibrary xmlns="http://purl.org/dita/ns#">Retro Tools</booklibrary>
+      <mainbooktitle xmlns="http://purl.org/dita/ns#">Product tasks</mainbooktitle>
+      <booktitlealt xmlns="http://purl.org/dita/ns#">Tasks and what they can do</booktitlealt>
+      <author xmlns="http://purl.org/dita/ns#">Howe Tuduit</author>
+      <dita:bookabstract>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/bookabstract:1;35:63">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Bookabstract"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/concept/concept-1">
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>concept-1</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\taskbook-abstract.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#">Abstract</title>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:bookabstract>
+      <dita:notices>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/notices:1;36:47">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Notices"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/notices">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>notices</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\notices.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Notice</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This information was developed for products and services offered in the U.S.A.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:notices>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:1;37:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/trademarks">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>trademarks</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\trademarks.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Trademarks</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">The following terms are trademarks of the Retro Tools in the United States, other countries, or both:</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:preface>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/preface:1;39:51">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Preface"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/task_preface">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>task_preface</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\task_preface.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Sample Preface</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This book explains each tasks separately. You can jump in anywhere, get the information you need, and complete your work.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:preface>
+      <dita:chapter>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:1;41:44">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/installing">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>installing</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\installing.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">You install components to make them available for your solution.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:chapter>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:2;42:52">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/installstorage">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>installstorage</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\installstorage.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing hard drives or other storage</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">A simple guide to installing hard drives.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:3;43:55">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/unscrewcover">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>unscrewcover</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\unscrewcover.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Remove the cover of your system</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This is a simple task requiring a screwdriver.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:4;44:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/insertdrive">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>insertdrive</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\insertdrive.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Attach the drive to the system</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">The drive needs to be attached to power cables and other cables inside the computer.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:5;45:55">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/replacecover">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>replacecover</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\replacecover.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Replace the cover of your system.</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">The cover needs to be put back on to reduce problems from dust.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:6;47:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/installwebserver">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>installwebserver</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\installwebserver.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing your own Web Server</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing a Web Server may sound tricky, but it is quite simple if you follow our instructions.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:7;48:56">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/closeprograms">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>closeprograms</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\closeprograms.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Close all of your programs</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">You need to shut down everything else before installing major programs</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:8;49:51">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/runsetup">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>runsetup</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\runsetup.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Run Setup.exe</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">As with any major program, you will need to run setup in order to install it.</shortdesc>
+                  <cmdname xmlns="http://purl.org/dita/ns#">
+                     <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/runsetup/cmdname:1;24:26">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Cmdname"/>
+                        <rdfs:label>setup.exe</rdfs:label>
+                     </rdf:Description>
+                  </cmdname>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:9;50:50">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/restart">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>restart</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\restart.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Restart your system</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This is standard procedure after installing any new software.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:10;52:48">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/installdb">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>installdb</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\installdb.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing your own Database</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Installing a Database may sound tricky, but it is quite simple if you follow our instructions.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:chapter>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:2;54:44">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/configuring">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>configuring</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\configuring.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Configuring</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">You configure components to set up or refine your solution.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:chapter>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:11;55:55">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/configurestorage">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>configurestorage</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\configurestorage.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Configuring hard storage devices</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Most hard disks do not need any configuring. If they do, the instructions are relatively simple.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:12;56:57">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/configurewebserver">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>configurewebserver</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\configurewebserver.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Configuring your Web Server</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Configuring your Web Server can be as complex or as simple as you want it to be.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:13;57:56">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/configuredatabase">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>configuredatabase</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\configuredatabase.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Configuring a Database</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Follow these instructions to properly configure your database.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:chapter>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:3;59:44">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/maintaining">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>maintaining</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\maintaining.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Maintaining</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">You maintain your solution to ensure that all components are operating at maximum efficiency.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:chapter>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:14;60:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/maintainstorage">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>maintainstorage</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\maintainstorage.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Maintaining your hard drive</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Here are a few tips for maintaining your hard drive.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:15;61:53">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/maintainserver">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>maintainserver</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\maintainserver.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Maintaining a Web Server</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Maintaining a web server is really quite easy.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:16;62:55">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/maintaindatabase">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>maintaindatabase</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\maintaindatabase.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Maintaining a database</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Maintaining a database does not take much work.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:chapter>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:4;64:48">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/troubleshooting">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>troubleshooting</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\troubleshooting.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Troubleshooting</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">The troubleshooting tasks explain how to diagnose the cause of and recover from problems.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:chapter>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:17;65:51">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/drivetrouble">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>drivetrouble</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\drivetrouble.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Troubleshooting your hard disk</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Follow these steps to try and fix any problems with your hard drive.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:18;66:49">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/webtrouble">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>webtrouble</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\webtrouble.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Troublshooting Web Server problems</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">There are several things to try if your Web Server is not functioning properly.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:topicref>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:19;67:54">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/databasetrouble">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Task"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>databasetrouble</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\tasks\databasetrouble.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Troubleshooting a database</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Databases rarely have problems, but this may be helpful if you find some.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:topicref>
+      <dita:appendix>
+         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/appendix:1;69:49">
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <rdf:type rdf:resource="http://purl.org/dita/ns#Appendix"/>
+            <dita:href>
+               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/task_appendix">
+                  <dita:lang>en-us</dita:lang>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
+                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+                  <dita:id>task_appendix</dita:id>
+                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\task_appendix.dita</dita:xtrf>
+                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Sample Appendix</title>
+                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This appendix describes things that you rarely need to know.</shortdesc>
+               </rdf:Description>
+            </dita:href>
+         </rdf:Description>
+      </dita:appendix>
+   </rdf:Description>
+   <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+                 rdf:about="http://data.example.com/resources/dataset/taskbook">
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-26T01:20:52.729+02:00</dcterms:issued>
+      <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-it-book.ditamap</dcterms:description>
+      <dcterms:title>Product tasks</dcterms:title>
+      <rdfs:label>Product tasks</rdfs:label>
+   </dcat:Dataset>
+</rdf:RDF>
