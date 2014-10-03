@@ -133,6 +133,15 @@
 				<xsl:value-of select="concat('Current URI: ',$currentUri)"/>
 			</xsl:message>
 		</xsl:if>
+		<!-- The target is DITA right? -->
+		<dita:format>
+			<xsl:choose>
+			<xsl:when test="../@format">
+				<xsl:value-of select="../@format"></xsl:value-of>
+			</xsl:when>
+				<xsl:otherwise>dita</xsl:otherwise>
+		</xsl:choose>
+		</dita:format>
 		<!-- can be dita:href or dita:conref -->
 		<xsl:element name="{concat('dita:', local-name())}">
 			

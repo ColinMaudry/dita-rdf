@@ -55,12 +55,15 @@
 				<xsl:with-param name="rootLang" select="$rootLangForPath"/>
 				<xsl:with-param name="rootTitle">
 					<xsl:choose>
-						<xsl:when test="/*/title/text()">
-							<xsl:value-of select="/*/title/text()"/>
+						<xsl:when test="/*/*[contains(@class,' topic/title ')]//text()">
+							<xsl:value-of select="/*/*[contains(@class,' topic/title ')]"/>
 						</xsl:when>
 						<xsl:when test="/*/@title!=''">
-							<xsl:value-of select="@title"/>
+							<xsl:value-of select="/*/@title"/>
 					</xsl:when>
+						<xsl:when test="/*/*[contains(@class,' bookmap/booktitle ')]/*[contains(@class,' bookmap/mainbooktitle ')]//text()">
+							<xsl:value-of select="/*/*[contains(@class,' bookmap/booktitle ')]/*[contains(@class,' bookmap/mainbooktitle ')]"/>
+						</xsl:when>
 						<xsl:otherwise/>
 					</xsl:choose>
 				</xsl:with-param>
@@ -137,6 +140,9 @@
 			<xsl:variable name="className" select="concat(upper-case(substring($elementName, 1,1)), substring($elementName, 2))"/>
 			<rdf:type rdf:resource="{concat($classBaseUri,$className)}"/>
 		</xsl:for-each>
+		<xsl:if test="contains($class,' topic/topic ') or contains($class,' map/map ') ">
+			<rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
+		</xsl:if>
 	</xsl:template>
 	
 	<xsl:template match="*" mode="colin:processElementAsProperty">
@@ -190,7 +196,7 @@
 	
 	<xsl:template name="colin:justGetTheUri">
 		<xsl:param name="resolvedCurrentUri"/>
-		<xsl:param name="docLanguage" tunnel="yes"/>
+		<xsl:param name="language" tunnel="yes"/>
 		<xsl:variable name="targetDocumentRoot" select="document($resolvedCurrentUri)/*" as="node()"/>
 		<xsl:variable name="targetDocumentLang">
 			<xsl:choose>
@@ -201,7 +207,7 @@
 <!-- You'd better have @xml:lang set in your files...
 			If you xref to a topic that has a different language, it will inherit the language from the xref. 
 			For instance, from an 'fr-FR' topic to an 'en-UK' topic, if the 'en-UK' doesn't have @xml:lang, it gets the URI of an 'fr-FR' topic.-->
-					<xsl:value-of select="$docLanguage"/>
+					<xsl:value-of select="$language"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
