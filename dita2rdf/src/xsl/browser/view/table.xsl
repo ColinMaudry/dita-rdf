@@ -9,14 +9,7 @@
 		<table class="table browsable sortable">
 			<thead>
 				<tr>
-					<xsl:for-each select="$head/s:variable/@name">
-						<xsl:if test=".!='thing'">
-							<xsl:variable name="name" as="text()">
-								<xsl:value-of select="."/>
-							</xsl:variable>
-							<th><xsl:value-of select="colin:prettifyVariableName($name)"/></th>
-						</xsl:if>
-					</xsl:for-each>
+					<xsl:apply-templates select="$head/s:variable/@name"/>					
 				</tr>
 			</thead>
 			<xsl:apply-templates select="s:results" mode="table">
@@ -24,6 +17,13 @@
 				</xsl:apply-templates>
 		</table>		
 	</xsl:template>
+	<xsl:template match="s:variable/@name">
+			<xsl:variable name="name" as="text()">
+				<xsl:value-of select="."/>
+			</xsl:variable>
+			<th><xsl:value-of select="colin:prettifyVariableName($name)"/></th>
+	</xsl:template>
+	<xsl:template match="s:variable/@name['thing']" priority="2"/>
 	<xsl:template match="s:results" mode="table">
 		<tbody>
 			<xsl:apply-templates select="s:result" mode="table"/>
@@ -58,6 +58,7 @@
 				</xsl:for-each>			
 			</tr>
 	</xsl:template>
+	<xsl:template match="s:result[s:binding[@name='title']/s:literal/text()='' and s:binding[@name='id']/s:literal/text()='']"/>
 	<xsl:template match="s:binding" mode="table" priority="-1">
 		<xsl:param name="path"/>
 		<td><a href="{$path}"><xsl:value-of select="."/></a></td>		
@@ -66,5 +67,14 @@
 		<xsl:param name="path"/>
 		<td><a href="{$path}"><xsl:value-of select="format-dateTime(s:literal,'[M01]/[D01]/[Y0001]  [H01]:[m01]')"/></a></td>
 	</xsl:template>	
+	
+	<xsl:template name="inboundTable">
+		<xsl:param name="inboundData"/>
+		<div class="col-sm-3 panel panel-default" role="navigation">
+			<div class="panel-heading">Inbound links</div>
+			<xsl:apply-templates select="$inboundData" mode="table"/>
+		</div>
+	</xsl:template>	
+	
 
 </xsl:stylesheet>

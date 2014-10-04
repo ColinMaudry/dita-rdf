@@ -59,15 +59,21 @@
 	<xsl:template match="div[@id='sidebar']">
 		<xsl:param name="data" tunnel="yes"/>
 		<xsl:param name="currentPageType" tunnel="yes"/>
+		<xsl:param name="objectInfo" tunnel="yes"/>
 		<xsl:choose>
 			<xsl:when test="$currentPageType='datasets'">
 				<xsl:call-template name="colin:homeSidebar"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<div>
-					<xsl:apply-templates select="@*"/>
-					<xsl:apply-templates select="$data/s:results/s:result" mode="sidebar"/>		
-				</div>
+				<xsl:variable name="inboundData">
+					<xsl:call-template name="colin:getData">
+						<xsl:with-param name="queryName" select="'inbound'"/>
+						<xsl:with-param name="uri" select="$objectInfo/s:binding[@name='thing']/s:uri"/>
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:call-template name="inboundTable">
+					<xsl:with-param name="inboundData" select="$inboundData"></xsl:with-param>
+				</xsl:call-template>
 			</xsl:otherwise>
 		</xsl:choose>
 		

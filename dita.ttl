@@ -127,21 +127,30 @@
 			rdfs:comment "The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics."@en-US ;
 			rdfs:label "Conkeyref" .		
 		:Xref rdfs:subClassOf :ReferenceObject ;
-			rdfs:comment "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
+			rdfs:comment "Use the cross-reference (xref) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
 			rdfs:label "Xref" .
 		:Link rdfs:subClassOf :ReferenceObject ;
-			rdfs:comment "Use the cross-reference (<xref>) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
-			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
+			rdfs:comment "The link element defines a relationship to another topic. Links are typically sorted when displayed based on their attributes, which define the type or role of the link's target in relation to the current topic."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/link.html> ;
 			rdfs:label "Link" .
 		:Coderef rdfs:subClassOf :ReferenceObject ;
 			rdfs:comment "The coderef element references an external file that contains literal code."@en-US ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html> ;
 			rdfs:label "Coderef" .
+			
 		:Keyword rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:label "Keyword" .
+		:Varname rdfs:subClassOf :Keyword ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/varname.html> ;
+			rdfs:comment "The variable name (varname) element defines a variable that must be supplied to a software application."@en-US ;
+			rdfs:label "Varname" .
+		:Parmname rdfs:subClassOf :Keyword ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/parmname.html> ;
+			rdfs:comment "When referencing the name of an application programming interface parameter within the text flow of your topic, use the parameter name (<parmname>) element to mark up the parameter."@en-US ;
+			rdfs:label "Parmname" .
 
 		:LearningObject rdfs:subClassOf :Topicref ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html> ;
@@ -287,6 +296,12 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
 			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map."@en-US ;
 			rdfs:label "mapref" .
+		:keydef rdfs:subPropertyOf :topicref ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef> ;
+			rdfs:label "keydef" ;
+			rdfs:range :Key ;
+			rdfs:domain :Map ;
+			rdfs:comment "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a topicref element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US .
 		
 		#specific to bookmaps
 		
@@ -333,6 +348,14 @@
 			rdfs:range :Topic ;
 			rdfs:label "subtopic";
 			rdfs:comment "Topics can be nested."@en-US .
+		:xref rdfs:subPropertyOf :referenceObject ;
+			rdfs:comment "Use the cross-reference (xref) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html> ;
+			rdfs:label "xref" .
+		:link rdfs:subPropertyOf :referenceObject ;
+			rdfs:comment "The link element defines a relationship to another topic. Links are typically sorted when displayed based on their attributes, which define the type or role of the link's target in relation to the current topic."@en-US ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/link.html> ;
+			rdfs:label "link" .
 	
 		#specific to reference objects
 		:href a rdf:Property ;
@@ -344,7 +367,6 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html> ;
 			rdfs:label "keyref" ;
 			rdfs:range :Key ;
-			rdfs:domain :ReferenceObject ;
 			rdfs:comment "The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference."@en-US .
 		:keyname a rdf:Property ;
 			rdfs:comment "The name of the key." ;

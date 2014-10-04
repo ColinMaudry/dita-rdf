@@ -51,7 +51,7 @@
 		<delete dir="${temp.plugin.dir}"/>
 		<mkdir dir="${temp.plugin.dir}/${plugin-id}"/>
 		<copy todir="${temp.plugin.dir}/${plugin-id}"  >
-			<fileset dir="src/" includes="**/*" />
+			<fileset dir="src/" includes="**/*" excludes="view" />
 		</copy>
 	</target>
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">

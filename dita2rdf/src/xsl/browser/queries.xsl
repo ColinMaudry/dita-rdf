@@ -119,7 +119,7 @@
 				PREFIX  dita: &lt;http://purl.org/dita/ns#>
 				PREFIX  dcterms: &lt;http://purl.org/dc/terms/>
 				
-				SELECT  ?thing (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=', ') AS ?types) ?target_title ?target_id
+				SELECT  ?thing (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=', ') AS ?types) ?title ?id
 				WHERE
 				{ GRAPH ?graph
 				{   { ?uri dita:xref ?refobject .
@@ -132,21 +132,45 @@
 				?refobject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?typeUri
 				{ ?refobject dita:format "html" .
 				?refobject dita:href ?thing
-				BIND(?thing AS ?target_title)
+				BIND(?thing AS ?title)
 				}
 				UNION
 				{ ?refobject dita:href ?thing }
 				OPTIONAL
 				{ ?thing &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Doctype .
-				?thing dita:id ?target_id
+				?thing dita:id ?id
 				}
 				OPTIONAL
-				{ ?thing dita:title ?target_title }
+				{ ?thing dita:title ?title }
 				}
 				GRAPH &lt;http://purl.org/dita/ns>
 				{ ?typeUri rdfs:label ?typeLabel }
 				}
-				GROUP BY ?thing ?target_title ?target_id
+				GROUP BY ?thing ?title ?id
+			</query>
+			<query name="inbound" replace="yes">
+				PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#>
+				PREFIX  dcat: &lt;http://www.w3.org/ns/dcat#>
+				PREFIX  dita: &lt;http://purl.org/dita/ns#>
+				PREFIX  dcterms: &lt;http://purl.org/dc/terms/>
+				
+				SELECT DISTINCT  ?thing (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=', ') AS ?types) ?title ?relationLabel
+				WHERE
+				{ GRAPH ?graph
+				{ ?refObject dita:href ?uri .
+				?thing ?rel ?refObject .
+				?thing &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Doctype .
+				?thing &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?typeUri
+				OPTIONAL
+				{ ?thing dita:title ?title }
+				GRAPH &lt;http://purl.org/dita/ns>
+				{ ?rel rdfs:subPropertyOf dita:referenceObject .
+				?rel rdfs:label ?relationLabel .
+				?typeUri rdfs:label ?typeLabel
+				}
+				}
+				}
+				GROUP BY ?thing ?title ?relationLabel
 			</query>
 		</queries>
 	</xsl:param>
