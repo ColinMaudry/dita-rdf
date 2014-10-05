@@ -4,7 +4,7 @@
 	<!-- User properties -->
 				<!-- Enter the location of you DITA OT directory here: -->
 				<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
-	<property name="demo-set" value="ditardf-project">
+	<property name="demo-set" value="ditaot-userguide">
 					<!-- Possibe demo sets:
 					- ditaot-userguide (the DITA OT user guide)
 					- oxygen-userguide (the Oxygen Author user guide, will be downloaded by this script, 13 MB )
@@ -13,6 +13,7 @@
 					- oxy-flowers
 					- oxy-it-book
 					- ditardf-project	(the documentation of the DITA RDF project)	
+					- dita-spec
 					-->
 				</property>
 				<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->

@@ -14,6 +14,7 @@
 		<delete dir="documentation/src/out/"/>
 		<delete dir="documentation/src/temp/"/>
 		<delete dir="documentation/oxygen-webhelp/resources/"/>
+		<delete file="dita2rdf/demo/ditardf-project.zip"/>
 	</target>
 	<target name="piwik-code">
 		<condition property="hasCode">
@@ -31,6 +32,6 @@
 		</scp>
 	</target>
 	<target name="package-zip-copy-plugin" depends="ftp-webhelp">
-		<ant dir="dita2rdf/" target="package-zip-copy-plugin"/>
+		<ant antfile="dita2rdf/build_demo.xml" target="package-zip-copy-plugin" usenativebasedir="true"/>
 	</target>
 </project>
