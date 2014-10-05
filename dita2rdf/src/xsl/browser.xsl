@@ -7,10 +7,11 @@
 	<xsl:import href="browser/queries.xsl"/>
 	<xsl:import href="browser/allMaps.xsl"/>
 	<xsl:import href="browser/allTopics.xsl"/>
-	<xsl:import href="browser/view/dataset.xsl"/>
+	<xsl:import href="browser/view/context.xsl"/>
 	<xsl:import href="browser/view/map.xsl"/>
 	<xsl:import href="browser/view/topic.xsl"/>	
 	<xsl:import href="browser/view/table.xsl"/>
+	<xsl:import href="browser/view/stats.xsl"/>
 	
 	<xsl:param name="sparql"/>
 	<xsl:param name="outputFolder"/>
@@ -22,19 +23,19 @@
 	<xsl:output method="xhtml" encoding="UTF-8"/>
 	
 	<xsl:template match="/">
-		<xsl:variable name="datasets" as="element()">
+		<xsl:variable name="contexts" as="element()">
 			<xsl:call-template name="colin:getData">
-				<xsl:with-param name="queryName" select="'datasets'"/>
+				<xsl:with-param name="queryName" select="'contexts'"/>
 				<xsl:with-param name="uri"></xsl:with-param>
 			</xsl:call-template>
 		</xsl:variable>
 		<xsl:apply-templates>
-			<xsl:with-param name="data" select="$datasets" as="element()" tunnel="yes"/>
-			<xsl:with-param name="currentPageType" select="'datasets'" tunnel="yes"/>			
+			<xsl:with-param name="data" select="$contexts" as="element()" tunnel="yes"/>
+			<xsl:with-param name="currentPageType" select="'contexts'" tunnel="yes"/>			
 		</xsl:apply-templates>
-		<xsl:call-template name="dataset">
+		<xsl:call-template name="context">
 			<xsl:with-param name="template" select="/" tunnel="yes"/>
-			<xsl:with-param name="data" select="$datasets" as="element()"/>
+			<xsl:with-param name="data" select="$contexts" as="element()"/>
 		</xsl:call-template>
 		<xsl:call-template name="maps">
 			<xsl:with-param name="template" select="/" tunnel="yes"/>
@@ -61,7 +62,7 @@
 		<xsl:param name="currentPageType" tunnel="yes"/>
 		<xsl:param name="objectInfo" tunnel="yes"/>
 		<xsl:choose>
-			<xsl:when test="$currentPageType='datasets'">
+			<xsl:when test="$currentPageType='contexts'">
 				<xsl:call-template name="colin:homeSidebar"/>
 			</xsl:when>
 			<xsl:otherwise>
@@ -85,11 +86,11 @@
 		<xsl:param name="data" tunnel="yes"/>
 		<xsl:param name="objectInfo" tunnel="yes"/>
 		<xsl:variable name="query">
-			<xsl:value-of select="$queries/query[@name='datasets']"/>
+			<xsl:value-of select="$queries/query[@name='contexts']"/>
 		</xsl:variable>
 		<xsl:variable name="title">
 			<xsl:choose>
-				<xsl:when test="$currentPageType='datasets'">Datasets</xsl:when>
+				<xsl:when test="$currentPageType='contexts'">Contexts</xsl:when>
 				<xsl:otherwise>
 					<span class="label label-default"><xsl:value-of select="colin:prettifyVariableName($currentPageType)"/></span>
 					<xsl:text> </xsl:text>
@@ -99,8 +100,15 @@
 		</xsl:variable>
 		<div>
 			<xsl:apply-templates select="@*"/>
-		<h1><xsl:copy-of select="$title"/></h1>
-			<xsl:apply-templates select="$data" mode="table"/>
+			<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
+				<h1><xsl:copy-of select="$title"/></h1>
+				<a class="btn btn-primary" role="button" href="#links">Links</a>
+				<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+			</div>
+			<xsl:apply-templates select="$data" mode="table">
+				<xsl:with-param name="location" select="'center'"/>
+			</xsl:apply-templates>
+			<xsl:call-template name="stats"/>
 		</div>
 	</xsl:template>
 	
@@ -118,7 +126,7 @@
 		<xsl:param name="currentPageType"/>
 		<xsl:param name="uri"/>
 		<xsl:variable name="uriPath" select="substring-after($uri,$config/config/resourcesBaseUri/@uri)"/>
-		<xsl:if test="$currentPageType='datasets'">
+		<xsl:if test="$currentPageType='contexts'">
 			<xsl:text>resources/</xsl:text>
 		</xsl:if>
 		<xsl:value-of select="concat(translate($uriPath,'/','_'),'.html')"/>
@@ -141,7 +149,7 @@
 	<xsl:template match="@href[not(starts-with(.,'http'))] | @src[not(starts-with(.,'http'))]">
 		<xsl:param name="currentPageType" tunnel="yes"/>
 		<xsl:attribute name="{local-name()}">
-			<xsl:if test="$currentPageType != 'datasets'">
+			<xsl:if test="$currentPageType != 'contexts'">
 				<xsl:text>../</xsl:text>
 			</xsl:if>
 			<xsl:value-of select="."/>

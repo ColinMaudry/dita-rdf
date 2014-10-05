@@ -6,10 +6,22 @@
 	exclude-result-prefixes="colin doc s">
 	<xsl:template mode="table" match="s:sparql">
 		<xsl:param name="head" select="s:head" as="node()"/>
+		<xsl:param name="location"/>
 		<table class="table browsable sortable">
+			<xsl:if test="$location='center'">
+				<xsl:attribute name="id">links</xsl:attribute>
+			</xsl:if>
+			<caption><span class="badge pull-right"><xsl:value-of select="count(s:results/s:result[count(s:binding)=count($head/s:variable)])"/></span></caption>
 			<thead>
 				<tr>
-					<xsl:apply-templates select="$head/s:variable/@name"/>					
+					<xsl:for-each select="$head/s:variable/@name">
+						<xsl:if test=".!='thing'">
+							<xsl:variable name="name" as="text()">
+								<xsl:value-of select="."/>
+								</xsl:variable>
+							<th><xsl:value-of select="colin:prettifyVariableName($name)"/></th>
+							</xsl:if>
+						</xsl:for-each>				
 				</tr>
 			</thead>
 			<xsl:apply-templates select="s:results" mode="table">
@@ -17,13 +29,6 @@
 				</xsl:apply-templates>
 		</table>		
 	</xsl:template>
-	<xsl:template match="s:variable/@name">
-			<xsl:variable name="name" as="text()">
-				<xsl:value-of select="."/>
-			</xsl:variable>
-			<th><xsl:value-of select="colin:prettifyVariableName($name)"/></th>
-	</xsl:template>
-	<xsl:template match="s:variable/@name['thing']" priority="2"/>
 	<xsl:template match="s:results" mode="table">
 		<tbody>
 			<xsl:apply-templates select="s:result" mode="table"/>
@@ -61,16 +66,17 @@
 	<xsl:template match="s:result[s:binding[@name='title']/s:literal/text()='' and s:binding[@name='id']/s:literal/text()='']"/>
 	<xsl:template match="s:binding" mode="table" priority="-1">
 		<xsl:param name="path"/>
-		<td><a href="{$path}"><xsl:value-of select="."/></a></td>		
+		<td class="{@name}"><a href="{$path}"><xsl:value-of select="."/></a></td>		
 	</xsl:template>
 	<xsl:template mode="table" match="s:binding[s:literal/@datatype='http://www.w3.org/2001/XMLSchema#dateTime']">
 		<xsl:param name="path"/>
-		<td><a href="{$path}"><xsl:value-of select="format-dateTime(s:literal,'[M01]/[D01]/[Y0001]  [H01]:[m01]')"/></a></td>
+		<td class="{@name}"><a href="{$path}"><xsl:value-of select="format-dateTime(s:literal,'[M01]/[D01]/[Y0001]  [H01]:[m01]')"/></a></td>
 	</xsl:template>	
 	
 	<xsl:template name="inboundTable">
 		<xsl:param name="inboundData"/>
-		<div class="col-sm-3 panel panel-default" role="navigation">
+		<div class="col-sm-3 panel panel-default placeholder"></div>
+		<div class="col-sm-3 panel panel-default inbound" role="navigation">
 			<div class="panel-heading">Inbound links</div>
 			<xsl:apply-templates select="$inboundData" mode="table"/>
 		</div>

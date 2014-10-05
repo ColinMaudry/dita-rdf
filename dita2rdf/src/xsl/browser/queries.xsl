@@ -22,7 +22,7 @@
 
 <xsl:param name="queries" as="node()">
 		<queries>
-			<query name="datasets" replace="no">
+			<query name="contexts" replace="no">
 				PREFIX  dcat: &lt;http://www.w3.org/ns/dcat#>
 				PREFIX  dita: &lt;http://purl.org/dita/ns#>
 				PREFIX  dcterms: &lt;http://purl.org/dc/terms/>
@@ -39,7 +39,7 @@
 				}
 				ORDER BY ?extraction_time
 			</query>
-			<query name="dataset" replace="yes">
+			<query name="context" replace="yes">
 				PREFIX  dcat: &lt;http://www.w3.org/ns/dcat#>
 		PREFIX  dita: &lt;http://purl.org/dita/ns#>
 		PREFIX  dcterms: &lt;http://purl.org/dc/terms/>
@@ -123,23 +123,20 @@
 				WHERE
 				{ GRAPH ?graph
 				{   { ?uri dita:xref ?refobject .
-				?refobject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Xref
+				?refobject a dita:Xref
 				}
 				UNION
 				{ ?uri dita:link ?refobject .
-				?refobject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Link
+				?refobject a dita:Link
 				}
-				?refobject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?typeUri
+				?refobject a ?typeUri
 				{ ?refobject dita:format "html" .
-				?refobject dita:href ?thing
-				BIND(?thing AS ?title)
-				}
+				?refobject dita:href ?title .}
 				UNION
-				{ ?refobject dita:href ?thing }
-				OPTIONAL
-				{ ?thing &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Doctype .
-				?thing dita:id ?id
-				}
+				{ ?refobject dita:href ?thing .
+				?thing a dita:Doctype .
+				?thing dita:id ?id .}
+				
 				OPTIONAL
 				{ ?thing dita:title ?title }
 				}
@@ -154,7 +151,7 @@
 				PREFIX  dita: &lt;http://purl.org/dita/ns#>
 				PREFIX  dcterms: &lt;http://purl.org/dc/terms/>
 				
-				SELECT DISTINCT  ?thing (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=', ') AS ?types) ?title ?relationLabel
+				SELECT DISTINCT  ?thing ?title (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=', ') AS ?types) ?relation
 				WHERE
 				{ GRAPH ?graph
 				{ ?refObject dita:href ?uri .
@@ -165,12 +162,12 @@
 				{ ?thing dita:title ?title }
 				GRAPH &lt;http://purl.org/dita/ns>
 				{ ?rel rdfs:subPropertyOf dita:referenceObject .
-				?rel rdfs:label ?relationLabel .
+				?rel rdfs:label ?relation .
 				?typeUri rdfs:label ?typeLabel
 				}
 				}
 				}
-				GROUP BY ?thing ?title ?relationLabel
+				GROUP BY ?thing ?title ?relation
 			</query>
 		</queries>
 	</xsl:param>
@@ -190,7 +187,7 @@
 			</xsl:choose>			
 		</xsl:variable>
 		<xsl:variable name="queryUrl" select="concat($sparqlRoot,$queryText,'&amp;output=xml')"></xsl:variable>
-		<xsl:message select="concat('Query ',$queryName,' ',$queryUrl)"></xsl:message>
+		<xsl:message select="concat('Query ',$queryName,': ',$queryUrl)"></xsl:message>
 		<xsl:copy-of select="document($queryUrl)/*"/>
 	</xsl:template>
 

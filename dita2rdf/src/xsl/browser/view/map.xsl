@@ -15,7 +15,7 @@
 	<xsl:template mode="map" match="s:result">
 		<xsl:param name="template" tunnel="yes"/>
 		<xsl:variable name="targetFileUrl" select="concat($outputFolder,'/',colin:uri2path('map',s:binding[@name='thing']/s:uri))"/>
-		<xsl:if test="preceding-sibling::s:result[1]/s:binding[@name='thing']/s:uri/text() != s:binding[@name='thing']/s:uri/text()">
+		<xsl:if test="not(preceding-sibling::s:result) or preceding-sibling::s:result[1]/s:binding[@name='thing']/s:uri/text() != s:binding[@name='thing']/s:uri/text()">
 				<xsl:result-document  method="xhtml" href="{$outputFolder}/{colin:uri2path('map',s:binding[@name='thing']/s:uri)}">
 					<xsl:call-template name="mapPage">
 						<xsl:with-param name="objectInfo" select="." tunnel="yes"/>
