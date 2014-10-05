@@ -21,4 +21,4 @@ dita2rdf/src/view
 !/documentation/*.pdf
 !/documentation/*.chm
 dita-spec*
-dita2rdf.rdf
+**/dita2rdf.rdf
