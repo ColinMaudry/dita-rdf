@@ -25,6 +25,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/bookabstract:1;35:63">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Bookabstract"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/concept/concept-1">
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
@@ -41,6 +42,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/notices:1;36:47">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Notices"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/notices">
                   <dita:lang>en-us</dita:lang>
@@ -58,6 +60,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:1;37:54">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/trademarks">
                   <dita:lang>en-us</dita:lang>
@@ -75,6 +78,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/preface:1;39:51">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Preface"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/task_preface">
                   <dita:lang>en-us</dita:lang>
@@ -92,6 +96,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:1;41:44">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/installing">
                   <dita:lang>en-us</dita:lang>
@@ -108,6 +113,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:2;42:52">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/installstorage">
                   <dita:lang>en-us</dita:lang>
@@ -125,6 +131,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:3;43:55">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/unscrewcover">
                   <dita:lang>en-us</dita:lang>
@@ -142,6 +149,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:4;44:54">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/insertdrive">
                   <dita:lang>en-us</dita:lang>
@@ -159,6 +167,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:5;45:55">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/replacecover">
                   <dita:lang>en-us</dita:lang>
@@ -176,6 +185,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:6;47:54">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/installwebserver">
                   <dita:lang>en-us</dita:lang>
@@ -193,6 +203,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:7;48:56">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/closeprograms">
                   <dita:lang>en-us</dita:lang>
@@ -210,6 +221,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:8;49:51">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/runsetup">
                   <dita:lang>en-us</dita:lang>
@@ -234,6 +246,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:9;50:50">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/restart">
                   <dita:lang>en-us</dita:lang>
@@ -251,6 +264,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:10;52:48">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/installdb">
                   <dita:lang>en-us</dita:lang>
@@ -269,6 +283,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:2;54:44">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/configuring">
                   <dita:lang>en-us</dita:lang>
@@ -285,6 +300,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:11;55:55">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/configurestorage">
                   <dita:lang>en-us</dita:lang>
@@ -302,6 +318,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:12;56:57">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/configurewebserver">
                   <dita:lang>en-us</dita:lang>
@@ -319,6 +336,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:13;57:56">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/configuredatabase">
                   <dita:lang>en-us</dita:lang>
@@ -337,6 +355,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:3;59:44">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/maintaining">
                   <dita:lang>en-us</dita:lang>
@@ -353,6 +372,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:14;60:54">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/maintainstorage">
                   <dita:lang>en-us</dita:lang>
@@ -370,6 +390,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:15;61:53">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/maintainserver">
                   <dita:lang>en-us</dita:lang>
@@ -387,6 +408,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:16;62:55">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/maintaindatabase">
                   <dita:lang>en-us</dita:lang>
@@ -405,6 +427,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:4;64:48">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Chapter"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/troubleshooting">
                   <dita:lang>en-us</dita:lang>
@@ -421,6 +444,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:17;65:51">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/drivetrouble">
                   <dita:lang>en-us</dita:lang>
@@ -438,6 +462,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:18;66:49">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/webtrouble">
                   <dita:lang>en-us</dita:lang>
@@ -455,6 +480,7 @@
       <dita:topicref>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:19;67:54">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/task/en-us/databasetrouble">
                   <dita:lang>en-us</dita:lang>
@@ -473,6 +499,7 @@
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/appendix:1;69:49">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <rdf:type rdf:resource="http://purl.org/dita/ns#Appendix"/>
+            <dita:format>dita</dita:format>
             <dita:href>
                <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/task_appendix">
                   <dita:lang>en-us</dita:lang>
@@ -489,9 +516,9 @@
    </rdf:Description>
    <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
                  rdf:about="http://data.example.com/resources/dataset/taskbook">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-26T01:20:52.729+02:00</dcterms:issued>
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T17:50:02.905+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-it-book.ditamap</dcterms:description>
-      <dcterms:title>Product tasks</dcterms:title>
-      <rdfs:label>Product tasks</rdfs:label>
+      <dcterms:title>Retro ToolsProduct tasksTasks and what they can do</dcterms:title>
+      <rdfs:label>Retro ToolsProduct tasksTasks and what they can do</rdfs:label>
    </dcat:Dataset>
 </rdf:RDF>
