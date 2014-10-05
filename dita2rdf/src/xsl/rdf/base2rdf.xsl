@@ -176,6 +176,7 @@
 	<!-- Since conref only targets one element, processing all the target document is overkill -->
 	<xsl:template match="@conref">
 		<xsl:param name="currentUri" tunnel="yes"/>
+		<rdf:type rdf:resource="http://purl.org/dita/ns#Conref"/>
 		<dita:conref>
 			<xsl:call-template name="colin:justGetTheUri">
 				<xsl:with-param name="resolvedCurrentUri" select="colin:cleanDitaHref(.,$currentUri)"/>
