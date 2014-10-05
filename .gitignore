@@ -3,7 +3,7 @@
 !build_publishdoc.xml
 dita-rdf.xpr
 temp/
-src/browser/.sass-cache/
+dita2rdf/src/browser/.sass-cache/
 test*
 dita2rdf/demo/information/
 dita2rdf/demo/docsrc
@@ -20,5 +20,5 @@ dita2rdf/src/view
 !/documentation/dita-rdf.html
 !/documentation/*.pdf
 !/documentation/*.chm
-
+dita-spec*
 
