@@ -14,7 +14,7 @@
 		will be:
 			http://data.nxp.com/resources/fr-FR/datasheet/ds_1254933687955
 		
-		The base URIs for resources and for graphs must be a URLs for which you control the domain (example: nxp.com). The URI MUST end with a /.
+		The base URIs for resources and for graphs must be a URLs for which you control the domain. The URIs MUST end with a /. Since you most likely don't control the domain example.com, you should modify the default value. The URIs don't have to lead to an actual Web resource.
 		-->
 		<resourcesBaseUri uri="http://data.example.com/resources/"/>
 		<graphsBaseUri uri="http://data.example.com/graphs/"/>
@@ -61,12 +61,11 @@
 		<!--  
 		Add the class URI mappings for your shell specializations (document types) below.
 		In RDF, the good practice consists in capitalizing the first letter of the fragment.
-		For instance, if your company is NXP Semiconductors and you have a 'datasheet' doctype:
+		For instance, if your company is NXP Semiconductors and you have a 'datasheet' domain:
 		
-		<doctype ditaClass="datasheet/datasheet">http://data.nxp.com/schema/v1/Datasheet</doctype>
+		<domain domainId="datasheet">http://data.nxp.com/schema/v1/</domain>
 		
-		The base URI (http://data.nxp.com/schema#), must be a URL for which you control the domain (nxp.com). The URI MUST end with a # or a /.
-		In RDF, the convention consists in capitalizing the first letter of the fragment for classes (Datasheet).
+		The base URI (http://data.nxp.com/schema/v1/), must be a URL for which you control the domain (nxp.com). The URI MUST end with a # or a /.
 		-->
 		
 		
