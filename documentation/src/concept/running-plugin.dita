@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_xsd_mlr_qp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+ <title>Running the transformation</title>
+ <shortdesc>The different options to run a transformation</shortdesc>
+ <conbody>
+  <p></p>
+ </conbody>
+</concept>

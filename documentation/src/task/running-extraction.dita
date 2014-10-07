@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <task id="task_yyb_15r_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
-	<title>Running the metadata extraction</title>
+	<title>Only extracting the DITA metadata as RDF/XML</title>
 	<shortdesc>How to run the extraction of the metadata of your DITA content</shortdesc>
     <taskbody>
 		<prereq>You should have <xref format="html" href="http://colin.maudry.com/dita-rdf/task/configuring.html" scope="external">configured</xref> the dita2rdf DITA OT plugin.</prereq>

@@ -6,9 +6,8 @@
  <conbody>
  	<p> The <keyword keyref="ditaot-plugin-name"/> (a.k.a. the dita2rdf plugin) adds a new transtype to the DITA OT: rdf.</p>
 		<p>In short, running the rdf transtype on a DITA map or topic runs an extraction of the metadata of the content and stores it in RDF/XML format, a serialization of RDF. The
-			transformation not only extracts the metadata of the input file, it also follows the references (@href and resolved @keyref) to cover the whole documentation set.</p>
-		<p>"Why on Earth would I want to do that?". Good question. I will give you great reasons when I add an extra step to the transformation: the upload of the result to a triple
-			store, an RDF database. I will also speak this project it during the <xref format="html" href="http://www.infomanagementcenter.com/DITAeurope/2014/index.htm" scope="external"
+			transformation not only extracts the metadata of the input file, it also follows the references (@href and resolved @keyref) to cover the whole documentation set.Then it uploads this RDF metadata to an RDF repository. I recommend Apache Marmotta for local use, but any compliant RDF repository, either local or remote, can be used. Finally, and optionally, the the transformation ends with the extraction of all the DITA metadata stored in the repository to create a DITA metadata browser.</p>
+		<p>I will speak about this project it during the <xref format="html" href="http://www.infomanagementcenter.com/DITAeurope/2014/index.htm" scope="external"
 				>DITA Europe conference</xref> and the <xref format="html" href="http://oxygenxml.com/events/2014/dita-ot_day.html" scope="external">DITA OT day</xref>. Let's meet
 			there!</p>
 		<section>
