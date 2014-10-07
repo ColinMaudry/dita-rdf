@@ -52,7 +52,7 @@
 		<delete dir="${temp.plugin.dir}"/>
 		<mkdir dir="${temp.plugin.dir}/${plugin-id}"/>
 		<copy todir="${temp.plugin.dir}/${plugin-id}"  >
-			<fileset dir="src/" includes="**/*" excludes="view" />
+			<fileset dir="src/" includes="**/*" excludes="browser/" />
 		</copy>
 	</target>
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
@@ -65,7 +65,7 @@
 	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT">
 		<delete dir="${ditaot.dir}plugins/${plugin-id}"/>
 		<copy todir="${ditaot.dir}plugins">
-			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"></fileset>
+			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*" excludes="${plugin-id}/browser/"></fileset>
 		</copy>
 		<antcall  target="run-integrator"/>
 	</target>
