@@ -119,7 +119,7 @@
 	<xsl:template mode="sidebar" match="s:result">
 		<xsl:param name="currentPageType" tunnel="yes"/>
 		<xsl:variable name="path" select="colin:uri2path($currentPageType,s:binding[@name='thing']/s:uri)"/>
-		<a href="{$path}" class="list-group-item"><xsl:value-of select="s:binding[@name='title']/s:literal"></xsl:value-of></a>
+			<a href="{$path}" class="list-group-item"><xsl:value-of select="s:binding[@name='title']/s:literal"></xsl:value-of></a>
 	</xsl:template>
 	
 	<xsl:function name="colin:uri2path">
