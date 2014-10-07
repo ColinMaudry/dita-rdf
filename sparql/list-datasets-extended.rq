@@ -1,0 +1,25 @@
+PREFIX  dcat: <http://www.w3.org/ns/dcat#>
+PREFIX  dita: <http://purl.org/dita/ns#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?title ?extractionTime ?desc ?countTopics ?countMaps ?countKeys
+WHERE
+  { GRAPH ?graph
+      { ?dataset <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dcat:Dataset .
+        ?dataset dcterms:issued ?extractionTime .
+        ?dataset dcterms:title ?title .
+        ?dataset dcterms:description ?desc
+        { SELECT ?graph (count(?topic) AS ?countTopics)
+          WHERE
+            { ?topic <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Topic }
+        }
+        { SELECT  (count(?map) AS ?countMaps)
+          WHERE
+            { ?map <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Map }
+        }
+        { SELECT  (count(?key) AS ?countKeys)
+          WHERE
+            { ?key <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Key }
+        }
+      }
+  }

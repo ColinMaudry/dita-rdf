@@ -1,0 +1,11 @@
+PREFIX  dcat: <http://www.w3.org/ns/dcat#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+
+SELECT  ?title ?issued ?desc
+WHERE
+  { GRAPH ?graph
+      { ?dataset dcterms:issued ?issued .
+        ?dataset dcterms:title ?title .
+        ?dataset dcterms:description ?desc
+      }
+  }

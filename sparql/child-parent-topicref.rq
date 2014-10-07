@@ -1,0 +1,21 @@
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dita: <http://purl.org/dita/ns#>
+
+SELECT  ?parent ?node ?linkType
+WHERE
+  { GRAPH <http://data.example.com/graphs/en-us/d9e5>
+      { ?map <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Map .
+        ?map dita:title ?parent .
+        ?map ?topicref ?Topicref .
+        ?Topicref <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> dita:Topicref .
+        ?map ?topicref ?Topicref .
+        ?Topicref dita:href ?child .
+        ?child dita:title ?node
+      }
+    GRAPH <http://purl.org/dita/ns>
+      { ?topicref rdfs:label ?linkType }
+    FILTER ( str(datatype(?node)) = "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" )
+  }
+GROUP BY ?parent ?node ?linkType
+
+#PREFIX%20%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20%20dita%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdita%2Fns%23%3E%0A%0ASELECT%20%20%3Fparent%20%3Fnode%20%3FlinkType%0AWHERE%0A%20%20%7B%20GRAPH%20%3Chttp%3A%2F%2Fdata.example.com%2Fgraphs%2Fen-us%2Fd9e5%3E%0A%20%20%20%20%20%20%7B%20%3Fmap%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23type%3E%20dita%3AMap%20.%0A%20%20%20%20%20%20%20%20%3Fmap%20dita%3Atitle%20%3Fparent%20.%0A%20%20%20%20%20%20%20%20%3Fmap%20%3Ftopicref%20%3FTopicref%20.%0A%20%20%20%20%20%20%20%20%3FTopicref%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23type%3E%20dita%3ATopicref%20.%0A%20%20%20%20%20%20%20%20%3Fmap%20%3Ftopicref%20%3FTopicref%20.%0A%20%20%20%20%20%20%20%20%3FTopicref%20dita%3Ahref%20%3Fchild%20.%0A%20%20%20%20%20%20%20%20%3Fchild%20dita%3Atitle%20%3Fnode%0A%20%20%20%20%20%20%7D%0A%20%20%20%20GRAPH%20%3Chttp%3A%2F%2Fpurl.org%2Fdita%2Fns%3E%0A%20%20%20%20%20%20%7B%20%3Ftopicref%20rdfs%3Alabel%20%3FlinkType%20%7D%0A%20%20%20%20FILTER%20(%20str(datatype(%3Fnode))%20%3D%20%22http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23langString%22%20)%0A%20%20%7D%0AGROUP%20BY%20%3Fparent%20%3Fnode%20%3FlinkType
