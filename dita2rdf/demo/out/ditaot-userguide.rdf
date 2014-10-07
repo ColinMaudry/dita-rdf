@@ -11595,7 +11595,7 @@
    </rdf:Description>
    <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
                  rdf:about="http://data.example.com/resources/dataset/en-us/ditaot-userguide">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T19:32:12.886+02:00</dcterms:issued>
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-07T22:58:00.047+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\ditaot-userguide.ditamap</dcterms:description>
       <dcterms:title xml:lang="en-us">DITA Open Toolkit 1.8.4</dcterms:title>
       <rdfs:label xml:lang="en-us">DITA Open Toolkit 1.8.4</rdfs:label>
