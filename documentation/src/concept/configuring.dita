@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_ew1_svg_rp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+ <title>Configuring</title>
+	<shortdesc>In order to enjoy the full benefits of the dita2rdf plugin, a bit of configuration is required</shortdesc>
+ <conbody>
+  <p></p>
+ </conbody>
+</concept>

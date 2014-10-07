@@ -4,7 +4,9 @@
 	<title>Running the metadata extraction</title>
 	<shortdesc>How to run the extraction of the metadata of your DITA content</shortdesc>
     <taskbody>
-		<prereq>You should have <xref format="html" href="http://colin.maudry.com/dita-rdf/task/configuring.html" scope="external">configured</xref> the dita2rdf DITA OT plugin.</prereq>
+		<prereq><ul><li>You should have <xref href="../concept/configuring.dita">configured</xref> the dita2rdf DITA OT plugin.</li>
+		<li>If you want to upload the RDF output to a repository, you must have <xref href="configuring-upload-repository.dita">configured</xref> the upload and the repository must be accessible (in case of Marmotta, it must be running).</li>
+		</ul></prereq>
 		<context>You want to extract metadata from your DITA content as RDF.</context>
 		<steps>
 			<step>

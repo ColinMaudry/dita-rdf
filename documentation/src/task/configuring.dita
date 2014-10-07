@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <task id="task_kb2_mtr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
-    <title>Configuring</title>
-	<shortdesc>In order to enjoy the full benefits of the dita2rdf plugin, a bit of configuration is required</shortdesc>
+    <title>Configuring the extraction of the metadata</title>
+	<shortdesc>How to properly configure the <keyword keyref="ditaot-plugin-name"/> for a useful metadata extraction</shortdesc>
     <taskbody>
     	<prereq>The <keyword keyref="ditaot-plugin-name"/> must be <xref href="dita2rdf-installing.dita">installed</xref> in your DITA
 			OT.</prereq>

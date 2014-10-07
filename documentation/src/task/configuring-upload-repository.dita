@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="task_klq_rbh_rp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+    <title>Configuring the upload of the RDF ouptput to an RDF repository</title>
+    <shortdesc>How to configure the <keyword keyref="ditaot-plugin-name"/> to upload the RDF output to your RDF repository</shortdesc>
+    <taskbody>
+    	<prereq>
+    		<p>You should already have an RDF repository available, either on your computer or on a server you can access.</p>
+    		<p>If you don't have one, the default configuration assumes you use <xref scope="external" format="html" href="https://marmotta.apache.org/">Apache Marmotta</xref>. <xref format="html" href="https://marmotta.apache.org/installation.html#installer" scope="external">Here</xref> are the installation instructions (standalone).</p>
+    	</prereq>
+        <context>
+        </context>
+        <steps>
+        	<step>
+        		<cmd>In <filepath>[DITA-OT]/plugins/com.github.colinmaudry.dita2rdf/customization</filepath>, make a copy of <filepath>build_template.properties</filepath>.</cmd>
+        	</step>
+        	<step>
+        		<cmd>Rename the copy <filepath>build.properties</filepath>.</cmd>
+        		<info>As long as their is a file named <filepath>build.properties</filepath> in this directory, the DITA OT plugin will attempt to upload the RDF output according to the provided configuration, at every transformation. As a consequence, if you want to disable these attempts, either rename, move or delete this file.</info>
+        	</step>
+        	<step>
+        		<cmd>In <filepath>build.properties</filepath>, follow the instructions. If you use Marmotta locally, you have nothing to change, I configured it for you ;-)</cmd>
+        	</step>
+        	<step>
+        		<cmd>Save.</cmd>
+        	</step>
+        </steps>
+    	<result>The <keyword keyref="ditaot-plugin-name"/> is configured for the upload of the RDF output to a repository. Unless you rename, move or delete <filepath>build.properties</filepath>, the output of all transformations will be uploaded.</result>
+    </taskbody>
+</task>

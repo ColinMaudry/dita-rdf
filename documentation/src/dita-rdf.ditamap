@@ -40,7 +40,10 @@
 		<topicref href="concept/plugin-requirements.dita"/>
 		<topicref format="zip" href="https://github.com/ColinMaudry/dita-rdf/blob/master/dita2rdf/dita2rdf-ditaot-plugin.zip" navtitle="Download link (zip)" scope="external"/>
 		<topicref href="task/dita2rdf-installing.dita"/>
-		<topicref href="task/configuring.dita"/>
+		<topicref href="concept/configuring.dita">
+			<topicref href="task/configuring.dita"/>
+			<topicref href="task/configuring-upload-repository.dita"/>
+		</topicref>
 		<topicref href="task/running-extraction.dita"/>
 		<topicref href="concept/improving-ref-output.dita"/>
 		<topicref href="concept/release-notes.dita"/>
