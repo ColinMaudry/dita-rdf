@@ -19,7 +19,7 @@
         		<info>As long as their is a file named <filepath>build.properties</filepath> in this directory, the DITA OT plugin will attempt to upload the RDF output according to the provided configuration, at every transformation. As a consequence, if you want to disable these attempts, either rename, move or delete this file.</info>
         	</step>
         	<step>
-        		<cmd>In <filepath>build.properties</filepath>, follow the instructions. If you use Marmotta locally, you have nothing to change, I configured it for you ;-)</cmd>
+        		<cmd>In <filepath>build.properties</filepath>, follow the instructions. If you use Marmotta locally (on your computer, not a server), you have nothing to change, I configured it for you ;-)</cmd>
         	</step>
         	<step>
         		<cmd>Save.</cmd>
