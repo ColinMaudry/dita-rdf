@@ -22,3 +22,5 @@ dita2rdf/src/view
 !/documentation/*.chm
 dita-spec*
 **/dita2rdf.rdf
+node_modules/
+app/
