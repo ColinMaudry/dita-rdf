@@ -293,10 +293,12 @@
 			rdfs:comment "The topicref element identifies a topic (such as a concept, task, or reference) or other resource."@en-US ;
 			rdfs:label "topicref" .
 		:mapref rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
 			rdfs:comment "The mapref element is a convenience element that is equivalent to a <topicref> element with the format attribute set to 'ditamap'. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map."@en-US ;
 			rdfs:label "mapref" .
 		:keydef rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef> ;
 			rdfs:label "keydef" ;
 			rdfs:range :Key ;
@@ -321,22 +323,27 @@
 			rdfs:comment "The booklibrary element contains the library information for a book. Library entries contain information about the series, library, or collection of documents to which the book belongs. "@en-US ;
 			rdfs:label "booklibrary" .
 		:part rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/part.html> ;
 			rdfs:comment "The part element references a part topic or a map that references part topics for the book. A new part is started. Use <part> to divide a document's chapters into logical groupings. For example, in a document that contains both guide and reference information, you can define two parts, one containing the guide information and the other containing the reference information."@en-US ;
 			rdfs:label "part" .
 		:chapter rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html> ;
 			rdfs:comment "The chapter element references a topic or map as a chapter within a book."@en-US ;
 			rdfs:label "chapter" .
 		:notices rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/notices.html> ;
 			rdfs:comment "The notices element references a topic containing special notice information, for example, legal notices about supplementary copyrights and trademarks associated with the book."@en-US ;
 			rdfs:label "notices" .
 		:frontmatter rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/frontmatter.html> ;
 			rdfs:comment "The frontmatter element contains the material that precedes the main body of a document. It may include items such as an abstract, a preface, and various types of book lists such as a toc, tablelist, or figurelist. "@en-US ;
 			rdfs:label "frontmatter" .
 		:backmatter rdfs:subPropertyOf :topicref ;
+			rdfs:subPropertyOf :referenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/backmatter.html> ;
 			rdfs:comment "The backmatter element contains the material that follows the main body of a document and any appendices. It may include items such as a colophon, legal notices, and various types of book lists such as a glossary or an index."@en-US ;
 			rdfs:label "backmatter" .
