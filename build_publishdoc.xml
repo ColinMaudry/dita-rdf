@@ -13,22 +13,21 @@
 		<delete dir="documentation/install/"/>
 		<delete dir="documentation/src/out/"/>
 		<delete dir="documentation/src/temp/"/>
-		<delete dir="documentation/oxygen-webhelp/resources/"/>
 		<delete file="dita2rdf/demo/ditardf-project.zip"/>
 	</target>
 	<target name="piwik-code">
 		<condition property="hasCode">
 			<resourcecontains substring="piwik" resource="documentation/index.html"/>
 		</condition>
-		<antcall target="insert-piwiki-code"/>
+		<antcall target="insert-piwik-code"/>
 	</target>
-	<target name="insert-piwiki-code" unless="hasCode">
+	<target name="insert-piwik-code" unless="hasCode">
 		<echo message="Adding Piwik code to index.html..." level="info"/>
 		<replace file="documentation/index.html" token="&lt;/body>" value="${piwik-code}"/>
 	</target>
 	<target name="ftp-webhelp" depends="copy-doc-to-documentation,piwik-code">
 		<scp todir="${sftp.user}:${sftp.password}@${sftp.server}:${sftp.path}" trust="yes" verbose="yes" sftp="true">
-			<fileset dir="documentation/" includes="*/**" excludes="dita-rdf.html, *.pdf, *.chm, src/, **/*.css, **/*.png"/>			
+			<fileset dir="documentation/" includes="*/**" excludes="dita-rdf.html, *.pdf, *.chm, src/"/>			
 		</scp>
 	</target>
 	<target name="package-zip-copy-plugin" depends="ftp-webhelp">
