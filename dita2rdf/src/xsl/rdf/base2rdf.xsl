@@ -200,7 +200,7 @@
 	</doc:doc>
 	<!-- When an element (e.g. source or author) have both text() and @href, the priority goes to the @href and text() is ignored.
 	If you use @href, don't forget to also add a @format attribute!-->
-	<xsl:template match="   *[@href and @href!=''] |   *[@keyref and @keyref!=''] |   *[@conkeyref and @conkeyref!=''] |   *[@conref and @conref!='']" priority="2">
+	<xsl:template match="   *[@href!=''] |   *[@keyref!=''] |   *[@conkeyref!=''] |   *[@conref and @conref!=''] | *[@keys!='']" priority="2">
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<xsl:param name="currentUri" tunnel="yes"/>
 		<xsl:if test="$debug='1'">
@@ -211,7 +211,7 @@
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
-				<xsl:apply-templates select=".[@href]/@keys"/>
+				<xsl:apply-templates select="@keys"/>
 				<xsl:apply-templates select="@keyref"/>
 				<xsl:apply-templates select="@conref">
 				</xsl:apply-templates>

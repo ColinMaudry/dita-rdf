@@ -49,9 +49,26 @@
 					</dita:key>
 		</xsl:for-each>
 	</xsl:template>
-	<xsl:template match="*[contains(@class, ' map/topicref ')][not(@href)]">
-		<xsl:apply-templates/>
-	</xsl:template>
+	<!-- Keywords as variables using keydef -->
+	<!-- If a keydef has both @href and a keyword, the keyword has priority -->
+	<xsl:template match="@keys[../*[contains(@class,' map/topicmeta ')]/*[contains(@class,' topic/keywords ')]/*[contains(@class,' topic/keyword ')]]" priority="2">
+		<xsl:param name="documentUri" tunnel="yes"/>
+		<xsl:variable name="keynode" select=".."/>
+		<xsl:for-each select="tokenize(., ' ')">
+			<dita:key>
+				<dita:Key rdf:about="{colin:getKeyUri($documentUri,.)}">
+					<dita:keyname><xsl:value-of select="."/></dita:keyname>
+					<xsl:apply-templates select="$keynode/*[contains(@class,' map/topicmeta ')]/*[contains(@class,' topic/keywords ')]/*[contains(@class,' topic/keyword ')]"/>
+				</dita:Key>
+			</dita:key>
+		</xsl:for-each>
+	</xsl:template>	
+	
+	<!--<xsl:template match="*[contains(@class, ' map/topicref ')][@keys]">
+		<xsl:element name="{concat('dita:',local-name())}">
+			<xsl:apply-templates select="@keys"/>
+		</xsl:element>
+	</xsl:template>-->
 	<doc:doc>
 		<doc:desc>Passthrough template for maps</doc:desc>
 	</doc:doc>
