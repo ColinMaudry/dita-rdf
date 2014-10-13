@@ -17,7 +17,7 @@ RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+
 RewriteCond %{HTTP_ACCEPT} text/html [OR]
 RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
-RewriteRule ^dita$ dita.html [R=303]
+RewriteRule ^dita$ http://bit.ly/DitaRdfLucidChart [R=303]
 
 # Rewrite rule to make sure we serve RDF/XML content from the namespace URI if requested
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [OR]
