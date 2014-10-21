@@ -63,7 +63,9 @@
 			</dita:key>
 		</xsl:for-each>
 	</xsl:template>	
-	
+	<xsl:template match="*[contains(@class, ' map/topicref ')][not(@href) and not(@keys) and not(*[contains(@class, ' map/topicmeta ')])]">
+		<xsl:apply-templates/>
+	</xsl:template>
 	<!--<xsl:template match="*[contains(@class, ' map/topicref ')][@keys]">
 		<xsl:element name="{concat('dita:',local-name())}">
 			<xsl:apply-templates select="@keys"/>
