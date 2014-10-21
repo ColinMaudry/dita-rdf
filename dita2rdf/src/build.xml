@@ -207,7 +207,16 @@
 		
 	</target>
 	
-	<target name="build.browser">
+	<condition property="buildBrowser">
+		<or>
+			<not>
+				<isset property="args.buildBrowser"/>
+			</not>
+			<equals arg1="${args.buildBrowser}" arg2="1"/>
+		</or>
+	</condition>
+	
+	<target name="build.browser" if="${buildBrowser}">
 		<delete>
 			<fileset dir="${dita.map.output.dir}" includes="darwin/**/*"/>
 		</delete>

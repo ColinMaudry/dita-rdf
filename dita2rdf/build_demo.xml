@@ -4,7 +4,7 @@
 	<!-- User properties -->
 				<!-- Enter the location of you DITA OT directory here: -->
 				<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
-	<property name="demo-set" value="ditaot-userguide">
+	<property name="demo-set" value="ditardf-project">
 					<!-- Possibe demo sets:
 					- ditaot-userguide (the DITA OT user guide)
 					- oxygen-userguide (the Oxygen Author user guide, will be downloaded by this script, 13 MB )
@@ -13,7 +13,7 @@
 					- oxy-flowers
 					- oxy-it-book
 					- ditardf-project	(the documentation of the DITA RDF project)	
-					- dita-spec
+					- dita-spec (will probably time out)
 					-->
 				</property>
 				<!-- If you don't want the plugin to be integrated automatically (integrator.xml), enter "false" -->
@@ -52,7 +52,7 @@
 		<delete dir="${temp.plugin.dir}"/>
 		<mkdir dir="${temp.plugin.dir}/${plugin-id}"/>
 		<copy todir="${temp.plugin.dir}/${plugin-id}"  >
-			<fileset dir="src/" includes="**/*" excludes="browser/" />
+			<fileset dir="src/" includes="**/*" />
 		</copy>
 	</target>
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
@@ -65,7 +65,7 @@
 	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT">
 		<delete dir="${ditaot.dir}plugins/${plugin-id}"/>
 		<copy todir="${ditaot.dir}plugins">
-			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*" excludes="${plugin-id}/browser/"></fileset>
+			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"></fileset>
 		</copy>
 		<antcall  target="run-integrator"/>
 	</target>
@@ -102,6 +102,7 @@
 			<arg prefix="-Dtranstype=" value="rdf"/>
 			<arg prefix="-Dargs.debug=" value="0"/>
 			<arg prefix="-Dargs.filter=" path="${demo.input.dir}${demo.input.path}editor.ditaval"/>
+			<arg prefix="-Dargs.buildBrowser=" value="1"/>
 		</exec>
 	</target>
 	
