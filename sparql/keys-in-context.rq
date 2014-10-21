@@ -1,0 +1,30 @@
+	PREFIX  rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX  dcat: <http://www.w3.org/ns/dcat#>
+	PREFIX  dita: <http://purl.org/dita/ns#>
+	PREFIX  dcterms: <http://purl.org/dc/terms/>
+				
+	SELECT DISTINCT  ?key_name ?key_value ?map_title ?map_id
+	WHERE
+	{ GRAPH <http://data.example.com/graphs/en-us/ditaot-userguide>
+	{
+	?key a dita:Key ;
+	dita:keyname ?key_name .
+	{?key dita:href ?key_value .} UNION
+	{?key dita:keyword ?keyword .
+	?keyword rdfs:label ?key_value .}
+	
+?keydefObject dita:key ?key ;
+      a dita:Topicref .
+	?map a dita:Map ;
+	?keydef ?keydefObject ;
+	dita:title ?map_title ;
+	dita:id ?map_id .
+	
+	?uri a dcat:Dataset ;
+	dcterms:title ?context_title .
+     }
+	GRAPH <http://purl.org/dita/ns>
+	{ ?keydef rdfs:subPropertyOf dita:topicref .
+	}
+	}
+	
