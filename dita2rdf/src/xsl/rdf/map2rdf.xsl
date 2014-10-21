@@ -4,8 +4,6 @@
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:dcterms="http://purl.org/dc/terms/"
-	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
-	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:dita="http://purl.org/dita/ns#"
 	xmlns:schema="http://schema.org/"
