@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
-         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:dita="http://purl.org/dita/ns#"
+<rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dita="http://purl.org/dita/ns#"
          xmlns:schema="http://schema.org/"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -10,15 +7,17 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dcterms="http://purl.org/dc/terms/"
          xml:base="http://purl.org/dita/ns#">
-   <rdf:Description xmlns:ot="http://www.idiominc.com/opentopic"
-                    rdf:about="http://data.example.com/resources/map/d9e5">
+   <rdf:Description xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                    xmlns:ot="http://www.idiominc.com/opentopic"
+                    rdf:about="http://data.example.com/resources/map/phone">
       <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
       <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-      <dita:id>d9e5</dita:id>
+      <dita:id>phone</dita:id>
       <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-MobilePhone.ditamap</dita:xtrf>
       <title xmlns="http://purl.org/dita/ns#">Syncro phone user guide</title>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:1;5:49">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:1;5:49">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -33,7 +32,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:2;6:52">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:2;6:52">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -48,7 +47,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:3;7:53">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:3;7:53">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -63,7 +62,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:4;8:52">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:4;8:52">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -84,7 +83,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:5;9:54">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:5;9:54">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -105,7 +104,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:6;10:48">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:6;10:48">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -142,7 +141,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:7;11:53">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:7;11:53">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -202,7 +201,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:8;13:46">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:8;13:46">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -217,7 +216,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:9;14:48">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:9;14:48">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -233,7 +232,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:10;15:57">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:10;15:57">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -281,7 +280,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:11;16:52">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:11;16:52">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -296,7 +295,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:12;17:47">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:12;17:47">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -317,7 +316,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:13;19:40">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:13;19:40">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -332,7 +331,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:14;20:49">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:14;20:49">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -349,7 +348,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:15;21:55">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:15;21:55">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -365,7 +364,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:16;22:52">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:16;22:52">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -380,7 +379,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:17;24:62">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:17;24:62">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -396,7 +395,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:18;25:57">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:18;25:57">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -413,7 +412,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:19;26:56">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:19;26:56">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -430,7 +429,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:20;27:60">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:20;27:60">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -464,7 +463,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:21;29:82">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:21;29:82">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -479,7 +478,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:22;30:57">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:22;30:57">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -515,7 +514,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:23;31:59">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:23;31:59">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>dita</dita:format>
             <dita:href>
@@ -530,7 +529,7 @@
          </rdf:Description>
       </dita:topicref>
       <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/map/d9e5/topicref:24;33:90">
+         <rdf:Description rdf:about="http://data.example.com/resources/map/phone/topicref:24;33:90">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
             <dita:format>ditamap</dita:format>
             <dita:href>
@@ -545,9 +544,11 @@
          </rdf:Description>
       </dita:topicref>
    </rdf:Description>
-   <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
-                 rdf:about="http://data.example.com/resources/dataset/d9e5">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T16:31:38.219+02:00</dcterms:issued>
+   <dcat:Dataset xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                 xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                 xmlns:dcat="http://www.w3.org/ns/dcat#"
+                 rdf:about="http://data.example.com/resources/dataset/phone">
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-21T23:15:52.434+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-MobilePhone.ditamap</dcterms:description>
       <dcterms:title>Syncro phone user guide</dcterms:title>
       <rdfs:label>Syncro phone user guide</rdfs:label>

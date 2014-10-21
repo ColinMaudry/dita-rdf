@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
-         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:dita="http://purl.org/dita/ns#"
+<rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dita="http://purl.org/dita/ns#"
          xmlns:schema="http://schema.org/"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -10,7 +7,9 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dcterms="http://purl.org/dc/terms/"
          xml:base="http://purl.org/dita/ns#">
-   <rdf:Description xmlns:ot="http://www.idiominc.com/opentopic"
+   <rdf:Description xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                    xmlns:ot="http://www.idiominc.com/opentopic"
                     rdf:about="http://data.example.com/resources/map/d9e7">
       <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
       <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
@@ -731,9 +730,11 @@
          </rdf:Description>
       </dita:topicref>
    </rdf:Description>
-   <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+   <dcat:Dataset xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                 xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                 xmlns:dcat="http://www.w3.org/ns/dcat#"
                  rdf:about="http://data.example.com/resources/dataset/d9e7">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T15:51:11.149+02:00</dcterms:issued>
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-21T22:33:51.779+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\garage.ditamap</dcterms:description>
       <dcterms:title>Eclipse content aggregated by a map</dcterms:title>
       <rdfs:label>Eclipse content aggregated by a map</rdfs:label>

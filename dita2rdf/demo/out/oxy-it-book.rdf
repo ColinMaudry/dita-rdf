@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
-         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:dita="http://purl.org/dita/ns#"
+<rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dita="http://purl.org/dita/ns#"
          xmlns:schema="http://schema.org/"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -10,7 +7,9 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dcterms="http://purl.org/dc/terms/"
          xml:base="http://purl.org/dita/ns#">
-   <rdf:Description xmlns:ot="http://www.idiominc.com/opentopic"
+   <rdf:Description xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                    xmlns:ot="http://www.idiominc.com/opentopic"
                     rdf:about="http://data.example.com/resources/bookmap/taskbook">
       <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
       <rdf:type rdf:resource="http://purl.org/dita/ns#Bookmap"/>
@@ -21,77 +20,6 @@
       <mainbooktitle xmlns="http://purl.org/dita/ns#">Product tasks</mainbooktitle>
       <booktitlealt xmlns="http://purl.org/dita/ns#">Tasks and what they can do</booktitlealt>
       <author xmlns="http://purl.org/dita/ns#">Howe Tuduit</author>
-      <dita:bookabstract>
-         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/bookabstract:1;35:63">
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Bookabstract"/>
-            <dita:format>dita</dita:format>
-            <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/concept/concept-1">
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>concept-1</dita:id>
-                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\taskbook-abstract.dita</dita:xtrf>
-                  <title xmlns="http://purl.org/dita/ns#">Abstract</title>
-               </rdf:Description>
-            </dita:href>
-         </rdf:Description>
-      </dita:bookabstract>
-      <dita:notices>
-         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/notices:1;36:47">
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Notices"/>
-            <dita:format>dita</dita:format>
-            <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/concept/en-us/notices">
-                  <dita:lang>en-us</dita:lang>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Concept"/>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>notices</dita:id>
-                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\concepts\notices.dita</dita:xtrf>
-                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Notice</title>
-                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This information was developed for products and services offered in the U.S.A.</shortdesc>
-               </rdf:Description>
-            </dita:href>
-         </rdf:Description>
-      </dita:notices>
-      <dita:topicref>
-         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/topicref:1;37:54">
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
-            <dita:format>dita</dita:format>
-            <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/trademarks">
-                  <dita:lang>en-us</dita:lang>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>trademarks</dita:id>
-                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\trademarks.dita</dita:xtrf>
-                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Trademarks</title>
-                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">The following terms are trademarks of the Retro Tools in the United States, other countries, or both:</shortdesc>
-               </rdf:Description>
-            </dita:href>
-         </rdf:Description>
-      </dita:topicref>
-      <dita:preface>
-         <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/preface:1;39:51">
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
-            <rdf:type rdf:resource="http://purl.org/dita/ns#Preface"/>
-            <dita:format>dita</dita:format>
-            <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/topic/en-us/task_preface">
-                  <dita:lang>en-us</dita:lang>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
-                  <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>task_preface</dita:id>
-                  <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\topics\task_preface.dita</dita:xtrf>
-                  <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Sample Preface</title>
-                  <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This book explains each tasks separately. You can jump in anywhere, get the information you need, and complete your work.</shortdesc>
-               </rdf:Description>
-            </dita:href>
-         </rdf:Description>
-      </dita:preface>
       <dita:chapter>
          <rdf:Description rdf:about="http://data.example.com/resources/bookmap/taskbook/chapter:1;41:44">
             <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
@@ -514,9 +442,11 @@
          </rdf:Description>
       </dita:appendix>
    </rdf:Description>
-   <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+   <dcat:Dataset xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                 xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                 xmlns:dcat="http://www.w3.org/ns/dcat#"
                  rdf:about="http://data.example.com/resources/dataset/taskbook">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T17:50:02.905+02:00</dcterms:issued>
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-21T22:50:59.558+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\oxy-it-book.ditamap</dcterms:description>
       <dcterms:title>Retro ToolsProduct tasksTasks and what they can do</dcterms:title>
       <rdfs:label>Retro ToolsProduct tasksTasks and what they can do</rdfs:label>

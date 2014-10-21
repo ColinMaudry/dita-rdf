@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
-         xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:dita="http://purl.org/dita/ns#"
+<rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dita="http://purl.org/dita/ns#"
          xmlns:schema="http://schema.org/"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -10,7 +7,9 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dcterms="http://purl.org/dc/terms/"
          xml:base="http://purl.org/dita/ns#">
-   <rdf:Description xmlns:ot="http://www.idiominc.com/opentopic"
+   <rdf:Description xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                    xmlns:ot="http://www.idiominc.com/opentopic"
                     rdf:about="http://data.example.com/resources/map/en-us/ditaot-userguide">
       <dita:lang>en-us</dita:lang>
       <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
@@ -155,6 +154,227 @@
                               <dita:keyname>download.xalan</dita:keyname>
                               <dita:href rdf:resource="http://xml.apache.org/xalan-j/downloads.html"/>
                               <dita:format>html</dita:format>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:9;25:41">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/release.stable-version">
+                              <dita:keyname>release.stable-version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:1;29:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.8</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:10;33:34">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/release.version">
+                              <dita:keyname>release.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:2;37:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.8.4</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:11;42:35">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.ant.version">
+                              <dita:keyname>tool.ant.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:3;46:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.8.4</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:12;50:39">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.ant.version.min">
+                              <dita:keyname>tool.ant.version.min</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:4;54:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.7.1</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:13;58:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.codec.version">
+                              <dita:keyname>tool.codec.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:5;62:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.4</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:14;66:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.icu4j.version">
+                              <dita:keyname>tool.icu4j.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:6;70:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>49.1</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:15;74:36">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.java.version">
+                              <dita:keyname>tool.java.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:7;78:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>6</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:16;82:42">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.xerces.version.min">
+                              <dita:keyname>tool.xerces.version.min</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:8;86:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>2.9.0</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:17;90:38">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.xerces.version">
+                              <dita:keyname>tool.xerces.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:9;94:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>2.11.0</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:18;98:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.xalan.version">
+                              <dita:keyname>tool.xalan.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:10;102:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>2.7.1</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:19;106:35">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.fop.version">
+                              <dita:keyname>tool.fop.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:11;110:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.0</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:20;114:40">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.resolver.version">
+                              <dita:keyname>tool.resolver.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:12;118:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>1.1</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
+                           </dita:Key>
+                        </dita:key>
+                     </rdf:Description>
+                  </dita:keydef>
+                  <dita:keydef>
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keydef:21;122:37">
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
+                        <rdf:type rdf:resource="http://purl.org/dita/ns#Keydef"/>
+                        <dita:key>
+                           <dita:Key rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keys/tool.saxon.version">
+                              <dita:keyname>tool.saxon.version</dita:keyname>
+                              <keyword xmlns="http://purl.org/dita/ns#">
+                                 <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/keyrefs/keyword:13;126:18">
+                                    <rdf:type rdf:resource="http://purl.org/dita/ns#Keyword"/>
+                                    <rdfs:label>9.1</rdfs:label>
+                                 </rdf:Description>
+                              </keyword>
                            </dita:Key>
                         </dita:key>
                      </rdf:Description>
@@ -10660,24 +10880,6 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d239e5/topicref:50;67:59">
-                        <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
-                        <dita:format>dita</dita:format>
-                        <dita:href>
-                           <rdf:Description rdf:about="http://data.example.com/resources/reference/en-us/flagging-migration">
-                              <dita:lang>en-us</dita:lang>
-                              <rdf:type rdf:resource="http://purl.org/dita/ns#Topic"/>
-                              <rdf:type rdf:resource="http://purl.org/dita/ns#Reference"/>
-                              <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                              <dita:id>flagging-migration</dita:id>
-                              <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dev_ref\flagging-migration.dita</dita:xtrf>
-                              <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">XHTML migration for flagging updates in DITA-OT 1.7</title>
-                              <shortdesc xmlns="http://purl.org/dita/ns#" xml:lang="en-us">This topic is primarily of interest to developers with XHTML transform overrides written prior to DITA-OT 1.7. Due to significant changes in the flagging process with the 1.7 release, some changes may be needed to make overrides work properly with DITAVAL based flagging. The new design is significantly simpler than the old design; in many cases, migration will consist of deleting old code that is no longer needed.</shortdesc>
-                           </rdf:Description>
-                        </dita:href>
-                     </rdf:Description>
-                  </dita:topicref>
-                  <dita:topicref>
                      <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d239e5/topicref:51;69:61">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
@@ -10984,15 +11186,15 @@
             <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
             <dita:format>ditamap</dita:format>
             <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5">
+               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>d358e5</dita:id>
+                  <dita:id>d356e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\admin\project-management.ditamap</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">Project Management Guidelines</title>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:1;5:78">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:1;5:78">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11009,7 +11211,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:2;6:45">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:2;6:45">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11026,7 +11228,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:3;7:43">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:3;7:43">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11043,7 +11245,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:4;8:39">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:4;8:39">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11060,7 +11262,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:5;9:43">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:5;9:43">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11093,7 +11295,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:6;10:43">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:6;10:43">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11120,7 +11322,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:7;12:41">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:7;12:41">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11195,7 +11397,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:8;13:49">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:8;13:49">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11212,7 +11414,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:9;14:45">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:9;14:45">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11306,7 +11508,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d358e5/topicref:10;15:43">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d356e5/topicref:10;15:43">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11389,15 +11591,15 @@
             <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
             <dita:format>ditamap</dita:format>
             <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5">
+               <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>d385e5</dita:id>
+                  <dita:id>d383e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\dita-resources.ditamap</dita:xtrf>
                   <title xmlns="http://purl.org/dita/ns#" xml:lang="en-us">DITA and DITA-OT resources</title>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5/topicref:1;5:98">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5/topicref:1;5:98">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11415,28 +11617,28 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5/topicref:2;7:61">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5/topicref:2;7:61">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:href rdf:resource="http://dita.xml.org/wiki/the-dita-open-toolkit"/>
                         <dita:format>html</dita:format>
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5/topicref:3;17:56">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5/topicref:3;17:56">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:href rdf:resource="http://groups.yahoo.com/group/dita-users/"/>
                         <dita:format>html</dita:format>
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5/topicref:4;26:64">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5/topicref:4;26:64">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:href rdf:resource="http://www.oasis-open.org/committees/dita/"/>
                         <dita:format>html</dita:format>
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5/topicref:5;32:67">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5/topicref:5;32:67">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11475,7 +11677,7 @@
                      </rdf:Description>
                   </dita:topicref>
                   <dita:topicref>
-                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d385e5/topicref:6;33:50">
+                     <rdf:Description rdf:about="http://data.example.com/resources/map/en-us/d383e5/topicref:6;33:50">
                         <rdf:type rdf:resource="http://purl.org/dita/ns#Topicref"/>
                         <dita:format>dita</dita:format>
                         <dita:href>
@@ -11565,12 +11767,12 @@
             <rdf:type rdf:resource="http://purl.org/dita/ns#Mapref"/>
             <dita:format>ditamap</dita:format>
             <dita:href>
-               <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/en-us/d393e5">
+               <rdf:Description rdf:about="http://data.example.com/resources/subjectScheme/en-us/d391e5">
                   <dita:lang>en-us</dita:lang>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Map"/>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#SubjectScheme"/>
                   <rdf:type rdf:resource="http://purl.org/dita/ns#Doctype"/>
-                  <dita:id>d393e5</dita:id>
+                  <dita:id>d391e5</dita:id>
                   <dita:xtrf>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\subjectscheme.ditamap</dita:xtrf>
                </rdf:Description>
             </dita:href>
@@ -11593,9 +11795,11 @@
          </rdf:Description>
       </dita:mapref>
    </rdf:Description>
-   <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+   <dcat:Dataset xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+                 xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+                 xmlns:dcat="http://www.w3.org/ns/dcat#"
                  rdf:about="http://data.example.com/resources/dataset/en-us/ditaot-userguide">
-      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-07T22:58:00.047+02:00</dcterms:issued>
+      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-13T21:27:35.946+02:00</dcterms:issued>
       <dcterms:description>C:\Users\colin\CloudStation\work\dita\dita-rdf\dita2rdf\demo\out\temp\unzipped\ditaot-userguide.ditamap</dcterms:description>
       <dcterms:title xml:lang="en-us">DITA Open Toolkit 1.8.4</dcterms:title>
       <rdfs:label xml:lang="en-us">DITA Open Toolkit 1.8.4</rdfs:label>
