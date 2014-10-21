@@ -83,32 +83,37 @@
 	
 	<xsl:template match="div[@id='content']">
 		<xsl:param name="currentPageType" tunnel="yes"/>
-		<xsl:param name="data" tunnel="yes"/>
 		<xsl:param name="objectInfo" tunnel="yes"/>
-		<xsl:variable name="query">
-			<xsl:value-of select="$queries/query[@name='contexts']"/>
-		</xsl:variable>
 		<xsl:variable name="title">
-			<xsl:choose>
-				<xsl:when test="$currentPageType='contexts'">Contexts</xsl:when>
-				<xsl:otherwise>
-					<span class="label label-default"><xsl:value-of select="colin:prettifyVariableName($currentPageType)"/></span>
-					<xsl:text> </xsl:text>
-					<xsl:value-of select="$objectInfo/s:binding[@name='title']/s:literal"/>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:if test="$currentPageType!='contexts'">
+				<span class="label label-default"><xsl:value-of select="colin:prettifyVariableName($currentPageType)"/></span>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="$objectInfo/s:binding[@name='title']/s:literal"/>
+			</xsl:if>
 		</xsl:variable>
 		<div>
 			<xsl:apply-templates select="@*"/>
-			<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
-				<h1><xsl:copy-of select="$title"/></h1>
-				<a class="btn btn-primary" role="button" href="#links">Links</a>
-				<a class="btn btn-primary" role="button" href="#stats">Stats</a>
-			</div>
-			<xsl:apply-templates select="$data" mode="table">
-				<xsl:with-param name="location" select="'center'"/>
-			</xsl:apply-templates>
-			<xsl:call-template name="stats"/>
+			<xsl:choose>
+				<xsl:when test="$currentPageType = 'contexts'">
+					<xsl:call-template name="contextsContent"/>
+				</xsl:when>
+				<xsl:when test="$currentPageType = 'context'">
+					<xsl:call-template name="contextContent">
+						<xsl:with-param name="title" select="$title"/>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="$currentPageType = 'map'">
+					<xsl:call-template name="mapContent">
+						<xsl:with-param name="title" select="$title"/>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="$currentPageType = 'topic'">
+					<xsl:call-template name="topicContent">
+						<xsl:with-param name="title" select="$title"/>
+					</xsl:call-template>
+				</xsl:when>
+			</xsl:choose>
+			
 		</div>
 	</xsl:template>
 	
@@ -144,6 +149,19 @@
 		<div class="col-sm-3" id="sidebar" role="navigation">
 			<a href="http://purl.org/dita/ditardf-project" class="list-group-item">DITA RDF project</a>
 		</div>
+	</xsl:template>
+	
+	<xsl:template name="contextsContent">
+		<xsl:param name="data" tunnel="yes"/>
+		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
+			<h1>Contexts</h1>
+			<a class="btn btn-primary" role="button" href="#links">Links</a>
+			<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+		</div>
+		<xsl:apply-templates select="$data" mode="table">
+			<xsl:with-param name="location" select="'center'"/>
+		</xsl:apply-templates>
+		<xsl:call-template name="stats"/>
 	</xsl:template>
 	
 	<xsl:template match="@href[not(starts-with(.,'http'))] | @src[not(starts-with(.,'http'))]">

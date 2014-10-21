@@ -34,4 +34,34 @@
 			<xsl:with-param name="currentPageType" select="'context'" tunnel="yes"/>
 		</xsl:apply-templates>
 	</xsl:template>
+	
+	<xsl:template name="contextContent">
+		<xsl:param name="data" tunnel="yes"/>
+		<xsl:param name="objectInfo" tunnel="yes"/>
+		<xsl:param name="title"/>
+		<xsl:variable name="dataKeys">
+			<xsl:call-template name="colin:getData">
+				<xsl:with-param name="queryName">context-keys</xsl:with-param>
+				<xsl:with-param name="uri" select="$objectInfo/s:binding[@name='thing']/s:uri"></xsl:with-param>
+			</xsl:call-template>
+		</xsl:variable>
+		
+		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
+			<h1><xsl:copy-of select="$title"/></h1>
+			<a class="btn btn-primary" role="button" href="#links">Links</a>
+			<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+		</div>
+		<h3>Links</h3>
+		<xsl:apply-templates select="$data" mode="table">
+			<xsl:with-param name="location" select="'center'"/>
+		</xsl:apply-templates>
+		
+		<xsl:apply-templates select="$dataKeys" mode="table">
+			<xsl:with-param name="location" select="'center'"/>
+		</xsl:apply-templates>
+		
+		<xsl:call-template name="stats"/>
+	</xsl:template>
 </xsl:stylesheet>
+
+

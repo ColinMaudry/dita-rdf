@@ -36,5 +36,19 @@
 			</xsl:with-param>
 			<xsl:with-param name="currentPageType" select="'topic'" tunnel="yes"/>
 		</xsl:apply-templates>
+	</xsl:template>	
+	
+	<xsl:template name="topicContent">
+		<xsl:param name="data" tunnel="yes"/>
+		<xsl:param name="title"/>
+		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
+			<h1><xsl:copy-of select="$title"/></h1>
+			<a class="btn btn-primary" role="button" href="#links">Links</a>
+			<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+		</div>
+		<xsl:apply-templates select="$data" mode="table">
+			<xsl:with-param name="location" select="'center'"/>
+		</xsl:apply-templates>
+		<xsl:call-template name="stats"/>
 	</xsl:template>
 </xsl:stylesheet>

@@ -160,14 +160,49 @@
 				?thing &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?typeUri
 				OPTIONAL
 				{ ?thing dita:title ?title }
+				}
 				GRAPH &lt;http://purl.org/dita/ns>
 				{ ?rel rdfs:subPropertyOf dita:referenceObject .
 				?rel rdfs:label ?relation .
 				?typeUri rdfs:label ?typeLabel
 				}
 				}
-				}
+					
 				GROUP BY ?thing ?title ?relation
+			</query>
+			<query name="context-keys" replace="yes">
+				PREFIX  rdfs:&lt;http://www.w3.org/2000/01/rdf-schema#>
+				PREFIX  dcat: &lt;http://www.w3.org/ns/dcat#>
+				PREFIX  dita: &lt;http://purl.org/dita/ns#>
+				PREFIX  dcterms: &lt;http://purl.org/dc/terms/>
+				
+				SELECT DISTINCT  ?key_name ?key_value ?map_title ?map_id
+				WHERE
+				{ GRAPH ?graph
+				{
+				
+				?uri a dcat:Dataset ;
+				dcterms:title ?context_title .
+				
+				?thing a dita:Key ;
+				dita:keyname ?key_name .
+				{?thing dita:href ?key_value .} UNION
+				{?thing dita:keyword ?keyword .
+				?keyword rdfs:label ?key_value .}
+				
+				?keydefObject dita:key ?thing ;
+				a dita:Topicref .
+				?map a dita:Map ;
+				?keydef ?keydefObject ;
+				dita:title ?map_title ;
+				dita:id ?map_id .
+				
+		
+				}
+				GRAPH &lt;http://purl.org/dita/ns>
+				{ ?keydef rdfs:subPropertyOf dita:topicref .
+				}
+				}
 			</query>
 		</queries>
 	</xsl:param>

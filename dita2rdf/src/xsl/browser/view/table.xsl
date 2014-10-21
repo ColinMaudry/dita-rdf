@@ -8,9 +8,6 @@
 		<xsl:param name="head" select="s:head" as="node()"/>
 		<xsl:param name="location"/>
 		<table class="table browsable sortable">
-			<xsl:if test="$location='center'">
-				<xsl:attribute name="id">links</xsl:attribute>
-			</xsl:if>
 			<caption><span class="badge pull-right"><xsl:value-of select="count(s:results/s:result[count(s:binding)=count($head/s:variable)])"/></span></caption>
 			<thead>
 				<tr>
@@ -25,8 +22,8 @@
 				</tr>
 			</thead>
 			<xsl:apply-templates select="s:results" mode="table">
-					<xsl:with-param name="head" select="$head" tunnel="yes"/>
-				</xsl:apply-templates>
+				<xsl:with-param name="head" select="$head" tunnel="yes"/>
+			</xsl:apply-templates>
 		</table>		
 	</xsl:template>
 	<xsl:template match="s:results" mode="table">
@@ -63,7 +60,7 @@
 				</xsl:for-each>			
 			</tr>
 	</xsl:template>
-	<xsl:template match="s:result[s:binding[@name='title']/s:literal/text()='' and s:binding[@name='id']/s:literal/text()='']"/>
+	<xsl:template match="s:result[s:binding[contains(@name,'title')]/s:literal/text()='' and s:binding[contains(@name,'id')]/s:literal/text()='']"/>
 	<xsl:template match="s:binding" mode="table" priority="-1">
 		<xsl:param name="path"/>
 		<td class="{@name}"><a href="{$path}"><xsl:value-of select="."/></a></td>		
