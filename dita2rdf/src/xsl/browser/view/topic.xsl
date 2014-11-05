@@ -49,6 +49,5 @@
 		<xsl:apply-templates select="$data" mode="table">
 			<xsl:with-param name="location" select="'center'"/>
 		</xsl:apply-templates>
-		<xsl:call-template name="stats"/>
 	</xsl:template>
 </xsl:stylesheet>

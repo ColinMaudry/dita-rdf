@@ -202,27 +202,55 @@
 				}
 				}
 			</query>
+			<query name="file-relations-context" replace="yes">
+				PREFIX dita: &lt;http://purl.org/dita/ns#>
+				PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>	
+				#I add hash signs so that blocks are not hyperlinks in visualizations
+					SELECT (concat('#',str(?source)) as ?sourceUri) ?sourceLabel (concat('#',str(?target)) as ?targetUri) ?targetLabel ?relationLabel
+					WHERE { 
+					GRAPH &lt;http://purl.org/dita/ns> {
+						?relation rdfs:subPropertyOf dita:referenceObject ;
+						rdfs:label ?relationLabel .
+						?RelationClass rdfs:subClassOf dita:ReferenceObject .
+						}
+						GRAPH ?graph {
+							?uri a dcat:Dataset .
+							?source ?relation ?relationObject  .
+							?relationObject dita:href ?target ;
+							a ?RelationClass .
+							
+							?source dita:title ?sourceLabel .  
+							?target dita:title ?targetLabel .   
+							}
+							
+							}
+							
+			</query>
 		</queries>
 	</xsl:param>
 	
 	<xsl:template name="colin:getData">
 		<xsl:param name="uri"/>
 		<xsl:param name="queryName"/>
-		<xsl:variable name="query" select="$queries//query[@name=$queryName]"/>
-		<xsl:variable name="queryText">
-			<xsl:choose>
-				<xsl:when test="$query/@replace='yes'">
-				<xsl:value-of select=" encode-for-uri(replace($query/text(),'\?uri',concat('&lt;',$uri,'>')))"/>
-			</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="encode-for-uri($query/text())"/>
-				</xsl:otherwise>
-			</xsl:choose>			
-		</xsl:variable>
+		<xsl:variable name="queryText" select="encode-for-uri(colin:getQuery($queryName,$uri))"/>		
 		<xsl:variable name="queryUrl" select="concat($sparqlRoot,$queryText,'&amp;output=xml')"></xsl:variable>
 		<xsl:message select="concat('Query ',$queryName,': ',$queryUrl)"></xsl:message>
 		<xsl:copy-of select="document($queryUrl)/*"/>
 	</xsl:template>
+	
+	<xsl:function name="colin:getQuery">
+		<xsl:param name="queryName"/>
+		<xsl:param name="uri"/>
+		<xsl:variable name="query" select="$queries//query[@name=$queryName]"/>
+		<xsl:choose>
+			<xsl:when test="$query/@replace='yes'">
+				<xsl:value-of select="replace($query/text(),'\?uri',concat('&lt;',$uri,'>'))"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$query/text()"/>
+			</xsl:otherwise>
+		</xsl:choose>	
+	</xsl:function>
 
 	<xsl:template match="node() | @* " xml:space="default">
 		<xsl:copy>

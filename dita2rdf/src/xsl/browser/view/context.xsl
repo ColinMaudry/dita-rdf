@@ -42,7 +42,7 @@
 		<xsl:variable name="dataKeys">
 			<xsl:call-template name="colin:getData">
 				<xsl:with-param name="queryName">context-keys</xsl:with-param>
-				<xsl:with-param name="uri" select="$objectInfo/s:binding[@name='thing']/s:uri"></xsl:with-param>
+				<xsl:with-param name="uri" select="$objectInfo/s:binding[@name='thing']/s:uri"/>
 			</xsl:call-template>
 		</xsl:variable>
 		
@@ -60,7 +60,7 @@
 			<xsl:with-param name="location" select="'center'"/>
 		</xsl:apply-templates>
 		
-		<xsl:call-template name="stats"/>
+		<xsl:call-template name="contextMapgraph"/>
 	</xsl:template>
 </xsl:stylesheet>
 
