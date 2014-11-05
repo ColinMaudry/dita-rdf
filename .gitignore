@@ -10,7 +10,7 @@ dita2rdf/demo/docsrc
 dita2rdf/demo/out/*
 dita2rdf/src/customization/build.properties
 dita2rdf/src/view
-!*.rdf
+*.rdf
 *.list
 /*.properties
 /documentation/*
