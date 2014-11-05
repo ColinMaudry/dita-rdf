@@ -1,20 +1,23 @@
 PREFIX dita: <http://purl.org/dita/ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>	
 
-#This query can be used to create a visual graph of the document, and their relations
-
-SELECT ?sourceId ?relationLabel ?targetId
+#I add hash signs so that blocks are not hyperlinks in visualizations (it actually doesn't work)
+SELECT (concat('#',str(?source)) as ?sourceUri) ?sourceLabel (concat('#',str(?target)) as ?targetUri) ?targetLabel ?relationLabel
 WHERE { 
-
-{?source a dita:Topic .} union {?source a dita:Map .}
-{?target a dita:Topic .} union {?target a dita:Map .}
-
-?source dita:title ?sourceId .  
-?target dita:title ?targetId .   
-?relation rdfs:label ?relationLabel .
-  
+GRAPH <http://purl.org/dita/ns> {
+?relation rdfs:subPropertyOf dita:referenceObject ;
+rdfs:label ?relationLabel .
+?RelationClass rdfs:subClassOf dita:ReferenceObject .
+}
+GRAPH ?graph {
+#Replace ?uri with the URI of the context
+?uri a dcat:Dataset .
 ?source ?relation ?relationObject  .
-?relationObject dita:href ?target .
+?relationObject dita:href ?target ;
+a ?RelationClass .
 
-  
+?source dita:title ?sourceLabel .  
+?target dita:title ?targetLabel .   
+}
+
 }
