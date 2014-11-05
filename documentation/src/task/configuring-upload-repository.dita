@@ -3,6 +3,9 @@
     xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
     <title>Configuring the upload of the RDF ouptput to an RDF repository</title>
     <shortdesc>How to configure the <keyword keyref="ditaot-plugin-name"/> to upload the RDF output to your RDF repository</shortdesc>
+	<prolog>
+		<permissions view="public"/>
+	</prolog>
     <taskbody>
     	<prereq>
     		<p>You should already have an RDF repository available, either on your computer or on a server you can access.</p>
