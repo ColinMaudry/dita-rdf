@@ -4,6 +4,10 @@
  <title>Configuring</title>
 	<shortdesc>In order to enjoy the full benefits of the dita2rdf plugin, a bit of configuration is required</shortdesc>
  <conbody>
-  <p></p>
+  <p>The whole configuration resides in two different files, for different aspects of the transformation:</p>
+ 	<ul>
+ 		<li>config.xml: configuration related to the transformation to RDF, and the RDF environment of your organization in general.</li>
+ 		<li>build.properties: configuration related to your RDF repository and SPARQL querying</li>
+ 	</ul>
  </conbody>
 </concept>
