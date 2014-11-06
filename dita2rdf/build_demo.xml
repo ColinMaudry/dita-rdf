@@ -4,10 +4,10 @@
 	<!-- User properties -->
 				<!-- Enter the location of you DITA OT directory here: -->
 				<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
-	<property name="demo-set" value="oxy-flowers">
+	<property name="demo-set" value="ditaot-userguide">
 					<!-- Possibe demo sets:
 					- ditaot-userguide (the DITA OT user guide)
-					- oxygen-userguide (the Oxygen Author user guide, will be downloaded by this script, 13 MB )
+					- oxygen-userguide (the Oxygen Author user guide, will be downloaded by this script, 13 MB. It will take a while :) )
 					- garage
 					- oxy-MobilePhone
 					- oxy-flowers
