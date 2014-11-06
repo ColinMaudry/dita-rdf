@@ -226,6 +226,22 @@
 							}
 							
 			</query>
+			<query name="basic-file-metadata" replace="yes">
+				PREFIX dita: &lt;http://purl.org/dita/ns#>
+				PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>
+					
+				#This query can be used to create a visual graph of the document, and their relations
+				
+				SELECT ?property ?value where {
+				graph &lt;http://purl.org/dita/ns> {
+					?prop rdfs:label ?property .
+					filter not exists {?prop rdfs:subPropertyOf dita:referenceObject .}
+					}
+					graph ?graph {
+					?uri ?prop ?value 
+					}
+					}
+			</query>
 		</queries>
 	</xsl:param>
 	
