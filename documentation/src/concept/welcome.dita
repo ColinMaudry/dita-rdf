@@ -32,23 +32,23 @@
 					<tbody>
 						<row>
 							<entry><xref href="dita-ontology.dita">Ontology</xref></entry>
-							<entry>80% (<xref href="https://github.com/ColinMaudry/dita-rdf/labels/ontology" format="html" scope="external">see issues in Github</xref>)</entry>
+							<entry>90 % (<xref href="https://github.com/ColinMaudry/dita-rdf/labels/ontology" format="html" scope="external">see issues in Github</xref>)</entry>
 							<entry>The DITA RDF ontology expresses the semantics of the DITA specification in RDF.</entry>
 						</row>
 						<row>
 							<entry><xref href="ditaot-plugin.dita">DITA OT plugin</xref></entry>
-							<entry>90% of the ontology is supported (<xref format="html" href="https://github.com/ColinMaudry/dita-rdf/labels/ditaot-plugin" scope="external">see issues in
+							<entry>90 % of the ontology is supported (<xref format="html" href="https://github.com/ColinMaudry/dita-rdf/labels/ditaot-plugin" scope="external">see issues in
 									Github</xref>)</entry>
 							<entry>A DITA Open Toolkit plugin to parse DITA content and extract the valuable metadata in RDF/XML.</entry>
 						</row>
 						<row>
 							<entry><xref href="sparql-queries.dita">SPARQL queries</xref></entry>
-							<entry>Not started</entry>
+							<entry>20 % (need to write more)</entry>
 							<entry>A set of SPARQL queries to get you started with querying the extracted metadata graph.</entry>
 						</row>
 						<row>
 							<entry>Dashboarding tools</entry>
-							<entry>Not started</entry>
+							<entry>50 % (you can browse the links and see basic metadata)</entry>
 							<entry><xref format="html" href="http://dev.data2000.no/sgvizler/" scope="external">Sgvizler</xref> and <xref format="html"
 									href="http://www.irisa.fr/LIS/ferre/sparklis/osparklis.html" scope="external">Sparklis</xref> are the candidate tools.</entry>
 						</row>
