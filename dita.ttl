@@ -103,10 +103,12 @@
 			rdfs:comment "The topicref element identifies a topic (such as a concept, task, or reference) or other resource."@en-US ;
 			rdfs:label "Topicref" .
 		:Mapref rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html> ;
 			rdfs:comment "The mapref element is a convenience element that is equivalent to a topicref element with the format attribute set to 'ditamap'."@en-US ;
 			rdfs:label "Mapref" .
 		:Keydef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html> ;
 			rdfs:comment "The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a topicref element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined."@en-US ;
 			rdfs:label "Keydef" .
@@ -139,7 +141,7 @@
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html> ;
 			rdfs:label "Coderef" .
 			
-		:Keyword rdfs:subClassOf :ReferenceObject ;
+		:Keyword a rdfs:Class ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:label "Keyword" .
@@ -153,37 +155,45 @@
 			rdfs:label "Parmname" .
 
 		:LearningObject rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html> ;
 			rdfs:comment "learningObject organizes topic references to DITA learning topics as a learning object. "@en-US ;
 			rdfs:label "LearningObject" .
 		:LearningPlanRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html> ;
 			rdfs:comment "Use a learningPlanRef element to include a topic reference to a learning plan topic as part of a learningObject."@en-US ;
 			rdfs:label "LearningPlanRef" .
-		:learningPreAssessmentRef rdfs:subClassOf :Topicref ;
+		:LearningPreAssessmentRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html> ;
 			rdfs:comment "Use a learningPreAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
-			rdfs:label "learningPreAssessmentRef" .
-		:learningOverviewRef rdfs:subClassOf :Topicref ;
+			rdfs:label "LearningPreAssessmentRef" .
+		:LearningOverviewRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html> ;
 			rdfs:comment "Use a learningOverviewRef element to include a topic reference to a learning overview topic as part of a learningObject."@en-US ;
-			rdfs:label "learningOverviewRef" .
-		:learningContentRef rdfs:subClassOf :Topicref ;
+			rdfs:label "LearningOverviewRef" .
+		:LearningContentRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentRef.html> ;
 			rdfs:comment "Use a learningContentRef element to include a topic reference to a learning content topic as part of a DITA learningObject."@en-US ;
-			rdfs:label "learningContentRef" .
-		:learningContentComponentRef rdfs:subClassOf :Topicref ;
+			rdfs:label "LearningContentRef" .
+		:LearningContentComponentRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentComponentRef.html> ;
 			rdfs:comment "Use a learningContentComponentRef element to include a topic reference to a topic that acts as a subtopic of a learningContent topic."@en-US ;
-			rdfs:label "learningContentComponentRef" .
-		:learningSummaryRef rdfs:subClassOf :Topicref ;
+			rdfs:label "LearningContentComponentRef" .
+		:LearningSummaryRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummaryRef.html> ;
 			rdfs:comment "Use a <learningSummaryRef> to include topic reference to a learning summary topic in a DITA learning object."@en-US ;
-			rdfs:label "learningSummaryRef" .
-		:learningPostAssessmentRef rdfs:subClassOf :Topicref ;
+			rdfs:label "LearningSummaryRef" .
+		:LearningPostAssessmentRef rdfs:subClassOf :Topicref ;
+			rdfs:subClassOf :ReferenceObject ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html> ;
 			rdfs:comment "Use a learningPostAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject."@en-US ;
-			rdfs:label "learningPostAssessmentRef" .
+			rdfs:label "LearningPostAssessmentRef" .
 
 		#Key
 		:Key a rdfs:Class ;
@@ -207,6 +217,7 @@
 			rdfs:domain :Doctype ;
 			rdfs:range :ReferenceObject .
 		:title rdfs:subPropertyOf dcterms:title ;
+			a rdf:Property ;
 			rdfs:range xsd:string ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html> ;
 			rdfs:comment "The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables."@en-US ;
@@ -235,6 +246,7 @@
 			rdfs:comment "The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element."@en-US ;
 			rdfs:label "shortdesc" .
 		:author rdfs:subPropertyOf dcterms:author ;
+			a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html> ;
 			rdfs:range xsd:string ;
 			rdfs:domain :Doctype ;
