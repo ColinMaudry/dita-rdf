@@ -40,6 +40,7 @@
 	
 	
 	<xsl:template name="mapContent">
+		<xsl:param name="objectInfo" tunnel="yes"/>
 		<xsl:param name="data" tunnel="yes"/>
 		<xsl:param name="title"/>
 		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
@@ -52,6 +53,8 @@
 		</xsl:apply-templates>
 		
 		<!-- Stats blocks -->
-		<!--<xsl:call-template name="stats"/>-->
+		<xsl:call-template name="basicMetadataTable">
+			<xsl:with-param name="uri" select="$objectInfo/s:binding[@name='thing']/s:uri"/>
+		</xsl:call-template>
 	</xsl:template>
 </xsl:stylesheet>
