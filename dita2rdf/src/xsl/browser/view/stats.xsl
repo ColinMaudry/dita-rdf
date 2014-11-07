@@ -21,8 +21,15 @@
 	
 </xsl:template>
 	
-<xsl:template name="permissions">
-		<div id="permissions"></div>
+<xsl:template name="basicMetadataTable">
+	<xsl:param name="uri"/>
+	<h3>Basic metadata</h3>
+	<div id="basic-metadata"
+		data-sgvizler-endpoint="{$sparql}"
+		data-sgvizler-query="
+		{colin:getQuery('basic-file-metadata',$uri)}" 
+		data-sgvizler-chart="google.visualization.Table"
+		style="width:100%; min-height:50px; border:1px solid grey; display: inline-block;"></div>
 </xsl:template>
 
 

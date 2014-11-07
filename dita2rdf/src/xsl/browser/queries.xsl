@@ -226,6 +226,22 @@
 							}
 							
 			</query>
+			<query name="basic-file-metadata" replace="yes">
+				PREFIX dita: &lt;http://purl.org/dita/ns#>
+				PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>
+					
+				#This query can be used to create a visual graph of the document, and their relations
+				
+				SELECT ?property ?value where {
+				graph &lt;http://purl.org/dita/ns> {
+					?prop rdfs:label ?property .
+					filter not exists {?prop rdfs:subPropertyOf dita:referenceObject .}
+					}
+					graph ?graph {
+					?uri ?prop ?value 
+					}
+					}
+			</query>
 		</queries>
 	</xsl:param>
 	
@@ -234,7 +250,7 @@
 		<xsl:param name="queryName"/>
 		<xsl:variable name="queryText" select="encode-for-uri(colin:getQuery($queryName,$uri))"/>		
 		<xsl:variable name="queryUrl" select="concat($sparqlRoot,$queryText,'&amp;output=xml')"></xsl:variable>
-		<xsl:message select="concat('Query ',$queryName,': ',$queryUrl)"></xsl:message>
+		<xsl:message select="concat('Query ',$queryName,': ',replace(colin:getQuery($queryName,$uri),'&#xA;',' '))"></xsl:message>
 		<xsl:copy-of select="document($queryUrl)/*"/>
 	</xsl:template>
 	
