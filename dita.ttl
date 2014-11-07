@@ -265,11 +265,24 @@
 			rdfs:domain :Doctype ;
 			rdfs:label "permissions	" .
 		:source rdfs:subPropertyOf dcterms:source ;
+			a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/source.html> ;
 			rdfs:range xsd:string ;
 			rdfs:domain :Doctype ;
 			rdfs:comment "The source element identifies a resource from which the present topic is derived, either completely or in part."@en-US ;
-			rdfs:label "source" .	
+			rdfs:label "source" .
+		:publisher a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/publisher.html> ;
+			rdfs:range xsd:string ;
+			rdfs:domain :Doctype ;
+			rdfs:comment "The publisher metadata element contains the name of the person, company, or organization responsible for making the content or subject of the topic available."@en-US ;
+			rdfs:label "publisher" .
+		:copyright a rdf:Property ;
+			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/copyright.html> ;
+			rdfs:range xsd:string ;
+			rdfs:domain :Doctype ;
+			rdfs:comment "The copyright element specifies legal ownership of the content."@en-US ;
+			rdfs:label "copyright" .			
 		:othermeta a rdf:Property ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html> ;
 			rdfs:comment "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties."@en-US ;
