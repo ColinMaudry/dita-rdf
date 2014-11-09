@@ -211,11 +211,21 @@
 	#Properties
 	
 		#for maps and topics
+		:element a rdf:Property ;
+			rdfs:label "element";
+			rdfs:comment "Indicates that the file contains the target element."@en-US ;
+			rdfs:range rdfs:Resource ;
+			rdfs:domain :Doctype .
 		:referenceObject a rdf:Property ;
+			rdfs:subPropertyOf :element ;
 			rdfs:label "referenceObject" ;
 			rdfs:comment "Describes a reference object that is part of a DITA file."@en-US ;
 			rdfs:domain :Doctype ;
 			rdfs:range :ReferenceObject .
+		:text a rdf:Property ;
+			rdfs:range xsd:string ;
+			rdfs:domain rdfs:Resource ;
+			rdfs:comment "The text contained in the element"@en-US .
 		:title rdfs:subPropertyOf dcterms:title ;
 			a rdf:Property ;
 			rdfs:range xsd:string ;
@@ -253,6 +263,7 @@
 			rdfs:comment "The author metadata element contains the name of the topic's author."@en-US ;
 			rdfs:label "author" .
 		:audience a rdf:Property ;
+			rdfs:subPropertyOf :element ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html> ;
 			rdfs:comment "The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic."@en-US ;
 			rdfs:range :Audience ;
@@ -288,12 +299,14 @@
 			rdfs:comment "The othermeta element can be used to identify properties not otherwise included in <metadata> and to assign name/content values to those properties."@en-US ;
 			rdfs:label "othermeta" .
 		:keyword  a rdf:Property ;
+			rdfs:subPropertyOf :element ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html> ;
 			rdfs:comment "The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message."@en-US ;
 			rdfs:range xsd:string ;
 			rdfs:range :Keyword ;
 			rdfs:label "keyword" .
 		:category  a rdf:Property ;
+			rdfs:subPropertyOf :element ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/category.html> ;
 			rdfs:comment "The category element represents any category by which a topic might be classified for retrieval or navigation."@en-US ;
 			rdfs:range xsd:string ;
@@ -303,6 +316,7 @@
 			rdfs:label "language" ;
 			rdfs:range xsd:language .
 		:prodinfo a rdf:Property ;
+			rdfs:subPropertyOf :element ;
 			rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html> ;
 			rdfs:domain :Doctype ;
 			rdfs:range :Prodinfo ;
