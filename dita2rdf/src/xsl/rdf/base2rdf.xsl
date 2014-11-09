@@ -205,10 +205,11 @@
 			<xsl:message xml:space="default"><xsl:value-of select="concat(@xtrf,'/',@xtrc)"/>[<xsl:value-of select="@href | @conref | @conkeyref | @keyref"/>]</xsl:message>
 		</xsl:if>
 		<xsl:element name="{concat('dita:',local-name())}">
-			<rdf:Description rdf:about="{colin:getInternalObjectUri($documentUri,@xtrc)}">
+			<rdf:Description rdf:about="{colin:getInternalObjectUri($documentUri,@xtrc,@id)}">
 				<xsl:call-template name="colin:getRdfTypes">
 					<xsl:with-param name="class" select="@class"/>
 				</xsl:call-template>
+				<xsl:apply-templates select="@id"/>
 				<xsl:apply-templates select="@keys"/>
 				<xsl:apply-templates select="@keyref"/>
 				<xsl:apply-templates select="@conref">
@@ -225,11 +226,32 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	
+	<xsl:template match="*[@id]" priority="-1">
+		<xsl:apply-templates select="." mode="colin:processElementAsProperty">
+			<xsl:with-param name="objectType" as="xs:string" select="'resource'"/>
+			<xsl:with-param name="genericProperty" as="xs:boolean" select="true()"/>
+		</xsl:apply-templates>
+	</xsl:template>
+	<xsl:template match="@id">
+		<dita:id><xsl:value-of select="."/></dita:id>
+	</xsl:template>
+	
+	<xsl:template name="colin:ditaText">
+		<xsl:variable name="text">
+			<xsl:value-of select="normalize-space(string-join(.//text(),' '))"/>
+		</xsl:variable>
+		<!-- The idea is not to store the whole content of an element, just to give an idea of what it contains -->
+		<!-- In spite of normalize-space, I still see <dita:text> </dita:text> -->
+		<xsl:if test="$text != '' and $text !=' '">
+			<dita:text><xsl:value-of select="if (string-length($text)&gt;50) then concat(substring($text,1,50),'...') else $text"/></dita:text>
+		</xsl:if>
+	</xsl:template>
+	
 	<!-- Audience -->
 	<xsl:template match="*[contains(@class, ' topic/audience')]">
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<dita:audience>
-			<dita:Audience rdf:about="{colin:getInternalObjectUri($documentUri,@xtrc)}">
+			<dita:Audience rdf:about="{colin:getInternalObjectUri($documentUri,@xtrc,@id)}">
 				<xsl:apply-templates select="@*"/>
 			</dita:Audience>
 		</dita:audience>
@@ -343,10 +365,11 @@
 			<xsl:with-param name="objectType" as="xs:string" select="'resource'"/>
 		</xsl:apply-templates>
 	</xsl:template>
-	<xsl:template match="
+	<!-- Might be duplicate with what colin:processElementAsProperty does -->
+	<!--<xsl:template match="
 		*[contains(@class, ' topic/keyword ')][not(@keyref)]/text() |
 		*[contains(@class, ' topic/category ')][not(@keyref)]/text()">
-		<rdfs:label><xsl:value-of select="normalize-space(.)"/></rdfs:label>
-	</xsl:template>
+		<xsl:call-template name="colin:ditaText"/>
+	</xsl:template>-->
 	
 </xsl:stylesheet>
