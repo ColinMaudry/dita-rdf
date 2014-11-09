@@ -85,7 +85,9 @@
 	<xsl:function as="xs:anyURI" name="colin:getInternalObjectUri">
 		<xsl:param name="documentUri"/>
 		<xsl:param name="xtrc"/>
-		<xsl:value-of select="concat($documentUri,'/',$xtrc)"/>
+		<xsl:param name="id"/>
+		<xsl:variable name="localIdentifier" select="if ($id!='') then $id else $xtrc"/>
+		<xsl:value-of select="concat($documentUri,'#',$localIdentifier)"/>
 	</xsl:function>
 	
 	<xsl:function as="xs:anyURI" name="colin:cleanDitaHref">
@@ -148,30 +150,35 @@
 		<xsl:param name="documentUri" tunnel="yes"/>
 		<xsl:param name="objectType" as="xs:string"/>
 		<xsl:param name="hasLanguage" as="xs:boolean?"/>
+		<xsl:param name="genericProperty" as="xs:boolean?"/>
 		<xsl:variable name="class" as="attribute(class)" select="@class"/>
 		<xsl:variable name="domainId" as="xs:string" select="colin:getDomainId(string($class))"/>
-		<xsl:variable name="namespace" select="$config/config/domains/domain[@domainId=$domainId]/@baseUri"/>
-		<xsl:if test=".//text()">
-			<xsl:element name="{local-name()}" namespace="{$namespace}">
-				<xsl:choose>
-					<xsl:when test="$objectType = 'resource'">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about" select="colin:getInternalObjectUri($documentUri,@xtrc)"/>
-							<xsl:call-template name="colin:getRdfTypes">
-								<xsl:with-param name="class" select="@class"/>
-							</xsl:call-template>
-							<xsl:apply-templates/>				
-						</rdf:Description>
-					</xsl:when>
-					<xsl:when test="$objectType = 'literal'">
+		<xsl:variable name="namespace" select="if ($genericProperty = true()) then $config/config/domains/domain[@domainId='topic']/@baseUri else $config/config/domains/domain[@domainId=$domainId]/@baseUri"/>
+		<xsl:variable name="elementName" select="if ($genericProperty = true()) then 'element' else local-name()"/>
+		<xsl:element name="{$elementName}" namespace="{$namespace}">
+			<xsl:choose>
+				<xsl:when test="$objectType = 'resource'">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about" select="colin:getInternalObjectUri($documentUri,@xtrc,@id)"/>
+						<xsl:apply-templates select="@id"/>
+						<xsl:call-template name="colin:getRdfTypes">
+							<xsl:with-param name="class" select="@class"/>
+						</xsl:call-template>
+						<xsl:call-template name="colin:ditaText"/>
+					</rdf:Description>
+				</xsl:when>
+				<xsl:when test="$objectType = 'literal'">
+					<xsl:if test=".//text()">
 						<xsl:if test="$hasLanguage = true()">
 							<xsl:call-template name="colin:getLanguageAtt"/>
 						</xsl:if>
-							<xsl:value-of select="normalize-space(.)"/>
-					</xsl:when>
-				</xsl:choose>
-			</xsl:element>
-		</xsl:if>
+						<xsl:value-of select="normalize-space(.)"/>
+					</xsl:if>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:element>
+		<!-- This apply-templates might lead to surprises :) -->
+		<xsl:apply-templates select="*"/>
 	</xsl:template>
 	
 	<!-- The beauty of the tunnels: whenever @xml:lang is found, the $language param is set or reset and passed to the next templates. -->
