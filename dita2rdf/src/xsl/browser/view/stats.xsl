@@ -11,7 +11,7 @@
 	<xsl:param name="objectInfo" tunnel="yes"/>
 	<xsl:param name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
 					
-	<div id="contextMapgraph"
+	<div id="contextMapgraph"  class="stat"
 		data-sgvizler-chart-options="directed=true"
 		data-sgvizler-endpoint="{$sparql}" 
 		data-sgvizler-query="{colin:getQuery('file-relations-context',$contextUri)}"
@@ -23,8 +23,8 @@
 	
 <xsl:template name="basicMetadataTable">
 	<xsl:param name="uri"/>
-	<h3>Basic metadata</h3>
-	<div id="basic-metadata"
+	<h3 id="metadata">Basic metadata</h3>
+	<div id="basic-metadata" class="stat"
 		data-sgvizler-endpoint="{$sparql}"
 		data-sgvizler-query="
 		{colin:getQuery('basic-file-metadata',$uri)}" 

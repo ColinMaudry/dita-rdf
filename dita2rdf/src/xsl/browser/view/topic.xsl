@@ -45,7 +45,7 @@
 		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
 			<h1><xsl:copy-of select="$title"/></h1>
 			<a class="btn btn-primary" role="button" href="#links">Links</a>
-			<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+			<a class="btn btn-primary" role="button" href="#metadata">Metadata</a>
 		</div>
 		<xsl:apply-templates select="$data" mode="table">
 			<xsl:with-param name="location" select="'center'"/>
