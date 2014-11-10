@@ -90,18 +90,20 @@
 		<xsl:value-of select="concat($documentUri,'#',$localIdentifier)"/>
 	</xsl:function>
 	
-	<xsl:function as="xs:anyURI" name="colin:cleanDitaHref">
+	<xsl:function as="xs:anyURI" name="colin:resolveDitaHref">
 		<xsl:param name="ditaHref"/>
 		<xsl:param name="currentUri"/>
-		<xsl:variable name="cleanHref">
-		<xsl:choose>
-			<xsl:when test="contains($ditaHref,'#')">
-				<xsl:value-of select="substring-before($ditaHref,'#')"/>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="$ditaHref"/>
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:variable name="fragment" select="if (contains($ditaHref,'#')) then substring-after($ditaHref,'#') else ''"/>
+		<xsl:variable name="fragmentId" select="if (contains($fragment,'/')) then concat('#',substring-after($fragment,'/')) else ''"/>
+		<xsl:variable name="standardHref">
+			<xsl:choose>
+				<xsl:when test="$fragment != ''">
+					<xsl:value-of select="concat(substring-before($ditaHref,'#'),$fragmentId)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$ditaHref"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="baseUri">
 			<xsl:choose>
@@ -113,7 +115,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:value-of select="resolve-uri($cleanHref,$baseUri)"/>
+		<xsl:value-of select="resolve-uri($standardHref,$baseUri)"/>
 	</xsl:function>
 
 	<xsl:function name="colin:getDomainId">
