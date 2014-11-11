@@ -147,7 +147,7 @@
 			<xsl:choose>
 				<!-- Only parse the next document if the current document is part of the documentation set.
 			See https://github.com/ColinMaudry/dita-rdf/issues/42 -->
-				<xsl:when test="contains($previousReference,' map/topicref ') or $previousReference=''">
+				<xsl:when test="(contains($previousReference,' map/topicref ') or $previousReference='') and not(contains(.,'#'))">
 					<xsl:choose>
 						<xsl:when test="$targetDocument!=''">
 							<xsl:apply-templates select="$targetDocument/*">
