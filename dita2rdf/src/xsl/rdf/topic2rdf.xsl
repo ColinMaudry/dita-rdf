@@ -28,7 +28,7 @@
 		*[contains(@class, ' topic/related-links ')]">
 		<!-- In topic/body and topic/related-links, we only need the non-empty @href and @keyref elements -->
 		<xsl:param name="currentUri" tunnel="yes"/>
-		<xsl:message select="$currentUri"></xsl:message>
+		<!--<xsl:message select="$currentUri"></xsl:message>-->
 		<xsl:apply-templates select="descendant::*[
 			@href!='' or 
 			@keyref!='' or 
