@@ -12,6 +12,7 @@
 	<xsl:import href="browser/view/stats.xsl"/>
 	
 	<xsl:param name="sparql"/>
+	<xsl:param name="formatParameter"/>
 	<xsl:param name="outputFolder"/>
 	<xsl:param name="pluginDir"/>
 	<!--<xsl:param name="$0" select="document(concat($pluginDir,'/html/browserTemplate.html'))"/>-->
@@ -153,8 +154,8 @@
 		<xsl:param name="data" tunnel="yes"/>
 		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
 			<h1>Contexts</h1>
-			<a class="btn btn-primary" role="button" href="#links">Links</a>
-			<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+			<!--<a class="btn btn-primary" role="button" href="#links">Links</a>
+			<a class="btn btn-primary" role="button" href="#stats">Stats</a>-->
 		</div>
 		<xsl:apply-templates select="$data" mode="table">
 			<xsl:with-param name="location" select="'center'"/>

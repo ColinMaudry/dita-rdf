@@ -270,7 +270,7 @@
 		<xsl:param name="uri"/>
 		<xsl:param name="queryName"/>
 		<xsl:variable name="queryText" select="encode-for-uri(colin:getQuery($queryName,$uri))"/>		
-		<xsl:variable name="queryUrl" select="concat($sparqlRoot,$queryText,'&amp;output=xml')"></xsl:variable>
+		<xsl:variable name="queryUrl" select="concat($sparqlRoot,$queryText,'&amp;',$formatParameter,'=xml')"></xsl:variable>
 		<xsl:message select="concat('Query ',$queryName,': ',replace(colin:getQuery($queryName,$uri),'&#xA;',' '))"></xsl:message>
 		<xsl:copy-of select="document($queryUrl)/*"/>
 	</xsl:template>
