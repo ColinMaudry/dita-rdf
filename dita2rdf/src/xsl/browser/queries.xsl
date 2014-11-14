@@ -242,6 +242,26 @@
 					}
 					}
 			</query>
+			<query name="linked-elements" replace="yes">
+				PREFIX dita: &lt;http://purl.org/dita/ns#>
+				PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>
+							
+				select ?targetElementId ?element_type ?text ?topic_or_map_title (count(?sourceElement) as ?number_of_references) {
+				graph ?uri	{
+					
+					{?sourceElement dita:conref ?targetElement .} union 
+					{?sourceElement dita:xref ?targetElement }
+					?targetElement dita:text ?text ;
+					dita:id ?targetElementId .
+					?topicOrMap dita:element ?targetElement ;
+					dita:title ?topic_or_map_title .
+					} 
+					
+					}
+					GROUP BY ?targetElementId ?topic_or_map_title ?element_type ?text
+					ORDER BY DESC(?number_of_references)
+					LIMIT 30
+			</query>
 		</queries>
 	</xsl:param>
 	
