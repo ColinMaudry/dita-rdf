@@ -189,6 +189,8 @@
 			<xsl:call-template name="colin:getRdfTypes">
 				<xsl:with-param name="class" select="@class"/>
 			</xsl:call-template>
+			<!-- Ideally we would retrieve this label from the ontology, but the ontology doesn't support ALL possible DITA elements (yet). -->
+			<rdfs:label><xsl:value-of select="local-name(.)"/></rdfs:label>
 			<xsl:call-template name="colin:ditaText"/>
 		</rdf:Description>
 	</xsl:template>

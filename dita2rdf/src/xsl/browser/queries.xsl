@@ -252,6 +252,7 @@
 					{?sourceElement dita:conref ?targetElement .} union 
 					{?sourceElement dita:xref ?targetElement }
 					?targetElement dita:text ?text ;
+					rdfs:label ?element_type ;
 					dita:id ?targetElementId .
 					?topicOrMap dita:element ?targetElement ;
 					dita:title ?topic_or_map_title .
