@@ -117,11 +117,10 @@
 		<xsl:value-of select="resolve-uri($cleanHref,$baseUri)"/>
 	</xsl:function>
 	
-	<xsl:function as="node()" name="colin:getFragmentIdFromHref">
+	<xsl:function name="colin:getFragmentIdFromHref">
 		<xsl:param name="ditaHref"/>
 		<xsl:variable name="fragment" select="if (contains($ditaHref,'#')) then substring-after($ditaHref,'#') else ''"/>
 		<xsl:variable name="fragmentId" select="if (contains($fragment,'/')) then concat('#',substring-after($fragment,'/')) else ''"/>
-		
 		<xsl:value-of select="$fragmentId"></xsl:value-of>
 	</xsl:function>
 
@@ -167,14 +166,7 @@
 		<xsl:element name="{$elementName}" namespace="{$namespace}">
 			<xsl:choose>
 				<xsl:when test="$objectType = 'resource'">
-					<rdf:Description>
-						<xsl:attribute name="rdf:about" select="colin:getInternalObjectUri($documentUri,@xtrc,@id)"/>
-						<xsl:apply-templates select="@id"/>
-						<xsl:call-template name="colin:getRdfTypes">
-							<xsl:with-param name="class" select="@class"/>
-						</xsl:call-template>
-						<xsl:call-template name="colin:ditaText"/>
-					</rdf:Description>
+					<xsl:apply-templates mode="colin:createElementAsResource" select="."/>
 				</xsl:when>
 				<xsl:when test="$objectType = 'literal'">
 					<xsl:if test=".//text()">
@@ -189,6 +181,18 @@
 		<!-- This apply-templates might lead to surprises :) -->
 		<xsl:apply-templates select="*"/>
 	</xsl:template>
+	<xsl:template match="*" mode="colin:createElementAsResource">	
+		<xsl:param name="documentUri" tunnel="yes"/>
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="colin:getInternalObjectUri($documentUri,@xtrc,@id)"/>
+			<xsl:apply-templates select="@id"/>
+			<xsl:call-template name="colin:getRdfTypes">
+				<xsl:with-param name="class" select="@class"/>
+			</xsl:call-template>
+			<xsl:call-template name="colin:ditaText"/>
+		</rdf:Description>
+	</xsl:template>
+	
 	
 	<!-- The beauty of the tunnels: whenever @xml:lang is found, the $language param is set or reset and passed to the next templates. -->
 	<xsl:template match="@xml:lang[.!='']">
@@ -208,12 +212,13 @@
 		<xsl:value-of select="if ($rootElement/@id!='') then $rootElement/@id else generate-id($rootElement)"/>
 	</xsl:template>
 	
-	<xsl:template name="colin:justGetTheUri">
+	<xsl:template name="colin:justGetTheUriOrElement">
 		<!-- justGetTheUri = don't apply templates on the target document. This can prevent loops and parsing X times the same referenced file -->
-		<xsl:param name="resolvedUri" as="xs:anyURI"/>
+		<!--  -->
+		<xsl:param name="resolvedUrl" as="xs:anyURI"/>
 		<xsl:param name="fragmentId"/>
 		<xsl:param name="language" tunnel="yes"/>
-		<xsl:variable name="targetDocumentRoot" select="document($resolvedUri)/*" as="node()"/>
+		<xsl:variable name="targetDocumentRoot" select="document($resolvedUrl)/*" as="node()"/>
 		<xsl:variable name="targetDocumentLang">
 			<xsl:choose>
 				<xsl:when test="$targetDocumentRoot/@xml:lang!=''">
@@ -227,6 +232,17 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:attribute name="rdf:resource" select="colin:getInformationObjectUri($targetDocumentRoot/local-name(),$targetDocumentLang,$targetDocumentRoot/@id,$fragmentId)"/>
+		<xsl:variable name="targetDocumentUri" select="colin:getInformationObjectUri($targetDocumentRoot/local-name(),$targetDocumentLang,$targetDocumentRoot/@id,'')"/>
+		<xsl:choose>
+			<xsl:when test="$fragmentId!=''">
+				<xsl:variable name="targetElement" select="document($resolvedUrl)//*[@id=substring-after($fragmentId,'#')][1]" as="node()"/>
+				<xsl:apply-templates mode="colin:createElementAsResource" select="$targetElement">
+					<xsl:with-param name="documentUri" tunnel="yes" select="$targetDocumentUri"/>
+				</xsl:apply-templates>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:attribute name="rdf:resource" select="$targetDocumentUri"/>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>
