@@ -243,7 +243,7 @@
 		<!-- The idea is not to store the whole content of an element, just to give an idea of what it contains -->
 		<!-- In spite of normalize-space, I still see <dita:text> </dita:text> -->
 		<xsl:if test="$text != '' and $text !=' '">
-			<dita:text><xsl:value-of select="if (string-length($text)&gt;80) then concat(substring($text,1,80),'...') else $text"/></dita:text>
+			<dita:text><xsl:value-of select="if (string-length($text)&gt;140) then concat(substring($text,1,140),'...') else $text"/></dita:text>
 		</xsl:if>
 	</xsl:template>
 	
