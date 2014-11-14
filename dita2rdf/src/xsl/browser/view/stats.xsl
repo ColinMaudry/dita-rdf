@@ -29,7 +29,7 @@
 		data-sgvizler-query="
 		{colin:getQuery('basic-file-metadata',$uri)}" 
 		data-sgvizler-chart="google.visualization.Table"
-		style="width:100%; min-height:50px; border:1px solid grey; display: inline-block;"></div>
+		style="width:100%; min-height:250px; border:1px solid grey; display: inline-block;"></div>
 </xsl:template>
 
 <xsl:template name="linkedElements">
@@ -40,7 +40,7 @@
 		data-sgvizler-query="
 		{colin:getQuery('linked-elements',$contextUri)}" 
 		data-sgvizler-chart="google.visualization.Table"
-		style="width:100%; min-height:50px; border:1px solid grey; display: inline-block;"></div>
+		style="width:100%; height:250px; border:1px solid grey; display: inline-block;"></div>
 </xsl:template>
 
 </xsl:stylesheet>
