@@ -247,8 +247,8 @@
 				PREFIX dcat: &lt;http://www.w3.org/ns/dcat#>
 							
 				select ?targetElementId ?element_type ?text ?topic_or_map_title (count(?sourceElement) as ?number_of_references) {
-				graph ?uri	{
-					
+				graph ?graph	{
+					?uri a dcat:Dataset .
 					{?sourceElement dita:conref ?targetElement .} union 
 					{?sourceElement dita:xref ?targetElement }
 					?targetElement dita:text ?text ;
