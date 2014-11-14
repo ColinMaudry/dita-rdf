@@ -5,8 +5,6 @@
 	xmlns:s="http://www.w3.org/2005/sparql-results#"
 	exclude-result-prefixes="colin doc s">
 	<xsl:import href="browser/queries.xsl"/>
-	<xsl:import href="browser/allMaps.xsl"/>
-	<xsl:import href="browser/allTopics.xsl"/>
 	<xsl:import href="browser/view/context.xsl"/>
 	<xsl:import href="browser/view/map.xsl"/>
 	<xsl:import href="browser/view/topic.xsl"/>	
