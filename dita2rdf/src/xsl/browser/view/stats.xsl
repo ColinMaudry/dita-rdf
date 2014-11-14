@@ -9,7 +9,7 @@
 <!-- Reusable stats blocks -->
 <xsl:template name="contextMapgraph">
 	<xsl:param name="objectInfo" tunnel="yes"/>
-	<xsl:param name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
+	<xsl:variable name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
 					
 	<div id="contextMapgraph"  class="stat"
 		data-sgvizler-chart-options="directed=true"
@@ -29,8 +29,18 @@
 		data-sgvizler-query="
 		{colin:getQuery('basic-file-metadata',$uri)}" 
 		data-sgvizler-chart="google.visualization.Table"
-		style="width:100%; min-height:50px; border:1px solid grey; display: inline-block;"></div>
+		style="width:100%; min-height:250px; border:1px solid grey; display: inline-block;"></div>
 </xsl:template>
 
+<xsl:template name="linkedElements">
+	<xsl:param name="objectInfo" tunnel="yes"/>
+	<xsl:variable name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
+	<div id="linked-elements" class="stat"
+		data-sgvizler-endpoint="{$sparql}"
+		data-sgvizler-query="
+		{colin:getQuery('linked-elements',$contextUri)}" 
+		data-sgvizler-chart="google.visualization.Table"
+		style="width:100%; height:250px; border:1px solid grey; display: inline-block;"></div>
+</xsl:template>
 
 </xsl:stylesheet>

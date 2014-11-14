@@ -140,9 +140,7 @@
 				<xsl:otherwise>dita</xsl:otherwise>
 		</xsl:choose>
 		</dita:format>
-		<!-- can be dita:href or dita:conref -->
-		<xsl:element name="{concat('dita:', local-name())}">
-			
+		<xsl:element name="dita:href">
 			<xsl:variable name="resolvedUri" select="colin:resolveDitaHref(.,$currentUri)"/>
 			<xsl:choose>
 				<!-- Only parse the next document if the current document is part of the documentation set.
@@ -164,8 +162,8 @@
 					</xsl:choose>											
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:call-template name="colin:justGetTheUri">
-						<xsl:with-param name="resolvedUri" select="colin:resolveDitaHref(.,$currentUri)"/>
+					<xsl:call-template name="colin:justGetTheUriOrElement">
+						<xsl:with-param name="resolvedUrl" select="colin:resolveDitaHref(.,$currentUri)"/>
 						<xsl:with-param name="fragmentId" select="colin:getFragmentIdFromHref(.)"/>
 					</xsl:call-template>
 				</xsl:otherwise>
@@ -177,8 +175,8 @@
 		<xsl:param name="currentUri" tunnel="yes"/>
 		<rdf:type rdf:resource="http://purl.org/dita/ns#Conref"/>
 		<dita:conref>
-			<xsl:call-template name="colin:justGetTheUri">
-				<xsl:with-param name="resolvedUri" select="colin:resolveDitaHref(.,$currentUri)"/>
+			<xsl:call-template name="colin:justGetTheUriOrElement">
+				<xsl:with-param name="resolvedUrl" select="colin:resolveDitaHref(.,$currentUri)"/>
 				<xsl:with-param name="fragmentId" select="colin:getFragmentIdFromHref(.)"/>
 			</xsl:call-template>
 		</dita:conref>
@@ -245,7 +243,7 @@
 		<!-- The idea is not to store the whole content of an element, just to give an idea of what it contains -->
 		<!-- In spite of normalize-space, I still see <dita:text> </dita:text> -->
 		<xsl:if test="$text != '' and $text !=' '">
-			<dita:text><xsl:value-of select="if (string-length($text)&gt;80) then concat(substring($text,1,80),'...') else $text"/></dita:text>
+			<dita:text><xsl:value-of select="if (string-length($text)&gt;140) then concat(substring($text,1,140),'...') else $text"/></dita:text>
 		</xsl:if>
 	</xsl:template>
 	
