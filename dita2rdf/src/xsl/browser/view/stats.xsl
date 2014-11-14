@@ -10,7 +10,7 @@
 <xsl:template name="contextMapgraph">
 	<xsl:param name="objectInfo" tunnel="yes"/>
 	<xsl:variable name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
-					
+	<h3 id="map-graph">Map graph visualization</h3>			
 	<div id="contextMapgraph"  class="stat"
 		data-sgvizler-chart-options="directed=true"
 		data-sgvizler-endpoint="{$sparql}" 
@@ -35,6 +35,7 @@
 <xsl:template name="linkedElements">
 	<xsl:param name="objectInfo" tunnel="yes"/>
 	<xsl:variable name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
+	<h3 id="linked-elements">Linked elements</h3>
 	<div id="linked-elements" class="stat"
 		data-sgvizler-endpoint="{$sparql}"
 		data-sgvizler-query="
