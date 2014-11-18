@@ -36,7 +36,7 @@
 	<xsl:param name="objectInfo" tunnel="yes"/>
 	<xsl:variable name="contextUri"  select="$objectInfo/s:binding[@name='thing']/s:uri/text()"/>
 	<h3 id="linked-elements">Linked elements</h3>
-	<div id="linked-elements" class="stat"
+	<div id="linked-elements-table" class="stat"
 		data-sgvizler-endpoint="{$sparql}"
 		data-sgvizler-query="
 		{colin:getQuery('linked-elements',$contextUri)}" 
