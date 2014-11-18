@@ -224,6 +224,7 @@
 		<copy todir="${dita.map.output.dir}/darwin">
 			<fileset dir="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/browser" includes="css/*.css,js/*.js"/>
 		</copy>
+		<unzip dest="${dita.map.output.dir}/darwin" src="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/browser/bootstrap.zip"/>
 		<xslt style="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl/browser.xsl" in="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/browser/html/browserTemplate.html" out="${dita.map.output.dir}/darwin/index.html">
 			<param name="sparql" expression="${repository.select.url}"/>
 			<param name="formatParameter" expression="${repository.formatParameter}"/>
