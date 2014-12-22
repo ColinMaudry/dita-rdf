@@ -23,17 +23,17 @@
 	<http://purl.org/dita/ns#>
 	a owl:Ontology ;
 	dcterms:title "DITA RDF ontology" ;
-	dcterms:creator <http://colin.maudry/rdf/colin-maudry#me> ;
+	dcterms:creator <http://colin.maudry.com/rdf/me> ;
 	dcterms:created "2013-01-04"^^xsd:date ;
 	dcterms:modified "2014-08-03"^^xsd:date ;
 	dcterms:description "The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain)." ;
 	cc:license <http://unlicense.org> ;
 	foaf:depiction <http://bit.ly/DitaRdfLucidChart> ;
-	vann:preferredNamespaceUri "http://purl.org/dita/ns#";
+	vann:preferredNamespaceUri <http://purl.org/dita/ns#>;
     vann:preferredNamespacePrefix "dita";
 	rdfs:seeAlso <http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html> .
 
-	<http://colin.maudry/rdf/colin-maudry#me> foaf:name "Colin Maudry" ;
+	<http://colin.maudry.com/rdf/me> foaf:name "Colin Maudry" ;
 		foaf:mbox <mailto:colin@maudry.com> .
 	
 	#Classes
