@@ -21,9 +21,8 @@
 		</dita-ot-fail>
 		
 	</target>
-	<property name="dita.input.valfile" value="${args.filter}"/>
 	<target name="dita2rdf" depends="dita2rdf.init, build-init,short-preprocess, map2rdf"/>
-	<target name="short-preprocess" depends="gen-list,debug-filter,copy-generated-files,keyref"/>
+	<target name="short-preprocess" depends="preprocess.init,gen-list,debug-filter,copy-files,keyref"/>
 	<!-- 
 	For userguide.ditamap:
 			-with preprocess: 17 seconds total processing time
@@ -134,7 +133,7 @@
 		<makeurl property="dita.map.output.dir.url" file="${dita.map.output.dir}" validate="no"></makeurl>
 		<makeurl property="work.dir.url" file="${dita.temp.dir}" validate="no"></makeurl>
 		<makeurl property="customization.dir.url" file="${customization.dir}"></makeurl>
-		<makeurl property="user.input.dir.url" file="${dita.input.dirname}"></makeurl>
+		<makeurl property="user.input.dir.url" file="${user.input.dir}"></makeurl>
 		
 		
 		<mkdir dir="${dita.map.output.dir}"/>
