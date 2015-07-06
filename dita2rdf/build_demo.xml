@@ -3,7 +3,10 @@
 	
 	<!-- User properties -->
 				<!-- Enter the location of you DITA OT directory here: -->
-				<property name="ditaot.dir" value="C:/Users/colin/programs/DITA-OT1.8.4/"/>
+	<property name="ditaot.dir" value="C:/Users/colin/programs/dita-ot-2.1.0/"/>
+	<condition property="executable" value="dita.bat" else="dita">
+		<os family="windows"/>
+	</condition>
 	<property name="demo-set" value="ditaot-userguide">
 					<!-- Possibe demo sets:
 					- ditaot-userguide (the DITA OT user guide)
@@ -22,7 +25,7 @@
 	
 	<!--/ User properties -->
 	
-	<property name="demo.dir" value="demo"/>
+	<property name="demo.dir" value="${basedir}/demo"/>
 	<property name="temp.demo.dir" value="${demo.dir}/out/temp"/>
 	<property name="demo.input.dir" value="${temp.demo.dir}/unzipped/"/>
 	<property file="demo/properties/${demo-set}.properties"></property>
@@ -90,18 +93,18 @@
 		<mkdir dir="${demo.input.dir}"/>
 		<unzip src="${demo.zip}" dest="${demo.input.dir}"/>
 		<move file="${demo.input.dir}/${demo.input.path}${demo.input.filename}" tofile="${demo.input}"/>
-		<exec dir="${ditaot.dir}" executable="${ditaot.dir}tools/ant/bin/ant.bat" searchpath="true">
+		<exec dir="${ditaot.dir}" executable="${ditaot.dir}bin/${executable}" searchpath="true">
 			<env key="DITA_DIR" value="${ditaot.dir}"/>
 			<env key="CLASSPATH" value="${ditaot.classpath}"/>
 			<arg prefix="-Djavax.xml.transform.TransformerFactory=" value="net.sf.saxon.TransformerFactoryImpl"/>
-			<arg prefix="-Dargs.input=" path="${demo.input}"/>
-			<!--<arg prefix="-Dargs.input=" path="${demo.dir}/learning/learningsample.ditamap"/>-->
-			<arg prefix="-Doutput.dir=" path="${demo.dir}/out"/>
-			<arg prefix="-Ddita.temp.dir=" path="${temp.demo.dir}/${demo-set}"/>
+			<arg line="-input ${demo.input}"/>
+			<arg line="-output ${demo.dir}/out"/>
+			<arg line="-temp ${temp.demo.dir}/${demo-set}"/>
 			<arg prefix="-Dclean.temp=" value="no"/>
-			<arg prefix="-Dtranstype=" value="rdf"/>
+			<arg line="-format rdf"/>
+			<arg line="-verbose"/>
 			<arg prefix="-Dargs.debug=" value="0"/>
-			<arg prefix="-Dargs.filter=" path="${demo.input.dir}${demo.input.path}editor.ditaval"/>
+			<!--<arg line="-filter ${demo.input.dir}${demo.input.path}editor.ditaval"/>-->
 			<arg prefix="-Dargs.buildBrowser=" value="1"/>
 		</exec>
 	</target>

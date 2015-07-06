@@ -29,7 +29,7 @@
 			<xsl:choose>
 				<xsl:when test="../@href[contains(.,'.dita')] | ../@href[../@format='dita' or ../@format='ditamap'] | ../@href[contains(.,'.xml') and not(../@format)]">
 					<!-- I won't be able to use document() in the for each because I won't be in the context of a document node. I consequently need to store the XML tree of the target file in a variable, to process it afterward. -->
-					<xsl:copy-of select="document(colin:cleanDitaHref(../@href,$currentUri))"/>
+					<xsl:copy-of select="document(colin:resolveDitaHref(../@href,$currentUri))"/>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:text></xsl:text>					

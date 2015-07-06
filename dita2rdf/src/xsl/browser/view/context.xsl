@@ -61,6 +61,8 @@
 		</xsl:apply-templates>
 		
 		<xsl:call-template name="contextMapgraph"/>
+		
+		<xsl:call-template name="linkedElements"/>
 	</xsl:template>
 </xsl:stylesheet>
 

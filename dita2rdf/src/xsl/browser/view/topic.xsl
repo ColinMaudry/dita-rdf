@@ -15,8 +15,9 @@
 	<xsl:template mode="topic" match="s:result">
 		<xsl:param name="template" tunnel="yes"/>
 		<xsl:variable name="targetFileUrl" select="concat($outputFolder,'/',colin:uri2path('topic',s:binding[@name='thing']/s:uri))"/>
+		<xsl:message select="$targetFileUrl"/>
 		<xsl:if test="preceding-sibling::s:result[1]/s:binding[@name='thing']/s:uri/text() != s:binding[@name='thing']/s:uri/text()">
-			<xsl:result-document  method="xhtml" href="{$outputFolder}/{colin:uri2path('topic',s:binding[@name='thing']/s:uri)}">
+			<xsl:result-document  method="xhtml" href="{$targetFileUrl}">
 				<xsl:call-template name="topicPage">
 					<xsl:with-param name="objectInfo" select="." tunnel="yes"/>
 				</xsl:call-template>
@@ -39,15 +40,21 @@
 	</xsl:template>	
 	
 	<xsl:template name="topicContent">
+		<xsl:param name="objectInfo" tunnel="yes"/>
 		<xsl:param name="data" tunnel="yes"/>
 		<xsl:param name="title"/>
 		<div class="well well-sm" id="datanav" style="position: fixed; width: 100%;">
 			<h1><xsl:copy-of select="$title"/></h1>
 			<a class="btn btn-primary" role="button" href="#links">Links</a>
-			<a class="btn btn-primary" role="button" href="#stats">Stats</a>
+			<a class="btn btn-primary" role="button" href="#metadata">Metadata</a>
 		</div>
 		<xsl:apply-templates select="$data" mode="table">
 			<xsl:with-param name="location" select="'center'"/>
 		</xsl:apply-templates>
+		
+		<!-- Stats blocks -->
+		<xsl:call-template name="basicMetadataTable">
+			<xsl:with-param name="uri" select="$objectInfo/s:binding[@name='thing']/s:uri"/>
+		</xsl:call-template>
 	</xsl:template>
 </xsl:stylesheet>

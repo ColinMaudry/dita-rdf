@@ -1669,7 +1669,7 @@
                     "GROUP BY ?class\n" +
                     "ORDER BY ?class",
                 froms: [],
-                endpoint: "http://sws.ifi.uio.no/sparql/world",
+                endpoint: "http://localhost:8080/marmotta/sparql/select",
                 endpoint_output_format: 'json',  // xml, json, jsonp
                 endpoint_results_urlpart: "?output=text&amp;query=",
                 validator_url: "http://sparql.org/validate/query" +
