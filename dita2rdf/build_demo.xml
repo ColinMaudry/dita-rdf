@@ -99,11 +99,12 @@
 			<arg prefix="-Djavax.xml.transform.TransformerFactory=" value="net.sf.saxon.TransformerFactoryImpl"/>
 			<arg line="-input ${demo.input}"/>
 			<arg line="-output ${demo.dir}/out"/>
-			<arg prefix="-temp ${temp.demo.dir}/${demo-set}"/>
+			<arg line="-temp ${temp.demo.dir}/${demo-set}"/>
 			<arg prefix="-Dclean.temp=" value="no"/>
 			<arg line="-format rdf"/>
+			<arg line="-verbose"/>
 			<arg prefix="-Dargs.debug=" value="0"/>
-			<arg prefix="-filter ${demo.input.dir}${demo.input.path}editor.ditaval"/>
+			<!--<arg line="-filter ${demo.input.dir}${demo.input.path}editor.ditaval"/>-->
 			<arg prefix="-Dargs.buildBrowser=" value="1"/>
 		</exec>
 	</target>
