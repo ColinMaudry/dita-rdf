@@ -60,7 +60,7 @@
 	</target>
 	<target name="package-zip" description="Add the DITA RDF plugin files to a ZIP archive." depends="make.temp.dir">
 		<zip destfile="dita2rdf-ditaot-plugin.zip">
-			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"/>
+			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*" excludes="**/build.properties"/>
 			<zipfileset dir="../documentation/" includes="*.pdf,dita-rdf.html,*.chm" prefix="${plugin-id}/documentation"/>
 		</zip>
 	</target>	
