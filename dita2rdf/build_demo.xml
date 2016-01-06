@@ -2,8 +2,8 @@
 <project name="build.dita-rdf.dita-ot.plugin" default="package-zip-copy-plugin-demo" basedir=".">
 	
 	<!-- User properties -->
-				<!-- Enter the location of you DITA OT directory here: -->
-	<property name="ditaot.dir" value="C:/Users/colin/programs/dita-ot-2.1.0/"/>
+	<property file="build_demo.properties"/>
+	
 	<condition property="executable" value="dita.bat" else="dita">
 		<os family="windows"/>
 	</condition>
@@ -42,7 +42,7 @@
 	<property name="plugin-id" value="com.github.colinmaudry.dita2rdf"></property>
 	<property name="temp.plugin.dir" location="temp"/>
 	<property name="dita-rdf-ot-plugin-dir" value="dita-ot"/>
-	<property name="ditaot.classpath" value="${ditaot.dir}\lib;${ditaot.dir}lib/dost.jar;${ditaot.dir}lib/commons-codec-1.4.jar;${ditaot.dir}lib/resolver.jar;${ditaot.dir}lib/icu4j.jar;${ditaot.dir}lib/xercesImpl.jar;${ditaot.dir}lib/xml-apis.jar;${ditaot.dir}lib/saxon/saxon9.jar;${ditaot.dir}lib/saxon/saxon9-dom.jar;"/>
+	<property name="ditaot.classpath" value="${ditaot.dir}/lib;${ditaot.dir}lib/dost.jar;${ditaot.dir}/lib/commons-codec-1.4.jar;${ditaot.dir}/lib/resolver.jar;${ditaot.dir}/lib/icu4j.jar;${ditaot.dir}/lib/xercesImpl.jar;${ditaot.dir}/lib/xml-apis.jar;${ditaot.dir}/lib/saxon/saxon9.jar;${ditaot.dir}/lib/saxon/saxon9-dom.jar;"/>
 	<target name="package-zip-copy-plugin" depends="package-zip,copy-plugin-dita-ot">
 		<zip destfile="demo/ditardf-project.zip">
 			<fileset dir="../documentation/src/" includes="**/*.dita*"/>
@@ -66,8 +66,8 @@
 	</target>	
 	
 	<target name="copy-plugin-dita-ot" description="Copy the DITA RDF plugin to the DITA OT">
-		<delete dir="${ditaot.dir}plugins/${plugin-id}"/>
-		<copy todir="${ditaot.dir}plugins">
+		<delete dir="${ditaot.dir}/plugins/${plugin-id}"/>
+		<copy todir="${ditaot.dir}/plugins">
 			<fileset dir="${temp.plugin.dir}" includes="${plugin-id}/**/*"></fileset>
 		</copy>
 		<antcall  target="run-integrator"/>
@@ -85,7 +85,7 @@
 	</target>
 	<target name="demo">
 		
-		<delete includeemptydirs="true" verbose="yes">
+		<delete includeemptydirs="true" verbose="yes" failonerror="false">
 			<fileset dir="demo/out" includes="**" excludes="*.rdf"/>
 		</delete>
 		<antcall target="download-oxygen-userguide"/>
@@ -93,19 +93,19 @@
 		<mkdir dir="${demo.input.dir}"/>
 		<unzip src="${demo.zip}" dest="${demo.input.dir}"/>
 		<move file="${demo.input.dir}/${demo.input.path}${demo.input.filename}" tofile="${demo.input}"/>
-		<exec dir="${ditaot.dir}" executable="${ditaot.dir}bin/${executable}" searchpath="true">
+		<exec dir="${ditaot.dir}" executable="${ditaot.dir}/bin/${executable}">
 			<env key="DITA_DIR" value="${ditaot.dir}"/>
 			<env key="CLASSPATH" value="${ditaot.classpath}"/>
 			<arg prefix="-Djavax.xml.transform.TransformerFactory=" value="net.sf.saxon.TransformerFactoryImpl"/>
 			<arg line="-input ${demo.input}"/>
-			<arg line="-output ${demo.dir}/out"/>
+			<arg line="-output ${output.dir}"/>
 			<arg line="-temp ${temp.demo.dir}/${demo-set}"/>
-			<arg prefix="-Dclean.temp=" value="no"/>
+			<arg prefix="-Dclean.temp=" value="${clean.temp}"/>
 			<arg line="-format rdf"/>
 			<arg line="-verbose"/>
 			<arg prefix="-Dargs.debug=" value="0"/>
 			<!--<arg line="-filter ${demo.input.dir}${demo.input.path}editor.ditaval"/>-->
-			<arg prefix="-Dargs.buildBrowser=" value="1"/>
+			<arg prefix="-Dargs.buildBrowser=" value="${build.browser}"/>
 		</exec>
 	</target>
 	
