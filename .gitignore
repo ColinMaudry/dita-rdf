@@ -8,8 +8,8 @@ test*
 dita2rdf/demo/information/
 dita2rdf/demo/docsrc
 dita2rdf/demo/out/*
-dita2rdf/src/customization/*.properties
-!dita2rdf/src/customization/build_template.properties
+**/*.properties
+!**/*_template.properties
 dita2rdf/src/view
 *.rdf
 *.list

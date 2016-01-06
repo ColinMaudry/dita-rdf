@@ -21,11 +21,12 @@
  		<title>Contact</title>
 			<p>I fluently speak French, English and Spanish.</p>
 			<ul id="ul_vjj_kvr_3p">
+				<li>My website: <xref format="html"
+					href="http://colin.maudry.com" scope="external">http://colin.maudry.com</xref></li>
 				<li>Twitter: <xref format="html" href="https://twitter.com/CMaudry" scope="external">@CMaudry</xref> (you can also follow the hash tag <xref format="html"
 							href="https://twitter.com/hashtag/ditardf" scope="external">#ditardf</xref>)
 				</li>
-				<li>Email: <xref href="mailto:colin@maudry.com" scope="external" format="html">colin@maudry.com</xref>, or <xref href="mailto:colin.maudry@semaku.com" scope="external" format="html">colin.maudry@semaku.com</xref> for tailored
-					service</li>
+				<li>Email: <xref href="mailto:colin@maudry.com" scope="external" format="html">colin@maudry.com</xref></li>
 				<li>LinkedIn: <xref format="html" href="https://nl.linkedin.com/in/colinmaudry/en" scope="external">Colin Maudry</xref></li>
 				<li>Skype: colin.maudry</li>
 			</ul>

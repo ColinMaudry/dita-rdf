@@ -2,7 +2,6 @@
 <concept id="concept_gfw_qhr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
 	<title>Welcome to the <keyword keyref="project-name"/></title>
- <shortdesc></shortdesc>
 	<prolog>
 		<author>Colin Maudry</author>
 	</prolog>

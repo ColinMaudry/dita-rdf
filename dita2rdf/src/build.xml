@@ -181,7 +181,7 @@
 		<equals arg1="${repository.http.method}" arg2="PUT"/>
 	</condition>
 	
-	<target name="publish.repository">
+	<target name="publish.repository" unless="skipUpload">
 		<tstamp/>
 		<xmlproperty file="${xmlConfigPath}"/>
 		<xmlproperty file="${dita.temp.dir}\docmeta.xml"/>
