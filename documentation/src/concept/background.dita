@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_etk_wjr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+ <title>Project background</title>
+ <shortdesc></shortdesc>
+ <conbody>
+ 	<p>This idea came to me when we (<xref href="welcome.dita" scope="external">NXP Customer Documentation Services</xref>) <xref format="html"
+				href="http://blog.nxp.com/is-linked-data-the-future-of-data-integration-in-the-enterprise/" scope="external">decided</xref> to publish the metadata of our products and
+			documents as RDF in order to solve the siloization of our various data types, define company-wide data models and so that external organizations can easily consume this
+			data.</p>
+ 	
+ <p>I set up the publication of the metadata about binary documents (data sheets, user manuals, etc.), but since our DITA content was built on complex relationships (topic reuse) and was our primary format for translation, we needed a proper ontology to describe it. The driver was to provide detailed metrics to authors and greatly facilitate certain internal processes such as the selection of the content to translate or the detection of inconsistencies in the status of documents. Indeed, we considered that being able to formulate multidimensional queries across topics, maps, users, products and company divisions was a major step ahead.</p>
+ 	
+ <p> The driver was consequently mostly internal, but we plan to publish a subset of this metadata when we go live with the whole public data set. Follow <xref format="html"
+				href="http://twitter.com/nxpdata" scope="external">@nxpdata</xref> to get the latest updates about the linked data published by NXP.</p>
+ 	
+ 	<p>Finally, since the challenges we faced were most likely similar to the ones faced by other DITA-enabled organizations, I decided to share my findings.</p>
+ 	
+ 	<p><xref format="html" href="http://twitter.com/wohnjalker" scope="external">John Walker</xref> and Tim Nelissen, from NXP CDS, have since then founded <xref format="html"
+				href="http://semaku.com/" scope="external">Semaku</xref>, a consultancy and software company dedicated to helping organizations to solve their data and content silo issues
+			using the <xref format="html" href="http://linkeddata.org/" scope="external">linked data</xref> principles. I joined them in April 2014.</p>
+ </conbody>
+</concept>

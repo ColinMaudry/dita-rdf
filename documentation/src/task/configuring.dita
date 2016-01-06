@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="task_kb2_mtr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+    <title>Configuring the extraction of the metadata</title>
+	<shortdesc>How to properly configure the <keyword keyref="ditaot-plugin-name"/> for a useful metadata extraction</shortdesc>
+    <taskbody>
+    	<prereq>The <keyword keyref="ditaot-plugin-name"/> must be <xref href="dita2rdf-installing.dita">installed</xref> in your DITA
+			OT.</prereq>
+		<context>You want to configure the <keyword keyref="ditaot-plugin-name"/>.</context>
+		<steps id="steps_bkc_4tr_3p">
+			<step>
+				<cmd>In <filepath>[DITA-OT]/plugins/com.github.colinmaudry.dita2rdf/customization</filepath>, make a copy of <filepath>catalog.xml.orig</filepath>.</cmd>
+			</step>
+			<step>
+				<cmd>Rename the copy <filepath>catalog.xml</filepath></cmd>
+			</step>
+			<step>
+				<cmd>In <filepath>catalog.xml</filepath>, uncomment <tt>&lt;uri name="cfg:rdf/config.xml" uri="rdf/config.xml"/&gt;</tt>.</cmd>
+			</step>
+			<step>
+				<cmd>Save.</cmd>
+			</step>
+			<step>
+				<cmd>In <filepath>[DITA-OT]/plugins/com.github.colinmaudry.dita2rdf/customization/rdf</filepath>, make a copy of <filepath>config.xml.orig</filepath>.</cmd>
+			</step>
+			<step>
+				<cmd>Rename the copy <filepath>config.xml</filepath>.</cmd>
+			</step>
+			<step>
+				<cmd>In <filepath>config.xml</filepath>, follow the instructions to edit the configuration.</cmd>
+			</step>
+		</steps>
+    	<result>The <keyword keyref="ditaot-plugin-name"/> is correctly configured to extract metadata from your DITA content.</result>
+	</taskbody>
+</task>

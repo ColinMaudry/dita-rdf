@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_g3w_csr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>What does it do?</title>
+	<shortdesc>A summary of what the <keyword keyref="ditaot-plugin-name"/> actually does</shortdesc>
+ <conbody>
+ 	<p> The <keyword keyref="ditaot-plugin-name"/> (a.k.a. the dita2rdf plugin) adds a new transtype to the DITA OT: rdf.</p>
+		<p>In short, running the rdf transtype on a DITA map or topic runs an extraction of the metadata of the content and stores it in RDF/XML format, a serialization of RDF. The
+			transformation not only extracts the metadata of the input file, it also follows the references (@href and resolved @keyref) to cover the whole documentation set.</p>
+ 	<p>Once the metadata is extracted as RDF, you should upload it to an RDF repository. To do so, just <xref href="../task/configuring-upload-repository.dita">follow the instructions</xref>. Once the upload is configured, all the RDF output you generate with the rdf transtype will be uploaded to the repository. I will soon add fun things to do with a repository fill of DITA metadata ;-) You'll get updates <xref scope="external" format="html" href="https://twitter.com/hashtag/ditardf">here</xref>.</p>
+		<p>I will speak about this project it during the <xref format="html" href="http://www.infomanagementcenter.com/DITAeurope/2014/index.htm" scope="external"
+				>DITA Europe conference</xref> and the <xref format="html" href="http://oxygenxml.com/events/2014/dita-ot_day.html" scope="external">DITA OT day</xref>. Let's meet
+			there!</p>
+		<section>
+			<title>Metadata cascading</title>
+			<p>The <keyword keyref="ditaot-plugin-name"/> only extracts the metadata at the level where it's expressed and not to apply the metadata cascading rules in the resulting RDF. I'd rather
+				extract incomplete metadata than zealous inexact statements. The only metadata that is currently inherited is the language, as per the XML standard. For two reasons:</p>
+			<ul id="ul_xs3_jsr_3p">
+				<li>It is uncommon to mix content from different language in the same documentation set.</li>
+				<li>In the cases where languages are mixed, people should specify the language of each topic.</li>
+			</ul>
+			<p>I have ideas to distinguish the metadata that genuinely describes a topic or a map from the metadata that is inherited, but I will not apply them until I'm sure it is
+				robust enough.</p>
+		</section>
+ 	<section>
+ 		<title>For my fellow DITA OT hackers</title>
+			<p>The dita2rdf plugin was developped reusing the methodology of the pdf2 plugin for the build and the customization, as I thought many DITA-OT users would feel more
+				comfortable with a familiar plugin structure.</p>
+			<p>However, the dita2rdf plugin differs on a couple of points:</p>
+			<ul id="ul_mmk_nsr_3p">
+				<li>The preprocess is 'specialized' to remove the steps that are not necessary for the purpose of this plugin. It also speeded up the processing. More details <xref
+						format="html" href="https://github.com/ColinMaudry/dita-rdf/issues/14" scope="external">here</xref>.</li>
+				<li>Though the original intent was to rely on the topicmerge to flatten the structure and have only file to process, it appeared too much information was left behind:
+					mapref and @processing-role="resource-only". Topicmerge was consequently also removed, and the parsing is done by following the @href to jump from file to file (the temp
+					files, not the original ones).</li>
+			</ul>
+			<p>For the long term, I aim at removing the preprocess completely and using as much XSLT as possible to make the code more portable.</p>
+ 	</section>
+ </conbody>
+</concept>

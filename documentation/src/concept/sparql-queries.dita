@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_tff_1vr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Useful SPARQL queries</title>
+	<shortdesc>A list of SPARQL queries that will help you understand how querying RDF works. Then, you can make your owns!</shortdesc>
+ <conbody>
+ 	<p>The <xref format="html" href="http://www.w3.org/TR/sparql11-query/" scope="external">SPARQL Protocol And RDF Query Language (SPARQL)</xref>, is the language used to query RDF
+			data.</p>
+ </conbody>
+</concept>

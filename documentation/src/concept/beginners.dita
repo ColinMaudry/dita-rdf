@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_qqq_jpr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>RDF for the beginner</title>
+	<shortdesc>It's just another way to express data.</shortdesc>
+ <conbody>
+ 	<p>First things first, the <xref format="html" href="http://www.w3.org/TR/rdf11-primer/" scope="external">Resource Description Framework (RDF)</xref>, is a W3C recommendation
+			since 2003, with an update to version 1.1 in 2014. Its purpose is to achieve what the Web has enabled for documents, but this time with data. Since the dawn of the Web, one
+			of its main strength is to enable users to interlink documents easily, building browsing paths for the Web users. One Web page can be the starting point to an infinity of
+			other Web pages. With RDF, it's the same, but with data.</p>
+ </conbody>
+</concept>

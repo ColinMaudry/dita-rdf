@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_j21_2vr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Going further, to the infinity and beyond!</title>
+	<shortdesc>DITA metadata is cool, but what about product data? Client data? Support data?</shortdesc>
+ <conbody>
+		<p>You have tried all the useful SPARQL queries and you have discovered a lot of interesting facts about your DITA content. But this is not the end, it's the beginning.</p>
+		<p>By now, you know what a graph looks like and have some notions about querying it.</p>
+		<p>Imagine how it would be to connect other graphs to your DITA metadata graph, such as a product metadata graph, or a company division graph? What about a client graph? The
+			same way you have exported your DITA metadata graph, you could export and connect more metadata from the silos and databases of your organization. You would then be able to
+			query all that data as a single graph and get answers to questions such as:</p>
+		<ul id="ul_cj4_fvr_3p">
+			<li>Which released products don't have a released user manual?</li>
+			<li>For the category of products X, which translations are outdated?</li>
+			<li>Which documentation team has the highest rate of topic reuse?</li>
+			<li>Could I assemble part or a whole DITA map based on product specifications? (Yes, by writing maps for product features or components, not for whole products! See the <xref
+					format="html" href="https://github.com/ColinMaudry/dita-product-cascading" scope="external">DITA product cascading project</xref>)</li>
+			<li>etc...</li>
+		</ul>
+		<p>You could automate the creation of data feeds and reports that would give you the pulse of your organization and help you to take decisions based on tangible facts. </p>
+		<p>If you are interested in connecting your DITA metadata graph to more data, you can email me at <xref href="mailto:colin.maiudry@semaku.com" scope="external" format="html">colin.maudry@semaku.com</xref>,
+			and, together, we will study your requirements.</p>
+	</conbody>
+</concept>

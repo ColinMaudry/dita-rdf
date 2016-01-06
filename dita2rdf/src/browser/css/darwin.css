@@ -1,0 +1,96 @@
+/* line 1, ../sass/darwin.scss */
+.viz-table {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/*body {
+	font-family: Calibri, sans-serif;
+}
+*/
+/* line 12, ../sass/darwin.scss */
+table.browsable a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* line 32, ../sass/darwin.scss */
+table.browsable caption {
+  text-align: right;
+  position: relative;
+  top: 20px;
+  height: 0;
+}
+/* line 36, ../sass/darwin.scss */
+table.browsable > tbody > tr > td {
+  padding: 0;
+  vertical-align: middle;
+}
+/* line 40, ../sass/darwin.scss */
+table.browsable tbody > tr:hover {
+  background-color: #F5F5F5;
+}
+/* line 45, ../sass/darwin.scss */
+table.browsable tr.map {
+  background-color: rgba(30, 144, 255, 0.1);
+}
+/* line 47, ../sass/darwin.scss */
+table.browsable tr.map:hover {
+  background-color: rgba(30, 144, 255, 0.2);
+}
+/* line 45, ../sass/darwin.scss */
+table.browsable tr.topic {
+  background-color: rgba(255, 255, 0, 0.1);
+}
+/* line 47, ../sass/darwin.scss */
+table.browsable tr.topic:hover {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+/* line 50, ../sass/darwin.scss */
+table.browsable td.location {
+  font-size: 0.7em;
+}
+
+/* line 56, ../sass/darwin.scss */
+div.inbound {
+  position: fixed;
+}
+
+/* line 59, ../sass/darwin.scss */
+div.placeholder {
+  visibility: hidden;
+  z-index: -1;
+}
+
+/* line 64, ../sass/darwin.scss */
+div#content table.browsable {
+  margin-top: 80px;
+}
+
+/* line 69, ../sass/darwin.scss */
+#datanav {
+  position: fixed;
+  width: 100%;
+}
+/* line 72, ../sass/darwin.scss */
+#datanav * {
+  float: left;
+}
+/* line 73, ../sass/darwin.scss */
+#datanav .btn {
+  margin: 10px 5px 5px 5px;
+}
+/* line 76, ../sass/darwin.scss */
+#datanav h1 {
+  margin: 5px 20px 5px 10px;
+}
+/* line 78, ../sass/darwin.scss */
+#datanav h1 span {
+  margin-right: 15px;
+}

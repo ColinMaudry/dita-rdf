@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_zxd_55r_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Improving the RDF output</title>
+	<shortdesc>Some advice to get more useful RDF output, and possibly fix issues</shortdesc>
+ <conbody>
+		<p>To avoid issues, here are a couple of things you can do to have good metadata output:</p>
+		<ul id="ul_nq2_v5r_3p">
+			<li>make sure all the maps and topics have an @id attribute in the root element, and that it is unique in your organization (translations excepted).</li>
+			<li>make sure all the maps and topics have a @xml:lang attribute in the root element that respects the recommendations of the W3C. Due to certain spelling and cultural
+				variants (e.g. date formats), distinguishing Bristish English (en-UK) and American English (en-US) is recommended.</li>
+			<li>make sure your topicref have a @format attribute with the right value. It can go well without, looking for '.dita' in the @href value, but some URL might abuse this rule
+				(eg. @href="http://blog.dita.xml.org").</li>
+		</ul>
+	</conbody>
+</concept>

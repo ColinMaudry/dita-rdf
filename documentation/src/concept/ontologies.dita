@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_ubl_hrr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>RDF ontologies</title>
+ <shortdesc>The semantics of the RDF content come from the ontologies.</shortdesc>
+ <conbody>
+		<p>In order to express semantics in RDF, the practitioners rely on ontologies (also called vocabularies or schemas). Although everyone can write new ontologies about anything
+			and publish them, the most popular ontologies are the ones that solve problems and that are the result of a consensus. This way, software anticipate the expected behavior
+			when processing data based on popular ontologies. One of the most popular ontology in the documentation field is <xref format="html"
+				href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms" scope="external">Dublin core</xref>. It was actually used as a reference in the DITA vocabulary
+			written by the DITA Technical committee at the OASIS.</p>
+		<p>In RDF, an ontology describes the semantics of certain things through their relations with other things. For instance, if we made an ontology about dogs, we could either
+			focus on the genetic bounds between races, their abilities for certain tasks, the characteristics of their hair, or even their appearance in famous movies. In the end, there
+			is no wrong ontologies, only ontologies that serve different purposes.</p>
+ </conbody>
+</concept>

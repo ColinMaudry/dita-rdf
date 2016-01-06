@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<!-- Global RDF configuration -->
+	<!--<uri name="cfg:rdf/config.xml" uri="rdf/config.xml"/>-->
+	
+	<!-- XSL processing overriding -->
+	<!--<uri name="cfg:rdf/xsl/custom.xsl" uri="rdf/xsl/custom.xsl"/>-->
+</catalog>

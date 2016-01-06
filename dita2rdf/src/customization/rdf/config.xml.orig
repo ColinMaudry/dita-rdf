@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+		<!-- 
+		This is the base URI that will be use to define the URI of the extracted resources.
+		For instance, if your company is NXP Semiconductors:
+		
+		http://data.nxp.com/resources/
+				
+		As a result, the URI for:
+			<datasheet id="ds_1254933687955" xml:lang="fr-FR">
+				[...]
+			</datasheet>
+		
+		will be:
+			http://data.nxp.com/resources/fr-FR/datasheet/ds_1254933687955
+		
+		The base URIs for resources and for graphs must be a URLs for which you control the domain (example: nxp.com). The URI MUST end with a /.
+		-->
+		<resourcesBaseUri uri="http://data.example.com/resources/"/>
+		<graphsBaseUri uri="http://data.example.com/graphs/"/>
+	
+	<!-- 
+	Same thing here, but for products.
+	This is the URI that will be the base for product URI. It will be completed with prodname and version.
+	-->
+	
+	<productsBaseUri uri="http://data.example.com/resources/products"/>
+	
+	<!-- Here you choose which character you want to use to separate the product URI from its version number. By default it looks like this:
+	http://data.example.com/resources/products/ABC123#1.2.3 
+	
+	Invalid characters: % ? & \ ( ) !
+	-->
+	
+	<productVersionSeparator>#</productVersionSeparator>
+		
+		<!-- Standard doctypes -->
+	<domains>
+		<domain domainId="topic" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="glossentry" baseUri="http://purl.org/dita/ns#"/>
+		
+		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningmap-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="mapgroup-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="subjectScheme" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="sw-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="pr-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="ui-d" baseUri="http://purl.org/dita/ns#"/>
+		
+		<domain domainId="learningBase" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningContent" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningOverview" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningSummary" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningAssessment" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningPlan" baseUri="http://purl.org/dita/ns#"/>
+		
+		<!--  
+		Add the class URI mappings for your shell specializations (document types) below.
+		In RDF, the good practice consists in capitalizing the first letter of the fragment.
+		For instance, if your company is NXP Semiconductors and you have a 'datasheet' doctype:
+		
+		<doctype ditaClass="datasheet/datasheet">http://data.nxp.com/schema/v1/Datasheet</doctype>
+		
+		The base URI (http://data.nxp.com/schema#), must be a URL for which you control the domain (nxp.com). The URI MUST end with a # or a /.
+		In RDF, the convention consists in capitalizing the first letter of the fragment for classes (Datasheet).
+		-->
+		
+		
+		
+		
+		
+	</domains>
+</config>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_er1_rrr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+ <title>Base ontologies</title>
+ <shortdesc>The ontologies from which the DITA RDF ontology is derived</shortdesc>
+ <conbody>
+		<p>I was originally using the Nepomuk ontologies <xref format="html" href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie" scope="external">NIE</xref> and <xref
+				format="html" href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo" scope="external">NFO</xref>, and specialized the classes. The distinction they make between
+			data objects (sequences of bytes) and information elements (interpretations) was very useful to make different statements about the files on the file systems and the
+			semantics resulting from their interpretation.</p>
+		<p>However, for the short term, I considered that these ontologies added more confusion to the users without bringing enough benefits.</p>
+		<p>The DITA RDF ontology is consequently not based on other ontologies, excepting the references to <xref format="html"
+				href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms" scope="external">Dublin Core</xref>, inherited from the <xref format="html"
+				href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/metadata-elements.html" scope="external">DITA specification</xref>.</p>
+	</conbody>
+</concept>

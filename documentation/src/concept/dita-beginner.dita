@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_fzg_jrr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+ <title>DITA for the beginner</title>
+ <shortdesc>DITA is very convenient to manage content as chunks instead of full documents</shortdesc>
+ <conbody>
+  <p>TODO</p>
+ </conbody>
+</concept>

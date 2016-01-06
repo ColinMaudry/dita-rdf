@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_ex5_v4r_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>They talk about the DITA RDF project</title>
+	<shortdesc>Links to pages or videos in which the DITA RDF project is mentioned</shortdesc>
+ <conbody>
+ 	<table>
+ 		<tgroup cols="3">
+ 			<thead>
+ 				<row>
+ 					<entry>Date</entry>
+ 					<entry>Description</entry>
+ 					<entry>Link</entry>
+ 				</row>
+ 			</thead>
+ 			<tbody>
+ 				<row>
+ 					<entry>September 26th, 2014</entry>
+ 					<entry><xref format="html" href="https://www.linkedin.com/in/theresagrotendorst" scope="external">Theresa Grotendorst</xref>, Content Management Consultant, who thinks that semantics are necesssary to publish smarter content. The DITA RDF project is a good step is that direction.</entry>
+ 					<entry><xref format="html" href="http://de.slideshare.net/TheresaGrotendorst/towards-dynamic-and-smart-content-semantic-technologies-for-adaptive-technical-documentation" scope="external">Presentation (Slideshare)</xref></entry>
+ 				</row>
+ 				<row>
+ 					<entry>August 12th, 2014</entry>
+ 					<entry><xref format="html" href="https://twitter.com/garyprusso" scope="external">Gary Russo</xref>, from <xref format="html" href="http://harpercollins.com/"
+								scope="external">Harper Collins</xref>, describing how he could use the dita2rdf DITA OT plugin to export the metadata of the DITA content in <xref format="html"
+								href="http://www.rsuitecms.com/" scope="external">RSuite CMS</xref>, based on a <xref format="html" href="http://www.marklogic.com/solutions/content-management/"
+								scope="external">MarkLogic database</xref></entry>
+ 					<entry><xref format="html" href="http://files.meetup.com/1645603/meetup-2014-08-12.pptx" scope="external">Presentation, 1.5 MB</xref></entry>
+ 				</row>
+ 				<row>
+ 					<entry>November 19th, 2013</entry>
+ 					<entry>Myself, presenting the DITA RDF project at <xref format="html" href="http://www.infomanagementcenter.com/DITAeurope/2013/index.php" scope="external">DITA Europe
+								2013</xref>.</entry>
+ 					<entry>Streamed video, 30 minutes</entry>
+ 				</row>
+ 			</tbody>
+ 		</tgroup>
+ 	</table>
+ </conbody>
+</concept>

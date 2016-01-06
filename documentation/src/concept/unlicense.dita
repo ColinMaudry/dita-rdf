@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_iq4_wvr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Unlicense</title>
+	<shortdesc>The RDF project and its deliverables are licensed under the terms of the Unlicense</shortdesc>
+ <conbody>
+		<p>The DITA RDF ontology, the dita2rdf DITA OT plugin and all the code included in the DITA RDF project are free and released into the public domain, excepted the parts that
+			were reused from the pdf2 DITA-OT plugin, developed by Idiom Inc.</p>
+		<p>See <xref format="html" href="https://github.com/ColinMaudry/dita-rdf/blob/master/UNLICENSE" scope="external">UNLICENSE</xref> and <xref format="html"
+				href="http://unlicense.org/" scope="external">the Unlicense website</xref>.</p>
+		<p>If you find the DITA RDF project useful, I would be grateful if you tweet about it (something like "Kudos to @CMaudry for the #DITA RDF project!
+			http://purl.org/dita/ditardf-project #ditardf") or if you mention the origin (http://purl.org/dita/ditardf-project) and the author (Colin Maudry) of this project in the documentation
+			of your product.</p>
+	</conbody>
+</concept>

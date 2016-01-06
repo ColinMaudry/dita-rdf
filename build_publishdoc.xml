@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="build-documentation" default="package-zip-copy-plugin">
+	<property  file="publishdoc.properties"/>
+	<!-- The Piwik tracking code and the link to Github in the top right corner of the page -->
+	<loadresource property="piwik-code">
+			<file file="documentation/codepiwik.txt"/>
+		</loadresource>
+	<target name="copy-doc-to-documentation">
+		<copy todir="documentation/" failonerror="false">
+			<file file="documentation/src/out/chm/dita-rdf.chm"/>
+			<file file="documentation/src/out/pdf/dita-rdf.pdf"/>
+		</copy>
+		<delete dir="documentation/install/"/>
+		<delete dir="documentation/src/out/"/>
+		<delete dir="documentation/src/temp/"/>
+		<delete file="dita2rdf/demo/ditardf-project.zip"/>
+	</target>
+	<target name="piwik-code">
+		<condition property="hasCode">
+			<resourcecontains substring="piwik" resource="documentation/index.html"/>
+		</condition>
+		<antcall target="insert-piwik-code"/>
+	</target>
+	<target name="insert-piwik-code" unless="hasCode">
+		<echo message="Adding Piwik code to index.html..." level="info"/>
+		<replace file="documentation/index.html" token="&lt;/body>" value="${piwik-code}"/>
+	</target>
+	<target name="ftp-webhelp" depends="copy-doc-to-documentation,piwik-code">
+		<scp todir="${sftp.user}:${sftp.password}@${sftp.server}:${sftp.path}" trust="yes" verbose="yes" sftp="true">
+			<fileset dir="documentation/" includes="*/**" excludes="dita-rdf.html, *.pdf, *.chm, src/"/>			
+		</scp>
+	</target>
+	<target name="package-zip-copy-plugin" depends="ftp-webhelp">
+		<ant antfile="dita2rdf/build_demo.xml" target="package-zip-copy-plugin" usenativebasedir="true"/>
+	</target>
+</project>

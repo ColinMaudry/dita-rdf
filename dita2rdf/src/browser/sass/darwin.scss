@@ -1,0 +1,80 @@
+.viz-table {
+	width:100%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+/*body {
+	font-family: Calibri, sans-serif;
+}
+*/
+
+table.browsable a
+{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	text-decoration:none;
+	color: inherit;
+	padding:8px;
+	box-sizing:border-box;
+}
+
+
+$mapColor:dodgerblue;
+$topicColor:yellow;
+$subjectSchemeColor:green;
+
+
+table.browsable 
+{
+
+	caption { text-align: right;
+		position: relative;
+		top: 20px;
+		height: 0;}
+	& > tbody > tr > td {
+		padding:0;
+		vertical-align: middle;
+	}
+	tbody > tr:hover 	{
+			background-color:#F5F5F5;
+		}
+
+@each $type, $color in (map, $mapColor),(topic,$topicColor) {
+  tr.#{$type} {
+    background-color: rgba($color, 0.1) ;
+    &:hover {background-color: rgba($color, 0.2) ;}
+  }
+}
+	td.location {
+		font-size: 0.7em;
+	}
+	
+}
+
+div.inbound {
+	position: fixed;
+}
+div.placeholder {
+	visibility: hidden;
+	z-index: -1;
+}
+div#content
+	{ table.browsable {
+		margin-top: 80px;
+	}
+}
+
+#datanav {
+	position: fixed;
+	width: 100%;
+	* {float: left;}
+	.btn {
+		margin: 10px 5px 5px 5px;
+	}
+	h1 {
+		margin: 5px 20px 5px 10px;
+		span {margin-right: 15px;}
+	}
+}

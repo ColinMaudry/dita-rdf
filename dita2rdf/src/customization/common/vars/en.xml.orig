@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vars xmlns="http://www.idiominc.com/opentopic/vars">
+
+    <!-- 
+     
+      This file controls strings that appear in the published output.  
+      There is one version of this file per language.  To add support 
+      for a new language, simply create a copy of this file and name 
+      it using the <locale ISO code>.xml format.
+      
+    -->
+
+    <!-- 
+       Strings used in the headers and footers of pages.
+    -->
+	
+		<!--
+		Example:
+		<variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+		
+		-->
+</vars>

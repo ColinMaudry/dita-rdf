@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_etj_tpr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>The relational database table</title>
+	<shortdesc>Relational databases are useful for tabular data, but limited due to the lack of standardization</shortdesc>
+ <conbody>
+ 	<p>Relational database management systems (RDBMS) are the most common way to store data. The most famous solutions are MySQL and Oracle. In these data bases, the data is stored in tables. Each table can have virtually infinite number of columns and rows, and each data entry is stored as a new row. Here is a typical example:</p>
+		<table id="concept_fds_kfq_gp__simpletable_sfv_3gq_gp">
+			<tgroup cols="8">
+				<tbody>
+					<row>
+						<entry id="d1196e22">id</entry>
+						<entry id="d1196e25">firstName</entry>
+						<entry id="d1196e28">familyName</entry>
+						<entry id="d1196e31">age</entry>
+						<entry id="d1196e34">parent</entry>
+						<entry id="d1196e38">sibling</entry>
+						<entry id="d1196e41">child</entry>
+						<entry id="d1196e44">goesToEvent</entry>
+					</row>
+					<row>
+						<entry>1</entry>
+						<entry>Salomé</entry>
+						<entry>Landais</entry>
+						<entry>9</entry>
+						<entry>3,4</entry>
+						<entry>2</entry>
+						<entry> </entry>
+						<entry>11</entry>
+					</row>
+					<row>
+						<entry>2</entry>
+						<entry>Isaac</entry>
+						<entry>Landais</entry>
+						<entry>5</entry>
+						<entry>3,4</entry>
+						<entry>1</entry>
+						<entry> </entry>
+						<entry> </entry>
+					</row>
+					<row>
+						<entry>3</entry>
+						<entry>Eric</entry>
+						<entry>Landais</entry>
+						<entry>34</entry>
+						<entry> </entry>
+						<entry> </entry>
+						<entry>1,2</entry>
+						<entry>5</entry>
+					</row>
+					<row>
+						<entry>4</entry>
+						<entry>Olga</entry>
+						<entry>Landais</entry>
+						<entry>35</entry>
+						<entry> </entry>
+						<entry> </entry>
+						<entry>1,2</entry>
+						<entry>5,8</entry>
+					</row>
+					<row>
+						<entry>5</entry>
+						<entry>Boris</entry>
+						<entry>Todorov</entry>
+						<entry>42</entry>
+						<entry>9</entry>
+						<entry>4</entry>
+						<entry> </entry>
+						<entry>8</entry>
+					</row>
+					<row>
+						<entry>...</entry>
+						<entry>...</entry>
+						<entry>...</entry>
+						<entry>...</entry>
+						<entry>...</entry>
+						<entry>...</entry>
+						<entry>...</entry>
+						<entry>...</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+ 	<p>This table stores the name and the age of people, including how they are related. Each person has a unique identifier in the scope of this table, which enables the creation of relationships across the entries of the table. It is agreed that the last column refers to the rows of another table that stores events, each event also having a unique identifier in the scope of the events table. The identifiers to data entries in another table are called foreign keys.</p>
+ 	
+ 	<p>When it comes to data interlinking, we meet certain problems that are inherent to the way relational databases are meant to work.</p>
+ 	
+ 	<p>Contrary to the Web of documents that uses standards to present the information (HTML, W3C standard) and transport it (HTTP, IETF standard), relational databases are not supported by standard vocabularies or models.</p>
+ 	
+ 	<p>If company Y wants to interchange data with company X, even if they use the same database vendor, they cannot interchange data easily, because they probably use different column headers and made different choices regarding how the data will be distributed across the tables.</p>
+ 	
+ 	<p>Finally, unique identifiers are only unique in a limited scope. In worst cases they are unique in the scope of an individual table, in best cases they are unique in a circle of organizations that agreed on an identification system. This means that when the data is merged with another data set, there is a risk to end up with data entries that have the same identifier, which results in data clashes. To get a feeling of this situation, imagine two cars in the same country having the same license plate, or two phone chips being bound to the same phone number.</p>
+ 	
+ 	<p>On the Web of documents, we have robust worldwide identifiers: Universal Resource Locators (URL). If you visit <xref format="html"
+				href="https://github.com/ColinMaudry/dita-rdf" scope="external">https://github.com/ColinMaudry/dita-rdf</xref>, thanks to standards, you are certain of a couple things:</p>
+		<ul>
+			<li>You can access this content from any computer on the planet that has Internet access, whatever operating system or Internet browser you use</li>
+			<li>The content published at this address is, in a certain extent, under the responsability of Github</li>
+			<li>The transmission of information between your computer and the server is encrypted (HTTPS)</li>
+		</ul> 
+ </conbody>
+</concept>

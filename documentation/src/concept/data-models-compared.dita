@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_arj_npr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Various data models compared with RDF (written for beginners!)</title>
+ <shortdesc></shortdesc>
+	<conbody>
+		<p>To get a better understanding of what would data interlinking mean, let's have a look at how data is usually managed today. I am not a data scientist, thus I will stick to
+			the most traditional principles.</p>
+		<p>In order to compare these data models, we will use the same set of data and represent it in each model. Here is the data, in natural language:</p>
+		<lq><p>Eric Landais, 35 years old, and Olga Landais, 36 years old, have two children, Salomé and Isaac.</p>
+			<p>Salomé is 9 years old and Isaac is 5 years old.</p>
+			<p>Olga has a brother, Boris Todorov, 42 years old.</p>
+			<p>Olga and Eric go together to an event.</p>
+			<p>Olga and Boris go together to another event.</p>
+			<p>Salomé goes to yet another event.</p></lq>
+	</conbody>
+</concept>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_gfw_qhr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Welcome to the <keyword keyref="project-name"/></title>
+ <shortdesc></shortdesc>
+	<prolog>
+		<author>Colin Maudry</author>
+	</prolog>
+ <conbody>
+ 	<p>The objective of this project is to develop an ontology to describe DITA XML objects and to develop tools to generate RDF triples based on that ontology.</p>
+ 	<p>The source code is published <xref format="html" href="https://github.com/ColinMaudry/dita-rdf" scope="external">on Github</xref>.</p>
+ 	<section>
+ 		<title>Objective</title>
+			<p><xref scope="external" format="html" href="https://www.lucidchart.com/documents/view/4655bd14-51ce-dc04-aa34-65dd0a001234">This poster</xref> illustrates the objective of the
+				project. I presented it during the <xref href="http://sssw.org/2013/" format="html" scope="external">10th Summer School on Ontology Engineering and the Semantic Web</xref> (SSSW
+				2013).</p>
+ 		<p>This project aims at providing the necessary tools to extract and publish the metadata of the documentation. Then, this metadata can be linked with other data types (product, people, sales, non-DITA document metadata, etc.) to create a powerful organization graph.</p>
+ 		<p>Although this project only covers the extraction and publication of the DITA metadata, I can help you with <xref href="going-further.dita">the next steps</xref>.</p>
+ 	</section>
+ 	<section>
+ 		<title>Status</title>
+			<table>
+				<title>Summary of the deliverables</title>
+				<tgroup cols="3">
+					<thead>
+						<row>
+							<entry>Deliverable</entry>
+							<entry>Status</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry><xref href="dita-ontology.dita">Ontology</xref></entry>
+							<entry>90 % (<xref href="https://github.com/ColinMaudry/dita-rdf/labels/ontology" format="html" scope="external">see issues in Github</xref>)</entry>
+							<entry>The DITA RDF ontology expresses the semantics of the DITA specification in RDF.</entry>
+						</row>
+						<row>
+							<entry><xref href="ditaot-plugin.dita">DITA OT plugin</xref></entry>
+							<entry>90 % of the ontology is supported (<xref format="html" href="https://github.com/ColinMaudry/dita-rdf/labels/ditaot-plugin" scope="external">see issues in
+									Github</xref>)</entry>
+							<entry>A DITA Open Toolkit plugin to parse DITA content and extract the valuable metadata in RDF/XML.</entry>
+						</row>
+						<row>
+							<entry><xref href="sparql-queries.dita">SPARQL queries</xref></entry>
+							<entry>20 % (need to write more)</entry>
+							<entry>A set of SPARQL queries to get you started with querying the extracted metadata graph.</entry>
+						</row>
+						<row>
+							<entry>Dashboarding tools</entry>
+							<entry>50 % (you can browse the links and see basic metadata)</entry>
+							<entry><xref format="html" href="http://dev.data2000.no/sgvizler/" scope="external">Sgvizler</xref> and <xref format="html"
+									href="http://www.irisa.fr/LIS/ferre/sparklis/osparklis.html" scope="external">Sparklis</xref> are the candidate tools.</entry>
+						</row>
+						<row>
+							<entry><xref format="html" href="http://www.componize.com" scope="external">Componize</xref> pipeline plugin</entry>
+							<entry>Not started (<xref format="html" href="https://github.com/ColinMaudry/dita-rdf/labels/componize-plugin" scope="external">see issues in Github</xref>)</entry>
+							<entry>A plugin that would enable Componize users to run the dita2rdf transformation.</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+ 	</section>
+ </conbody>
+</concept>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dita.build.dita2rdf" default="dita2rdf">
+<!--This file is inspired from the build.xml file included in the org.dita.pdf2 plugin,
+		included in the standard DITA Open toolkit.
+-->
+
+	
+	<target name="dita2rdf.init">
+		<echo>dita2rdf plugin, by Colin Maudry</echo>
+		<echo>Updates and support requests at https://github.com/ColinMaudry/dita-rdf</echo>
+		<dita-ot-fail id="DOTA066F">
+			<condition>
+				<and>
+					<isset property="args.xsl.rdf"></isset>
+					<not>
+						<available file="${args.xsl.rdf}" type="file"></available>
+					</not>
+				</and>
+			</condition>
+			<param name="1" location="${args.xsl.rdf}"></param>
+		</dita-ot-fail>
+		
+	</target>
+	<target name="dita2rdf" depends="dita2rdf.init, build-init,short-preprocess, map2rdf"/>
+	<target name="short-preprocess" depends="preprocess.init,gen-list,debug-filter,copy-files,keyref"/>
+	<!-- 
+	For userguide.ditamap:
+			-with preprocess: 17 seconds total processing time
+			-with short-preprocess: 5 seconds total processing time
+			
+	Why keeping these targets?	
+	copy-generated-files: because @xtrf and @xtrc must be set.
+	debug-filter: because I need the filtering features (ditaval).
+	gen-list: because copy-generated-files needs the list of files.
+	
+	See also https://github.com/ColinMaudry/dita-rdf/issues/14
+	-->
+	
+	
+	<target name="map2rdf">
+		<dirname property="dita.temp.dir.fullpath" file="${dita.temp.dir}${file.separator}dummy.file"></dirname>
+		<antcall target="publish.map.rdf"/>
+	</target>
+	
+	<target name="transform.map2rdf.init">
+		<condition property="rdf.temp.dir" value="${dita.temp.dir}" else="${dita.map.output.dir}">
+			<isfalse value="${com.github.colinmaudry.dita2rdf.use-out-temp}"></isfalse>
+		</condition>
+		
+		<property name="customization.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization"></property>
+		
+		<loadfile property="default.locale">
+			<string>${default.language}</string>
+			<filterchain>
+				<tokenfilter>
+					<replaceregex pattern="-" replace="_" flags="gi"></replaceregex>
+				</tokenfilter>
+			</filterchain>
+		</loadfile>
+		
+		<property name="lib.dir" value="${dita.dir}/lib"></property>
+		
+		<!--<property name="artwork.dir" value="${rdf.temp.dir}"></property>-->
+		
+		<condition property="file.protocol.prefix" value="file://">
+			<os family="unix"></os>
+		</condition>
+		
+		<condition property="file.protocol.prefix" value="file:/">
+			<not><isset property="file.protocol.prefix"></isset></not>
+		</condition>
+		
+		<property name="xml.catalog.files" value="${customization.dir}/catalog.xml;${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg/catalog.xml;${dita.dir}/catalog-dita.xml"></property>
+		
+		<property name="xsl.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl"></property>
+		<property name="xsl.common.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl/common"></property>
+		<property name="cfg.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg"></property>
+		<property name="cfg.common.dir" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg/common"></property>
+		
+		<path id="project.class.path">
+			<pathelement path="${java.class.path}"></pathelement>
+			<fileset dir="${lib.dir}/saxon">
+				<include name="**/*.jar"></include>
+			</fileset>
+			<!--
+        <pathelement location="${lib.dir}/xml-apis.jar"/>
+        <pathelement location="${lib.dir}/xercesImpl.jar"/>
+      -->
+			<pathelement location="${lib.dir}/resolver.jar"></pathelement>
+			<pathelement location="${lib.dir}/icu4j.jar"></pathelement>
+		</path>
+	</target>
+	
+	<target name="publish.map.rdf" depends="transform.map2rdf.init, publish.map.rdf.init, transform.topic2rdf, publish.repository"/>
+	<target name="publish.map.rdf.init">
+		<property name="inputFile" location="${args.input}"></property>
+		<property name="outputFile" location="${dita.map.output.dir}/${dita.map.filename.root}.rdf"/>
+		<property name="outputFile.base" value="${dita.map.filename.root}"></property>
+		<property name="artworkPrefix" value="${artwork.dir}"></property>
+	</target>
+	
+	<target name="transform.topic2rdf" depends="transform.topic2rdf.init,  transform.topic2rdf.main"/>
+	
+	<target name="transform.topic2rdf.init">
+		<!--<taskdef name="detect-lang" classname="com.suite.sol.ditaot.DetectLang" classpathref="project.class.path"></taskdef>
+		<taskdef name="gen-variable" classname="org.dita.dost.pdf2.VariableFileTask" classpathref="project.class.path"></taskdef>-->
+		
+		<makeurl file="${inputFile}" property="inputFile.url" validate="true"></makeurl>
+		
+		<!-- use customized xsl file for rdf transform.-->
+		<condition property="temp.transformation.file" value="${args.xsl.rdf}">
+			<and>
+				<isset property="args.xsl.rdf"></isset>
+				<available file="${args.xsl.rdf}" type="file"></available>
+			</and>
+		</condition>
+		<condition property="temp.transformation.file" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/${args.xsl.rdf}">
+			<and>
+				<not><isset property="temp.transformation.file"></isset></not>
+				<isset property="args.xsl.rdf"></isset>
+			</and>
+		</condition>
+		
+		<property name="temp.transformation.file" location="${xsl.dir}/dita2rdf_shell.xsl"/>
+	</target>
+	
+	<!-- Apparently, a flagging-preprocess.xsl should be created to support filtering. Flagging is not required for RDF. -->
+	<!--<target name="transform.topic2rdf.flagging" depends="transform.topic2rdf.flagging.filter,                    transform.topic2rdf.flagging.no-filter"></target>-->
+	
+	
+	<target name="transform.topic2rdf.main">
+		<!--makeurl seems to output file:/C: style instead of file:///C: -->
+		<makeurl property="dita.map.output.dir.url" file="${dita.map.output.dir}" validate="no"></makeurl>
+		<makeurl property="work.dir.url" file="${dita.temp.dir}" validate="no"></makeurl>
+		<makeurl property="customization.dir.url" file="${customization.dir}"></makeurl>
+		<makeurl property="user.input.dir.url" file="${user.input.dir}"></makeurl>
+		
+		
+		<mkdir dir="${dita.map.output.dir}"/>
+		
+		
+		<xslt style="${temp.transformation.file}" in="${dita.temp.dir.fullpath}${file.separator}${user.input.file}" out="${outputFile}">
+			<param name="customizationDir.url" expression="${customization.dir.url}"></param>
+			<param name="input.dir.url" expression="${user.input.dir.url}"></param>
+			<param name="output.dir.url" expression="${dita.map.output.dir.url}"></param>
+			<param name="work.dir.url" expression="${work.dir.url}"></param>
+			<param name="debug" expression="${args.debug}"></param>
+			
+			<xmlcatalog>
+				<catalogpath path="${xml.catalog.files}"></catalogpath>
+			</xmlcatalog>
+		</xslt>
+	</target>
+	<available property="http.installed" classname="org.missinglink.ant.task.http.HttpClientTask"/>
+	
+	<property file="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/build.properties"/>
+	
+	<property name="ml-ant-http.jar" value="ml-ant-http-1.1.3.jar"/>
+	<fileset id="runtime.libs" dir="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/lib">
+		<include name="${ml-ant-http.jar}"/>
+	</fileset>
+	<path id="runtime.classpath">
+		<fileset refid="runtime.libs"/>
+	</path>
+	<taskdef name="http" classname="org.missinglink.ant.task.http.HttpClientTask">
+		<classpath refid="runtime.classpath"/>
+	</taskdef>
+	
+	<condition property="skipUpload">
+		<or>
+			<not>
+				<available file="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/build.properties"/>
+			</not>
+			<isset property="args.skipUpload"/>
+		</or>
+	</condition>
+	<condition property="xmlConfigPath" value="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/rdf/config.xml" else="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/cfg/rdf/config.xml">
+		<available file="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/customization/rdf/config.xml"/>
+	</condition>
+	<condition property="methodIsPut">
+		<equals arg1="${repository.http.method}" arg2="PUT"/>
+	</condition>
+	
+	<target name="publish.repository">
+		<tstamp/>
+		<xmlproperty file="${xmlConfigPath}"/>
+		<xmlproperty file="${dita.temp.dir}\docmeta.xml"/>
+		<echo>${dita.temp.dir}</echo>
+		<property name="graphUri" value="${config.graphsBaseUri(uri)}${doc.lang}${doc.id}"/>
+		<antcall target="deleteGraph"/>
+		<http url="${repository.import.url}?${repository.graph.parameter}=${graphUri}" method="${repository.http.method}" printresponseheaders="true" printrequestheaders="true" expected="${repository.expectedCode}">
+			<entity file="${outputFile}"/>
+			<credentials username="${repository.username}" password="${repository.password}"/>
+				<headers>
+					<header name="Content-Type" value="application/rdf+xml; charset=utf-8"/>
+			</headers>
+		</http>
+		<echo>The URI of the created graph is &lt;${graphUri}></echo>
+		<antcall target="build.browser"/>
+	</target>
+	<target name="deleteGraph" unless="methodIsPut">
+		<echo>Deleting graph...</echo>
+		<http url="${repository.update.url}?update=DROP GRAPH &lt;${graphUri}>" method="GET" printresponseheaders="true" printrequestheaders="true">
+			<credentials username="${repository.username}" password="${repository.password}"/>
+		</http>
+		
+	</target>
+	
+	<condition property="buildBrowser">
+		<or>
+			<not>
+				<isset property="args.buildBrowser"/>
+			</not>
+			<equals arg1="${args.buildBrowser}" arg2="1"/>
+		</or>
+	</condition>
+	
+	<target name="build.browser" if="${buildBrowser}">
+		<delete>
+			<fileset dir="${dita.map.output.dir}" includes="darwin/**/*"/>
+		</delete>
+		<mkdir dir="${dita.map.output.dir}/darwin/resources/"/>
+		<copy todir="${dita.map.output.dir}/darwin">
+			<fileset dir="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/browser" includes="css/*.css,js/*.js"/>
+		</copy>
+		<unzip dest="${dita.map.output.dir}/darwin" src="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/browser/bootstrap.zip"/>
+		<xslt style="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/xsl/browser.xsl" in="${dita.plugin.com.github.colinmaudry.dita2rdf.dir}/browser/html/browserTemplate.html" out="${dita.map.output.dir}/darwin/index.html">
+			<param name="sparql" expression="${repository.select.url}"/>
+			<param name="formatParameter" expression="${repository.formatParameter}"/>
+			<param name="outputFolder" expression="${dita.map.output.dir.url}darwin/resources"/>
+			<xmlcatalog>
+				<catalogpath path="${xml.catalog.files}"/>
+			</xmlcatalog>
+		</xslt>
+		
+	</target>
+	
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<resourcesBaseUri uri="http://data.example.com/resources/"/>
+	<graphsBaseUri uri="http://data.example.com/graphs/"/>
+	<productsBaseUri uri="http://data.example.com/resources/products/"/>
+	<productVersionSeparator>#</productVersionSeparator>	
+	<domains>
+		<domain domainId="topic" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="task" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="concept" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="reference" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="glossentry" baseUri="http://purl.org/dita/ns#"/>
+		
+		<domain domainId="map" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="bookmap" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningmap-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="mapgroup-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="subjectScheme" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="sw-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="pr-d" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="ui-d" baseUri="http://purl.org/dita/ns#"/>
+
+		<domain domainId="learningBase" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningContent" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningOverview" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningSummary" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningAssessment" baseUri="http://purl.org/dita/ns#"/>
+		<domain domainId="learningPlan" baseUri="http://purl.org/dita/ns#"/>		
+	</domains>
+</config>

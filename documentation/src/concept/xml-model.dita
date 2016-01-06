@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="concept_qcn_gqr_3p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>The XML tree</title>
+	<shortdesc>XML is versatile but limited by its tree model</shortdesc>
+ <conbody>
+		<p>The <xref format="html" href="http://www.w3.org/TR/2008/REC-xml-20081126/" scope="external">Extensible Markup Language</xref> is a standard text format that was published by
+			the W3C in 1998 and updated several times.</p>
+		<p>His strengths are the following:</p>
+		<ul id="ul_ygz_3qr_3p">
+			<li>W3C standard, which pushed software vendors to align on the support of the specifications</li>
+			<li>Core of a number of related standards to query, validate and transform XML content (XSLT, XML Schemas, XQuery, XProc)</li>
+			<li>Endless extendibility, via DTD, XML Schemas or RelaxNG</li>
+			<li>Since it's plain text, it's easy to handle with any text editor</li>
+		</ul>
+		<p>XML is based on a tree model. Here is the same family data, but in XML:</p>
+		<codeblock xml:space="preserve">&lt;families&gt;
+	&lt;family familyName="Landais"&gt;
+		&lt;parents&gt;
+			&lt;father id="3"&gt;
+				&lt;firstName&gt;Eric&lt;/firstName&gt;
+				&lt;age&gt;34&lt;/age&gt;
+				&lt;goesToEvents&gt;
+					&lt;event href="events.xml#5"/&gt;
+				&lt;/goesToEvents&gt;
+			&lt;/father&gt;
+			&lt;mother id="4"&gt;
+				&lt;firstName&gt;Olga&lt;/firstName&gt;
+				&lt;age&gt;35&lt;/age&gt;
+				&lt;goesToEvents&gt;
+					&lt;event href="events.xml#5"/&gt;
+					&lt;event href="events.xml#8"/&gt;
+				&lt;/goesToEvents&gt;
+			&lt;/mother&gt;
+		&lt;/parents&gt;
+		&lt;children&gt;
+			&lt;daughter id="2"&gt;
+				&lt;firstName&gt;Salomé&lt;/firstName&gt;
+				&lt;age&gt;9&lt;/age&gt;
+				&lt;goesToEvents&gt;
+					&lt;event href="events.xml#11"/&gt;
+				&lt;/goesToEvents&gt;
+			&lt;/daughter&gt;
+			&lt;son id="1"&gt;
+				&lt;firstName&gt;Isaac&lt;/firstName&gt;
+				&lt;age&gt;5&lt;/age&gt;
+			&lt;/son&gt;
+		&lt;/children&gt;
+	&lt;/family&gt;
+	&lt;family familyName="Todorov"&gt;
+		&lt;parents&gt;
+		...
+		&lt;/parents&gt;
+		&lt;children&gt;
+			&lt;daughter id="2"&gt;
+				&lt;firstName&gt;Olga&lt;/firstName&gt;
+				&lt;age&gt;35&lt;/age&gt;
+				&lt;goesToEvents&gt;
+					&lt;event href="events.xml#5"/&gt;
+					&lt;event href="events.xml#8"/&gt;
+				&lt;/goesToEvents&gt;
+			&lt;/daughter&gt;
+			&lt;son id="5"&gt;
+				&lt;firstName&gt;Boris&lt;/firstName&gt;
+				&lt;age&gt;42&lt;/age&gt;
+				&lt;goesToEvents&gt;
+					&lt;event href="events.xml#8"/&gt;
+				&lt;/goesToEvents&gt;
+			&lt;/son&gt;
+		&lt;/children&gt;
+	&lt;/family&gt;
+&lt;/families&gt;</codeblock>
+		<p>This is one of the many possibilities to structure this information in XML. After thinking a lot, I went for a structure that focuses on parents and children. The problem
+			here is that each person that has children (in this case Olga) needs to be represented twice: as a parent and as a child.</p>
+		<p>Also, although the events are identified with a unique events ID, it is necessary to know how to resolve the references to get information about the events. it is not
+			self-explanatory.</p>
+		<p>Storing a flat list of elements, one per person, using IDs to represent all relationships, would address the issue with duplicate entries... </p>
+		<codeblock xml:space="preserve">&lt;persons&gt;
+	&lt;person id="4" parents="10,11" siblings="5" spouse="3" children="1,2"&gt;
+		&lt;firstName&gt;Olga&lt;/firstName&gt;
+		&lt;lastName&gt;Landais&lt;/lastName&gt;
+		&lt;age&gt;35&lt;/age&gt;
+	&lt;/person&gt;
+	...
+&lt;/persons&gt;</codeblock>
+		<p>...but would result in two annoying issues, the consequences of using XML for a purpose it wasn't designed for:</p>
+		<ul id="ul_dsz_nqr_3p">
+			<li>slow retrieval of information: since the relationships don't rely on the tree features of XML but on identifiers, for each "hop" between two persons, the whole file would
+				have to be scanned to locate the identifier of the target person. </li>
+			<li>That would be like reproducing <xref href="relational-database.dita">the
+					table model</xref> in XML, with its drawbacks.</li>
+		</ul>
+		<p>So, as we know, XML is a very versatile format, but, as we just saw, its tree model doesn't faciliate the cross referencing of information as the only direct relations that
+			XML can express between two nodes of information are the following:</p>
+		<ul id="ul_qxz_nqr_3p">
+			<li>parent</li>
+			<li>child</li>
+			<li>attribute</li>
+		</ul>
+		<p> The rest are the result of interpretations which require communication, agreement and extra coding effort.</p>
+		<p>For instance, using our family information, how do we find the names of Boris' nephews? It is possible, but the query to write is much more complex than the piece of
+			information we try to retrieve. We could also change the structure of the document to adapt it to answer this specific question, but that wouldn't be without a new load of
+			trade-offs to answer other questions.</p>
+ </conbody>
+</concept>

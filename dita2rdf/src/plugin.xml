@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.github.colinmaudry.dita2rdf">
+    <feature extension="package.support.name" value="Colin Maudry"/>
+    <feature extension="package.support.email" value="colin@maudry.com"/>
+    <feature extension="package.version" value="0.3.0"/>
+    
+		<extension-point id="dita.xsl.rdf" name="RDF XSLT import"/>
+	
+    
+    <feature extension="dita.conductor.transtype.check" value="rdf"/>
+    <feature extension="dita.transtype.print" value="rdf"/>
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+    
+    <feature extension="dita.xsl.messages" file="messages.xml"/>
+</plugin>
